@@ -1,57 +1,140 @@
 <div class="main">
 
+    <!--    Character information and stats-->
     <div class="main-stats">
+
+        <!--        Image -->
         <div class="image">
-            <img src="https://www.emberwindgame.com/wp-content/uploads/gallery-the-skies-of-axia.jpg">
+            <img src="https://www.emberwindgame.com/wp-content/uploads/gallery-the-skies-of-axia.jpg"
+                 alt="">
         </div>
 
+        <!--        Name Section-->
         <div class="name section">
             <span>Name:</span>
             <input type="text" name="attr_character_name">
         </div>
+
+        <!--        Information section. Includes: HP, Class, Subclass and Tier-->
         <div class="info section">
-            <span>Name:</span>
-            <input type="text" name="attr_character_name">
+            <div class="col">
+                <span>HP:</span>
+                <input type="text" name="attr_hp">
+                <span> / </span>
+                <input type="text" name="attr_max_hp">
+            </div>
+            <div class="col">
+                <div class="row">
+                    <label>Class:</label>
+                    <select name="attr_class" class="dtype">
+                        <option value="archer">Archer</option>
+                        <option value="ardent">Ardent</option>
+                        <option value="atlanta">Atlanta</option>
+                        <option value="druid">Druid</option>
+                        <option value="invoker">Invoker</option>
+                        <option value="rogue">Rogue</option>
+                        <option value="spiritualist">Spiritualist</option>
+                        <option value="tactician">Tactician</option>
+                        <option value="warrior">Warrior</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <label>Subclass:</label><input type="text" name="attr_subclass"/>
+                </div>
+            </div>
+            <div class="col">
+                <span>Tier:</span>
+                <input type="number" name="attr_tier">
+            </div>
         </div>
+
+        <!--        Aspects-->
         <div class="aspects section">
-            <span>Name:</span>
-            <input type="text" name="attr_character_name">
+            <div class="row">
+                <span>Aspect:</span>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <span>Offensive</span>
+                    <select name="attr_offensive" class="dtype">
+                        <option value="deadly">Deadly</option>
+                        <option value="precise">Precise</option>
+                        <option value="powerful">Powerful</option>
+                        <option value="steady">Steady</option>
+                        <option value="vicious">Vicious</option>
+                        <option value="keen">Keen</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <span>Defensive</span>
+                    <select name="attr_defensive" class="dtype">
+                        <option value="vigorous">Vigorous</option>
+                        <option value="tough">Tough</option>
+                        <option value="resistant">Resistant</option>
+                        <option value="evasive">Evasive</option>
+                        <option value="willful">Willful</option>
+                        <option value="defiant">Defiant</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <span>Utility</span>
+                    <select name="attr_utility" class="dtype">
+                        <option value="focused">Focused</option>
+                        <option value="charged">Charged</option>
+                        <option value="dynamic">Dynamic</option>
+                        <option value="heroic">Heroic</option>
+                        <option value="spirited">Spirited</option>
+                        <option value="swift">Swift</option>
+                    </select>
+                </div>
+            </div>
         </div>
+
+        <!--        Barrier Values-->
         <div class="header1 section">
-            <span>Name:</span>
-            <input type="text" name="attr_character_name">
+            <span class="header">Barrier Values</span>
         </div>
         <div class="stats1 section">
-            <span>Name:</span>
-            <input type="text" name="attr_character_name">
+            <div class="col">
+                <span class="red">Toughness</span>
+            </div>
+            <div class="col">
+                <span class="blue">Resistance</span>
+            </div>
         </div>
         <div class="common1 section">
             <span>Name:</span>
             <input type="text" name="attr_character_name">
         </div>
+
+        <!--        Defense Values-->
         <div class="header2 section">
-            <span>Name:</span>
-            <input type="text" name="attr_character_name">
+            <span class="header">Defense Values</span>
         </div>
         <div class="stats2 section">
-            <span>Name:</span>
-            <input type="text" name="attr_character_name">
+            <div class="col">
+                <span class="green">Dodge</span>
+            </div>
+            <div class="col">
+                <span class="yellow">Willpower</span>
+            </div>
         </div>
         <div class="common2 section">
             <span>Name:</span>
             <input type="text" name="attr_character_name">
         </div>
+
+        <!--        CAP Check-->
         <div class="header3 section">
-            <span>Name:</span>
-            <input type="text" name="attr_character_name">
+            <span class="header">CAP Check</span>
         </div>
         <div class="common3 section">
-            <span>Name:</span>
-            <input type="text" name="attr_character_name">
+            <span>Roll 1d20 when an Action targets at least 1 Foe. Must be equal or less tab <b>CAP</b> Values to succeed</span>
         </div>
+
+        <!--        Action Pool-->
         <div class="header4 section">
-            <span>Name:</span>
-            <input type="text" name="attr_character_name">
+            <span class="header">Action Pool</span>
         </div>
         <div class="common4 section">
             <span>Name:</span>
@@ -59,6 +142,8 @@
         </div>
 
     </div>
+
+    <!--    Character actions and skills-->
     <div class="main-actions">
 
 

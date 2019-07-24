@@ -15,22 +15,9 @@
     width: fit-content;
     height: fit-content;
     background-color: purple;
-    grid-template-columns: 1fr;
-    grid-template-rows: fit-content(100%) 1fr 2fr 2fr 1fr 1fr 3fr 1fr 1fr 3fr 1fr 3fr 1fr 3fr;
-    grid-template-areas: "image"
-    "name"
-    "info"
-    "aspects"
-    "header1"
-    "stats1"
-    "common1"
-    "header2"
-    "stats2"
-    "common2"
-    "header3"
-    "common3"
-    "header4"
-    "common4";
+    grid-template-columns: auto;
+    grid-auto-rows: fit-content(100%);
+    grid-template-areas: "image" "name" "info" "aspects" "header1" "stats1" "common1" "header2" "stats2" "common2" "header3" "common3" "header4" "common4";
 }
 
 .sheet-main-actions {
@@ -69,15 +56,27 @@ textarea {
     padding: 3px;
 }
 
-
 .sheet-name {
     grid-area: name;
-    background-color: cyan;
+    background-color: white;
+    border: 2px solid red;
+    align-content: center;
+}
+.sheet-name span {
+    float: left;
+    font-weight: bold;
+    position: center;
+    padding: 3px;
+}
+.sheet-name input {
+    width: auto;
+    padding: 3px;
 }
 
 .sheet-info {
     grid-area: info;
-    background-color: yellow;
+    background-color: white;
+    border: 2px solid red;
 }
 
 .sheet-aspects {
@@ -91,18 +90,21 @@ textarea {
     text-decoration-color: white;
     flex-direction: column;
 }
+
 .sheet-header2 {
     grid-area: header2;
     background-color: dimgrey;
     text-decoration-color: white;
     flex-direction: column;
 }
+
 .sheet-header3 {
     grid-area: header3;
     background-color: dimgrey;
     text-decoration-color: white;
     flex-direction: column;
 }
+
 .sheet-header4 {
     grid-area: header4;
     background-color: dimgrey;
@@ -114,6 +116,7 @@ textarea {
     grid-area: stats1;
     background-color: orange;
 }
+
 .sheet-stats2 {
     grid-area: stats2;
     background-color: orange;
@@ -123,19 +126,21 @@ textarea {
     grid-area: common1;
     background-color: coral;
 }
+
 .sheet-common2 {
     grid-area: common2;
     background-color: coral;
 }
+
 .sheet-common3 {
     grid-area: common3;
     background-color: coral;
 }
+
 .sheet-common4 {
     grid-area: common4;
     background-color: coral;
 }
-
 
 /* Set the min-width so that when the window is resized the look will stay consistant */
 
@@ -221,9 +226,4 @@ span.sheet-dee {
 .sheet-stats h3:first-child {
     margin-left: 35%;
     margin-right: 15%;
-}
-
-.sheet-stats input {
-    margin-right: 8%;
-    width: 17%;
 }
