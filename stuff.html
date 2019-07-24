@@ -1,0 +1,197 @@
+<div class="main">
+
+    <div class="main-stats">
+        <div class="sheet-image">
+        </div>
+        <div class="main-stats">
+            <div class="image flex-center section">
+                <img src="https://www.emberwindgame.com/wp-content/uploads/gallery-the-skies-of-axia.jpg">
+            </div>
+        <div class="row">
+            <span>Name:</span>
+            <input type="text" name="attr_character_name">
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <span>HP:</span>
+                <input class="sheet-stats" type="text" name="attr_hp">
+                <span> / </span>
+                <input class="sheet-stats" type="text" name="attr_max_hp">
+            </div>
+            <div class="col">
+                <div class="row">
+                    <label>Class:</label>
+                    <select name="attr_class" class="dtype">
+                        <option value="archer">Archer</option>
+                        <option value="ardent">Ardent</option>
+                        <option value="atlanta">Atlanta</option>
+                        <option value="druid">Druid</option>
+                        <option value="invoker">Invoker</option>
+                        <option value="rogue">Rogue</option>
+                        <option value="spiritualist">Spiritualist</option>
+                        <option value="tactician">Tactician</option>
+                        <option value="warrior">Warrior</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <label>Subclass:</label><input type="text" name="attr_subclass"/>
+                </div>
+            </div>
+            <div class="col">
+                <span>Tier:</span>
+                <input type="number" name="attr_tier">
+            </div>
+        </div>
+
+        <div class="spacer"></div>
+
+        <div class="row">
+            <span>Aspect:</span>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <span>Offensive</span>
+                <select name="attr_offensive" class="dtype">
+                    <option value="deadly">Deadly</option>
+                    <option value="precise">Precise</option>
+                    <option value="powerful">Powerful</option>
+                    <option value="steady">Steady</option>
+                    <option value="vicious">Vicious</option>
+                    <option value="keen">Keen</option>
+                </select>
+            </div>
+            <div class="col">
+                <span>Defensive</span>
+                <select name="attr_defensive" class="dtype">
+                    <option value="vigorous">Vigorous</option>
+                    <option value="tough">Tough</option>
+                    <option value="resistant">Resistant</option>
+                    <option value="evasive">Evasive</option>
+                    <option value="willful">Willful</option>
+                    <option value="defiant">Defiant</option>
+                </select>
+            </div>
+            <div class="col">
+                <span>Utility</span>
+                <select name="attr_utility" class="dtype">
+                    <option value="focused">Focused</option>
+                    <option value="charged">Charged</option>
+                    <option value="dynamic">Dynamic</option>
+                    <option value="heroic">Heroic</option>
+                    <option value="spirited">Spirited</option>
+                    <option value="swift">Swift</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="spacer"></div>
+
+        <div class="row">
+            <span class="header">Barrier Values</span>
+        </div>
+        <div class="row">
+            <div class="col">
+                <span class="red">Toughness</span>
+            </div>
+            <div class="col">
+                <span class="blue">Resistance</span>
+            </div>
+        </div>
+
+        <div class="row">
+            <span class="header">Defense Values</span>
+        </div>
+        <div class="row">
+            <div class="col">
+                <span class="green">Dodge</span>
+            </div>
+            <div class="col">
+                <span class="yellow">Willpower</span>
+            </div>
+        </div>
+
+        <div class="row">
+            <span class="header">CAP Check</span>
+        </div>
+        <span>Roll 1d20 when an Action targets at least 1 Foe. Must be equal or less tab <b>CAP</b> Values to succeed</span>
+
+        <div class="row">
+            <span class="header">Action Pool</span>
+        </div>
+
+    </div>
+    <div class="main-actions">
+        <div class="col">
+            <h2>Attributes</h2>
+
+            <label>Agility </label><input type="text" name='attr_agility' class='sheet-short'>
+            <button type='roll' name='roll_testattack'
+                    value='&{template:default} {{name=@{character_name}}} {{result=[[1d20 + @{agility}]]}}'></button>
+            <span class='dee'>d</span>
+            <br/>
+            <label>Smarts </label><input type="text" name='attr_smarts' class='sheet-short'>
+            <button type='roll' name='roll_testattack'
+                    value='&{template:default} {{name=@{character_name}}} {{result=[[1d20 + @{smarts}]]}}'></button>
+            <span class='dee'>d</span>
+            <br/>
+            <label>Spirit </label><input type="text" name='attr_spirit' class='sheet-short'>
+            <button type='roll' name='roll_testattack'
+                    value='&{template:default} {{name=@{character_name}}} {{result=[[1d20 + @{spirit}]]}}'></button>
+            <span class='dee'>d</span>
+            <br/>
+            <label>Strength </label><input type="text" name='attr_strength' class='sheet-short'>
+            <button type='roll' name='roll_testattack'
+                    value='&{template:default} {{name=@{character_name}}} {{result=[[1d20 + @{strength}]]}}'></button>
+            <span class='dee'>d</span>
+            <br/>
+            <label>Vigor </label><input type="text" name='attr_vigor' class='sheet-short' value='25'>
+            <button type='roll' name='roll_testattack'
+                    value='&{template:default} {{name=@{character_name}}} {{result=[[1d20 + @{vigor}]]}}'></button>
+            <span class='dee'>d</span>
+            <hr/>
+
+            <h2>Skills</h2>
+
+            <fieldset class="repeating_skills">
+                <select name="attr_dtype" class="dtype">
+                    <option value="d4">d4</option>
+                    <option value="d6">d6</option>
+                    <option value="d8">d8</option>
+                    <option value="d10">d10</option>
+                    <option value="d12">d12</option>
+                </select>
+                <input type="text" name="attr_skillname"/>
+            </fieldset>
+        </div>
+        <div class="col">
+            <h2>Derived Stats</h2>
+            <div class="stats">
+                <h3>Base</h3>
+                <h3>Max</h3>
+                <label>Pace</label><input type="text" name="attr_pace"/><input type="text" name="attr_pace_max"/>
+                <label>Parry</label><input type="text" name="attr_parry"/><input type="text" name="attr_parry_max"/>
+                <label>Toughness</label><input type="text" name="attr_toughness"/><input type="text"
+                                                                                         name="attr_toughness_max"/>
+                <label>Charisma</label><input type="text" name="attr_charisma"/><input type="text"
+                                                                                       name="attr_charisma_max"/>
+            </div>
+        </div>
+
+        <div class="col">
+
+            <h2>Hindrances</h2>
+
+            <textarea name="attr_hindrances"></textarea>
+
+            <hr/>
+
+            <h2>Edges</h2>
+
+            <textarea name="attr_edges"></textarea>
+
+        </div>
+
+    </div>
+</div>

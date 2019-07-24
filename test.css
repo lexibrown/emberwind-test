@@ -1,0 +1,229 @@
+.sheet-main {
+    display: grid;
+    width: 800px;
+    height: 900px;
+    grid-gap: 4px;
+    background-color: pink;
+    grid-template-columns: 33% 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "main-skills main-actions";
+}
+
+.sheet-main-stats {
+    display: grid;
+    grid-gap: 4px;
+    width: fit-content;
+    height: fit-content;
+    background-color: purple;
+    grid-template-columns: 1fr;
+    grid-template-rows: fit-content(100%) 1fr 2fr 2fr 1fr 1fr 3fr 1fr 1fr 3fr 1fr 3fr 1fr 3fr;
+    grid-template-areas: "image"
+    "name"
+    "info"
+    "aspects"
+    "header1"
+    "stats1"
+    "common1"
+    "header2"
+    "stats2"
+    "common2"
+    "header3"
+    "common3"
+    "header4"
+    "common4";
+}
+
+.sheet-main-actions {
+    display: grid;
+    background-color: red;
+}
+
+/*----------------- GENERAL CSS ------------------*/
+
+textarea {
+    width: 90%;
+    height: 85%;
+}
+
+.sheet-section {
+    padding: 5px;
+    border-style: solid;
+}
+
+.sheet-flex-col {
+    display: flex;
+    flex-flow: row wrap;
+    /*justify-content: flex-start;*/
+}
+
+.sheet-flex-center {
+    align-items: center;
+    justify-content: center;
+}
+
+/*------------- Section-specific CSS -------------*/
+
+.sheet-image {
+    grid-area: image;
+    background-color: olive;
+    padding: 3px;
+}
+
+
+.sheet-name {
+    grid-area: name;
+    background-color: cyan;
+}
+
+.sheet-info {
+    grid-area: info;
+    background-color: yellow;
+}
+
+.sheet-aspects {
+    grid-area: aspects;
+    background-color: brown;
+}
+
+.sheet-header1 {
+    grid-area: header1;
+    background-color: dimgrey;
+    text-decoration-color: white;
+    flex-direction: column;
+}
+.sheet-header2 {
+    grid-area: header2;
+    background-color: dimgrey;
+    text-decoration-color: white;
+    flex-direction: column;
+}
+.sheet-header3 {
+    grid-area: header3;
+    background-color: dimgrey;
+    text-decoration-color: white;
+    flex-direction: column;
+}
+.sheet-header4 {
+    grid-area: header4;
+    background-color: dimgrey;
+    text-decoration-color: white;
+    flex-direction: column;
+}
+
+.sheet-stats1 {
+    grid-area: stats1;
+    background-color: orange;
+}
+.sheet-stats2 {
+    grid-area: stats2;
+    background-color: orange;
+}
+
+.sheet-common1 {
+    grid-area: common1;
+    background-color: coral;
+}
+.sheet-common2 {
+    grid-area: common2;
+    background-color: coral;
+}
+.sheet-common3 {
+    grid-area: common3;
+    background-color: coral;
+}
+.sheet-common4 {
+    grid-area: common4;
+    background-color: coral;
+}
+
+
+/* Set the min-width so that when the window is resized the look will stay consistant */
+
+.sheet-charimage {
+    background-color: #111111;
+    width: 40%;
+    margin: 0 auto;
+}
+
+.sheet-charimage img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+}
+
+.sheet-stats {
+    top: 45px;
+    width: 33%;
+    height: auto;
+    position: absolute;
+}
+
+.sheet-skills {
+    top: 45px;
+    width: 66%;
+    height: auto;
+    position: absolute;
+}
+
+.sheet-charsheet {
+    background-color: #ddd;
+    min-width: 800px;
+}
+
+/* Universal styling applied to all elements of these types */
+
+.sheet-red {
+    background-color: indianred;
+}
+
+.sheet-blue {
+    background-color: dodgerblue;
+}
+
+.sheet-green {
+    background-color: lightgreen;
+}
+
+.sheet-yellow {
+    background-color: yellow;
+}
+
+.sheet-red .sheet-blue .sheet-green .sheet-yellow {
+    text-align: center;
+    text-decoration-style: double;
+}
+
+/* Targetted styling that only effects elements with these classes */
+input.sheet-short {
+    width: 17%;
+}
+
+select.sheet-dtype {
+    vertical-align: top;
+    width: 60px;
+}
+
+span.sheet-dee {
+    font-size: 1.4em;
+    font-weight: bold;
+    left: -36%;
+    padding-right: 4px;
+    position: relative;
+    top: 3px;
+}
+
+/* Targetted styling that only effects elements contained within the stated class */
+.sheet-stats h3 {
+    display: inline-block;
+    text-align: left;
+}
+
+.sheet-stats h3:first-child {
+    margin-left: 35%;
+    margin-right: 15%;
+}
+
+.sheet-stats input {
+    margin-right: 8%;
+    width: 17%;
+}
