@@ -1,20 +1,25 @@
+/*----------------- GRIDS ------------------*/
+
 .sheet-main {
     display: grid;
     width: 800px;
     height: 900px;
     grid-gap: 4px;
     background-color: pink;
-    grid-template-columns: 33% 1fr;
+    grid-template-columns: 35% 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: "main-skills main-actions";
 }
 
 .sheet-main-stats {
     display: grid;
-    grid-gap: 4px;
     width: fit-content;
     height: fit-content;
-    background-color: purple;
+    padding-left: 5px;
+    padding-right: 5px;
+    grid-row-gap: 5px;
+    grid-column-gap: 5px;
+    background-color: white;
     grid-template-columns: auto;
     grid-auto-rows: fit-content(100%);
     grid-template-areas: "image" "name" "info" "aspects" "header1" "stats1" "common1" "header2" "stats2" "common2" "header3" "common3" "header4" "common4";
@@ -33,8 +38,7 @@ textarea {
 }
 
 .sheet-section {
-    padding: 5px;
-    border-style: solid;
+
 }
 
 .sheet-flex-col {
@@ -50,67 +54,105 @@ textarea {
 
 /*------------- Section-specific CSS -------------*/
 
+/*----------------- Image section ------------------*/
 .sheet-image {
     grid-area: image;
-    background-color: olive;
+    background-color: black;
     padding: 3px;
 }
 
+/*----------------- Name section ------------------*/
 .sheet-name {
     grid-area: name;
-    background-color: white;
-    border: 2px solid red;
     align-content: center;
 }
+
 .sheet-name span {
     float: left;
     font-weight: bold;
     position: center;
     padding: 3px;
 }
+
 .sheet-name input {
+    float: right;
     width: auto;
     padding: 3px;
 }
 
+/*----------------- Info section ------------------*/
 .sheet-info {
     grid-area: info;
-    background-color: white;
-    border: 2px solid red;
+    background-color: greenyellow;
+    border: 3px solid lightcoral;
 }
 
+.sheet-info-hp-box {
+    border-right: 3px solid lightcoral;
+    border-bottom: 3px solid lightcoral;
+}
+
+.sheet-info-hp-text {
+    background-color: lightcoral;
+    color: white;
+    font-weight: bold;
+    padding: 10px 5px 10px 5px;
+}
+
+/*----------------- Aspects section ------------------*/
 .sheet-aspects {
     grid-area: aspects;
-    background-color: brown;
+    border-bottom: 3px solid dimgrey;
 }
 
+.sheet-aspects-col {
+    width: 30%;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+/*----------------- Headers ------------------*/
 .sheet-header1 {
     grid-area: header1;
     background-color: dimgrey;
-    text-decoration-color: white;
-    flex-direction: column;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 2px;
+    padding-bottom: 2px;
 }
 
 .sheet-header2 {
     grid-area: header2;
     background-color: dimgrey;
-    text-decoration-color: white;
-    flex-direction: column;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 2px;
+    padding-bottom: 2px;
 }
 
 .sheet-header3 {
     grid-area: header3;
     background-color: dimgrey;
-    text-decoration-color: white;
-    flex-direction: column;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 2px;
+    padding-bottom: 2px;
 }
 
 .sheet-header4 {
     grid-area: header4;
     background-color: dimgrey;
-    text-decoration-color: white;
-    flex-direction: column;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 2px;
+    padding-bottom: 2px;
 }
+
+/*----------------- Stats ------------------*/
 
 .sheet-stats1 {
     grid-area: stats1;
@@ -121,6 +163,8 @@ textarea {
     grid-area: stats2;
     background-color: orange;
 }
+
+/*----------------- Common ------------------*/
 
 .sheet-common1 {
     grid-area: common1;
@@ -134,12 +178,10 @@ textarea {
 
 .sheet-common3 {
     grid-area: common3;
-    background-color: coral;
 }
 
 .sheet-common4 {
     grid-area: common4;
-    background-color: coral;
 }
 
 /* Set the min-width so that when the window is resized the look will stay consistant */
@@ -178,7 +220,7 @@ textarea {
 /* Universal styling applied to all elements of these types */
 
 .sheet-red {
-    background-color: indianred;
+    background-color: lightcoral;
 }
 
 .sheet-blue {
@@ -198,15 +240,64 @@ textarea {
     text-decoration-style: double;
 }
 
-/* Targetted styling that only effects elements with these classes */
-input.sheet-short {
-    width: 17%;
+select.sheet-selector {
+    vertical-align: top;
+    width: 100%;
 }
 
-select.sheet-dtype {
+select.sheet-selector-fit {
     vertical-align: top;
-    width: 60px;
+    width: fit-content;
 }
+
+input.sheet-medium {
+    width: 14%;
+    padding: 2px;
+}
+
+input.sheet-short {
+    width: 60%;
+}
+
+.sheet-title {
+    float: left;
+    font-weight: bold;
+    padding: 3px;
+}
+
+.sheet-subtitle {
+    padding: 1px;
+    font-size: 0.75em;
+}
+
+.sheet-critical {
+    border: 5px solid lightcoral;
+}
+
+.sheet-accuracy {
+    border: 5px solid lightgreen;
+}
+
+.sheet-penetration {
+    border: 5px solid;
+    border-image: linear-gradient(to bottom, lightskyblue 50%, lightcoral 50%, lightcoral 50%) 5;
+}
+
+.sheet-cap-main-col {
+    width: 27%;
+}
+
+.sheet-cap-sep-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+/* Targetted styling that only effects elements with these classes */
+
 
 span.sheet-dee {
     font-size: 1.4em;
