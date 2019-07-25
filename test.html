@@ -17,14 +17,14 @@
 
         <!--        Information section. Includes: HP, Class, Subclass and Tier-->
         <div class="info section">
-            <div class="info-hp-box">
-                <span class="info-hp-text">HP:</span>
-                <input class="medium" type="text" name="attr_hp">
-                <span> / </span>
-                <input class="medium" type="text" name="attr_max_hp">
-            </div>
-            <div class="col">
-                <div class="row">
+            <div class="row">
+                <div class="col info-hp-box">
+                    <span class="info-hp-text">HP:</span>
+                    <input class="medium" type="text" name="attr_hp">
+                    <span> / </span>
+                    <input class="medium" type="text" name="attr_max_hp">
+                </div>
+                <div class="col info-class-box">
                     <span>Class:</span>
                     <select name="attr_class" class="selector-fit">
                         <option value="null">Select</option>
@@ -39,19 +39,21 @@
                         <option value="warrior">Warrior</option>
                     </select>
                 </div>
-                <div class="row">
-                    <span>Subclass:</span>
-                    <input type="text" name="attr_subclass"/>
-                </div>
             </div>
-            <div class="col">
-                <span>Tier:</span>
-                <select name="attr_tier" class="selector">
-                    <option value="tier-1">1</option>
-                    <option value="tier-2">2</option>
-                    <option value="tier-3">3</option>
-                    <option value="tier-4">4</option>
-                </select>
+            <div class="row">
+                <div class="col info-subclass-box">
+                    <span>Subclass:</span>
+                    <input type="text" name="attr_subclass" style="width: 65%;"/>
+                </div>
+                <div class="col info-tier-box">
+                    <span>Tier:</span>
+                    <select name="attr_tier" class="selector-fit">
+                        <option value="tier-1">1</option>
+                        <option value="tier-2">2</option>
+                        <option value="tier-3">3</option>
+                        <option value="tier-4">4</option>
+                    </select>
+                </div>
             </div>
         </div>
 
@@ -105,16 +107,67 @@
             <span class="header">Barrier Values</span>
         </div>
         <div class="stats1 section">
-            <div class="col">
-                <span class="red">Toughness</span>
+            <div class="col stats-col red">
+                Toughness:
+                <input class="small" type="text" name="attr_toughness">
             </div>
-            <div class="col">
-                <span class="blue">Resistance</span>
+            <div class="col stats-col blue">
+                Resistance:
+                <input class="small" type="text" name="attr_resistance">
             </div>
         </div>
         <div class="common1 section">
-            <span>Name:</span>
-            <input type="text" name="attr_character_name">
+            <div class="skills-grid">
+                <div class="skill-left">
+                    <div class="skill">
+                        <button type='roll' name='roll_skill'
+                                value='&{template:default} {{name=@{character_name}}} {{result=[[d20cs<@{athletics}]]}}'>
+                            Athletics:
+                        </button>
+                        <input class="small" type="text" name="attr_athletics">
+                    </div>
+                    <div class="skill">
+                        <button type='roll' name='roll_skill' style="font-size: 1.25em;"
+                                value='&{template:default} {{name=@{character_name}}} {{result=[[d20cs<@{endurance}]]}}'>
+                            Endurance:
+                        </button>
+                        <input class="small" type="text" name="attr_endurance">
+                    </div>
+                    <div class="skill">
+                        <button type='roll' name='roll_skill'
+                                value='&{template:default} {{name=@{character_name}}} {{result=[[d20cs<@{intimidate}]]}}'>
+                            Intimidate:
+                        </button>
+                        <input class="small" type="text" name="attr_intimidate">
+                    </div>
+                </div>
+                <div class="skill-label">
+                    Skills
+                </div>
+                <div class="skill-right">
+                    <div class="skill">
+                        <button type='roll' name='roll_skill'
+                                value='&{template:default} {{name=@{character_name}}} {{result=[[d20cs<@{insight}]]}}'>
+                            Insight:
+                        </button>
+                        <input class="small" type="text" name="attr_insight">
+                    </div>
+                    <div class="skill">
+                        <button type='roll' name='roll_skill' style="font-size: 1.25em;"
+                                value='&{template:default} {{name=@{character_name}}} {{result=[[d20cs<@{knowledge}]]}}'>
+                            Knowledge:
+                        </button>
+                        <input class="small" type="text" name="attr_knowledge">
+                    </div>
+                    <div class="skill">
+                        <button type='roll' name='roll_skill'
+                                value='&{template:default} {{name=@{character_name}}} {{result=[[d20cs<@{mend}]]}}'>
+                            Mend:
+                        </button>
+                        <input class="small" type="text" name="attr_mend">
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!--        Defense Values-->
@@ -122,16 +175,67 @@
             <span class="header">Defense Values</span>
         </div>
         <div class="stats2 section">
-            <div class="col">
-                <span class="green">Dodge</span>
+            <div class="col stats-col green">
+                Dodge:
+                <input class="small" type="text" name="attr_dodge">
             </div>
-            <div class="col">
-                <span class="yellow">Willpower</span>
+            <div class="col stats-col yellow">
+                Willpower:
+                <input class="small" type="text" name="attr_willpower">
             </div>
         </div>
         <div class="common2 section">
-            <span>Name:</span>
-            <input type="text" name="attr_character_name">
+            <div class="skills-grid">
+                <div class="skill-left">
+                    <div class="skill">
+                        <button type='roll' name='roll_skill'
+                                value='&{template:default} {{name=@{character_name}}} {{result=[[d20cs<@{acrobatics}]]}}'>
+                            Acrobatics:
+                        </button>
+                        <input class="small" type="text" name="attr_acrobatics">
+                    </div>
+                    <div class="skill">
+                        <button type='roll' name='roll_skill'
+                                value='&{template:default} {{name=@{character_name}}} {{result=[[d20cs<@{stealth}]]}}'>
+                            Stealth:
+                        </button>
+                        <input class="small" type="text" name="attr_stealth">
+                    </div>
+                    <div class="skill">
+                        <button type='roll' name='roll_skill' style="font-size: 0.95em;"
+                                value='&{template:default} {{name=@{character_name}}} {{result=[[d20cs<@{sleight_of_hand}]]}}'>
+                            Sleight of Hand:
+                        </button>
+                        <input class="small" type="text" name="attr_sleight_of_hand">
+                    </div>
+                </div>
+                <div class="skill-label">
+                    Skills
+                </div>
+                <div class="skill-right">
+                    <div class="skill">
+                        <button type='roll' name='roll_skill'
+                                value='&{template:default} {{name=@{character_name}}} {{result=[[d20cs<@{focus}]]}}'>
+                            Focus:
+                        </button>
+                        <input class="small" type="text" name="attr_focus">
+                    </div>
+                    <div class="skill">
+                        <button type='roll' name='roll_skill'
+                                value='&{template:default} {{name=@{character_name}}} {{result=[[d20cs<@{fast_talk}]]}}'>
+                            Fast Talk:
+                        </button>
+                        <input class="small" type="text" name="attr_fast_talk">
+                    </div>
+                    <div class="skill">
+                        <button type='roll' name='roll_skill' style="font-size: 1.25em;"
+                                value='&{template:default} {{name=@{character_name}}} {{result=[[d20cs<@{leadership}]]}}'>
+                            Leadership:
+                        </button>
+                        <input class="small" type="text" name="attr_leadership">
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!--        CAP Check-->
@@ -146,7 +250,7 @@
                 <div class="col cap-main-col" style="text-align: center">
                     <div class="row critical" style="padding: 3px;">
                         <span style="font-weight: bold">C:</span>
-                        <input class="short" type="text" name="attr_critical">
+                        <input class="cap" type="text" name="attr_critical">
                     </div>
                     <span style="font-weight: bold;">Critical</span>
                 </div>
@@ -157,15 +261,15 @@
                 <div class="col cap-main-col" style="text-align: center">
                     <div class="row accuracy" style="padding: 3px;">
                         <span style="font-weight: bold">A:</span>
-                        <input class="short" type="text" name="attr_accuracy">
+                        <input class="cap" type="text" name="attr_accuracy">
                     </div>
                     <span style="font-weight: bold;">Accuracy</span>
                 </div>
-                <span class="col cap-sep-col" style="font-weight: bold; ">&#129046;</span>
+                <span class="col cap-sep-col" style="font-weight: bold; background-color: aqua">&#129046;</span>
                 <div class="col cap-main-col" style="text-align: center">
                     <div class="row penetration" style="padding: 3px;">
                         <span style="font-weight: bold">P:</span>
-                        <input class="short" type="text" name="attr_penetration">
+                        <input class="cap" type="text" name="attr_penetration">
                     </div>
                     <span style="font-weight: bold;">Penetration</span>
                 </div>

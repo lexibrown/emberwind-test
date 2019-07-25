@@ -30,6 +30,16 @@
     background-color: red;
 }
 
+.sheet-skills-grid {
+    display: grid;
+    width: auto;
+    height: fit-content;
+    grid-template-columns: 48% 1fr 48%;
+    grid-auto-rows: fit-content(100%);
+    grid-template-areas:
+            "skill-left skill-label skill-right"
+}
+
 /*----------------- GENERAL CSS ------------------*/
 
 textarea {
@@ -83,11 +93,14 @@ textarea {
 /*----------------- Info section ------------------*/
 .sheet-info {
     grid-area: info;
-    background-color: greenyellow;
+    height: auto;
     border: 3px solid lightcoral;
 }
 
 .sheet-info-hp-box {
+    width: 45%;
+    padding-top: 5px;
+    padding-bottom: 4px;
     border-right: 3px solid lightcoral;
     border-bottom: 3px solid lightcoral;
 }
@@ -97,6 +110,28 @@ textarea {
     color: white;
     font-weight: bold;
     padding: 10px 5px 10px 5px;
+}
+
+input.sheet-medium {
+    width: 30%;
+    padding: 2px;
+}
+
+.sheet-info-tier-box {
+    float: right;
+    padding-right: 5px;
+}
+
+.sheet-info-class-box {
+    align-content: center;
+    padding-top: 5px;
+    padding-right: 5px;
+    float: right;
+}
+
+.sheet-info-subclass-box {
+    width: 65%;
+    padding-left: 5px;
 }
 
 /*----------------- Aspects section ------------------*/
@@ -156,24 +191,56 @@ textarea {
 
 .sheet-stats1 {
     grid-area: stats1;
-    background-color: orange;
 }
 
 .sheet-stats2 {
     grid-area: stats2;
-    background-color: orange;
+}
+
+.sheet-stats-col {
+    width: 49%;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 3px;
+    padding-bottom: 3px;
 }
 
 /*----------------- Common ------------------*/
 
 .sheet-common1 {
     grid-area: common1;
-    background-color: coral;
 }
 
 .sheet-common2 {
     grid-area: common2;
-    background-color: coral;
+}
+
+.sheet-skill-left {
+    grid-area: skill-left;
+}
+
+.sheet-skill-label {
+    grid-area: skill-label;
+    background-color: dimgrey;
+    color: white;
+    writing-mode: vertical-rl;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.sheet-skill-right {
+    grid-area: skill-right;
+}
+
+.sheet-skill {
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.75em;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border: 3px solid dimgrey;
 }
 
 .sheet-common3 {
@@ -224,7 +291,7 @@ textarea {
 }
 
 .sheet-blue {
-    background-color: dodgerblue;
+    background-color: lightskyblue;
 }
 
 .sheet-green {
@@ -250,12 +317,11 @@ select.sheet-selector-fit {
     width: fit-content;
 }
 
-input.sheet-medium {
-    width: 14%;
-    padding: 2px;
+input.sheet-small {
+    width: 20%;
 }
 
-input.sheet-short {
+input.sheet-cap {
     width: 60%;
 }
 
