@@ -20,9 +20,9 @@
             <div class="row">
                 <div class="col info-hp-box">
                     <span class="info-hp-text">HP:</span>
-                    <input class="medium" type="text" name="attr_hp">
+                    <input class="medium" type="number" name="attr_hp">
                     <span> / </span>
-                    <input class="medium" type="text" name="attr_max_hp">
+                    <input class="medium" type="number" name="attr_max_hp">
                 </div>
                 <div class="col info-class-box">
                     <span>Class:</span>
@@ -109,11 +109,11 @@
         <div class="stats1 section">
             <div class="col stats-col red">
                 Toughness:
-                <input class="small" type="text" name="attr_toughness">
+                <input class="small" type="number" name="attr_toughness">
             </div>
             <div class="col stats-col blue">
                 Resistance:
-                <input class="small" type="text" name="attr_resistance">
+                <input class="small" type="number" name="attr_resistance">
             </div>
         </div>
         <div class="common1 section">
@@ -124,21 +124,21 @@
                                 value='&{template:default} {{name=@{character_name}}} {{result=[[d20cs<@{athletics}]]}}'>
                             Athletics:
                         </button>
-                        <input class="small" type="text" name="attr_athletics">
+                        <input class="small" type="number" name="attr_athletics">
                     </div>
                     <div class="skill">
-                        <button type='roll' name='roll_skill' style="font-size: 1.25em;"
+                        <button type='roll' name='roll_skill' style="font-size: 1.2em;"
                                 value='&{template:default} {{name=@{character_name}}} {{result=[[d20cs<@{endurance}]]}}'>
                             Endurance:
                         </button>
-                        <input class="small" type="text" name="attr_endurance">
+                        <input class="small" type="number" name="attr_endurance">
                     </div>
                     <div class="skill">
                         <button type='roll' name='roll_skill'
                                 value='&{template:default} {{name=@{character_name}}} {{result=[[d20cs<@{intimidate}]]}}'>
                             Intimidate:
                         </button>
-                        <input class="small" type="text" name="attr_intimidate">
+                        <input class="small" type="number" name="attr_intimidate">
                     </div>
                 </div>
                 <div class="skill-label">
@@ -150,21 +150,21 @@
                                 value='&{template:default} {{name=@{character_name}}} {{result=[[d20cs<@{insight}]]}}'>
                             Insight:
                         </button>
-                        <input class="small" type="text" name="attr_insight">
+                        <input class="small" type="number" name="attr_insight">
                     </div>
                     <div class="skill">
-                        <button type='roll' name='roll_skill' style="font-size: 1.25em;"
+                        <button type='roll' name='roll_skill' style="font-size: 1.2em;"
                                 value='&{template:default} {{name=@{character_name}}} {{result=[[d20cs<@{knowledge}]]}}'>
                             Knowledge:
                         </button>
-                        <input class="small" type="text" name="attr_knowledge">
+                        <input class="small" type="number" name="attr_knowledge">
                     </div>
                     <div class="skill">
                         <button type='roll' name='roll_skill'
                                 value='&{template:default} {{name=@{character_name}}} {{result=[[d20cs<@{mend}]]}}'>
                             Mend:
                         </button>
-                        <input class="small" type="text" name="attr_mend">
+                        <input class="small" type="number" name="attr_mend">
                     </div>
                 </div>
             </div>
@@ -177,36 +177,36 @@
         <div class="stats2 section">
             <div class="col stats-col green">
                 Dodge:
-                <input class="small" type="text" name="attr_dodge">
+                <input class="small" type="number" name="attr_dodge">
             </div>
             <div class="col stats-col yellow">
                 Willpower:
-                <input class="small" type="text" name="attr_willpower">
+                <input class="small" type="number" name="attr_willpower">
             </div>
         </div>
         <div class="common2 section">
             <div class="skills-grid">
                 <div class="skill-left">
                     <div class="skill">
-                        <button type='roll' name='roll_skill'
+                        <button type='roll' name='roll_skill' style="font-size: 1.2em;"
                                 value='&{template:default} {{name=@{character_name}}} {{result=[[d20cs<@{acrobatics}]]}}'>
                             Acrobatics:
                         </button>
-                        <input class="small" type="text" name="attr_acrobatics">
+                        <input class="small" type="number" name="attr_acrobatics">
                     </div>
                     <div class="skill">
                         <button type='roll' name='roll_skill'
                                 value='&{template:default} {{name=@{character_name}}} {{result=[[d20cs<@{stealth}]]}}'>
                             Stealth:
                         </button>
-                        <input class="small" type="text" name="attr_stealth">
+                        <input class="small" type="number" name="attr_stealth">
                     </div>
                     <div class="skill">
-                        <button type='roll' name='roll_skill' style="font-size: 0.95em;"
+                        <button type='roll' name='roll_skill' style="font-size: 0.9em;"
                                 value='&{template:default} {{name=@{character_name}}} {{result=[[d20cs<@{sleight_of_hand}]]}}'>
                             Sleight of Hand:
                         </button>
-                        <input class="small" type="text" name="attr_sleight_of_hand">
+                        <input class="small" type="number" name="attr_sleight_of_hand">
                     </div>
                 </div>
                 <div class="skill-label">
@@ -218,21 +218,21 @@
                                 value='&{template:default} {{name=@{character_name}}} {{result=[[d20cs<@{focus}]]}}'>
                             Focus:
                         </button>
-                        <input class="small" type="text" name="attr_focus">
+                        <input class="small" type="number" name="attr_focus">
                     </div>
                     <div class="skill">
                         <button type='roll' name='roll_skill'
                                 value='&{template:default} {{name=@{character_name}}} {{result=[[d20cs<@{fast_talk}]]}}'>
                             Fast Talk:
                         </button>
-                        <input class="small" type="text" name="attr_fast_talk">
+                        <input class="small" type="number" name="attr_fast_talk">
                     </div>
                     <div class="skill">
-                        <button type='roll' name='roll_skill' style="font-size: 1.25em;"
+                        <button type='roll' name='roll_skill' style="font-size: 1.2em;"
                                 value='&{template:default} {{name=@{character_name}}} {{result=[[d20cs<@{leadership}]]}}'>
                             Leadership:
                         </button>
-                        <input class="small" type="text" name="attr_leadership">
+                        <input class="small" type="number" name="attr_leadership">
                     </div>
                 </div>
             </div>
@@ -241,6 +241,10 @@
         <!--        CAP Check-->
         <div class="header3 section">
             <span class="header">CAP Check</span>
+            <button type='roll' name='roll_attack' style="color:black;"
+                    value='&{template:default} {{name=@{character_name}}} {{result=[[d20<@{critical}cs<@{accuracy}]]}}'>
+                Roll!
+            </button>
         </div>
         <div class="common3 section">
             <div class="row">
@@ -250,26 +254,23 @@
                 <div class="col cap-main-col" style="text-align: center">
                     <div class="row critical" style="padding: 3px;">
                         <span style="font-weight: bold">C:</span>
-                        <input class="cap" type="text" name="attr_critical">
+                        <input class="cap" type="number" name="attr_critical">
                     </div>
                     <span style="font-weight: bold;">Critical</span>
                 </div>
-                <div class="col cap-sep-col" style="background-color: aqua">
-                    <span style="font-weight: bold;">&#129046;</span>
-                </div>
-
+                <span class="col cap-sep-col" style="font-weight: bold;">&#129046;</span>
                 <div class="col cap-main-col" style="text-align: center">
                     <div class="row accuracy" style="padding: 3px;">
                         <span style="font-weight: bold">A:</span>
-                        <input class="cap" type="text" name="attr_accuracy">
+                        <input class="cap" type="number" name="attr_accuracy">
                     </div>
                     <span style="font-weight: bold;">Accuracy</span>
                 </div>
-                <span class="col cap-sep-col" style="font-weight: bold; background-color: aqua">&#129046;</span>
+                <span class="col cap-sep-col" style="font-weight: bold;">&#129046;</span>
                 <div class="col cap-main-col" style="text-align: center">
                     <div class="row penetration" style="padding: 3px;">
                         <span style="font-weight: bold">P:</span>
-                        <input class="cap" type="text" name="attr_penetration">
+                        <input class="cap" type="number" name="attr_penetration">
                     </div>
                     <span style="font-weight: bold;">Penetration</span>
                 </div>
@@ -295,6 +296,426 @@
     <!--    Character actions and skills-->
     <div class="main-actions">
 
+        <div class="actions-grid">
+            <span class="action-name action-header">Name</span>
+            <span class="action-type action-header">Type</span>
+            <span class="action-target action-header">Target</span>
+            <span class="action-range action-header">Range</span>
+            <span class="action-effect action-header-left">Effect</span>
+            <span class="action-speed action-header">Action Speed</span>
+        </div>
+
+        <div class="actions-info-grid">
+            <span class="action-name action-info-title">MOVEMENT</span>
+            <span class="action-effect action-info">You cannot end your Movement in an Occupied Square.</span>
+        </div>
+
+        <div class="actions-grid">
+            <span class="action-name action-empty">Move</span>
+            <div class="action-type action-empty"></div>
+            <div class="action-target action-empty"></div>
+            <div class="action-range action-empty"></div>
+            <div class="action-effect action-text">
+                <span>Move </span>
+                <input class="x-small" type="number">
+                <span>-</span>
+                <input class="x-small" type="number">
+                <span> Squares. Can move through friendly Combatants.</span>
+            </div>
+            <span class="action-speed action-empty">Slow</span>
+        </div>
+
+        <div class="actions-grid">
+            <span class="action-name action-empty">Shift</span>
+            <div class="action-type action-empty"></div>
+            <div class="action-target action-empty"></div>
+            <div class="action-range action-empty"></div>
+            <div class="action-effect action-text">
+                <span>Move </span>
+                <input class="x-small" type="number">
+                <span> Square(s). Can move through friendly Combatants.</span>
+            </div>
+            <span class="action-speed action-empty">Fast</span>
+        </div>
+
+        <div class="actions-info-grid">
+            <span class="action-name action-info-title">MANEUVER</span>
+            <span class="action-effect action-info">You cannot end your Maneuver in an Occupied Square.</span>
+        </div>
+
+        <div class="actions-grid class-action-small">
+            <textarea class="action-name action-text-area-small action-text"></textarea>
+            <div class="action-type action-empty"></div>
+            <div class="action-target action-empty"></div>
+            <div class="action-range action-empty"></div>
+            <textarea class="action-effect action-text-area-small"></textarea>
+            <div class="action-speed action-empty">
+                <select class="selector">
+                    <option value="null">Select</option>
+                    <option value="free">Free</option>
+                    <option value="fast">Fast</option>
+                    <option value="slow">Slow</option>
+                    <option value="slow-fast">Slow + Fast</option>
+                    <option value="slow-slow">Slow + Slow</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="actions-info-grid">
+            <span class="action-name action-info-title">BASIC ACTIONS</span>
+        </div>
+
+        <div class="actions-grid class-action-small">
+            <textarea class="action-name action-text-area-small action-text"></textarea>
+            <div class="action-type action-empty">Melee</div>
+            <textarea class="action-target action-text-area-small action-text"></textarea>
+            <textarea class="action-range action-text-area-small action-text"></textarea>
+            <textarea class="action-effect action-text-area-small"></textarea>
+            <div class="action-speed action-empty">Slow</div>
+        </div>
+
+        <div class="actions-grid class-action-small">
+            <textarea class="action-name action-text-area-small action-text"></textarea>
+            <div class="action-type action-empty">Ranged</div>
+            <textarea class="action-target action-text-area-small action-text"></textarea>
+            <textarea class="action-range action-text-area-small action-text"></textarea>
+            <textarea class="action-effect action-text-area-small"></textarea>
+            <div class="action-speed action-empty">Slow</div>
+        </div>
+
+        <div class="actions-info-grid">
+            <span class="action-name action-info-title">CLASS ACTIONS</span>
+            <div class="action-effect">
+                <span style="font-size: 0.75em">Trigger Limit:</span>
+                <input class="x-small" type="number" name="attr_trigger">
+                <span style="font-size: 0.75em">Sustain Limit:</span>
+                <input class="x-small" type="number" name="attr_sustain">
+                <span style="font-size: 0.75em">Amplify Limit:</span>
+                <input class="x-small" type="number" name="attr_amplify">
+            </div>
+        </div>
+
+        <!--    Class action 1-->
+        <div class="actions-grid class-action-medium">
+            <textarea class="action-name action-text-area-medium action-text"></textarea>
+            <div class="action-type action-non-empty">
+                <select class="selector">
+                    <option value="null">Select</option>
+                    <option value="general">General</option>
+                    <option value="trigger">Trigger</option>
+                    <option value="amplify">Amplify</option>
+                    <option value="Sustain">Sustain</option>
+                </select>
+                <select class="selector">
+                    <option value="null">Select</option>
+                    <option value="exploit">Exploit</option>
+                    <option value="spell">Spell</option>
+                </select>
+            </div>
+            <textarea class="action-target action-text-area-medium action-text"></textarea>
+            <div class="action-range action-non-empty">
+                <select class="selector">
+                    <option value="null">Select</option>
+                    <option value="ranged">Ranged</option>
+                    <option value="melee">Melee</option>
+                </select>
+                <input class="small" type="number">
+            </div>
+            <textarea class="action-effect action-text-area-medium"></textarea>
+            <div class="action-speed action-non-empty">
+                <select class="selector">
+                    <option value="null">Select</option>
+                    <option value="free">Free</option>
+                    <option value="fast">Fast</option>
+                    <option value="slow">Slow</option>
+                    <option value="slow-fast">Slow + Fast</option>
+                    <option value="slow-slow">Slow + Slow</option>
+                </select>
+            </div>
+        </div>
+
+        <!--    Class action 2-->
+        <div class="actions-grid class-action-medium">
+            <textarea class="action-name action-text-area-medium action-text"></textarea>
+            <div class="action-type action-non-empty">
+                <select class="selector">
+                    <option value="null">Select</option>
+                    <option value="general">General</option>
+                    <option value="trigger">Trigger</option>
+                    <option value="amplify">Amplify</option>
+                    <option value="Sustain">Sustain</option>
+                </select>
+                <select class="selector">
+                    <option value="null">Select</option>
+                    <option value="exploit">Exploit</option>
+                    <option value="spell">Spell</option>
+                </select>
+            </div>
+            <textarea class="action-target action-text-area-medium action-text"></textarea>
+            <div class="action-range action-non-empty">
+                <select class="selector">
+                    <option value="null">Select</option>
+                    <option value="ranged">Ranged</option>
+                    <option value="melee">Melee</option>
+                </select>
+                <input class="small" type="number">
+            </div>
+            <textarea class="action-effect action-text-area-medium"></textarea>
+            <div class="action-speed action-non-empty">
+                <select class="selector">
+                    <option value="null">Select</option>
+                    <option value="free">Free</option>
+                    <option value="fast">Fast</option>
+                    <option value="slow">Slow</option>
+                    <option value="slow-fast">Slow + Fast</option>
+                    <option value="slow-slow">Slow + Slow</option>
+                </select>
+            </div>
+        </div>
+
+        <!--    Class action 3-->
+        <div class="actions-grid class-action-medium">
+            <textarea class="action-name action-text-area-medium action-text"></textarea>
+            <div class="action-type action-non-empty">
+                <select class="selector">
+                    <option value="null">Select</option>
+                    <option value="general">General</option>
+                    <option value="trigger">Trigger</option>
+                    <option value="amplify">Amplify</option>
+                    <option value="Sustain">Sustain</option>
+                </select>
+                <select class="selector">
+                    <option value="null">Select</option>
+                    <option value="exploit">Exploit</option>
+                    <option value="spell">Spell</option>
+                </select>
+            </div>
+            <textarea class="action-target action-text-area-medium action-text"></textarea>
+            <div class="action-range action-non-empty">
+                <select class="selector">
+                    <option value="null">Select</option>
+                    <option value="ranged">Ranged</option>
+                    <option value="melee">Melee</option>
+                </select>
+                <input class="small" type="number">
+            </div>
+            <textarea class="action-effect action-text-area-medium"></textarea>
+            <div class="action-speed action-non-empty">
+                <select class="selector">
+                    <option value="null">Select</option>
+                    <option value="free">Free</option>
+                    <option value="fast">Fast</option>
+                    <option value="slow">Slow</option>
+                    <option value="slow-fast">Slow + Fast</option>
+                    <option value="slow-slow">Slow + Slow</option>
+                </select>
+            </div>
+        </div>
+
+        <!--    Class action 4-->
+        <div class="actions-grid class-action-medium">
+            <textarea class="action-name action-text-area-medium action-text"></textarea>
+            <div class="action-type action-non-empty">
+                <select class="selector">
+                    <option value="null">Select</option>
+                    <option value="general">General</option>
+                    <option value="trigger">Trigger</option>
+                    <option value="amplify">Amplify</option>
+                    <option value="Sustain">Sustain</option>
+                </select>
+                <select class="selector">
+                    <option value="null">Select</option>
+                    <option value="exploit">Exploit</option>
+                    <option value="spell">Spell</option>
+                </select>
+            </div>
+            <textarea class="action-target action-text-area-medium action-text"></textarea>
+            <div class="action-range action-non-empty">
+                <select class="selector">
+                    <option value="null">Select</option>
+                    <option value="ranged">Ranged</option>
+                    <option value="melee">Melee</option>
+                </select>
+                <input class="small" type="number">
+            </div>
+            <textarea class="action-effect action-text-area-medium"></textarea>
+            <div class="action-speed action-non-empty">
+                <select class="selector">
+                    <option value="null">Select</option>
+                    <option value="free">Free</option>
+                    <option value="fast">Fast</option>
+                    <option value="slow">Slow</option>
+                    <option value="slow-fast">Slow + Fast</option>
+                    <option value="slow-slow">Slow + Slow</option>
+                </select>
+            </div>
+        </div>
+
+        <!--    Class action 5-->
+        <div class="actions-grid class-action-large">
+            <textarea class="action-name action-text-area-large action-text"></textarea>
+            <div class="action-type action-large">
+                <select class="selector">
+                    <option value="null">Select</option>
+                    <option value="general">General</option>
+                    <option value="trigger">Trigger</option>
+                    <option value="amplify">Amplify</option>
+                    <option value="Sustain">Sustain</option>
+                </select>
+                <select class="selector">
+                    <option value="null">Select</option>
+                    <option value="exploit">Exploit</option>
+                    <option value="spell">Spell</option>
+                </select>
+            </div>
+            <textarea class="action-target action-text-area-large action-text"></textarea>
+            <div class="action-range action-large">
+                <select class="selector">
+                    <option value="null">Select</option>
+                    <option value="ranged">Ranged</option>
+                    <option value="melee">Melee</option>
+                </select>
+                <input class="small" type="number">
+            </div>
+            <textarea class="action-effect action-text-area-large"></textarea>
+            <div class="action-speed action-large">
+                <select class="selector">
+                    <option value="null">Select</option>
+                    <option value="free">Free</option>
+                    <option value="fast">Fast</option>
+                    <option value="slow">Slow</option>
+                    <option value="slow-fast">Slow + Fast</option>
+                    <option value="slow-slow">Slow + Slow</option>
+                </select>
+            </div>
+        </div>
+
+        <!--    Class action 6-->
+        <div class="actions-grid class-action-large">
+            <textarea class="action-name action-text-area-large action-text"></textarea>
+            <div class="action-type action-large">
+                <select class="selector">
+                    <option value="null">Select</option>
+                    <option value="general">General</option>
+                    <option value="trigger">Trigger</option>
+                    <option value="amplify">Amplify</option>
+                    <option value="Sustain">Sustain</option>
+                </select>
+                <select class="selector">
+                    <option value="null">Select</option>
+                    <option value="exploit">Exploit</option>
+                    <option value="spell">Spell</option>
+                </select>
+            </div>
+            <textarea class="action-target action-text-area-large action-text"></textarea>
+            <div class="action-range action-large">
+                <select class="selector">
+                    <option value="null">Select</option>
+                    <option value="ranged">Ranged</option>
+                    <option value="melee">Melee</option>
+                </select>
+                <input class="small" type="number">
+            </div>
+            <textarea class="action-effect action-text-area-large"></textarea>
+            <div class="action-speed action-large">
+                <select class="selector">
+                    <option value="null">Select</option>
+                    <option value="free">Free</option>
+                    <option value="fast">Fast</option>
+                    <option value="slow">Slow</option>
+                    <option value="slow-fast">Slow + Fast</option>
+                    <option value="slow-slow">Slow + Slow</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="actions-info-grid">
+            <span class="action-name action-info-title" style="color: darkorange">CLASS TIDE-TURNER ACTIONS</span>
+            <div class="action-effect">
+                <span style="font-size: 0.75em;">Max Tide-Turners:</span>
+                <input class="x-small" type="number">
+                <span style="font-size: 0.75em;">Tide-Tuners Used:</span>
+                <input class="x-small" type="number">
+            </div>
+        </div>
+
+        <!--    Class action 7-->
+        <div class="actions-grid class-action-medium">
+            <textarea class="action-name action-tide-text-area-medium action-text"></textarea>
+            <div class="action-type action-tide-non-empty">
+                <select class="selector">
+                    <option value="null">Select</option>
+                    <option value="general">General</option>
+                    <option value="trigger">Trigger</option>
+                    <option value="amplify">Amplify</option>
+                    <option value="Sustain">Sustain</option>
+                </select>
+                <select class="selector">
+                    <option value="null">Select</option>
+                    <option value="exploit">Exploit</option>
+                    <option value="spell">Spell</option>
+                </select>
+            </div>
+            <textarea class="action-target action-tide-text-area-medium action-text"></textarea>
+            <div class="action-range action-tide-non-empty">
+                <select class="selector">
+                    <option value="null">Select</option>
+                    <option value="ranged">Ranged</option>
+                    <option value="melee">Melee</option>
+                </select>
+                <input class="small" type="number">
+            </div>
+            <textarea class="action-effect action-tide-text-area-medium"></textarea>
+            <div class="action-speed action-tide-non-empty">
+                <select class="selector">
+                    <option value="null">Select</option>
+                    <option value="free">Free</option>
+                    <option value="fast">Fast</option>
+                    <option value="slow">Slow</option>
+                    <option value="slow-fast">Slow + Fast</option>
+                    <option value="slow-slow">Slow + Slow</option>
+                </select>
+            </div>
+        </div>
+
+        <!--    Class action 8-->
+        <div class="actions-grid class-action-large">
+            <textarea class="action-name action-tide-text-area-large action-text"></textarea>
+            <div class="action-type action-tide-empty">
+                <select class="selector">
+                    <option value="null">Select</option>
+                    <option value="general">General</option>
+                    <option value="trigger">Trigger</option>
+                    <option value="amplify">Amplify</option>
+                    <option value="Sustain">Sustain</option>
+                </select>
+                <select class="selector">
+                    <option value="null">Select</option>
+                    <option value="exploit">Exploit</option>
+                    <option value="spell">Spell</option>
+                </select>
+            </div>
+            <textarea class="action-target action-tide-text-area-large action-text"></textarea>
+            <div class="action-range action-tide-empty">
+                <select class="selector">
+                    <option value="null">Select</option>
+                    <option value="ranged">Ranged</option>
+                    <option value="melee">Melee</option>
+                </select>
+                <input class="small" type="number">
+            </div>
+            <textarea class="action-effect action-tide-text-area-large"></textarea>
+            <div class="action-speed action-tide-empty">
+                <select class="selector">
+                    <option value="null">Select</option>
+                    <option value="free">Free</option>
+                    <option value="fast">Fast</option>
+                    <option value="slow">Slow</option>
+                    <option value="slow-fast">Slow + Fast</option>
+                    <option value="slow-slow">Slow + Slow</option>
+                </select>
+            </div>
+        </div>
 
     </div>
 </div>

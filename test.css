@@ -2,16 +2,16 @@
 
 .sheet-main {
     display: grid;
-    width: 800px;
+    width: 1100px;
     height: 900px;
     grid-gap: 4px;
-    background-color: pink;
-    grid-template-columns: 35% 1fr;
+    grid-template-columns: 30% 1fr;
     grid-template-rows: 1fr;
-    grid-template-areas: "main-skills main-actions";
+    grid-template-areas: "main-stats main-actions";
 }
 
 .sheet-main-stats {
+    grid-area: main-stats;
     display: grid;
     width: fit-content;
     height: fit-content;
@@ -19,33 +19,47 @@
     padding-right: 5px;
     grid-row-gap: 5px;
     grid-column-gap: 5px;
-    background-color: white;
     grid-template-columns: auto;
     grid-auto-rows: fit-content(100%);
     grid-template-areas: "image" "name" "info" "aspects" "header1" "stats1" "common1" "header2" "stats2" "common2" "header3" "common3" "header4" "common4";
 }
 
 .sheet-main-actions {
-    display: grid;
-    background-color: red;
+    grid-area: main-actions;
 }
 
 .sheet-skills-grid {
     display: grid;
     width: auto;
     height: fit-content;
-    grid-template-columns: 48% 1fr 48%;
+    grid-template-columns: 47% 1fr 47%;
     grid-auto-rows: fit-content(100%);
     grid-template-areas:
             "skill-left skill-label skill-right"
 }
 
-/*----------------- GENERAL CSS ------------------*/
-
-textarea {
-    width: 90%;
-    height: 85%;
+.sheet-actions-grid {
+    display: grid;
+    width: auto;
+    height: fit-content;
+    padding-bottom: 7px;
+    grid-column-gap: 3px;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 40% 1.5fr;
+    grid-template-areas: "action-name action-type action-target action-range action-effect action-speed";
 }
+
+.sheet-actions-info-grid {
+    display: grid;
+    width: auto;
+    height: fit-content;
+    padding-bottom: 3px;
+    grid-column-gap: 3px;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 40% 1fr;
+    grid-auto-rows: fit-content(100%);
+    grid-template-areas: "action-name action-name action-name action-name action-effect action-effect";
+}
+
+/*----------------- GENERAL CSS ------------------*/
 
 .sheet-section {
 
@@ -79,6 +93,7 @@ textarea {
 
 .sheet-name span {
     float: left;
+    width: fit-content;
     font-weight: bold;
     position: center;
     padding: 3px;
@@ -86,7 +101,7 @@ textarea {
 
 .sheet-name input {
     float: right;
-    width: auto;
+    width: available;
     padding: 3px;
 }
 
@@ -251,6 +266,161 @@ input.sheet-medium {
     grid-area: common4;
 }
 
+/*----------------- Actions ------------------*/
+
+.sheet-action-name {
+    grid-area: action-name;
+}
+
+.sheet-action-type {
+    grid-area: action-type;
+}
+
+.sheet-action-target {
+    grid-area: action-target;
+}
+
+.sheet-action-range {
+    grid-area: action-range;
+}
+
+.sheet-action-effect {
+    grid-area: action-effect;
+}
+
+.sheet-action-speed {
+    grid-area: action-speed;
+}
+
+.sheet-action-empty {
+    background-color: lightgrey;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sheet-action-large {
+    background-color: lightgrey;
+    text-align: center;
+}
+
+.sheet-action-text {
+    background-color: lightgrey;
+    text-align: center;
+}
+
+.sheet-action-non-empty {
+    background-color: lightgrey;
+    text-align: center;
+    height: 90%;
+}
+
+.sheet-action-tide-empty {
+    background-color: rgb(247, 213, 178);
+    text-align: center;
+}
+
+.sheet-action-tide-non-empty {
+    background-color: rgb(247, 213, 178);
+    text-align: center;
+    height: 90%;
+}
+
+.sheet-action-header {
+    width: auto;
+    height: auto;
+    background-color: dimgrey;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 3px;
+}
+
+.sheet-action-header-left {
+    width: auto;
+    height: auto;
+    background-color: dimgrey;
+    color: white;
+    font-weight: bold;
+    text-align: left;
+    padding-top: 3px;
+    padding-left: 5px;
+}
+
+.sheet-action-info-title {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.sheet-action-info {
+    font-size: 0.8em;
+    display: flex;
+    align-items: center;
+}
+
+.sheet-class-action-small {
+    height: 40px;
+}
+
+.sheet-class-action-medium {
+    height: 65px;
+}
+
+.sheet-class-action-large {
+    height: 125px;
+}
+
+.sheet-action-text-area-small {
+    display:block;
+    width:auto;
+    height:99%;
+    padding:0.25%;
+    margin:0;
+    overflow:auto;
+    background-color: lightgrey;
+}
+
+.sheet-action-text-area-medium {
+    display:block;
+    width:auto;
+    height:85%;
+    padding:0.5%;
+    margin:0;
+    overflow:auto;
+    background-color: lightgrey;
+}
+
+.sheet-action-text-area-large {
+    display:block;
+    width:auto;
+    height:99%;
+    padding:0.5%;
+    margin:0;
+    overflow:auto;
+    background-color: lightgrey;
+}
+
+.sheet-action-tide-text-area-medium {
+    display:block;
+    width:auto;
+    height:85%;
+    padding:0.5%;
+    margin:0;
+    overflow:auto;
+    background-color: rgb(247, 213, 178);}
+
+.sheet-action-tide-text-area-large {
+    display:block;
+    width:auto;
+    height:99%;
+    padding:0.5%;
+    margin:0;
+    overflow:auto;
+    background-color: rgb(247, 213, 178);}
+
+
 /* Set the min-width so that when the window is resized the look will stay consistant */
 
 .sheet-charimage {
@@ -317,6 +487,11 @@ select.sheet-selector-fit {
     width: fit-content;
 }
 
+input.sheet-x-small {
+    width: 8%;
+    margin: 4px;
+}
+
 input.sheet-small {
     width: 20%;
 }
@@ -354,12 +529,8 @@ input.sheet-cap {
 }
 
 .sheet-cap-sep-col {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: fit-content;
-    padding-left: 3px;
-    padding-right: 3px;
+    padding: 12px 3px 12px 3px;
 }
 
 /* Targetted styling that only effects elements with these classes */
