@@ -108,10 +108,14 @@
         </div>
         <div class="stats1 section">
             <div class="col stats-col red">
+                <img style="width: 20px; height: 20px"
+                     src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/shield.png">
                 Toughness:
                 <input class="small" type="number" name="attr_toughness">
             </div>
             <div class="col stats-col blue">
+                <img style="width: 20px; height: 20px"
+                     src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
                 Resistance:
                 <input class="small" type="number" name="attr_resistance">
             </div>
@@ -176,10 +180,14 @@
         </div>
         <div class="stats2 section">
             <div class="col stats-col green">
+                <img style="width: 20px; height: 20px"
+                     src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-skill-ui/512/game_skill_ui_evade_people_dodge_move-512.png">
                 Dodge:
                 <input class="small" type="number" name="attr_dodge">
             </div>
             <div class="col stats-col yellow">
+                <img style="width: 20px; height: 20px"
+                     src="https://static.thenounproject.com/png/1110005-200.png">
                 Willpower:
                 <input class="small" type="number" name="attr_willpower">
             </div>
@@ -716,6 +724,92 @@
                 </select>
             </div>
         </div>
+        <button type='roll' name='roll_skill'
+                value='&{template:5eAttack} {{name=Athletics}} {{subtags=Skill}} {{test=[[d20cs<@{athletics}cf>@{athletics}]]}}'>
+            Skill
+        </button>
+        <button type='roll' name='roll_skill'
+                value='&{template:5eAttack} {{name=Attack}} {{subtags=General, Exploit}} {{attack=[[d20cs<@{critical}cf>@{accuracy}]]}} {{damage=[[3d8]]}} {{dmgcrit=[[34]]}} {{speed=Slow}} {{range=2}} {{againstToughness=1}}'>
+            Attack T
+        </button>
+        <button type='roll' name='roll_skill'
+                value='&{template:5eAttack} {{name=Attack}} {{subtags=General, Exploit}} {{attack=[[d20cs<@{critical}cf>@{accuracy}]]}} {{damage=[[3d8]]}} {{dmgcrit=[[34]]}} {{speed=Slow}} {{range=2}} {{againstResistance=1}}'>
+            Attack R
+        </button>
+        <button type='roll' name='roll_skill'
+                value='&{template:5eAttack} {{name=Heal}} {{subtags=General, Spell}} {{speed=Slow}} {{healing=[[5]]}} {{target=All Other Heroes}} {{range=5}} {{type=Ranged}} {{description=Target Heroes heal 5 HP}}'>
+            Heal 5
+        </button>
+        <button type='roll' name='roll_skill'
+                value='&{template:5eAttack} {{name=Heal}} {{subtags=General, Spell}} {{speed=Slow}} {{healing=[[1d10]]}} {{target=1 Hero}} {{range=5}} {{type=Ranged}} {{description=Target Hero heal 1d10 HP}}'>
+            Heal 1d10
+        </button>
 
     </div>
 </div>
+
+<rolltemplate class="sheet-rolltemplate-5eAttack">
+    <div class="container">
+        <div style="background-color: #696969">
+            <div><h1 class="tcat-header">{{name}}</h1></div>
+            <div><span class="tcat-subheader">{{subtags}}</span></div>
+        </div>
+
+        {{#target}}
+        <div class="tcat-text">
+            <span class="tcat">Target: </span>{{target}}
+        </div>
+        {{/target}}
+        {{#range}}
+        <div class="tcat-text">
+            <span class="tcat">Range: </span>{{type}} {{range}}
+        </div>
+        {{/range}}
+        {{#speed}}
+        <div class="tcat-text">
+            <span class="tcat">Speed: </span>{{speed}}
+        </div>
+        {{/speed}}
+        {{#description}}
+        <div class="tcat-text">
+            <span class="tcat">Description: </span>{{description}}
+        </div>
+        {{/description}}
+
+        <div class="separator"></div>
+        {{#attack}}
+        <div class="rowcolor">
+            <span class="tcat">Attack: </span>
+            <span>{{attack}} vs</span>
+            {{#againstToughness}}
+            <img style="width: 20px; height: 20px"
+                 src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/shield.png">
+            {{/againstToughness}}
+            {{#againstResistance}}
+            <img style="width: 20px; height: 20px"
+                 src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
+            {{/againstResistance}}
+        </div>
+        {{/attack}}
+        {{#damage}}
+        <div>
+            {{#^rollWasFumble() attack}}
+            <span class="tcat">Damage: </span>{{damage}}
+            {{/^rollWasFumble() attack}}
+            {{#rollWasCrit() attack}}
+            <span class="tcat">Crit: </span>{{dmgcrit}}
+            {{/rollWasCrit() attack}}
+        </div>
+        {{/damage}}
+        {{#test}}
+        <div>
+            <span class="tcat">Roll: </span>{{test}}
+        </div>
+        {{/test}}
+        {{#healing}}
+        <div>
+            <span class="tcat">Healing: </span>{{healing}}
+        </div>
+        {{/healing}}
+    </div>
+</rolltemplate>

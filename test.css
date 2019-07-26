@@ -533,25 +533,61 @@ input.sheet-cap {
     padding: 12px 3px 12px 3px;
 }
 
-/* Targetted styling that only effects elements with these classes */
+/*Roll Template*/
 
-
-span.sheet-dee {
-    font-size: 1.4em;
-    font-weight: bold;
-    left: -36%;
-    padding-right: 4px;
-    position: relative;
-    top: 3px;
+.sheet-rolltemplate-5eAttack .sheet-container {
+    background-color: #ffffff;
+    border: 1px solid;
+    padding: 2px;
+    width: 189px;
 }
 
-/* Targetted styling that only effects elements contained within the stated class */
-.sheet-stats h3 {
-    display: inline-block;
+.sheet-rolltemplate-5eAttack div {
+    padding: 2px;
+}
+
+.sheet-rolltemplate-5eAttack .sheet-tcat {
+    font-weight: bold;
+    font-size: 0.75em;
+    font-variant: small-caps;
+    line-height: 1.6em;
+    padding-left: 5px;
     text-align: left;
 }
 
-.sheet-stats h3:first-child {
-    margin-left: 35%;
-    margin-right: 15%;
+.sheet-rolltemplate-5eAttack .sheet-tcat-text {
+    font-size: 0.75em;
+}
+
+.sheet-rolltemplate-5eAttack .sheet-tcat-header {
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    font-variant: small-caps;
+    line-height: 20px;
+}
+
+.sheet-rolltemplate-5eAttack .sheet-tcat-subheader {
+    color: white;
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+.sheet-rolltemplate-5eAttack .sheet-separator {
+    background-color: #d3d3d3;
+    width: auto;
+    height: 1px;
+}
+
+.sheet-rolltemplate-5eAttack .inlinerollresult  {
+    background-color: #ffffff;
+    border: 3px solid #000000;
+}
+
+.sheet-rolltemplate-5eAttack .inlinerollresult.fullcrit {
+    border: 3px solid #3FB315;
+}
+
+.sheet-rolltemplate-5eAttack .inlinerollresult.fullfail {
+    border: 3px solid #B31515;
 }
