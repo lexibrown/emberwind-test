@@ -745,8 +745,156 @@
             Heal 1d10
         </button>
 
+        <div class="column sliders inlineBlock">
+            <div class="checkboxSlider"><input type="checkbox" class="checkboxSliderInvis" name="attr_output_legendaryitems" value="on" /><label></label></div>
+        </div>
+        <input class="tab-chat public" type="radio" name="attr_tab_chat" checked="checked" value=""><div>Public</div>
+        <input class="tab-chat gm" type="radio" name="attr_tab_chat" value="/w GM"><div>To GM</div>
+    </div>
+    <!--
+    *
+    *
+    *
+    *
+    * visual space for editing and seeing quickly. This is stuff after Actions & Other Actions
+    *
+    *
+    *
+    -->
+    <input type="hidden" class="display_legendaryitems_flag" name="attr_display_legendaryitems_flag" value="show" />
+    <div class="third inlineBlock vertTop displayLegendaryItems">
+        <!-- Items Area -->
+        <div class="actionsTop padTop padLeft">
+            <div class="column width100 textLargest bold textShadow">Legendary Items</div>
+            <div class="column width100 italic">Attacks, Boons, & Banes</div>
+        </div>
+        <div class="actionsMiddle padTop padRight">
+            <!-- Headings for the actions -->
+            <div class="column width25 bold italic inlineBlock textCenter padLeft">Settings</div>
+            <div class="column width75 bold italic inlineBlock textCenter">Name (click to roll)</div>
+            <!-- Add actions as needed Section (repeating fields) -->
+            <div class="column width100 vertTop padRight">
+                <fieldset class="repeating_legendary">
+                    <div class="row">   <!-- Fix for Mozilla squishing +Add & Modify buttons -->
+                        <div class="width15 inlineBlock vertTop padLeft">
+                            <input class="settings" type="checkbox" name="attr_settingsFlag" value="on" checked="checked" />
+                            <span>y</span>
+                        </div>
+                        <div class="width85 inlineBlock vertTop inputNameShort attributeButton gray"><button type="roll" name="roll_action" value="&{template:default {{title= @{action_name}}}"><input type="text" style="text-align: center;" name="attr_action_name" /></button></div>
+                        <input type="hidden" class="displaySettingsFlag" name="attr_displaySettingsFlag" />
+                        <div class="width100 displaySettings padLeft">
+                            <div class="column width25 inlineBlock bold">Name: </div>
+                            <div class="column width75 inlineBlock inputNameShort"><input type="text" name="attr_action_name" /></div>
+                            <div class="column width45 inlineBlock bold textSmall">Attribute</div>
+                            <div class="column width10 inlineBlock bold textSmall">vs</div>
+                            <div class="column width45 inlineBlock bold textSmall">Target</div>
+                            <div class="column width45 inlineBlock inputSelect">
+                                <select name="attr_action_attribute">
+                                    <option value="None" selected="selected">None</option>
+                                    <option value="Agility">Agility</option>
+                                    <option value="Fortitude">Fortitude</option>
+                                    <option value="Might">Might</option>
+                                    <option value="Deception">Deception</option>
+                                    <option value="Presence">Presence</option>
+                                    <option value="Persuasion">Persuasion</option>
+                                    <option value="Learning">Learning</option>
+                                    <option value="Logic">Logic</option>
+                                    <option value="Perception">Perception</option>
+                                    <option value="Will">Will</option>
+                                    <option value="Alteration">Alteration</option>
+                                    <option value="Creation">Creation</option>
+                                    <option value="Energy">Energy</option>
+                                    <option value="Entropy">Entropy</option>
+                                    <option value="Influence">Influence</option>
+                                    <option value="Movement">Movement</option>
+                                    <option value="Prescience">Prescience</option>
+                                    <option value="Protection">Protection</option>
+                                </select>
+                            </div>
+                            <div class="column width10 inlineBlock bold italic textCenter">vs</div>
+                            <div class="column width45 inlineBlock inputSelect">
+                                <select name="attr_action_target">
+                                    <option value="None" selected="selected">None</option>
+                                    <option value="Guard">Guard</option>
+                                    <option value="Toughness">Toughness</option>
+                                    <option value="Resolve">Resolve</option>
+                                </select>
+                            </div>
+                            <input type="hidden" name="attr_dice_roll" value="[[d20!! + 1d4!!]]" />
+                            <div class="column width55 inlineBlock">Attribute Dice:</div>
+                            <div class="column width45 inlineBlock inputSelect">
+                                <select name="attr_dice_modifier">
+                                    <option value="1" selected="selected">Select Dice</option>
+                                    <option value="1">1 = 1d4</option>
+                                    <option value="2">2 = 1d6</option>
+                                    <option value="3">3 = 1d8</option>
+                                    <option value="4">4 = 1d10</option>
+                                    <option value="5">5 = 2d6</option>
+                                    <option value="6">6 = 2d8</option>
+                                    <option value="7">7 = 2d10</option>
+                                    <option value="8">8 = 3d8</option>
+                                    <option value="9">9 = 3d10</option>
+                                    <option value="10">10 = 4d8</option>
+                                </select>
+                            </div>
+                            <div class="column width100"><input type="checkbox" class="checks25" name="attr_use_destructive_trance" value="Yes" /> Use Destructive Trance</div>
+                            <input type="hidden" name="attr_dice_roll_d20" value="1d20!!" />
+                            <input type="hidden" name="attr_attribute_score" value="0" />
+                            <div class="column width50 textSmall bold inlineBlock">d20 for this action is</div>
+                            <div class="column width50 textSmall bold inlineBlock">Default (Dis)Advantage</div>
+                            <div class="column width45 inlineBlock inputSelect">
+                                <select name="attr_select_dice_d20">
+                                    <option value="Normal" selected="selected">Normal</option>
+                                    <option value="Advantage">Advantage</option>
+                                    <option value="Disadvantage">Disadvantage</option>
+                                </select>
+                            </div>
+                            <div class="column width50 inlineBlock inputNumber30"><input type="number" name="attr_default_advantage" value=0 /></div>
+                            <input type="hidden" name="attr_power_target" value="" />
+                            <input type="hidden" name="attr_power_targetmax" value=0 />
+                            <div class="column width50 inlineBlock textSmall bold">For a Boon</div>
+                            <div class="column width25 inlineBlock textSmall bold">Minimum</div>
+                            <div class="column width25 inlineBlock textSmall bold">Maximum</div>
+                            <div class="column width50 inlineBlock"><input type="checkbox" class="checks25" name="attr_use_power_level" value="Yes" /> Use Power level</div>
+                            <div class="column width25 inlineBlock inputNumber30"><input type="number" name="attr_power_level" value=0 /></div>
+                            <div class="column width25 inlineBlock inputNumber30"><input type="number" name="attr_power_levelmax" value=0 /></div>
+                            <div class="column width100 bold textSmall">Description/Special/Flavor Text</div>
+                            <div class="column width100 resizeVert vertTop"><textarea class="height50" name="attr_action_special"></textarea></div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+        <div class="actionsBottom"></div>
+        <!-- End Legendary Items Area -->
+    </div>
+
+
     </div>
 </div>
+
+<script type="text/worker">
+	// Show/Hide settings area
+        // Function call to simplifiy coding for showing/hiding settings
+    function showHide(value) {
+        if(value === "on") {    return "show";  // If the checkbox is CHECKED then show the section
+        } else {    return "hide";  }           // If the checkbox is UNchecked then hide the section
+    };
+    on("change:repeating_legendary:settingsflag", function() {
+        getAttrs(["repeating_legendary_settingsFlag"], function(values) {
+            setAttrs({
+                "repeating_legendary_displaySettingsFlag": showHide(values.repeating_legendary_settingsFlag)
+            });
+        });
+    });
+    on("change:output_legendaryitems", function() {
+        getAttrs(["output_legendaryitems"], function(values) {
+            setAttrs({
+                "display_legendaryitems_flag": showHide(values.output_legendaryitems)
+            });
+        });
+    });
+</script>
 
 <rolltemplate class="sheet-rolltemplate-5eAttack">
     <div class="container">
