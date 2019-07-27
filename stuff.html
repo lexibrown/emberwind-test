@@ -1,3 +1,80 @@
+on("change:repeating_legendary:settingsflag", function() {
+getAttrs(["repeating_legendary_settingsFlag"], function(values) {
+setAttrs({
+"repeating_legendary_displaySettingsFlag": showHide(values.repeating_legendary_settingsFlag)
+});
+});
+});
+on("change:output_legendaryitems", function() {
+getAttrs(["output_legendaryitems"], function(values) {
+setAttrs({
+"display_legendaryitems_flag": showHide(values.output_legendaryitems)
+});
+});
+});
+on("change:deception_settings_flag", function() {
+getAttrs(["deception_settings_flag"], function(values) {
+setAttrs({
+"deception_display_settings_flag": showHide(values.deception_settings_flag)
+});
+});
+});
+<!--
+*
+*
+*
+*
+* visual space for editing and seeing quickly. This is stuff after Actions & Other Actions
+*
+*
+*
+-->
+<div class="third inlineBlock vertTop displayLegendaryItems">
+    <div class="actionsMiddle padTop padRight">
+        <!-- Add actions as needed Section (repeating fields) -->
+        <div class="column width100 vertTop padRight">
+            <fieldset class="repeating_legendary">
+                <div class="row">
+                    <div class="width15 inlineBlock vertTop padLeft">
+                        <input class="settings" type="checkbox" name="attr_settingsFlag" value="on" checked="checked" />
+                        <span>y</span>
+                    </div>
+                    <div class="width85 inlineBlock vertTop inputNameShort attributeButton gray"><button type="roll" name="roll_action" value="&{template:default {{title= @{action_name}}}"><input type="text" style="text-align: center;" name="attr_action_name" /></button></div>
+                    <input type="hidden" class="displaySettingsFlag" name="attr_displaySettingsFlag" />
+                    <div class="width100 displaySettings padLeft">
+                        <div class="column width25 inlineBlock bold">Name: </div>
+                        <div class="column width75 inlineBlock inputNameShort"><input type="text" name="attr_action_name" /></div>
+
+                        <div class="column width25 inlineBlock bold">Damage: </div>
+                        <div class="column width75 inlineBlock inputNameShort">
+                            <input type="text" name="attr_damage" />
+                        </div>
+
+                        <div class="column width25 inlineBlock bold">Healing: </div>
+                        <div class="column width75 inlineBlock inputNameShort">
+                            <input type="text" name="attr_healing"/>
+                        </div>
+
+                        <div class="column width100 resizeVert vertTop">
+                            <fieldset id="group1">
+                                <input type="radio" value="value1" name="group1">Trig.</input>
+                                <input type="radio" value="value1" name="group1">Sus.</input>
+                                <input type="radio" value="value2" name="group1">Amp.</input>
+                            </fieldset>
+                        </div>
+
+                        <div class="column width100 resizeVert vertTop">
+                            <textarea class="height50" name="attr_desciption"></textarea>
+                        </div>
+
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+</div>
+
+
 <div class="main">
 
     <div class="main-stats">

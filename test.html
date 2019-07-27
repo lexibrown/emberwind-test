@@ -249,10 +249,6 @@
         <!--        CAP Check-->
         <div class="header3 section">
             <span class="header">CAP Check</span>
-            <button type='roll' name='roll_attack' style="color:black;"
-                    value='&{template:default} {{name=@{character_name}}} {{result=[[d20<@{critical}cs<@{accuracy}]]}}'>
-                Roll!
-            </button>
         </div>
         <div class="common3 section">
             <div class="row">
@@ -374,15 +370,28 @@
         </div>
 
         <div class="actions-grid class-action-small">
-            <textarea class="action-name action-text-area-small action-text"></textarea>
+            <div class="action-button">
+                <button type='roll' name='roll_attack' style="color:black;"
+                        value='&{template:5eAttack} {{name=@{basic_melee_name}}} {{attack=[[d20cs<@{critical}cf>@{accuracy}]]}} {{damage=[[3d8]]}} {{dmgcrit=[[34]]}} {{speed=Slow}} {{type=Melee}} {{range=@{basic_melee_range}}} {{target=@{basic_melee_target}}} {{againstToughness=1}}'>
+                    Roll!
+                </button>
+
+            </div>
+            <textarea class="action-name action-text-area-small action-text" name="attr_basic_melee_name"></textarea>
             <div class="action-type action-empty">Melee</div>
-            <textarea class="action-target action-text-area-small action-text"></textarea>
-            <textarea class="action-range action-text-area-small action-text"></textarea>
+            <textarea class="action-target action-text-area-small action-text" name="attr_basic_melee_target"></textarea>
+            <textarea class="action-range action-text-area-small action-text" name="attr_basic_melee_range"></textarea>
             <textarea class="action-effect action-text-area-small"></textarea>
             <div class="action-speed action-empty">Slow</div>
         </div>
 
         <div class="actions-grid class-action-small">
+            <div class="action-button">
+                <button type='roll' name='roll_attack' style="color:black;"
+                        value='&{template:default} {{name=@{character_name}}} {{result=[[d20<@{critical}cs<@{accuracy}]]}}'>
+                    Roll!
+                </button>
+            </div>
             <textarea class="action-name action-text-area-small action-text"></textarea>
             <div class="action-type action-empty">Ranged</div>
             <textarea class="action-target action-text-area-small action-text"></textarea>
@@ -600,6 +609,13 @@
 
         <!--    Class action 6-->
         <div class="actions-grid class-action-large">
+            <div class="action-button">
+                <button type='roll' name='roll_attack' style="color:black;"
+                        value='&{template:default} {{name=@{character_name}}} {{result=[[d20<@{critical}cs<@{accuracy}]]}}'>
+                    Roll!
+                </button>
+            </div>
+
             <textarea class="action-name action-text-area-large action-text"></textarea>
             <div class="action-type action-large">
                 <select class="selector">
@@ -624,7 +640,51 @@
                 </select>
                 <input class="small" type="number">
             </div>
-            <textarea class="action-effect action-text-area-large"></textarea>
+
+
+            <div class="action-effect action-text-area-large" style="background-color: yellowgreen">
+                <div class="width6 inlineBlock vertBottom"><input class="settings" type="checkbox" name="attr_agility_settings_flag" value="on" /><span>y</span></div>
+                <div class="width55 inlineBlock">
+                    <input type="hidden" class="agility_display_settings_flag2" name="attr_agility_display_settings_flag2" value="show" />
+                    <div class="column width1of3 displaySettings inlineBlock textCenter inputDice">
+                        <input type="text" style="text-align: center;" name="attr_dice attr_healing_dice"/>
+                    </div>
+                </div>
+                <input type="hidden" class="agility_display_settings_flag" name="attr_agility_display_settings_flag" value="hide" />
+                <div class="width100 displaySettings action-detail-grid">
+
+                    <div class="top-detail">
+                        <span style="width: auto; font-weight: bold">Damage: </span>
+                        <input style="width: 50px" type="text" name="attr_dice" />
+
+                        <span style="width: auto; font-weight: bold">Healing: </span>
+                        <input style="width: 50px" type="text" name="attr_healing_dice" />
+                    </div>
+
+                    <div class="middle-detail">
+                        <fieldset>
+                            <input type="radio" value="value1" name="group1">vs. Toughness</input>
+                            <img style="width: 20px; height: 20px"
+                                 src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/shield.png">
+                            <input type="radio" value="value2" name="group1">vs. Resistance</input>
+                            <img style="width: 20px; height: 20px"
+                                 src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
+                            <input type="radio" value="value3" name="group1">None</input>
+                        </fieldset>
+                    </div>
+
+                    <div class="bottom-detail">
+                        <fieldset>
+                            <input type="radio" value="value1" name="group1">Trig.</input>
+                            <input type="radio" value="value1" name="group1">Sus.</input>
+                            <input type="radio" value="value2" name="group1">Amp.</input>
+                        </fieldset>
+                        <textarea class="height50" name="attr_description"></textarea>
+                    </div>
+                </div>
+            </div>
+
+<!--            <textarea class="action-effect action-text-area-large"></textarea>-->
             <div class="action-speed action-large">
                 <select class="selector">
                     <option value="null">Select</option>
@@ -745,132 +805,8 @@
             Heal 1d10
         </button>
 
-        <div class="column sliders inlineBlock">
-            <div class="checkboxSlider"><input type="checkbox" class="checkboxSliderInvis" name="attr_output_legendaryitems" value="on" /><label></label></div>
-        </div>
-        <input class="tab-chat public" type="radio" name="attr_tab_chat" checked="checked" value=""><div>Public</div>
-        <input class="tab-chat gm" type="radio" name="attr_tab_chat" value="/w GM"><div>To GM</div>
-    </div>
-    <!--
-    *
-    *
-    *
-    *
-    * visual space for editing and seeing quickly. This is stuff after Actions & Other Actions
-    *
-    *
-    *
-    -->
-    <input type="hidden" class="display_legendaryitems_flag" name="attr_display_legendaryitems_flag" value="show" />
-    <div class="third inlineBlock vertTop displayLegendaryItems">
-        <!-- Items Area -->
-        <div class="actionsTop padTop padLeft">
-            <div class="column width100 textLargest bold textShadow">Legendary Items</div>
-            <div class="column width100 italic">Attacks, Boons, & Banes</div>
-        </div>
-        <div class="actionsMiddle padTop padRight">
-            <!-- Headings for the actions -->
-            <div class="column width25 bold italic inlineBlock textCenter padLeft">Settings</div>
-            <div class="column width75 bold italic inlineBlock textCenter">Name (click to roll)</div>
-            <!-- Add actions as needed Section (repeating fields) -->
-            <div class="column width100 vertTop padRight">
-                <fieldset class="repeating_legendary">
-                    <div class="row">   <!-- Fix for Mozilla squishing +Add & Modify buttons -->
-                        <div class="width15 inlineBlock vertTop padLeft">
-                            <input class="settings" type="checkbox" name="attr_settingsFlag" value="on" checked="checked" />
-                            <span>y</span>
-                        </div>
-                        <div class="width85 inlineBlock vertTop inputNameShort attributeButton gray"><button type="roll" name="roll_action" value="&{template:default {{title= @{action_name}}}"><input type="text" style="text-align: center;" name="attr_action_name" /></button></div>
-                        <input type="hidden" class="displaySettingsFlag" name="attr_displaySettingsFlag" />
-                        <div class="width100 displaySettings padLeft">
-                            <div class="column width25 inlineBlock bold">Name: </div>
-                            <div class="column width75 inlineBlock inputNameShort"><input type="text" name="attr_action_name" /></div>
-                            <div class="column width45 inlineBlock bold textSmall">Attribute</div>
-                            <div class="column width10 inlineBlock bold textSmall">vs</div>
-                            <div class="column width45 inlineBlock bold textSmall">Target</div>
-                            <div class="column width45 inlineBlock inputSelect">
-                                <select name="attr_action_attribute">
-                                    <option value="None" selected="selected">None</option>
-                                    <option value="Agility">Agility</option>
-                                    <option value="Fortitude">Fortitude</option>
-                                    <option value="Might">Might</option>
-                                    <option value="Deception">Deception</option>
-                                    <option value="Presence">Presence</option>
-                                    <option value="Persuasion">Persuasion</option>
-                                    <option value="Learning">Learning</option>
-                                    <option value="Logic">Logic</option>
-                                    <option value="Perception">Perception</option>
-                                    <option value="Will">Will</option>
-                                    <option value="Alteration">Alteration</option>
-                                    <option value="Creation">Creation</option>
-                                    <option value="Energy">Energy</option>
-                                    <option value="Entropy">Entropy</option>
-                                    <option value="Influence">Influence</option>
-                                    <option value="Movement">Movement</option>
-                                    <option value="Prescience">Prescience</option>
-                                    <option value="Protection">Protection</option>
-                                </select>
-                            </div>
-                            <div class="column width10 inlineBlock bold italic textCenter">vs</div>
-                            <div class="column width45 inlineBlock inputSelect">
-                                <select name="attr_action_target">
-                                    <option value="None" selected="selected">None</option>
-                                    <option value="Guard">Guard</option>
-                                    <option value="Toughness">Toughness</option>
-                                    <option value="Resolve">Resolve</option>
-                                </select>
-                            </div>
-                            <input type="hidden" name="attr_dice_roll" value="[[d20!! + 1d4!!]]" />
-                            <div class="column width55 inlineBlock">Attribute Dice:</div>
-                            <div class="column width45 inlineBlock inputSelect">
-                                <select name="attr_dice_modifier">
-                                    <option value="1" selected="selected">Select Dice</option>
-                                    <option value="1">1 = 1d4</option>
-                                    <option value="2">2 = 1d6</option>
-                                    <option value="3">3 = 1d8</option>
-                                    <option value="4">4 = 1d10</option>
-                                    <option value="5">5 = 2d6</option>
-                                    <option value="6">6 = 2d8</option>
-                                    <option value="7">7 = 2d10</option>
-                                    <option value="8">8 = 3d8</option>
-                                    <option value="9">9 = 3d10</option>
-                                    <option value="10">10 = 4d8</option>
-                                </select>
-                            </div>
-                            <div class="column width100"><input type="checkbox" class="checks25" name="attr_use_destructive_trance" value="Yes" /> Use Destructive Trance</div>
-                            <input type="hidden" name="attr_dice_roll_d20" value="1d20!!" />
-                            <input type="hidden" name="attr_attribute_score" value="0" />
-                            <div class="column width50 textSmall bold inlineBlock">d20 for this action is</div>
-                            <div class="column width50 textSmall bold inlineBlock">Default (Dis)Advantage</div>
-                            <div class="column width45 inlineBlock inputSelect">
-                                <select name="attr_select_dice_d20">
-                                    <option value="Normal" selected="selected">Normal</option>
-                                    <option value="Advantage">Advantage</option>
-                                    <option value="Disadvantage">Disadvantage</option>
-                                </select>
-                            </div>
-                            <div class="column width50 inlineBlock inputNumber30"><input type="number" name="attr_default_advantage" value=0 /></div>
-                            <input type="hidden" name="attr_power_target" value="" />
-                            <input type="hidden" name="attr_power_targetmax" value=0 />
-                            <div class="column width50 inlineBlock textSmall bold">For a Boon</div>
-                            <div class="column width25 inlineBlock textSmall bold">Minimum</div>
-                            <div class="column width25 inlineBlock textSmall bold">Maximum</div>
-                            <div class="column width50 inlineBlock"><input type="checkbox" class="checks25" name="attr_use_power_level" value="Yes" /> Use Power level</div>
-                            <div class="column width25 inlineBlock inputNumber30"><input type="number" name="attr_power_level" value=0 /></div>
-                            <div class="column width25 inlineBlock inputNumber30"><input type="number" name="attr_power_levelmax" value=0 /></div>
-                            <div class="column width100 bold textSmall">Description/Special/Flavor Text</div>
-                            <div class="column width100 resizeVert vertTop"><textarea class="height50" name="attr_action_special"></textarea></div>
-                        </div>
-                    </div>
-                </fieldset>
-            </div>
-        </div>
-        <div class="actionsBottom"></div>
-        <!-- End Legendary Items Area -->
     </div>
 
-
-    </div>
 </div>
 
 <script type="text/worker">
@@ -880,17 +816,11 @@
         if(value === "on") {    return "show";  // If the checkbox is CHECKED then show the section
         } else {    return "hide";  }           // If the checkbox is UNchecked then hide the section
     };
-    on("change:repeating_legendary:settingsflag", function() {
-        getAttrs(["repeating_legendary_settingsFlag"], function(values) {
+    on("change:agility_settings_flag", function() {
+        getAttrs(["agility_settings_flag"], function(values) {
             setAttrs({
-                "repeating_legendary_displaySettingsFlag": showHide(values.repeating_legendary_settingsFlag)
-            });
-        });
-    });
-    on("change:output_legendaryitems", function() {
-        getAttrs(["output_legendaryitems"], function(values) {
-            setAttrs({
-                "display_legendaryitems_flag": showHide(values.output_legendaryitems)
+                "agility_display_settings_flag": showHide(values.agility_settings_flag),
+                "agility_display_settings_flag2": showHide(values.agility_settings_flag)
             });
         });
     });
