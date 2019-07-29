@@ -1,3 +1,16 @@
+/*----------------- Font ------------------*/
+
+@font-face{
+    font-family: kungfont;
+    src: url(https://github.com/lexibrown/emberwind-test/raw/master/Kungfont-Regular.otf) format('opentype');
+}
+
+.sheet-kungfont {
+    font-family: kungfont;
+    font-size: 32px;
+    border: 2px solid transparent;
+}
+
 /*----------------- GRIDS ------------------*/
 
 .sheet-main {
@@ -106,7 +119,8 @@
 /*----------------- Name section ------------------*/
 .sheet-name {
     grid-area: name;
-    align-content: center;
+    display: flex;
+    align-items: center;
 }
 
 .sheet-name span {
@@ -118,8 +132,7 @@
 }
 
 .sheet-name input {
-    float: right;
-    width: available;
+    width: 85%;
     padding: 3px;
 }
 
