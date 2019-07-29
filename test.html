@@ -125,21 +125,21 @@
                 <div class="skill-left">
                     <div class="skill">
                         <button type='roll' name='roll_skill'
-                                value='&{template:default} {{name=@{character_name}}} {{result=[[d20cs<@{athletics}]]}}'>
+                                value='&{template:skill} {{name=Athletics}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{athletics}cf>@{athletics}]]}}'>
                             Athletics:
                         </button>
                         <input class="small" type="number" name="attr_athletics">
                     </div>
                     <div class="skill">
                         <button type='roll' name='roll_skill' style="font-size: 1.2em;"
-                                value='&{template:default} {{name=@{character_name}}} {{result=[[d20cs<@{endurance}]]}}'>
+                                value='&{template:skill} {{name=Endurance}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{endurance}cf>@{endurance}]]}}'>
                             Endurance:
                         </button>
                         <input class="small" type="number" name="attr_endurance">
                     </div>
                     <div class="skill">
                         <button type='roll' name='roll_skill'
-                                value='&{template:default} {{name=@{character_name}}} {{result=[[d20cs<@{intimidate}]]}}'>
+                                value='&{template:skill} {{name=Intimidate}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{intimidate}cf>@{intimidate}]]}}'>
                             Intimidate:
                         </button>
                         <input class="small" type="number" name="attr_intimidate">
@@ -151,21 +151,21 @@
                 <div class="skill-right">
                     <div class="skill">
                         <button type='roll' name='roll_skill'
-                                value='&{template:default} {{name=@{character_name}}} {{result=[[d20cs<@{insight}]]}}'>
+                                value='&{template:skill} {{name=Insight}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{insight}cf>@{insight}]]}}'>
                             Insight:
                         </button>
                         <input class="small" type="number" name="attr_insight">
                     </div>
                     <div class="skill">
                         <button type='roll' name='roll_skill' style="font-size: 1.2em;"
-                                value='&{template:default} {{name=@{character_name}}} {{result=[[d20cs<@{knowledge}]]}}'>
+                                value='&{template:skill} {{name=Knowledge}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{knowledge}cf>@{knowledge}]]}}'>
                             Knowledge:
                         </button>
                         <input class="small" type="number" name="attr_knowledge">
                     </div>
                     <div class="skill">
                         <button type='roll' name='roll_skill'
-                                value='&{template:default} {{name=@{character_name}}} {{result=[[d20cs<@{mend}]]}}'>
+                                value='&{template:skill} {{name=Mend}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{mend}cf>@{mend}]]}}'>
                             Mend:
                         </button>
                         <input class="small" type="number" name="attr_mend">
@@ -197,21 +197,21 @@
                 <div class="skill-left">
                     <div class="skill">
                         <button type='roll' name='roll_skill' style="font-size: 1.2em;"
-                                value='&{template:default} {{name=@{character_name}}} {{result=[[d20cs<@{acrobatics}]]}}'>
+                                value='&{template:skill} {{name=Acrobatics}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{acrobatics}cf>@{acrobatics}]]}}'>
                             Acrobatics:
                         </button>
                         <input class="small" type="number" name="attr_acrobatics">
                     </div>
                     <div class="skill">
                         <button type='roll' name='roll_skill'
-                                value='&{template:default} {{name=@{character_name}}} {{result=[[d20cs<@{stealth}]]}}'>
+                                value='&{template:skill} {{name=Stealth}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{stealth}cf>@{stealth}]]}}'>
                             Stealth:
                         </button>
                         <input class="small" type="number" name="attr_stealth">
                     </div>
                     <div class="skill">
                         <button type='roll' name='roll_skill' style="font-size: 0.9em;"
-                                value='&{template:default} {{name=@{character_name}}} {{result=[[d20cs<@{sleight_of_hand}]]}}'>
+                                value='&{template:skill} {{name=Sleight of Hand}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{sleight_of_hand}cf>@{sleight_of_hand}]]}}'>
                             Sleight of Hand:
                         </button>
                         <input class="small" type="number" name="attr_sleight_of_hand">
@@ -223,21 +223,21 @@
                 <div class="skill-right">
                     <div class="skill">
                         <button type='roll' name='roll_skill'
-                                value='&{template:default} {{name=@{character_name}}} {{result=[[d20cs<@{focus}]]}}'>
+                                value='&{template:skill} {{name=Focus}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{focus}cf>@{focus}]]}}'>
                             Focus:
                         </button>
                         <input class="small" type="number" name="attr_focus">
                     </div>
                     <div class="skill">
                         <button type='roll' name='roll_skill'
-                                value='&{template:default} {{name=@{character_name}}} {{result=[[d20cs<@{fast_talk}]]}}'>
+                                value='&{template:skill} {{name=Fast Talk}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{fast_talk}cf>@{fast_talk}]]}}'>
                             Fast Talk:
                         </button>
                         <input class="small" type="number" name="attr_fast_talk">
                     </div>
                     <div class="skill">
                         <button type='roll' name='roll_skill' style="font-size: 1.2em;"
-                                value='&{template:default} {{name=@{character_name}}} {{result=[[d20cs<@{leadership}]]}}'>
+                                value='&{template:skill} {{name=Leadership}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{leadership}cf>@{leadership}]]}}'>
                             Leadership:
                         </button>
                         <input class="small" type="number" name="attr_leadership">
@@ -249,10 +249,6 @@
         <!--        CAP Check-->
         <div class="header3 section">
             <span class="header">CAP Check</span>
-            <button type='roll' name='roll_attack' style="color:black;"
-                    value='&{template:default} {{name=@{character_name}}} {{result=[[d20<@{critical}cs<@{accuracy}]]}}'>
-                Roll!
-            </button>
         </div>
         <div class="common3 section">
             <div class="row">
@@ -304,6 +300,7 @@
     <!--    Character actions and skills-->
     <div class="main-actions">
 
+        <!--        Action Header-->
         <div class="actions-grid">
             <span class="action-name action-header">Name</span>
             <span class="action-type action-header">Type</span>
@@ -313,16 +310,18 @@
             <span class="action-speed action-header">Action Speed</span>
         </div>
 
+        <!--        Movement Row-->
         <div class="actions-info-grid">
             <span class="action-name action-info-title">MOVEMENT</span>
             <span class="action-effect action-info">You cannot end your Movement in an Occupied Square.</span>
         </div>
 
+        <!--        Move Row-->
         <div class="actions-grid">
-            <span class="action-name action-empty">Move</span>
-            <div class="action-type action-empty"></div>
-            <div class="action-target action-empty"></div>
-            <div class="action-range action-empty"></div>
+            <span class="action-name action-centered">Move</span>
+            <div class="action-type action-centered"></div>
+            <div class="action-target action-centered"></div>
+            <div class="action-range action-centered"></div>
             <div class="action-effect action-text">
                 <span>Move </span>
                 <input class="x-small" type="number">
@@ -330,67 +329,215 @@
                 <input class="x-small" type="number">
                 <span> Squares. Can move through friendly Combatants.</span>
             </div>
-            <span class="action-speed action-empty">Slow</span>
+            <span class="action-speed action-centered">Slow</span>
         </div>
 
+        <!--        Shift Row-->
         <div class="actions-grid">
-            <span class="action-name action-empty">Shift</span>
-            <div class="action-type action-empty"></div>
-            <div class="action-target action-empty"></div>
-            <div class="action-range action-empty"></div>
+            <span class="action-name action-centered">Shift</span>
+            <div class="action-type action-centered"></div>
+            <div class="action-target action-centered"></div>
+            <div class="action-range action-centered"></div>
             <div class="action-effect action-text">
                 <span>Move </span>
                 <input class="x-small" type="number">
                 <span> Square(s). Can move through friendly Combatants.</span>
             </div>
-            <span class="action-speed action-empty">Fast</span>
+            <span class="action-speed action-centered">Fast</span>
         </div>
 
+        <!--        Maneuver Title-->
         <div class="actions-info-grid">
             <span class="action-name action-info-title">MANEUVER</span>
             <span class="action-effect action-info">You cannot end your Maneuver in an Occupied Square.</span>
         </div>
 
-        <div class="actions-grid class-action-small">
-            <textarea class="action-name action-text-area-small action-text"></textarea>
-            <div class="action-type action-empty"></div>
-            <div class="action-target action-empty"></div>
-            <div class="action-range action-empty"></div>
-            <textarea class="action-effect action-text-area-small"></textarea>
-            <div class="action-speed action-empty">
-                <select class="selector">
-                    <option value="null">Select</option>
-                    <option value="free">Free</option>
-                    <option value="fast">Fast</option>
-                    <option value="slow">Slow</option>
-                    <option value="slow-fast">Slow + Fast</option>
-                    <option value="slow-slow">Slow + Slow</option>
-                </select>
+        <!--        Maneuver Row-->
+        <div class="width100">
+            <div class="actions-grid">
+                <div class="action-button">
+                    <div>
+                        <input class="settings" type="checkbox" name="attr_maneuver_settings_flag" value="on"
+                               checked="checked" style="width: 25px; height: 25px"/>
+                        <span>y</span>
+                    </div>
+                </div>
+                <span class="action-name action-centered" name="attr_maneuver_name"></span>
+                <div class="action-type action-centered"></div>
+                <div class="action-target action-centered"></div>
+                <div class="action-range action-centered"></div>
+                <span class="action-effect action-leftCentered" name="attr_maneuver_description"></span>
+                <span class="action-speed action-centered" name="attr_maneuver_speed"></span>
+            </div>
+
+            <input type="hidden" class="maneuver_display_settings_flag" name="attr_maneuver_display_settings_flag"
+                   value="hide"/>
+            <div class="width100 displaySettings action-detail-grid">
+
+                <div class="column width25 inlineBlock bold">Name:</div>
+                <div class="column width75 inlineBlock inputNameShort">
+                    <input type="text" name="attr_maneuver_name"/>
+                </div>
+
+                <div class="column width25 inlineBlock bold">Speed</div>
+                <div>
+                    <select class="selector-fit" name="attr_maneuver_speed">
+                        <option value="">Select</option>
+                        <option value="Free">Free</option>
+                        <option value="Fast">Fast</option>
+                        <option value="Slow">Slow</option>
+                        <option value="Slow + Fast">Slow + Fast</option>
+                        <option value="Slow + Slow">Slow + Slow</option>
+                    </select>
+                </div>
+
+                <div class="column width100 bold textSmall">Description</div>
+                <div class="column width100 resizeVert vertTop">
+                    <textarea class="height50" name="attr_maneuver_description"></textarea>
+                </div>
             </div>
         </div>
 
+        <!--        Basic Actions Title-->
         <div class="actions-info-grid">
             <span class="action-name action-info-title">BASIC ACTIONS</span>
         </div>
 
-        <div class="actions-grid class-action-small">
-            <textarea class="action-name action-text-area-small action-text"></textarea>
-            <div class="action-type action-empty">Melee</div>
-            <textarea class="action-target action-text-area-small action-text"></textarea>
-            <textarea class="action-range action-text-area-small action-text"></textarea>
-            <textarea class="action-effect action-text-area-small"></textarea>
-            <div class="action-speed action-empty">Slow</div>
+        <!--        Basic Action Melee-->
+        <div class="width100">
+            <div class="actions-grid">
+                <div class="action-button">
+                    <div>
+                        <input class="settings" type="checkbox" name="attr_melee_settings_flag" value="on"
+                               checked="checked" style="width: 25px; height: 25px"/>
+                        <span>y</span>
+                        <button type='roll' name='roll_attack'
+                                value='&{template:action} {{name=@{melee_name}}} {{attack=[[d20cs<@{critical}cf>@{accuracy}]]}} {{damage=[[0@{melee_dice} + @{melee_dice_bonus}]]}} {{dmgcrit=[[34]]}} {{speed=Slow}} {{type=Melee}} {{range=@{melee_range}}} {{target=@{melee_target}}} {{description=@{melee_description}}} {{against=[[@{melee_against}]]}}'>
+                        </button>
+                    </div>
+                </div>
+                <span class="action-name action-centered" name="attr_melee_name"></span>
+                <div class="action-type action-centered">Melee</div>
+                <span class="action-target action-centered" name="attr_melee_target"></span>
+                <span class="action-range action-centered" name="attr_melee_range"></span>
+                <span class="action-effect action-leftCentered" name="attr_melee_description"></span>
+                <div class="action-speed action-centered">Slow</div>
+            </div>
+
+            <input type="hidden" class="melee_display_settings_flag" name="attr_melee_display_settings_flag"
+                   value="hide"/>
+            <div class="width100 displaySettings action-detail-grid">
+
+                <div class="column width25 inlineBlock bold">Name:</div>
+                <div class="column width75 inlineBlock inputNameShort">
+                    <input type="text" name="attr_melee_name"/>
+                </div>
+
+                <div class="column width25 inlineBlock bold">Target:</div>
+                <div class="column width75 inlineBlock inputNameShort">
+                    <input type="text" name="attr_melee_target"/>
+                </div>
+
+                <div class="column width25 inlineBlock bold">Range:</div>
+                <div>
+                    <input class="small" type="number" name="attr_melee_range">
+                </div>
+
+                <div>
+                    <span style="width: auto; font-weight: bold">Damage: </span>
+                    <input style="width: 50px" type="text" name="attr_melee_dice" placeholder="1d6"/>
+                    <span style="width: auto; font-weight: bold"> + </span>
+                    <input style="width: 50px" type="text" name="attr_melee_dice_bonus" placeholder="0"/>
+                </div>
+
+                <div>
+                    <fieldset>
+                        <span style="width: auto; font-weight: bold">Damage vs. </span>
+                        <input type="radio" value="1" name="attr_melee_against">Toughness</input>
+                        <img style="width: 20px; height: 20px"
+                             src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/shield.png">
+                        <input type="radio" value="2" name="attr_melee_against">Resistance</input>
+                        <img style="width: 20px; height: 20px"
+                             src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
+                        <input type="radio" value="0" name="attr_melee_against" checked="checked">None</input>
+                    </fieldset>
+                </div>
+
+                <div class="column width100 bold textSmall">Description</div>
+                <div class="column width100 resizeVert vertTop">
+                    <textarea class="height50" name="attr_melee_description"></textarea>
+                </div>
+            </div>
         </div>
 
-        <div class="actions-grid class-action-small">
-            <textarea class="action-name action-text-area-small action-text"></textarea>
-            <div class="action-type action-empty">Ranged</div>
-            <textarea class="action-target action-text-area-small action-text"></textarea>
-            <textarea class="action-range action-text-area-small action-text"></textarea>
-            <textarea class="action-effect action-text-area-small"></textarea>
-            <div class="action-speed action-empty">Slow</div>
+        <!--        Basic Action Ranged-->
+        <div class="width100">
+            <div class="actions-grid">
+                <div class="action-button">
+                    <div>
+                        <input class="settings" type="checkbox" name="attr_ranged_settings_flag" value="on"
+                               checked="checked" style="width: 25px; height: 25px"/>
+                        <span>y</span>
+                        <button type='roll' name='roll_attack'
+                                value='&{template:action} {{name=@{ranged_name}}} {{attack=[[d20cs<@{critical}cf>@{accuracy}]]}} {{damage=[[0@{ranged_dice} + @{ranged_dice_bonus}]]}} {{dmgcrit=[[34]]}} {{speed=Slow}} {{type=Ranged}} {{range=@{ranged_range}}} {{target=@{ranged_target}}} {{description=@{ranged_description}}} {{against=[[@{ranged_against}]]}}'>
+                        </button>
+                    </div>
+                </div>
+                <span class="action-name action-centered" name="attr_ranged_name"></span>
+                <div class="action-type action-centered">Ranged</div>
+                <span class="action-target action-centered" name="attr_ranged_target"></span>
+                <span class="action-range action-centered" name="attr_ranged_range"></span>
+                <span class="action-effect action-leftCentered" name="attr_ranged_description"></span>
+                <div class="action-speed action-centered">Slow</div>
+            </div>
+
+            <input type="hidden" class="ranged_display_settings_flag" name="attr_ranged_display_settings_flag"
+                   value="hide"/>
+            <div class="width100 displaySettings action-detail-grid">
+
+                <div class="column width25 inlineBlock bold">Name:</div>
+                <div class="column width75 inlineBlock inputNameShort">
+                    <input type="text" name="attr_ranged_name"/>
+                </div>
+
+                <div class="column width25 inlineBlock bold">Target:</div>
+                <div class="column width75 inlineBlock inputNameShort">
+                    <input type="text" name="attr_ranged_target"/>
+                </div>
+
+                <div class="column width25 inlineBlock bold">Range:</div>
+                <div>
+                    <input class="small" type="number" name="attr_ranged_range">
+                </div>
+
+                <div>
+                    <span style="width: auto; font-weight: bold">Damage: </span>
+                    <input style="width: 50px" type="text" name="attr_ranged_dice" placeholder="1d6"/>
+                    <span style="width: auto; font-weight: bold"> + </span>
+                    <input style="width: 50px" type="text" name="attr_ranged_dice_bonus" placeholder="0"/>
+                </div>
+
+                <div>
+                    <fieldset>
+                        <span style="width: auto; font-weight: bold">Damage vs. </span>
+                        <input type="radio" value="1" name="attr_ranged_against">Toughness</input>
+                        <img style="width: 20px; height: 20px"
+                             src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/shield.png">
+                        <input type="radio" value="2" name="attr_ranged_against">Resistance</input>
+                        <img style="width: 20px; height: 20px"
+                             src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
+                        <input type="radio" value="0" name="attr_ranged_against" checked="checked">None</input>
+                    </fieldset>
+                </div>
+
+                <div class="column width100 bold textSmall">Description</div>
+                <div class="column width100 resizeVert vertTop">
+                    <textarea class="height50" name="attr_ranged_description"></textarea>
+                </div>
+            </div>
         </div>
 
+        <!--        Class Actions Title-->
         <div class="actions-info-grid">
             <span class="action-name action-info-title">CLASS ACTIONS</span>
             <div class="action-effect">
@@ -403,240 +550,124 @@
             </div>
         </div>
 
-        <!--    Class action 1-->
-        <div class="actions-grid class-action-medium">
-            <textarea class="action-name action-text-area-medium action-text"></textarea>
-            <div class="action-type action-non-empty">
-                <select class="selector">
-                    <option value="null">Select</option>
-                    <option value="general">General</option>
-                    <option value="trigger">Trigger</option>
-                    <option value="amplify">Amplify</option>
-                    <option value="Sustain">Sustain</option>
-                </select>
-                <select class="selector">
-                    <option value="null">Select</option>
-                    <option value="exploit">Exploit</option>
-                    <option value="spell">Spell</option>
-                </select>
-            </div>
-            <textarea class="action-target action-text-area-medium action-text"></textarea>
-            <div class="action-range action-non-empty">
-                <select class="selector">
-                    <option value="null">Select</option>
-                    <option value="ranged">Ranged</option>
-                    <option value="melee">Melee</option>
-                </select>
-                <input class="small" type="number">
-            </div>
-            <textarea class="action-effect action-text-area-medium"></textarea>
-            <div class="action-speed action-non-empty">
-                <select class="selector">
-                    <option value="null">Select</option>
-                    <option value="free">Free</option>
-                    <option value="fast">Fast</option>
-                    <option value="slow">Slow</option>
-                    <option value="slow-fast">Slow + Fast</option>
-                    <option value="slow-slow">Slow + Slow</option>
-                </select>
-            </div>
+        <!--        Class Actions-->
+        <div class="width100">
+            <fieldset class="repeating_actions">
+                <div class="row">
+                    <div class="actions-grid">
+                        <div class="action-button">
+                            <div>
+                                <input class="settings" type="checkbox" name="attr_settingsFlag" value="on"
+                                       checked="checked" style="width: 25px; height: 25px"/>
+                                <span>y</span>
+                            </div>
+                            <button type='roll' name='roll_action'
+                                    value='&{template:action} {{name=@{action_name}}} {{subtag1=@{action_subtype1}}} {{subtag2=@{action_subtype2}}} {{attack=[[d20cs<@{critical}cf>@{accuracy}]]}} {{damage=[[0@{action_dice} + @{action_dice_bonus}]]}} {{dmgcrit=[[34]]}} {{against=[[@{action_against}]]}} {{healing=[[0@{action_healing_dice}]]}} {{speed=@{action_speed}}} {{target=@{action_target}}} {{type=@{action_type}}} {{description=@{action_description}}} {{range=@{action_range}}}'>
+                            </button>
+                        </div>
+
+                        <span class="action-name action-centered" name="attr_action_name"></span>
+                        <div class="action-type action-centered">
+                            <div class="col">
+                                <span class="row" style="border-bottom: 1px solid black"
+                                      name="attr_action_subtype1"></span>
+                                <span class="row" name="attr_action_subtype2"></span>
+                            </div>
+                        </div>
+                        <span class="action-target action-centered" name="attr_action_target"></span>
+                        <div class="action-range action-centered">
+                            <div class="col">
+                                <span class="row" style="border-bottom: 1px solid black" name="attr_action_type"></span>
+                                <span class="row" name="attr_action_range"></span>
+                            </div>
+                        </div>
+                        <span class="action-effect action-leftCentered" name="attr_action_description"></span>
+                        <span class="action-speed action-centered" name="attr_action_speed"></span>
+                    </div>
+
+                    <input type="hidden" class="displaySettingsFlag" name="attr_displaySettingsFlag"/>
+                    <div class="width100 displaySettings padLeft">
+                        <div class="column width25 inlineBlock bold">Name:</div>
+                        <div class="column width75 inlineBlock inputNameShort">
+                            <input type="text" name="attr_action_name"/>
+                        </div>
+
+                        <div class="column width25 inlineBlock bold">Type:</div>
+                        <div>
+                            <select class="selector-fit" name="attr_action_subtype1">
+                                <option value="">Select</option>
+                                <option value="General">General</option>
+                                <option value="Trigger">Trigger</option>
+                                <option value="Amplify">Amplify</option>
+                                <option value="Sustain">Sustain</option>
+                            </select>
+                            <select class="selector-fit" name="attr_action_subtype2">
+                                <option value="">Select</option>
+                                <option value="Exploit">Exploit</option>
+                                <option value="Spell">Spell</option>
+                            </select>
+                        </div>
+
+                        <div class="column width25 inlineBlock bold">Target:</div>
+                        <div class="column width75 inlineBlock inputNameShort">
+                            <input type="text" name="attr_action_target"/>
+                        </div>
+
+
+                        <div class="column width25 inlineBlock bold">Type/Range:</div>
+                        <div>
+                            <select class="selector-fit" name="attr_action_type">
+                                <option value="">Select</option>
+                                <option value="Ranged">Ranged</option>
+                                <option value="Melee">Melee</option>
+                            </select>
+                            <input class="small" type="number" name="attr_action_range">
+                        </div>
+                        <div class="column width25 inlineBlock bold">Speed</div>
+                        <div>
+                            <select class="selector-fit" name="attr_action_speed">
+                                <option value="">Select</option>
+                                <option value="Free">Free</option>
+                                <option value="Fast">Fast</option>
+                                <option value="Slow">Slow</option>
+                                <option value="Slow + Fast">Slow + Fast</option>
+                                <option value="Slow + Slow">Slow + Slow</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <span style="width: auto; font-weight: bold">Damage: </span>
+                            <input style="width: 50px" type="text" name="attr_action_dice" placeholder="1d6"/>
+                            <span style="width: auto; font-weight: bold"> + </span>
+                            <input style="width: 50px" type="text" name="attr_action_dice_bonus" placeholder="0"/>
+
+                            <span style="width: auto; font-weight: bold">Healing: </span>
+                            <input style="width: 50px" type="text" name="attr_action_healing_dice" placeholder="1d6"/>
+                        </div>
+
+                        <div>
+                            <fieldset>
+                                <span style="width: auto; font-weight: bold">Damage vs. </span>
+                                <input type="radio" value="1" name="attr_action_against">Toughness</input>
+                                <img style="width: 20px; height: 20px"
+                                     src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/shield.png">
+                                <input type="radio" value="2" name="attr_action_against">Resistance</input>
+                                <img style="width: 20px; height: 20px"
+                                     src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
+                                <input type="radio" value="0" name="attr_action_against" checked="checked">None</input>
+                            </fieldset>
+                        </div>
+
+                        <div class="column width100 bold textSmall">Description</div>
+                        <div class="column width100 resizeVert vertTop">
+                            <textarea class="height50" name="attr_action_description"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
         </div>
 
-        <!--    Class action 2-->
-        <div class="actions-grid class-action-medium">
-            <textarea class="action-name action-text-area-medium action-text"></textarea>
-            <div class="action-type action-non-empty">
-                <select class="selector">
-                    <option value="null">Select</option>
-                    <option value="general">General</option>
-                    <option value="trigger">Trigger</option>
-                    <option value="amplify">Amplify</option>
-                    <option value="Sustain">Sustain</option>
-                </select>
-                <select class="selector">
-                    <option value="null">Select</option>
-                    <option value="exploit">Exploit</option>
-                    <option value="spell">Spell</option>
-                </select>
-            </div>
-            <textarea class="action-target action-text-area-medium action-text"></textarea>
-            <div class="action-range action-non-empty">
-                <select class="selector">
-                    <option value="null">Select</option>
-                    <option value="ranged">Ranged</option>
-                    <option value="melee">Melee</option>
-                </select>
-                <input class="small" type="number">
-            </div>
-            <textarea class="action-effect action-text-area-medium"></textarea>
-            <div class="action-speed action-non-empty">
-                <select class="selector">
-                    <option value="null">Select</option>
-                    <option value="free">Free</option>
-                    <option value="fast">Fast</option>
-                    <option value="slow">Slow</option>
-                    <option value="slow-fast">Slow + Fast</option>
-                    <option value="slow-slow">Slow + Slow</option>
-                </select>
-            </div>
-        </div>
-
-        <!--    Class action 3-->
-        <div class="actions-grid class-action-medium">
-            <textarea class="action-name action-text-area-medium action-text"></textarea>
-            <div class="action-type action-non-empty">
-                <select class="selector">
-                    <option value="null">Select</option>
-                    <option value="general">General</option>
-                    <option value="trigger">Trigger</option>
-                    <option value="amplify">Amplify</option>
-                    <option value="Sustain">Sustain</option>
-                </select>
-                <select class="selector">
-                    <option value="null">Select</option>
-                    <option value="exploit">Exploit</option>
-                    <option value="spell">Spell</option>
-                </select>
-            </div>
-            <textarea class="action-target action-text-area-medium action-text"></textarea>
-            <div class="action-range action-non-empty">
-                <select class="selector">
-                    <option value="null">Select</option>
-                    <option value="ranged">Ranged</option>
-                    <option value="melee">Melee</option>
-                </select>
-                <input class="small" type="number">
-            </div>
-            <textarea class="action-effect action-text-area-medium"></textarea>
-            <div class="action-speed action-non-empty">
-                <select class="selector">
-                    <option value="null">Select</option>
-                    <option value="free">Free</option>
-                    <option value="fast">Fast</option>
-                    <option value="slow">Slow</option>
-                    <option value="slow-fast">Slow + Fast</option>
-                    <option value="slow-slow">Slow + Slow</option>
-                </select>
-            </div>
-        </div>
-
-        <!--    Class action 4-->
-        <div class="actions-grid class-action-medium">
-            <textarea class="action-name action-text-area-medium action-text"></textarea>
-            <div class="action-type action-non-empty">
-                <select class="selector">
-                    <option value="null">Select</option>
-                    <option value="general">General</option>
-                    <option value="trigger">Trigger</option>
-                    <option value="amplify">Amplify</option>
-                    <option value="Sustain">Sustain</option>
-                </select>
-                <select class="selector">
-                    <option value="null">Select</option>
-                    <option value="exploit">Exploit</option>
-                    <option value="spell">Spell</option>
-                </select>
-            </div>
-            <textarea class="action-target action-text-area-medium action-text"></textarea>
-            <div class="action-range action-non-empty">
-                <select class="selector">
-                    <option value="null">Select</option>
-                    <option value="ranged">Ranged</option>
-                    <option value="melee">Melee</option>
-                </select>
-                <input class="small" type="number">
-            </div>
-            <textarea class="action-effect action-text-area-medium"></textarea>
-            <div class="action-speed action-non-empty">
-                <select class="selector">
-                    <option value="null">Select</option>
-                    <option value="free">Free</option>
-                    <option value="fast">Fast</option>
-                    <option value="slow">Slow</option>
-                    <option value="slow-fast">Slow + Fast</option>
-                    <option value="slow-slow">Slow + Slow</option>
-                </select>
-            </div>
-        </div>
-
-        <!--    Class action 5-->
-        <div class="actions-grid class-action-large">
-            <textarea class="action-name action-text-area-large action-text"></textarea>
-            <div class="action-type action-large">
-                <select class="selector">
-                    <option value="null">Select</option>
-                    <option value="general">General</option>
-                    <option value="trigger">Trigger</option>
-                    <option value="amplify">Amplify</option>
-                    <option value="Sustain">Sustain</option>
-                </select>
-                <select class="selector">
-                    <option value="null">Select</option>
-                    <option value="exploit">Exploit</option>
-                    <option value="spell">Spell</option>
-                </select>
-            </div>
-            <textarea class="action-target action-text-area-large action-text"></textarea>
-            <div class="action-range action-large">
-                <select class="selector">
-                    <option value="null">Select</option>
-                    <option value="ranged">Ranged</option>
-                    <option value="melee">Melee</option>
-                </select>
-                <input class="small" type="number">
-            </div>
-            <textarea class="action-effect action-text-area-large"></textarea>
-            <div class="action-speed action-large">
-                <select class="selector">
-                    <option value="null">Select</option>
-                    <option value="free">Free</option>
-                    <option value="fast">Fast</option>
-                    <option value="slow">Slow</option>
-                    <option value="slow-fast">Slow + Fast</option>
-                    <option value="slow-slow">Slow + Slow</option>
-                </select>
-            </div>
-        </div>
-
-        <!--    Class action 6-->
-        <div class="actions-grid class-action-large">
-            <textarea class="action-name action-text-area-large action-text"></textarea>
-            <div class="action-type action-large">
-                <select class="selector">
-                    <option value="null">Select</option>
-                    <option value="general">General</option>
-                    <option value="trigger">Trigger</option>
-                    <option value="amplify">Amplify</option>
-                    <option value="Sustain">Sustain</option>
-                </select>
-                <select class="selector">
-                    <option value="null">Select</option>
-                    <option value="exploit">Exploit</option>
-                    <option value="spell">Spell</option>
-                </select>
-            </div>
-            <textarea class="action-target action-text-area-large action-text"></textarea>
-            <div class="action-range action-large">
-                <select class="selector">
-                    <option value="null">Select</option>
-                    <option value="ranged">Ranged</option>
-                    <option value="melee">Melee</option>
-                </select>
-                <input class="small" type="number">
-            </div>
-            <textarea class="action-effect action-text-area-large"></textarea>
-            <div class="action-speed action-large">
-                <select class="selector">
-                    <option value="null">Select</option>
-                    <option value="free">Free</option>
-                    <option value="fast">Fast</option>
-                    <option value="slow">Slow</option>
-                    <option value="slow-fast">Slow + Fast</option>
-                    <option value="slow-slow">Slow + Slow</option>
-                </select>
-            </div>
-        </div>
-
+        <!--        Class Tide Turner Actions Title-->
         <div class="actions-info-grid">
             <span class="action-name action-info-title" style="color: darkorange">CLASS TIDE-TURNER ACTIONS</span>
             <div class="action-effect">
@@ -647,112 +678,188 @@
             </div>
         </div>
 
-        <!--    Class action 7-->
-        <div class="actions-grid class-action-medium">
-            <textarea class="action-name action-tide-text-area-medium action-text"></textarea>
-            <div class="action-type action-tide-non-empty">
-                <select class="selector">
-                    <option value="null">Select</option>
-                    <option value="general">General</option>
-                    <option value="trigger">Trigger</option>
-                    <option value="amplify">Amplify</option>
-                    <option value="Sustain">Sustain</option>
-                </select>
-                <select class="selector">
-                    <option value="null">Select</option>
-                    <option value="exploit">Exploit</option>
-                    <option value="spell">Spell</option>
-                </select>
-            </div>
-            <textarea class="action-target action-tide-text-area-medium action-text"></textarea>
-            <div class="action-range action-tide-non-empty">
-                <select class="selector">
-                    <option value="null">Select</option>
-                    <option value="ranged">Ranged</option>
-                    <option value="melee">Melee</option>
-                </select>
-                <input class="small" type="number">
-            </div>
-            <textarea class="action-effect action-tide-text-area-medium"></textarea>
-            <div class="action-speed action-tide-non-empty">
-                <select class="selector">
-                    <option value="null">Select</option>
-                    <option value="free">Free</option>
-                    <option value="fast">Fast</option>
-                    <option value="slow">Slow</option>
-                    <option value="slow-fast">Slow + Fast</option>
-                    <option value="slow-slow">Slow + Slow</option>
-                </select>
-            </div>
+        <!--        Class Tide Turner Actions-->
+        <div class="width100">
+            <fieldset class="repeating_tideTurners">
+                <div class="row">
+                    <div class="actions-grid">
+                        <div class="action-button">
+                            <div>
+                                <input class="settings" type="checkbox" name="attr_settingsFlag" value="on"
+                                       checked="checked" style="width: 25px; height: 25px"/>
+                                <span>y</span>
+                            </div>
+                            <button type='roll' name='roll_action'
+                                    value='&{template:action} {{name=@{tide_action_name}}} {{subtag1=@{tide_action_subtype1}}} {{subtag2=@{tide_action_subtype2}}} {{attack=[[d20cs<@{critical}cf>@{accuracy}]]}} {{damage=[[0@{tide_action_dice} + @{tide_action_dice_bonus}]]}} {{dmgcrit=[[34]]}} {{against=[[@{tide_action_against}]]}} {{healing=[[0@{tide_action_healing_dice}]]}} {{speed=@{tide_action_speed}}} {{target=@{tide_action_target}}} {{type=@{tide_action_type}}} {{description=@{tide_action_description}}} {{range=@{tide_action_range}}}'>
+                            </button>
+                        </div>
+
+                        <span class="action-name action-tide-centered" name="attr_tide_action_name"></span>
+                        <div class="action-type action-tide-centered">
+                            <div class="col">
+                                <span class="row" style="border-bottom: 1px solid black"
+                                      name="attr_tide_action_subtype1"></span>
+                                <span class="row" name="attr_tide_action_subtype2"></span>
+                            </div>
+                        </div>
+                        <span class="action-target action-tide-centered" name="attr_tide_action_target"></span>
+                        <div class="action-range action-tide-centered">
+                            <div class="col">
+                                <span class="row" style="border-bottom: 1px solid black" name="attr_tide_action_type"></span>
+                                <span class="row" name="attr_tide_action_range"></span>
+                            </div>
+                        </div>
+                        <span class="action-effect action-tide-leftCentered" name="attr_tide_action_description"></span>
+                        <span class="action-speed action-tide-centered" name="attr_tide_action_speed"></span>
+                    </div>
+
+                    <input type="hidden" class="displaySettingsFlag" name="attr_displaySettingsFlag"/>
+                    <div class="width100 displaySettings padLeft">
+                        <div class="column width25 inlineBlock bold">Name:</div>
+                        <div class="column width75 inlineBlock inputNameShort">
+                            <input type="text" name="attr_tide_action_name"/>
+                        </div>
+
+                        <div class="column width25 inlineBlock bold">Type:</div>
+                        <div>
+                            <select class="selector-fit" name="attr_tide_action_subtype1">
+                                <option value="">Select</option>
+                                <option value="General">General</option>
+                                <option value="Trigger">Trigger</option>
+                                <option value="Amplify">Amplify</option>
+                                <option value="Sustain">Sustain</option>
+                            </select>
+                            <select class="selector-fit" name="attr_tide_action_subtype2">
+                                <option value="">Select</option>
+                                <option value="Exploit">Exploit</option>
+                                <option value="Spell">Spell</option>
+                            </select>
+                        </div>
+
+                        <div class="column width25 inlineBlock bold">Target:</div>
+                        <div class="column width75 inlineBlock inputNameShort">
+                            <input type="text" name="attr_tide_action_target"/>
+                        </div>
+
+
+                        <div class="column width25 inlineBlock bold">Type/Range:</div>
+                        <div>
+                            <select class="selector-fit" name="attr_tide_action_type">
+                                <option value="">Select</option>
+                                <option value="Ranged">Ranged</option>
+                                <option value="Melee">Melee</option>
+                            </select>
+                            <input class="small" type="number" name="attr_tide_action_range">
+                        </div>
+                        <div class="column width25 inlineBlock bold">Speed</div>
+                        <div>
+                            <select class="selector-fit" name="attr_tide_action_speed">
+                                <option value="">Select</option>
+                                <option value="Free">Free</option>
+                                <option value="Fast">Fast</option>
+                                <option value="Slow">Slow</option>
+                                <option value="Slow + Fast">Slow + Fast</option>
+                                <option value="Slow + Slow">Slow + Slow</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <span style="width: auto; font-weight: bold">Damage: </span>
+                            <input style="width: 50px" type="text" name="attr_tide_action_dice" placeholder="1d6"/>
+                            <span style="width: auto; font-weight: bold"> + </span>
+                            <input style="width: 50px" type="text" name="attr_tide_action_dice_bonus" placeholder="0"/>
+
+                            <span style="width: auto; font-weight: bold">Healing: </span>
+                            <input style="width: 50px" type="text" name="attr_tide_action_healing_dice" placeholder="1d6"/>
+                        </div>
+
+                        <div>
+                            <fieldset>
+                                <span style="width: auto; font-weight: bold">Damage vs. </span>
+                                <input type="radio" value="1" name="attr_tide_action_against">Toughness</input>
+                                <img style="width: 20px; height: 20px"
+                                     src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/shield.png">
+                                <input type="radio" value="2" name="attr_tide_action_against">Resistance</input>
+                                <img style="width: 20px; height: 20px"
+                                     src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
+                                <input type="radio" value="0" name="attr_tide_action_against" checked="checked">None</input>
+                            </fieldset>
+                        </div>
+
+                        <div class="column width100 bold textSmall">Description</div>
+                        <div class="column width100 resizeVert vertTop">
+                            <textarea class="height50" name="attr_tide_action_description"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
         </div>
 
-        <!--    Class action 8-->
-        <div class="actions-grid class-action-large">
-            <textarea class="action-name action-tide-text-area-large action-text"></textarea>
-            <div class="action-type action-tide-empty">
-                <select class="selector">
-                    <option value="null">Select</option>
-                    <option value="general">General</option>
-                    <option value="trigger">Trigger</option>
-                    <option value="amplify">Amplify</option>
-                    <option value="Sustain">Sustain</option>
-                </select>
-                <select class="selector">
-                    <option value="null">Select</option>
-                    <option value="exploit">Exploit</option>
-                    <option value="spell">Spell</option>
-                </select>
-            </div>
-            <textarea class="action-target action-tide-text-area-large action-text"></textarea>
-            <div class="action-range action-tide-empty">
-                <select class="selector">
-                    <option value="null">Select</option>
-                    <option value="ranged">Ranged</option>
-                    <option value="melee">Melee</option>
-                </select>
-                <input class="small" type="number">
-            </div>
-            <textarea class="action-effect action-tide-text-area-large"></textarea>
-            <div class="action-speed action-tide-empty">
-                <select class="selector">
-                    <option value="null">Select</option>
-                    <option value="free">Free</option>
-                    <option value="fast">Fast</option>
-                    <option value="slow">Slow</option>
-                    <option value="slow-fast">Slow + Fast</option>
-                    <option value="slow-slow">Slow + Slow</option>
-                </select>
-            </div>
+        <!--        Turn Instructions Titles-->
+        <div class="actions-info-grid">
+            <span class="action-name action-info-title">YOUR TURN:</span>
+            <span class="action-effect action-info"><b>1. </b>Restore Action Pool. <b> 2. </b> Select Sustains. <b> 3. </b> Use up to your Action Pool of Actions.</span>
         </div>
-        <button type='roll' name='roll_skill'
-                value='&{template:5eAttack} {{name=Athletics}} {{subtags=Skill}} {{test=[[d20cs<@{athletics}cf>@{athletics}]]}}'>
-            Skill
-        </button>
-        <button type='roll' name='roll_skill'
-                value='&{template:5eAttack} {{name=Attack}} {{subtags=General, Exploit}} {{attack=[[d20cs<@{critical}cf>@{accuracy}]]}} {{damage=[[3d8]]}} {{dmgcrit=[[34]]}} {{speed=Slow}} {{range=2}} {{againstToughness=1}}'>
-            Attack T
-        </button>
-        <button type='roll' name='roll_skill'
-                value='&{template:5eAttack} {{name=Attack}} {{subtags=General, Exploit}} {{attack=[[d20cs<@{critical}cf>@{accuracy}]]}} {{damage=[[3d8]]}} {{dmgcrit=[[34]]}} {{speed=Slow}} {{range=2}} {{againstResistance=1}}'>
-            Attack R
-        </button>
-        <button type='roll' name='roll_skill'
-                value='&{template:5eAttack} {{name=Heal}} {{subtags=General, Spell}} {{speed=Slow}} {{healing=[[5]]}} {{target=All Other Heroes}} {{range=5}} {{type=Ranged}} {{description=Target Heroes heal 5 HP}}'>
-            Heal 5
-        </button>
-        <button type='roll' name='roll_skill'
-                value='&{template:5eAttack} {{name=Heal}} {{subtags=General, Spell}} {{speed=Slow}} {{healing=[[1d10]]}} {{target=1 Hero}} {{range=5}} {{type=Ranged}} {{description=Target Hero heal 1d10 HP}}'>
-            Heal 1d10
-        </button>
+        <div class="actions-info-grid">
+            <span class="action-name action-info-title">AT END OF COMBAT:</span>
+            <span class="action-effect action-info">Restore HP to Full and remove All Conditions.</span>
+        </div>
 
     </div>
 </div>
 
-<rolltemplate class="sheet-rolltemplate-5eAttack">
+<script type="text/worker">
+	// Show/Hide settings area
+    // Function call to simplifiy coding for showing/hiding settings
+    function showHide(value) {
+        if(value === "on") {
+            return "show";  // If the checkbox is CHECKED then show the section
+        } else {
+            return "hide";  // If the checkbox is UNchecked then hide the section
+        }
+    };
+    on("change:repeating_actions:settingsflag", function() {
+        getAttrs(["repeating_actions_settingsFlag"], function(values) {
+            setAttrs({
+                "repeating_actions_displaySettingsFlag": showHide(values.repeating_actions_settingsFlag)
+            });
+        });
+    });
+    on("change:repeating_tideTurners:settingsflag", function() {
+        getAttrs(["repeating_tideTurners_settingsFlag"], function(values) {
+            setAttrs({
+                "repeating_tideTurners_displaySettingsFlag": showHide(values.repeating_tideTurners_settingsFlag)
+            });
+        });
+    });
+    on("change:melee_settings_flag", function() {
+        getAttrs(["melee_settings_flag"], function(values) {
+            setAttrs({
+                "melee_display_settings_flag": showHide(values.melee_settings_flag)
+            });
+        });
+    });
+    on("change:ranged_settings_flag", function() {
+        getAttrs(["ranged_settings_flag"], function(values) {
+            setAttrs({
+                "ranged_display_settings_flag": showHide(values.ranged_settings_flag)
+            });
+        });
+    });
+    on("change:maneuver_settings_flag", function() {
+        getAttrs(["maneuver_settings_flag"], function(values) {
+            setAttrs({
+                "maneuver_display_settings_flag": showHide(values.maneuver_settings_flag)
+            });
+        });
+    });
+</script>
+
+<rolltemplate class="sheet-rolltemplate-action">
     <div class="container">
         <div style="background-color: #696969">
             <div><h1 class="tcat-header">{{name}}</h1></div>
-            <div><span class="tcat-subheader">{{subtags}}</span></div>
+            <div><span class="tcat-subheader">{{subtag1}} {{subtag2}}</span></div>
         </div>
 
         {{#target}}
@@ -777,21 +884,16 @@
         {{/description}}
 
         <div class="separator"></div>
+
+        {{#^rollTotal() damage 0}}
         {{#attack}}
+        {{#^rollTotal() attack 0}}
         <div class="rowcolor">
-            <span class="tcat">Attack: </span>
-            <span>{{attack}} vs</span>
-            {{#againstToughness}}
-            <img style="width: 20px; height: 20px"
-                 src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/shield.png">
-            {{/againstToughness}}
-            {{#againstResistance}}
-            <img style="width: 20px; height: 20px"
-                 src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
-            {{/againstResistance}}
+            <span class="tcat">Attack: </span>{{attack}}
         </div>
+        {{/^rollTotal() attack 0}}
         {{/attack}}
-        {{#damage}}
+
         <div>
             {{#^rollWasFumble() attack}}
             <span class="tcat">Damage: </span>{{damage}}
@@ -799,17 +901,49 @@
             {{#rollWasCrit() attack}}
             <span class="tcat">Crit: </span>{{dmgcrit}}
             {{/rollWasCrit() attack}}
+            {{#^rollWasFumble() attack}}
+            {{#rollTotal() against 1}}
+            <span> vs</span>
+            <img style="width: 20px; height: 20px"
+                 src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/shield.png">
+            {{/rollTotal() against 1}}
+            {{#rollTotal() against 2}}
+            <span> vs</span>
+            <img style="width: 20px; height: 20px"
+                 src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
+            {{/rollTotal() against 2}}
+            {{/^rollWasFumble() attack}}
         </div>
-        {{/damage}}
+        {{/^rollTotal() damage 0}}
+
         {{#test}}
+        {{#^rollTotal() test 0}}
         <div>
             <span class="tcat">Roll: </span>{{test}}
         </div>
+        {{/^rollTotal() test 0}}
         {{/test}}
+
         {{#healing}}
+        {{#^rollTotal() healing 0}}
         <div>
             <span class="tcat">Healing: </span>{{healing}}
         </div>
+        {{/^rollTotal() healing 0}}
         {{/healing}}
+    </div>
+</rolltemplate>
+
+<rolltemplate class="sheet-rolltemplate-skill">
+    <div class="container">
+        <div style="background-color: #696969">
+            <div><h1 class="tcat-header">{{name}}</h1></div>
+            <div><span class="tcat-subheader">{{subtags}}</span></div>
+        </div>
+        {{#roll}}
+        <div>
+            <span class="tcat">Roll: </span>{{roll}}
+        </div>
+        {{/roll}}
     </div>
 </rolltemplate>

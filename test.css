@@ -44,8 +44,8 @@
     height: fit-content;
     padding-bottom: 7px;
     grid-column-gap: 3px;
-    grid-template-columns: 1.5fr 1fr 1fr 1fr 40% 1.5fr;
-    grid-template-areas: "action-name action-type action-target action-range action-effect action-speed";
+    grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 40% 1.5fr;
+    grid-template-areas: "action-button action-name action-type action-target action-range action-effect action-speed";
 }
 
 .sheet-actions-info-grid {
@@ -54,9 +54,18 @@
     height: fit-content;
     padding-bottom: 3px;
     grid-column-gap: 3px;
-    grid-template-columns: 1.5fr 1fr 1fr 1fr 40% 1fr;
+    grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 40% 1fr;
     grid-auto-rows: fit-content(100%);
-    grid-template-areas: "action-name action-name action-name action-name action-effect action-effect";
+    grid-template-areas: "action-button action-name action-name action-name action-name action-effect action-effect";
+}
+
+.sheet-action-detail-grid {
+    display: grid;
+    width: auto;
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-auto-rows: fit-content(100%);
+    grid-template-areas: "top-detail" "middle-detail" "bottom-detail";
 }
 
 /*----------------- GENERAL CSS ------------------*/
@@ -83,6 +92,15 @@
     grid-area: image;
     background-color: black;
     padding: 3px;
+}
+
+/*----------------- Button section ------------------*/
+
+.sheet-action-button {
+    grid-area: action-button;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /*----------------- Name section ------------------*/
@@ -300,12 +318,51 @@ input.sheet-medium {
     align-items: center;
 }
 
-.sheet-action-large {
+.sheet-action-centered {
+     background-color: lightgrey;
+     text-align: center;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding: 3px;
+ }
+
+.sheet-action-leftCentered {
     background-color: lightgrey;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    padding: 3px;
 }
 
 .sheet-action-text {
+    background-color: lightgrey;
+    text-align: center;
+    padding: 3px;
+}
+
+.sheet-action-tide-centered {
+    background-color: rgb(247, 213, 178);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+}
+
+.sheet-action-tide-leftCentered {
+    background-color: rgb(247, 213, 178);
+    display: flex;
+    align-items: center;
+    padding: 3px;
+}
+
+.sheet-action-tide-text {
+    background-color: rgb(247, 213, 178);
+    text-align: center;
+    padding: 3px;
+}
+
+.sheet-action-large {
     background-color: lightgrey;
     text-align: center;
 }
@@ -535,18 +592,21 @@ input.sheet-cap {
 
 /*Roll Template*/
 
-.sheet-rolltemplate-5eAttack .sheet-container {
+.sheet-rolltemplate-skill .sheet-container,
+.sheet-rolltemplate-action .sheet-container {
     background-color: #ffffff;
     border: 1px solid;
     padding: 2px;
     width: 189px;
 }
 
-.sheet-rolltemplate-5eAttack div {
+.sheet-rolltemplate-skill div,
+.sheet-rolltemplate-action div {
     padding: 2px;
 }
 
-.sheet-rolltemplate-5eAttack .sheet-tcat {
+.sheet-rolltemplate-skill .sheet-tcat,
+.sheet-rolltemplate-action .sheet-tcat {
     font-weight: bold;
     font-size: 0.75em;
     font-variant: small-caps;
@@ -555,11 +615,13 @@ input.sheet-cap {
     text-align: left;
 }
 
-.sheet-rolltemplate-5eAttack .sheet-tcat-text {
+.sheet-rolltemplate-skill .sheet-tcat-text,
+.sheet-rolltemplate-action .sheet-tcat-text {
     font-size: 0.75em;
 }
 
-.sheet-rolltemplate-5eAttack .sheet-tcat-header {
+.sheet-rolltemplate-skill .sheet-tcat-header,
+.sheet-rolltemplate-action .sheet-tcat-header {
     color: white;
     font-weight: bold;
     font-size: 1em;
@@ -567,27 +629,189 @@ input.sheet-cap {
     line-height: 20px;
 }
 
-.sheet-rolltemplate-5eAttack .sheet-tcat-subheader {
+.sheet-rolltemplate-skill .sheet-tcat-subheader,
+.sheet-rolltemplate-action .sheet-tcat-subheader {
     color: white;
     font-size: 0.8em;
     font-style: italic;
 }
 
-.sheet-rolltemplate-5eAttack .sheet-separator {
+.sheet-rolltemplate-skill .sheet-separator,
+.sheet-rolltemplate-action .sheet-separator {
     background-color: #d3d3d3;
     width: auto;
     height: 1px;
 }
 
-.sheet-rolltemplate-5eAttack .inlinerollresult  {
+.sheet-rolltemplate-skill .inlinerollresult,
+.sheet-rolltemplate-action .inlinerollresult  {
     background-color: #ffffff;
     border: 3px solid #000000;
 }
 
-.sheet-rolltemplate-5eAttack .inlinerollresult.fullcrit {
+.sheet-rolltemplate-skill .inlinerollresult.fullcrit,
+.sheet-rolltemplate-action .inlinerollresult.fullcrit {
     border: 3px solid #3FB315;
 }
 
-.sheet-rolltemplate-5eAttack .inlinerollresult.fullfail {
+.sheet-rolltemplate-skill .inlinerollresult.fullfail,
+.sheet-rolltemplate-action .inlinerollresult.fullfail {
     border: 3px solid #B31515;
 }
+
+/*-------------------------*/
+
+/*** FOR CHECKBOX SELECTION ***/
+/*** FOR SHOW/HIDE ***/
+input[type=checkbox].sheet-tab-hide {
+    display: inline-block;
+    width: 24px;
+    opacity: 0;
+    z-index: 2;
+}
+input[type=checkbox].sheet-tab-hide + div {
+    display: inline-block;
+    margin-left: -27px;
+    width: 25px;
+    font-family: pictos;
+    font-size: 2.0em;
+    color: #A0A0A0;
+    cursor: pointer;
+}
+input[type=checkbox].sheet-tab-hide:checked + div {
+    display: inline-block;
+    color: black;
+}
+input[type=checkbox].sheet-tab-hide:hover + div,
+input[type=checkbox].sheet-tab-hide:hover * {
+    display: inline-block;
+    color: blue;
+}
+/*** END FOR SHOW/HIDE ***/
+/*** END FOR CHECKBOX SELECTION ***/
+
+/* Settings button as gear (uses letter 'y' in pictos font) as a checkbox to be used with javascript */
+.sheet-inlineBlock {
+    display: inline-block;
+}
+
+.sheet-vertTop {
+    vertical-align: top;
+}
+
+.sheet-padLeft {
+    padding-Left: 10px;
+    -webkit-box-sizing: border-box;
+    -mox-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+.sheet-settings {
+    z-index: 2;
+    opacity: 0;
+}
+
+.sheet-settings + span {
+    display: inline-block;
+    margin-left: -25px;
+    font-size: 20px;
+    font-family: pictos;
+    color: #A0A0A0;
+    cursor: pointer;
+}
+
+.sheet-settings:checked + span {
+    color: black;
+    display: inline-block;
+}
+
+.sheet-settings:hover + span,
+.sheet-settings:hover * {
+    color: blue;
+    display: inline-block;
+}
+
+.sheet-separator {
+    width: auto;
+    height: 1px;
+}
+
+.sheet-show-hide {
+    display: none;
+}
+
+input[type=checkbox].sheet-tab-hide:checked ~ .sheet-show-hide {
+    display: inline-block;
+}
+
+.sheet-displaySettings {
+    display: block;
+}
+
+
+.sheet-displayAttributes,
+.sheet-displayLegendaryItems {
+    display: inline-block;
+}
+
+.sheet-melee_display_settings_flag[value="hide"] ~ .sheet-displaySettings,
+.sheet-ranged_display_settings_flag[value="hide"] ~ .sheet-displaySettings,
+.sheet-maneuver_display_settings_flag[value="hide"] ~ .sheet-displaySettings,
+.sheet-displaySettingsFlag[value="hide"] ~ .sheet-displaySettings,
+.sheet-displaySettingsFlag[value="hide"] ~ .sheet-displaySettings {
+    display: none;
+}
+
+.sheet-top-detail {
+    grid-area: top-detail;
+    background-color: #3FB315;
+    width: fit-content;
+}
+
+.sheet-middle-detail {
+    grid-area: middle-detail;
+    align-content: center;
+    width: fit-content;
+}
+
+.sheet-bottom-detail {
+    grid-area: bottom-detail;
+    align-content: center;
+    background-color: cadetblue;
+}
+
+/* Boring Pre-defined width & height options */
+.sheet-width5 { width: 5%; }
+.sheet-width6 { width: 6%; }     /* for Attribute settings */
+.sheet-width10 { width: 10%; }
+.sheet-width15 { width: 15%; }
+.sheet-width20 { width: 20%; }
+.sheet-width25 { width: 25%; }
+.sheet-width30 { width: 30%; }
+.sheet-width35 { width: 35%; }
+.sheet-width39 { width: 39%; }  /* for Attribute settings */
+.sheet-width40 { width: 40%; }
+.sheet-width45 { width: 45%; }
+.sheet-width50 { width: 50%; }
+.sheet-width55 { width: 55%; }
+.sheet-width60 { width: 60%; }
+.sheet-width65 { width: 65%; }
+.sheet-width70 { width: 70%; }
+.sheet-width75 { width: 75%; }
+.sheet-width80 { width: 80%; }
+.sheet-width85 { width: 85%; }
+.sheet-width90 { width: 90%; }
+.sheet-width95 { width: 95%; }
+.sheet-width100 { width: 100%; }
+
+.sheet-height5 { height: 5px; }
+.sheet-height10 { height: 10px; }
+.sheet-height15 { height: 15px; }
+.sheet-height25 { height: 25px; }
+.sheet-height40 { height: 40px; }
+.sheet-height50 { height: 50px; }
+.sheet-height75 { height: 75px; }
+.sheet-height80 { height: 80px; }
+.sheet-height100 { height: 100px; }
+.sheet-height150 { height: 150px; }
