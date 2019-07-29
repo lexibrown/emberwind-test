@@ -44,7 +44,7 @@
     height: fit-content;
     padding-bottom: 7px;
     grid-column-gap: 3px;
-    grid-template-columns: 0.5fr 1.5fr 1fr 1fr 1fr 40% 1.5fr;
+    grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 40% 1.5fr;
     grid-template-areas: "action-button action-name action-type action-target action-range action-effect action-speed";
 }
 
@@ -54,7 +54,7 @@
     height: fit-content;
     padding-bottom: 3px;
     grid-column-gap: 3px;
-    grid-template-columns: 0.5fr 1.5fr 1fr 1fr 1fr 40% 1fr;
+    grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 40% 1fr;
     grid-auto-rows: fit-content(100%);
     grid-template-areas: "action-button action-name action-name action-name action-name action-effect action-effect";
 }
@@ -318,12 +318,51 @@ input.sheet-medium {
     align-items: center;
 }
 
-.sheet-action-large {
+.sheet-action-centered {
+     background-color: lightgrey;
+     text-align: center;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding: 3px;
+ }
+
+.sheet-action-leftCentered {
     background-color: lightgrey;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    padding: 3px;
 }
 
 .sheet-action-text {
+    background-color: lightgrey;
+    text-align: center;
+    padding: 3px;
+}
+
+.sheet-action-tide-centered {
+    background-color: rgb(247, 213, 178);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+}
+
+.sheet-action-tide-leftCentered {
+    background-color: rgb(247, 213, 178);
+    display: flex;
+    align-items: center;
+    padding: 3px;
+}
+
+.sheet-action-tide-text {
+    background-color: rgb(247, 213, 178);
+    text-align: center;
+    padding: 3px;
+}
+
+.sheet-action-large {
     background-color: lightgrey;
     text-align: center;
 }
@@ -553,18 +592,21 @@ input.sheet-cap {
 
 /*Roll Template*/
 
-.sheet-rolltemplate-5eAttack .sheet-container {
+.sheet-rolltemplate-skill .sheet-container,
+.sheet-rolltemplate-action .sheet-container {
     background-color: #ffffff;
     border: 1px solid;
     padding: 2px;
     width: 189px;
 }
 
-.sheet-rolltemplate-5eAttack div {
+.sheet-rolltemplate-skill div,
+.sheet-rolltemplate-action div {
     padding: 2px;
 }
 
-.sheet-rolltemplate-5eAttack .sheet-tcat {
+.sheet-rolltemplate-skill .sheet-tcat,
+.sheet-rolltemplate-action .sheet-tcat {
     font-weight: bold;
     font-size: 0.75em;
     font-variant: small-caps;
@@ -573,11 +615,13 @@ input.sheet-cap {
     text-align: left;
 }
 
-.sheet-rolltemplate-5eAttack .sheet-tcat-text {
+.sheet-rolltemplate-skill .sheet-tcat-text,
+.sheet-rolltemplate-action .sheet-tcat-text {
     font-size: 0.75em;
 }
 
-.sheet-rolltemplate-5eAttack .sheet-tcat-header {
+.sheet-rolltemplate-skill .sheet-tcat-header,
+.sheet-rolltemplate-action .sheet-tcat-header {
     color: white;
     font-weight: bold;
     font-size: 1em;
@@ -585,28 +629,33 @@ input.sheet-cap {
     line-height: 20px;
 }
 
-.sheet-rolltemplate-5eAttack .sheet-tcat-subheader {
+.sheet-rolltemplate-skill .sheet-tcat-subheader,
+.sheet-rolltemplate-action .sheet-tcat-subheader {
     color: white;
     font-size: 0.8em;
     font-style: italic;
 }
 
-.sheet-rolltemplate-5eAttack .sheet-separator {
+.sheet-rolltemplate-skill .sheet-separator,
+.sheet-rolltemplate-action .sheet-separator {
     background-color: #d3d3d3;
     width: auto;
     height: 1px;
 }
 
-.sheet-rolltemplate-5eAttack .inlinerollresult  {
+.sheet-rolltemplate-skill .inlinerollresult,
+.sheet-rolltemplate-action .inlinerollresult  {
     background-color: #ffffff;
     border: 3px solid #000000;
 }
 
-.sheet-rolltemplate-5eAttack .inlinerollresult.fullcrit {
+.sheet-rolltemplate-skill .inlinerollresult.fullcrit,
+.sheet-rolltemplate-action .inlinerollresult.fullcrit {
     border: 3px solid #3FB315;
 }
 
-.sheet-rolltemplate-5eAttack .inlinerollresult.fullfail {
+.sheet-rolltemplate-skill .inlinerollresult.fullfail,
+.sheet-rolltemplate-action .inlinerollresult.fullfail {
     border: 3px solid #B31515;
 }
 
@@ -642,20 +691,34 @@ input[type=checkbox].sheet-tab-hide:hover * {
 /*** END FOR CHECKBOX SELECTION ***/
 
 /* Settings button as gear (uses letter 'y' in pictos font) as a checkbox to be used with javascript */
-.sheet-settings {
+.sheet-inlineBlock {
     display: inline-block;
-    width: 14px;
-    opacity: 0;
+}
+
+.sheet-vertTop {
+    vertical-align: top;
+}
+
+.sheet-padLeft {
+    padding-Left: 10px;
+    -webkit-box-sizing: border-box;
+    -mox-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+.sheet-settings {
     z-index: 2;
+    opacity: 0;
 }
 
 .sheet-settings + span {
-    margin-left: -17px;
+    display: inline-block;
+    margin-left: -25px;
     font-size: 20px;
     font-family: pictos;
     color: #A0A0A0;
     cursor: pointer;
-    display: inline-Block;
 }
 
 .sheet-settings:checked + span {
@@ -667,6 +730,11 @@ input[type=checkbox].sheet-tab-hide:hover * {
 .sheet-settings:hover * {
     color: blue;
     display: inline-block;
+}
+
+.sheet-separator {
+    width: auto;
+    height: 1px;
 }
 
 .sheet-show-hide {
@@ -681,9 +749,16 @@ input[type=checkbox].sheet-tab-hide:checked ~ .sheet-show-hide {
     display: block;
 }
 
+
+.sheet-displayAttributes,
+.sheet-displayLegendaryItems {
+    display: inline-block;
+}
+
+.sheet-melee_display_settings_flag[value="hide"] ~ .sheet-displaySettings,
+.sheet-ranged_display_settings_flag[value="hide"] ~ .sheet-displaySettings,
+.sheet-maneuver_display_settings_flag[value="hide"] ~ .sheet-displaySettings,
 .sheet-displaySettingsFlag[value="hide"] ~ .sheet-displaySettings,
-.sheet-agility_display_settings_flag[value="hide"] ~ .sheet-displaySettings,
-.sheet-agility_display_settings_flag2[value="hide"] ~ .sheet-displaySettings,
 .sheet-displaySettingsFlag[value="hide"] ~ .sheet-displaySettings {
     display: none;
 }

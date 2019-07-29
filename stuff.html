@@ -19,6 +19,380 @@ setAttrs({
 });
 });
 });
+on("change:agility_settings_flag", function() {
+getAttrs(["agility_settings_flag"], function(values) {
+setAttrs({
+"agility_display_settings_flag": showHide(values.agility_settings_flag),
+"agility_display_settings_flag2": showHide(values.agility_settings_flag)
+});
+});
+});
+on("change:output_legendaryitems", function() {
+getAttrs(["output_legendaryitems"], function(values) {
+setAttrs({
+"display_legendaryitems_flag": showHide(values.output_legendaryitems)
+});
+});
+});
+
+{{#^rollWasFumble() attack}}
+{{#rollTotal() against 1}}
+<span> vs</span>
+<img style="width: 20px; height: 20px"
+     src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/shield.png">
+{{/rollTotal() against 1}}
+{{#rollTotal() against 2}}
+<span> vs</span>
+<img style="width: 20px; height: 20px"
+     src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
+{{#rollTotal() against 2}}
+{{/^rollWasFumble() attack}}
+
+
+<div class="width100  displayLegendaryItems">
+    <input type="hidden" class="display_legendaryitems_flag" name="attr_display_legendaryitems_flag" value="hide" />
+    <div class="actions-grid">
+        <div class="action-button">
+            <div>
+                <input class="settings" type="checkbox" name="attr_settingsFlag" value="on"
+                       checked="checked" style="width: 25px; height: 25px"/>
+                <span>y</span>
+            </div>
+        </div>
+
+        <span class="action-name action-centered" name="attr_action_name"></span>
+        <div class="action-type action-centered">
+            <div class="col">
+                                <span class="row" style="border-bottom: 1px solid black"
+                                      name="attr_action_subtype1"></span>
+                <span class="row" name="attr_action_subtype2"></span>
+            </div>
+        </div>
+        <span class="action-target action-centered" name="attr_action_target"></span>
+        <div class="action-range action-centered">
+            <div class="col">
+                <span class="row" style="border-bottom: 1px solid black" name="attr_action_type"></span>
+                <span class="row" name="attr_action_range"></span>
+            </div>
+        </div>
+        <span class="action-effect action-leftCentered" name="attr_action_description"></span>
+        <span class="action-speed action-centered" name="attr_action_speed"></span>
+    </div>
+
+    <input type="hidden" class="displaySettingsFlag" name="attr_displaySettingsFlag"/>
+    <div class="width100 displaySettings padLeft">
+        <div class="column width25 inlineBlock bold">Name:</div>
+        <div class="column width75 inlineBlock inputNameShort">
+            <input type="text" name="attr_action_name"/>
+        </div>
+
+        <div class="column width25 inlineBlock bold">Speed</div>
+        <div>
+            <select class="selector-fit" name="attr_action_speed">
+                <option value="">Select</option>
+                <option value="Free">Free</option>
+                <option value="Fast">Fast</option>
+                <option value="Slow">Slow</option>
+                <option value="Slow + Fast">Slow + Fast</option>
+                <option value="Slow + Slow">Slow + Slow</option>
+            </select>
+        </div>
+
+        <div class="column width100 bold textSmall">Description</div>
+        <div class="column width100 resizeVert vertTop">
+            <textarea class="height50" name="attr_action_description"></textarea>
+        </div>
+    </div>
+</div>
+
+
+
+<fieldset class="repeating_actionRow">
+    <div class="row">
+
+        <div class="actions-grid class-action-large">
+            <div class="action-button">
+                <button type='roll' name='roll_attack' style="color:black;"
+                        value='&{template:default} {{name=@{character_name}}} {{result=[[d20<@{critical}cs<@{accuracy}]]}}'>
+                    Roll!
+                </button>
+            </div>
+
+            <textarea class="action-name action-text-area-large action-text"></textarea>
+            <div class="action-type action-large">
+                <select class="selector">
+                    <option value="null">Select</option>
+                    <option value="general">General</option>
+                    <option value="trigger">Trigger</option>
+                    <option value="amplify">Amplify</option>
+                    <option value="Sustain">Sustain</option>
+                </select>
+                <select class="selector">
+                    <option value="null">Select</option>
+                    <option value="exploit">Exploit</option>
+                    <option value="spell">Spell</option>
+                </select>
+            </div>
+            <textarea class="action-target action-text-area-large action-text"></textarea>
+            <div class="action-range action-large">
+                <select class="selector">
+                    <option value="null">Select</option>
+                    <option value="ranged">Ranged</option>
+                    <option value="melee">Melee</option>
+                </select>
+                <input class="small" type="number">
+            </div>
+
+            <textarea class="action-effect action-text-area-large"></textarea>
+            <div class="action-speed action-large">
+                <select class="selector">
+                    <option value="null">Select</option>
+                    <option value="free">Free</option>
+                    <option value="fast">Fast</option>
+                    <option value="slow">Slow</option>
+                    <option value="slow-fast">Slow + Fast</option>
+                    <option value="slow-slow">Slow + Slow</option>
+                </select>
+            </div>
+        </div>
+
+        <input type="hidden" class="displaySettingsFlag" name="attr_displaySettingsFlag" />
+        <div class="action-effect action-text-area-large" style="background-color: yellowgreen">
+            <div class="width6 inlineBlock vertBottom"><input class="settings" type="checkbox" name="attr_agility_settings_flag" value="on" /><span>y</span></div>
+            <div class="width55 inlineBlock">
+                <input type="hidden" class="agility_display_settings_flag2" name="attr_agility_display_settings_flag2" value="show" />
+                <div class="column width1of3 displaySettings inlineBlock textCenter inputDice">
+                    <input type="text" style="text-align: center;" name="attr_dice attr_healing_dice"/>
+                </div>
+            </div>
+            <input type="hidden" class="agility_display_settings_flag" name="attr_agility_display_settings_flag" value="hide" />
+            <div class="width100 displaySettings action-detail-grid">
+
+                <div class="top-detail">
+                    <span style="width: auto; font-weight: bold">Damage: </span>
+                    <input style="width: 50px" type="text" name="attr_dice" />
+
+                    <span style="width: auto; font-weight: bold">Healing: </span>
+                    <input style="width: 50px" type="text" name="attr_healing_dice" />
+                </div>
+
+                <div class="middle-detail">
+                    <fieldset>
+                        <input type="radio" value="value1" name="group1">vs. Toughness</input>
+                        <img style="width: 20px; height: 20px"
+                             src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/shield.png">
+                        <input type="radio" value="value2" name="group1">vs. Resistance</input>
+                        <img style="width: 20px; height: 20px"
+                             src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
+                        <input type="radio" value="value3" name="group1">None</input>
+                    </fieldset>
+                </div>
+
+                <div class="bottom-detail">
+                    <fieldset>
+                        <input type="radio" value="value1" name="group1">Trig.</input>
+                        <input type="radio" value="value1" name="group1">Sus.</input>
+                        <input type="radio" value="value2" name="group1">Amp.</input>
+                    </fieldset>
+                    <textarea class="height50" name="attr_description"></textarea>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</fieldset>
+
+
+<div class="column width100 vertTop padRight">
+    <fieldset class="repeating_legendary">
+        <div class="row">   <!-- Fix for Mozilla squishing +Add & Modify buttons -->
+            <div class="width15 inlineBlock vertTop padLeft"><input class="settings" type="checkbox" name="attr_settingsFlag" value="on" checked="checked" /><span>y</span></div>
+            <div class="width85 inlineBlock vertTop inputNameShort attributeButton gray"><button type="roll" name="roll_action"
+         value="@{tab_chat}&{template:openLegend@{template_border}} {{title= @{action_name}}} {{subTitle=@{character_name}}} {{subTitleAdd= @{action_attribute} @{dice_modifier}}} {{target= @{action_target}}} {{roll= @{dice_roll}}} {{numberadvantage=?{# of Advantage/Disadvantage Dice}}} {{advantagedis=?{Do you have Advantage or Disadvantage?}}} {{powertarget=@{power_target}}} {{powerlevel= @{power_level}}} {{powertargetmax= @{power_targetmax}}} {{powerlevelmax= @{power_levelmax}}} {{description= @{action_special}}}"><input type="text" style="text-align: center;" name="attr_action_name" /></button></div>
+            <input type="hidden" class="displaySettingsFlag" name="attr_displaySettingsFlag" />
+            <div class="width100 displaySettings padLeft">
+                <div class="column width25 inlineBlock bold">Name: </div>
+                <div class="column width75 inlineBlock inputNameShort"><input type="text" name="attr_action_name" /></div>
+                <div class="column width45 inlineBlock bold textSmall">Attribute</div>
+                <div class="column width10 inlineBlock bold textSmall">vs</div>
+                <div class="column width45 inlineBlock bold textSmall">Target</div>
+                <div class="column width45 inlineBlock inputSelect">
+                    <select name="attr_action_attribute">
+                        <option value="None" selected="selected">None</option>
+                        <option value="Agility">Agility</option>
+                        <option value="Fortitude">Fortitude</option>
+                        <option value="Might">Might</option>
+                        <option value="Deception">Deception</option>
+                        <option value="Presence">Presence</option>
+                        <option value="Persuasion">Persuasion</option>
+                        <option value="Learning">Learning</option>
+                        <option value="Logic">Logic</option>
+                        <option value="Perception">Perception</option>
+                        <option value="Will">Will</option>
+                        <option value="Alteration">Alteration</option>
+                        <option value="Creation">Creation</option>
+                        <option value="Energy">Energy</option>
+                        <option value="Entropy">Entropy</option>
+                        <option value="Influence">Influence</option>
+                        <option value="Movement">Movement</option>
+                        <option value="Prescience">Prescience</option>
+                        <option value="Protection">Protection</option>
+                    </select>
+                </div>
+                <div class="column width10 inlineBlock bold italic textCenter">vs</div>
+                <div class="column width45 inlineBlock inputSelect">
+                    <select name="attr_action_target">
+                        <option value="None" selected="selected">None</option>
+                        <option value="Guard">Guard</option>
+                        <option value="Toughness">Toughness</option>
+                        <option value="Resolve">Resolve</option>
+                    </select>
+                </div>
+                <input type="hidden" name="attr_dice_roll" value="[[d20!! + 1d4!!]]" />
+                <div class="column width55 inlineBlock">Attribute Dice:</div>
+                <div class="column width45 inlineBlock inputSelect">
+                    <select name="attr_dice_modifier">
+                        <option value="1" selected="selected">Select Dice</option>
+                        <option value="1">1 = 1d4</option>
+                        <option value="2">2 = 1d6</option>
+                        <option value="3">3 = 1d8</option>
+                        <option value="4">4 = 1d10</option>
+                        <option value="5">5 = 2d6</option>
+                        <option value="6">6 = 2d8</option>
+                        <option value="7">7 = 2d10</option>
+                        <option value="8">8 = 3d8</option>
+                        <option value="9">9 = 3d10</option>
+                        <option value="10">10 = 4d8</option>
+                    </select>
+                </div>
+                <div class="column width100"><input type="checkbox" class="checks25" name="attr_use_destructive_trance" value="Yes" /> Use Destructive Trance</div>
+                <input type="hidden" name="attr_dice_roll_d20" value="1d20!!" />
+                <input type="hidden" name="attr_attribute_score" value="0" />
+                <div class="column width50 textSmall bold inlineBlock">d20 for this action is</div>
+                <div class="column width50 textSmall bold inlineBlock">Default (Dis)Advantage</div>
+                <div class="column width45 inlineBlock inputSelect">
+                    <select name="attr_select_dice_d20">
+                        <option value="Normal" selected="selected">Normal</option>
+                        <option value="Advantage">Advantage</option>
+                        <option value="Disadvantage">Disadvantage</option>
+                    </select>
+                </div>
+                <div class="column width50 inlineBlock inputNumber30"><input type="number" name="attr_default_advantage" value=0 /></div>
+                <input type="hidden" name="attr_power_target" value="" />
+                <input type="hidden" name="attr_power_targetmax" value=0 />
+                <div class="column width50 inlineBlock textSmall bold">For a Boon</div>
+                <div class="column width25 inlineBlock textSmall bold">Minimum</div>
+                <div class="column width25 inlineBlock textSmall bold">Maximum</div>
+                <div class="column width50 inlineBlock"><input type="checkbox" class="checks25" name="attr_use_power_level" value="Yes" /> Use Power level</div>
+                <div class="column width25 inlineBlock inputNumber30"><input type="number" name="attr_power_level" value=0 /></div>
+                <div class="column width25 inlineBlock inputNumber30"><input type="number" name="attr_power_levelmax" value=0 /></div>
+                <div class="column width100 bold textSmall">Description/Special/Flavor Text</div>
+                <div class="column width100 resizeVert vertTop"><textarea class="height50" name="attr_action_special"></textarea></div>
+            </div>
+        </div>
+    </fieldset>
+</div>
+
+
+<div class="action-effect action-text-area-large" style="background-color: yellowgreen">
+    <div class="width6 inlineBlock vertBottom"><input class="settings" type="checkbox" name="attr_agility_settings_flag" value="on" /><span>y</span></div>
+    <div class="width55 inlineBlock">
+        <input type="hidden" class="agility_display_settings_flag2" name="attr_agility_display_settings_flag2" value="show" />
+        <div class="column width1of3 displaySettings inlineBlock textCenter inputDice">
+            <input type="text" style="text-align: center;" name="attr_dice attr_healing_dice"/>
+        </div>
+    </div>
+    <input type="hidden" class="agility_display_settings_flag" name="attr_agility_display_settings_flag" value="hide" />
+    <div class="width100 displaySettings action-detail-grid">
+
+        <div class="top-detail">
+            <span style="width: auto; font-weight: bold">Damage: </span>
+            <input style="width: 50px" type="text" name="attr_dice" />
+
+            <span style="width: auto; font-weight: bold">Healing: </span>
+            <input style="width: 50px" type="text" name="attr_healing_dice" />
+        </div>
+
+        <div class="middle-detail">
+            <fieldset>
+                <input type="radio" value="value1" name="group1">vs. Toughness</input>
+                <img style="width: 20px; height: 20px"
+                     src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/shield.png">
+                <input type="radio" value="value2" name="group1">vs. Resistance</input>
+                <img style="width: 20px; height: 20px"
+                     src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
+                <input type="radio" value="value3" name="group1">None</input>
+            </fieldset>
+        </div>
+
+        <div class="bottom-detail">
+            <fieldset>
+                <input type="radio" value="value1" name="group1">Trig.</input>
+                <input type="radio" value="value1" name="group1">Sus.</input>
+                <input type="radio" value="value2" name="group1">Amp.</input>
+            </fieldset>
+            <textarea class="height50" name="attr_description"></textarea>
+        </div>
+    </div>
+</div>
+<div style="background-color: yellowgreen">
+    <div class="width6 inlineBlock vertBottom"><input class="settings" type="checkbox" name="attr_agility_settings_flag" value="on" /><span>y</span></div>
+    <div class="width55 inlineBlock">
+        <input type="hidden" class="agility_display_settings_flag2" name="attr_agility_display_settings_flag2" value="show" />
+        <div class="column width1of3 displaySettings inlineBlock textCenter inputDice">
+            <input type="text" style="text-align: center;" name="attr_dice attr_healing_dice"/>
+        </div>
+    </div>
+    <input type="hidden" class="agility_display_settings_flag" name="attr_agility_display_settings_flag" value="hide" />
+    <div class="width100 displaySettings action-detail-grid">
+
+        <div class="top-detail">
+            <span style="width: auto; font-weight: bold">Damage: </span>
+            <input style="width: 50px" type="text" name="attr_dice" />
+
+            <span style="width: auto; font-weight: bold">Healing: </span>
+            <input style="width: 50px" type="text" name="attr_healing_dice" />
+        </div>
+
+        <div class="middle-detail">
+            <fieldset>
+                <input type="radio" value="value1" name="group1">vs. Toughness</input>
+                <img style="width: 20px; height: 20px"
+                     src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/shield.png">
+                <input type="radio" value="value2" name="group1">vs. Resistance</input>
+                <img style="width: 20px; height: 20px"
+                     src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
+                <input type="radio" value="value3" name="group1">None</input>
+            </fieldset>
+        </div>
+
+        <div class="bottom-detail">
+            <fieldset>
+                <input type="radio" value="value1" name="group1">Trig.</input>
+                <input type="radio" value="value1" name="group1">Sus.</input>
+                <input type="radio" value="value2" name="group1">Amp.</input>
+            </fieldset>
+            <textarea class="height50" name="attr_description"></textarea>
+        </div>
+    </div>
+</div>
+
+
+<fieldset class="repeating_legendary">
+    <div class="row">
+        <div class="width15 inlineBlock vertTop padLeft">
+            <input class="settings" type="checkbox" name="attr_settingsFlag" value="on" checked="checked" />
+            <span>y</span>
+        </div>
+        <div class="width85 inlineBlock vertTop inputNameShort attributeButton gray"><button type="roll" name="roll_action" value="&{template:default {{title= @{action_name}}}"><input type="text" style="text-align: center;" name="attr_action_name" /></button></div>
+        <input type="hidden" class="displaySettingsFlag" name="attr_displaySettingsFlag" />
+        <div class="width100 displaySettings padLeft">
+            <div class="column width25 inlineBlock bold">Name: </div>
+            <div class="column width75 inlineBlock inputNameShort"><input type="text" name="attr_action_name" /></div>
+        </div>
+    </div>
+</fieldset>
+
 <!--
 *
 *
