@@ -1,22 +1,100 @@
 /*----------------- Font ------------------*/
 
-@font-face{
-    font-family: kungfont;
-    src: url(https://github.com/lexibrown/emberwind-test/raw/master/Kungfont-Regular.otf) format('opentype');
+@font-face {
+    font-family: Fungfont;
+    src: url(https://github.com/lexibrown/emberwind-test/raw/master/fonts/Kungfont-Regular.otf) format('opentype');
+}
+
+@font-face {
+    font-family: ProximaNova;
+    src: url(https://github.com/lexibrown/emberwind-test/raw/master/fonts/ProximaNova-Regular.ttf) format('opentype');
 }
 
 .sheet-kungfont {
-    font-family: kungfont;
+    font-family: Fungfont;
     font-size: 32px;
     border: 2px solid transparent;
+}
+
+* {
+    font-family: ProximaNova;
+}
+
+/*----------------- Container ------------------*/
+
+.sheet-container {
+    width: 1100px;
+    height: 900px;
+}
+
+/*----------------- Tabs ------------------*/
+
+div.sheet-tab-content {
+    display: none;
+}
+
+input.sheet-tab1:checked ~ div.sheet-tab1,
+input.sheet-tab2:checked ~ div.sheet-tab2,
+input.sheet-tab3:checked ~ div.sheet-tab3 {
+    display: flex;
+}
+
+input.sheet-tab {
+    width: 150px;
+    height: 25px;
+    position: relative;
+    left: 6px;
+    top: 2px;
+    margin: -1.5px;
+    cursor: pointer;
+    z-index: 1;
+    opacity: 0;
+}
+
+input.sheet-tab + span::before {
+    content: attr(title);
+    border: 2px solid white;
+    margin: -5px 0 0 0;
+    text-align: center;
+    display: inline-block;
+    background: #bababa;
+    width: 150px;
+    height: 23px;
+    font-size: 16px;
+    position: absolute;
+    left: 30px;
+    color: white;
+}
+
+input.sheet-tab:checked + span::before {
+    background: dimgrey;
+    color: white;
+    font-weight: bold;
+    border-style: solid;
+}
+
+input.sheet-tab2 + span::before {
+    left: 181px;
+}
+
+input.sheet-tab3 + span::before {
+    left: 331px;
+}
+
+div.sheet-tab-content {
+    padding: 5px 0px 5px 0px;
+}
+
+.sheet-separator {
+    width: auto;
+    background-color: #bababa;
+    height: 3px;
 }
 
 /*----------------- GRIDS ------------------*/
 
 .sheet-main {
     display: grid;
-    width: 1100px;
-    height: 900px;
     grid-gap: 4px;
     grid-template-columns: 30% 1fr;
     grid-template-rows: 1fr;
@@ -28,13 +106,18 @@
     display: grid;
     width: fit-content;
     height: fit-content;
-    padding-left: 5px;
     padding-right: 5px;
     grid-row-gap: 5px;
     grid-column-gap: 5px;
     grid-template-columns: auto;
     grid-auto-rows: fit-content(100%);
     grid-template-areas: "image" "name" "info" "aspects" "header1" "stats1" "common1" "header2" "stats2" "common2" "header3" "common3" "header4" "common4";
+}
+
+.sheet-main-inventory {
+    width: fit-content;
+    height: fit-content;
+    grid-area: main-stats;
 }
 
 .sheet-main-actions {
@@ -47,8 +130,7 @@
     height: fit-content;
     grid-template-columns: 47% 1fr 47%;
     grid-auto-rows: fit-content(100%);
-    grid-template-areas:
-            "skill-left skill-label skill-right"
+    grid-template-areas: "skill-left skill-label skill-right"
 }
 
 .sheet-actions-grid {
@@ -81,7 +163,7 @@
     grid-template-areas: "top-detail" "middle-detail" "bottom-detail";
 }
 
-/*----------------- GENERAL CSS ------------------*/
+/*----------------- Sections ------------------*/
 
 .sheet-section {
 
@@ -98,7 +180,10 @@
     justify-content: center;
 }
 
-/*------------- Section-specific CSS -------------*/
+.sheet-flex-center-left {
+    display: flex;
+    justify-content: center;
+}
 
 /*----------------- Image section ------------------*/
 .sheet-image {
@@ -117,6 +202,7 @@
 }
 
 /*----------------- Name section ------------------*/
+
 .sheet-name {
     grid-area: name;
     display: flex;
@@ -323,22 +409,14 @@ input.sheet-medium {
     grid-area: action-speed;
 }
 
-.sheet-action-empty {
+.sheet-action-centered {
     background-color: lightgrey;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 3px;
 }
-
-.sheet-action-centered {
-     background-color: lightgrey;
-     text-align: center;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     padding: 3px;
- }
 
 .sheet-action-leftCentered {
     background-color: lightgrey;
@@ -375,28 +453,6 @@ input.sheet-medium {
     padding: 3px;
 }
 
-.sheet-action-large {
-    background-color: lightgrey;
-    text-align: center;
-}
-
-.sheet-action-non-empty {
-    background-color: lightgrey;
-    text-align: center;
-    height: 90%;
-}
-
-.sheet-action-tide-empty {
-    background-color: rgb(247, 213, 178);
-    text-align: center;
-}
-
-.sheet-action-tide-non-empty {
-    background-color: rgb(247, 213, 178);
-    text-align: center;
-    height: 90%;
-}
-
 .sheet-action-header {
     width: auto;
     height: auto;
@@ -430,80 +486,7 @@ input.sheet-medium {
     align-items: center;
 }
 
-.sheet-class-action-small {
-    height: 40px;
-}
-
-.sheet-class-action-medium {
-    height: 65px;
-}
-
-.sheet-class-action-large {
-    height: 125px;
-}
-
-.sheet-action-text-area-small {
-    display:block;
-    width:auto;
-    height:99%;
-    padding:0.25%;
-    margin:0;
-    overflow:auto;
-    background-color: lightgrey;
-}
-
-.sheet-action-text-area-medium {
-    display:block;
-    width:auto;
-    height:85%;
-    padding:0.5%;
-    margin:0;
-    overflow:auto;
-    background-color: lightgrey;
-}
-
-.sheet-action-text-area-large {
-    display:block;
-    width:auto;
-    height:99%;
-    padding:0.5%;
-    margin:0;
-    overflow:auto;
-    background-color: lightgrey;
-}
-
-.sheet-action-tide-text-area-medium {
-    display:block;
-    width:auto;
-    height:85%;
-    padding:0.5%;
-    margin:0;
-    overflow:auto;
-    background-color: rgb(247, 213, 178);}
-
-.sheet-action-tide-text-area-large {
-    display:block;
-    width:auto;
-    height:99%;
-    padding:0.5%;
-    margin:0;
-    overflow:auto;
-    background-color: rgb(247, 213, 178);}
-
-
-/* Set the min-width so that when the window is resized the look will stay consistant */
-
-.sheet-charimage {
-    background-color: #111111;
-    width: 40%;
-    margin: 0 auto;
-}
-
-.sheet-charimage img {
-    max-width: 100%;
-    max-height: 100%;
-    height: auto;
-}
+/*----------------- Character Columns ------------------*/
 
 .sheet-stats {
     top: 45px;
@@ -519,12 +502,7 @@ input.sheet-medium {
     position: absolute;
 }
 
-.sheet-charsheet {
-    background-color: #ddd;
-    min-width: 800px;
-}
-
-/* Universal styling applied to all elements of these types */
+/*----------------- Colours ------------------*/
 
 .sheet-red {
     background-color: lightcoral;
@@ -547,15 +525,18 @@ input.sheet-medium {
     text-decoration-style: double;
 }
 
+/*----------------- Selectors ------------------*/
+
 select.sheet-selector {
     vertical-align: top;
     width: 100%;
 }
 
 select.sheet-selector-fit {
-    vertical-align: top;
     width: fit-content;
 }
+
+/*----------------- Inputs ------------------*/
 
 input.sheet-x-small {
     width: 8%;
@@ -569,6 +550,8 @@ input.sheet-small {
 input.sheet-cap {
     width: 60%;
 }
+
+/*-----------------  ------------------*/
 
 .sheet-title {
     float: left;
@@ -603,7 +586,34 @@ input.sheet-cap {
     padding: 12px 3px 12px 3px;
 }
 
-/*Roll Template*/
+.sheet-no-border {
+    border: none;
+}
+
+/*----------------- Inventory / Bio ------------------*/
+
+.sheet-inventory-header {
+    font-weight: bold;
+    border-top: 2px solid dimgrey;
+    font-variant: small-caps;
+    width: fit-content;
+}
+
+.sheet-inventory-box {
+    border: 2px solid dimgrey;
+    padding-bottom: 7px;
+}
+
+.sheet-inventory-box-upper {
+    border-bottom: 2px solid lightgrey;
+    padding: 2px;
+}
+
+.sheet-inventory-selector {
+    border-color: lightgrey;
+}
+
+/*----------------- Roll templates ------------------*/
 
 .sheet-rolltemplate-skill .sheet-container,
 .sheet-rolltemplate-action .sheet-container {
@@ -657,7 +667,7 @@ input.sheet-cap {
 }
 
 .sheet-rolltemplate-skill .inlinerollresult,
-.sheet-rolltemplate-action .inlinerollresult  {
+.sheet-rolltemplate-action .inlinerollresult {
     background-color: #ffffff;
     border: 3px solid #000000;
 }
@@ -674,6 +684,7 @@ input.sheet-cap {
 
 /*-------------------------*/
 
+
 /*** FOR CHECKBOX SELECTION ***/
 /*** FOR SHOW/HIDE ***/
 input[type=checkbox].sheet-tab-hide {
@@ -682,6 +693,7 @@ input[type=checkbox].sheet-tab-hide {
     opacity: 0;
     z-index: 2;
 }
+
 input[type=checkbox].sheet-tab-hide + div {
     display: inline-block;
     margin-left: -27px;
@@ -691,19 +703,21 @@ input[type=checkbox].sheet-tab-hide + div {
     color: #A0A0A0;
     cursor: pointer;
 }
+
 input[type=checkbox].sheet-tab-hide:checked + div {
     display: inline-block;
     color: black;
 }
+
 input[type=checkbox].sheet-tab-hide:hover + div,
 input[type=checkbox].sheet-tab-hide:hover * {
     display: inline-block;
     color: blue;
 }
+
 /*** END FOR SHOW/HIDE ***/
 /*** END FOR CHECKBOX SELECTION ***/
 
-/* Settings button as gear (uses letter 'y' in pictos font) as a checkbox to be used with javascript */
 .sheet-inlineBlock {
     display: inline-block;
 }
@@ -719,12 +733,12 @@ input[type=checkbox].sheet-tab-hide:hover * {
     box-sizing: border-box;
 }
 
-
 .sheet-settings {
     z-index: 2;
     opacity: 0;
 }
 
+/* Settings button as gear (uses letter 'y' in pictos font) as a checkbox to be used with javascript */
 .sheet-settings + span {
     display: inline-block;
     margin-left: -25px;
@@ -745,11 +759,6 @@ input[type=checkbox].sheet-tab-hide:hover * {
     display: inline-block;
 }
 
-.sheet-separator {
-    width: auto;
-    height: 1px;
-}
-
 .sheet-show-hide {
     display: none;
 }
@@ -760,12 +769,6 @@ input[type=checkbox].sheet-tab-hide:checked ~ .sheet-show-hide {
 
 .sheet-displaySettings {
     display: block;
-}
-
-
-.sheet-displayAttributes,
-.sheet-displayLegendaryItems {
-    display: inline-block;
 }
 
 .sheet-melee_display_settings_flag[value="hide"] ~ .sheet-displaySettings,
@@ -795,36 +798,131 @@ input[type=checkbox].sheet-tab-hide:checked ~ .sheet-show-hide {
 }
 
 /* Boring Pre-defined width & height options */
-.sheet-width5 { width: 5%; }
-.sheet-width6 { width: 6%; }     /* for Attribute settings */
-.sheet-width10 { width: 10%; }
-.sheet-width15 { width: 15%; }
-.sheet-width20 { width: 20%; }
-.sheet-width25 { width: 25%; }
-.sheet-width30 { width: 30%; }
-.sheet-width35 { width: 35%; }
-.sheet-width39 { width: 39%; }  /* for Attribute settings */
-.sheet-width40 { width: 40%; }
-.sheet-width45 { width: 45%; }
-.sheet-width50 { width: 50%; }
-.sheet-width55 { width: 55%; }
-.sheet-width60 { width: 60%; }
-.sheet-width65 { width: 65%; }
-.sheet-width70 { width: 70%; }
-.sheet-width75 { width: 75%; }
-.sheet-width80 { width: 80%; }
-.sheet-width85 { width: 85%; }
-.sheet-width90 { width: 90%; }
-.sheet-width95 { width: 95%; }
-.sheet-width100 { width: 100%; }
 
-.sheet-height5 { height: 5px; }
-.sheet-height10 { height: 10px; }
-.sheet-height15 { height: 15px; }
-.sheet-height25 { height: 25px; }
-.sheet-height40 { height: 40px; }
-.sheet-height50 { height: 50px; }
-.sheet-height75 { height: 75px; }
-.sheet-height80 { height: 80px; }
-.sheet-height100 { height: 100px; }
-.sheet-height150 { height: 150px; }
+.sheet-width5 {
+    width: 5%;
+}
+
+.sheet-width6 {
+    width: 6%;
+}
+
+.sheet-width10 {
+    width: 10%;
+}
+
+.sheet-width15 {
+    width: 15%;
+}
+
+.sheet-width20 {
+    width: 20%;
+}
+
+.sheet-width25 {
+    width: 25%;
+}
+
+.sheet-width30 {
+    width: 30%;
+}
+
+.sheet-width35 {
+    width: 35%;
+}
+
+.sheet-width39 {
+    width: 39%;
+}
+
+.sheet-width40 {
+    width: 40%;
+}
+
+.sheet-width45 {
+    width: 45%;
+}
+
+.sheet-width50 {
+    width: 50%;
+}
+
+.sheet-width55 {
+    width: 55%;
+}
+
+.sheet-width60 {
+    width: 60%;
+}
+
+.sheet-width65 {
+    width: 65%;
+}
+
+.sheet-width70 {
+    width: 70%;
+}
+
+.sheet-width75 {
+    width: 75%;
+}
+
+.sheet-width80 {
+    width: 80%;
+}
+
+.sheet-width85 {
+    width: 85%;
+}
+
+.sheet-width90 {
+    width: 90%;
+}
+
+.sheet-width95 {
+    width: 95%;
+}
+
+.sheet-width100 {
+    width: 100%;
+}
+
+.sheet-height5 {
+    height: 5px;
+}
+
+.sheet-height10 {
+    height: 10px;
+}
+
+.sheet-height15 {
+    height: 15px;
+}
+
+.sheet-height25 {
+    height: 25px;
+}
+
+.sheet-height40 {
+    height: 40px;
+}
+
+.sheet-height50 {
+    height: 50px;
+}
+
+.sheet-height75 {
+    height: 75px;
+}
+
+.sheet-height80 {
+    height: 80px;
+}
+
+.sheet-height100 {
+    height: 100px;
+}
+
+.sheet-height150 {
+    height: 150px;
+}
