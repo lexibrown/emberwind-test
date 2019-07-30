@@ -1,0 +1,392 @@
+<div class="charsheet">
+    <!-- Sheet Options, Change Logs, and Links -->
+    <div class="option-main options width100 padTop marginTop">
+        <div class="row">
+            <div class="column width20 inlineBlock bold vertBottom">Type of Character Sheet:</div>
+            <div class="column width20 inlineBlock inputSelect">
+                <select name="attr_display_sheet_type">
+                    <optgroup label=""></optgroup>
+                    <option value="character" selected="selected">Primary Character</option>
+                    <option value="npc">NPC or Summon</option>
+                    <optgroup label=""></optgroup>
+                    <option value="alt form 1">Alternate Form Tier 1</option>
+                    <option value="alt form 2">Alternate Form Tier 2</option>
+                    <optgroup label=""></optgroup>
+                    <option value="companion 1">Companion Tier 1</option>
+                    <option value="companion 2">Companion Tier 2</option>
+                    <option value="companion 3">Companion Tier 3</option>
+                </select>
+            </div>
+            <div class="column width30 inlineBlock bold vertBottom">Theme of Game (Border choices):</div>
+            <div class="column width20 inlineBlock inputSelect">
+                <select name="attr_display_alternate_border">
+                    <option value="fantasy" selected="selected">Fantasy: Scrolls</option>
+                    <option value="on">Modern: Industrial</option>
+                </select>
+            </div>
+        </div>
+        <div class="borderAllDotted borderRound marginTop marginBottom marginRight marginLeft red">
+            <div class="row">
+                <div class="column width90 inlineBlock textSmall bold">This section to be removed soon when other
+                    sections updated.
+                </div>
+            </div>
+            <div class="row width100">
+                <div class="column sliders inlineBlock textSmall bold">Character Info</div>
+                <div class="column sliders inlineBlock textSmall bold">Goals & Beliefs</div>
+                <div class="column sliders inlineBlock textSmall bold">Attributes</div>
+                <div class="column sliders inlineBlock textSmall bold">Defenses</div>
+                <div class="column sliders inlineBlock textSmall bold">Health & Speed</div>
+                <!-- remove this line to add Sanity back in (and corresponding 2 other areas)
+                        <div class="column sliders inlineBlock textSmall bold">Sanity</div>
+                remove this line to add Sanity back in (and corresponding 2 other areas) -->
+                <div class="column sliders inlineBlock textSmall bold">Favored Actions</div>
+                <div class="column sliders inlineBlock textSmall bold">Other Actions</div>
+                <div class="column sliders inlineBlock textSmall bold">Legendary Items</div>
+                <div class="column sliders inlineBlock textSmall bold">Feats, Perks & Flaws</div>
+                <div class="column sliders inlineBlock textSmall bold">Inventory</div>
+                <div class="column sliders inlineBlock textSmall bold">Other Inv/Notes</div>
+                <div class="column sliders inlineBlock textSmall bold">Borders</div>
+            </div>
+            <div class="row width100">
+                <div class="column sliders inlineBlock">
+                    <div class="checkboxSlider"><input type="checkbox" class="checkboxSliderInvis"
+                                                       name="attr_output_character" checked="checked"
+                                                       value="on"/><label></label></div>
+                </div>
+                <div class="column sliders inlineBlock">
+                    <div class="checkboxSlider"><input type="checkbox" class="checkboxSliderInvis"
+                                                       name="attr_output_goalsbeliefs" checked="checked"
+                                                       value="on"/><label></label></div>
+                </div>
+                <div class="column sliders inlineBlock">
+                    <div class="checkboxSlider"><input type="checkbox" class="checkboxSliderInvis"
+                                                       name="attr_output_attributes" checked="checked"
+                                                       value="on"/><label></label></div>
+                </div>
+                <div class="column sliders inlineBlock">
+                    <div class="checkboxSlider"><input type="checkbox" class="checkboxSliderInvis"
+                                                       name="attr_output_defenses" checked="checked"
+                                                       value="on"/><label></label></div>
+                </div>
+                <div class="column sliders inlineBlock">
+                    <div class="checkboxSlider"><input type="checkbox" class="checkboxSliderInvis"
+                                                       name="attr_output_healthspeed" checked="checked"
+                                                       value="on"/><label></label></div>
+                </div>
+                <!-- remove this line to add Sanity back in (and corresponding 2 other areas)
+                        <div class="column sliders inlineBlock">
+                            <div class="checkboxSlider"><input type="checkbox" class="checkboxSliderInvis" name="attr_output_sanity" value="on" /><label></label></div>
+                        </div>
+                 remove this line to add Sanity back in (and corresponding 2 other areas) -->
+                <div class="column sliders inlineBlock">
+                    <div class="checkboxSlider"><input type="checkbox" class="checkboxSliderInvis"
+                                                       name="attr_output_favoredactions" checked="checked"
+                                                       value="on"/><label></label></div>
+                </div>
+                <div class="column sliders inlineBlock">
+                    <div class="checkboxSlider"><input type="checkbox" class="checkboxSliderInvis"
+                                                       name="attr_output_otheractions" checked="checked"
+                                                       value="on"/><label></label></div>
+                </div>
+                <div class="column sliders inlineBlock">
+                    <div class="checkboxSlider"><input type="checkbox" class="checkboxSliderInvis"
+                                                       name="attr_output_legendaryitems" value="on"/><label></label>
+                    </div>
+                </div>
+                <div class="column sliders inlineBlock">
+                    <div class="checkboxSlider"><input type="checkbox" class="checkboxSliderInvis"
+                                                       name="attr_output_feats" checked="checked"
+                                                       value="on"/><label></label></div>
+                </div>
+                <div class="column sliders inlineBlock">
+                    <div class="checkboxSlider"><input type="checkbox" class="checkboxSliderInvis"
+                                                       name="attr_output_inventory" checked="checked"
+                                                       value="on"/><label></label></div>
+                </div>
+                <div class="column sliders inlineBlock">
+                    <div class="checkboxSlider"><input type="checkbox" class="checkboxSliderInvis"
+                                                       name="attr_output_otherinventory" value="on"/><label></label>
+                    </div>
+                </div>
+                <div class="column sliders inlineBlock">
+                    <div class="checkboxSlider"><input type="checkbox" class="checkboxSliderInvis"
+                                                       name="attr_display_alternate_border" value="on"/><label></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column textLargest bolder textshadow boxshadow">More Coming Soon</div>
+            <div class="column">This is just the groundwork, stuff going on behind the scenes. Options like borders,
+                Treat the sheet as: Alt Form/Companion/NPC, etc. If you would like to provide feedback or see more
+                indepth updates, visit: https://community.openlegendrpg.com/t/roll20-character-sheet/162
+            </div>
+        </div>
+        <div class="row">
+            <div class="column textLargest bolder textshadow">Changelog</div>
+            <div class="column">Below is the changelog of what has been going on with the Sheet so you can see exactly
+                what has happened in latest updates.
+            </div>
+            <!-- Make the Change Log scrollable so takes up less space
+                Might end up just removing the changelog, not sure it is really needed here -->
+            <div class="width100 height150 scroll">
+                <div class="width90 inlineBlock boxShadow marginBottom marginTop">
+                    <div class="column width100 textLarge bold borderBottom textLeft">1.9.81 on 2018 July 6th</div>
+                    <div class="column width100 textLeft">Quick fix of layout due to Roll20 Char-o-mancer update
+                        changing default padding/spacing for all charactersheets across the site
+                    </div>
+                    <div class="column width100 textLeft padLeft">- Next update should be v2.0 of sheet with improved
+                        layout
+                    </div>
+                </div>
+                <div class="width90 inlineBlock boxShadow marginBottom marginTop">
+                    <div class="column width100 textLarge bold borderBottom textLeft">1.9.8 on 2018 May 31st</div>
+                    <div class="column width100 textLeft">Default Advantage for NPCs on Primary attribute 1 & 3 fixed
+                    </div>
+                    <div class="column width100 textLeft padLeft">- Was the same attribute name, fixed so each
+                        seperate
+                    </div>
+                    <div class="column width100 textLeft">Legendary Item display on a new sheet creation by default
+                        fixed
+                    </div>
+                    <div class="column width100 textLeft padLeft">- Toggled it to "hide" instead of "show"</div>
+                </div>
+                <div class="width90 inlineBlock boxShadow marginBottom marginTop">
+                    <div class="column width100 textLarge bold borderBottom textLeft">1.9.7 on 2018 May 27th</div>
+                    <div class="column width100 textLeft">Made NPC initiative rolls go to the tracker</div>
+                    <div class="column width100 textLeft padLeft">- Oops, not sure how I let that slip through</div>
+                </div>
+                <div class="width90 inlineBlock boxShadow marginBottom marginTop">
+                    <div class="column width100 textLarge bold borderBottom textLeft">1.9.6 on 2018 May 14th</div>
+                    <div class="column width100 textLeft">Resist Rolls Update</div>
+                    <div class="column width100 textLeft padLeft">- Made Resist Roll buttons next to Speed</div>
+                    <div class="column width100 textLeft padLeft">- Updated look of Speed section on character sheet
+                    </div>
+                </div>
+                <div class="width90 inlineBlock boxShadow marginBottom marginTop">
+                    <div class="column width100 textLarge bold borderBottom textLeft">1.9.5 on 2018 May 11th</div>
+                    <div class="column width100 textLeft">Sheet Type Selection added</div>
+                    <div class="column width100 textLeft padLeft">- Pick between: Primary Character, NPC/Summons, Alt
+                        form Tier 1 or 2, Companion Tier 1, 2, or 3
+                    </div>
+                    <div class="column width100 textLeft padLeft">- Changes the calculations for Attribute Points & Feat
+                        points based on what is selected
+                    </div>
+                    <div class="column width100 textLeft padLeft">- Adds some entry fields were applicable</div>
+                    <div class="column width100 textLeft padLeft">- For NPC, shows a completely different sheet for
+                        "Quick" build
+                    </div>
+                </div>
+                <div class="width90 inlineBlock boxShadow marginBottom marginTop">
+                    <div class="column width100 textLarge bold borderBottom textLeft">1.9.3 on 2018 May 10th</div>
+                    <div class="column width100 textLeft">Fix for "Other Actions" section & Effects</div>
+                    <div class="column width100 textLeft padLeft">- On Load function for Other Actions wasn't doign the
+                        Power Levels correctly
+                    </div>
+                    <div class="column width100 textLeft padLeft">- Forgot to make Effects dice explode (all dice in OL
+                        explode!!)
+                    </div>
+                </div>
+                <div class="width90 inlineBlock boxShadow marginBottom marginTop">
+                    <div class="column width100 textLarge bold borderBottom textLeft">1.9.2 on 2018 May 8th</div>
+                    <div class="column width100 textLeft">Added Whisper to GM option</div>
+                    <div class="column width100 textLeft padLeft">- global button to make any roll you click on the
+                        sheet go to the GM
+                    </div>
+                </div>
+                <div class="width90 inlineBlock boxShadow marginBottom marginTop">
+                    <div class="column width100 textLarge bold borderBottom textLeft">1.9.1 on 2018 May 8th</div>
+                    <div class="column width100 textLeft">Made Background Tab for the sheet</div>
+                    <div class="column width100 textLeft padLeft">- Moved Character Info & Beliefs, Goals, Instincts
+                        Sections
+                    </div>
+                    <div class="column width100 textLeft padLeft">- Added more data fields for the Character Info
+                        section
+                    </div>
+                    <div class="column width100 textLeft">GUI Display at Top</div>
+                    <div class="column width100 textLeft padLeft">- Added what type of sheet it is for future updates
+                    </div>
+                    <div class="column width100 textLeft padLeft">- Moved OL logo up and smaller along with version
+                    </div>
+                    <div class="column width100 textLeft padLeft">- Hidden groundwork for a tab button for whispering
+                        rolls to the GM
+                    </div>
+                </div>
+                <div class="width90 inlineBlock boxShadow marginBottom marginTop">
+                    <div class="column width100 textLarge bold borderBottom textLeft">1.9.0 on 2018 May 7th</div>
+                    <div class="column width100 textLeft">Massive update to Favored & Other Actions sections</div>
+                    <div class="column width100 textLeft padLeft">- Select if action is an Attack (Damaging or Bane),
+                        Boon, or Effect
+                    </div>
+                    <div class="column width100 textLeft padLeft">- Effect isn’t quite fully functional yet in that
+                        there is a pop-up that doesn’t do anything, but will still roll the dice you choose
+                    </div>
+                    <div class="column width100 textLeft">Backgrounds for the borders updated</div>
+                    <div class="column width100 textLeft padLeft">- Also white background for things sent to chat</div>
+                    <div class="column width100 textLeft">Prep work for NPC/Alt Form/Companion tabs</div>
+                    <div class="column width100 textLeft padLeft">- Nothing functioning on the user side yet</div>
+                    <div class="column width100 textLeft">Options Tab added</div>
+                    <div class="column width100 textLeft padLeft">- Just information for now, functionality added in
+                        next update
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--
+*
+*
+*
+*
+* visual space for editing and seeing quickly. This is stuff after Actions & Other Actions
+*
+*
+*
+-->
+<input type="hidden" class="display_legendaryitems_flag" name="attr_display_legendaryitems_flag" value="hide"/>
+<div class="third inlineBlock vertTop displayLegendaryItems">
+    <!-- Items Area -->
+    <div class="actionsTop padTop padLeft">
+        <div class="column width100 textLargest bold textShadow">Legendary Items</div>
+        <div class="column width100 italic">Attacks, Boons, & Banes</div>
+    </div>
+    <div class="actionsMiddle padTop padRight">
+        <!-- Headings for the actions -->
+        <div class="column width25 bold italic inlineBlock textCenter padLeft">Settings</div>
+        <div class="column width75 bold italic inlineBlock textCenter">Name (click to roll)</div>
+        <!-- Add actions as needed Section (repeating fields) -->
+        <div class="column width100 vertTop padRight">
+            <fieldset class="repeating_legendary">
+                <div class="row">   <!-- Fix for Mozilla squishing +Add & Modify buttons -->
+                    <div class="width15 inlineBlock vertTop padLeft"><input class="settings" type="checkbox"
+                                                                            name="attr_settingsFlag" value="on"
+                                                                            checked="checked"/><span>y</span></div>
+                    <div class="width85 inlineBlock vertTop inputNameShort attributeButton gray">
+                        <button type="roll" name="roll_action"
+                                value="@{tab_chat}&{template:openLegend@{template_border}} {{title= @{action_name}}} {{subTitle=@{character_name}}} {{subTitleAdd= @{action_attribute} @{dice_modifier}}} {{target= @{action_target}}} {{roll= @{dice_roll}}} {{numberadvantage=?{# of Advantage/Disadvantage Dice}}} {{advantagedis=?{Do you have Advantage or Disadvantage?}}} {{powertarget=@{power_target}}} {{powerlevel= @{power_level}}} {{powertargetmax= @{power_targetmax}}} {{powerlevelmax= @{power_levelmax}}} {{description= @{action_special}}}">
+                            <input type="text" style="text-align: center;" name="attr_action_name"/></button>
+                    </div>
+                    <input type="hidden" class="displaySettingsFlag" name="attr_displaySettingsFlag"/>
+                    <div class="width100 displaySettings padLeft">
+                        <div class="column width25 inlineBlock bold">Name:</div>
+                        <div class="column width75 inlineBlock inputNameShort"><input type="text"
+                                                                                      name="attr_action_name"/></div>
+                        <div class="column width45 inlineBlock bold textSmall">Attribute</div>
+                        <div class="column width10 inlineBlock bold textSmall">vs</div>
+                        <div class="column width45 inlineBlock bold textSmall">Target</div>
+                        <div class="column width45 inlineBlock inputSelect">
+                            <select name="attr_action_attribute">
+                                <option value="None" selected="selected">None</option>
+                                <option value="Agility">Agility</option>
+                                <option value="Fortitude">Fortitude</option>
+                                <option value="Might">Might</option>
+                                <option value="Deception">Deception</option>
+                                <option value="Presence">Presence</option>
+                                <option value="Persuasion">Persuasion</option>
+                                <option value="Learning">Learning</option>
+                                <option value="Logic">Logic</option>
+                                <option value="Perception">Perception</option>
+                                <option value="Will">Will</option>
+                                <option value="Alteration">Alteration</option>
+                                <option value="Creation">Creation</option>
+                                <option value="Energy">Energy</option>
+                                <option value="Entropy">Entropy</option>
+                                <option value="Influence">Influence</option>
+                                <option value="Movement">Movement</option>
+                                <option value="Prescience">Prescience</option>
+                                <option value="Protection">Protection</option>
+                            </select>
+                        </div>
+                        <div class="column width10 inlineBlock bold italic textCenter">vs</div>
+                        <div class="column width45 inlineBlock inputSelect">
+                            <select name="attr_action_target">
+                                <option value="None" selected="selected">None</option>
+                                <option value="Guard">Guard</option>
+                                <option value="Toughness">Toughness</option>
+                                <option value="Resolve">Resolve</option>
+                            </select>
+                        </div>
+                        <input type="hidden" name="attr_dice_roll" value="[[d20!! + 1d4!!]]"/>
+                        <div class="column width55 inlineBlock">Attribute Dice:</div>
+                        <div class="column width45 inlineBlock inputSelect">
+                            <select name="attr_dice_modifier">
+                                <option value="1" selected="selected">Select Dice</option>
+                                <option value="1">1 = 1d4</option>
+                                <option value="2">2 = 1d6</option>
+                                <option value="3">3 = 1d8</option>
+                                <option value="4">4 = 1d10</option>
+                                <option value="5">5 = 2d6</option>
+                                <option value="6">6 = 2d8</option>
+                                <option value="7">7 = 2d10</option>
+                                <option value="8">8 = 3d8</option>
+                                <option value="9">9 = 3d10</option>
+                                <option value="10">10 = 4d8</option>
+                            </select>
+                        </div>
+                        <div class="column width100"><input type="checkbox" class="checks25"
+                                                            name="attr_use_destructive_trance" value="Yes"/> Use
+                            Destructive Trance
+                        </div>
+                        <input type="hidden" name="attr_dice_roll_d20" value="1d20!!"/>
+                        <input type="hidden" name="attr_attribute_score" value="0"/>
+                        <div class="column width50 textSmall bold inlineBlock">d20 for this action is</div>
+                        <div class="column width50 textSmall bold inlineBlock">Default (Dis)Advantage</div>
+                        <div class="column width45 inlineBlock inputSelect">
+                            <select name="attr_select_dice_d20">
+                                <option value="Normal" selected="selected">Normal</option>
+                                <option value="Advantage">Advantage</option>
+                                <option value="Disadvantage">Disadvantage</option>
+                            </select>
+                        </div>
+                        <div class="column width50 inlineBlock inputNumber30"><input type="number"
+                                                                                     name="attr_default_advantage"
+                                                                                     value=0/></div>
+                        <input type="hidden" name="attr_power_target" value=""/>
+                        <input type="hidden" name="attr_power_targetmax" value=0/>
+                        <div class="column width50 inlineBlock textSmall bold">For a Boon</div>
+                        <div class="column width25 inlineBlock textSmall bold">Minimum</div>
+                        <div class="column width25 inlineBlock textSmall bold">Maximum</div>
+                        <div class="column width50 inlineBlock"><input type="checkbox" class="checks25"
+                                                                       name="attr_use_power_level" value="Yes"/> Use
+                            Power level
+                        </div>
+                        <div class="column width25 inlineBlock inputNumber30"><input type="number"
+                                                                                     name="attr_power_level" value=0/>
+                        </div>
+                        <div class="column width25 inlineBlock inputNumber30"><input type="number"
+                                                                                     name="attr_power_levelmax"
+                                                                                     value=0/></div>
+                        <div class="column width100 bold textSmall">Description/Special/Flavor Text</div>
+                        <div class="column width100 resizeVert vertTop"><textarea class="height50"
+                                                                                  name="attr_action_special"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+    <div class="actionsBottom"></div>
+    <!-- End Legendary Items Area -->
+</div>
+
+</div>
+
+<script type="text/worker">
+    on("change:repeating_legendary:settingsflag", function() {
+        getAttrs(["repeating_legendary_settingsFlag"], function(values) {
+            setAttrs({
+                "repeating_legendary_displaySettingsFlag": showHide(values.repeating_legendary_settingsFlag)
+            });
+        });
+    });
+    on("change:output_legendaryitems", function() {
+        getAttrs(["output_legendaryitems"], function(values) {
+            setAttrs({
+                "display_legendaryitems_flag": showHide(values.output_legendaryitems)
+            });
+        });
+    });
+
+</script>

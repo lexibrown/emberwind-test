@@ -929,6 +929,45 @@ input[type=checkbox].sheet-tab-hide:checked ~ .sheet-show-hide {
 
 /*----------------- Hexagons ------------------*/
 
+div.sheet-enemy-hex {
+    display: none;
+}
+
+input.sheet-grunt:checked ~ div.sheet-grunt,
+input.sheet-awakened:checked ~ div.sheet-awakened,
+input.sheet-elite:checked ~ div.sheet-elite,
+input.sheet-boss:checked ~ div.sheet-boss {
+    display: block;
+}
+
+input[type=checkbox].sheet-hex1:checked ~ .sheet-hex.sheet-hex-3 {
+    background-color: gray;
+}
+
+input[type=checkbox].sheet-hex1:checked + span::before {
+    content: "&";
+    font-family: pictos;
+    color: green;
+}
+
+input[type=checkbox].sheet-hex1:hover + span + div {
+    background-color: indianred;
+}
+
+.sheet-hex1 + span::before {
+    cursor: pointer;
+    content: "*";
+    font-family: pictos;
+    color: red;
+    margin-left: -10px;
+}
+
+input[type=checkbox].sheet-hex1 {
+    opacity: 0;
+    z-index: 3;
+    margin-left: -60px;
+}
+
 .sheet-hex {
     width: 100px;
     height: 57px;
@@ -989,7 +1028,6 @@ input[type=checkbox].sheet-tab-hide:checked ~ .sheet-show-hide {
     top: 0;
     left: 0;
     z-index: 1;
-    background: inherit;
     background-repeat: no-repeat;
     backface-visibility: hidden;
 }
@@ -1024,3 +1062,9 @@ input[type=checkbox].sheet-tab-hide:checked ~ .sheet-show-hide {
 .sheet-hex.sheet-hex-1 { background: #c99fd6; }
 .sheet-hex.sheet-hex-2 { background: #845a91; }
 .sheet-hex.sheet-hex-3 { background: #a16fb0; }
+
+/*.sheet-hex.sheet-hex-1:hover,*/
+/*.sheet-hex.sheet-hex-2:hover,*/
+/*.sheet-hex.sheet-hex-3:hover {*/
+/*    background-color: #3FB315;*/
+/*}*/

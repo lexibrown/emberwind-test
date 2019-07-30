@@ -1,8 +1,19 @@
 <div class="sheet-container">
     <div>
         <img src="https://www.emberwindgame.com/wp-content/themes/emberwind/dist/images/emberwind-logo-white-small.png"
-             alt="" style="background-color: #696969">
+             alt="" style="background-color: #696969;"
+        >
     </div>
+    <!--    <div>-->
+    <!--        <img src="https://i1.wp.com/ohayocon.org/wp-content/uploads/2019/01/Base-Logo-Black-Derek-Chung.png?resize=1024%2C577&ssl=1"-->
+    <!--             alt=""-->
+    <!--        >-->
+    <!--    </div>-->
+    <!--    <div>-->
+    <!--        <img src="https://www.emberwindgame.com/wp-content/uploads/emberwind-logo-color.png"-->
+    <!--             alt=""-->
+    <!--        >-->
+    <!--    </div>-->
     <div class="kungfont">Emberwind</div>
     <input type="radio" name="attr_tab" class="sheet-tab sheet-tab1" value="1" checked="checked"><span
         title="Character"></span>
@@ -32,9 +43,9 @@
                 <div class="row">
                     <div class="col info-hp-box">
                         <span class="info-hp-text">HP:</span>
-                        <input class="medium" type="number" name="attr_hp">
+                        <input class="medium" type="number" name="attr_hp" value="10">
                         <span> / </span>
-                        <input class="medium" type="number" name="attr_max_hp">
+                        <input class="medium" type="number" name="attr_max_hp" value="10">
                     </div>
                     <div class="col info-class-box">
                         <span>Class:</span>
@@ -336,9 +347,9 @@
                 <div class="action-range action-centered"></div>
                 <div class="action-effect action-text">
                     <span>Move </span>
-                    <input class="x-small" type="number">
+                    <input class="x-small" type="number" value="1">
                     <span>-</span>
-                    <input class="x-small" type="number">
+                    <input class="x-small" type="number" value="4">
                     <span> Squares. Can move through friendly Combatants.</span>
                 </div>
                 <span class="action-speed action-centered">Slow</span>
@@ -352,7 +363,7 @@
                 <div class="action-range action-centered"></div>
                 <div class="action-effect action-text">
                     <span>Move </span>
-                    <input class="x-small" type="number">
+                    <input class="x-small" type="number" value="1">
                     <span> Square(s). Can move through friendly Combatants.</span>
                 </div>
                 <span class="action-speed action-centered">Fast</span>
@@ -854,6 +865,59 @@
     <div class="sheet-tab-content sheet-tab2">
         <div>
             <div class="inventory-header">INVENTORY</div>
+            <div class="row">
+                <div class="col">
+                    <span>Melee:</span>
+                    <select class="selector-fit" name="attr_melee_weapon">
+                        <option value="">Select</option>
+                        <option value="Free">Sword [1H]</option>
+                        <option value="Fast">Sword [2H]</option>
+                        <option value="Slow">Mace [1H]</option>
+                        <option value="Free">Mace [2H]</option>
+                        <option value="Fast">Axe [1H]</option>
+                        <option value="Slow">Axe [2H]</option>
+                        <option value="Free">Pole-arm [1H]</option>
+                        <option value="Fast">Pole-arm [2H]</option>
+                        <option value="Slow">Sceptre [1H]</option>
+                        <option value="Slow">Staff [2H]</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <span>Ranged:</span>
+                    <select class="selector-fit" name="attr_ranged_weapon">
+                        <option value="">Select</option>
+                        <option value="bow">Bow</option>
+                        <option value="crossbow">Crossbow</option>
+                        <option value="wand">Wand</option>
+                        <option value="throwing_knives">Throwing Knives</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <span>Off-hand:</span>
+                    <select class="selector-fit" name="attr_offhand">
+                        <option value="">Select</option>
+                        <option value="light_shield">Light Shield</option>
+                        <option value="medium_shield">Medium Shield</option>
+                        <option value="heavy_shield">Heavy Shield</option>
+                        <option value="offhand_weapon">Off-hand Weapon</option>
+                        <option value="offhand_crossbow">Off-hand Crossbow</option>
+                        <option value="prayer_beads">Prayer Beads</option>
+                        <option value="focus_item">Focus Item</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <span>Armour:</span>
+                    <select class="selector-fit" name="attr_armour">
+                        <option value="">Select</option>
+                        <option value="robes">Robes</option>
+                        <option value="light_armour">Light Armour</option>
+                        <option value="heavy_armour">Heavy Armour</option>
+                    </select>
+                </div>
+            </div>
+
             <fieldset class="repeating_inventory">
                 <div class="row">
                     <div class="inventory-box">
@@ -883,37 +947,36 @@
                                 </select>
                                 <input type="checkbox"/>
                             </div>
-
                         </div>
                     </div>
                 </div>
             </fieldset>
         </div>
         <div style="padding-left: 10px">
-            <div style="width: 500px"></div>
-            <div class="inventory-header">ANCHORS</div>
+            <div>
+                <div class="col" style="padding-bottom: 5px">
+                    <div class="inventory-header">ANCHORS</div>
+                    <fieldset class="repeating_anchors">
+                        <div class="row">
+                            <input name="attr_anchor" class="no-border" type="text"
+                                   style="border-bottom: 2px solid black"/>
+                        </div>
+                    </fieldset>
+                </div>
 
-            <div style="padding-bottom: 5px">
-                <div class="row">
-                    <input name="attr_anchor_1" class="no-border" type="text" style="border-bottom: 2px solid black"/>
-                    <input name="attr_anchor_2" class="no-border" type="text" style="border-bottom: 2px solid black"/>
-                </div>
-                <div class="row">
-                    <input name="attr_anchor_3" class="no-border" type="text" style="border-bottom: 2px solid black"/>
-                    <input name="attr_anchor_4" class="no-border" type="text" style="border-bottom: 2px solid black"/>
-                </div>
-                <div class="row">
-                    <input name="attr_anchor_5" class="no-border" type="text" style="border-bottom: 2px solid black"/>
-                    <input name="attr_anchor_6" class="no-border" type="text" style="border-bottom: 2px solid black"/>
-                </div>
-                <div class="row">
-                    <input name="attr_anchor_7" class="no-border" type="text" style="border-bottom: 2px solid black"/>
-                    <input name="attr_anchor_8" class="no-border" type="text" style="border-bottom: 2px solid black"/>
+                <div class="col" style="padding-bottom: 5px">
+                    <div class="inventory-header">DEADWEIGHTS</div>
+                    <fieldset class="repeating_deadweight">
+                        <div class="row">
+                            <input name="attr_deadweight" class="no-border" type="text"
+                                   style="border-bottom: 2px solid black"/>
+                        </div>
+                    </fieldset>
                 </div>
             </div>
 
             <div class="inventory-header">DESCRIPTION</div>
-            <textarea class="height100" name="attr_bio_description"></textarea>
+            <textarea name="attr_bio_description"></textarea>
 
             <div class="inventory-header">HISTORY</div>
             <textarea name="attr_bio_history"></textarea>
@@ -924,23 +987,34 @@
 
     <div class="sheet-tab-content sheet-tab3">
 
-        <div>
+        <input type="radio" name="attr_enemy" class="grunt" value="1" checked="checked"><span>Grunt</span>
+        <input type="radio" name="attr_enemy" class="awakened" value="2"><span>Awakened</span>
+        <input type="radio" name="attr_enemy" class="elite" value="3"><span>Elite</span>
+        <input type="radio" name="attr_enemy" class="boss" value="4"><span>Boss</span>
+
+        <div class="enemy-hex grunt">
             <div class="row" style="padding-left: 55px">
-                <div class="sheet-hex sheet-hex-3" style="width: 100px; height: 57px">
-                    <div class="sheet-inner">
+                <div>
+                    <input type="checkbox" class="hex1" style="width: 10px; height: 10px"/><span></span>
+                    <div class="sheet-hex sheet-hex-3" style="width: 100px; height: 57px">
+                        <div class="sheet-inner">
                         <textarea class="no-border"
                                   style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                        </div>
+                        <div class="sheet-corner-1"></div>
+                        <div class="sheet-corner-2"></div>
                     </div>
-                    <div class="sheet-corner-1"></div>
-                    <div class="sheet-corner-2"></div>
                 </div>
-                <div class="sheet-hex sheet-hex-3" style="width: 100px; height: 57px">
-                    <div class="sheet-inner">
+                <div style="margin-top:-20px">
+                    <input type="checkbox" class="hex1" style="width: 10px; height: 10px"/><span></span>
+                    <div class="sheet-hex sheet-hex-3" style="width: 100px; height: 57px">
+                        <div class="sheet-inner">
                         <textarea class="no-border"
                                   style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                        </div>
+                        <div class="sheet-corner-1"></div>
+                        <div class="sheet-corner-2"></div>
                     </div>
-                    <div class="sheet-corner-1"></div>
-                    <div class="sheet-corner-2"></div>
                 </div>
             </div>
             <div class="row">
@@ -970,7 +1044,93 @@
                 </div>
             </div>
             <div class="row" style="padding-left: 55px">
-                <div class="sheet-hex sheet-hex-3" style="width: 100px; height: 57px">
+                <div>
+                    <input type="checkbox" class="hex1" style="width: 10px; height: 10px"/><span></span>
+                    <div class="sheet-hex sheet-hex-3" style="width: 100px; height: 57px">
+                        <div class="sheet-inner">
+                        <textarea class="no-border"
+                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                        </div>
+                        <div class="sheet-corner-1"></div>
+                        <div class="sheet-corner-2"></div>
+                    </div>
+                </div>
+                <div style="margin-top:-20px">
+                    <input type="checkbox" class="hex1" style="width: 10px; height: 10px"/><span></span>
+                    <div class="sheet-hex sheet-hex-3" style="width: 100px; height: 57px">
+                        <div class="sheet-inner">
+                        <textarea class="no-border"
+                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                        </div>
+                        <div class="sheet-corner-1"></div>
+                        <div class="sheet-corner-2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="enemy-hex awakened">
+            <div class="row" style="padding-left: 110px">
+                <div>
+                    <input type="checkbox" class="hex1" style="width: 10px; height: 10px"/><span></span>
+                    <div class="sheet-hex sheet-hex-1" style="width: 100px; height: 57px">
+                        <div class="sheet-inner">
+                        <textarea class="no-border"
+                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                        </div>
+                        <div class="sheet-corner-1"></div>
+                        <div class="sheet-corner-2"></div>
+                    </div>
+                </div>
+                <div style="margin-top:-20px; opacity: 0">
+                    <input type="checkbox" class="hex1" style="width: 10px; height: 10px"/><span></span>
+                    <div class="sheet-hex sheet-hex-1" style="width: 100px; height: 57px">
+                        <div class="sheet-inner">
+                        <textarea class="no-border"
+                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                        </div>
+                        <div class="sheet-corner-1"></div>
+                        <div class="sheet-corner-2"></div>
+                    </div>
+                </div>
+                <div style="margin-top:-20px">
+                    <input type="checkbox" class="hex1" style="width: 10px; height: 10px"/><span></span>
+                    <div class="sheet-hex sheet-hex-1" style="width: 100px; height: 57px">
+                        <div class="sheet-inner">
+                        <textarea class="no-border"
+                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                        </div>
+                        <div class="sheet-corner-1"></div>
+                        <div class="sheet-corner-2"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="padding-left: 165px">
+                <div>
+                    <input type="checkbox" class="hex1" style="width: 10px; height: 10px"/><span></span>
+                    <div class="sheet-hex sheet-hex-3" style="width: 100px; height: 57px">
+                        <div class="sheet-inner">
+                        <textarea class="no-border"
+                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                        </div>
+                        <div class="sheet-corner-1"></div>
+                        <div class="sheet-corner-2"></div>
+                    </div>
+                </div>
+                <div style="margin-top:-20px">
+                    <input type="checkbox" class="hex1" style="width: 10px; height: 10px"/><span></span>
+                    <div class="sheet-hex sheet-hex-3" style="width: 100px; height: 57px">
+                        <div class="sheet-inner">
+                        <textarea class="no-border"
+                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                        </div>
+                        <div class="sheet-corner-1"></div>
+                        <div class="sheet-corner-2"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="sheet-hex sheet-hex-1" style="width: 100px; height: 57px">
                     <div class="sheet-inner">
                         <textarea class="no-border"
                                   style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
@@ -979,6 +1139,30 @@
                     <div class="sheet-corner-2"></div>
                 </div>
                 <div class="sheet-hex sheet-hex-3" style="width: 100px; height: 57px">
+                    <div class="sheet-inner">
+                        <textarea class="no-border"
+                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    </div>
+                    <div class="sheet-corner-1"></div>
+                    <div class="sheet-corner-2"></div>
+                </div>
+                <div class="sheet-hex sheet-hex-2" style="width: 100px; height: 57px">
+                    <div class="sheet-inner">
+                        <textarea class="no-border"
+                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    </div>
+                    <div class="sheet-corner-1"></div>
+                    <div class="sheet-corner-2"></div>
+                </div>
+                <div class="sheet-hex sheet-hex-3" style="width: 100px; height: 57px">
+                    <div class="sheet-inner">
+                        <textarea class="no-border"
+                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    </div>
+                    <div class="sheet-corner-1"></div>
+                    <div class="sheet-corner-2"></div>
+                </div>
+                <div class="sheet-hex sheet-hex-1" style="width: 100px; height: 57px">
                     <div class="sheet-inner">
                         <textarea class="no-border"
                                   style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
@@ -987,8 +1171,66 @@
                     <div class="sheet-corner-2"></div>
                 </div>
             </div>
+            <div class="row" style="padding-left: 165px">
+                <div>
+                    <input type="checkbox" class="hex1" style="width: 10px; height: 10px"/><span></span>
+                    <div class="sheet-hex sheet-hex-3" style="width: 100px; height: 57px">
+                        <div class="sheet-inner">
+                        <textarea class="no-border"
+                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                        </div>
+                        <div class="sheet-corner-1"></div>
+                        <div class="sheet-corner-2"></div>
+                    </div>
+                </div>
+                <div style="margin-top:-20px">
+                    <input type="checkbox" class="hex1" style="width: 10px; height: 10px"/><span></span>
+                    <div class="sheet-hex sheet-hex-3" style="width: 100px; height: 57px">
+                        <div class="sheet-inner">
+                        <textarea class="no-border"
+                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                        </div>
+                        <div class="sheet-corner-1"></div>
+                        <div class="sheet-corner-2"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="padding-left: 110px">
+                <div>
+                    <input type="checkbox" class="hex1" style="width: 10px; height: 10px"/><span></span>
+                    <div class="sheet-hex sheet-hex-1" style="width: 100px; height: 57px">
+                        <div class="sheet-inner">
+                        <textarea class="no-border"
+                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                        </div>
+                        <div class="sheet-corner-1"></div>
+                        <div class="sheet-corner-2"></div>
+                    </div>
+                </div>
+                <div style="margin-top:-20px; opacity: 0">
+                    <input type="checkbox" class="hex1" style="width: 10px; height: 10px"/><span></span>
+                    <div class="sheet-hex sheet-hex-1" style="width: 100px; height: 57px">
+                        <div class="sheet-inner">
+                        <textarea class="no-border"
+                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                        </div>
+                        <div class="sheet-corner-1"></div>
+                        <div class="sheet-corner-2"></div>
+                    </div>
+                </div>
+                <div style="margin-top:-20px">
+                    <input type="checkbox" class="hex1" style="width: 10px; height: 10px"/><span></span>
+                    <div class="sheet-hex sheet-hex-1" style="width: 100px; height: 57px">
+                        <div class="sheet-inner">
+                        <textarea class="no-border"
+                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                        </div>
+                        <div class="sheet-corner-1"></div>
+                        <div class="sheet-corner-2"></div>
+                    </div>
+                </div>
+            </div>
         </div>
-
 
     </div>
 
@@ -1057,6 +1299,7 @@
             });
         });
     });
+
 
 
 </script>
