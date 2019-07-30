@@ -929,6 +929,13 @@ input[type=checkbox].sheet-tab-hide:checked ~ .sheet-show-hide {
 
 /*----------------- Hexagons ------------------*/
 
+div.sheet-veteran-hex {
+    opacity: 0;
+}
+
+input[type=checkbox].sheet-veteran:checked ~ .sheet-veteran-hex {
+}
+
 div.sheet-enemy-hex {
     display: none;
 }
