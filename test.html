@@ -1,5 +1,8 @@
 <div class="sheet-container">
-
+    <div>
+        <img src="https://www.emberwindgame.com/wp-content/themes/emberwind/dist/images/emberwind-logo-white-small.png"
+             alt="" style="background-color: #696969">
+    </div>
     <div class="kungfont">Emberwind</div>
     <input type="radio" name="attr_tab" class="sheet-tab sheet-tab1" value="1" checked="checked"><span
         title="Character"></span>
@@ -120,13 +123,13 @@
                     <img style="width: 20px; height: 20px"
                          src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/shield.png">
                     Toughness:
-                    <input class="small" type="number" name="attr_toughness">
+                    <input class="small" type="number" name="attr_toughness" value="4">
                 </div>
                 <div class="col stats-col blue">
                     <img style="width: 20px; height: 20px"
                          src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
                     Resistance:
-                    <input class="small" type="number" name="attr_resistance">
+                    <input class="small" type="number" name="attr_resistance" value="4">
                 </div>
             </div>
             <div class="common1 section">
@@ -137,21 +140,21 @@
                                     value='&{template:skill} {{name=Athletics}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{athletics}cf>@{athletics}]]}}'>
                                 Athletics:
                             </button>
-                            <input class="small" type="number" name="attr_athletics">
+                            <input class="small" type="number" name="attr_athletics" value="8">
                         </div>
                         <div class="skill">
                             <button type='roll' name='roll_skill' style="font-size: 1.2em;"
                                     value='&{template:skill} {{name=Endurance}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{endurance}cf>@{endurance}]]}}'>
                                 Endurance:
                             </button>
-                            <input class="small" type="number" name="attr_endurance">
+                            <input class="small" type="number" name="attr_endurance" value="8">
                         </div>
                         <div class="skill">
                             <button type='roll' name='roll_skill'
                                     value='&{template:skill} {{name=Intimidate}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{intimidate}cf>@{intimidate}]]}}'>
                                 Intimidate:
                             </button>
-                            <input class="small" type="number" name="attr_intimidate">
+                            <input class="small" type="number" name="attr_intimidate" value="8">
                         </div>
                     </div>
                     <div class="skill-label">
@@ -163,21 +166,21 @@
                                     value='&{template:skill} {{name=Insight}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{insight}cf>@{insight}]]}}'>
                                 Insight:
                             </button>
-                            <input class="small" type="number" name="attr_insight">
+                            <input class="small" type="number" name="attr_insight" value="8">
                         </div>
                         <div class="skill">
                             <button type='roll' name='roll_skill' style="font-size: 1.2em;"
                                     value='&{template:skill} {{name=Knowledge}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{knowledge}cf>@{knowledge}]]}}'>
                                 Knowledge:
                             </button>
-                            <input class="small" type="number" name="attr_knowledge">
+                            <input class="small" type="number" name="attr_knowledge" value="8">
                         </div>
                         <div class="skill">
                             <button type='roll' name='roll_skill'
                                     value='&{template:skill} {{name=Mend}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{mend}cf>@{mend}]]}}'>
                                 Mend:
                             </button>
-                            <input class="small" type="number" name="attr_mend">
+                            <input class="small" type="number" name="attr_mend" value="8">
                         </div>
                     </div>
                 </div>
@@ -192,13 +195,13 @@
                     <img style="width: 20px; height: 20px"
                          src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-skill-ui/512/game_skill_ui_evade_people_dodge_move-512.png">
                     Dodge:
-                    <input class="small" type="number" name="attr_dodge">
+                    <input class="small" type="number" name="attr_dodge" value="4">
                 </div>
                 <div class="col stats-col yellow">
                     <img style="width: 20px; height: 20px"
                          src="https://static.thenounproject.com/png/1110005-200.png">
                     Willpower:
-                    <input class="small" type="number" name="attr_willpower">
+                    <input class="small" type="number" name="attr_willpower" value="4">
                 </div>
             </div>
             <div class="common2 section">
@@ -209,21 +212,21 @@
                                     value='&{template:skill} {{name=Acrobatics}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{acrobatics}cf>@{acrobatics}]]}}'>
                                 Acrobatics:
                             </button>
-                            <input class="small" type="number" name="attr_acrobatics">
+                            <input class="small" type="number" name="attr_acrobatics" value="8">
                         </div>
                         <div class="skill">
                             <button type='roll' name='roll_skill'
                                     value='&{template:skill} {{name=Stealth}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{stealth}cf>@{stealth}]]}}'>
                                 Stealth:
                             </button>
-                            <input class="small" type="number" name="attr_stealth">
+                            <input class="small" type="number" name="attr_stealth" value="8">
                         </div>
                         <div class="skill">
                             <button type='roll' name='roll_skill' style="font-size: 0.9em;"
                                     value='&{template:skill} {{name=Sleight of Hand}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{sleight_of_hand}cf>@{sleight_of_hand}]]}}'>
                                 Sleight of Hand:
                             </button>
-                            <input class="small" type="number" name="attr_sleight_of_hand">
+                            <input class="small" type="number" name="attr_sleight_of_hand" value="8">
                         </div>
                     </div>
                     <div class="skill-label">
@@ -235,21 +238,21 @@
                                     value='&{template:skill} {{name=Focus}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{focus}cf>@{focus}]]}}'>
                                 Focus:
                             </button>
-                            <input class="small" type="number" name="attr_focus">
+                            <input class="small" type="number" name="attr_focus" value="8">
                         </div>
                         <div class="skill">
                             <button type='roll' name='roll_skill'
                                     value='&{template:skill} {{name=Fast Talk}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{fast_talk}cf>@{fast_talk}]]}}'>
                                 Fast Talk:
                             </button>
-                            <input class="small" type="number" name="attr_fast_talk">
+                            <input class="small" type="number" name="attr_fast_talk" value="8">
                         </div>
                         <div class="skill">
                             <button type='roll' name='roll_skill' style="font-size: 1.2em;"
                                     value='&{template:skill} {{name=Leadership}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{leadership}cf>@{leadership}]]}}'>
                                 Leadership:
                             </button>
-                            <input class="small" type="number" name="attr_leadership">
+                            <input class="small" type="number" name="attr_leadership" value="8">
                         </div>
                     </div>
                 </div>
@@ -267,7 +270,7 @@
                     <div class="col cap-main-col" style="text-align: center">
                         <div class="row critical" style="padding: 3px;">
                             <span style="font-weight: bold">C:</span>
-                            <input class="cap" type="number" name="attr_critical">
+                            <input class="cap" type="number" name="attr_critical" value="2">
                         </div>
                         <span style="font-weight: bold;">Critical</span>
                     </div>
@@ -275,7 +278,7 @@
                     <div class="col cap-main-col" style="text-align: center">
                         <div class="row accuracy" style="padding: 3px;">
                             <span style="font-weight: bold">A:</span>
-                            <input class="cap" type="number" name="attr_accuracy">
+                            <input class="cap" type="number" name="attr_accuracy" value="10">
                         </div>
                         <span style="font-weight: bold;">Accuracy</span>
                     </div>
@@ -283,7 +286,7 @@
                     <div class="col cap-main-col" style="text-align: center">
                         <div class="row penetration" style="padding: 3px;">
                             <span style="font-weight: bold">P:</span>
-                            <input class="cap" type="number" name="attr_penetration">
+                            <input class="cap" type="number" name="attr_penetration" value="5">
                         </div>
                         <span style="font-weight: bold;">Penetration</span>
                     </div>
@@ -369,6 +372,9 @@
                             <input class="settings" type="checkbox" name="attr_maneuver_settings_flag" value="on"
                                    checked="checked" style="width: 25px; height: 25px"/>
                             <span>y</span>
+                            <button type='roll' name='roll_skill' style="font-size: 1.2em;"
+                                    value='&{template:skill} {{name=@{maneuver_name}}} {{subtags=@{statname}}} {{no-roll=[[@{actionmod}]]}} {{roll=[[d20cs<@{actionmod}cf>@{actionmod}]]}} {{description=@{maneuver_description}}}'>
+                            </button>
                         </div>
                     </div>
                     <span class="action-name action-centered" name="attr_maneuver_name"></span>
@@ -386,6 +392,26 @@
                     <div class="column width25 inlineBlock bold">Name:</div>
                     <div class="column width75 inlineBlock inputNameShort">
                         <input type="text" name="attr_maneuver_name"/>
+                    </div>
+
+                    <div class="column width25 inlineBlock bold">Associated Skill</div>
+                    <div>
+                        <select name="attr_statname" class="selector-fit">
+                            <option value="">Select</option>
+                            <option value="Acrobatics">Acrobatics</option>
+                            <option value="Athletics">Athletics</option>
+                            <option value="Endurance">Endurance</option>
+                            <option value="Focus">Focus</option>
+                            <option value="Fast Talk">Fast Talk</option>
+                            <option value="Insight">Insight</option>
+                            <option value="Intimidate">Intimidate</option>
+                            <option value="Knowledge">Knowledge</option>
+                            <option value="Leadership">Leadership</option>
+                            <option value="Mend">Mend</option>
+                            <option value="Sleight of Hand">Sleight of Hand</option>
+                            <option value="Stealth">Stealth</option>
+                        </select>
+                        <input type="hidden" name="attr_actionmod" value="0">
                     </div>
 
                     <div class="column width25 inlineBlock bold">Speed</div>
@@ -421,7 +447,7 @@
                                    checked="checked" style="width: 25px; height: 25px"/>
                             <span>y</span>
                             <button type='roll' name='roll_attack'
-                                    value='&{template:action} {{name=@{melee_name}}} {{attack=[[d20cs<@{critical}cf>@{accuracy}]]}} {{damage=[[0@{melee_dice} + @{melee_dice_bonus}]]}} {{dmgcrit=[[34]]}} {{speed=Slow}} {{type=Melee}} {{range=@{melee_range}}} {{target=@{melee_target}}} {{description=@{melee_description}}} {{against=[[@{melee_against}]]}}'>
+                                    value='&{template:action} {{name=@{melee_name}}} {{attack=[[d20cs<@{critical}cf>@{accuracy}]]}} {{damage=[[0@{melee_dice} + @{melee_dice_bonus}]]}} {{dmgcrit=[[100@{melee_dice}kh[[@{melee_dice}>1]]+@{melee_dice_bonus}]]}} {{speed=Slow}} {{type=Melee}} {{range=@{melee_range}}} {{target=@{melee_target}}} {{description=@{melee_description}}} {{against=[[@{melee_against}]]}}'>
                             </button>
                         </div>
                     </div>
@@ -454,9 +480,9 @@
 
                     <div>
                         <span style="width: auto; font-weight: bold">Damage: </span>
-                        <input style="width: 50px" type="text" name="attr_melee_dice" placeholder="1d6"/>
+                        <input style="width: 50px" type="text" name="attr_melee_dice" value="1d6"/>
                         <span style="width: auto; font-weight: bold"> + </span>
-                        <input style="width: 50px" type="text" name="attr_melee_dice_bonus" placeholder="0"/>
+                        <input style="width: 50px" type="text" name="attr_melee_dice_bonus" value="0"/>
                     </div>
 
                     <div>
@@ -488,7 +514,7 @@
                                    checked="checked" style="width: 25px; height: 25px"/>
                             <span>y</span>
                             <button type='roll' name='roll_attack'
-                                    value='&{template:action} {{name=@{ranged_name}}} {{attack=[[d20cs<@{critical}cf>@{accuracy}]]}} {{damage=[[0@{ranged_dice} + @{ranged_dice_bonus}]]}} {{dmgcrit=[[34]]}} {{speed=Slow}} {{type=Ranged}} {{range=@{ranged_range}}} {{target=@{ranged_target}}} {{description=@{ranged_description}}} {{against=[[@{ranged_against}]]}}'>
+                                    value='&{template:action} {{name=@{ranged_name}}} {{attack=[[d20cs<@{critical}cf>@{accuracy}]]}} {{damage=[[0@{ranged_dice} + @{ranged_dice_bonus}]]}} {{dmgcrit=[[100@{ranged_dice}kh[[@{ranged_dice}>1]]+@{ranged_dice_bonus}]]}} {{speed=Slow}} {{type=Ranged}} {{range=@{ranged_range}}} {{target=@{ranged_target}}} {{description=@{ranged_description}}} {{against=[[@{ranged_against}]]}}'>
                             </button>
                         </div>
                     </div>
@@ -521,9 +547,9 @@
 
                     <div>
                         <span style="width: auto; font-weight: bold">Damage: </span>
-                        <input style="width: 50px" type="text" name="attr_ranged_dice" placeholder="1d6"/>
+                        <input style="width: 50px" type="text" name="attr_ranged_dice" value="1d6"/>
                         <span style="width: auto; font-weight: bold"> + </span>
-                        <input style="width: 50px" type="text" name="attr_ranged_dice_bonus" placeholder="0"/>
+                        <input style="width: 50px" type="text" name="attr_ranged_dice_bonus" value="0"/>
                     </div>
 
                     <div>
@@ -647,13 +673,13 @@
 
                             <div>
                                 <span style="width: auto; font-weight: bold">Damage: </span>
-                                <input style="width: 50px" type="text" name="attr_action_dice" placeholder="1d6"/>
+                                <input style="width: 50px" type="text" name="attr_action_dice" value="1d6"/>
                                 <span style="width: auto; font-weight: bold"> + </span>
-                                <input style="width: 50px" type="text" name="attr_action_dice_bonus" placeholder="0"/>
+                                <input style="width: 50px" type="text" name="attr_action_dice_bonus" value="0"/>
 
                                 <span style="width: auto; font-weight: bold">Healing: </span>
                                 <input style="width: 50px" type="text" name="attr_action_healing_dice"
-                                       placeholder="1d6"/>
+                                       value="1d6"/>
                             </div>
 
                             <div>
@@ -779,14 +805,14 @@
 
                             <div>
                                 <span style="width: auto; font-weight: bold">Damage: </span>
-                                <input style="width: 50px" type="text" name="attr_tide_action_dice" placeholder="1d6"/>
+                                <input style="width: 50px" type="text" name="attr_tide_action_dice" value="1d6"/>
                                 <span style="width: auto; font-weight: bold"> + </span>
                                 <input style="width: 50px" type="text" name="attr_tide_action_dice_bonus"
-                                       placeholder="0"/>
+                                       value="0"/>
 
                                 <span style="width: auto; font-weight: bold">Healing: </span>
                                 <input style="width: 50px" type="text" name="attr_tide_action_healing_dice"
-                                       placeholder="1d6"/>
+                                       value="1d6"/>
                             </div>
 
                             <div>
@@ -852,7 +878,7 @@
                                 </select>
                                 <span>Use:</span>
                                 <select class="selector-fit inventory-selector">
-                                    <option value="campaign">1 Per Campaign</option>
+                                    <option value="combat">1 Per Combat</option>
                                     <option value="milestone">1 Per Milestone</option>
                                 </select>
                                 <input type="checkbox"/>
@@ -894,6 +920,76 @@
 
 
         </div>
+    </div>
+
+    <div class="sheet-tab-content sheet-tab3">
+
+        <div>
+            <div class="row" style="padding-left: 55px">
+                <div class="sheet-hex sheet-hex-3" style="width: 100px; height: 57px">
+                    <div class="sheet-inner">
+                        <textarea class="no-border"
+                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    </div>
+                    <div class="sheet-corner-1"></div>
+                    <div class="sheet-corner-2"></div>
+                </div>
+                <div class="sheet-hex sheet-hex-3" style="width: 100px; height: 57px">
+                    <div class="sheet-inner">
+                        <textarea class="no-border"
+                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    </div>
+                    <div class="sheet-corner-1"></div>
+                    <div class="sheet-corner-2"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="sheet-hex sheet-hex-3" style="width: 100px; height: 57px">
+                    <div class="sheet-inner">
+                        <textarea class="no-border"
+                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    </div>
+                    <div class="sheet-corner-1"></div>
+                    <div class="sheet-corner-2"></div>
+                </div>
+                <div class="sheet-hex sheet-hex-2" style="width: 100px; height: 57px">
+                    <div class="sheet-inner">
+                        <textarea class="no-border"
+                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    </div>
+                    <div class="sheet-corner-1"></div>
+                    <div class="sheet-corner-2"></div>
+                </div>
+                <div class="sheet-hex sheet-hex-3" style="width: 100px; height: 57px">
+                    <div class="sheet-inner">
+                        <textarea class="no-border"
+                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    </div>
+                    <div class="sheet-corner-1"></div>
+                    <div class="sheet-corner-2"></div>
+                </div>
+            </div>
+            <div class="row" style="padding-left: 55px">
+                <div class="sheet-hex sheet-hex-3" style="width: 100px; height: 57px">
+                    <div class="sheet-inner">
+                        <textarea class="no-border"
+                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    </div>
+                    <div class="sheet-corner-1"></div>
+                    <div class="sheet-corner-2"></div>
+                </div>
+                <div class="sheet-hex sheet-hex-3" style="width: 100px; height: 57px">
+                    <div class="sheet-inner">
+                        <textarea class="no-border"
+                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    </div>
+                    <div class="sheet-corner-1"></div>
+                    <div class="sheet-corner-2"></div>
+                </div>
+            </div>
+        </div>
+
+
     </div>
 
 </div>
@@ -944,14 +1040,23 @@
         });
     });
 
+    on('sheet:opened change:statname change:athletics change:endurance change:intimidate change:insight change:knowledge change:mend change:acrobatics change:stealth change:sleight_of_hand change:focus change:fast_talk change:leadership', () => {
+        getAttrs(['statname'], (values) => {
+            // convert "Acrobatics" to "acrobatics"
+            let actionmodAttrName = `${values.statname.toLowerCase()}`;
 
+            if (actionmodAttrName == "fast talk") {
+                actionmodAttrName = "fast_talk";
+            } else if (actionmodAttrName == "sleight of hand") {
+                actionmodAttrName = "sleight_of_hand";
+            }
 
-
-
-
-
-
-
+            getAttrs([actionmodAttrName], (values) => {
+                // set the value of @{actionmod} to the value of @{acrobatics}
+                setAttrs({actionmod: values[actionmodAttrName]});
+            });
+        });
+    });
 
 
 </script>
@@ -1041,10 +1146,19 @@
             <div><h1 class="tcat-header">{{name}}</h1></div>
             <div><span class="tcat-subheader">{{subtags}}</span></div>
         </div>
+        {{#description}}
+        <div class="tcat-text">
+            <span class="tcat">Description: </span>{{description}}
+        </div>
+        <div class="separator"></div>
+        {{/description}}
+
+        {{#^rollTotal() no-roll 0}}
         {{#roll}}
         <div>
             <span class="tcat">Roll: </span>{{roll}}
         </div>
         {{/roll}}
+        {{/^rollTotal() no-roll 0}}
     </div>
 </rolltemplate>
