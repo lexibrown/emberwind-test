@@ -27,6 +27,18 @@
     height: 900px;
 }
 
+/*----------------- PC / NPC ------------------*/
+
+.sheet-block-pc,
+.sheet-block-switch:checked ~ .sheet-block-npc {
+    display: block;
+}
+
+.sheet-block-npc,
+.sheet-block-switch:checked ~ .sheet-block-pc {
+    display: none;
+}
+
 /*----------------- Tabs ------------------*/
 
 div.sheet-tab-content {
@@ -774,7 +786,6 @@ input[type=checkbox].sheet-tab-hide:checked ~ .sheet-show-hide {
 .sheet-melee_display_settings_flag[value="hide"] ~ .sheet-displaySettings,
 .sheet-ranged_display_settings_flag[value="hide"] ~ .sheet-displaySettings,
 .sheet-maneuver_display_settings_flag[value="hide"] ~ .sheet-displaySettings,
-.sheet-displaySettingsFlag[value="hide"] ~ .sheet-displaySettings,
 .sheet-displaySettingsFlag[value="hide"] ~ .sheet-displaySettings {
     display: none;
 }
@@ -934,13 +945,7 @@ input[type=checkbox].sheet-tab-hide:checked ~ .sheet-show-hide {
     font-family: dicefontd6;
     position: absolute;
     z-index: 3;
-}
-
-div.sheet-veteran-hex {
-    opacity: 0;
-}
-
-input[type=checkbox].sheet-veteran:checked ~ .sheet-veteran-hex {
+    color: #845a91;
 }
 
 div.sheet-enemy-hex {
@@ -955,6 +960,13 @@ div.sheet-enemy-hex {
     padding-top: 25px;
 }
 
+.sheet-elite {
+
+}
+
+.sheet-boss {
+
+}
 
 input.sheet-grunt:checked ~ div.sheet-grunt,
 input.sheet-awakened:checked ~ div.sheet-awakened,
@@ -963,21 +975,26 @@ input.sheet-boss:checked ~ div.sheet-boss {
     display: block;
 }
 
-input[type=checkbox].sheet-hex1:checked ~ .sheet-hex.sheet-hex-3 {
-    background-color: gray;
+input[type=checkbox].sheet-hex-button:checked ~ .sheet-hex.sheet-veteran-hex-1.sheet-inner + textarea,
+input[type=checkbox].sheet-hex-button:checked ~ .sheet-hex.sheet-veteran-hex-2,
+input[type=checkbox].sheet-hex-button:checked ~ .sheet-hex.sheet-veteran-hex-3,
+input[type=checkbox].sheet-hex-button:checked ~ .sheet-hex.sheet-hex-1,
+input[type=checkbox].sheet-hex-button:checked ~ .sheet-hex.sheet-hex-2,
+input[type=checkbox].sheet-hex-button:checked ~ .sheet-hex.sheet-hex-3 {
+    background-color: transparent;
 }
 
-input[type=checkbox].sheet-hex1:checked + span::before {
+input[type=checkbox].sheet-hex-button:checked + span::before {
     content: "&";
     font-family: pictos;
     color: green;
 }
 
-input[type=checkbox].sheet-hex1:hover + span + div {
+input[type=checkbox].sheet-hex-button:hover + span + div {
     background-color: indianred;
 }
 
-.sheet-hex1 + span::before {
+.sheet-hex-button + span::before {
     cursor: pointer;
     content: "*";
     font-family: pictos;
@@ -985,7 +1002,7 @@ input[type=checkbox].sheet-hex1:hover + span + div {
     margin-left: -10px;
 }
 
-input[type=checkbox].sheet-hex1 {
+input[type=checkbox].sheet-hex-button {
     opacity: 0;
     z-index: 3;
     margin-left: -60px;
@@ -1086,8 +1103,8 @@ input[type=checkbox].sheet-hex1 {
 .sheet-hex.sheet-hex-2 { background: #845a91; }
 .sheet-hex.sheet-hex-3 { background: #a16fb0; }
 
-/*.sheet-hex.sheet-hex-1:hover,*/
-/*.sheet-hex.sheet-hex-2:hover,*/
-/*.sheet-hex.sheet-hex-3:hover {*/
-/*    background-color: #3FB315;*/
-/*}*/
+.sheet-hex.sheet-veteran-hex-1 { background: lightcoral; }
+.sheet-hex.sheet-veteran-hex-2 { background: coral; }
+.sheet-hex.sheet-veteran-hex-3 { background: chocolate; }
+
+

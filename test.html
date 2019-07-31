@@ -14,1286 +14,1363 @@
     <!--             alt=""-->
     <!--        >-->
     <!--    </div>-->
-    <div class="kungfont">Emberwind</div>
-    <input type="radio" name="attr_tab" class="sheet-tab sheet-tab1" value="1" checked="checked"><span
-        title="Character"></span>
-    <input type="radio" name="attr_tab" class="sheet-tab sheet-tab2" value="2"><span title="Inventory & Bio"></span>
-    <input type="radio" name="attr_tab" class="sheet-tab sheet-tab3" value="3"><span title="Conditions"></span>
-    <div class="separator"></div>
 
-    <div class="main sheet-tab-content sheet-tab1">
+    <div>
+        <input type="checkbox" class="sheet-block-switch">
+        <div class="sheet-block-pc">
+            <span>PC</span>
+            <div class="kungfont">Emberwind</div>
+            <input type="radio" name="attr_tab" class="sheet-tab sheet-tab1" value="1" checked="checked"><span
+                title="Character"></span>
+            <input type="radio" name="attr_tab" class="sheet-tab sheet-tab2" value="2"><span
+                title="Inventory & Bio"></span>
+            <input type="radio" name="attr_tab" class="sheet-tab sheet-tab3" value="3"><span title="Conditions"></span>
+            <div class="separator"></div>
 
-        <!--    Character information and stats-->
-        <div class="main-stats">
+            <div class="main sheet-tab-content sheet-tab1">
 
-            <!--        Image -->
-            <div class="image flex-center">
-                <img src="https://www.emberwindgame.com/wp-content/uploads/gallery-the-skies-of-axia.jpg"
-                     alt="">
-            </div>
+                <!--    Character information and stats-->
+                <div class="main-stats">
 
-            <!--        Name Section-->
-            <div class="name section">
-                <span>Name:</span>
-                <input class="kungfont" type="text" name="attr_character_name"/>
-            </div>
+                    <!--        Image -->
+                    <div class="image flex-center">
+                        <img src="https://www.emberwindgame.com/wp-content/uploads/gallery-the-skies-of-axia.jpg"
+                             alt="">
+                    </div>
 
-            <!--        Information section. Includes: HP, Class, Subclass and Tier-->
-            <div class="info section">
-                <div class="row">
-                    <div class="col info-hp-box">
-                        <span class="info-hp-text">HP:</span>
-                        <input class="medium" type="number" name="attr_hp" value="10">
-                        <span> / </span>
-                        <input class="medium" type="number" name="attr_max_hp" value="10">
+                    <!--        Name Section-->
+                    <div class="name section">
+                        <span>Name:</span>
+                        <input class="kungfont" type="text" name="attr_character_name"/>
                     </div>
-                    <div class="col info-class-box">
-                        <span>Class:</span>
-                        <select name="attr_class" class="selector-fit">
-                            <option value="null">Select</option>
-                            <option value="archer">Archer</option>
-                            <option value="ardent">Ardent</option>
-                            <option value="atlanta">Atlanta</option>
-                            <option value="druid">Druid</option>
-                            <option value="invoker">Invoker</option>
-                            <option value="rogue">Rogue</option>
-                            <option value="spiritualist">Spiritualist</option>
-                            <option value="tactician">Tactician</option>
-                            <option value="warrior">Warrior</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col info-subclass-box">
-                        <span>Subclass:</span>
-                        <input type="text" name="attr_subclass" style="width: 65%;"/>
-                    </div>
-                    <div class="col info-tier-box">
-                        <span>Tier:</span>
-                        <select name="attr_tier" class="selector-fit">
-                            <option value="tier-1">1</option>
-                            <option value="tier-2">2</option>
-                            <option value="tier-3">3</option>
-                            <option value="tier-4">4</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
 
-            <!--        Aspects-->
-            <div class="aspects section">
-                <div class="row">
-                    <span class="title">Aspects:</span>
-                </div>
-                <div class="row">
-                    <div class="col aspects-col">
-                        <span class="subtitle">OFFENSIVE</span>
-                        <select name="attr_offensive" class="selector">
-                            <option value="null">Select</option>
-                            <option value="deadly">Deadly</option>
-                            <option value="precise">Precise</option>
-                            <option value="powerful">Powerful</option>
-                            <option value="steady">Steady</option>
-                            <option value="vicious">Vicious</option>
-                            <option value="keen">Keen</option>
-                        </select>
-                    </div>
-                    <div class="col aspects-col">
-                        <span class="subtitle">DEFENSIVE</span>
-                        <select name="attr_defensive" class="selector">
-                            <option value="null">Select</option>
-                            <option value="vigorous">Vigorous</option>
-                            <option value="tough">Tough</option>
-                            <option value="resistant">Resistant</option>
-                            <option value="evasive">Evasive</option>
-                            <option value="willful">Willful</option>
-                            <option value="defiant">Defiant</option>
-                        </select>
-                    </div>
-                    <div class="col aspects-col">
-                        <span class="subtitle">UTILITY</span>
-                        <select name="attr_utility" class="selector">
-                            <option value="null">Select</option>
-                            <option value="focused">Focused</option>
-                            <option value="charged">Charged</option>
-                            <option value="dynamic">Dynamic</option>
-                            <option value="heroic">Heroic</option>
-                            <option value="spirited">Spirited</option>
-                            <option value="swift">Swift</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-
-            <!--        Barrier Values-->
-            <div class="header1 section">
-                <span class="header">Barrier Values</span>
-            </div>
-            <div class="stats1 section">
-                <div class="col stats-col red">
-                    <img style="width: 20px; height: 20px"
-                         src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/shield.png">
-                    Toughness:
-                    <input class="small" type="number" name="attr_toughness" value="4">
-                </div>
-                <div class="col stats-col blue">
-                    <img style="width: 20px; height: 20px"
-                         src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
-                    Resistance:
-                    <input class="small" type="number" name="attr_resistance" value="4">
-                </div>
-            </div>
-            <div class="common1 section">
-                <div class="skills-grid">
-                    <div class="skill-left">
-                        <div class="skill">
-                            <button type='roll' name='roll_skill'
-                                    value='&{template:skill} {{name=Athletics}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{athletics}cf>@{athletics}]]}}'>
-                                Athletics:
-                            </button>
-                            <input class="small" type="number" name="attr_athletics" value="8">
+                    <!--        Information section. Includes: HP, Class, Subclass and Tier-->
+                    <div class="info section">
+                        <div class="row">
+                            <div class="col info-hp-box">
+                                <span class="info-hp-text">HP:</span>
+                                <input class="medium" type="number" name="attr_hp" value="10">
+                                <span> / </span>
+                                <input class="medium" type="number" name="attr_max_hp" value="10">
+                            </div>
+                            <div class="col info-class-box">
+                                <span>Class:</span>
+                                <select name="attr_class" class="selector-fit">
+                                    <option value="null">Select</option>
+                                    <option value="archer">Archer</option>
+                                    <option value="ardent">Ardent</option>
+                                    <option value="atlanta">Atlanta</option>
+                                    <option value="druid">Druid</option>
+                                    <option value="invoker">Invoker</option>
+                                    <option value="rogue">Rogue</option>
+                                    <option value="spiritualist">Spiritualist</option>
+                                    <option value="tactician">Tactician</option>
+                                    <option value="warrior">Warrior</option>
+                                </select>
+                            </div>
                         </div>
-                        <div class="skill">
-                            <button type='roll' name='roll_skill' style="font-size: 1.2em;"
-                                    value='&{template:skill} {{name=Endurance}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{endurance}cf>@{endurance}]]}}'>
-                                Endurance:
-                            </button>
-                            <input class="small" type="number" name="attr_endurance" value="8">
-                        </div>
-                        <div class="skill">
-                            <button type='roll' name='roll_skill'
-                                    value='&{template:skill} {{name=Intimidate}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{intimidate}cf>@{intimidate}]]}}'>
-                                Intimidate:
-                            </button>
-                            <input class="small" type="number" name="attr_intimidate" value="8">
+                        <div class="row">
+                            <div class="col info-subclass-box">
+                                <span>Subclass:</span>
+                                <input type="text" name="attr_subclass" style="width: 65%;"/>
+                            </div>
+                            <div class="col info-tier-box">
+                                <span>Tier:</span>
+                                <select name="attr_tier" class="selector-fit">
+                                    <option value="tier-1">1</option>
+                                    <option value="tier-2">2</option>
+                                    <option value="tier-3">3</option>
+                                    <option value="tier-4">4</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
-                    <div class="skill-label">
-                        Skills
-                    </div>
-                    <div class="skill-right">
-                        <div class="skill">
-                            <button type='roll' name='roll_skill'
-                                    value='&{template:skill} {{name=Insight}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{insight}cf>@{insight}]]}}'>
-                                Insight:
-                            </button>
-                            <input class="small" type="number" name="attr_insight" value="8">
-                        </div>
-                        <div class="skill">
-                            <button type='roll' name='roll_skill' style="font-size: 1.2em;"
-                                    value='&{template:skill} {{name=Knowledge}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{knowledge}cf>@{knowledge}]]}}'>
-                                Knowledge:
-                            </button>
-                            <input class="small" type="number" name="attr_knowledge" value="8">
-                        </div>
-                        <div class="skill">
-                            <button type='roll' name='roll_skill'
-                                    value='&{template:skill} {{name=Mend}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{mend}cf>@{mend}]]}}'>
-                                Mend:
-                            </button>
-                            <input class="small" type="number" name="attr_mend" value="8">
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <!--        Defense Values-->
-            <div class="header2 section">
-                <span class="header">Defense Values</span>
-            </div>
-            <div class="stats2 section">
-                <div class="col stats-col green">
-                    <img style="width: 20px; height: 20px"
-                         src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-skill-ui/512/game_skill_ui_evade_people_dodge_move-512.png">
-                    Dodge:
-                    <input class="small" type="number" name="attr_dodge" value="4">
-                </div>
-                <div class="col stats-col yellow">
-                    <img style="width: 20px; height: 20px"
-                         src="https://static.thenounproject.com/png/1110005-200.png">
-                    Willpower:
-                    <input class="small" type="number" name="attr_willpower" value="4">
-                </div>
-            </div>
-            <div class="common2 section">
-                <div class="skills-grid">
-                    <div class="skill-left">
-                        <div class="skill">
-                            <button type='roll' name='roll_skill' style="font-size: 1.2em;"
-                                    value='&{template:skill} {{name=Acrobatics}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{acrobatics}cf>@{acrobatics}]]}}'>
-                                Acrobatics:
-                            </button>
-                            <input class="small" type="number" name="attr_acrobatics" value="8">
+                    <!--        Aspects-->
+                    <div class="aspects section">
+                        <div class="row">
+                            <span class="title">Aspects:</span>
                         </div>
-                        <div class="skill">
-                            <button type='roll' name='roll_skill'
-                                    value='&{template:skill} {{name=Stealth}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{stealth}cf>@{stealth}]]}}'>
-                                Stealth:
-                            </button>
-                            <input class="small" type="number" name="attr_stealth" value="8">
-                        </div>
-                        <div class="skill">
-                            <button type='roll' name='roll_skill' style="font-size: 0.9em;"
-                                    value='&{template:skill} {{name=Sleight of Hand}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{sleight_of_hand}cf>@{sleight_of_hand}]]}}'>
-                                Sleight of Hand:
-                            </button>
-                            <input class="small" type="number" name="attr_sleight_of_hand" value="8">
+                        <div class="row">
+                            <div class="col aspects-col">
+                                <span class="subtitle">OFFENSIVE</span>
+                                <select name="attr_offensive" class="selector">
+                                    <option value="null">Select</option>
+                                    <option value="deadly">Deadly</option>
+                                    <option value="precise">Precise</option>
+                                    <option value="powerful">Powerful</option>
+                                    <option value="steady">Steady</option>
+                                    <option value="vicious">Vicious</option>
+                                    <option value="keen">Keen</option>
+                                </select>
+                            </div>
+                            <div class="col aspects-col">
+                                <span class="subtitle">DEFENSIVE</span>
+                                <select name="attr_defensive" class="selector">
+                                    <option value="null">Select</option>
+                                    <option value="vigorous">Vigorous</option>
+                                    <option value="tough">Tough</option>
+                                    <option value="resistant">Resistant</option>
+                                    <option value="evasive">Evasive</option>
+                                    <option value="willful">Willful</option>
+                                    <option value="defiant">Defiant</option>
+                                </select>
+                            </div>
+                            <div class="col aspects-col">
+                                <span class="subtitle">UTILITY</span>
+                                <select name="attr_utility" class="selector">
+                                    <option value="null">Select</option>
+                                    <option value="focused">Focused</option>
+                                    <option value="charged">Charged</option>
+                                    <option value="dynamic">Dynamic</option>
+                                    <option value="heroic">Heroic</option>
+                                    <option value="spirited">Spirited</option>
+                                    <option value="swift">Swift</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
-                    <div class="skill-label">
-                        Skills
+
+                    <!--        Barrier Values-->
+                    <div class="header1 section">
+                        <span class="header">Barrier Values</span>
                     </div>
-                    <div class="skill-right">
-                        <div class="skill">
-                            <button type='roll' name='roll_skill'
-                                    value='&{template:skill} {{name=Focus}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{focus}cf>@{focus}]]}}'>
-                                Focus:
-                            </button>
-                            <input class="small" type="number" name="attr_focus" value="8">
-                        </div>
-                        <div class="skill">
-                            <button type='roll' name='roll_skill'
-                                    value='&{template:skill} {{name=Fast Talk}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{fast_talk}cf>@{fast_talk}]]}}'>
-                                Fast Talk:
-                            </button>
-                            <input class="small" type="number" name="attr_fast_talk" value="8">
-                        </div>
-                        <div class="skill">
-                            <button type='roll' name='roll_skill' style="font-size: 1.2em;"
-                                    value='&{template:skill} {{name=Leadership}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{leadership}cf>@{leadership}]]}}'>
-                                Leadership:
-                            </button>
-                            <input class="small" type="number" name="attr_leadership" value="8">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!--        CAP Check-->
-            <div class="header3 section">
-                <span class="header">CAP Check</span>
-            </div>
-            <div class="common3 section">
-                <div class="row">
-                    <span>Roll 1d20 when an Action targets at least 1 Foe. Must be equal or less tab <b>CAP</b> Values to succeed</span>
-                </div>
-                <div class="row" style="text-align: center;">
-                    <div class="col cap-main-col" style="text-align: center">
-                        <div class="row critical" style="padding: 3px;">
-                            <span style="font-weight: bold">C:</span>
-                            <input class="cap" type="number" name="attr_critical" value="2">
-                        </div>
-                        <span style="font-weight: bold;">Critical</span>
-                    </div>
-                    <span class="col cap-sep-col" style="font-weight: bold;">&#129046;</span>
-                    <div class="col cap-main-col" style="text-align: center">
-                        <div class="row accuracy" style="padding: 3px;">
-                            <span style="font-weight: bold">A:</span>
-                            <input class="cap" type="number" name="attr_accuracy" value="10">
-                        </div>
-                        <span style="font-weight: bold;">Accuracy</span>
-                    </div>
-                    <span class="col cap-sep-col" style="font-weight: bold;">&#129046;</span>
-                    <div class="col cap-main-col" style="text-align: center">
-                        <div class="row penetration" style="padding: 3px;">
-                            <span style="font-weight: bold">P:</span>
-                            <input class="cap" type="number" name="attr_penetration" value="5">
-                        </div>
-                        <span style="font-weight: bold;">Penetration</span>
-                    </div>
-                </div>
-            </div>
-
-            <!--        Action Pool-->
-            <div class="header4 section">
-                <span class="header">Action Pool</span>
-            </div>
-            <div class="common4 section">
-                <span>Check 2 Boxes when using a Slow Action. Check 1 Box when using a Fast Action.</span>
-                <div class="row" style="text-align: center; padding-top: 5px">
-                    <input type="checkbox" style="width: 25px; height: 25px">
-                    <input type="checkbox" style="width: 25px; height: 25px">
-                    <input type="checkbox" style="width: 25px; height: 25px">
-                    <input type="checkbox" style="width: 25px; height: 25px">
-                </div>
-            </div>
-
-        </div>
-
-        <!--    Character actions and skills-->
-        <div class="main-actions">
-
-            <!--        Action Header-->
-            <div class="actions-grid">
-                <span class="action-name action-header">Name</span>
-                <span class="action-type action-header">Type</span>
-                <span class="action-target action-header">Target</span>
-                <span class="action-range action-header">Range</span>
-                <span class="action-effect action-header-left">Effect</span>
-                <span class="action-speed action-header">Action Speed</span>
-            </div>
-
-            <!--        Movement Row-->
-            <div class="actions-info-grid">
-                <span class="action-name action-info-title">MOVEMENT</span>
-                <span class="action-effect action-info">You cannot end your Movement in an Occupied Square.</span>
-            </div>
-
-            <!--        Move Row-->
-            <div class="actions-grid">
-                <span class="action-name action-centered">Move</span>
-                <div class="action-type action-centered"></div>
-                <div class="action-target action-centered"></div>
-                <div class="action-range action-centered"></div>
-                <div class="action-effect action-text">
-                    <span>Move </span>
-                    <input class="x-small" type="number" value="1">
-                    <span>-</span>
-                    <input class="x-small" type="number" value="4">
-                    <span> Squares. Can move through friendly Combatants.</span>
-                </div>
-                <span class="action-speed action-centered">Slow</span>
-            </div>
-
-            <!--        Shift Row-->
-            <div class="actions-grid">
-                <span class="action-name action-centered">Shift</span>
-                <div class="action-type action-centered"></div>
-                <div class="action-target action-centered"></div>
-                <div class="action-range action-centered"></div>
-                <div class="action-effect action-text">
-                    <span>Move </span>
-                    <input class="x-small" type="number" value="1">
-                    <span> Square(s). Can move through friendly Combatants.</span>
-                </div>
-                <span class="action-speed action-centered">Fast</span>
-            </div>
-
-            <!--        Maneuver Title-->
-            <div class="actions-info-grid">
-                <span class="action-name action-info-title">MANEUVER</span>
-                <span class="action-effect action-info">You cannot end your Maneuver in an Occupied Square.</span>
-            </div>
-
-            <!--        Maneuver Row-->
-            <div class="width100">
-                <div class="actions-grid">
-                    <div class="action-button">
-                        <div>
-                            <input class="settings" type="checkbox" name="attr_maneuver_settings_flag" value="on"
-                                   checked="checked" style="width: 25px; height: 25px"/>
-                            <span>y</span>
-                            <button type='roll' name='roll_skill' style="font-size: 1.2em;"
-                                    value='&{template:skill} {{name=@{maneuver_name}}} {{subtags=@{statname}}} {{no-roll=[[@{actionmod}]]}} {{roll=[[d20cs<@{actionmod}cf>@{actionmod}]]}} {{description=@{maneuver_description}}}'>
-                            </button>
-                        </div>
-                    </div>
-                    <span class="action-name action-centered" name="attr_maneuver_name"></span>
-                    <div class="action-type action-centered"></div>
-                    <div class="action-target action-centered"></div>
-                    <div class="action-range action-centered"></div>
-                    <span class="action-effect action-leftCentered" name="attr_maneuver_description"></span>
-                    <span class="action-speed action-centered" name="attr_maneuver_speed"></span>
-                </div>
-
-                <input type="hidden" class="maneuver_display_settings_flag" name="attr_maneuver_display_settings_flag"
-                       value="hide"/>
-                <div class="width100 displaySettings action-detail-grid">
-
-                    <div class="column width25 inlineBlock bold">Name:</div>
-                    <div class="column width75 inlineBlock inputNameShort">
-                        <input type="text" name="attr_maneuver_name"/>
-                    </div>
-
-                    <div class="column width25 inlineBlock bold">Associated Skill</div>
-                    <div>
-                        <select name="attr_statname" class="selector-fit">
-                            <option value="">Select</option>
-                            <option value="Acrobatics">Acrobatics</option>
-                            <option value="Athletics">Athletics</option>
-                            <option value="Endurance">Endurance</option>
-                            <option value="Focus">Focus</option>
-                            <option value="Fast Talk">Fast Talk</option>
-                            <option value="Insight">Insight</option>
-                            <option value="Intimidate">Intimidate</option>
-                            <option value="Knowledge">Knowledge</option>
-                            <option value="Leadership">Leadership</option>
-                            <option value="Mend">Mend</option>
-                            <option value="Sleight of Hand">Sleight of Hand</option>
-                            <option value="Stealth">Stealth</option>
-                        </select>
-                        <input type="hidden" name="attr_actionmod" value="0">
-                    </div>
-
-                    <div class="column width25 inlineBlock bold">Speed</div>
-                    <div>
-                        <select class="selector-fit" name="attr_maneuver_speed">
-                            <option value="">Select</option>
-                            <option value="Free">Free</option>
-                            <option value="Fast">Fast</option>
-                            <option value="Slow">Slow</option>
-                            <option value="Slow + Fast">Slow + Fast</option>
-                            <option value="Slow + Slow">Slow + Slow</option>
-                        </select>
-                    </div>
-
-                    <div class="column width100 bold textSmall">Description</div>
-                    <div class="column width100 resizeVert vertTop">
-                        <textarea class="height50" name="attr_maneuver_description"></textarea>
-                    </div>
-                </div>
-            </div>
-
-            <!--        Basic Actions Title-->
-            <div class="actions-info-grid">
-                <span class="action-name action-info-title">BASIC ACTIONS</span>
-            </div>
-
-            <!--        Basic Action Melee-->
-            <div class="width100">
-                <div class="actions-grid">
-                    <div class="action-button">
-                        <div>
-                            <input class="settings" type="checkbox" name="attr_melee_settings_flag" value="on"
-                                   checked="checked" style="width: 25px; height: 25px"/>
-                            <span>y</span>
-                            <button type='roll' name='roll_attack'
-                                    value='&{template:action} {{name=@{melee_name}}} {{attack=[[d20cs<@{critical}cf>@{accuracy}]]}} {{damage=[[0@{melee_dice} + @{melee_dice_bonus}]]}} {{dmgcrit=[[100@{melee_dice}kh[[@{melee_dice}>1]]+@{melee_dice_bonus}]]}} {{speed=Slow}} {{type=Melee}} {{range=@{melee_range}}} {{target=@{melee_target}}} {{description=@{melee_description}}} {{against=[[@{melee_against}]]}}'>
-                            </button>
-                        </div>
-                    </div>
-                    <span class="action-name action-centered" name="attr_melee_name"></span>
-                    <div class="action-type action-centered">Melee</div>
-                    <span class="action-target action-centered" name="attr_melee_target"></span>
-                    <span class="action-range action-centered" name="attr_melee_range"></span>
-                    <span class="action-effect action-leftCentered" name="attr_melee_description"></span>
-                    <div class="action-speed action-centered">Slow</div>
-                </div>
-
-                <input type="hidden" class="melee_display_settings_flag" name="attr_melee_display_settings_flag"
-                       value="hide"/>
-                <div class="width100 displaySettings action-detail-grid">
-
-                    <div class="column width25 inlineBlock bold">Name:</div>
-                    <div class="column width75 inlineBlock inputNameShort">
-                        <input type="text" name="attr_melee_name"/>
-                    </div>
-
-                    <div class="column width25 inlineBlock bold">Target:</div>
-                    <div class="column width75 inlineBlock inputNameShort">
-                        <input type="text" name="attr_melee_target"/>
-                    </div>
-
-                    <div class="column width25 inlineBlock bold">Range:</div>
-                    <div>
-                        <input class="small" type="number" name="attr_melee_range">
-                    </div>
-
-                    <div>
-                        <span style="width: auto; font-weight: bold">Damage: </span>
-                        <input style="width: 50px" type="text" name="attr_melee_dice" value="1d6"/>
-                        <span style="width: auto; font-weight: bold"> + </span>
-                        <input style="width: 50px" type="text" name="attr_melee_dice_bonus" value="0"/>
-                    </div>
-
-                    <div>
-                        <fieldset>
-                            <span style="width: auto; font-weight: bold">Damage vs. </span>
-                            <input type="radio" value="1" name="attr_melee_against">Toughness</input>
+                    <div class="stats1 section">
+                        <div class="col stats-col red">
                             <img style="width: 20px; height: 20px"
                                  src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/shield.png">
-                            <input type="radio" value="2" name="attr_melee_against">Resistance</input>
+                            Toughness:
+                            <input class="small" type="number" name="attr_toughness" value="4">
+                        </div>
+                        <div class="col stats-col blue">
                             <img style="width: 20px; height: 20px"
                                  src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
-                            <input type="radio" value="0" name="attr_melee_against" checked="checked">None</input>
-                        </fieldset>
-                    </div>
-
-                    <div class="column width100 bold textSmall">Description</div>
-                    <div class="column width100 resizeVert vertTop">
-                        <textarea class="height50" name="attr_melee_description"></textarea>
-                    </div>
-                </div>
-            </div>
-
-            <!--        Basic Action Ranged-->
-            <div class="width100">
-                <div class="actions-grid">
-                    <div class="action-button">
-                        <div>
-                            <input class="settings" type="checkbox" name="attr_ranged_settings_flag" value="on"
-                                   checked="checked" style="width: 25px; height: 25px"/>
-                            <span>y</span>
-                            <button type='roll' name='roll_attack'
-                                    value='&{template:action} {{name=@{ranged_name}}} {{attack=[[d20cs<@{critical}cf>@{accuracy}]]}} {{damage=[[0@{ranged_dice} + @{ranged_dice_bonus}]]}} {{dmgcrit=[[100@{ranged_dice}kh[[@{ranged_dice}>1]]+@{ranged_dice_bonus}]]}} {{speed=Slow}} {{type=Ranged}} {{range=@{ranged_range}}} {{target=@{ranged_target}}} {{description=@{ranged_description}}} {{against=[[@{ranged_against}]]}}'>
-                            </button>
+                            Resistance:
+                            <input class="small" type="number" name="attr_resistance" value="4">
                         </div>
                     </div>
-                    <span class="action-name action-centered" name="attr_ranged_name"></span>
-                    <div class="action-type action-centered">Ranged</div>
-                    <span class="action-target action-centered" name="attr_ranged_target"></span>
-                    <span class="action-range action-centered" name="attr_ranged_range"></span>
-                    <span class="action-effect action-leftCentered" name="attr_ranged_description"></span>
-                    <div class="action-speed action-centered">Slow</div>
-                </div>
-
-                <input type="hidden" class="ranged_display_settings_flag" name="attr_ranged_display_settings_flag"
-                       value="hide"/>
-                <div class="width100 displaySettings action-detail-grid">
-
-                    <div class="column width25 inlineBlock bold">Name:</div>
-                    <div class="column width75 inlineBlock inputNameShort">
-                        <input type="text" name="attr_ranged_name"/>
+                    <div class="common1 section">
+                        <div class="skills-grid">
+                            <div class="skill-left">
+                                <div class="skill">
+                                    <button type='roll' name='roll_skill'
+                                            value='&{template:skill} {{name=Athletics}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{athletics}cf>@{athletics}]]}}'>
+                                        Athletics:
+                                    </button>
+                                    <input class="small" type="number" name="attr_athletics" value="8">
+                                </div>
+                                <div class="skill">
+                                    <button type='roll' name='roll_skill' style="font-size: 1.2em;"
+                                            value='&{template:skill} {{name=Endurance}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{endurance}cf>@{endurance}]]}}'>
+                                        Endurance:
+                                    </button>
+                                    <input class="small" type="number" name="attr_endurance" value="8">
+                                </div>
+                                <div class="skill">
+                                    <button type='roll' name='roll_skill'
+                                            value='&{template:skill} {{name=Intimidate}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{intimidate}cf>@{intimidate}]]}}'>
+                                        Intimidate:
+                                    </button>
+                                    <input class="small" type="number" name="attr_intimidate" value="8">
+                                </div>
+                            </div>
+                            <div class="skill-label">
+                                Skills
+                            </div>
+                            <div class="skill-right">
+                                <div class="skill">
+                                    <button type='roll' name='roll_skill'
+                                            value='&{template:skill} {{name=Insight}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{insight}cf>@{insight}]]}}'>
+                                        Insight:
+                                    </button>
+                                    <input class="small" type="number" name="attr_insight" value="8">
+                                </div>
+                                <div class="skill">
+                                    <button type='roll' name='roll_skill' style="font-size: 1.2em;"
+                                            value='&{template:skill} {{name=Knowledge}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{knowledge}cf>@{knowledge}]]}}'>
+                                        Knowledge:
+                                    </button>
+                                    <input class="small" type="number" name="attr_knowledge" value="8">
+                                </div>
+                                <div class="skill">
+                                    <button type='roll' name='roll_skill'
+                                            value='&{template:skill} {{name=Mend}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{mend}cf>@{mend}]]}}'>
+                                        Mend:
+                                    </button>
+                                    <input class="small" type="number" name="attr_mend" value="8">
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="column width25 inlineBlock bold">Target:</div>
-                    <div class="column width75 inlineBlock inputNameShort">
-                        <input type="text" name="attr_ranged_target"/>
+                    <!--        Defense Values-->
+                    <div class="header2 section">
+                        <span class="header">Defense Values</span>
                     </div>
-
-                    <div class="column width25 inlineBlock bold">Range:</div>
-                    <div>
-                        <input class="small" type="number" name="attr_ranged_range">
-                    </div>
-
-                    <div>
-                        <span style="width: auto; font-weight: bold">Damage: </span>
-                        <input style="width: 50px" type="text" name="attr_ranged_dice" value="1d6"/>
-                        <span style="width: auto; font-weight: bold"> + </span>
-                        <input style="width: 50px" type="text" name="attr_ranged_dice_bonus" value="0"/>
-                    </div>
-
-                    <div>
-                        <fieldset>
-                            <span style="width: auto; font-weight: bold">Damage vs. </span>
-                            <input type="radio" value="1" name="attr_ranged_against">Toughness</input>
+                    <div class="stats2 section">
+                        <div class="col stats-col green">
                             <img style="width: 20px; height: 20px"
-                                 src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/shield.png">
-                            <input type="radio" value="2" name="attr_ranged_against">Resistance</input>
+                                 src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-skill-ui/512/game_skill_ui_evade_people_dodge_move-512.png">
+                            Dodge:
+                            <input class="small" type="number" name="attr_dodge" value="4">
+                        </div>
+                        <div class="col stats-col yellow">
                             <img style="width: 20px; height: 20px"
-                                 src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
-                            <input type="radio" value="0" name="attr_ranged_against" checked="checked">None</input>
-                        </fieldset>
+                                 src="https://static.thenounproject.com/png/1110005-200.png">
+                            Willpower:
+                            <input class="small" type="number" name="attr_willpower" value="4">
+                        </div>
+                    </div>
+                    <div class="common2 section">
+                        <div class="skills-grid">
+                            <div class="skill-left">
+                                <div class="skill">
+                                    <button type='roll' name='roll_skill' style="font-size: 1.2em;"
+                                            value='&{template:skill} {{name=Acrobatics}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{acrobatics}cf>@{acrobatics}]]}}'>
+                                        Acrobatics:
+                                    </button>
+                                    <input class="small" type="number" name="attr_acrobatics" value="8">
+                                </div>
+                                <div class="skill">
+                                    <button type='roll' name='roll_skill'
+                                            value='&{template:skill} {{name=Stealth}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{stealth}cf>@{stealth}]]}}'>
+                                        Stealth:
+                                    </button>
+                                    <input class="small" type="number" name="attr_stealth" value="8">
+                                </div>
+                                <div class="skill">
+                                    <button type='roll' name='roll_skill' style="font-size: 0.9em;"
+                                            value='&{template:skill} {{name=Sleight of Hand}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{sleight_of_hand}cf>@{sleight_of_hand}]]}}'>
+                                        Sleight of Hand:
+                                    </button>
+                                    <input class="small" type="number" name="attr_sleight_of_hand" value="8">
+                                </div>
+                            </div>
+                            <div class="skill-label">
+                                Skills
+                            </div>
+                            <div class="skill-right">
+                                <div class="skill">
+                                    <button type='roll' name='roll_skill'
+                                            value='&{template:skill} {{name=Focus}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{focus}cf>@{focus}]]}}'>
+                                        Focus:
+                                    </button>
+                                    <input class="small" type="number" name="attr_focus" value="8">
+                                </div>
+                                <div class="skill">
+                                    <button type='roll' name='roll_skill'
+                                            value='&{template:skill} {{name=Fast Talk}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{fast_talk}cf>@{fast_talk}]]}}'>
+                                        Fast Talk:
+                                    </button>
+                                    <input class="small" type="number" name="attr_fast_talk" value="8">
+                                </div>
+                                <div class="skill">
+                                    <button type='roll' name='roll_skill' style="font-size: 1.2em;"
+                                            value='&{template:skill} {{name=Leadership}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{leadership}cf>@{leadership}]]}}'>
+                                        Leadership:
+                                    </button>
+                                    <input class="small" type="number" name="attr_leadership" value="8">
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="column width100 bold textSmall">Description</div>
-                    <div class="column width100 resizeVert vertTop">
-                        <textarea class="height50" name="attr_ranged_description"></textarea>
+                    <!--        CAP Check-->
+                    <div class="header3 section">
+                        <span class="header">CAP Check</span>
                     </div>
-                </div>
-            </div>
+                    <div class="common3 section">
+                        <div class="row">
+                            <span>Roll 1d20 when an Action targets at least 1 Foe. Must be equal or less tab <b>CAP</b> Values to succeed</span>
+                        </div>
+                        <div class="row" style="text-align: center;">
+                            <div class="col cap-main-col" style="text-align: center">
+                                <div class="row critical" style="padding: 3px;">
+                                    <span style="font-weight: bold">C:</span>
+                                    <input class="cap" type="number" name="attr_critical" value="2">
+                                </div>
+                                <span style="font-weight: bold;">Critical</span>
+                            </div>
+                            <span class="col cap-sep-col" style="font-weight: bold;">&#129046;</span>
+                            <div class="col cap-main-col" style="text-align: center">
+                                <div class="row accuracy" style="padding: 3px;">
+                                    <span style="font-weight: bold">A:</span>
+                                    <input class="cap" type="number" name="attr_accuracy" value="10">
+                                </div>
+                                <span style="font-weight: bold;">Accuracy</span>
+                            </div>
+                            <span class="col cap-sep-col" style="font-weight: bold;">&#129046;</span>
+                            <div class="col cap-main-col" style="text-align: center">
+                                <div class="row penetration" style="padding: 3px;">
+                                    <span style="font-weight: bold">P:</span>
+                                    <input class="cap" type="number" name="attr_penetration" value="5">
+                                </div>
+                                <span style="font-weight: bold;">Penetration</span>
+                            </div>
+                        </div>
+                    </div>
 
-            <!--        Class Actions Title-->
-            <div class="actions-info-grid">
-                <span class="action-name action-info-title">CLASS ACTIONS</span>
-                <div class="action-effect">
-                    <span style="font-size: 0.75em">Trigger Limit:</span>
-                    <input class="x-small" type="number" name="attr_trigger">
-                    <span style="font-size: 0.75em">Sustain Limit:</span>
-                    <input class="x-small" type="number" name="attr_sustain">
-                    <span style="font-size: 0.75em">Amplify Limit:</span>
-                    <input class="x-small" type="number" name="attr_amplify">
-                </div>
-            </div>
+                    <!--        Action Pool-->
+                    <div class="header4 section">
+                        <span class="header">Action Pool</span>
+                    </div>
+                    <div class="common4 section">
+                        <span>Check 2 Boxes when using a Slow Action. Check 1 Box when using a Fast Action.</span>
+                        <div class="row" style="text-align: center; padding-top: 5px">
+                            <input type="checkbox" style="width: 25px; height: 25px">
+                            <input type="checkbox" style="width: 25px; height: 25px">
+                            <input type="checkbox" style="width: 25px; height: 25px">
+                            <input type="checkbox" style="width: 25px; height: 25px">
+                        </div>
+                    </div>
 
-            <!--        Class Actions-->
-            <div class="width100">
-                <fieldset class="repeating_actions">
-                    <div class="row">
+                </div>
+
+                <!--    Character actions and skills-->
+                <div class="main-actions">
+
+                    <!--        Action Header-->
+                    <div class="actions-grid">
+                        <span class="action-name action-header">Name</span>
+                        <span class="action-type action-header">Type</span>
+                        <span class="action-target action-header">Target</span>
+                        <span class="action-range action-header">Range</span>
+                        <span class="action-effect action-header-left">Effect</span>
+                        <span class="action-speed action-header">Action Speed</span>
+                    </div>
+
+                    <!--        Movement Row-->
+                    <div class="actions-info-grid">
+                        <span class="action-name action-info-title">MOVEMENT</span>
+                        <span class="action-effect action-info">You cannot end your Movement in an Occupied Square.</span>
+                    </div>
+
+                    <!--        Move Row-->
+                    <div class="actions-grid">
+                        <span class="action-name action-centered">Move</span>
+                        <div class="action-type action-centered"></div>
+                        <div class="action-target action-centered"></div>
+                        <div class="action-range action-centered"></div>
+                        <div class="action-effect action-text">
+                            <span>Move </span>
+                            <input class="x-small" type="number" value="1">
+                            <span>-</span>
+                            <input class="x-small" type="number" value="4">
+                            <span> Squares. Can move through friendly Combatants.</span>
+                        </div>
+                        <span class="action-speed action-centered">Slow</span>
+                    </div>
+
+                    <!--        Shift Row-->
+                    <div class="actions-grid">
+                        <span class="action-name action-centered">Shift</span>
+                        <div class="action-type action-centered"></div>
+                        <div class="action-target action-centered"></div>
+                        <div class="action-range action-centered"></div>
+                        <div class="action-effect action-text">
+                            <span>Move </span>
+                            <input class="x-small" type="number" value="1">
+                            <span> Square(s). Can move through friendly Combatants.</span>
+                        </div>
+                        <span class="action-speed action-centered">Fast</span>
+                    </div>
+
+                    <!--        Maneuver Title-->
+                    <div class="actions-info-grid">
+                        <span class="action-name action-info-title">MANEUVER</span>
+                        <span class="action-effect action-info">You cannot end your Maneuver in an Occupied Square.</span>
+                    </div>
+
+                    <!--        Maneuver Row-->
+                    <div class="width100">
                         <div class="actions-grid">
                             <div class="action-button">
                                 <div>
-                                    <input class="settings" type="checkbox" name="attr_settingsFlag" value="on"
+                                    <input class="settings" type="checkbox" name="attr_maneuver_settings_flag"
+                                           value="on"
                                            checked="checked" style="width: 25px; height: 25px"/>
                                     <span>y</span>
+                                    <button type='roll' name='roll_skill' style="font-size: 1.2em;"
+                                            value='&{template:skill} {{name=@{maneuver_name}}} {{subtags=@{statname}}} {{no-roll=[[@{actionmod}]]}} {{roll=[[d20cs<@{actionmod}cf>@{actionmod}]]}} {{description=@{maneuver_description}}}'>
+                                    </button>
                                 </div>
-                                <button type='roll' name='roll_action'
-                                        value='&{template:action} {{name=@{action_name}}} {{subtag1=@{action_subtype1}}} {{subtag2=@{action_subtype2}}} {{attack=[[d20cs<@{critical}cf>@{accuracy}]]}} {{damage=[[0@{action_dice} + @{action_dice_bonus}]]}} {{dmgcrit=[[34]]}} {{against=[[@{action_against}]]}} {{healing=[[0@{action_healing_dice}]]}} {{speed=@{action_speed}}} {{target=@{action_target}}} {{type=@{action_type}}} {{description=@{action_description}}} {{range=@{action_range}}}'>
-                                </button>
+                            </div>
+                            <span class="action-name action-centered" name="attr_maneuver_name"></span>
+                            <div class="action-type action-centered"></div>
+                            <div class="action-target action-centered"></div>
+                            <div class="action-range action-centered"></div>
+                            <span class="action-effect action-leftCentered" name="attr_maneuver_description"></span>
+                            <span class="action-speed action-centered" name="attr_maneuver_speed"></span>
+                        </div>
+
+                        <input type="hidden" class="maneuver_display_settings_flag"
+                               name="attr_maneuver_display_settings_flag"
+                               value="hide"/>
+                        <div class="width100 displaySettings action-detail-grid">
+
+                            <div class="column width25 inlineBlock bold">Name:</div>
+                            <div class="column width75 inlineBlock inputNameShort">
+                                <input type="text" name="attr_maneuver_name"/>
                             </div>
 
-                            <span class="action-name action-centered" name="attr_action_name"></span>
-                            <div class="action-type action-centered">
-                                <div class="col">
+                            <div class="column width25 inlineBlock bold">Associated Skill</div>
+                            <div>
+                                <select name="attr_statname" class="selector-fit">
+                                    <option value="">Select</option>
+                                    <option value="Acrobatics">Acrobatics</option>
+                                    <option value="Athletics">Athletics</option>
+                                    <option value="Endurance">Endurance</option>
+                                    <option value="Focus">Focus</option>
+                                    <option value="Fast Talk">Fast Talk</option>
+                                    <option value="Insight">Insight</option>
+                                    <option value="Intimidate">Intimidate</option>
+                                    <option value="Knowledge">Knowledge</option>
+                                    <option value="Leadership">Leadership</option>
+                                    <option value="Mend">Mend</option>
+                                    <option value="Sleight of Hand">Sleight of Hand</option>
+                                    <option value="Stealth">Stealth</option>
+                                </select>
+                                <input type="hidden" name="attr_actionmod" value="0">
+                            </div>
+
+                            <div class="column width25 inlineBlock bold">Speed</div>
+                            <div>
+                                <select class="selector-fit" name="attr_maneuver_speed">
+                                    <option value="">Select</option>
+                                    <option value="Free">Free</option>
+                                    <option value="Fast">Fast</option>
+                                    <option value="Slow">Slow</option>
+                                    <option value="Slow + Fast">Slow + Fast</option>
+                                    <option value="Slow + Slow">Slow + Slow</option>
+                                </select>
+                            </div>
+
+                            <div class="column width100 bold textSmall">Description</div>
+                            <div class="column width100 resizeVert vertTop">
+                                <textarea class="height50" name="attr_maneuver_description"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--        Basic Actions Title-->
+                    <div class="actions-info-grid">
+                        <span class="action-name action-info-title">BASIC ACTIONS</span>
+                    </div>
+
+                    <!--        Basic Action Melee-->
+                    <div class="width100">
+                        <div class="actions-grid">
+                            <div class="action-button">
+                                <div>
+                                    <input class="settings" type="checkbox" name="attr_melee_settings_flag" value="on"
+                                           checked="checked" style="width: 25px; height: 25px"/>
+                                    <span>y</span>
+                                    <button type='roll' name='roll_attack'
+                                            value='&{template:action} {{name=@{melee_name}}} {{attack=[[d20cs<@{critical}cf>@{accuracy}]]}} {{damage=[[0@{melee_dice} + @{melee_dice_bonus}]]}} {{dmgcrit=[[100@{melee_dice}kh[[@{melee_dice}>1]]+@{melee_dice_bonus}]]}} {{speed=Slow}} {{type=Melee}} {{range=@{melee_range}}} {{target=@{melee_target}}} {{description=@{melee_description}}} {{against=[[@{melee_against}]]}}'>
+                                    </button>
+                                </div>
+                            </div>
+                            <span class="action-name action-centered" name="attr_melee_name"></span>
+                            <div class="action-type action-centered">Melee</div>
+                            <span class="action-target action-centered" name="attr_melee_target"></span>
+                            <span class="action-range action-centered" name="attr_melee_range"></span>
+                            <span class="action-effect action-leftCentered" name="attr_melee_description"></span>
+                            <div class="action-speed action-centered">Slow</div>
+                        </div>
+
+                        <input type="hidden" class="melee_display_settings_flag" name="attr_melee_display_settings_flag"
+                               value="hide"/>
+                        <div class="width100 displaySettings action-detail-grid">
+
+                            <div class="column width25 inlineBlock bold">Name:</div>
+                            <div class="column width75 inlineBlock inputNameShort">
+                                <input type="text" name="attr_melee_name"/>
+                            </div>
+
+                            <div class="column width25 inlineBlock bold">Target:</div>
+                            <div class="column width75 inlineBlock inputNameShort">
+                                <input type="text" name="attr_melee_target"/>
+                            </div>
+
+                            <div class="column width25 inlineBlock bold">Range:</div>
+                            <div>
+                                <input class="small" type="number" name="attr_melee_range">
+                            </div>
+
+                            <div>
+                                <span style="width: auto; font-weight: bold">Damage: </span>
+                                <input style="width: 50px" type="text" name="attr_melee_dice" value="1d6"/>
+                                <span style="width: auto; font-weight: bold"> + </span>
+                                <input style="width: 50px" type="text" name="attr_melee_dice_bonus" value="0"/>
+                            </div>
+
+                            <div>
+                                <fieldset>
+                                    <span style="width: auto; font-weight: bold">Damage vs. </span>
+                                    <input type="radio" value="1" name="attr_melee_against">Toughness</input>
+                                    <img style="width: 20px; height: 20px"
+                                         src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/shield.png">
+                                    <input type="radio" value="2" name="attr_melee_against">Resistance</input>
+                                    <img style="width: 20px; height: 20px"
+                                         src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
+                                    <input type="radio" value="0" name="attr_melee_against"
+                                           checked="checked">None</input>
+                                </fieldset>
+                            </div>
+
+                            <div class="column width100 bold textSmall">Description</div>
+                            <div class="column width100 resizeVert vertTop">
+                                <textarea class="height50" name="attr_melee_description"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--        Basic Action Ranged-->
+                    <div class="width100">
+                        <div class="actions-grid">
+                            <div class="action-button">
+                                <div>
+                                    <input class="settings" type="checkbox" name="attr_ranged_settings_flag" value="on"
+                                           checked="checked" style="width: 25px; height: 25px"/>
+                                    <span>y</span>
+                                    <button type='roll' name='roll_attack'
+                                            value='&{template:action} {{name=@{ranged_name}}} {{attack=[[d20cs<@{critical}cf>@{accuracy}]]}} {{damage=[[0@{ranged_dice} + @{ranged_dice_bonus}]]}} {{dmgcrit=[[100@{ranged_dice}kh[[@{ranged_dice}>1]]+@{ranged_dice_bonus}]]}} {{speed=Slow}} {{type=Ranged}} {{range=@{ranged_range}}} {{target=@{ranged_target}}} {{description=@{ranged_description}}} {{against=[[@{ranged_against}]]}}'>
+                                    </button>
+                                </div>
+                            </div>
+                            <span class="action-name action-centered" name="attr_ranged_name"></span>
+                            <div class="action-type action-centered">Ranged</div>
+                            <span class="action-target action-centered" name="attr_ranged_target"></span>
+                            <span class="action-range action-centered" name="attr_ranged_range"></span>
+                            <span class="action-effect action-leftCentered" name="attr_ranged_description"></span>
+                            <div class="action-speed action-centered">Slow</div>
+                        </div>
+
+                        <input type="hidden" class="ranged_display_settings_flag"
+                               name="attr_ranged_display_settings_flag"
+                               value="hide"/>
+                        <div class="width100 displaySettings action-detail-grid">
+
+                            <div class="column width25 inlineBlock bold">Name:</div>
+                            <div class="column width75 inlineBlock inputNameShort">
+                                <input type="text" name="attr_ranged_name"/>
+                            </div>
+
+                            <div class="column width25 inlineBlock bold">Target:</div>
+                            <div class="column width75 inlineBlock inputNameShort">
+                                <input type="text" name="attr_ranged_target"/>
+                            </div>
+
+                            <div class="column width25 inlineBlock bold">Range:</div>
+                            <div>
+                                <input class="small" type="number" name="attr_ranged_range">
+                            </div>
+
+                            <div>
+                                <span style="width: auto; font-weight: bold">Damage: </span>
+                                <input style="width: 50px" type="text" name="attr_ranged_dice" value="1d6"/>
+                                <span style="width: auto; font-weight: bold"> + </span>
+                                <input style="width: 50px" type="text" name="attr_ranged_dice_bonus" value="0"/>
+                            </div>
+
+                            <div>
+                                <fieldset>
+                                    <span style="width: auto; font-weight: bold">Damage vs. </span>
+                                    <input type="radio" value="1" name="attr_ranged_against">Toughness</input>
+                                    <img style="width: 20px; height: 20px"
+                                         src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/shield.png">
+                                    <input type="radio" value="2" name="attr_ranged_against">Resistance</input>
+                                    <img style="width: 20px; height: 20px"
+                                         src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
+                                    <input type="radio" value="0" name="attr_ranged_against"
+                                           checked="checked">None</input>
+                                </fieldset>
+                            </div>
+
+                            <div class="column width100 bold textSmall">Description</div>
+                            <div class="column width100 resizeVert vertTop">
+                                <textarea class="height50" name="attr_ranged_description"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--        Class Actions Title-->
+                    <div class="actions-info-grid">
+                        <span class="action-name action-info-title">CLASS ACTIONS</span>
+                        <div class="action-effect">
+                            <span style="font-size: 0.75em">Trigger Limit:</span>
+                            <input class="x-small" type="number" name="attr_trigger">
+                            <span style="font-size: 0.75em">Sustain Limit:</span>
+                            <input class="x-small" type="number" name="attr_sustain">
+                            <span style="font-size: 0.75em">Amplify Limit:</span>
+                            <input class="x-small" type="number" name="attr_amplify">
+                        </div>
+                    </div>
+
+                    <!--        Class Actions-->
+                    <div class="width100">
+                        <fieldset class="repeating_actions">
+                            <div class="row">
+                                <div class="actions-grid">
+                                    <div class="action-button">
+                                        <div>
+                                            <input class="settings" type="checkbox" name="attr_settingsFlag" value="on"
+                                                   checked="checked" style="width: 25px; height: 25px"/>
+                                            <span>y</span>
+                                        </div>
+                                        <button type='roll' name='roll_action'
+                                                value='&{template:action} {{name=@{action_name}}} {{subtag1=@{action_subtype1}}} {{subtag2=@{action_subtype2}}} {{attack=[[d20cs<@{critical}cf>@{accuracy}]]}} {{damage=[[0@{action_dice} + @{action_dice_bonus}]]}} {{dmgcrit=[[34]]}} {{against=[[@{action_against}]]}} {{healing=[[0@{action_healing_dice}]]}} {{speed=@{action_speed}}} {{target=@{action_target}}} {{type=@{action_type}}} {{description=@{action_description}}} {{range=@{action_range}}}'>
+                                        </button>
+                                    </div>
+
+                                    <span class="action-name action-centered" name="attr_action_name"></span>
+                                    <div class="action-type action-centered">
+                                        <div class="col">
                                 <span class="row" style="border-bottom: 1px solid black"
                                       name="attr_action_subtype1"></span>
-                                    <span class="row" name="attr_action_subtype2"></span>
-                                </div>
-                            </div>
-                            <span class="action-target action-centered" name="attr_action_target"></span>
-                            <div class="action-range action-centered">
-                                <div class="col">
+                                            <span class="row" name="attr_action_subtype2"></span>
+                                        </div>
+                                    </div>
+                                    <span class="action-target action-centered" name="attr_action_target"></span>
+                                    <div class="action-range action-centered">
+                                        <div class="col">
                                     <span class="row" style="border-bottom: 1px solid black"
                                           name="attr_action_type"></span>
-                                    <span class="row" name="attr_action_range"></span>
+                                            <span class="row" name="attr_action_range"></span>
+                                        </div>
+                                    </div>
+                                    <span class="action-effect action-leftCentered"
+                                          name="attr_action_description"></span>
+                                    <span class="action-speed action-centered" name="attr_action_speed"></span>
+                                </div>
+
+                                <input type="hidden" class="displaySettingsFlag" name="attr_displaySettingsFlag"/>
+                                <div class="width100 displaySettings padLeft">
+                                    <div class="column width25 inlineBlock bold">Name:</div>
+                                    <div class="column width75 inlineBlock inputNameShort">
+                                        <input type="text" name="attr_action_name"/>
+                                    </div>
+
+                                    <div class="column width25 inlineBlock bold">Type:</div>
+                                    <div>
+                                        <select class="selector-fit" name="attr_action_subtype1">
+                                            <option value="">Select</option>
+                                            <option value="General">General</option>
+                                            <option value="Trigger">Trigger</option>
+                                            <option value="Amplify">Amplify</option>
+                                            <option value="Sustain">Sustain</option>
+                                        </select>
+                                        <select class="selector-fit" name="attr_action_subtype2">
+                                            <option value="">Select</option>
+                                            <option value="Exploit">Exploit</option>
+                                            <option value="Spell">Spell</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="column width25 inlineBlock bold">Target:</div>
+                                    <div class="column width75 inlineBlock inputNameShort">
+                                        <input type="text" name="attr_action_target"/>
+                                    </div>
+
+
+                                    <div class="column width25 inlineBlock bold">Type/Range:</div>
+                                    <div>
+                                        <select class="selector-fit" name="attr_action_type">
+                                            <option value="">Select</option>
+                                            <option value="Ranged">Ranged</option>
+                                            <option value="Melee">Melee</option>
+                                        </select>
+                                        <input class="small" type="number" name="attr_action_range">
+                                    </div>
+                                    <div class="column width25 inlineBlock bold">Speed</div>
+                                    <div>
+                                        <select class="selector-fit" name="attr_action_speed">
+                                            <option value="">Select</option>
+                                            <option value="Free">Free</option>
+                                            <option value="Fast">Fast</option>
+                                            <option value="Slow">Slow</option>
+                                            <option value="Slow + Fast">Slow + Fast</option>
+                                            <option value="Slow + Slow">Slow + Slow</option>
+                                        </select>
+                                    </div>
+
+                                    <div>
+                                        <span style="width: auto; font-weight: bold">Damage: </span>
+                                        <input style="width: 50px" type="text" name="attr_action_dice" value="1d6"/>
+                                        <span style="width: auto; font-weight: bold"> + </span>
+                                        <input style="width: 50px" type="text" name="attr_action_dice_bonus" value="0"/>
+
+                                        <span style="width: auto; font-weight: bold">Healing: </span>
+                                        <input style="width: 50px" type="text" name="attr_action_healing_dice"
+                                               value="1d6"/>
+                                    </div>
+
+                                    <div>
+                                        <fieldset>
+                                            <span style="width: auto; font-weight: bold">Damage vs. </span>
+                                            <input type="radio" value="1" name="attr_action_against">Toughness</input>
+                                            <img style="width: 20px; height: 20px"
+                                                 src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/shield.png">
+                                            <input type="radio" value="2" name="attr_action_against">Resistance</input>
+                                            <img style="width: 20px; height: 20px"
+                                                 src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
+                                            <input type="radio" value="0" name="attr_action_against"
+                                                   checked="checked">None</input>
+                                        </fieldset>
+                                    </div>
+
+                                    <div class="column width100 bold textSmall">Description</div>
+                                    <div class="column width100 resizeVert vertTop">
+                                        <textarea class="height50" name="attr_action_description"></textarea>
+                                    </div>
                                 </div>
                             </div>
-                            <span class="action-effect action-leftCentered" name="attr_action_description"></span>
-                            <span class="action-speed action-centered" name="attr_action_speed"></span>
-                        </div>
+                        </fieldset>
+                    </div>
 
-                        <input type="hidden" class="displaySettingsFlag" name="attr_displaySettingsFlag"/>
-                        <div class="width100 displaySettings padLeft">
-                            <div class="column width25 inlineBlock bold">Name:</div>
-                            <div class="column width75 inlineBlock inputNameShort">
-                                <input type="text" name="attr_action_name"/>
-                            </div>
-
-                            <div class="column width25 inlineBlock bold">Type:</div>
-                            <div>
-                                <select class="selector-fit" name="attr_action_subtype1">
-                                    <option value="">Select</option>
-                                    <option value="General">General</option>
-                                    <option value="Trigger">Trigger</option>
-                                    <option value="Amplify">Amplify</option>
-                                    <option value="Sustain">Sustain</option>
-                                </select>
-                                <select class="selector-fit" name="attr_action_subtype2">
-                                    <option value="">Select</option>
-                                    <option value="Exploit">Exploit</option>
-                                    <option value="Spell">Spell</option>
-                                </select>
-                            </div>
-
-                            <div class="column width25 inlineBlock bold">Target:</div>
-                            <div class="column width75 inlineBlock inputNameShort">
-                                <input type="text" name="attr_action_target"/>
-                            </div>
-
-
-                            <div class="column width25 inlineBlock bold">Type/Range:</div>
-                            <div>
-                                <select class="selector-fit" name="attr_action_type">
-                                    <option value="">Select</option>
-                                    <option value="Ranged">Ranged</option>
-                                    <option value="Melee">Melee</option>
-                                </select>
-                                <input class="small" type="number" name="attr_action_range">
-                            </div>
-                            <div class="column width25 inlineBlock bold">Speed</div>
-                            <div>
-                                <select class="selector-fit" name="attr_action_speed">
-                                    <option value="">Select</option>
-                                    <option value="Free">Free</option>
-                                    <option value="Fast">Fast</option>
-                                    <option value="Slow">Slow</option>
-                                    <option value="Slow + Fast">Slow + Fast</option>
-                                    <option value="Slow + Slow">Slow + Slow</option>
-                                </select>
-                            </div>
-
-                            <div>
-                                <span style="width: auto; font-weight: bold">Damage: </span>
-                                <input style="width: 50px" type="text" name="attr_action_dice" value="1d6"/>
-                                <span style="width: auto; font-weight: bold"> + </span>
-                                <input style="width: 50px" type="text" name="attr_action_dice_bonus" value="0"/>
-
-                                <span style="width: auto; font-weight: bold">Healing: </span>
-                                <input style="width: 50px" type="text" name="attr_action_healing_dice"
-                                       value="1d6"/>
-                            </div>
-
-                            <div>
-                                <fieldset>
-                                    <span style="width: auto; font-weight: bold">Damage vs. </span>
-                                    <input type="radio" value="1" name="attr_action_against">Toughness</input>
-                                    <img style="width: 20px; height: 20px"
-                                         src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/shield.png">
-                                    <input type="radio" value="2" name="attr_action_against">Resistance</input>
-                                    <img style="width: 20px; height: 20px"
-                                         src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
-                                    <input type="radio" value="0" name="attr_action_against"
-                                           checked="checked">None</input>
-                                </fieldset>
-                            </div>
-
-                            <div class="column width100 bold textSmall">Description</div>
-                            <div class="column width100 resizeVert vertTop">
-                                <textarea class="height50" name="attr_action_description"></textarea>
-                            </div>
+                    <!--        Class Tide Turner Actions Title-->
+                    <div class="actions-info-grid">
+                        <span class="action-name action-info-title"
+                              style="color: darkorange">CLASS TIDE-TURNER ACTIONS</span>
+                        <div class="action-effect">
+                            <span style="font-size: 0.75em;">Max Tide-Turners:</span>
+                            <input class="x-small" type="number">
+                            <span style="font-size: 0.75em;">Tide-Tuners Used:</span>
+                            <input class="x-small" type="number">
                         </div>
                     </div>
-                </fieldset>
-            </div>
 
-            <!--        Class Tide Turner Actions Title-->
-            <div class="actions-info-grid">
-                <span class="action-name action-info-title" style="color: darkorange">CLASS TIDE-TURNER ACTIONS</span>
-                <div class="action-effect">
-                    <span style="font-size: 0.75em;">Max Tide-Turners:</span>
-                    <input class="x-small" type="number">
-                    <span style="font-size: 0.75em;">Tide-Tuners Used:</span>
-                    <input class="x-small" type="number">
-                </div>
-            </div>
+                    <!--        Class Tide Turner Actions-->
+                    <div class="width100">
+                        <fieldset class="repeating_tideTurners">
+                            <div class="row">
+                                <div class="actions-grid">
+                                    <div class="action-button">
+                                        <div>
+                                            <input class="settings" type="checkbox" name="attr_settingsFlag" value="on"
+                                                   checked="checked" style="width: 25px; height: 25px"/>
+                                            <span>y</span>
+                                        </div>
+                                        <button type='roll' name='roll_action'
+                                                value='&{template:action} {{name=@{tide_action_name}}} {{subtag1=@{tide_action_subtype1}}} {{subtag2=@{tide_action_subtype2}}} {{attack=[[d20cs<@{critical}cf>@{accuracy}]]}} {{damage=[[0@{tide_action_dice} + @{tide_action_dice_bonus}]]}} {{dmgcrit=[[34]]}} {{against=[[@{tide_action_against}]]}} {{healing=[[0@{tide_action_healing_dice}]]}} {{speed=@{tide_action_speed}}} {{target=@{tide_action_target}}} {{type=@{tide_action_type}}} {{description=@{tide_action_description}}} {{range=@{tide_action_range}}}'>
+                                        </button>
+                                    </div>
 
-            <!--        Class Tide Turner Actions-->
-            <div class="width100">
-                <fieldset class="repeating_tideTurners">
-                    <div class="row">
-                        <div class="actions-grid">
-                            <div class="action-button">
-                                <div>
-                                    <input class="settings" type="checkbox" name="attr_settingsFlag" value="on"
-                                           checked="checked" style="width: 25px; height: 25px"/>
-                                    <span>y</span>
-                                </div>
-                                <button type='roll' name='roll_action'
-                                        value='&{template:action} {{name=@{tide_action_name}}} {{subtag1=@{tide_action_subtype1}}} {{subtag2=@{tide_action_subtype2}}} {{attack=[[d20cs<@{critical}cf>@{accuracy}]]}} {{damage=[[0@{tide_action_dice} + @{tide_action_dice_bonus}]]}} {{dmgcrit=[[34]]}} {{against=[[@{tide_action_against}]]}} {{healing=[[0@{tide_action_healing_dice}]]}} {{speed=@{tide_action_speed}}} {{target=@{tide_action_target}}} {{type=@{tide_action_type}}} {{description=@{tide_action_description}}} {{range=@{tide_action_range}}}'>
-                                </button>
-                            </div>
-
-                            <span class="action-name action-tide-centered" name="attr_tide_action_name"></span>
-                            <div class="action-type action-tide-centered">
-                                <div class="col">
+                                    <span class="action-name action-tide-centered" name="attr_tide_action_name"></span>
+                                    <div class="action-type action-tide-centered">
+                                        <div class="col">
                                 <span class="row" style="border-bottom: 1px solid black"
                                       name="attr_tide_action_subtype1"></span>
-                                    <span class="row" name="attr_tide_action_subtype2"></span>
-                                </div>
-                            </div>
-                            <span class="action-target action-tide-centered" name="attr_tide_action_target"></span>
-                            <div class="action-range action-tide-centered">
-                                <div class="col">
+                                            <span class="row" name="attr_tide_action_subtype2"></span>
+                                        </div>
+                                    </div>
+                                    <span class="action-target action-tide-centered"
+                                          name="attr_tide_action_target"></span>
+                                    <div class="action-range action-tide-centered">
+                                        <div class="col">
                                 <span class="row" style="border-bottom: 1px solid black"
                                       name="attr_tide_action_type"></span>
-                                    <span class="row" name="attr_tide_action_range"></span>
+                                            <span class="row" name="attr_tide_action_range"></span>
+                                        </div>
+                                    </div>
+                                    <span class="action-effect action-tide-leftCentered"
+                                          name="attr_tide_action_description"></span>
+                                    <span class="action-speed action-tide-centered"
+                                          name="attr_tide_action_speed"></span>
+                                </div>
+
+                                <input type="hidden" class="displaySettingsFlag" name="attr_displaySettingsFlag"/>
+                                <div class="width100 displaySettings padLeft">
+                                    <div class="column width25 inlineBlock bold">Name:</div>
+                                    <div class="column width75 inlineBlock inputNameShort">
+                                        <input type="text" name="attr_tide_action_name"/>
+                                    </div>
+
+                                    <div class="column width25 inlineBlock bold">Type:</div>
+                                    <div>
+                                        <select class="selector-fit" name="attr_tide_action_subtype1">
+                                            <option value="">Select</option>
+                                            <option value="General">General</option>
+                                            <option value="Trigger">Trigger</option>
+                                            <option value="Amplify">Amplify</option>
+                                            <option value="Sustain">Sustain</option>
+                                        </select>
+                                        <select class="selector-fit" name="attr_tide_action_subtype2">
+                                            <option value="">Select</option>
+                                            <option value="Exploit">Exploit</option>
+                                            <option value="Spell">Spell</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="column width25 inlineBlock bold">Target:</div>
+                                    <div class="column width75 inlineBlock inputNameShort">
+                                        <input type="text" name="attr_tide_action_target"/>
+                                    </div>
+
+
+                                    <div class="column width25 inlineBlock bold">Type/Range:</div>
+                                    <div>
+                                        <select class="selector-fit" name="attr_tide_action_type">
+                                            <option value="">Select</option>
+                                            <option value="Ranged">Ranged</option>
+                                            <option value="Melee">Melee</option>
+                                        </select>
+                                        <input class="small" type="number" name="attr_tide_action_range">
+                                    </div>
+                                    <div class="column width25 inlineBlock bold">Speed</div>
+                                    <div>
+                                        <select class="selector-fit" name="attr_tide_action_speed">
+                                            <option value="">Select</option>
+                                            <option value="Free">Free</option>
+                                            <option value="Fast">Fast</option>
+                                            <option value="Slow">Slow</option>
+                                            <option value="Slow + Fast">Slow + Fast</option>
+                                            <option value="Slow + Slow">Slow + Slow</option>
+                                        </select>
+                                    </div>
+
+                                    <div>
+                                        <span style="width: auto; font-weight: bold">Damage: </span>
+                                        <input style="width: 50px" type="text" name="attr_tide_action_dice"
+                                               value="1d6"/>
+                                        <span style="width: auto; font-weight: bold"> + </span>
+                                        <input style="width: 50px" type="text" name="attr_tide_action_dice_bonus"
+                                               value="0"/>
+
+                                        <span style="width: auto; font-weight: bold">Healing: </span>
+                                        <input style="width: 50px" type="text" name="attr_tide_action_healing_dice"
+                                               value="1d6"/>
+                                    </div>
+
+                                    <div>
+                                        <fieldset>
+                                            <span style="width: auto; font-weight: bold">Damage vs. </span>
+                                            <input type="radio" value="1"
+                                                   name="attr_tide_action_against">Toughness</input>
+                                            <img style="width: 20px; height: 20px"
+                                                 src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/shield.png">
+                                            <input type="radio" value="2"
+                                                   name="attr_tide_action_against">Resistance</input>
+                                            <img style="width: 20px; height: 20px"
+                                                 src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
+                                            <input type="radio" value="0" name="attr_tide_action_against"
+                                                   checked="checked">None</input>
+                                        </fieldset>
+                                    </div>
+
+                                    <div class="column width100 bold textSmall">Description</div>
+                                    <div class="column width100 resizeVert vertTop">
+                                        <textarea class="height50" name="attr_tide_action_description"></textarea>
+                                    </div>
                                 </div>
                             </div>
-                            <span class="action-effect action-tide-leftCentered"
-                                  name="attr_tide_action_description"></span>
-                            <span class="action-speed action-tide-centered" name="attr_tide_action_speed"></span>
+                        </fieldset>
+                    </div>
+
+                    <!--        Turn Instructions Titles-->
+                    <div class="actions-info-grid">
+                        <span class="action-name action-info-title">YOUR TURN:</span>
+                        <span class="action-effect action-info"><b>1. </b>Restore Action Pool. <b> 2. </b> Select Sustains. <b> 3. </b> Use up to your Action Pool of Actions.</span>
+                    </div>
+                    <div class="actions-info-grid">
+                        <span class="action-name action-info-title">AT END OF COMBAT:</span>
+                        <span class="action-effect action-info">Restore HP to Full and remove All Conditions.</span>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="sheet-tab-content sheet-tab2">
+                <div>
+                    <div class="inventory-header">INVENTORY</div>
+                    <div class="row">
+                        <div class="col">
+                            <span>Melee:</span>
+                            <select class="selector-fit" name="attr_melee_weapon">
+                                <option value="">Select</option>
+                                <option value="Free">Sword [1H]</option>
+                                <option value="Fast">Sword [2H]</option>
+                                <option value="Slow">Mace [1H]</option>
+                                <option value="Free">Mace [2H]</option>
+                                <option value="Fast">Axe [1H]</option>
+                                <option value="Slow">Axe [2H]</option>
+                                <option value="Free">Pole-arm [1H]</option>
+                                <option value="Fast">Pole-arm [2H]</option>
+                                <option value="Slow">Sceptre [1H]</option>
+                                <option value="Slow">Staff [2H]</option>
+                            </select>
                         </div>
-
-                        <input type="hidden" class="displaySettingsFlag" name="attr_displaySettingsFlag"/>
-                        <div class="width100 displaySettings padLeft">
-                            <div class="column width25 inlineBlock bold">Name:</div>
-                            <div class="column width75 inlineBlock inputNameShort">
-                                <input type="text" name="attr_tide_action_name"/>
-                            </div>
-
-                            <div class="column width25 inlineBlock bold">Type:</div>
-                            <div>
-                                <select class="selector-fit" name="attr_tide_action_subtype1">
-                                    <option value="">Select</option>
-                                    <option value="General">General</option>
-                                    <option value="Trigger">Trigger</option>
-                                    <option value="Amplify">Amplify</option>
-                                    <option value="Sustain">Sustain</option>
-                                </select>
-                                <select class="selector-fit" name="attr_tide_action_subtype2">
-                                    <option value="">Select</option>
-                                    <option value="Exploit">Exploit</option>
-                                    <option value="Spell">Spell</option>
-                                </select>
-                            </div>
-
-                            <div class="column width25 inlineBlock bold">Target:</div>
-                            <div class="column width75 inlineBlock inputNameShort">
-                                <input type="text" name="attr_tide_action_target"/>
-                            </div>
-
-
-                            <div class="column width25 inlineBlock bold">Type/Range:</div>
-                            <div>
-                                <select class="selector-fit" name="attr_tide_action_type">
-                                    <option value="">Select</option>
-                                    <option value="Ranged">Ranged</option>
-                                    <option value="Melee">Melee</option>
-                                </select>
-                                <input class="small" type="number" name="attr_tide_action_range">
-                            </div>
-                            <div class="column width25 inlineBlock bold">Speed</div>
-                            <div>
-                                <select class="selector-fit" name="attr_tide_action_speed">
-                                    <option value="">Select</option>
-                                    <option value="Free">Free</option>
-                                    <option value="Fast">Fast</option>
-                                    <option value="Slow">Slow</option>
-                                    <option value="Slow + Fast">Slow + Fast</option>
-                                    <option value="Slow + Slow">Slow + Slow</option>
-                                </select>
-                            </div>
-
-                            <div>
-                                <span style="width: auto; font-weight: bold">Damage: </span>
-                                <input style="width: 50px" type="text" name="attr_tide_action_dice" value="1d6"/>
-                                <span style="width: auto; font-weight: bold"> + </span>
-                                <input style="width: 50px" type="text" name="attr_tide_action_dice_bonus"
-                                       value="0"/>
-
-                                <span style="width: auto; font-weight: bold">Healing: </span>
-                                <input style="width: 50px" type="text" name="attr_tide_action_healing_dice"
-                                       value="1d6"/>
-                            </div>
-
-                            <div>
-                                <fieldset>
-                                    <span style="width: auto; font-weight: bold">Damage vs. </span>
-                                    <input type="radio" value="1" name="attr_tide_action_against">Toughness</input>
-                                    <img style="width: 20px; height: 20px"
-                                         src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/shield.png">
-                                    <input type="radio" value="2" name="attr_tide_action_against">Resistance</input>
-                                    <img style="width: 20px; height: 20px"
-                                         src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
-                                    <input type="radio" value="0" name="attr_tide_action_against"
-                                           checked="checked">None</input>
-                                </fieldset>
-                            </div>
-
-                            <div class="column width100 bold textSmall">Description</div>
-                            <div class="column width100 resizeVert vertTop">
-                                <textarea class="height50" name="attr_tide_action_description"></textarea>
-                            </div>
+                        <div class="col">
+                            <span>Ranged:</span>
+                            <select class="selector-fit" name="attr_ranged_weapon">
+                                <option value="">Select</option>
+                                <option value="bow">Bow</option>
+                                <option value="crossbow">Crossbow</option>
+                                <option value="wand">Wand</option>
+                                <option value="throwing_knives">Throwing Knives</option>
+                            </select>
                         </div>
                     </div>
-                </fieldset>
-            </div>
-
-            <!--        Turn Instructions Titles-->
-            <div class="actions-info-grid">
-                <span class="action-name action-info-title">YOUR TURN:</span>
-                <span class="action-effect action-info"><b>1. </b>Restore Action Pool. <b> 2. </b> Select Sustains. <b> 3. </b> Use up to your Action Pool of Actions.</span>
-            </div>
-            <div class="actions-info-grid">
-                <span class="action-name action-info-title">AT END OF COMBAT:</span>
-                <span class="action-effect action-info">Restore HP to Full and remove All Conditions.</span>
-            </div>
-
-        </div>
-    </div>
-
-    <div class="sheet-tab-content sheet-tab2">
-        <div>
-            <div class="inventory-header">INVENTORY</div>
-            <div class="row">
-                <div class="col">
-                    <span>Melee:</span>
-                    <select class="selector-fit" name="attr_melee_weapon">
-                        <option value="">Select</option>
-                        <option value="Free">Sword [1H]</option>
-                        <option value="Fast">Sword [2H]</option>
-                        <option value="Slow">Mace [1H]</option>
-                        <option value="Free">Mace [2H]</option>
-                        <option value="Fast">Axe [1H]</option>
-                        <option value="Slow">Axe [2H]</option>
-                        <option value="Free">Pole-arm [1H]</option>
-                        <option value="Fast">Pole-arm [2H]</option>
-                        <option value="Slow">Sceptre [1H]</option>
-                        <option value="Slow">Staff [2H]</option>
-                    </select>
-                </div>
-                <div class="col">
-                    <span>Ranged:</span>
-                    <select class="selector-fit" name="attr_ranged_weapon">
-                        <option value="">Select</option>
-                        <option value="bow">Bow</option>
-                        <option value="crossbow">Crossbow</option>
-                        <option value="wand">Wand</option>
-                        <option value="throwing_knives">Throwing Knives</option>
-                    </select>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <span>Off-hand:</span>
-                    <select class="selector-fit" name="attr_offhand">
-                        <option value="">Select</option>
-                        <option value="light_shield">Light Shield</option>
-                        <option value="medium_shield">Medium Shield</option>
-                        <option value="heavy_shield">Heavy Shield</option>
-                        <option value="offhand_weapon">Off-hand Weapon</option>
-                        <option value="offhand_crossbow">Off-hand Crossbow</option>
-                        <option value="prayer_beads">Prayer Beads</option>
-                        <option value="focus_item">Focus Item</option>
-                    </select>
-                </div>
-                <div class="col">
-                    <span>Armour:</span>
-                    <select class="selector-fit" name="attr_armour">
-                        <option value="">Select</option>
-                        <option value="robes">Robes</option>
-                        <option value="light_armour">Light Armour</option>
-                        <option value="heavy_armour">Heavy Armour</option>
-                    </select>
-                </div>
-            </div>
-
-            <fieldset class="repeating_inventory">
-                <div class="row">
-                    <div class="inventory-box">
-                        <div class="inventory-box-upper">
-                            <span>Keepsake:</span>
-                            <input class="no-border" type="text" name="attr_item_name"/>
+                    <div class="row">
+                        <div class="col">
+                            <span>Off-hand:</span>
+                            <select class="selector-fit" name="attr_offhand">
+                                <option value="">Select</option>
+                                <option value="light_shield">Light Shield</option>
+                                <option value="medium_shield">Medium Shield</option>
+                                <option value="heavy_shield">Heavy Shield</option>
+                                <option value="offhand_weapon">Off-hand Weapon</option>
+                                <option value="offhand_crossbow">Off-hand Crossbow</option>
+                                <option value="prayer_beads">Prayer Beads</option>
+                                <option value="focus_item">Focus Item</option>
+                            </select>
                         </div>
-                        <div style="padding: 2px">
-                            <div class="flex-center-left">
-                                <div class="col" style="padding-right: 2px; padding-top: 4px;">
-                                    <span>Effect:</span>
+                        <div class="col">
+                            <span>Armour:</span>
+                            <select class="selector-fit" name="attr_armour">
+                                <option value="">Select</option>
+                                <option value="robes">Robes</option>
+                                <option value="light_armour">Light Armour</option>
+                                <option value="heavy_armour">Heavy Armour</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <fieldset class="repeating_inventory">
+                        <div class="row">
+                            <div class="inventory-box">
+                                <div class="inventory-box-upper">
+                                    <span>Keepsake:</span>
+                                    <input class="no-border" type="text" name="attr_item_name"/>
                                 </div>
-                                <textarea class="height40 no-border"></textarea>
-                            </div>
-                            <div>
-                                <span>Action:</span>
-                                <select class="selector-fit inventory-selector">
-                                    <option value="">Select</option>
-                                    <option value="Free">Free</option>
-                                    <option value="Fast">Fast</option>
-                                    <option value="Slow">Slow</option>
-                                </select>
-                                <span>Use:</span>
-                                <select class="selector-fit inventory-selector">
-                                    <option value="combat">1 Per Combat</option>
-                                    <option value="milestone">1 Per Milestone</option>
-                                </select>
-                                <input type="checkbox"/>
+                                <div style="padding: 2px">
+                                    <div class="flex-center-left">
+                                        <div class="col" style="padding-right: 2px; padding-top: 4px;">
+                                            <span>Effect:</span>
+                                        </div>
+                                        <textarea class="height40 no-border"></textarea>
+                                    </div>
+                                    <div>
+                                        <span>Action:</span>
+                                        <select class="selector-fit inventory-selector">
+                                            <option value="">Select</option>
+                                            <option value="Free">Free</option>
+                                            <option value="Fast">Fast</option>
+                                            <option value="Slow">Slow</option>
+                                        </select>
+                                        <span>Use:</span>
+                                        <select class="selector-fit inventory-selector">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="encounter">1 Per Encounter</option>
+                                            <option value="campaign">1 Per Campaign</option>
+                                            <option value="combat">1 Per Combat</option>
+                                            <option value="milestone">1 Per Milestone</option>
+                                        </select>
+                                        <input type="checkbox"/>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </fieldset>
                 </div>
-            </fieldset>
+                <div style="padding-left: 10px">
+                    <div>
+                        <div class="col" style="padding-bottom: 5px">
+                            <div class="inventory-header">ANCHORS</div>
+                            <fieldset class="repeating_anchors">
+                                <div class="row">
+                                    <input name="attr_anchor" class="no-border" type="text"
+                                           style="border-bottom: 2px solid black"/>
+                                </div>
+                            </fieldset>
+                        </div>
+
+                        <div class="col" style="padding-bottom: 5px">
+                            <div class="inventory-header">DEADWEIGHTS</div>
+                            <fieldset class="repeating_deadweight">
+                                <div class="row">
+                                    <input name="attr_deadweight" class="no-border" type="text"
+                                           style="border-bottom: 2px solid black"/>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+
+                    <div class="inventory-header">DESCRIPTION</div>
+                    <textarea name="attr_bio_description"></textarea>
+
+                    <div class="inventory-header">HISTORY</div>
+                    <textarea name="attr_bio_history"></textarea>
+
+
+                </div>
+            </div>
+
+            <div class="sheet-tab-content sheet-tab3">
+
+            </div>
         </div>
-        <div style="padding-left: 10px">
+        <div class="sheet-block-npc">
+            <span>NPC</span>
             <div>
-                <div class="col" style="padding-bottom: 5px">
-                    <div class="inventory-header">ANCHORS</div>
-                    <fieldset class="repeating_anchors">
-                        <div class="row">
-                            <input name="attr_anchor" class="no-border" type="text"
-                                   style="border-bottom: 2px solid black"/>
-                        </div>
-                    </fieldset>
-                </div>
+                <div class="row">
+                    <input type="radio" name="attr_enemy" class="grunt" value="1" checked="checked"><span>Grunt</span>
+                    <input type="radio" name="attr_enemy" class="awakened" value="2"><span>Awakened</span>
+                    <input type="radio" name="attr_enemy" class="elite" value="3"><span>Elite</span>
+                    <input type="radio" name="attr_enemy" class="boss" value="4"><span>Boss</span>
 
-                <div class="col" style="padding-bottom: 5px">
-                    <div class="inventory-header">DEADWEIGHTS</div>
-                    <fieldset class="repeating_deadweight">
-                        <div class="row">
-                            <input name="attr_deadweight" class="no-border" type="text"
-                                   style="border-bottom: 2px solid black"/>
-                        </div>
-                    </fieldset>
-                </div>
-            </div>
-
-            <div class="inventory-header">DESCRIPTION</div>
-            <textarea name="attr_bio_description"></textarea>
-
-            <div class="inventory-header">HISTORY</div>
-            <textarea name="attr_bio_history"></textarea>
-
-
-        </div>
-    </div>
-
-    <div class="sheet-tab-content sheet-tab3">
-        <div class="row">
-            <input type="checkbox" class="veteran"><span>Veteran Mode</span>
-
-            <input type="radio" name="attr_enemy" class="grunt" value="1" checked="checked"><span>Grunt</span>
-            <input type="radio" name="attr_enemy" class="awakened" value="2"><span>Awakened</span>
-            <input type="radio" name="attr_enemy" class="elite" value="3"><span>Elite</span>
-            <input type="radio" name="attr_enemy" class="boss" value="4"><span>Boss</span>
-
-            <div class="name section">
-                <span>Name:</span>
-                <input class="kungfont" type="text" name="attr_character_name"/>
-            </div>
-            <div class="enemy-hex grunt">
-                <div style="width: 390px; height: 330px; margin-top: -30px">
-                    <div class="row" style="padding-left: 92px; padding-top: 20px">
-                        <div class="enemy-dice" style="margin-left: -20px; margin-top: -60px">A</div>
-                        <div>
-                            <div class="sheet-hex sheet-hex-3" style="width: 100px; height: 57px">
-                                <div class="sheet-inner">
+                    <div class="name section">
+                        <span>Name:</span>
+                        <input class="kungfont" type="text" name="attr_character_name"/>
+                    </div>
+                    <div class="enemy-hex grunt">
+                        <div style="width: 390px; height: 330px; margin-top: -30px">
+                            <div class="row" style="padding-left: 92px; padding-top: 20px">
+                                <div class="enemy-dice" style="margin-left: -20px; margin-top: -60px">A</div>
+                                <div>
+                                    <div class="sheet-hex sheet-hex-3" style="width: 100px; height: 57px">
+                                        <div class="sheet-inner">
                         <textarea name="attr_grunt_hex_1" class="no-border"
                                   style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                                        </div>
+                                        <div class="sheet-corner-1"></div>
+                                        <div class="sheet-corner-2"></div>
+                                    </div>
                                 </div>
-                                <div class="sheet-corner-1"></div>
-                                <div class="sheet-corner-2"></div>
-                            </div>
-                        </div>
-                        <div style="margin-top:-20px">
-                            <div class="sheet-hex sheet-hex-3" style="width: 100px; height: 57px">
-                                <div class="sheet-inner">
+                                <div style="margin-top:-20px">
+                                    <div class="sheet-hex sheet-hex-3" style="width: 100px; height: 57px">
+                                        <div class="sheet-inner">
                         <textarea name="attr_grunt_hex_2" class="no-border"
                                   style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                                        </div>
+                                        <div class="sheet-corner-1"></div>
+                                        <div class="sheet-corner-2"></div>
+                                    </div>
                                 </div>
-                                <div class="sheet-corner-1"></div>
-                                <div class="sheet-corner-2"></div>
+                                <div class="enemy-dice" style="margin-left: 190px; margin-top: -40px">B</div>
                             </div>
-                        </div>
-                        <div class="enemy-dice" style="margin-left: 190px; margin-top: -40px">B</div>
-                    </div>
-                    <div class="row" style="padding-left: 40px">
-                        <div class="enemy-dice" style="margin-left: -40px; margin-top: 5px">F</div>
-                        <div class="sheet-hex sheet-hex-3" style="width: 100px; height: 57px">
-                            <div class="sheet-inner">
+                            <div class="row" style="padding-left: 40px">
+                                <div class="enemy-dice" style="margin-left: -40px; margin-top: 5px">F</div>
+                                <div class="sheet-hex sheet-hex-3" style="width: 100px; height: 57px">
+                                    <div class="sheet-inner">
                         <textarea name="attr_grunt_hex_3" class="no-border"
                                   style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
-                            </div>
-                            <div class="sheet-corner-1"></div>
-                            <div class="sheet-corner-2"></div>
-                        </div>
-                        <div class="sheet-hex sheet-hex-2" style="width: 100px; height: 57px">
-                            <div class="sheet-inner">
+                                    </div>
+                                    <div class="sheet-corner-1"></div>
+                                    <div class="sheet-corner-2"></div>
+                                </div>
+                                <div class="sheet-hex sheet-hex-2" style="width: 100px; height: 57px">
+                                    <div class="sheet-inner">
                         <textarea name="attr_grunt_hex_4" class="no-border"
                                   style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
-                            </div>
-                            <div class="sheet-corner-1"></div>
-                            <div class="sheet-corner-2"></div>
-                        </div>
-                        <div class="sheet-hex sheet-hex-3" style="width: 100px; height: 57px">
-                            <div class="sheet-inner">
+                                    </div>
+                                    <div class="sheet-corner-1"></div>
+                                    <div class="sheet-corner-2"></div>
+                                </div>
+                                <div class="sheet-hex sheet-hex-3" style="width: 100px; height: 57px">
+                                    <div class="sheet-inner">
                         <textarea name="attr_grunt_hex_5" class="no-border"
                                   style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                                    </div>
+                                    <div class="sheet-corner-1"></div>
+                                    <div class="sheet-corner-2"></div>
+                                </div>
+                                <div class="enemy-dice" style="margin-left: 315px; margin-top: 5px">C</div>
                             </div>
-                            <div class="sheet-corner-1"></div>
-                            <div class="sheet-corner-2"></div>
-                        </div>
-                        <div class="enemy-dice" style="margin-left: 315px; margin-top: 5px">C</div>
-                    </div>
-                    <div class="row" style="padding-left: 92px">
-                        <div class="enemy-dice" style="margin-left: -20px; margin-top: 75px">E</div>
-                        <div>
-                            <div class="sheet-hex sheet-hex-3" style="width: 100px; height: 57px">
-                                <div class="sheet-inner">
+                            <div class="row" style="padding-left: 92px">
+                                <div class="enemy-dice" style="margin-left: -20px; margin-top: 75px">E</div>
+                                <div>
+                                    <div class="sheet-hex sheet-hex-3" style="width: 100px; height: 57px">
+                                        <div class="sheet-inner">
                         <textarea name="attr_grunt_hex_6" class="no-border"
                                   style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                                        </div>
+                                        <div class="sheet-corner-1"></div>
+                                        <div class="sheet-corner-2"></div>
+                                    </div>
                                 </div>
-                                <div class="sheet-corner-1"></div>
-                                <div class="sheet-corner-2"></div>
-                            </div>
-                        </div>
-                        <div style="margin-top:-20px">
-                            <div class="sheet-hex sheet-hex-3" style="width: 100px; height: 57px">
-                                <div class="sheet-inner">
+                                <div style="margin-top:-20px">
+                                    <div class="sheet-hex sheet-hex-3" style="width: 100px; height: 57px">
+                                        <div class="sheet-inner">
                         <textarea name="attr_grunt_hex_7" class="no-border"
                                   style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                                        </div>
+                                        <div class="sheet-corner-1"></div>
+                                        <div class="sheet-corner-2"></div>
+                                    </div>
+                                </div>
+                                <div class="enemy-dice" style="margin-left: 190px; margin-top: 75px">D</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="enemy-hex awakened">
+                        <div class="row" style="padding-left: 104px">
+                            <div>
+                                <input type="checkbox" class="hex-button" style="width: 10px; height: 10px"/><span></span>
+                                <div class="sheet-hex sheet-hex-1" style="width: 100px; height: 57px">
+                                    <div class="sheet-inner">
+                        <textarea class="no-border"
+                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                                    </div>
+                                    <div class="sheet-corner-1"></div>
+                                    <div class="sheet-corner-2"></div>
+                                </div>
+                            </div>
+                            <div style="margin-top:-20px;">
+                                <input type="checkbox" class="hex-button" style="width: 10px; height: 10px"/><span></span>
+                                <div class="sheet-hex sheet-veteran-hex-3" style="width: 100px; height: 57px">
+                                    <div class="sheet-inner">
+                        <textarea class="no-border"
+                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                                    </div>
+                                    <div class="sheet-corner-1"></div>
+                                    <div class="sheet-corner-2"></div>
+                                </div>
+                            </div>
+                            <div style="margin-top:-20px">
+                                <input type="checkbox" class="hex-button" style="width: 10px; height: 10px"/><span></span>
+                                <div class="sheet-hex sheet-hex-1" style="width: 100px; height: 57px">
+                                    <div class="sheet-inner">
+                        <textarea class="no-border"
+                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                                    </div>
+                                    <div class="sheet-corner-1"></div>
+                                    <div class="sheet-corner-2"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" style="padding-left: 52px">
+                            <div>
+                                <input type="checkbox" class="hex-button" style="width: 10px; height: 10px"/><span></span>
+                                <div class="sheet-hex sheet-veteran-hex-3" style="width: 100px; height: 57px">
+                                    <div class="sheet-inner">
+                        <textarea class="no-border"
+                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                                    </div>
+                                    <div class="sheet-corner-1"></div>
+                                    <div class="sheet-corner-2"></div>
+                                </div>
+                            </div>
+                            <div style="margin-top:-20px;">
+                                <input type="checkbox" class="hex-button" disabled="disabled" style="width: 10px; height: 10px"/>
+                                <div class="sheet-hex sheet-hex-3" style="width: 100px; height: 57px">
+                                    <div class="sheet-inner">
+                        <textarea class="no-border"
+                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                                    </div>
+                                    <div class="sheet-corner-1"></div>
+                                    <div class="sheet-corner-2"></div>
+                                </div>
+                            </div>
+                            <div style="margin-top:-20px;">
+                                <input type="checkbox" class="hex-button" disabled="disabled" style="width: 10px; height: 10px"/>
+                                <div class="sheet-hex sheet-hex-3" style="width: 100px; height: 57px">
+                                    <div class="sheet-inner">
+                        <textarea class="no-border"
+                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                                    </div>
+                                    <div class="sheet-corner-1"></div>
+                                    <div class="sheet-corner-2"></div>
+                                </div>
+                            </div>
+                            <div style="margin-top:-20px;">
+                                <input type="checkbox" class="hex-button" style="width: 10px; height: 10px"/><span></span>
+                                <div class="sheet-hex sheet-veteran-hex-3" style="width: 100px; height: 57px">
+                                    <div class="sheet-inner">
+                        <textarea class="no-border"
+                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                                    </div>
+                                    <div class="sheet-corner-1"></div>
+                                    <div class="sheet-corner-2"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="sheet-hex sheet-hex-1" style="width: 100px; height: 57px">
+                                <div class="sheet-inner">
+                        <textarea class="no-border"
+                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                                </div>
+                                <div class="sheet-corner-1"></div>
+                                <div class="sheet-corner-2"></div>
+                            </div>
+                            <div class="sheet-hex sheet-hex-3" style="width: 100px; height: 57px">
+                                <div class="sheet-inner">
+                        <textarea class="no-border"
+                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                                </div>
+                                <div class="sheet-corner-1"></div>
+                                <div class="sheet-corner-2"></div>
+                            </div>
+                            <div class="sheet-hex sheet-hex-2" style="width: 100px; height: 57px">
+                                <div class="sheet-inner">
+                        <textarea class="no-border"
+                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                                </div>
+                                <div class="sheet-corner-1"></div>
+                                <div class="sheet-corner-2"></div>
+                            </div>
+                            <div class="sheet-hex sheet-hex-3" style="width: 100px; height: 57px">
+                                <div class="sheet-inner">
+                        <textarea class="no-border"
+                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                                </div>
+                                <div class="sheet-corner-1"></div>
+                                <div class="sheet-corner-2"></div>
+                            </div>
+                            <div class="sheet-hex sheet-hex-1" style="width: 100px; height: 57px">
+                                <div class="sheet-inner">
+                        <textarea class="no-border"
+                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                 </div>
                                 <div class="sheet-corner-1"></div>
                                 <div class="sheet-corner-2"></div>
                             </div>
                         </div>
-                        <div class="enemy-dice" style="margin-left: 190px; margin-top: 75px">D</div>
+                        <div class="row" style="padding-left: 52px">
+                            <div>
+                                <input type="checkbox" class="hex-button" style="width: 10px; height: 10px"/><span></span>
+                                <div class="sheet-hex sheet-veteran-hex-3" style="width: 100px; height: 57px">
+                                    <div class="sheet-inner">
+                        <textarea class="no-border"
+                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                                    </div>
+                                    <div class="sheet-corner-1"></div>
+                                    <div class="sheet-corner-2"></div>
+                                </div>
+                            </div>
+                            <div style="margin-top:-20px;">
+                                <input type="checkbox" class="hex-button" disabled="disabled" style="width: 10px; height: 10px"/>
+                                <div class="sheet-hex sheet-hex-3" style="width: 100px; height: 57px">
+                                    <div class="sheet-inner">
+                        <textarea class="no-border"
+                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                                    </div>
+                                    <div class="sheet-corner-1"></div>
+                                    <div class="sheet-corner-2"></div>
+                                </div>
+                            </div>
+                            <div style="margin-top:-20px;">
+                                <input type="checkbox" class="hex-button" disabled="disabled" style="width: 10px; height: 10px"/>
+                                <div class="sheet-hex sheet-hex-3" style="width: 100px; height: 57px">
+                                    <div class="sheet-inner">
+                        <textarea class="no-border"
+                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                                    </div>
+                                    <div class="sheet-corner-1"></div>
+                                    <div class="sheet-corner-2"></div>
+                                </div>
+                            </div>
+                            <div style="margin-top:-20px;">
+                                <input type="checkbox" class="hex-button" style="width: 10px; height: 10px"/><span></span>
+                                <div class="sheet-hex sheet-veteran-hex-3" style="width: 100px; height: 57px">
+                                    <div class="sheet-inner">
+                        <textarea class="no-border"
+                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                                    </div>
+                                    <div class="sheet-corner-1"></div>
+                                    <div class="sheet-corner-2"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" style="padding-left: 104px">
+                            <div>
+                                <input type="checkbox" class="hex-button" style="width: 10px; height: 10px"/><span></span>
+                                <div class="sheet-hex sheet-hex-1" style="width: 100px; height: 57px">
+                                    <div class="sheet-inner">
+                        <textarea class="no-border"
+                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                                    </div>
+                                    <div class="sheet-corner-1"></div>
+                                    <div class="sheet-corner-2"></div>
+                                </div>
+                            </div>
+                            <div style="margin-top:-20px;">
+                                <input type="checkbox" class="hex-button" style="width: 10px; height: 10px"/><span></span>
+                                <div class="sheet-hex sheet-veteran-hex-3" style="width: 100px; height: 57px">
+                                    <div class="sheet-inner">
+                        <textarea class="no-border"
+                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                                    </div>
+                                    <div class="sheet-corner-1"></div>
+                                    <div class="sheet-corner-2"></div>
+                                </div>
+                            </div>
+                            <div style="margin-top:-20px">
+                                <input type="checkbox" class="hex-button" style="width: 10px; height: 10px"/><span></span>
+                                <div class="sheet-hex sheet-hex-1" style="width: 100px; height: 57px">
+                                    <div class="sheet-inner">
+                        <textarea class="no-border"
+                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                                    </div>
+                                    <div class="sheet-corner-1"></div>
+                                    <div class="sheet-corner-2"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="enemy-hex elite">
+
+                    </div>
+
+                    <div class="enemy-hex boss">
+
+
+                    </div>
+
+
+                    <div class="row info-hp-box">
+                        <span class="info-hp-text">HP:</span>
+                        <input class="medium" type="number" name="attr_enemy_hp" value="10">
+                        <span> / </span>
+                        <input class="medium" type="number" name="attr_enemy_max_hp" value="10">
+                    </div>
+                    <div class="row stats-col red">
+                        <img style="width: 20px; height: 20px"
+                             src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/shield.png">
+                        Toughness:
+                        <input class="small" type="number" name="attr_enemy_toughness" value="4">
+                    </div>
+                    <div class="row stats-col blue">
+                        <img style="width: 20px; height: 20px"
+                             src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
+                        Resistance:
+                        <input class="small" type="number" name="attr_enemy_resistance" value="4">
+                    </div>
+                    <div class="row">
+                        <span>Rank:</span>
+                        <select class="selector-fit inventory-selector">
+                            <option value="Grunt">Grunt</option>
+                            <option value="Awakened">Awakened</option>
+                            <option value="Elite">Elite</option>
+                            <option value="Boss">Boss</option>
+                        </select>
+                    </div>
+                    <div class="row">
+                        <span>Type:</span>
+                        <select class="selector-fit inventory-selector">
+                            <option value="Human">Human</option>
+                            <option value="Beast">Beast</option>
+                            <option value="Rift">Rift</option>
+                        </select>
+                    </div>
+                    <div class="row">
+                        <span>Size:</span>
+                        <select class="selector-fit inventory-selector">
+                            <option value="1x1">1 x 1</option>
+                            <option value="2x2">2 x 2</option>
+                            <option value="3x3">3 x 3</option>
+                        </select>
                     </div>
                 </div>
-            </div>
-
-            <div class="enemy-hex awakened">
-                <div class="row" style="padding-left: 104px">
-                    <div>
-                        <input type="checkbox" class="hex1" style="width: 10px; height: 10px"/><span></span>
-                        <div class="sheet-hex sheet-hex-1" style="width: 100px; height: 57px">
-                            <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
-                            </div>
-                            <div class="sheet-corner-1"></div>
-                            <div class="sheet-corner-2"></div>
-                        </div>
-                    </div>
-                    <div style="margin-top:-20px;" class="veteran-hex">
-                        <input type="checkbox" class="hex1" style="width: 10px; height: 10px"/><span></span>
-                        <div class="sheet-hex sheet-hex-1" style="width: 100px; height: 57px">
-                            <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
-                            </div>
-                            <div class="sheet-corner-1"></div>
-                            <div class="sheet-corner-2"></div>
-                        </div>
-                    </div>
-                    <div style="margin-top:-20px">
-                        <input type="checkbox" class="hex1" style="width: 10px; height: 10px"/><span></span>
-                        <div class="sheet-hex sheet-hex-1" style="width: 100px; height: 57px">
-                            <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
-                            </div>
-                            <div class="sheet-corner-1"></div>
-                            <div class="sheet-corner-2"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row" style="padding-left: 157px">
-                    <div>
-                        <div class="sheet-hex sheet-hex-3" style="width: 100px; height: 57px">
-                            <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
-                            </div>
-                            <div class="sheet-corner-1"></div>
-                            <div class="sheet-corner-2"></div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="sheet-hex sheet-hex-3" style="width: 100px; height: 57px">
-                            <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
-                            </div>
-                            <div class="sheet-corner-1"></div>
-                            <div class="sheet-corner-2"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="sheet-hex sheet-hex-1" style="width: 100px; height: 57px">
-                        <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
-                        </div>
-                        <div class="sheet-corner-1"></div>
-                        <div class="sheet-corner-2"></div>
-                    </div>
-                    <div class="sheet-hex sheet-hex-3" style="width: 100px; height: 57px">
-                        <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
-                        </div>
-                        <div class="sheet-corner-1"></div>
-                        <div class="sheet-corner-2"></div>
-                    </div>
-                    <div class="sheet-hex sheet-hex-2" style="width: 100px; height: 57px">
-                        <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
-                        </div>
-                        <div class="sheet-corner-1"></div>
-                        <div class="sheet-corner-2"></div>
-                    </div>
-                    <div class="sheet-hex sheet-hex-3" style="width: 100px; height: 57px">
-                        <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
-                        </div>
-                        <div class="sheet-corner-1"></div>
-                        <div class="sheet-corner-2"></div>
-                    </div>
-                    <div class="sheet-hex sheet-hex-1" style="width: 100px; height: 57px">
-                        <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
-                        </div>
-                        <div class="sheet-corner-1"></div>
-                        <div class="sheet-corner-2"></div>
-                    </div>
-                </div>
-                <div class="row" style="padding-left: 157px">
-                    <div>
-                        <div class="sheet-hex sheet-hex-3" style="width: 100px; height: 57px">
-                            <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
-                            </div>
-                            <div class="sheet-corner-1"></div>
-                            <div class="sheet-corner-2"></div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="sheet-hex sheet-hex-3" style="width: 100px; height: 57px">
-                            <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
-                            </div>
-                            <div class="sheet-corner-1"></div>
-                            <div class="sheet-corner-2"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row" style="padding-left: 104px">
-                    <div>
-                        <input type="checkbox" class="hex1" style="width: 10px; height: 10px"/><span></span>
-                        <div class="sheet-hex sheet-hex-1" style="width: 100px; height: 57px">
-                            <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
-                            </div>
-                            <div class="sheet-corner-1"></div>
-                            <div class="sheet-corner-2"></div>
-                        </div>
-                    </div>
-                    <div style="margin-top:-20px; opacity: 0">
-                        <input type="checkbox" class="hex1" style="width: 10px; height: 10px"/><span></span>
-                        <div class="sheet-hex sheet-hex-1" style="width: 100px; height: 57px">
-                            <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
-                            </div>
-                            <div class="sheet-corner-1"></div>
-                            <div class="sheet-corner-2"></div>
-                        </div>
-                    </div>
-                    <div style="margin-top:-20px">
-                        <input type="checkbox" class="hex1" style="width: 10px; height: 10px"/><span></span>
-                        <div class="sheet-hex sheet-hex-1" style="width: 100px; height: 57px">
-                            <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
-                            </div>
-                            <div class="sheet-corner-1"></div>
-                            <div class="sheet-corner-2"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="enemy-hex elite">
 
             </div>
 
-            <div class="enemy-hex boss">
-
-
-            </div>
-
-
-            <div class="row info-hp-box">
-                <span class="info-hp-text">HP:</span>
-                <input class="medium" type="number" name="attr_enemy_hp" value="10">
-                <span> / </span>
-                <input class="medium" type="number" name="attr_enemy_max_hp" value="10">
-            </div>
-            <div class="row stats-col red">
-                <img style="width: 20px; height: 20px"
-                     src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/shield.png">
-                Toughness:
-                <input class="small" type="number" name="attr_enemy_toughness" value="4">
-            </div>
-            <div class="row stats-col blue">
-                <img style="width: 20px; height: 20px"
-                     src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
-                Resistance:
-                <input class="small" type="number" name="attr_enemy_resistance" value="4">
-            </div>
-            <div class="row">
-                <span>Rank:</span>
-                <select class="selector-fit inventory-selector">
-                    <option value="Grunt">Grunt</option>
-                    <option value="Awakened">Awakened</option>
-                    <option value="Elite">Elite</option>
-                    <option value="Boss">Boss</option>
-                </select>
-            </div>
-            <div class="row">
-                <span>Type:</span>
-                <select class="selector-fit inventory-selector">
-                    <option value="Human">Human</option>
-                    <option value="Beast">Beast</option>
-                    <option value="Rift">Rift</option>
-                </select>
-            </div>
-            <div class="row">
-                <span>Size:</span>
-                <select class="selector-fit inventory-selector">
-                    <option value="1x1">1 x 1</option>
-                    <option value="2x2">2 x 2</option>
-                    <option value="3x3">3 x 3</option>
-                    <option value="4x4">4 x 4</option>
-                </select>
-            </div>
         </div>
-
     </div>
 
 </div>
@@ -1361,9 +1438,6 @@
             });
         });
     });
-
-
-
 
 </script>
 
