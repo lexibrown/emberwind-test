@@ -1,3 +1,92 @@
+.sheet-hexagon {
+width: 100px;
+height: 60px;
+background: #a16fb0;
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.sheet-hexagon:before {
+content: "";
+position: absolute;
+top: -25px;
+left: 0;
+width: 0;
+height: 0;
+border-left: 50px solid transparent;
+border-right: 50px solid transparent;
+border-bottom: 25px solid #a16fb0;
+}
+.sheet-hexagon:after {
+content: "";
+position: absolute;
+bottom: -25px;
+left: 0;
+width: 0;
+height: 0;
+border-left: 50px solid transparent;
+border-right: 50px solid transparent;
+border-top: 25px solid #a16fb0;
+}
+
+.sheet-hexagon:hover + .sheet-hexagon:after {
+border-top-color: red;
+}
+.sheet-hexagon:hover {
+background: red;
+}
+
+<div class="row" style="padding-left: 50px; padding-bottom: 30px">
+    <div class="col">
+        <div class="hexagon">
+                        <textarea class="no-border"
+                                  style="width: 50%; height: 75%; background: transparent; color: black; text-align: center"></textarea>
+        </div>
+    </div>
+    <div class="col">
+        <div class="hexagon">
+                        <textarea class="no-border"
+                                  style="width: 50%; height: 65%; background: transparent; color: black; text-align: center"></textarea>
+        </div>
+    </div>
+</div>
+<div class="row" style="padding-bottom: 30px">
+    <div class="col">
+        <div class="hexagon">
+                        <textarea class="no-border"
+                                  style="width: 50%; height: 65%; background: transparent; color: black; text-align: center"></textarea>
+        </div>
+    </div>
+    <div class="col">
+        <div class="hexagon">
+                        <textarea class="no-border"
+                                  style="width: 50%; height: 65%; background: transparent; color: black; text-align: center"></textarea>
+        </div>
+    </div>
+    <div class="col">
+        <div class="hexagon">
+                        <textarea class="no-border"
+                                  style="width: 50%; height: 65%; background: transparent; color: black; text-align: center"></textarea>
+        </div>
+    </div>
+</div>
+<div class="row" style="padding-left: 50px">
+    <div class="col">
+        <div class="hexagon">
+                        <textarea class="no-border"
+                                  style="width: 50%; height: 65%; background: transparent; color: black; text-align: center"></textarea>
+        </div>
+    </div>
+    <div class="col">
+        <div class="hexagon">
+                        <textarea class="no-border"
+                                  style="width: 50%; height: 65%; background: transparent; color: black; text-align: center"></textarea>
+        </div>
+    </div>
+</div>
+
+
 <div class="charsheet">
     <!-- Sheet Options, Change Logs, and Links -->
     <div class="option-main options width100 padTop marginTop">

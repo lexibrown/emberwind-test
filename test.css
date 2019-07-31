@@ -929,6 +929,13 @@ input[type=checkbox].sheet-tab-hide:checked ~ .sheet-show-hide {
 
 /*----------------- Hexagons ------------------*/
 
+.sheet-enemy-dice {
+    font-size: 50px;
+    font-family: dicefontd6;
+    position: absolute;
+    z-index: 3;
+}
+
 div.sheet-veteran-hex {
     opacity: 0;
 }
@@ -939,6 +946,15 @@ input[type=checkbox].sheet-veteran:checked ~ .sheet-veteran-hex {
 div.sheet-enemy-hex {
     display: none;
 }
+
+.sheet-grunt {
+    padding-top: 50px;
+}
+
+.sheet-awakened {
+    padding-top: 25px;
+}
+
 
 input.sheet-grunt:checked ~ div.sheet-grunt,
 input.sheet-awakened:checked ~ div.sheet-awakened,
@@ -984,7 +1000,7 @@ input[type=checkbox].sheet-hex1 {
     background-size: auto 173px;
     position: relative;
     float: left;
-    margin: 25px 5px;
+    margin: 16px 2px;
     text-align: center;
     zoom: 1;
 }
