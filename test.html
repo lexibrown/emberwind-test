@@ -466,7 +466,7 @@
                                            checked="checked" style="width: 25px; height: 25px"/>
                                     <span>y</span>
                                     <button type='roll' name='roll_attack'
-                                            value='&{template:action} {{name=@{melee_name}}} {{attack=[[d20cs<@{critical}cf>@{accuracy}]]}} {{damage=[[0@{melee_dice} + @{melee_dice_bonus}]]}} {{dmgcrit=[[100@{melee_dice}kh[[@{melee_dice}>1]]+@{melee_dice_bonus}]]}} {{speed=Slow}} {{type=Melee}} {{range=@{melee_range}}} {{target=@{melee_target}}} {{description=@{melee_description}}} {{against=[[@{melee_against}]]}}'>
+                                            value='&{template:action} {{name=@{melee_name}}} {{attack=[[d20cs<@{critical}cf>@{accuracy}]]}} {{damage=[[0@{melee_dice} + @{melee_dice_bonus}]]}} {{dmgcrit=@{melee_dice} + @{melee_dice_bonus}}} {{speed=Slow}} {{type=Melee}} {{range=@{melee_range}}} {{target=@{melee_target}}} {{description=@{melee_description}}} {{against=[[@{melee_against}]]}}'>
                                     </button>
                                 </div>
                             </div>
@@ -1034,13 +1034,13 @@
                         </div>
                         <div class="row stats-col red">
                             <img style="width: 20px; height: 20px"
-                                 src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/shield.png">
+                                 src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
                             Toughness:
                             <input class="small" type="number" name="attr_enemy_toughness" value="4">
                         </div>
                         <div class="row stats-col blue">
                             <img style="width: 20px; height: 20px"
-                                 src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
+                                 src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
                             Resistance:
                             <input class="small" type="number" name="attr_enemy_resistance" value="4">
                         </div>
@@ -1941,6 +1941,16 @@
             });
         });
     });
+
+    function calculateCrit(value) {
+        var str = "10d4 + 10";
+        var numDice = parseInt(str.match(/\d+/));
+        var diceType = parseInt(str.match(/d(\d+)/)[1]);
+
+        document.getElementById("demo").innerHTML = (result * result2);
+        setAttrs({crit_damage: numDice * diceType});
+
+    }
 
 
 </script>
