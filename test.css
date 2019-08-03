@@ -27,16 +27,58 @@
     height: 900px;
 }
 
-/*----------------- PC / NPC ------------------*/
+/*----------------- Sheet Settings ------------------*/
+.sheet-tab-button + span,
+.sheet-tab-button + span + span {
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: -20px;
+}
 
-.sheet-block-pc,
-.sheet-block-switch:checked ~ .sheet-block-npc {
+input.sheet-tab-button{
+    height:21px;
+    opacity: 0;
+    z-index: 2;
+}
+
+.sheet-tab-button:hover + span,
+.sheet-tab-button:hover + span + span,
+.sheet-tab-button:hover * {
+    color: blue;
+}
+
+.sheet-pictos {
+    font-family:pictos;
+}
+
+input.sheet-nav:checked + span,
+input.sheet-nav:not(:checked) + span + span {
+    display: none;
+}
+
+input.sheet-nav:checked ~ .sheet-block-container.sheet-block-settings{
     display: block;
 }
 
-.sheet-block-npc,
-.sheet-block-switch:checked ~ .sheet-block-pc {
+.sheet-block-settings {
+    border: 2px dashed dimgrey;
+    width: fit-content;
+}
+
+.sheet-settings-col {
+    padding: 5px;
+}
+
+/*----------------- PC / NPC ------------------*/
+
+.sheet-block-container {
     display: none;
+}
+
+input.sheet-page-control[value="pc"] ~ .sheet-block-container.sheet-block-pc,
+input.sheet-page-control[value="npc"] ~ .sheet-block-container.sheet-block-npc {
+    padding-top: 10px;
+    display: block;
 }
 
 /*----------------- Tabs ------------------*/
@@ -200,8 +242,7 @@ div.sheet-tab-content {
 /*----------------- Image section ------------------*/
 .sheet-image {
     grid-area: image;
-    background-color: black;
-    padding: 3px;
+    width: 325px;
 }
 
 /*----------------- Button section ------------------*/

@@ -1,25 +1,44 @@
 <div class="sheet-container">
-    <div>
-        <img src="https://www.emberwindgame.com/wp-content/themes/emberwind/dist/images/emberwind-logo-white-small.png"
-             alt="" style="background-color: #696969;"
-        >
+    <div class="row">
+        <img style="float: right; margin-bottom: -60px" width="200px;"
+             src="https://i1.wp.com/ohayocon.org/wp-content/uploads/2019/01/Base-Logo-Black-Derek-Chung.png?resize=1024%2C577&ssl=1"
+             alt="https://www.emberwindgame.com/wp-content/uploads/emberwind-logo-color.png">
     </div>
-    <!--    <div>-->
-    <!--        <img src="https://i1.wp.com/ohayocon.org/wp-content/uploads/2019/01/Base-Logo-Black-Derek-Chung.png?resize=1024%2C577&ssl=1"-->
-    <!--             alt=""-->
-    <!--        >-->
-    <!--    </div>-->
-    <!--    <div>-->
-    <!--        <img src="https://www.emberwindgame.com/wp-content/uploads/emberwind-logo-color.png"-->
-    <!--             alt=""-->
-    <!--        >-->
-    <!--    </div>-->
+    <div class="row">
+        <input class="page-control" type="hidden" name="attr_sheet_type" value="pc">
+        <input class="tab-button nav" type="checkbox" name="attr_settings_select" value="options">
+        <span class='pictos nav'>y</span>
+        <span class='nav pictos'>x</span>
 
-    <div>
-        <input type="checkbox" class="sheet-block-switch">
-        <div class="sheet-block-pc">
-            <span>PC</span>
-            <div class="kungfont">Emberwind</div>
+        <div class="block-container block-settings">
+            <div class="col settings-col">
+                <div>
+                    <span style="font-weight: bold;">DISPLAY MODE</span>
+                </div>
+                <div>
+                    <div class="row">
+                        <input type="radio" name="attr_sheet_type" value="pc" checked="checked">
+                        <span>PC</span>
+                        <input type="radio" name="attr_sheet_type" value="npc">
+                        <span>NPC</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col settings-col">
+                <div>
+                    <span style="font-weight: bold;">ROLL MODE</span>
+                </div>
+                <div>
+                    <div class="row">
+                        <input type="radio" name="attr_whisper_state" value="" checked="checked">
+                        <span>PUBLIC</span>
+                        <input type="radio" name="attr_whisper_state" value="/w gm ">
+                        <span>TO GM</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="block-container block-pc">
             <input type="radio" name="attr_tab" class="sheet-tab sheet-tab1" value="1" checked="checked"><span
                 title="Character"></span>
             <input type="radio" name="attr_tab" class="sheet-tab sheet-tab2" value="2"><span
@@ -34,8 +53,7 @@
 
                     <!--        Image -->
                     <div class="image flex-center">
-                        <img src="https://www.emberwindgame.com/wp-content/uploads/gallery-the-skies-of-axia.jpg"
-                             alt="">
+                        <!--                        <img src="https://www.emberwindgame.com/wp-content/uploads/gallery-the-skies-of-axia.jpg"/>-->
                     </div>
 
                     <!--        Name Section-->
@@ -154,21 +172,21 @@
                             <div class="skill-left">
                                 <div class="skill">
                                     <button type='roll' name='roll_skill'
-                                            value='&{template:skill} {{name=Athletics}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{athletics}cf>@{athletics}]]}} {{no-roll=[[1]]}}'>
+                                            value='@{whisper_state}&{template:skill} {{name=Athletics}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{athletics}cf>@{athletics}]]}} {{no-roll=[[1]]}}'>
                                         Athletics:
                                     </button>
                                     <input class="small" type="number" name="attr_athletics" value="8">
                                 </div>
                                 <div class="skill">
                                     <button type='roll' name='roll_skill' style="font-size: 1.2em;"
-                                            value='&{template:skill} {{name=Endurance}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{endurance}cf>@{endurance}]]}} {{no-roll=[[1]]}}'>
+                                            value='@{whisper_state}&{template:skill} {{name=Endurance}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{endurance}cf>@{endurance}]]}} {{no-roll=[[1]]}}'>
                                         Endurance:
                                     </button>
                                     <input class="small" type="number" name="attr_endurance" value="8">
                                 </div>
                                 <div class="skill">
                                     <button type='roll' name='roll_skill'
-                                            value='&{template:skill} {{name=Intimidate}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{intimidate}cf>@{intimidate}]]}} {{no-roll=[[1]]}}'>
+                                            value='@{whisper_state}&{template:skill} {{name=Intimidate}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{intimidate}cf>@{intimidate}]]}} {{no-roll=[[1]]}}'>
                                         Intimidate:
                                     </button>
                                     <input class="small" type="number" name="attr_intimidate" value="8">
@@ -180,21 +198,21 @@
                             <div class="skill-right">
                                 <div class="skill">
                                     <button type='roll' name='roll_skill'
-                                            value='&{template:skill} {{name=Insight}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{insight}cf>@{insight}]]}} {{no-roll=[[1]]}}'>
+                                            value='@{whisper_state}&{template:skill} {{name=Insight}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{insight}cf>@{insight}]]}} {{no-roll=[[1]]}}'>
                                         Insight:
                                     </button>
                                     <input class="small" type="number" name="attr_insight" value="8">
                                 </div>
                                 <div class="skill">
                                     <button type='roll' name='roll_skill' style="font-size: 1.2em;"
-                                            value='&{template:skill} {{name=Knowledge}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{knowledge}cf>@{knowledge}]]}} {{no-roll=[[1]]}}'>
+                                            value='@{whisper_state}&{template:skill} {{name=Knowledge}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{knowledge}cf>@{knowledge}]]}} {{no-roll=[[1]]}}'>
                                         Knowledge:
                                     </button>
                                     <input class="small" type="number" name="attr_knowledge" value="8">
                                 </div>
                                 <div class="skill">
                                     <button type='roll' name='roll_skill'
-                                            value='&{template:skill} {{name=Mend}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{mend}cf>@{mend}]]}} {{no-roll=[[1]]}}'>
+                                            value='@{whisper_state}&{template:skill} {{name=Mend}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{mend}cf>@{mend}]]}} {{no-roll=[[1]]}}'>
                                         Mend:
                                     </button>
                                     <input class="small" type="number" name="attr_mend" value="8">
@@ -226,21 +244,21 @@
                             <div class="skill-left">
                                 <div class="skill">
                                     <button type='roll' name='roll_skill' style="font-size: 1.2em;"
-                                            value='&{template:skill} {{name=Acrobatics}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{acrobatics}cf>@{acrobatics}]]}} {{no-roll=[[1]]}}'>
+                                            value='@{whisper_state}&{template:skill} {{name=Acrobatics}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{acrobatics}cf>@{acrobatics}]]}} {{no-roll=[[1]]}}'>
                                         Acrobatics:
                                     </button>
                                     <input class="small" type="number" name="attr_acrobatics" value="8">
                                 </div>
                                 <div class="skill">
                                     <button type='roll' name='roll_skill'
-                                            value='&{template:skill} {{name=Stealth}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{stealth}cf>@{stealth}]]}} {{no-roll=[[1]]}}'>
+                                            value='@{whisper_state}&{template:skill} {{name=Stealth}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{stealth}cf>@{stealth}]]}} {{no-roll=[[1]]}}'>
                                         Stealth:
                                     </button>
                                     <input class="small" type="number" name="attr_stealth" value="8">
                                 </div>
                                 <div class="skill">
                                     <button type='roll' name='roll_skill' style="font-size: 0.9em;"
-                                            value='&{template:skill} {{name=Sleight of Hand}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{sleight_of_hand}cf>@{sleight_of_hand}]]}} {{no-roll=[[1]]}}'>
+                                            value='@{whisper_state}&{template:skill} {{name=Sleight of Hand}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{sleight_of_hand}cf>@{sleight_of_hand}]]}} {{no-roll=[[1]]}}'>
                                         Sleight of Hand:
                                     </button>
                                     <input class="small" type="number" name="attr_sleight_of_hand" value="8">
@@ -252,21 +270,21 @@
                             <div class="skill-right">
                                 <div class="skill">
                                     <button type='roll' name='roll_skill'
-                                            value='&{template:skill} {{name=Focus}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{focus}cf>@{focus}]]}} {{no-roll=[[1]]}}'>
+                                            value='@{whisper_state}&{template:skill} {{name=Focus}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{focus}cf>@{focus}]]}} {{no-roll=[[1]]}}'>
                                         Focus:
                                     </button>
                                     <input class="small" type="number" name="attr_focus" value="8">
                                 </div>
                                 <div class="skill">
                                     <button type='roll' name='roll_skill'
-                                            value='&{template:skill} {{name=Fast Talk}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{fast_talk}cf>@{fast_talk}]]}} {{no-roll=[[1]]}}'>
+                                            value='@{whisper_state}&{template:skill} {{name=Fast Talk}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{fast_talk}cf>@{fast_talk}]]}} {{no-roll=[[1]]}}'>
                                         Fast Talk:
                                     </button>
                                     <input class="small" type="number" name="attr_fast_talk" value="8">
                                 </div>
                                 <div class="skill">
                                     <button type='roll' name='roll_skill' style="font-size: 1.2em;"
-                                            value='&{template:skill} {{name=Leadership}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{leadership}cf>@{leadership}]]}} {{no-roll=[[1]]}}'>
+                                            value='@{whisper_state}&{template:skill} {{name=Leadership}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{leadership}cf>@{leadership}]]}} {{no-roll=[[1]]}}'>
                                         Leadership:
                                     </button>
                                     <input class="small" type="number" name="attr_leadership" value="8">
@@ -391,7 +409,7 @@
                                            checked="checked" style="width: 25px; height: 25px"/>
                                     <span>y</span>
                                     <button type='roll' name='roll_skill' style="font-size: 1.2em;"
-                                            value='&{template:skill} {{name=@{maneuver_name}}} {{subtags=@{statname}}} {{no-roll=[[@{actionmod}]]}} {{roll=[[d20cs<@{actionmod}cf>@{actionmod}]]}} {{description=@{maneuver_description}}}'>
+                                            value='@{whisper_state}&{template:skill} {{name=@{maneuver_name}}} {{subtags=@{statname}}} {{no-roll=[[@{actionmod}]]}} {{roll=[[d20cs<@{actionmod}cf>@{actionmod}]]}} {{description=@{maneuver_description}}}'>
                                     </button>
                                 </div>
                             </div>
@@ -466,7 +484,7 @@
                                            checked="checked" style="width: 25px; height: 25px"/>
                                     <span>y</span>
                                     <button type='roll' name='roll_attack'
-                                            value='&{template:action} {{name=@{melee_name}}} {{attack=[[d20cs<@{critical}cf>@{accuracy}]]}} {{damage=[[0@{melee_dice} + @{melee_dice_bonus}]]}} {{dmgcrit=[[100@{melee_dice}kh[[@{melee_dice}>1]]+@{melee_dice_bonus}]]}} {{speed=Slow}} {{type=Melee}} {{range=@{melee_range}}} {{target=@{melee_target}}} {{description=@{melee_description}}} {{against=[[@{melee_against}]]}}'>
+                                            value='@{whisper_state}&{template:action} {{name=@{melee_name}}} {{attack=[[d20cs<@{critical}cf>@{accuracy}]]}} {{damage=[[0@{melee_dice} + @{melee_dice_bonus}]]}} {{penetration=[[@{penetration}]]}} {{dmgcrit=[[10@{melee_dice}kh1*[[@{melee_dice}>1]]+@{melee_dice_bonus}]]}} {{speed=Slow}} {{type=Melee}} {{range=@{melee_range}}} {{target=@{melee_target}}} {{description=@{melee_description}}} {{against=[[@{melee_against}]]}}'>
                                     </button>
                                 </div>
                             </div>
@@ -505,17 +523,13 @@
                             </div>
 
                             <div>
-                                <fieldset>
-                                    <span style="width: auto; font-weight: bold">Damage vs. </span>
-                                    <input type="radio" value="1" name="attr_melee_against">Toughness</input>
-                                    <img style="width: 20px; height: 20px"
-                                         src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/shield.png">
-                                    <input type="radio" value="2" name="attr_melee_against">Resistance</input>
-                                    <img style="width: 20px; height: 20px"
-                                         src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
-                                    <input type="radio" value="0" name="attr_melee_against"
-                                           checked="checked">None</input>
-                                </fieldset>
+                                <span style="width: auto; font-weight: bold">Damage vs. </span>
+                                <input type="radio" name="attr_melee_against" value="1" checked="checked">Toughness</input>
+                                <img style="width: 20px; height: 20px"
+                                     src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/shield.png">
+                                <input type="radio" name="attr_melee_against" value="2">Resistance</input>
+                                <img style="width: 20px; height: 20px"
+                                     src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
                             </div>
 
                             <div class="column width100 bold textSmall">Description</div>
@@ -534,7 +548,7 @@
                                            checked="checked" style="width: 25px; height: 25px"/>
                                     <span>y</span>
                                     <button type='roll' name='roll_attack'
-                                            value='&{template:action} {{name=@{ranged_name}}} {{attack=[[d20cs<@{critical}cf>@{accuracy}]]}} {{damage=[[0@{ranged_dice} + @{ranged_dice_bonus}]]}} {{dmgcrit=[[100@{ranged_dice}kh[[@{ranged_dice}>1]]+@{ranged_dice_bonus}]]}} {{speed=Slow}} {{type=Ranged}} {{range=@{ranged_range}}} {{target=@{ranged_target}}} {{description=@{ranged_description}}} {{against=[[@{ranged_against}]]}}'>
+                                            value='@{whisper_state}&{template:action} {{name=@{ranged_name}}} {{attack=[[d20cs<@{critical}cf>@{accuracy}]]}} {{damage=[[0@{ranged_dice} + @{ranged_dice_bonus}]]}} {{penetration=[[@{penetration}]]}} {{dmgcrit=[[10@{melee_dice}kh1*[[@{melee_dice}>1]]+@{melee_dice_bonus}]]}} {{speed=Slow}} {{type=Ranged}} {{range=@{ranged_range}}} {{target=@{ranged_target}}} {{description=@{ranged_description}}} {{against=[[@{ranged_against}]]}}'>
                                     </button>
                                 </div>
                             </div>
@@ -574,17 +588,13 @@
                             </div>
 
                             <div>
-                                <fieldset>
-                                    <span style="width: auto; font-weight: bold">Damage vs. </span>
-                                    <input type="radio" value="1" name="attr_ranged_against">Toughness</input>
-                                    <img style="width: 20px; height: 20px"
-                                         src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/shield.png">
-                                    <input type="radio" value="2" name="attr_ranged_against">Resistance</input>
-                                    <img style="width: 20px; height: 20px"
-                                         src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
-                                    <input type="radio" value="0" name="attr_ranged_against"
-                                           checked="checked">None</input>
-                                </fieldset>
+                                <span style="width: auto; font-weight: bold">Damage vs. </span>
+                                <input type="radio" value="1" name="attr_ranged_against" checked="checked">Toughness</input>
+                                <img style="width: 20px; height: 20px"
+                                     src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/shield.png">
+                                <input type="radio" value="2" name="attr_ranged_against">Resistance</input>
+                                <img style="width: 20px; height: 20px"
+                                     src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
                             </div>
 
                             <div class="column width100 bold textSmall">Description</div>
@@ -619,23 +629,23 @@
                                             <span>y</span>
                                         </div>
                                         <button type='roll' name='roll_action'
-                                                value='&{template:action} {{name=@{action_name}}} {{subtag1=@{action_subtype1}}} {{subtag2=@{action_subtype2}}} {{attack=[[d20cs<@{critical}cf>@{accuracy}]]}} {{damage=[[0@{action_dice} + @{action_dice_bonus}]]}} {{dmgcrit=[[34]]}} {{against=[[@{action_against}]]}} {{healing=[[0@{action_healing_dice}]]}} {{speed=@{action_speed}}} {{target=@{action_target}}} {{type=@{action_type}}} {{description=@{action_description}}} {{range=@{action_range}}}'>
+                                                value='@{whisper_state}&{template:action} {{name=@{action_name}}} {{subtag1=@{action_subtype1}}} {{subtag2=@{action_subtype2}}} {{attack=[[d20cs<@{critical}cf>@{accuracy}]]}} {{damage=[[0@{action_dice} + @{action_dice_bonus}]]}} {{penetration=[[@{penetration}]]}} {{dmgcrit=[[10@{melee_dice}kh1*[[@{melee_dice}>1]]+@{melee_dice_bonus}]]}} {{against=[[@{action_against}]]}} {{healing=[[0@{action_healing_dice}]]}} {{speed=@{action_speed}}} {{target=@{action_target}}} {{type=@{action_type}}} {{description=@{action_description}}} {{range=@{action_range}}}'>
                                         </button>
                                     </div>
 
                                     <span class="action-name action-centered" name="attr_action_name"></span>
                                     <div class="action-type action-centered">
                                         <div class="col">
-                                <span class="row" style="border-bottom: 1px solid black"
-                                      name="attr_action_subtype1"></span>
+                            <span class="row" style="border-bottom: 1px solid black"
+                                  name="attr_action_subtype1"></span>
                                             <span class="row" name="attr_action_subtype2"></span>
                                         </div>
                                     </div>
                                     <span class="action-target action-centered" name="attr_action_target"></span>
                                     <div class="action-range action-centered">
                                         <div class="col">
-                                    <span class="row" style="border-bottom: 1px solid black"
-                                          name="attr_action_type"></span>
+                                <span class="row" style="border-bottom: 1px solid black"
+                                      name="attr_action_type"></span>
                                             <span class="row" name="attr_action_range"></span>
                                         </div>
                                     </div>
@@ -696,27 +706,26 @@
 
                                     <div>
                                         <span style="width: auto; font-weight: bold">Damage: </span>
-                                        <input style="width: 50px" type="text" name="attr_action_dice" value="1d6"/>
+                                        <input style="width: 50px" type="text" name="attr_action_dice"
+                                               placeholder="1d6"/>
                                         <span style="width: auto; font-weight: bold"> + </span>
                                         <input style="width: 50px" type="text" name="attr_action_dice_bonus" value="0"/>
 
                                         <span style="width: auto; font-weight: bold">Healing: </span>
                                         <input style="width: 50px" type="text" name="attr_action_healing_dice"
-                                               value="1d6"/>
+                                               placeholder="1d6"/>
                                     </div>
 
                                     <div>
-                                        <fieldset>
-                                            <span style="width: auto; font-weight: bold">Damage vs. </span>
-                                            <input type="radio" value="1" name="attr_action_against">Toughness</input>
-                                            <img style="width: 20px; height: 20px"
-                                                 src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/shield.png">
-                                            <input type="radio" value="2" name="attr_action_against">Resistance</input>
-                                            <img style="width: 20px; height: 20px"
-                                                 src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
-                                            <input type="radio" value="0" name="attr_action_against"
-                                                   checked="checked">None</input>
-                                        </fieldset>
+                                        <span style="width: auto; font-weight: bold">Damage vs. </span>
+                                        <input type="radio" value="1" name="attr_action_against">Toughness</input>
+                                        <img style="width: 20px; height: 20px"
+                                             src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/shield.png">
+                                        <input type="radio" value="2" name="attr_action_against">Resistance</input>
+                                        <img style="width: 20px; height: 20px"
+                                             src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
+                                        <input type="radio" value="0" name="attr_action_against"
+                                               checked="checked">None</input>
                                     </div>
 
                                     <div class="column width100 bold textSmall">Description</div>
@@ -730,13 +739,13 @@
 
                     <!--        Class Tide Turner Actions Title-->
                     <div class="actions-info-grid">
-                        <span class="action-name action-info-title"
-                              style="color: darkorange">CLASS TIDE-TURNER ACTIONS</span>
+                    <span class="action-name action-info-title"
+                          style="color: darkorange">CLASS TIDE-TURNER ACTIONS</span>
                         <div class="action-effect">
                             <span style="font-size: 0.75em;">Max Tide-Turners:</span>
-                            <input class="x-small" type="number">
+                            <input class="x-small" type="number" value="0">
                             <span style="font-size: 0.75em;">Tide-Tuners Used:</span>
-                            <input class="x-small" type="number">
+                            <input class="x-small" type="number" value="0">
                         </div>
                     </div>
 
@@ -752,15 +761,15 @@
                                             <span>y</span>
                                         </div>
                                         <button type='roll' name='roll_action'
-                                                value='&{template:action} {{name=@{tide_action_name}}} {{subtag1=@{tide_action_subtype1}}} {{subtag2=@{tide_action_subtype2}}} {{attack=[[d20cs<@{critical}cf>@{accuracy}]]}} {{damage=[[0@{tide_action_dice} + @{tide_action_dice_bonus}]]}} {{dmgcrit=[[34]]}} {{against=[[@{tide_action_against}]]}} {{healing=[[0@{tide_action_healing_dice}]]}} {{speed=@{tide_action_speed}}} {{target=@{tide_action_target}}} {{type=@{tide_action_type}}} {{description=@{tide_action_description}}} {{range=@{tide_action_range}}}'>
+                                                value='@{whisper_state}&{template:action} {{name=@{tide_action_name}}} {{subtag1=@{tide_action_subtype1}}} {{subtag2=@{tide_action_subtype2}}} {{attack=[[d20cs<@{critical}cf>@{accuracy}]]}} {{damage=[[0@{tide_action_dice} + @{tide_action_dice_bonus}]]}} {{penetration=[[@{penetration}]]}} {{dmgcrit=[[10@{melee_dice}kh1*[[@{melee_dice}>1]]+@{melee_dice_bonus}]]}} {{against=[[@{tide_action_against}]]}} {{healing=[[0@{tide_action_healing_dice}]]}} {{speed=@{tide_action_speed}}} {{target=@{tide_action_target}}} {{type=@{tide_action_type}}} {{description=@{tide_action_description}}} {{range=@{tide_action_range}}}'>
                                         </button>
                                     </div>
 
                                     <span class="action-name action-tide-centered" name="attr_tide_action_name"></span>
                                     <div class="action-type action-tide-centered">
                                         <div class="col">
-                                <span class="row" style="border-bottom: 1px solid black"
-                                      name="attr_tide_action_subtype1"></span>
+                            <span class="row" style="border-bottom: 1px solid black"
+                                  name="attr_tide_action_subtype1"></span>
                                             <span class="row" name="attr_tide_action_subtype2"></span>
                                         </div>
                                     </div>
@@ -768,8 +777,8 @@
                                           name="attr_tide_action_target"></span>
                                     <div class="action-range action-tide-centered">
                                         <div class="col">
-                                <span class="row" style="border-bottom: 1px solid black"
-                                      name="attr_tide_action_type"></span>
+                            <span class="row" style="border-bottom: 1px solid black"
+                                  name="attr_tide_action_type"></span>
                                             <span class="row" name="attr_tide_action_range"></span>
                                         </div>
                                     </div>
@@ -843,19 +852,17 @@
                                     </div>
 
                                     <div>
-                                        <fieldset>
-                                            <span style="width: auto; font-weight: bold">Damage vs. </span>
-                                            <input type="radio" value="1"
-                                                   name="attr_tide_action_against">Toughness</input>
-                                            <img style="width: 20px; height: 20px"
-                                                 src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/shield.png">
-                                            <input type="radio" value="2"
-                                                   name="attr_tide_action_against">Resistance</input>
-                                            <img style="width: 20px; height: 20px"
-                                                 src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
-                                            <input type="radio" value="0" name="attr_tide_action_against"
-                                                   checked="checked">None</input>
-                                        </fieldset>
+                                        <span style="width: auto; font-weight: bold">Damage vs. </span>
+                                        <input type="radio" value="1"
+                                               name="attr_tide_action_against">Toughness</input>
+                                        <img style="width: 20px; height: 20px"
+                                             src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/shield.png">
+                                        <input type="radio" value="2"
+                                               name="attr_tide_action_against">Resistance</input>
+                                        <img style="width: 20px; height: 20px"
+                                             src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
+                                        <input type="radio" value="0" name="attr_tide_action_against"
+                                               checked="checked">None</input>
                                     </div>
 
                                     <div class="column width100 bold textSmall">Description</div>
@@ -1012,8 +1019,7 @@
 
             </div>
         </div>
-        <div class="sheet-block-npc">
-            <span>NPC</span>
+        <div class="block-container block-npc">
             <div>
                 <div class="row">
                     <input type="radio" name="attr_enemy" class="grunt" value="1" checked="checked"><span>Grunt</span>
@@ -1054,15 +1060,6 @@
                             </select>
                         </div>
                         <div class="row">
-                            <span>Rank:</span>
-                            <select class="selector-fit inventory-selector">
-                                <option value="Grunt">Grunt</option>
-                                <option value="Awakened">Awakened</option>
-                                <option value="Elite">Elite</option>
-                                <option value="Boss">Boss</option>
-                            </select>
-                        </div>
-                        <div class="row">
                             <span>Type:</span>
                             <select class="selector-fit inventory-selector">
                                 <option value="Human">Human</option>
@@ -1086,8 +1083,8 @@
                                 <div>
                                     <div class="sheet-hex sheet-hex-2" style="width: 100px; height: 57px">
                                         <div class="sheet-inner">
-                        <textarea name="attr_grunt_hex_1" class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea name="attr_grunt_hex_1" class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                         </div>
                                         <div class="sheet-corner-1"></div>
                                         <div class="sheet-corner-2"></div>
@@ -1096,8 +1093,8 @@
                                 <div style="margin-top:-20px">
                                     <div class="sheet-hex sheet-hex-2" style="width: 100px; height: 57px">
                                         <div class="sheet-inner">
-                        <textarea name="attr_grunt_hex_2" class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea name="attr_grunt_hex_2" class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                         </div>
                                         <div class="sheet-corner-1"></div>
                                         <div class="sheet-corner-2"></div>
@@ -1109,24 +1106,24 @@
                                 <div class="enemy-dice" style="margin-left: -40px; margin-top: 5px">F</div>
                                 <div class="sheet-hex sheet-hex-2" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea name="attr_grunt_hex_3" class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea name="attr_grunt_hex_3" class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
                                 </div>
                                 <div class="sheet-hex sheet-hex-3" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea name="attr_grunt_hex_4" class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea name="attr_grunt_hex_4" class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
                                 </div>
                                 <div class="sheet-hex sheet-hex-2" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea name="attr_grunt_hex_5" class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea name="attr_grunt_hex_5" class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1138,8 +1135,8 @@
                                 <div>
                                     <div class="sheet-hex sheet-hex-2" style="width: 100px; height: 57px">
                                         <div class="sheet-inner">
-                        <textarea name="attr_grunt_hex_6" class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea name="attr_grunt_hex_6" class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                         </div>
                                         <div class="sheet-corner-1"></div>
                                         <div class="sheet-corner-2"></div>
@@ -1148,8 +1145,8 @@
                                 <div style="margin-top:-20px">
                                     <div class="sheet-hex sheet-hex-2" style="width: 100px; height: 57px">
                                         <div class="sheet-inner">
-                        <textarea name="attr_grunt_hex_7" class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea name="attr_grunt_hex_7" class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                         </div>
                                         <div class="sheet-corner-1"></div>
                                         <div class="sheet-corner-2"></div>
@@ -1167,8 +1164,8 @@
                                        style="width: 10px; height: 10px"/><span></span>
                                 <div class="sheet-hex sheet-hex-1" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1179,8 +1176,8 @@
                                        style="width: 10px; height: 10px"/><span></span>
                                 <div class="sheet-hex sheet-veteran-hex-3" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1191,8 +1188,8 @@
                                        style="width: 10px; height: 10px"/><span></span>
                                 <div class="sheet-hex sheet-hex-1" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1205,8 +1202,8 @@
                                        style="width: 10px; height: 10px"/><span></span>
                                 <div class="sheet-hex sheet-veteran-hex-3" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1217,8 +1214,8 @@
                                        style="width: 10px; height: 10px"/>
                                 <div class="sheet-hex sheet-hex-2" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1229,8 +1226,8 @@
                                        style="width: 10px; height: 10px"/>
                                 <div class="sheet-hex sheet-hex-2" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1241,8 +1238,8 @@
                                        style="width: 10px; height: 10px"/><span></span>
                                 <div class="sheet-hex sheet-veteran-hex-3" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1255,8 +1252,8 @@
                                        style="width: 10px; height: 10px"/><span></span>
                                 <div class="sheet-hex sheet-hex-1" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1267,8 +1264,8 @@
                                        style="width: 10px; height: 10px"/>
                                 <div class="sheet-hex sheet-hex-2" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1279,8 +1276,8 @@
                                        style="width: 10px; height: 10px"/>
                                 <div class="sheet-hex sheet-hex-3" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1291,8 +1288,8 @@
                                        style="width: 10px; height: 10px"/>
                                 <div class="sheet-hex sheet-hex-2" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1303,8 +1300,8 @@
                                        style="width: 10px; height: 10px"/><span></span>
                                 <div class="sheet-hex sheet-hex-1" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1317,8 +1314,8 @@
                                        style="width: 10px; height: 10px"/><span></span>
                                 <div class="sheet-hex sheet-veteran-hex-3" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1329,8 +1326,8 @@
                                        style="width: 10px; height: 10px"/>
                                 <div class="sheet-hex sheet-hex-2" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1341,8 +1338,8 @@
                                        style="width: 10px; height: 10px"/>
                                 <div class="sheet-hex sheet-hex-2" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1353,8 +1350,8 @@
                                        style="width: 10px; height: 10px"/><span></span>
                                 <div class="sheet-hex sheet-veteran-hex-3" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1367,8 +1364,8 @@
                                        style="width: 10px; height: 10px"/><span></span>
                                 <div class="sheet-hex sheet-hex-1" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1379,8 +1376,8 @@
                                        style="width: 10px; height: 10px"/><span></span>
                                 <div class="sheet-hex sheet-veteran-hex-3" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1391,8 +1388,8 @@
                                        style="width: 10px; height: 10px"/><span></span>
                                 <div class="sheet-hex sheet-hex-1" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1408,8 +1405,8 @@
                                        style="width: 10px; height: 10px"/><span></span>
                                 <div class="sheet-hex sheet-hex-1" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1420,8 +1417,8 @@
                                        style="width: 10px; height: 10px"/>
                                 <div class="sheet-hex sheet-veteran-hex-2" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1432,8 +1429,8 @@
                                        style="width: 10px; height: 10px"/>
                                 <div class="sheet-hex sheet-veteran-hex-2" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1444,8 +1441,8 @@
                                        style="width: 10px; height: 10px"/><span></span>
                                 <div class="sheet-hex sheet-hex-1" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1458,8 +1455,8 @@
                                        style="width: 10px; height: 10px"/><span></span>
                                 <div class="sheet-hex sheet-veteran-hex-2" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1470,8 +1467,8 @@
                                        style="width: 10px; height: 10px"/>
                                 <div class="sheet-hex sheet-hex-2" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1482,8 +1479,8 @@
                                        style="width: 10px; height: 10px"/>
                                 <div class="sheet-hex sheet-veteran-hex-3" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1494,8 +1491,8 @@
                                        style="width: 10px; height: 10px"/>
                                 <div class="sheet-hex sheet-hex-2" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1506,8 +1503,8 @@
                                        style="width: 10px; height: 10px"/><span></span>
                                 <div class="sheet-hex sheet-veteran-hex-2" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1520,8 +1517,8 @@
                                        style="width: 10px; height: 10px"/><span></span>
                                 <div class="sheet-hex sheet-veteran-hex-2" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1532,8 +1529,8 @@
                                        style="width: 10px; height: 10px"/><span></span>
                                 <div class="sheet-hex sheet-veteran-hex-3" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1544,8 +1541,8 @@
                                        style="width: 10px; height: 10px"/>
                                 <div class="sheet-hex sheet-hex-3" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1556,8 +1553,8 @@
                                        style="width: 10px; height: 10px"/>
                                 <div class="sheet-hex sheet-hex-3" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1568,8 +1565,8 @@
                                        style="width: 10px; height: 10px"/>
                                 <div class="sheet-hex sheet-veteran-hex-3" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1580,8 +1577,8 @@
                                        style="width: 10px; height: 10px"/><span></span>
                                 <div class="sheet-hex sheet-veteran-hex-2" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1594,8 +1591,8 @@
                                        style="width: 10px; height: 10px"/><span></span>
                                 <div class="sheet-hex sheet-hex-1" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1606,8 +1603,8 @@
                                        style="width: 10px; height: 10px"/><span></span>
                                 <div class="sheet-hex sheet-hex-2" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1618,8 +1615,8 @@
                                        style="width: 10px; height: 10px"/><span></span>
                                 <div class="sheet-hex sheet-hex-3" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1630,8 +1627,8 @@
                                        style="width: 10px; height: 10px"/>
                                 <div class="sheet-hex sheet-hex-3" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1642,8 +1639,8 @@
                                        style="width: 10px; height: 10px"/>
                                 <div class="sheet-hex sheet-hex-3" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1654,8 +1651,8 @@
                                        style="width: 10px; height: 10px"/>
                                 <div class="sheet-hex sheet-hex-2" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1666,8 +1663,8 @@
                                        style="width: 10px; height: 10px"/><span></span>
                                 <div class="sheet-hex sheet-hex-1" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1680,8 +1677,8 @@
                                        style="width: 10px; height: 10px"/><span></span>
                                 <div class="sheet-hex sheet-veteran-hex-2" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1692,8 +1689,8 @@
                                        style="width: 10px; height: 10px"/><span></span>
                                 <div class="sheet-hex sheet-veteran-hex-3" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1704,8 +1701,8 @@
                                        style="width: 10px; height: 10px"/>
                                 <div class="sheet-hex sheet-hex-3" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1716,8 +1713,8 @@
                                        style="width: 10px; height: 10px"/>
                                 <div class="sheet-hex sheet-hex-3" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1728,8 +1725,8 @@
                                        style="width: 10px; height: 10px"/>
                                 <div class="sheet-hex sheet-veteran-hex-3" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1740,8 +1737,8 @@
                                        style="width: 10px; height: 10px"/><span></span>
                                 <div class="sheet-hex sheet-veteran-hex-2" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1754,8 +1751,8 @@
                                        style="width: 10px; height: 10px"/><span></span>
                                 <div class="sheet-hex sheet-veteran-hex-2" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1766,8 +1763,8 @@
                                        style="width: 10px; height: 10px"/>
                                 <div class="sheet-hex sheet-hex-2" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1778,8 +1775,8 @@
                                        style="width: 10px; height: 10px"/>
                                 <div class="sheet-hex sheet-veteran-hex-3" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1790,8 +1787,8 @@
                                        style="width: 10px; height: 10px"/>
                                 <div class="sheet-hex sheet-hex-2" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1802,8 +1799,8 @@
                                        style="width: 10px; height: 10px"/><span></span>
                                 <div class="sheet-hex sheet-veteran-hex-2" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1816,8 +1813,8 @@
                                        style="width: 10px; height: 10px"/><span></span>
                                 <div class="sheet-hex sheet-hex-1" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1828,8 +1825,8 @@
                                        style="width: 10px; height: 10px"/>
                                 <div class="sheet-hex sheet-veteran-hex-2" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1840,8 +1837,8 @@
                                        style="width: 10px; height: 10px"/>
                                 <div class="sheet-hex sheet-veteran-hex-2" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1852,8 +1849,8 @@
                                        style="width: 10px; height: 10px"/><span></span>
                                 <div class="sheet-hex sheet-hex-1" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                        <textarea class="no-border"
-                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                    <textarea class="no-border"
+                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1868,12 +1865,12 @@
                     </div>
 
 
-
                 </div>
 
             </div>
 
         </div>
+
     </div>
 
 </div>
@@ -1943,106 +1940,121 @@
     });
 
 
+
+
+
+
+
+
+
+
+
+
+
 </script>
+<div class="rolltemplates" hidden="hidden">
+    <rolltemplate class="sheet-rolltemplate-action">
+        <div class="container">
+            <div style="background-color: #696969">
+                <div><h1 class="tcat-header">{{name}}</h1></div>
+                <div><span class="tcat-subheader">{{subtag1}} {{subtag2}}</span></div>
+            </div>
 
-<rolltemplate class="sheet-rolltemplate-action">
-    <div class="container">
-        <div style="background-color: #696969">
-            <div><h1 class="tcat-header">{{name}}</h1></div>
-            <div><span class="tcat-subheader">{{subtag1}} {{subtag2}}</span></div>
-        </div>
+            {{#target}}
+            <div class="tcat-text">
+                <span class="tcat">Target: </span>{{target}}
+            </div>
+            {{/target}}
+            {{#range}}
+            <div class="tcat-text">
+                <span class="tcat">Range: </span>{{type}} {{range}}
+            </div>
+            {{/range}}
+            {{#speed}}
+            <div class="tcat-text">
+                <span class="tcat">Speed: </span>{{speed}}
+            </div>
+            {{/speed}}
+            {{#description}}
+            <div class="tcat-text">
+                <span class="tcat">Description: </span>{{description}}
+            </div>
+            {{/description}}
 
-        {{#target}}
-        <div class="tcat-text">
-            <span class="tcat">Target: </span>{{target}}
-        </div>
-        {{/target}}
-        {{#range}}
-        <div class="tcat-text">
-            <span class="tcat">Range: </span>{{type}} {{range}}
-        </div>
-        {{/range}}
-        {{#speed}}
-        <div class="tcat-text">
-            <span class="tcat">Speed: </span>{{speed}}
-        </div>
-        {{/speed}}
-        {{#description}}
-        <div class="tcat-text">
-            <span class="tcat">Description: </span>{{description}}
-        </div>
-        {{/description}}
+            <div class="separator"></div>
 
-        <div class="separator"></div>
+            {{#^rollTotal() damage 0}}
+            {{#attack}}
+            {{#^rollTotal() attack 0}}
+            <div class="rowcolor" style="padding-top: 5px;">
+                <span class="tcat">Attack: </span>{{attack}}
+                {{#^rollGreater() attack penetration}}
+                <span style="font-variant: small-caps; font-style: italic; font-weight: bold; font-size: 0.75em;">Piercing</span>
+                {{/^rollGreater() attack penetration}}
+            </div>
+            {{/^rollTotal() attack 0}}
+            {{/attack}}
 
-        {{#^rollTotal() damage 0}}
-        {{#attack}}
-        {{#^rollTotal() attack 0}}
-        <div class="rowcolor">
-            <span class="tcat">Attack: </span>{{attack}}
-        </div>
-        {{/^rollTotal() attack 0}}
-        {{/attack}}
+            <div style="padding-top: 5px;">
+                {{#^rollWasFumble() attack}}
+                <span class="tcat">Damage: </span>{{damage}}
+                {{/^rollWasFumble() attack}}
+                {{#rollWasCrit() attack}}
+                <span class="tcat">Crit: </span>{{dmgcrit}}
+                {{/rollWasCrit() attack}}
+                {{#^rollWasFumble() attack}}
+                {{#rollTotal() against 1}}
+                <span> vs</span>
+                <img style="width: 20px; height: 20px"
+                     src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/shield.png">
+                {{/rollTotal() against 1}}
+                {{#rollTotal() against 2}}
+                <span> vs</span>
+                <img style="width: 20px; height: 20px"
+                     src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
+                {{/rollTotal() against 2}}
+                {{/^rollWasFumble() attack}}
+            </div>
+            {{/^rollTotal() damage 0}}
 
-        <div>
-            {{#^rollWasFumble() attack}}
-            <span class="tcat">Damage: </span>{{damage}}
-            {{/^rollWasFumble() attack}}
-            {{#rollWasCrit() attack}}
-            <span class="tcat">Crit: </span>{{dmgcrit}}
-            {{/rollWasCrit() attack}}
-            {{#^rollWasFumble() attack}}
-            {{#rollTotal() against 1}}
-            <span> vs</span>
-            <img style="width: 20px; height: 20px"
-                 src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/shield.png">
-            {{/rollTotal() against 1}}
-            {{#rollTotal() against 2}}
-            <span> vs</span>
-            <img style="width: 20px; height: 20px"
-                 src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
-            {{/rollTotal() against 2}}
-            {{/^rollWasFumble() attack}}
-        </div>
-        {{/^rollTotal() damage 0}}
+            {{#test}}
+            {{#^rollTotal() test 0}}
+            <div style="padding-top: 5px;">
+                <span class="tcat">Roll: </span>{{test}}
+            </div>
+            {{/^rollTotal() test 0}}
+            {{/test}}
 
-        {{#test}}
-        {{#^rollTotal() test 0}}
-        <div>
-            <span class="tcat">Roll: </span>{{test}}
+            {{#healing}}
+            {{#^rollTotal() healing 0}}
+            <div style="padding-top: 5px;">
+                <span class="tcat">Healing: </span>{{healing}}
+            </div>
+            {{/^rollTotal() healing 0}}
+            {{/healing}}
         </div>
-        {{/^rollTotal() test 0}}
-        {{/test}}
+    </rolltemplate>
+    <rolltemplate class="sheet-rolltemplate-skill">
+        <div class="container">
+            <div style="background-color: #696969">
+                <div><h1 class="tcat-header">{{name}}</h1></div>
+                <div><span class="tcat-subheader">{{subtags}}</span></div>
+            </div>
+            {{#description}}
+            <div class="tcat-text">
+                <span class="tcat">Description: </span>{{description}}
+            </div>
+            <div class="separator"></div>
+            {{/description}}
 
-        {{#healing}}
-        {{#^rollTotal() healing 0}}
-        <div>
-            <span class="tcat">Healing: </span>{{healing}}
+            {{#^rollTotal() no-roll 0}}
+            {{#roll}}
+            <div style="padding-top: 5px;">
+                <span class="tcat">Roll: </span>{{roll}}
+            </div>
+            {{/roll}}
+            {{/^rollTotal() no-roll 0}}
         </div>
-        {{/^rollTotal() healing 0}}
-        {{/healing}}
-    </div>
-</rolltemplate>
+    </rolltemplate>
+</div>
 
-<rolltemplate class="sheet-rolltemplate-skill">
-    <div class="container">
-        <div style="background-color: #696969">
-            <div><h1 class="tcat-header">{{name}}</h1></div>
-            <div><span class="tcat-subheader">{{subtags}}</span></div>
-        </div>
-        {{#description}}
-        <div class="tcat-text">
-            <span class="tcat">Description: </span>{{description}}
-        </div>
-        <div class="separator"></div>
-        {{/description}}
-
-        {{#^rollTotal() no-roll 0}}
-        {{#roll}}
-        <div>
-            <span class="tcat">Roll: </span>{{roll}}
-        </div>
-        {{/roll}}
-        {{/^rollTotal() no-roll 0}}
-    </div>
-</rolltemplate>
