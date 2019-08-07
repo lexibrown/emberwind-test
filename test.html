@@ -424,48 +424,54 @@
                         <input type="hidden" class="maneuver_display_settings_flag"
                                name="attr_maneuver_display_settings_flag"
                                value="hide"/>
-                        <div class="width100 displaySettings action-detail-grid">
+                        <div class="width60 displaySettings action-detail-grid"
+                             style="border: 2px dotted dimgrey; margin-left: 9%">
+                            <div class="row" style="padding: 2px 5px 2px 5px">
+                                <div class="col">
+                                    <div class="cbold">Name:</div>
+                                    <div class="inputNameShort">
+                                        <input type="text" name="attr_maneuver_name"/>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="bold">Associated Skill</div>
+                                    <div>
+                                        <select name="attr_statname" class="selector-fit">
+                                            <option value="">Select</option>
+                                            <option value="Acrobatics">Acrobatics</option>
+                                            <option value="Athletics">Athletics</option>
+                                            <option value="Endurance">Endurance</option>
+                                            <option value="Focus">Focus</option>
+                                            <option value="Fast Talk">Fast Talk</option>
+                                            <option value="Insight">Insight</option>
+                                            <option value="Intimidate">Intimidate</option>
+                                            <option value="Knowledge">Knowledge</option>
+                                            <option value="Leadership">Leadership</option>
+                                            <option value="Mend">Mend</option>
+                                            <option value="Sleight of Hand">Sleight of Hand</option>
+                                            <option value="Stealth">Stealth</option>
+                                        </select>
+                                        <input type="hidden" name="attr_actionmod" value="0">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="bold">Speed</div>
+                                    <div>
+                                        <select class="selector-fit" name="attr_maneuver_speed">
+                                            <option value="">Select</option>
+                                            <option value="Free">Free</option>
+                                            <option value="Fast">Fast</option>
+                                            <option value="Slow">Slow</option>
+                                            <option value="Slow + Fast">Slow + Fast</option>
+                                            <option value="Slow + Slow">Slow + Slow</option>
+                                        </select>
+                                    </div>
+                                </div>
 
-                            <div class="column width25 inlineBlock bold">Name:</div>
-                            <div class="column width75 inlineBlock inputNameShort">
-                                <input type="text" name="attr_maneuver_name"/>
                             </div>
-
-                            <div class="column width25 inlineBlock bold">Associated Skill</div>
-                            <div>
-                                <select name="attr_statname" class="selector-fit">
-                                    <option value="">Select</option>
-                                    <option value="Acrobatics">Acrobatics</option>
-                                    <option value="Athletics">Athletics</option>
-                                    <option value="Endurance">Endurance</option>
-                                    <option value="Focus">Focus</option>
-                                    <option value="Fast Talk">Fast Talk</option>
-                                    <option value="Insight">Insight</option>
-                                    <option value="Intimidate">Intimidate</option>
-                                    <option value="Knowledge">Knowledge</option>
-                                    <option value="Leadership">Leadership</option>
-                                    <option value="Mend">Mend</option>
-                                    <option value="Sleight of Hand">Sleight of Hand</option>
-                                    <option value="Stealth">Stealth</option>
-                                </select>
-                                <input type="hidden" name="attr_actionmod" value="0">
-                            </div>
-
-                            <div class="column width25 inlineBlock bold">Speed</div>
-                            <div>
-                                <select class="selector-fit" name="attr_maneuver_speed">
-                                    <option value="">Select</option>
-                                    <option value="Free">Free</option>
-                                    <option value="Fast">Fast</option>
-                                    <option value="Slow">Slow</option>
-                                    <option value="Slow + Fast">Slow + Fast</option>
-                                    <option value="Slow + Slow">Slow + Slow</option>
-                                </select>
-                            </div>
-
-                            <div class="column width100 bold textSmall">Description</div>
-                            <div class="column width100 resizeVert vertTop">
-                                <textarea class="height50" name="attr_maneuver_description"></textarea>
+                            <div class="row" style="padding: 2px 5px 0 5px">
+                                <div class="bold">Description</div>
+                                <textarea class="height50 width95" name="attr_maneuver_description"></textarea>
                             </div>
                         </div>
                     </div>
@@ -498,43 +504,48 @@
 
                         <input type="hidden" class="melee_display_settings_flag" name="attr_melee_display_settings_flag"
                                value="hide"/>
-                        <div class="width100 displaySettings action-detail-grid">
-
-                            <div class="column width25 inlineBlock bold">Name:</div>
-                            <div class="column width75 inlineBlock inputNameShort">
-                                <input type="text" name="attr_melee_name"/>
+                        <div class="width65 displaySettings action-detail-grid"
+                             style="border: 2px dotted dimgrey; margin-left: 9%">
+                            <div class="row" style="padding: 2px 5px 2px 5px">
+                                <div class="col">
+                                    <div class="bold">Name:</div>
+                                    <div class="inputNameShort">
+                                        <input type="text" name="attr_melee_name"/>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="bold">Target:</div>
+                                    <div class="inputNameShort">
+                                        <input type="text" name="attr_melee_target"/>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="bold">Range:</div>
+                                    <div>
+                                        <input class="small" type="number" name="attr_melee_range">
+                                    </div>
+                                </div>
                             </div>
-
-                            <div class="column width25 inlineBlock bold">Target:</div>
-                            <div class="column width75 inlineBlock inputNameShort">
-                                <input type="text" name="attr_melee_target"/>
-                            </div>
-
-                            <div class="column width25 inlineBlock bold">Range:</div>
-                            <div>
-                                <input class="small" type="number" name="attr_melee_range">
-                            </div>
-
-                            <div>
+                            <div class="row" style="padding: 2px 5px 2px 5px">
                                 <span style="width: auto; font-weight: bold">Damage: </span>
                                 <input style="width: 50px" type="text" name="attr_melee_dice" value="1d6"/>
                                 <span style="width: auto; font-weight: bold"> + </span>
                                 <input style="width: 50px" type="text" name="attr_melee_dice_bonus" value="0"/>
-                            </div>
 
-                            <div>
-                                <span style="width: auto; font-weight: bold">Damage vs. </span>
-                                <input type="radio" name="attr_melee_against" value="1" checked="checked">Toughness</input>
-                                <img style="width: 20px; height: 20px"
-                                     src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/shield.png">
-                                <input type="radio" name="attr_melee_against" value="2">Resistance</input>
-                                <img style="width: 20px; height: 20px"
-                                     src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
+                                <div class="col" style="padding-top: 5px">
+                                    <span style="width: auto; font-weight: bold"> vs. </span>
+                                    <input type="radio" name="attr_melee_against" value="1"
+                                           checked="checked">
+                                    <img style="width: 20px; height: 20px"
+                                         src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/shield.png">
+                                    <input type="radio" name="attr_melee_against" value="2">
+                                    <img style="width: 20px; height: 20px"
+                                         src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
+                                </div>
                             </div>
-
-                            <div class="column width100 bold textSmall">Description</div>
-                            <div class="column width100 resizeVert vertTop">
-                                <textarea class="height50" name="attr_melee_description"></textarea>
+                            <div class="row" style="padding: 2px 5px 0 5px">
+                                <div class="bold">Description</div>
+                                <textarea class="height50 width95" name="attr_melee_description"></textarea>
                             </div>
                         </div>
                     </div>
@@ -563,46 +574,52 @@
                         <input type="hidden" class="ranged_display_settings_flag"
                                name="attr_ranged_display_settings_flag"
                                value="hide"/>
-                        <div class="width100 displaySettings action-detail-grid">
-
-                            <div class="column width25 inlineBlock bold">Name:</div>
-                            <div class="column width75 inlineBlock inputNameShort">
-                                <input type="text" name="attr_ranged_name"/>
+                        <div class="width65 displaySettings action-detail-grid"
+                             style="border: 2px dotted dimgrey; margin-left: 9%">
+                            <div class="row" style="padding: 2px 5px 2px 5px">
+                                <div class="col">
+                                    <div class="bold">Name:</div>
+                                    <div class="inputNameShort">
+                                        <input type="text" name="attr_ranged_name"/>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="bold">Target:</div>
+                                    <div class="inputNameShort">
+                                        <input type="text" name="attr_ranged_target"/>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="bold">Range:</div>
+                                    <div>
+                                        <input class="small" type="number" name="attr_ranged_range">
+                                    </div>
+                                </div>
                             </div>
-
-                            <div class="column width25 inlineBlock bold">Target:</div>
-                            <div class="column width75 inlineBlock inputNameShort">
-                                <input type="text" name="attr_ranged_target"/>
-                            </div>
-
-                            <div class="column width25 inlineBlock bold">Range:</div>
-                            <div>
-                                <input class="small" type="number" name="attr_ranged_range">
-                            </div>
-
-                            <div>
+                            <div class="row" style="padding: 2px 5px 2px 5px">
                                 <span style="width: auto; font-weight: bold">Damage: </span>
                                 <input style="width: 50px" type="text" name="attr_ranged_dice" value="1d6"/>
                                 <span style="width: auto; font-weight: bold"> + </span>
                                 <input style="width: 50px" type="text" name="attr_ranged_dice_bonus" value="0"/>
-                            </div>
 
-                            <div>
-                                <span style="width: auto; font-weight: bold">Damage vs. </span>
-                                <input type="radio" value="1" name="attr_ranged_against" checked="checked">Toughness</input>
-                                <img style="width: 20px; height: 20px"
-                                     src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/shield.png">
-                                <input type="radio" value="2" name="attr_ranged_against">Resistance</input>
-                                <img style="width: 20px; height: 20px"
-                                     src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
+                                <div class="col" style="padding-top: 5px">
+                                    <span style="width: auto; font-weight: bold"> vs. </span>
+                                    <input type="radio" name="attr_ranged_against" value="1"
+                                           checked="checked">
+                                    <img style="width: 20px; height: 20px"
+                                         src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/shield.png">
+                                    <input type="radio" name="attr_ranged_against" value="2">
+                                    <img style="width: 20px; height: 20px"
+                                         src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
+                                </div>
                             </div>
-
-                            <div class="column width100 bold textSmall">Description</div>
-                            <div class="column width100 resizeVert vertTop">
-                                <textarea class="height50" name="attr_ranged_description"></textarea>
+                            <div class="row" style="padding: 2px 5px 0 5px">
+                                <div class="bold">Description</div>
+                                <textarea class="height50 width95" name="attr_ranged_description"></textarea>
                             </div>
                         </div>
                     </div>
+
 
                     <!--        Class Actions Title-->
                     <div class="actions-info-grid">
@@ -655,82 +672,107 @@
                                 </div>
 
                                 <input type="hidden" class="displaySettingsFlag" name="attr_displaySettingsFlag"/>
-                                <div class="width100 displaySettings padLeft">
-                                    <div class="column width25 inlineBlock bold">Name:</div>
-                                    <div class="column width75 inlineBlock inputNameShort">
-                                        <input type="text" name="attr_action_name"/>
+                                <div class="displaySettings width65"
+                                     style="padding-bottom: 5px; border: 2px dotted dimgrey; margin-left: 9%">
+                                    <div class="row" style="padding: 2px 5px 2px 5px">
+                                        <div class="col">
+                                            <div class="bold">Name:</div>
+                                            <div class="inputNameShort">
+                                                <input type="text" name="attr_action_name"/>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="bold">Type:</div>
+                                            <div>
+                                                <select class="selector-fit" name="attr_action_subtype1">
+                                                    <option value="">Select</option>
+                                                    <option value="General">General</option>
+                                                    <option value="Trigger">Trigger</option>
+                                                    <option value="Amplify">Amplify</option>
+                                                    <option value="Sustain">Sustain</option>
+                                                </select>
+                                                <select class="selector-fit" name="attr_action_subtype2">
+                                                    <option value="">Select</option>
+                                                    <option value="Exploit">Exploit</option>
+                                                    <option value="Spell">Spell</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="bold">Speed:</div>
+                                            <select class="selector-fit" name="attr_action_speed">
+                                                <option value="">Select</option>
+                                                <option value="Free">Free</option>
+                                                <option value="Fast">Fast</option>
+                                                <option value="Slow">Slow</option>
+                                                <option value="Slow + Fast">Slow + Fast</option>
+                                                <option value="Slow + Slow">Slow + Slow</option>
+                                            </select>
+                                        </div>
                                     </div>
-
-                                    <div class="column width25 inlineBlock bold">Type:</div>
-                                    <div>
-                                        <select class="selector-fit" name="attr_action_subtype1">
-                                            <option value="">Select</option>
-                                            <option value="General">General</option>
-                                            <option value="Trigger">Trigger</option>
-                                            <option value="Amplify">Amplify</option>
-                                            <option value="Sustain">Sustain</option>
-                                        </select>
-                                        <select class="selector-fit" name="attr_action_subtype2">
-                                            <option value="">Select</option>
-                                            <option value="Exploit">Exploit</option>
-                                            <option value="Spell">Spell</option>
-                                        </select>
+                                    <div class="row" style="padding: 2px 5px 2px 5px">
+                                        <div class="col">
+                                            <div class="bold">Target:</div>
+                                            <div class="inputNameShort">
+                                                <input type="text" name="attr_action_target"/>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="bold">Range:</div>
+                                            <div>
+                                                <select class="selector-fit" name="attr_action_type">
+                                                    <option value="">Select</option>
+                                                    <option value="Ranged">Ranged</option>
+                                                    <option value="Melee">Melee</option>
+                                                </select>
+                                                <input class="small" type="number" name="attr_action_range">
+                                            </div>
+                                        </div>
+                                        <!--                                        <div class="col">-->
+                                        <!--                                            <div class="bold">Range2:</div>-->
+                                        <!--                                            <div>-->
+                                        <!--                                                <select class="selector-fit" name="attr_action_type2">-->
+                                        <!--                                                    <option value="">Select</option>-->
+                                        <!--                                                    <option value="Ranged">Ranged</option>-->
+                                        <!--                                                    <option value="Melee">Melee</option>-->
+                                        <!--                                                </select>-->
+                                        <!--                                                <input class="small" type="number" name="attr_action_range2">-->
+                                        <!--                                            </div>-->
+                                        <!--                                        </div>-->
                                     </div>
-
-                                    <div class="column width25 inlineBlock bold">Target:</div>
-                                    <div class="column width75 inlineBlock inputNameShort">
-                                        <input type="text" name="attr_action_target"/>
-                                    </div>
-
-
-                                    <div class="column width25 inlineBlock bold">Type/Range:</div>
-                                    <div>
-                                        <select class="selector-fit" name="attr_action_type">
-                                            <option value="">Select</option>
-                                            <option value="Ranged">Ranged</option>
-                                            <option value="Melee">Melee</option>
-                                        </select>
-                                        <input class="small" type="number" name="attr_action_range">
-                                    </div>
-                                    <div class="column width25 inlineBlock bold">Speed</div>
-                                    <div>
-                                        <select class="selector-fit" name="attr_action_speed">
-                                            <option value="">Select</option>
-                                            <option value="Free">Free</option>
-                                            <option value="Fast">Fast</option>
-                                            <option value="Slow">Slow</option>
-                                            <option value="Slow + Fast">Slow + Fast</option>
-                                            <option value="Slow + Slow">Slow + Slow</option>
-                                        </select>
-                                    </div>
-
-                                    <div>
+                                    <div class="row" style="padding: 2px 5px 2px 5px">
                                         <span style="width: auto; font-weight: bold">Damage: </span>
                                         <input style="width: 50px" type="text" name="attr_action_dice"
                                                placeholder="1d6"/>
                                         <span style="width: auto; font-weight: bold"> + </span>
-                                        <input style="width: 50px" type="text" name="attr_action_dice_bonus" value="0"/>
+                                        <input style="width: 50px" type="text" name="attr_action_dice_bonus"
+                                               value="0"/>
+                                        <div class="col" style="padding-top: 5px">
+                                            <span style="width: auto; font-weight: bold"> vs. </span>
+                                            <input type="radio" value="1"
+                                                   name="attr_action_against">
+                                            <img style="width: 20px; height: 20px"
+                                                 src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/shield.png">
+                                            <input type="radio" value="2"
+                                                   name="attr_action_against">
+                                            <img style="width: 20px; height: 20px"
+                                                 src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
+                                            <input type="radio" value="0" name="attr_action_against" checked="checked">
+                                            <span style="font-family: Pictos">D</span>
+                                        </div>
 
+                                    </div>
+                                    <div class="row" style="padding: 2px 5px 2px 5px">
                                         <span style="width: auto; font-weight: bold">Healing: </span>
                                         <input style="width: 50px" type="text" name="attr_action_healing_dice"
                                                placeholder="1d6"/>
+                                        <span style="width: auto; font-weight: bold"> + </span>
+                                        <input style="width: 50px" type="text" name="attr_action_healing_dice_bonus"
+                                               value="0"/>
                                     </div>
-
-                                    <div>
-                                        <span style="width: auto; font-weight: bold">Damage vs. </span>
-                                        <input type="radio" value="1" name="attr_action_against">Toughness</input>
-                                        <img style="width: 20px; height: 20px"
-                                             src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/shield.png">
-                                        <input type="radio" value="2" name="attr_action_against">Resistance</input>
-                                        <img style="width: 20px; height: 20px"
-                                             src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
-                                        <input type="radio" value="0" name="attr_action_against"
-                                               checked="checked">None</input>
-                                    </div>
-
-                                    <div class="column width100 bold textSmall">Description</div>
-                                    <div class="column width100 resizeVert vertTop">
-                                        <textarea class="height50" name="attr_action_description"></textarea>
+                                    <div class="row" style="padding: 2px 5px 0 5px;">
+                                        <div class="bold">Description:</div>
+                                        <textarea class="height50 width95" name="attr_action_description"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -789,86 +831,116 @@
                                 </div>
 
                                 <input type="hidden" class="displaySettingsFlag" name="attr_displaySettingsFlag"/>
-                                <div class="width100 displaySettings padLeft">
-                                    <div class="column width25 inlineBlock bold">Name:</div>
-                                    <div class="column width75 inlineBlock inputNameShort">
-                                        <input type="text" name="attr_tide_action_name"/>
+                                <div class="displaySettings width65"
+                                     style="padding-bottom: 5px; border: 2px dotted dimgrey; margin-left: 9%">
+                                    <div class="row" style="padding: 2px 5px 2px 5px">
+                                        <div class="col">
+                                            <div class="bold">Name:</div>
+                                            <div class="inputNameShort">
+                                                <input type="text" name="attr_tide_action_name"/>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="bold">Type:</div>
+                                            <div>
+                                                <select class="selector-fit" name="attr_tide_action_subtype1">
+                                                    <option value="">Select</option>
+                                                    <option value="General">General</option>
+                                                    <option value="Trigger">Trigger</option>
+                                                    <option value="Amplify">Amplify</option>
+                                                    <option value="Sustain">Sustain</option>
+                                                </select>
+                                                <select class="selector-fit" name="attr_tide_action_subtype2">
+                                                    <option value="">Select</option>
+                                                    <option value="Exploit">Exploit</option>
+                                                    <option value="Spell">Spell</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="bold">Speed:</div>
+                                            <select class="selector-fit" name="attr_tide_action_speed">
+                                                <option value="">Select</option>
+                                                <option value="Free">Free</option>
+                                                <option value="Fast">Fast</option>
+                                                <option value="Slow">Slow</option>
+                                                <option value="Slow + Fast">Slow + Fast</option>
+                                                <option value="Slow + Slow">Slow + Slow</option>
+                                            </select>
+                                        </div>
                                     </div>
 
-                                    <div class="column width25 inlineBlock bold">Type:</div>
-                                    <div>
-                                        <select class="selector-fit" name="attr_tide_action_subtype1">
-                                            <option value="">Select</option>
-                                            <option value="General">General</option>
-                                            <option value="Trigger">Trigger</option>
-                                            <option value="Amplify">Amplify</option>
-                                            <option value="Sustain">Sustain</option>
-                                        </select>
-                                        <select class="selector-fit" name="attr_tide_action_subtype2">
-                                            <option value="">Select</option>
-                                            <option value="Exploit">Exploit</option>
-                                            <option value="Spell">Spell</option>
-                                        </select>
+                                    <div class="row" style="padding: 2px 5px 2px 5px">
+                                        <div class="col">
+                                            <div class="bold">Target:</div>
+                                            <div class="inputNameShort">
+                                                <input type="text" name="attr_tide_action_target"/>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="bold">Range:</div>
+                                            <div>
+                                                <select class="selector-fit" name="attr_tide_action_type">
+                                                    <option value="">Select</option>
+                                                    <option value="Ranged">Ranged</option>
+                                                    <option value="Melee">Melee</option>
+                                                </select>
+                                                <input class="small" type="number" name="attr_tide_action_range">
+                                            </div>
+                                        </div>
+                                        <!--                                        <div class="col">-->
+                                        <!--                                            <div class="bold">Range2:</div>-->
+                                        <!--                                            <div>-->
+                                        <!--                                                <select class="selector-fit" name="attr_tide_action_type2">-->
+                                        <!--                                                    <option value="">Select</option>-->
+                                        <!--                                                    <option value="Ranged">Ranged</option>-->
+                                        <!--                                                    <option value="Melee">Melee</option>-->
+                                        <!--                                                </select>-->
+                                        <!--                                                <input class="small" type="number" name="attr_tide_action_range2">-->
+                                        <!--                                            </div>-->
+                                        <!--                                        </div>-->
                                     </div>
 
-                                    <div class="column width25 inlineBlock bold">Target:</div>
-                                    <div class="column width75 inlineBlock inputNameShort">
-                                        <input type="text" name="attr_tide_action_target"/>
-                                    </div>
-
-
-                                    <div class="column width25 inlineBlock bold">Type/Range:</div>
-                                    <div>
-                                        <select class="selector-fit" name="attr_tide_action_type">
-                                            <option value="">Select</option>
-                                            <option value="Ranged">Ranged</option>
-                                            <option value="Melee">Melee</option>
-                                        </select>
-                                        <input class="small" type="number" name="attr_tide_action_range">
-                                    </div>
-                                    <div class="column width25 inlineBlock bold">Speed</div>
-                                    <div>
-                                        <select class="selector-fit" name="attr_tide_action_speed">
-                                            <option value="">Select</option>
-                                            <option value="Free">Free</option>
-                                            <option value="Fast">Fast</option>
-                                            <option value="Slow">Slow</option>
-                                            <option value="Slow + Fast">Slow + Fast</option>
-                                            <option value="Slow + Slow">Slow + Slow</option>
-                                        </select>
-                                    </div>
-
-                                    <div>
+                                    <div class="row" style="padding: 2px 5px 2px 5px">
                                         <span style="width: auto; font-weight: bold">Damage: </span>
                                         <input style="width: 50px" type="text" name="attr_tide_action_dice"
-                                               value="1d6"/>
+                                               placeholder="1d6"/>
                                         <span style="width: auto; font-weight: bold"> + </span>
                                         <input style="width: 50px" type="text" name="attr_tide_action_dice_bonus"
                                                value="0"/>
+                                        <div class="col" style="padding-top: 5px">
+                                            <span style="width: auto; font-weight: bold"> vs. </span>
+                                            <input type="radio" value="1"
+                                                   name="attr_tide_action_against">
+                                            <img style="width: 20px; height: 20px"
+                                                 src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/shield.png">
+                                            <input type="radio" value="2"
+                                                   name="attr_tide_action_against">
+                                            <img style="width: 20px; height: 20px"
+                                                 src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
+                                            <input type="radio" value="0" name="attr_tide_action_against"
+                                                   checked="checked">
+                                            <span style="font-family: Pictos">D</span>
+                                        </div>
 
+                                    </div>
+
+                                    <div class="row" style="padding: 2px 5px 2px 5px">
                                         <span style="width: auto; font-weight: bold">Healing: </span>
                                         <input style="width: 50px" type="text" name="attr_tide_action_healing_dice"
-                                               value="1d6"/>
+                                               placeholder="1d6"/>
+                                        <span style="width: auto; font-weight: bold"> + </span>
+                                        <input style="width: 50px" type="text"
+                                               name="attr_tide_action_healing_dice_bonus"
+                                               value="0"/>
                                     </div>
 
-                                    <div>
-                                        <span style="width: auto; font-weight: bold">Damage vs. </span>
-                                        <input type="radio" value="1"
-                                               name="attr_tide_action_against">Toughness</input>
-                                        <img style="width: 20px; height: 20px"
-                                             src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/shield.png">
-                                        <input type="radio" value="2"
-                                               name="attr_tide_action_against">Resistance</input>
-                                        <img style="width: 20px; height: 20px"
-                                             src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
-                                        <input type="radio" value="0" name="attr_tide_action_against"
-                                               checked="checked">None</input>
+                                    <div class="row" style="padding: 2px 5px 0 5px;">
+                                        <div class="bold">Description:</div>
+                                        <textarea class="height50 width95"
+                                                  name="attr_tide_action_description"></textarea>
                                     </div>
 
-                                    <div class="column width100 bold textSmall">Description</div>
-                                    <div class="column width100 resizeVert vertTop">
-                                        <textarea class="height50" name="attr_tide_action_description"></textarea>
-                                    </div>
                                 </div>
                             </div>
                         </fieldset>
@@ -1010,8 +1082,6 @@
 
                     <div class="inventory-header">HISTORY</div>
                     <textarea name="attr_bio_history"></textarea>
-
-
                 </div>
             </div>
 
@@ -1938,6 +2008,12 @@
             });
         });
     });
+
+
+
+
+
+
 
 
 
