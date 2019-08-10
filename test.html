@@ -409,7 +409,7 @@
                                            checked="checked" style="width: 25px; height: 25px"/>
                                     <span>y</span>
                                     <button type='roll' name='roll_skill' style="font-size: 1.2em;"
-                                            value='@{whisper_state}&{template:skill} {{name=@{maneuver_name}}} {{subtags=@{statname}}} {{no-roll=[[@{actionmod}]]}} {{roll=[[d20cs<@{actionmod}cf>@{actionmod}]]}} {{description=@{maneuver_description}}}'>
+                                            value='@{whisper_state}&{template:skill} {{name=@{maneuver_name}}} {{subtags=@{statname}}} {{no-roll=[[@{actionmod}]]}} {{roll=[[d20cs<@{actionmod}cf>@{actionmod}]]}} {{speed=@{maneuver_speed}}} {{description=@{maneuver_description}}}'>
                                     </button>
                                 </div>
                             </div>
@@ -424,8 +424,7 @@
                         <input type="hidden" class="maneuver_display_settings_flag"
                                name="attr_maneuver_display_settings_flag"
                                value="hide"/>
-                        <div class="width60 displaySettings action-detail-grid"
-                             style="border: 2px dotted dimgrey; margin-left: 9%">
+                        <div class="width60 displaySettings action-detail-grid">
                             <div class="row" style="padding: 2px 5px 2px 5px">
                                 <div class="col">
                                     <div class="cbold">Name:</div>
@@ -489,8 +488,8 @@
                                     <input class="settings" type="checkbox" name="attr_melee_settings_flag" value="on"
                                            checked="checked" style="width: 25px; height: 25px"/>
                                     <span>y</span>
-                                    <button type='roll' name='roll_attack'
-                                            value='@{whisper_state}&{template:action} {{name=@{melee_name}}} {{attack=[[d20cs<@{critical}cf>@{accuracy}]]}} {{damage=[[0@{melee_dice} + @{melee_dice_bonus}]]}} {{penetration=[[@{penetration}]]}} {{dmgcrit=[[10@{melee_dice}kh1*[[@{melee_dice}>1]]+@{melee_dice_bonus}]]}} {{speed=Slow}} {{type=Melee}} {{range=@{melee_range}}} {{target=@{melee_target}}} {{description=@{melee_description}}} {{against=[[@{melee_against}]]}}'>
+                                    <button type='roll' name='roll_cap'
+                                            value='@{whisper_state}&{template:basic-action} {{name=@{melee_name}}} {{cap=[[d20cs<@{critical}cf>@{accuracy}]]}} {{damage=[[0@{melee_dice} + @{melee_dice_bonus}]]}} {{penetration=[[@{penetration}]]}} {{dmgcrit=[[10@{melee_dice}kh1*[[@{melee_dice}>1]]+@{melee_dice_bonus}]]}} {{speed=Slow}} {{type=Melee}} {{range=@{melee_range}}} {{target=@{melee_target}}} {{description=@{melee_description}}} {{against=[[@{melee_against}]]}}'>
                                     </button>
                                 </div>
                             </div>
@@ -504,8 +503,7 @@
 
                         <input type="hidden" class="melee_display_settings_flag" name="attr_melee_display_settings_flag"
                                value="hide"/>
-                        <div class="width65 displaySettings action-detail-grid"
-                             style="border: 2px dotted dimgrey; margin-left: 9%">
+                        <div class="width65 displaySettings action-detail-grid">
                             <div class="row" style="padding: 2px 5px 2px 5px">
                                 <div class="col">
                                     <div class="bold">Name:</div>
@@ -558,8 +556,8 @@
                                     <input class="settings" type="checkbox" name="attr_ranged_settings_flag" value="on"
                                            checked="checked" style="width: 25px; height: 25px"/>
                                     <span>y</span>
-                                    <button type='roll' name='roll_attack'
-                                            value='@{whisper_state}&{template:action} {{name=@{ranged_name}}} {{attack=[[d20cs<@{critical}cf>@{accuracy}]]}} {{damage=[[0@{ranged_dice} + @{ranged_dice_bonus}]]}} {{penetration=[[@{penetration}]]}} {{dmgcrit=[[10@{melee_dice}kh1*[[@{melee_dice}>1]]+@{melee_dice_bonus}]]}} {{speed=Slow}} {{type=Ranged}} {{range=@{ranged_range}}} {{target=@{ranged_target}}} {{description=@{ranged_description}}} {{against=[[@{ranged_against}]]}}'>
+                                    <button type='roll' name='roll_cap'
+                                            value='@{whisper_state}&{template:basic-action} {{name=@{ranged_name}}} {{cap=[[d20cs<@{critical}cf>@{accuracy}]]}} {{damage=[[0@{ranged_dice} + @{ranged_dice_bonus}]]}} {{penetration=[[@{penetration}]]}} {{dmgcrit=[[10@{melee_dice}kh1*[[@{melee_dice}>1]]+@{melee_dice_bonus}]]}} {{speed=Slow}} {{type=Ranged}} {{range=@{ranged_range}}} {{target=@{ranged_target}}} {{description=@{ranged_description}}} {{against=[[@{ranged_against}]]}}'>
                                     </button>
                                 </div>
                             </div>
@@ -574,8 +572,7 @@
                         <input type="hidden" class="ranged_display_settings_flag"
                                name="attr_ranged_display_settings_flag"
                                value="hide"/>
-                        <div class="width65 displaySettings action-detail-grid"
-                             style="border: 2px dotted dimgrey; margin-left: 9%">
+                        <div class="width65 displaySettings action-detail-grid">
                             <div class="row" style="padding: 2px 5px 2px 5px">
                                 <div class="col">
                                     <div class="bold">Name:</div>
@@ -646,7 +643,7 @@
                                             <span>y</span>
                                         </div>
                                         <button type='roll' name='roll_action'
-                                                value='@{whisper_state}&{template:action} {{name=@{action_name}}} {{subtag1=@{action_subtype1}}} {{subtag2=@{action_subtype2}}} {{attack=[[d20cs<@{critical}cf>@{accuracy}]]}} {{damage=[[0@{action_dice} + @{action_dice_bonus}]]}} {{penetration=[[@{penetration}]]}} {{dmgcrit=[[10@{melee_dice}kh1*[[@{melee_dice}>1]]+@{melee_dice_bonus}]]}} {{against=[[@{action_against}]]}} {{healing=[[0@{action_healing_dice}]]}} {{speed=@{action_speed}}} {{target=@{action_target}}} {{type=@{action_type}}} {{description=@{action_description}}} {{range=@{action_range}}}'>
+                                                value='@{whisper_state}&{template:action} {{name=@{action_name}}} {{subtag1=@{action_subtype1}}} {{subtag2=@{action_subtype2}}} {{rollType=[[@{action_roll_type}]]}} {{cap=[[d20cs<@{critical}cf>@{accuracy}]]}} {{damage=[[0@{action_dice} + @{action_dice_bonus}]]}} {{penetration=[[@{penetration}]]}} {{dmgcrit=[[10@{melee_dice}kh1*[[@{melee_dice}>1]]+@{melee_dice_bonus}]]}} {{against=[[@{action_against}]]}} {{healing=[[0@{action_healing_dice}]]}} {{speed=@{action_speed}}} {{target=@{action_target}}} {{type=@{action_type}}} {{description=@{action_description}}} {{range=@{action_range}}}'>
                                         </button>
                                     </div>
 
@@ -672,8 +669,7 @@
                                 </div>
 
                                 <input type="hidden" class="displaySettingsFlag" name="attr_displaySettingsFlag"/>
-                                <div class="displaySettings width65"
-                                     style="padding-bottom: 5px; border: 2px dotted dimgrey; margin-left: 9%">
+                                <div class="displaySettings width65">
                                     <div class="row" style="padding: 2px 5px 2px 5px">
                                         <div class="col">
                                             <div class="bold">Name:</div>
@@ -690,6 +686,7 @@
                                                     <option value="Trigger">Trigger</option>
                                                     <option value="Amplify">Amplify</option>
                                                     <option value="Sustain">Sustain</option>
+                                                    <option value="Passive">Passive</option>
                                                 </select>
                                                 <select class="selector-fit" name="attr_action_subtype2">
                                                     <option value="">Select</option>
@@ -740,36 +737,64 @@
                                         <!--                                            </div>-->
                                         <!--                                        </div>-->
                                     </div>
-                                    <div class="row" style="padding: 2px 5px 2px 5px">
-                                        <span style="width: auto; font-weight: bold">Damage: </span>
-                                        <input style="width: 50px" type="text" name="attr_action_dice"
-                                               placeholder="1d6"/>
-                                        <span style="width: auto; font-weight: bold"> + </span>
-                                        <input style="width: 50px" type="text" name="attr_action_dice_bonus"
-                                               value="0"/>
-                                        <div class="col" style="padding-top: 5px">
-                                            <span style="width: auto; font-weight: bold"> vs. </span>
-                                            <input type="radio" value="1"
-                                                   name="attr_action_against">
-                                            <img style="width: 20px; height: 20px"
-                                                 src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/shield.png">
-                                            <input type="radio" value="2"
-                                                   name="attr_action_against">
-                                            <img style="width: 20px; height: 20px"
-                                                 src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
-                                            <input type="radio" value="0" name="attr_action_against" checked="checked">
-                                            <span style="font-family: Pictos">D</span>
+
+                                    <div class="row" style="padding: 2px 5px 2px 5px;">
+
+                                        <input class="roll-control" type="hidden" name="attr_action_roll_type"
+                                               value="0">
+                                        <div class="flex-center" style="background-color: #696969; color: white">
+                                            <span style="width: auto; font-weight: bold; padding-right: 20px">Default
+                                                <input type="radio" value="0" name="attr_action_roll_type" checked>
+                                            </span>
+
+                                            <span style="width: auto; font-weight: bold; padding-right: 20px">CAP
+                                                <input type="radio" value="1" name="attr_action_roll_type">
+                                            </span>
+
+                                            <span style="width: auto; font-weight: bold; padding-right: 20px">Auto-hit
+                                                <input type="radio" value="2" name="attr_action_roll_type">
+                                            </span>
+
+                                            <span style="width: auto; font-weight: bold; padding-right: 20px">Heal
+                                                <input type="radio" value="3" name="attr_action_roll_type">
+                                            </span>
+
+                                            <span style="width: auto; font-weight: bold">None
+                                                <input type="radio" value="-1" name="attr_action_roll_type">
+                                            </span>
+                                        </div>
+
+                                        <div class="action-damage" style="padding: 2px 5px 2px 5px">
+                                            <span style="width: auto; font-weight: bold">Damage: </span>
+                                            <input style="width: 50px" type="text" name="attr_action_dice"
+                                                   value="1d6"/>
+                                            <span style="width: auto; font-weight: bold"> + </span>
+                                            <input style="width: 50px" type="text" name="attr_action_dice_bonus"
+                                                   value="0"/>
+                                            <div class="col" style="padding-top: 5px">
+                                                <span style="width: auto; font-weight: bold"> vs. </span>
+                                                <input type="radio" value="1"
+                                                       name="attr_action_against" checked>
+                                                <img style="width: 20px; height: 20px"
+                                                     src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/shield.png">
+                                                <input type="radio" value="2"
+                                                       name="attr_action_against">
+                                                <img style="width: 20px; height: 20px"
+                                                     src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
+                                            </div>
+
+                                        </div>
+                                        <div class="action-healing" style="padding: 2px 5px 2px 5px">
+                                            <span style="width: auto; font-weight: bold">Healing: </span>
+                                            <input style="width: 50px" type="text" name="attr_action_healing_dice"
+                                                   value="1d6"/>
+                                            <span style="width: auto; font-weight: bold"> + </span>
+                                            <input style="width: 50px" type="text" name="attr_action_healing_dice_bonus"
+                                                   value="0"/>
                                         </div>
 
                                     </div>
-                                    <div class="row" style="padding: 2px 5px 2px 5px">
-                                        <span style="width: auto; font-weight: bold">Healing: </span>
-                                        <input style="width: 50px" type="text" name="attr_action_healing_dice"
-                                               placeholder="1d6"/>
-                                        <span style="width: auto; font-weight: bold"> + </span>
-                                        <input style="width: 50px" type="text" name="attr_action_healing_dice_bonus"
-                                               value="0"/>
-                                    </div>
+
                                     <div class="row" style="padding: 2px 5px 0 5px;">
                                         <div class="bold">Description:</div>
                                         <textarea class="height50 width95" name="attr_action_description"></textarea>
@@ -803,7 +828,7 @@
                                             <span>y</span>
                                         </div>
                                         <button type='roll' name='roll_action'
-                                                value='@{whisper_state}&{template:action} {{name=@{tide_action_name}}} {{subtag1=@{tide_action_subtype1}}} {{subtag2=@{tide_action_subtype2}}} {{attack=[[d20cs<@{critical}cf>@{accuracy}]]}} {{damage=[[0@{tide_action_dice} + @{tide_action_dice_bonus}]]}} {{penetration=[[@{penetration}]]}} {{dmgcrit=[[10@{melee_dice}kh1*[[@{melee_dice}>1]]+@{melee_dice_bonus}]]}} {{against=[[@{tide_action_against}]]}} {{healing=[[0@{tide_action_healing_dice}]]}} {{speed=@{tide_action_speed}}} {{target=@{tide_action_target}}} {{type=@{tide_action_type}}} {{description=@{tide_action_description}}} {{range=@{tide_action_range}}}'>
+                                                value='@{whisper_state}&{template:action} {{name=@{tide_action_name}}} {{subtag1=@{tide_action_subtype1}}} {{subtag2=@{tide_action_subtype2}}} {{rollType=[[@{tide_action_roll_type}]]}} {{cap=[[d20cs<@{critical}cf>@{accuracy}]]}} {{damage=[[0@{tide_action_dice} + @{tide_action_dice_bonus}]]}} {{penetration=[[@{penetration}]]}} {{dmgcrit=[[10@{melee_dice}kh1*[[@{melee_dice}>1]]+@{melee_dice_bonus}]]}} {{against=[[@{tide_action_against}]]}} {{healing=[[0@{tide_action_healing_dice}]]}} {{speed=@{tide_action_speed}}} {{target=@{tide_action_target}}} {{type=@{tide_action_type}}} {{description=@{tide_action_description}}} {{range=@{tide_action_range}}}'>
                                         </button>
                                     </div>
 
@@ -831,8 +856,7 @@
                                 </div>
 
                                 <input type="hidden" class="displaySettingsFlag" name="attr_displaySettingsFlag"/>
-                                <div class="displaySettings width65"
-                                     style="padding-bottom: 5px; border: 2px dotted dimgrey; margin-left: 9%">
+                                <div class="displaySettings width65">
                                     <div class="row" style="padding: 2px 5px 2px 5px">
                                         <div class="col">
                                             <div class="bold">Name:</div>
@@ -901,38 +925,60 @@
                                         <!--                                        </div>-->
                                     </div>
 
-                                    <div class="row" style="padding: 2px 5px 2px 5px">
-                                        <span style="width: auto; font-weight: bold">Damage: </span>
-                                        <input style="width: 50px" type="text" name="attr_tide_action_dice"
-                                               placeholder="1d6"/>
-                                        <span style="width: auto; font-weight: bold"> + </span>
-                                        <input style="width: 50px" type="text" name="attr_tide_action_dice_bonus"
-                                               value="0"/>
-                                        <div class="col" style="padding-top: 5px">
-                                            <span style="width: auto; font-weight: bold"> vs. </span>
-                                            <input type="radio" value="1"
-                                                   name="attr_tide_action_against">
-                                            <img style="width: 20px; height: 20px"
-                                                 src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/shield.png">
-                                            <input type="radio" value="2"
-                                                   name="attr_tide_action_against">
-                                            <img style="width: 20px; height: 20px"
-                                                 src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
-                                            <input type="radio" value="0" name="attr_tide_action_against"
-                                                   checked="checked">
-                                            <span style="font-family: Pictos">D</span>
+                                    <div class="row" style="padding: 2px 5px 2px 5px;">
+
+                                        <input class="roll-control" type="hidden" name="attr_tide_action_roll_type"
+                                               value="0">
+                                        <div class="flex-center" style="background-color: #696969; color: white">
+                                            <span style="width: auto; font-weight: bold; padding-right: 20px">Default
+                                                <input type="radio" value="0" name="attr_tide_action_roll_type" checked>
+                                            </span>
+
+                                            <span style="width: auto; font-weight: bold; padding-right: 20px">CAP
+                                                <input type="radio" value="1" name="attr_tide_action_roll_type">
+                                            </span>
+
+                                            <span style="width: auto; font-weight: bold; padding-right: 20px">Auto-hit
+                                                <input type="radio" value="2" name="attr_tide_action_roll_type">
+                                            </span>
+
+                                            <span style="width: auto; font-weight: bold; padding-right: 20px">Heal
+                                                <input type="radio" value="3" name="attr_tide_action_roll_type">
+                                            </span>
+
+                                            <span style="width: auto; font-weight: bold">None
+                                                <input type="radio" value="-1" name="attr_tide_action_roll_type">
+                                            </span>
                                         </div>
 
-                                    </div>
+                                        <div class="action-damage" style="padding: 2px 5px 2px 5px">
+                                            <span style="width: auto; font-weight: bold">Damage: </span>
+                                            <input style="width: 50px" type="text" name="attr_tide_action_dice"
+                                                   value="1d6"/>
+                                            <span style="width: auto; font-weight: bold"> + </span>
+                                            <input style="width: 50px" type="text" name="attr_tide_action_dice_bonus"
+                                                   value="0"/>
+                                            <div class="col" style="padding-top: 5px">
+                                                <span style="width: auto; font-weight: bold"> vs. </span>
+                                                <input type="radio" value="1"
+                                                       name="attr_tide_action_against" checked>
+                                                <img style="width: 20px; height: 20px"
+                                                     src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/shield.png">
+                                                <input type="radio" value="2"
+                                                       name="attr_tide_action_against">
+                                                <img style="width: 20px; height: 20px"
+                                                     src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
+                                            </div>
+                                        </div>
 
-                                    <div class="row" style="padding: 2px 5px 2px 5px">
-                                        <span style="width: auto; font-weight: bold">Healing: </span>
-                                        <input style="width: 50px" type="text" name="attr_tide_action_healing_dice"
-                                               placeholder="1d6"/>
-                                        <span style="width: auto; font-weight: bold"> + </span>
-                                        <input style="width: 50px" type="text"
-                                               name="attr_tide_action_healing_dice_bonus"
-                                               value="0"/>
+                                        <div class="action-healing" style="padding: 2px 5px 2px 5px">
+                                            <span style="width: auto; font-weight: bold">Healing: </span>
+                                            <input style="width: 50px" type="text" name="attr_tide_action_healing_dice"
+                                                   value="1d6"/>
+                                            <span style="width: auto; font-weight: bold"> + </span>
+                                            <input style="width: 50px" type="text" name="attr_tide_action_healing_dice_bonus"
+                                                   value="0"/>
+                                        </div>
                                     </div>
 
                                     <div class="row" style="padding: 2px 5px 0 5px;">
@@ -967,16 +1013,16 @@
                             <span>Melee:</span>
                             <select class="selector-fit" name="attr_melee_weapon">
                                 <option value="">Select</option>
-                                <option value="Free">Sword [1H]</option>
-                                <option value="Fast">Sword [2H]</option>
-                                <option value="Slow">Mace [1H]</option>
-                                <option value="Free">Mace [2H]</option>
-                                <option value="Fast">Axe [1H]</option>
-                                <option value="Slow">Axe [2H]</option>
-                                <option value="Free">Pole-arm [1H]</option>
-                                <option value="Fast">Pole-arm [2H]</option>
-                                <option value="Slow">Sceptre [1H]</option>
-                                <option value="Slow">Staff [2H]</option>
+                                <option value="sword_1h">Sword [1H]</option>
+                                <option value="sword_2h">Sword [2H]</option>
+                                <option value="mace_1h">Mace [1H]</option>
+                                <option value="mace_2h">Mace [2H]</option>
+                                <option value="axe_1h">Axe [1H]</option>
+                                <option value="axe_2h">Axe [2H]</option>
+                                <option value="polearm_1h">Pole-arm [1H]</option>
+                                <option value="polearm_2h">Pole-arm [2H]</option>
+                                <option value="sceptre_1h">Sceptre [1H]</option>
+                                <option value="staff_2h">Staff [2H]</option>
                             </select>
                         </div>
                         <div class="col">
@@ -2027,8 +2073,79 @@
 
 
 
+
+
+
+
+
 </script>
 <div class="rolltemplates" hidden="hidden">
+    <rolltemplate class="sheet-rolltemplate-basic-action">
+        <div class="container">
+            <div style="background-color: #696969">
+                <div><h1 class="tcat-header">{{name}}</h1></div>
+                <div><span class="tcat-subheader">{{subtag1}} {{subtag2}}</span></div>
+            </div>
+
+            {{#target}}
+            <div class="tcat-text">
+                <span class="tcat">Target: </span>{{target}}
+            </div>
+            {{/target}}
+            {{#range}}
+            <div class="tcat-text">
+                <span class="tcat">Range: </span>{{type}} {{range}}
+            </div>
+            {{/range}}
+            {{#speed}}
+            <div class="tcat-text">
+                <span class="tcat">Speed: </span>{{speed}}
+            </div>
+            {{/speed}}
+            {{#description}}
+            <div class="tcat-text">
+                <span class="tcat">Description: </span>{{description}}
+            </div>
+            {{/description}}
+
+            <div class="separator"></div>
+
+            {{#cap}}
+            {{#^rollTotal() cap 0}}
+            <div class="rowcolor" style="padding-top: 5px;">
+                <span class="tcat">CAP: </span>{{cap}}
+                {{#^rollGreater() cap penetration}}
+                <span style="font-variant: small-caps; font-style: italic; font-weight: bold; font-size: 0.75em;">Piercing</span>
+                {{/^rollGreater() cap penetration}}
+            </div>
+            {{/^rollTotal() cap 0}}
+            {{/cap}}
+
+            {{#^rollTotal() damage 0}}
+            {{#^rollWasFumble() cap}}
+            <div style="padding-top: 5px;">
+                <span class="tcat">Damage: </span>{{damage}}
+                {{/^rollWasFumble() cap}}
+                {{#rollWasCrit() cap}}
+                <span class="tcat">Crit: </span>{{dmgcrit}}
+                {{/rollWasCrit() cap}}
+                {{#^rollWasFumble() cap}}
+                {{#rollTotal() against 1}}
+                <span> vs</span>
+                <img style="width: 20px; height: 20px"
+                     src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/shield.png">
+                {{/rollTotal() against 1}}
+                {{#rollTotal() against 2}}
+                <span> vs</span>
+                <img style="width: 20px; height: 20px"
+                     src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
+                {{/rollTotal() against 2}}
+            </div>
+            {{/^rollWasFumble() cap}}
+            {{/^rollTotal() damage 0}}
+
+        </div>
+    </rolltemplate>
     <rolltemplate class="sheet-rolltemplate-action">
         <div class="container">
             <div style="background-color: #696969">
@@ -2059,26 +2176,29 @@
 
             <div class="separator"></div>
 
-            {{#^rollTotal() damage 0}}
-            {{#attack}}
-            {{#^rollTotal() attack 0}}
-            <div class="rowcolor" style="padding-top: 5px;">
-                <span class="tcat">Attack: </span>{{attack}}
-                {{#^rollGreater() attack penetration}}
-                <span style="font-variant: small-caps; font-style: italic; font-weight: bold; font-size: 0.75em;">Piercing</span>
-                {{/^rollGreater() attack penetration}}
-            </div>
-            {{/^rollTotal() attack 0}}
-            {{/attack}}
 
+            <!--            CAP Check plus damage-->
+            {{#rollTotal() rollType 0}}
+            {{#cap}}
+            {{#^rollTotal() cap 0}}
+            <div class="rowcolor" style="padding-top: 5px;">
+                <span class="tcat">CAP: </span>{{cap}}
+                {{#^rollGreater() cap penetration}}
+                <span style="font-variant: small-caps; font-style: italic; font-weight: bold; font-size: 0.75em;">Piercing</span>
+                {{/^rollGreater() cap penetration}}
+            </div>
+            {{/^rollTotal() cap 0}}
+            {{/cap}}
+
+            {{#damage}}
+            {{#^rollWasFumble() cap}}
             <div style="padding-top: 5px;">
-                {{#^rollWasFumble() attack}}
                 <span class="tcat">Damage: </span>{{damage}}
-                {{/^rollWasFumble() attack}}
-                {{#rollWasCrit() attack}}
+                {{/^rollWasFumble() cap}}
+                {{#rollWasCrit() cap}}
                 <span class="tcat">Crit: </span>{{dmgcrit}}
-                {{/rollWasCrit() attack}}
-                {{#^rollWasFumble() attack}}
+                {{/rollWasCrit() cap}}
+                {{#^rollWasFumble() cap}}
                 {{#rollTotal() against 1}}
                 <span> vs</span>
                 <img style="width: 20px; height: 20px"
@@ -2089,18 +2209,49 @@
                 <img style="width: 20px; height: 20px"
                      src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
                 {{/rollTotal() against 2}}
-                {{/^rollWasFumble() attack}}
             </div>
-            {{/^rollTotal() damage 0}}
+            {{/^rollWasFumble() cap}}
+            {{/damage}}
+            {{/rollTotal() rollType 0}}
 
-            {{#test}}
-            {{#^rollTotal() test 0}}
+
+            <!--            Only CAP Check-->
+            {{#rollTotal() rollType 1}}
+            {{#cap}}
+            {{#^rollTotal() cap 0}}
+            <div class="rowcolor" style="padding-top: 5px;">
+                <span class="tcat">CAP: </span>{{cap}}
+                {{#^rollGreater() cap penetration}}
+                <span style="font-variant: small-caps; font-style: italic; font-weight: bold; font-size: 0.75em;">Piercing</span>
+                {{/^rollGreater() cap penetration}}
+            </div>
+            {{/^rollTotal() cap 0}}
+            {{/cap}}
+            {{/rollTotal() rollType 1}}
+
+
+            <!--            Auto-hit-->
+            {{#rollTotal() rollType 2}}
+            {{#damage}}
             <div style="padding-top: 5px;">
-                <span class="tcat">Roll: </span>{{test}}
+                <span class="tcat">Damage: </span>{{damage}}
+                {{#rollTotal() against 1}}
+                <span> vs</span>
+                <img style="width: 20px; height: 20px"
+                     src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/shield.png">
+                {{/rollTotal() against 1}}
+                {{#rollTotal() against 2}}
+                <span> vs</span>
+                <img style="width: 20px; height: 20px"
+                     src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
+                {{/rollTotal() against 2}}
             </div>
-            {{/^rollTotal() test 0}}
-            {{/test}}
+            {{/damage}}
+            {{/rollTotal() rollType 2}}
 
+
+            <!--            Healing-->
+            {{#rollTotal() rollType 3}}
             {{#healing}}
             {{#^rollTotal() healing 0}}
             <div style="padding-top: 5px;">
@@ -2108,6 +2259,8 @@
             </div>
             {{/^rollTotal() healing 0}}
             {{/healing}}
+            {{/rollTotal() rollType 3}}
+
         </div>
     </rolltemplate>
     <rolltemplate class="sheet-rolltemplate-skill">
@@ -2116,6 +2269,11 @@
                 <div><h1 class="tcat-header">{{name}}</h1></div>
                 <div><span class="tcat-subheader">{{subtags}}</span></div>
             </div>
+            {{#speed}}
+            <div class="tcat-text">
+                <span class="tcat">Speed: </span>{{speed}}
+            </div>
+            {{/speed}}
             {{#description}}
             <div class="tcat-text">
                 <span class="tcat">Description: </span>{{description}}
@@ -2126,7 +2284,7 @@
             {{#^rollTotal() no-roll 0}}
             {{#roll}}
             <div style="padding-top: 5px;">
-                <span class="tcat">Roll: </span>{{roll}}
+                <span class="tcat">CAP: </span>{{roll}}
             </div>
             {{/roll}}
             {{/^rollTotal() no-roll 0}}

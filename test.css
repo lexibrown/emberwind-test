@@ -230,6 +230,7 @@ div.sheet-tab-content {
 }
 
 .sheet-flex-center {
+    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -539,6 +540,23 @@ input.sheet-medium {
     align-items: center;
 }
 
+input.sheet-roll-control[value="3"] ~ .sheet-action-healing {
+    display: block;
+}
+
+input.sheet-roll-control[value="0"] ~ .sheet-action-damage,
+input.sheet-roll-control[value="2"] ~ .sheet-action-damage {
+    display: block;
+}
+
+.sheet-action-damage {
+    display: none;
+}
+
+.sheet-action-healing {
+    display: none;
+}
+
 /*----------------- Character Columns ------------------*/
 
 .sheet-stats {
@@ -669,6 +687,7 @@ input.sheet-cap {
 /*----------------- Roll templates ------------------*/
 
 .sheet-rolltemplate-skill .sheet-container,
+.sheet-rolltemplate-basic-action .sheet-container,
 .sheet-rolltemplate-action .sheet-container {
     background-color: #ffffff;
     border: 1px solid;
@@ -677,11 +696,13 @@ input.sheet-cap {
 }
 
 .sheet-rolltemplate-skill div,
+.sheet-rolltemplate-basic-action div,
 .sheet-rolltemplate-action div {
     padding: 2px;
 }
 
 .sheet-rolltemplate-skill .sheet-tcat,
+.sheet-rolltemplate-basic-action .sheet-tcat,
 .sheet-rolltemplate-action .sheet-tcat {
     font-weight: bold;
     font-size: 0.75em;
@@ -692,11 +713,13 @@ input.sheet-cap {
 }
 
 .sheet-rolltemplate-skill .sheet-tcat-text,
+.sheet-rolltemplate-basic-action .sheet-tcat-text,
 .sheet-rolltemplate-action .sheet-tcat-text {
     font-size: 0.85em;
 }
 
 .sheet-rolltemplate-skill .sheet-tcat-header,
+.sheet-rolltemplate-basic-action .sheet-tcat-header,
 .sheet-rolltemplate-action .sheet-tcat-header {
     color: white;
     font-weight: bold;
@@ -706,6 +729,7 @@ input.sheet-cap {
 }
 
 .sheet-rolltemplate-skill .sheet-tcat-subheader,
+.sheet-rolltemplate-basic-action .sheet-tcat-subheader,
 .sheet-rolltemplate-action .sheet-tcat-subheader {
     color: white;
     font-size: 0.8em;
@@ -713,6 +737,7 @@ input.sheet-cap {
 }
 
 .sheet-rolltemplate-skill .sheet-separator,
+.sheet-rolltemplate-basic-action .sheet-separator,
 .sheet-rolltemplate-action .sheet-separator {
     background-color: #d3d3d3;
     width: auto;
@@ -720,17 +745,20 @@ input.sheet-cap {
 }
 
 .sheet-rolltemplate-skill .inlinerollresult,
+.sheet-rolltemplate-basic-action .inlinerollresult,
 .sheet-rolltemplate-action .inlinerollresult {
     background-color: #ffffff;
     border: 3px solid #000000;
 }
 
 .sheet-rolltemplate-skill .inlinerollresult.fullcrit,
+.sheet-rolltemplate-basic-action .inlinerollresult.fullcrit,
 .sheet-rolltemplate-action .inlinerollresult.fullcrit {
     border: 3px solid #3FB315;
 }
 
 .sheet-rolltemplate-skill .inlinerollresult.fullfail,
+.sheet-rolltemplate-basic-action .inlinerollresult.fullfail,
 .sheet-rolltemplate-action .inlinerollresult.fullfail {
     border: 3px solid #B31515;
 }
@@ -822,6 +850,10 @@ input[type=checkbox].sheet-tab-hide:checked ~ .sheet-show-hide {
 
 .sheet-displaySettings {
     display: block;
+    background-color: #ededed;
+    border: 2px dotted dimgrey;
+    margin-bottom: 10px;
+    margin-left: 9%
 }
 
 .sheet-melee_display_settings_flag[value="hide"] ~ .sheet-displaySettings,
