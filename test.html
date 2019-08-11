@@ -69,7 +69,7 @@
                                 <span class="info-hp-text">HP:</span>
                                 <input class="medium" type="number" name="attr_hp" value="10">
                                 <span> / </span>
-                                <input class="medium" type="number" name="attr_max_hp" value="10">
+                                <input class="medium" type="number" name="attr_hp_max" value="10">
                             </div>
                             <div class="col info-class-box">
                                 <span>Class:</span>
@@ -371,9 +371,9 @@
                         <div class="action-range action-centered"></div>
                         <div class="action-effect action-text">
                             <span>Move </span>
-                            <input class="x-small" type="number" value="1">
+                            <input class="x-small" type="number" name="attr_min_move" value="1">
                             <span>-</span>
-                            <input class="x-small" type="number" value="4">
+                            <input class="x-small" type="number" name="attr_max_move" value="4">
                             <span> Squares. Can move through friendly Combatants.</span>
                         </div>
                         <span class="action-speed action-centered">Slow</span>
@@ -387,7 +387,7 @@
                         <div class="action-range action-centered"></div>
                         <div class="action-effect action-text">
                             <span>Move </span>
-                            <input class="x-small" type="number" value="1">
+                            <input class="x-small" type="number" name="attr_shift" value="1">
                             <span> Square(s). Can move through friendly Combatants.</span>
                         </div>
                         <span class="action-speed action-centered">Fast</span>
@@ -1151,9 +1151,9 @@
                         </div>
                         <div class="row info-hp-box">
                             <span class="info-hp-text">HP:</span>
-                            <input class="medium" type="number" name="attr_enemy_hp" value="10">
+                            <input class="medium" type="number" name="attr_hp" value="10">
                             <span> / </span>
-                            <input class="medium" type="number" name="attr_enemy_max_hp" value="10">
+                            <input class="medium" type="number" name="attr_hp_max" value="10">
                         </div>
                         <div class="row stats-col red">
                             <img style="width: 20px; height: 20px"
