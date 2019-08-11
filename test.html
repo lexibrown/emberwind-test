@@ -557,7 +557,7 @@
                                            checked="checked" style="width: 25px; height: 25px"/>
                                     <span>y</span>
                                     <button type='roll' name='roll_cap'
-                                            value='@{whisper_state}&{template:basic-action} {{name=@{ranged_name}}} {{cap=[[d20cs<@{critical}cf>@{accuracy}]]}} {{damage=[[0@{ranged_dice} + @{ranged_dice_bonus}]]}} {{penetration=[[@{penetration}]]}} {{dmgcrit=[[10@{melee_dice}kh1*[[@{melee_dice}>1]]+@{melee_dice_bonus}]]}} {{speed=Slow}} {{type=Ranged}} {{range=@{ranged_range}}} {{target=@{ranged_target}}} {{description=@{ranged_description}}} {{against=[[@{ranged_against}]]}}'>
+                                            value='@{whisper_state}&{template:basic-action} {{name=@{ranged_name}}} {{cap=[[d20cs<@{critical}cf>@{accuracy}]]}} {{damage=[[0@{ranged_dice} + @{ranged_dice_bonus}]]}} {{penetration=[[@{penetration}]]}} {{dmgcrit=[[10@{ranged_dice}kh1*[[@{ranged_dice}>1]]+@{ranged_dice_bonus}]]}} {{speed=Slow}} {{type=Ranged}} {{range=@{ranged_range}}} {{target=@{ranged_target}}} {{description=@{ranged_description}}} {{against=[[@{ranged_against}]]}}'>
                                     </button>
                                 </div>
                             </div>
@@ -643,7 +643,7 @@
                                             <span>y</span>
                                         </div>
                                         <button type='roll' name='roll_action'
-                                                value='@{whisper_state}&{template:action} {{name=@{action_name}}} {{subtag1=@{action_subtype1}}} {{subtag2=@{action_subtype2}}} {{rollType=[[@{action_roll_type}]]}} {{cap=[[d20cs<@{critical}cf>@{accuracy}]]}} {{damage=[[0@{action_dice} + @{action_dice_bonus}]]}} {{penetration=[[@{penetration}]]}} {{dmgcrit=[[10@{melee_dice}kh1*[[@{melee_dice}>1]]+@{melee_dice_bonus}]]}} {{against=[[@{action_against}]]}} {{healing=[[0@{action_healing_dice}]]}} {{speed=@{action_speed}}} {{target=@{action_target}}} {{type=@{action_type}}} {{description=@{action_description}}} {{range=@{action_range}}}'>
+                                                value='@{whisper_state}&{template:action} {{name=@{action_name}}} {{subtag1=@{action_subtype1}}} {{subtag2=@{action_subtype2}}} {{rollType=[[@{action_roll_type}]]}} {{cap=[[d20cs<@{critical}cf>@{accuracy}]]}} {{damage=[[0@{action_dice} + @{action_dice_bonus}]]}} {{penetration=[[@{penetration}]]}} {{dmgcrit=[[10@{action_dice}kh1*[[@{action_dice}>1]]+@{action_dice_bonus}]]}} {{against=[[@{action_against}]]}} {{healing=[[0@{action_healing_dice}]]}} {{speed=@{action_speed}}} {{target=@{action_target}}} {{type=@{action_type}}} {{description=@{action_description}}} {{range=@{action_range}}}'>
                                         </button>
                                     </div>
 
@@ -747,7 +747,7 @@
                                                 <input type="radio" value="0" name="attr_action_roll_type" checked>
                                             </span>
 
-                                            <span style="width: auto; font-weight: bold; padding-right: 20px">CAP
+                                            <span style="width: auto; font-weight: bold; padding-right: 20px">CAP Only
                                                 <input type="radio" value="1" name="attr_action_roll_type">
                                             </span>
 
@@ -828,7 +828,7 @@
                                             <span>y</span>
                                         </div>
                                         <button type='roll' name='roll_action'
-                                                value='@{whisper_state}&{template:action} {{name=@{tide_action_name}}} {{subtag1=@{tide_action_subtype1}}} {{subtag2=@{tide_action_subtype2}}} {{rollType=[[@{tide_action_roll_type}]]}} {{cap=[[d20cs<@{critical}cf>@{accuracy}]]}} {{damage=[[0@{tide_action_dice} + @{tide_action_dice_bonus}]]}} {{penetration=[[@{penetration}]]}} {{dmgcrit=[[10@{melee_dice}kh1*[[@{melee_dice}>1]]+@{melee_dice_bonus}]]}} {{against=[[@{tide_action_against}]]}} {{healing=[[0@{tide_action_healing_dice}]]}} {{speed=@{tide_action_speed}}} {{target=@{tide_action_target}}} {{type=@{tide_action_type}}} {{description=@{tide_action_description}}} {{range=@{tide_action_range}}}'>
+                                                value='@{whisper_state}&{template:action} {{name=@{tide_action_name}}} {{subtag1=@{tide_action_subtype1}}} {{subtag2=@{tide_action_subtype2}}} {{rollType=[[@{tide_action_roll_type}]]}} {{cap=[[d20cs<@{critical}cf>@{accuracy}]]}} {{damage=[[0@{tide_action_dice} + @{tide_action_dice_bonus}]]}} {{penetration=[[@{penetration}]]}} {{dmgcrit=[[10@{tide_action_dice}kh1*[[@{tide_action_dice}>1]]+@{tide_action_dice_bonus}]]}} {{against=[[@{tide_action_against}]]}} {{healing=[[0@{tide_action_healing_dice}]]}} {{speed=@{tide_action_speed}}} {{target=@{tide_action_target}}} {{type=@{tide_action_type}}} {{description=@{tide_action_description}}} {{range=@{tide_action_range}}}'>
                                         </button>
                                     </div>
 
@@ -934,7 +934,7 @@
                                                 <input type="radio" value="0" name="attr_tide_action_roll_type" checked>
                                             </span>
 
-                                            <span style="width: auto; font-weight: bold; padding-right: 20px">CAP
+                                            <span style="width: auto; font-weight: bold; padding-right: 20px">CAP Only
                                                 <input type="radio" value="1" name="attr_tide_action_roll_type">
                                             </span>
 
@@ -1073,18 +1073,19 @@
                                         <div class="col" style="padding-right: 2px; padding-top: 4px;">
                                             <span>Effect:</span>
                                         </div>
-                                        <textarea class="height40 no-border"></textarea>
+                                        <textarea class="height40 no-border" name="attr_item_effect"></textarea>
                                     </div>
                                     <div>
                                         <span>Action:</span>
-                                        <select class="selector-fit inventory-selector">
+                                        <select class="selector-fit inventory-selector" name="attr_item_speed">
                                             <option value="">Select</option>
                                             <option value="Free">Free</option>
                                             <option value="Fast">Fast</option>
                                             <option value="Slow">Slow</option>
                                         </select>
                                         <span>Use:</span>
-                                        <select class="selector-fit inventory-selector">
+                                        <select class="selector-fit inventory-selector" name="attr_item_usage">
+                                            <option value="">Select</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
@@ -1093,7 +1094,7 @@
                                             <option value="combat">1 Per Combat</option>
                                             <option value="milestone">1 Per Milestone</option>
                                         </select>
-                                        <input type="checkbox"/>
+                                        <input type="checkbox" name="attr_item_used"/>
                                     </div>
                                 </div>
                             </div>
