@@ -226,15 +226,17 @@
                         <span class="header">Defense Values</span>
                     </div>
                     <div class="stats2 section">
-                        <div class="col stats-col green">
-                            <img style="width: 20px; height: 20px"
-                                 src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-skill-ui/512/game_skill_ui_evade_people_dodge_move-512.png">
+                        <div class="stats-col green flex-center">
+                            <button class="custom-roll-button dodge-image" type='roll' name='roll_dodge'
+                                    value='@{whisper_state}&{template:skill} {{name=Dodge}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{dodge}cf>@{dodge}]]}} {{no-roll=[[1]]}}'>
+                            </button>
                             Dodge:
                             <input class="small" type="number" name="attr_dodge" value="4">
                         </div>
-                        <div class="col stats-col yellow">
-                            <img style="width: 20px; height: 20px"
-                                 src="https://static.thenounproject.com/png/1110005-200.png">
+                        <div class="stats-col yellow flex-center">
+                            <button class="custom-roll-button willpower-image" type='roll' name='roll_dodge'
+                                    value='@{whisper_state}&{template:skill} {{name=Willpower}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{willpower}cf>@{willpower}]]}} {{no-roll=[[1]]}}'>
+                            </button>
                             Willpower:
                             <input class="small" type="number" name="attr_willpower" value="4">
                         </div>

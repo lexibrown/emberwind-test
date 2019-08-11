@@ -384,6 +384,7 @@ input.sheet-medium {
 }
 
 .sheet-stats-col {
+    display: inline-flex;
     width: 49%;
     font-weight: bold;
     text-align: center;
@@ -659,6 +660,27 @@ input.sheet-cap {
 
 .sheet-no-border {
     border: none;
+}
+
+button[type=roll].sheet-custom-roll-button::before {
+    content: '';
+}
+
+button[type=roll].sheet-custom-roll-button {
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    background-color: transparent;
+}
+
+.sheet-dodge-image {
+    background-image: url("https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-skill-ui/512/game_skill_ui_evade_people_dodge_move-512.png");
+}
+
+.sheet-willpower-image {
+    background-image: url("https://static.thenounproject.com/png/1110005-200.png");
 }
 
 /*----------------- Inventory / Bio ------------------*/
