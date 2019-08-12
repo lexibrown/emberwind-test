@@ -1879,6 +1879,22 @@
 </div>
 
 <script type="text/worker">
+    on("sheet:opened", function() {
+        getAttrs(['check_opened'], function(v) {
+        const opened = v.check_opened*1||0;
+        if(opened !== 0) return;
+        const settings = {};  //create an object to store the new rows
+        let numRows = 3;  // set how many rows you want to create
+            while (numRows--) {  // loop a number of times equal to the rows.
+                    const newrowid = generateRowID();
+                    settings["repeating_test_" + newrowid + "_value"] = numRows;
+            }
+            settings['check_opened'] = 1;  // remember to set the first run variable to not-zero
+        setAttrs(settings);
+        });
+    });
+
+
 	// Show/Hide settings area
     // Function call to simplifiy coding for showing/hiding settings
     function showHide(value) {
