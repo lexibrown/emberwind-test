@@ -27,16 +27,58 @@
     height: 900px;
 }
 
-/*----------------- PC / NPC ------------------*/
+/*----------------- Sheet Settings ------------------*/
+.sheet-tab-button + span,
+.sheet-tab-button + span + span {
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: -20px;
+}
 
-.sheet-block-pc,
-.sheet-block-switch:checked ~ .sheet-block-npc {
+input.sheet-tab-button{
+    height:21px;
+    opacity: 0;
+    z-index: 2;
+}
+
+.sheet-tab-button:hover + span,
+.sheet-tab-button:hover + span + span,
+.sheet-tab-button:hover * {
+    color: blue;
+}
+
+.sheet-pictos {
+    font-family:pictos;
+}
+
+input.sheet-nav:checked + span,
+input.sheet-nav:not(:checked) + span + span {
+    display: none;
+}
+
+input.sheet-nav:checked ~ .sheet-block-container.sheet-block-settings{
     display: block;
 }
 
-.sheet-block-npc,
-.sheet-block-switch:checked ~ .sheet-block-pc {
+.sheet-block-settings {
+    border: 2px dashed dimgrey;
+    width: fit-content;
+}
+
+.sheet-settings-col {
+    padding: 5px;
+}
+
+/*----------------- PC / NPC ------------------*/
+
+.sheet-block-container {
     display: none;
+}
+
+input.sheet-page-control[value="pc"] ~ .sheet-block-container.sheet-block-pc,
+input.sheet-page-control[value="npc"] ~ .sheet-block-container.sheet-block-npc {
+    padding-top: 10px;
+    display: block;
 }
 
 /*----------------- Tabs ------------------*/
@@ -188,6 +230,7 @@ div.sheet-tab-content {
 }
 
 .sheet-flex-center {
+    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -200,8 +243,7 @@ div.sheet-tab-content {
 /*----------------- Image section ------------------*/
 .sheet-image {
     grid-area: image;
-    background-color: black;
-    padding: 3px;
+    width: 325px;
 }
 
 /*----------------- Button section ------------------*/
@@ -342,6 +384,7 @@ input.sheet-medium {
 }
 
 .sheet-stats-col {
+    display: inline-flex;
     width: 49%;
     font-weight: bold;
     text-align: center;
@@ -498,6 +541,23 @@ input.sheet-medium {
     align-items: center;
 }
 
+input.sheet-roll-control[value="3"] ~ .sheet-action-healing {
+    display: block;
+}
+
+input.sheet-roll-control[value="0"] ~ .sheet-action-damage,
+input.sheet-roll-control[value="2"] ~ .sheet-action-damage {
+    display: block;
+}
+
+.sheet-action-damage {
+    display: none;
+}
+
+.sheet-action-healing {
+    display: none;
+}
+
 /*----------------- Character Columns ------------------*/
 
 .sheet-stats {
@@ -602,6 +662,27 @@ input.sheet-cap {
     border: none;
 }
 
+button[type=roll].sheet-custom-roll-button::before {
+    content: '';
+}
+
+button[type=roll].sheet-custom-roll-button {
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    background-color: transparent;
+}
+
+.sheet-dodge-image {
+    background-image: url("https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-skill-ui/512/game_skill_ui_evade_people_dodge_move-512.png");
+}
+
+.sheet-willpower-image {
+    background-image: url("https://static.thenounproject.com/png/1110005-200.png");
+}
+
 /*----------------- Inventory / Bio ------------------*/
 
 .sheet-inventory-header {
@@ -628,6 +709,7 @@ input.sheet-cap {
 /*----------------- Roll templates ------------------*/
 
 .sheet-rolltemplate-skill .sheet-container,
+.sheet-rolltemplate-basic-action .sheet-container,
 .sheet-rolltemplate-action .sheet-container {
     background-color: #ffffff;
     border: 1px solid;
@@ -636,11 +718,13 @@ input.sheet-cap {
 }
 
 .sheet-rolltemplate-skill div,
+.sheet-rolltemplate-basic-action div,
 .sheet-rolltemplate-action div {
     padding: 2px;
 }
 
 .sheet-rolltemplate-skill .sheet-tcat,
+.sheet-rolltemplate-basic-action .sheet-tcat,
 .sheet-rolltemplate-action .sheet-tcat {
     font-weight: bold;
     font-size: 0.75em;
@@ -651,11 +735,13 @@ input.sheet-cap {
 }
 
 .sheet-rolltemplate-skill .sheet-tcat-text,
+.sheet-rolltemplate-basic-action .sheet-tcat-text,
 .sheet-rolltemplate-action .sheet-tcat-text {
     font-size: 0.85em;
 }
 
 .sheet-rolltemplate-skill .sheet-tcat-header,
+.sheet-rolltemplate-basic-action .sheet-tcat-header,
 .sheet-rolltemplate-action .sheet-tcat-header {
     color: white;
     font-weight: bold;
@@ -665,6 +751,7 @@ input.sheet-cap {
 }
 
 .sheet-rolltemplate-skill .sheet-tcat-subheader,
+.sheet-rolltemplate-basic-action .sheet-tcat-subheader,
 .sheet-rolltemplate-action .sheet-tcat-subheader {
     color: white;
     font-size: 0.8em;
@@ -672,6 +759,7 @@ input.sheet-cap {
 }
 
 .sheet-rolltemplate-skill .sheet-separator,
+.sheet-rolltemplate-basic-action .sheet-separator,
 .sheet-rolltemplate-action .sheet-separator {
     background-color: #d3d3d3;
     width: auto;
@@ -679,17 +767,20 @@ input.sheet-cap {
 }
 
 .sheet-rolltemplate-skill .inlinerollresult,
+.sheet-rolltemplate-basic-action .inlinerollresult,
 .sheet-rolltemplate-action .inlinerollresult {
     background-color: #ffffff;
     border: 3px solid #000000;
 }
 
 .sheet-rolltemplate-skill .inlinerollresult.fullcrit,
+.sheet-rolltemplate-basic-action .inlinerollresult.fullcrit,
 .sheet-rolltemplate-action .inlinerollresult.fullcrit {
     border: 3px solid #3FB315;
 }
 
 .sheet-rolltemplate-skill .inlinerollresult.fullfail,
+.sheet-rolltemplate-basic-action .inlinerollresult.fullfail,
 .sheet-rolltemplate-action .inlinerollresult.fullfail {
     border: 3px solid #B31515;
 }
@@ -781,6 +872,10 @@ input[type=checkbox].sheet-tab-hide:checked ~ .sheet-show-hide {
 
 .sheet-displaySettings {
     display: block;
+    background-color: #ededed;
+    border: 2px dotted dimgrey;
+    margin-bottom: 10px;
+    margin-left: 9%
 }
 
 .sheet-melee_display_settings_flag[value="hide"] ~ .sheet-displaySettings,
