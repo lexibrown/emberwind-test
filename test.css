@@ -441,6 +441,16 @@ input.sheet-medium {
 
 /*----------------- Actions ------------------*/
 
+.sheet-melee-damage-indicator[value="1"] ~ .sheet-melee-damage-toughness,
+.sheet-melee-damage-indicator[value="2"] ~ .sheet-melee-damage-resistance {
+    display: block;
+}
+
+.sheet-melee-damage-resistance,
+.sheet-melee-damage-toughness {
+    display: none;
+}
+
 .sheet-action-name {
     grid-area: action-name;
 }

@@ -540,7 +540,19 @@
                             <div class="action-type action-centered">Melee</div>
                             <span class="action-target action-centered" name="attr_melee_target"></span>
                             <span class="action-range action-centered" name="attr_melee_range"></span>
-                            <span class="action-effect action-leftCentered" name="attr_melee_description"></span>
+                            <div class="action-effect action-leftCentered">
+<!--                                <p>This is some text.-->
+<!--                                    <img src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png" alt="Smiley face" width="42" height="42" align="middle">-->
+<!--                                    This is some text.</p>-->
+                                <span name="attr_melee_damage_description"></span>
+                                <span name="attr_melee_description">
+<!--                                    <input type="hidden" class="melee-damage-indicator" name="attr_melee_against">-->
+<!--                                    <img class="melee-damage-toughness" name="attr_melee_damage_toughness" style="height: 20px"-->
+<!--                                         src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">-->
+<!--                                    <img class="melee-damage-resistance" name="attr_melee_damage_resistance" style="height: 20px;"-->
+<!--                                         src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">-->
+                                </span>
+                            </div>
                             <div class="action-speed action-centered">Slow</div>
                         </div>
 
@@ -2453,6 +2465,23 @@ on('sheet:opened change:statname change:athletics change:endurance change:intimi
     });
 });
 
+on('sheet:opened change:melee_dice change:melee_dice_bonus change:melee_against', () => {
+    getAttrs(['melee_dice', 'melee_dice_bonus', 'melee_against'], (values) => {
+        let description = "";
+        if (values.melee_dice) {
+            if (values.melee_dice_bonus && values.melee_dice_bonus !== "0") {
+                description = values.melee_dice + " + " + values.melee_dice_bonus;
+            } else {
+                description = values.melee_dice + " damage";
+            }
+        }
+        if (values.melee_against) {
+            // TODO show icon
+            // description = description + "<img style='height: 20px' src='https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png'>"
+        }
+        setAttrs({melee_damage_description: description});
+    });
+});
 </script>
 <div class="rolltemplates" hidden="hidden">
     <rolltemplate class="sheet-rolltemplate-basic-action">

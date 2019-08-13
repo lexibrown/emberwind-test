@@ -407,3 +407,21 @@ on('sheet:opened change:statname change:athletics change:endurance change:intimi
         });
     });
 });
+
+on('sheet:opened change:melee_dice change:melee_dice_bonus change:melee_against', () => {
+    getAttrs(['melee_dice', 'melee_dice_bonus', 'melee_against'], (values) => {
+        let description = "";
+        if (values.melee_dice) {
+            if (values.melee_dice_bonus && values.melee_dice_bonus !== "0") {
+                description = values.melee_dice + " + " + values.melee_dice_bonus;
+            } else {
+                description = values.melee_dice + " damage";
+            }
+        }
+        if (values.melee_against) {
+            // TODO show icon
+            description = description + "<img style='height: 20px' src='https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png'>"
+        }
+        setAttrs({melee_damage_description: description});
+    });
+});
