@@ -65,6 +65,7 @@ input.sheet-nav:checked ~ .sheet-block-container.sheet-block-settings{
     width: fit-content;
 }
 
+.sheet-settings-row,
 .sheet-settings-col {
     padding: 5px;
 }
