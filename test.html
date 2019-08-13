@@ -2230,41 +2230,41 @@ on("clicked:character-gen", function() {
             // remove any existing actions
             getSectionIDs("repeating_tideTurners", function(idarray) {
                 for(var i = 0; i < idarray.length; i++) {
-                    removeRepeatingRow("repeating_tideTurners" + idarray[i]);
+                    removeRepeatingRow("repeating_tideTurners_" + idarray[i]);
                 }
             });
 
             const newIdt1 = generateRowID();
             settings["repeating_tideTurners_" + newIdt1 + "_settingsflag"] = "off";
             settings["repeating_tideTurners_" + newIdt1 + "_tide_action_name"] = "Blaze of Glory";
-            settings["repeating_tideTurners_" + newIdt1 + "_action_subtype1"] = "Sustain";
-            settings["repeating_tideTurners_" + newIdt1 + "_action_subtype2"] = "Spell";
-            settings["repeating_tideTurners_" + newIdt1 + "_action_target"] = "Self";
-            settings["repeating_tideTurners_" + newIdt1 + "_action_speed"] = "Fast";
-            settings["repeating_tideTurners_" + newIdt1 + "_action_type"] = "";
-            settings["repeating_tideTurners_" + newIdt1 + "_action_range"] = "";
-            settings["repeating_tideTurners_" + newIdt1 + "_action_roll_type"] = "-1"; // none
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_subtype1"] = "Sustain";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_subtype2"] = "Spell";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_target"] = "Self";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_speed"] = "Fast";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_type"] = "";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_range"] = "";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_roll_type"] = "-1"; // none
             settings["repeating_tideTurners_" + newIdt1 + "_action_dice"] = "";
-            settings["repeating_tideTurners_" + newIdt1 + "_action_dice_bonus"] = "0";
-            settings["repeating_tideTurners_" + newIdt1 + "_action_against"] = "1";
-            settings["repeating_tideTurners_" + newIdt1 + "_action_healing_dice"] = "";
-            settings["repeating_tideTurners_" + newIdt1 + "_action_description"] = "All your Damage-dealing Actions deal Resistance Damage and cause Hit Foe(s) to suffer 1 Stack of BURNING. Sust. Effect: Repeat Effect.";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_dice_bonus"] = "0";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_against"] = "1";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_healing_dice"] = "";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_description"] = "All your Damage-dealing Actions deal Resistance Damage and cause Hit Foe(s) to suffer 1 Stack of BURNING. Sust. Effect: Repeat Effect.";
 
             const newIdt2 = generateRowID();
             settings["repeating_tideTurners_" + newIdt2 + "_settingsflag"] = "off";
-            settings["repeating_tideTurners_" + newIdt2 + "_action_name"] = "Pegasus Charger";
-            settings["repeating_tideTurners_" + newIdt2 + "_action_subtype1"] = "Sustain";
-            settings["repeating_tideTurners_" + newIdt2 + "_action_subtype2"] = "Spell";
-            settings["repeating_tideTurners_" + newIdt2 + "_action_target"] = "Self";
-            settings["repeating_tideTurners_" + newIdt2 + "_action_speed"] = "Slow + Slow";
-            settings["repeating_tideTurners_" + newIdt2 + "_action_type"] = "";
-            settings["repeating_tideTurners_" + newIdt2 + "_action_range"] = "";
-            settings["repeating_tideTurners_" + newIdt2 + "_action_roll_type"] = "-1"; // none
-            settings["repeating_tideTurners_" + newIdt2 + "_action_dice"] = "";
-            settings["repeating_tideTurners_" + newIdt2 + "_action_dice_bonus"] = "";
-            settings["repeating_tideTurners_" + newIdt2 + "_action_against"] = "1";
-            settings["repeating_tideTurners_" + newIdt2 + "_action_healing_dice"] = "";
-            settings["repeating_tideTurners_" + newIdt2 + "_action_description"] = "Your first Move Action and first Basic Melee Attack Action each Round is a Free Action. Sust. Effect: Repeat Effect.";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_name"] = "Pegasus Charger";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_subtype1"] = "Sustain";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_subtype2"] = "Spell";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_target"] = "Self";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_speed"] = "Slow + Slow";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_type"] = "";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_range"] = "";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_roll_type"] = "-1"; // none
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_dice"] = "";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_dice_bonus"] = "";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_against"] = "1";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_healing_dice"] = "";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_description"] = "Your first Move Action and first Basic Melee Attack Action each Round is a Free Action. Sust. Effect: Repeat Effect.";
 
             // Inventory
 
@@ -2273,7 +2273,7 @@ on("clicked:character-gen", function() {
             // remove any existing keepsakes
             getSectionIDs("repeating_inventory", function(idarray) {
                 for(var i = 0; i < idarray.length; i++) {
-                    removeRepeatingRow("repeating_inventory" + idarray[i]);
+                    removeRepeatingRow("repeating_inventory_" + idarray[i]);
                 }
             });
 
@@ -2294,7 +2294,7 @@ on("clicked:character-gen", function() {
             // remove any existing anchors
             getSectionIDs("repeating_anchors", function(idarray) {
                 for(var i = 0; i < idarray.length; i++) {
-                    removeRepeatingRow("repeating_anchors" + idarray[i]);
+                    removeRepeatingRow("repeating_anchors_" + idarray[i]);
                 }
             });
 
@@ -2309,7 +2309,7 @@ on("clicked:character-gen", function() {
             // Deadweights
             getSectionIDs("repeating_deadweight", function(idarray) {
                 for(var i = 0; i < idarray.length; i++) {
-                    removeRepeatingRow("repeating_deadweight" + idarray[i]);
+                    removeRepeatingRow("repeating_deadweight_" + idarray[i]);
                 }
             });
 
