@@ -598,10 +598,10 @@
                                     <input type="radio" name="attr_melee_against" value="1"
                                            checked="checked">
                                     <img style="width: 20px; height: 20px"
-                                         src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/shield.png">
+                                         src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
                                     <input type="radio" name="attr_melee_against" value="2">
                                     <img style="width: 20px; height: 20px"
-                                         src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
+                                         src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
                                 </div>
                             </div>
                             <div class="row" style="padding: 2px 5px 0 5px">
@@ -684,10 +684,10 @@
                                     <input type="radio" name="attr_ranged_against" value="1"
                                            checked="checked">
                                     <img style="width: 20px; height: 20px"
-                                         src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/shield.png">
+                                         src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
                                     <input type="radio" name="attr_ranged_against" value="2">
                                     <img style="width: 20px; height: 20px"
-                                         src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
+                                         src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
                                 </div>
                             </div>
                             <div class="row" style="padding: 2px 5px 0 5px">
@@ -760,6 +760,7 @@
                                                          name="attr_action_damage_resistance"
                                                          style="height: 17px;"
                                                          src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
+                                                    <span class="action-damage-piercing indicator">PIERCING</span>
                                                 </div>
                                                 <div class="action-auto-hit-description">
                                                     <span class="indicator">AUTO-HIT</span>
@@ -774,30 +775,36 @@
                                                          name="attr_action_damage_resistance"
                                                          style="height: 17px;"
                                                          src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
+                                                    <span class="action-damage-piercing indicator">PIERCING</span>
                                                 </div>
                                                 <div class="action-healing-description">
                                                     <span name="attr_action_healing_description">Target(s) heal 1d6 HP</span>
                                                 </div>
                                             </div>
                                             <div class="row">
-                                                <input class="description-control" type="hidden" name="attr_action_subtype1"
+                                                <input class="description-control" type="hidden"
+                                                       name="attr_action_subtype1"
                                                        value="General">
                                                 <span class="action-amp-effect" style="font-style: italic; padding: 0">
                                                     Amp. Effect:
-                                                    <span name="attr_action_amp_effect" style="font-style: normal"></span>
+                                                    <span name="attr_action_amp_effect"
+                                                          style="font-style: normal"></span>
                                                 </span>
                                                 <span class="action-trig-effect" style="font-style: italic; padding: 0">
                                                     Trig. Condition:
-                                                    <span name="attr_action_trig_condition" style="font-style: normal"></span>
+                                                    <span name="attr_action_trig_condition"
+                                                          style="font-style: normal"></span>
                                                 </span>
                                                 <span class="action-trig-effect" style="font-style: italic; padding: 0">
                                                     Trig. Effect:
-                                                    <span name="attr_action_trig_effect" style="font-style: normal"></span>
+                                                    <span name="attr_action_trig_effect"
+                                                          style="font-style: normal"></span>
                                                 </span>
                                                 <span name="attr_action_description"></span>
                                                 <span class="action-sust-effect" style="font-style: italic; padding: 0">
                                                     Sust. Effect:
-                                                    <span name="attr_action_sust_effect" style="font-style: normal"></span>
+                                                    <span name="attr_action_sust_effect"
+                                                          style="font-style: normal"></span>
                                                 </span>
                                             </div>
                                         </div>
@@ -910,14 +917,14 @@
                                                    value="0"/>
                                             <div class="col" style="padding-top: 5px">
                                                 <span style="width: auto; font-weight: bold"> vs. </span>
-                                                <input type="radio" value="1"
-                                                       name="attr_action_against" checked>
+                                                <input type="radio" value="1" name="attr_action_against" checked>
                                                 <img style="width: 20px; height: 20px"
-                                                     src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/shield.png">
-                                                <input type="radio" value="2"
-                                                       name="attr_action_against">
+                                                     src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
+                                                <input type="radio" value="2" name="attr_action_against">
                                                 <img style="width: 20px; height: 20px"
-                                                     src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
+                                                     src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
+                                                <input type="radio" value="3" name="attr_action_against">
+                                                <span class="indicator">PIERCING</span>
                                             </div>
 
                                         </div>
@@ -946,7 +953,8 @@
                                     </div>
                                     <div class="action-sust-effect">
                                         <div class="bold">Sust. Effect:</div>
-                                        <textarea class="height30 width95" name="attr_action_sust_effect">Repeat Effect.</textarea>
+                                        <textarea class="height30 width95"
+                                                  name="attr_action_sust_effect">Repeat Effect.</textarea>
                                     </div>
                                     <div class="action-description">
                                         <div class="bold">Description:</div>
@@ -1039,24 +1047,29 @@
                                                 </div>
                                             </div>
                                             <div class="row">
-                                                <input class="description-control" type="hidden" name="attr_tide_action_subtype1"
+                                                <input class="description-control" type="hidden"
+                                                       name="attr_tide_action_subtype1"
                                                        value="General">
                                                 <span class="action-amp-effect" style="font-style: italic; padding: 0">
                                                     Amp. Effect:
-                                                    <span name="attr_tide_action_amp_effect" style="font-style: normal"></span>
+                                                    <span name="attr_tide_action_amp_effect"
+                                                          style="font-style: normal"></span>
                                                 </span>
                                                 <span class="action-trig-effect" style="font-style: italic; padding: 0">
                                                     Trig. Condition:
-                                                    <span name="attr_tide_action_trig_condition" style="font-style: normal"></span>
+                                                    <span name="attr_tide_action_trig_condition"
+                                                          style="font-style: normal"></span>
                                                 </span>
                                                 <span class="action-trig-effect" style="font-style: italic; padding: 0">
                                                     Trig. Effect:
-                                                    <span name="attr_tide_action_trig_effect" style="font-style: normal"></span>
+                                                    <span name="attr_tide_action_trig_effect"
+                                                          style="font-style: normal"></span>
                                                 </span>
                                                 <span name="attr_tide_action_description"></span>
                                                 <span class="action-sust-effect" style="font-style: italic; padding: 0">
                                                     Sust. Effect:
-                                                    <span name="attr_tide_action_sust_effect" style="font-style: normal"></span>
+                                                    <span name="attr_tide_action_sust_effect"
+                                                          style="font-style: normal"></span>
                                                 </span>
                                             </div>
                                         </div>
@@ -1173,11 +1186,11 @@
                                                 <input type="radio" value="1"
                                                        name="attr_tide_action_against" checked>
                                                 <img style="width: 20px; height: 20px"
-                                                     src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/shield.png">
+                                                     src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
                                                 <input type="radio" value="2"
                                                        name="attr_tide_action_against">
                                                 <img style="width: 20px; height: 20px"
-                                                     src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
+                                                     src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
                                             </div>
                                         </div>
 
@@ -1196,13 +1209,16 @@
                                            value="General">
                                     <div class="action-amp-effect">
                                         <div class="bold">Amp. Effect:</div>
-                                        <textarea class="height30 width95" name="attr_tide_action_amp_effect"></textarea>
+                                        <textarea class="height30 width95"
+                                                  name="attr_tide_action_amp_effect"></textarea>
                                     </div>
                                     <div class="action-trig-effect">
                                         <div class="bold">Trig. Condition:</div>
-                                        <textarea class="height30 width95" name="attr_tide_action_trig_condition"></textarea>
+                                        <textarea class="height30 width95"
+                                                  name="attr_tide_action_trig_condition"></textarea>
                                         <div class="bold">Trig. Effect:</div>
-                                        <textarea class="height30 width95" name="attr_tide_action_trig_effect"></textarea>
+                                        <textarea class="height30 width95"
+                                                  name="attr_tide_action_trig_effect"></textarea>
                                     </div>
                                     <div class="action-sust-effect">
                                         <div class="bold">Sust. Effect:</div>
@@ -1210,7 +1226,8 @@
                                     </div>
                                     <div class="action-description">
                                         <div class="bold">Description:</div>
-                                        <textarea class="height50 width95" name="attr_tide_action_description"></textarea>
+                                        <textarea class="height50 width95"
+                                                  name="attr_tide_action_description"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -2926,7 +2943,7 @@ on("clicked:character-gen", function() {
             settings["repeating_actions_" + newId1 + "_action_roll_type"] = "0"; // default
             settings["repeating_actions_" + newId1 + "_action_dice"] = "2d6";
             settings["repeating_actions_" + newId1 + "_action_dice_bonus"] = "0";
-            settings["repeating_actions_" + newId1 + "_action_against"] = "1"; // piercing
+            settings["repeating_actions_" + newId1 + "_action_against"] = "3"; // piercing
             settings["repeating_actions_" + newId1 + "_action_healing_dice"] = "";
             settings["repeating_actions_" + newId1 + "_action_sust_effect"] = "Repeat Effect and also deal that Damage to Foes adjacent to your Target.";
             settings["repeating_actions_" + newId1 + "_action_description"] = "";
@@ -2942,7 +2959,7 @@ on("clicked:character-gen", function() {
             settings["repeating_actions_" + newId2 + "_action_roll_type"] = "2"; // auto-hit
             settings["repeating_actions_" + newId2 + "_action_dice"] = "5";
             settings["repeating_actions_" + newId2 + "_action_dice_bonus"] = "";
-            settings["repeating_actions_" + newId2 + "_action_against"] = "1"; // piercing
+            settings["repeating_actions_" + newId2 + "_action_against"] = "3"; // piercing
             settings["repeating_actions_" + newId2 + "_action_healing_dice"] = "";
             settings["repeating_actions_" + newId2 + "_action_description"] = "Remove all of your Sustained Effects from Target Foe. That Foe takes 5 PIERCING Damage per removed Effect. Amp. Effect: Expend 1 Fast Action to remove all Sustain Effects (not Special Abilities) on Target Foe instead.";
 
@@ -3463,6 +3480,7 @@ on("change:repeating_tideTurners:tide_action_dice change:repeating_tideTurners:t
     });
 });
 
+
 </script>
 <div class="rolltemplates" hidden="hidden">
     <rolltemplate class="sheet-rolltemplate-basic-action">
@@ -3553,6 +3571,26 @@ on("change:repeating_tideTurners:tide_action_dice change:repeating_tideTurners:t
                 <span class="tcat">Speed: </span>{{speed}}
             </div>
             {{/speed}}
+            {{#ampEffect}}
+            <div class="tcat-text">
+                <span class="tcat">Amp. Effect: </span>{{ampEffect}}
+            </div>
+            {{/ampEffect}}
+            {{#trigCondition}}
+            <div class="tcat-text">
+                <span class="tcat">Trig. Condition: </span>{{trigCondition}}
+            </div>
+            {{/trigCondition}}
+            {{#trigEffect}}
+            <div class="tcat-text">
+                <span class="tcat">Trig. Effect: </span>{{trigEffect}}
+            </div>
+            {{/trigEffect}}
+            {{#sustEffect}}
+            <div class="tcat-text">
+                <span class="tcat">Sust. Effect: </span>{{sustEffect}}
+            </div>
+            {{/sustEffect}}
             {{#description}}
             <div class="tcat-text">
                 <span class="tcat">Description: </span>{{description}}
@@ -3568,9 +3606,11 @@ on("change:repeating_tideTurners:tide_action_dice change:repeating_tideTurners:t
             {{#^rollTotal() cap 0}}
             <div class="rowcolor" style="padding-top: 5px;">
                 <span class="tcat">CAP: </span>{{cap}}
+                {{#^rollTotal() against 3}}
                 {{#^rollGreater() cap penetration}}
                 <span style="font-variant: small-caps; font-style: italic; font-weight: bold; font-size: 0.75em;">Piercing</span>
                 {{/^rollGreater() cap penetration}}
+                {{/^rollTotal() against 3}}
             </div>
             {{/^rollTotal() cap 0}}
             {{/cap}}
@@ -3594,6 +3634,9 @@ on("change:repeating_tideTurners:tide_action_dice change:repeating_tideTurners:t
                 <img style="width: 20px; height: 20px"
                      src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
                 {{/rollTotal() against 2}}
+                {{#rollTotal() against 3}}
+                <span class="indicator">PIERCING</span>
+                {{/rollTotal() against 3}}
             </div>
             {{/^rollWasFumble() cap}}
             {{/damage}}
@@ -3630,6 +3673,9 @@ on("change:repeating_tideTurners:tide_action_dice change:repeating_tideTurners:t
                 <img style="width: 20px; height: 20px"
                      src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
                 {{/rollTotal() against 2}}
+                {{#rollTotal() against 3}}
+                <span class="indicator">PIERCING</span>
+                {{/rollTotal() against 3}}
             </div>
             {{/damage}}
             {{/rollTotal() rollType 2}}

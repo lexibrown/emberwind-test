@@ -443,8 +443,10 @@ input.sheet-medium {
 
 .sheet-tide-action-damage-indicator[value="1"] ~ .sheet-tide-action-damage-toughness,
 .sheet-tide-action-damage-indicator[value="2"] ~ .sheet-tide-action-damage-resistance,
+.sheet-tide-action-damage-indicator[value="3"] ~ .sheet-tide-action-damage-piercing,
 .sheet-action-damage-indicator[value="1"] ~ .sheet-action-damage-toughness,
 .sheet-action-damage-indicator[value="2"] ~ .sheet-action-damage-resistance,
+.sheet-action-damage-indicator[value="3"] ~ .sheet-action-damage-piercing,
 .sheet-melee-damage-indicator[value="1"] ~ .sheet-melee-damage-toughness,
 .sheet-melee-damage-indicator[value="2"] ~ .sheet-melee-damage-resistance,
 .sheet-ranged-damage-indicator[value="1"] ~ .sheet-ranged-damage-toughness,
@@ -453,7 +455,9 @@ input.sheet-medium {
 }
 
 .sheet-tide-action-damage-resistance,
+.sheet-tide-action-damage-piercing,
 .sheet-action-damage-resistance,
+.sheet-action-damage-piercing,
 .sheet-melee-damage-resistance,
 .sheet-ranged-damage-resistance {
     margin-left: -20px;
@@ -461,8 +465,10 @@ input.sheet-medium {
 
 .sheet-tide-action-damage-resistance,
 .sheet-tide-action-damage-toughness,
+.sheet-tide-action-damage-piercing,
 .sheet-action-damage-resistance,
 .sheet-action-damage-toughness,
+.sheet-action-damage-piercing,
 .sheet-melee-damage-resistance,
 .sheet-melee-damage-toughness,
 .sheet-ranged-damage-resistance,
@@ -489,7 +495,8 @@ input.sheet-medium {
     padding: 2px 5px 0 5px;
 }
 
-.sheet-indicator {
+.sheet-indicator,
+.sheet-rolltemplate-action .sheet-indicator {
     padding: 1px;
     font-size: 0.75em;
     font-weight: bold;
