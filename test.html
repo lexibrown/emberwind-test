@@ -49,7 +49,7 @@
                         <option value="clear">Clear</option>
                         <optgroup label="The Skies of Axia">
                             <option value="rook">Rook</option>
-                            <option value="raft">Raft</option>
+                            <option value="rath">Rath</option>
                             <option value="laureat">Laureat</option>
                             <option value="piper">Piper</option>
                         </optgroup>
@@ -75,6 +75,9 @@
                         <option value="chaser_streetjack">Chaser Streetjack</option>
                         <option value="chaser_mistwalker">Chaser Mistwalker</option>
                         <option value="chaser_doorcrasher">Chaser Doorcrasher</option>
+                        <option value="riftslip_fox">Riftslip Fox</option>
+                        <option value="riftborn_fox">Riftborn Fox</option>
+                        <option value="reefspine_rumbler">Reefspine Rumbler</option>
                     </select>
                     <button type="action" name="act_foe_gen">Generate!</button>
                 </div>
@@ -911,7 +914,23 @@
 
                                     </div>
 
-                                    <div class="row" style="padding: 2px 5px 0 5px;">
+                                    <input class="description-control" type="hidden" name="attr_action_subtype1"
+                                           value="General">
+                                    <div class="action-amp-effect">
+                                        <div class="bold">Amp. Effect:</div>
+                                        <textarea class="height25 width95" name="attr_action_amp_effect"></textarea>
+                                    </div>
+                                    <div class="action-trig-effect">
+                                        <div class="bold">Trig. Condition:</div>
+                                        <textarea class="height25 width95" name="attr_action_trig_condition"></textarea>
+                                        <div class="bold">Trig. Effect:</div>
+                                        <textarea class="height25 width95" name="attr_action_trig_effect"></textarea>
+                                    </div>
+                                    <div class="action-sust-effect">
+                                        <div class="bold">Sust. Effect:</div>
+                                        <textarea class="height25 width95" name="attr_action_sust_effect"></textarea>
+                                    </div>
+                                    <div class="action-description">
                                         <div class="bold">Description:</div>
                                         <textarea class="height50 width95" name="attr_action_description"></textarea>
                                     </div>
@@ -2415,6 +2434,7 @@ on("clicked:character-gen", function() {
             settings["repeating_actions_" + newId3 + "_action_dice_bonus"] = "";
             settings["repeating_actions_" + newId3 + "_action_against"] = "1";
             settings["repeating_actions_" + newId3 + "_action_healing_dice"] = "";
+            settings["repeating_actions_" + newId3 + "_action_sust_effect"] = "Repeat Effect.";
             settings["repeating_actions_" + newId3 + "_action_description"] = "+2 A if Target is 1 Other Hero or +4 A if Target is Self. Sust. Effect: Repeat Effect.";
 
             const newId4 = generateRowID();
@@ -2480,6 +2500,7 @@ on("clicked:character-gen", function() {
             settings["repeating_tideTurners_" + newIdt1 + "_tide_action_dice_bonus"] = "0";
             settings["repeating_tideTurners_" + newIdt1 + "_tide_action_against"] = "1";
             settings["repeating_tideTurners_" + newIdt1 + "_tide_action_healing_dice"] = "";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_sust_effect"] = "Repeat Effect.";
             settings["repeating_tideTurners_" + newIdt1 + "_tide_action_description"] = "All your Damage-dealing Actions deal Resistance Damage and cause Hit Foe(s) to suffer 1 Stack of BURNING. Sust. Effect: Repeat Effect.";
 
             const newIdt2 = generateRowID();
@@ -2495,6 +2516,7 @@ on("clicked:character-gen", function() {
             settings["repeating_tideTurners_" + newIdt2 + "_tide_action_dice_bonus"] = "";
             settings["repeating_tideTurners_" + newIdt2 + "_tide_action_against"] = "1";
             settings["repeating_tideTurners_" + newIdt2 + "_tide_action_healing_dice"] = "";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_sust_effect"] = "Repeat Effect.";
             settings["repeating_tideTurners_" + newIdt2 + "_tide_action_description"] = "Your first Move Action and first Basic Melee Attack Action each Round is a Free Action. Sust. Effect: Repeat Effect.";
 
             // Inventory
@@ -2525,6 +2547,483 @@ on("clicked:character-gen", function() {
             settings["repeating_anchors_" + newIda2 + "_anchor"] = "Airship - Weapons";
             const newIda3 = generateRowID();
             settings["repeating_anchors_" + newIda3 + "_anchor"] = "Chasers";
+
+            // Deadweights
+
+            // Description
+
+            // History
+
+        } else if (character == "rath") {
+            clearSheet();
+            // basics
+            settings['character_name'] = "Rath";
+            settings['hp'] = 34;
+            settings['hp_max'] = 34;
+            settings['class'] = "rogue";
+            settings['subclass'] = "";
+            settings['tier'] = "tier-2";
+
+            // Barrier Values
+            settings['toughness'] = 6;
+            settings['resistance'] = 6;
+
+            settings['athletics'] = 8;
+            settings['endurance'] = 12;
+            settings['intimidate'] = 8;
+            settings['insight'] = 12;
+            settings['knowledge'] = 8;
+            settings['mend'] = 8;
+
+            // Defense Values
+            settings['dodge'] = 10;
+            settings['willpower'] = 4;
+
+            settings['acrobatics'] = 8;
+            settings['stealth'] = 8;
+            settings['sleight_of_hand'] = 12;
+            settings['focus'] = 8;
+            settings['fast_talk'] = 16;
+            settings['leadership'] = 8;
+
+            // CAP
+            settings['critical'] = 3;
+            settings['accuracy'] = 14;
+            settings['penetration'] = 6;
+
+            // Movement
+            settings['min_move'] = 1;
+            settings['max_move'] = 5;
+            settings['shift'] = 1;
+
+            // Maneuver
+            settings['maneuver_name'] = "Tumble";
+            settings['statname'] = "";
+            settings['maneuver_speed'] = "Slow";
+            settings['maneuver_description'] = "Move 1-3 Squares. Can move through any Combatant.";
+
+            // Basic Actions
+            settings['melee_name'] = "Axe";
+            settings['melee_dice'] = "3d8";
+            settings['melee_dice_bonus'] = "0";
+            settings['melee_range'] = "2";
+            settings['melee_target'] = "1 Foe";
+            settings['melee_against'] = "1"; // toughness
+            settings['melee_description'] = "";
+
+            settings['ranged_name'] = "Bow";
+            settings['ranged_dice'] = "3d8";
+            settings['ranged_dice_bonus'] = "0";
+            settings['ranged_range'] = "5";
+            settings['ranged_target'] = "1 Foe";
+            settings['ranged_against'] = "1"; // toughness
+            settings['ranged_description'] = "";
+
+            // limits
+            settings['trigger'] = "1";
+            settings['sustain'] = "1";
+            settings['amplify'] = "2";
+
+            // Class actions
+
+            const newId1 = generateRowID();
+            settings["repeating_actions_" + newId1 + "_action_name"] = "Spinal Tap";
+            settings["repeating_actions_" + newId1 + "_action_subtype1"] = "General";
+            settings["repeating_actions_" + newId1 + "_action_subtype2"] = "Exploit";
+            settings["repeating_actions_" + newId1 + "_action_target"] = "1 Foe";
+            settings["repeating_actions_" + newId1 + "_action_speed"] = "Slow";
+            settings["repeating_actions_" + newId1 + "_action_type"] = "Melee";
+            settings["repeating_actions_" + newId1 + "_action_range"] = "1";
+            settings["repeating_actions_" + newId1 + "_action_roll_type"] = "0"; // default
+            settings["repeating_actions_" + newId1 + "_action_dice"] = "3d8";
+            settings["repeating_actions_" + newId1 + "_action_dice_bonus"] = "0";
+            settings["repeating_actions_" + newId1 + "_action_against"] = "1";
+            settings["repeating_actions_" + newId1 + "_action_healing_dice"] = "";
+            settings["repeating_actions_" + newId1 + "_action_description"] = "If Hit Foe is OFF-GUARD, they are knocked PRONE.";
+
+            const newId2 = generateRowID();
+            settings["repeating_actions_" + newId2 + "_action_name"] = "Pinpoint Strike";
+            settings["repeating_actions_" + newId2 + "_action_subtype1"] = "General";
+            settings["repeating_actions_" + newId2 + "_action_subtype2"] = "Exploit";
+            settings["repeating_actions_" + newId2 + "_action_target"] = "1 Foe";
+            settings["repeating_actions_" + newId2 + "_action_speed"] = "Slow";
+            settings["repeating_actions_" + newId2 + "_action_type"] = "Melee";
+            settings["repeating_actions_" + newId2 + "_action_range"] = "1";
+            settings["repeating_actions_" + newId2 + "_action_roll_type"] = "0"; // default
+            settings["repeating_actions_" + newId2 + "_action_dice"] = "3d8";
+            settings["repeating_actions_" + newId2 + "_action_dice_bonus"] = "";
+            settings["repeating_actions_" + newId2 + "_action_against"] = "1";
+            settings["repeating_actions_" + newId2 + "_action_healing_dice"] = "";
+            settings["repeating_actions_" + newId2 + "_action_description"] = "+2 C to CAP Check. If Amplified with Dual Attack, deal 2x Damage instead.";
+
+            const newId3 = generateRowID();
+            settings["repeating_actions_" + newId3 + "_action_name"] = "Dual Attack";
+            settings["repeating_actions_" + newId3 + "_action_subtype1"] = "Amplify";
+            settings["repeating_actions_" + newId3 + "_action_subtype2"] = "Exploit";
+            settings["repeating_actions_" + newId3 + "_action_target"] = "1 Damage dealing action";
+            settings["repeating_actions_" + newId3 + "_action_speed"] = "Fast";
+            settings["repeating_actions_" + newId3 + "_action_type"] = "";
+            settings["repeating_actions_" + newId3 + "_action_range"] = "";
+            settings["repeating_actions_" + newId3 + "_action_roll_type"] = "-1"; // none
+            settings["repeating_actions_" + newId3 + "_action_dice"] = "";
+            settings["repeating_actions_" + newId3 + "_action_dice_bonus"] = "";
+            settings["repeating_actions_" + newId3 + "_action_against"] = "1";
+            settings["repeating_actions_" + newId3 + "_action_healing_dice"] = "";
+            settings["repeating_actions_" + newId3 + "_action_amp_effect"] = "When you Hit a Foe with a Damage-dealing Action, deal 1.5x Damage. 1 per Action.";
+            settings["repeating_actions_" + newId3 + "_action_description"] = "";
+
+            const newId4 = generateRowID();
+            settings["repeating_actions_" + newId4 + "_action_name"] = "Envenom";
+            settings["repeating_actions_" + newId4 + "_action_subtype1"] = "Amplify";
+            settings["repeating_actions_" + newId4 + "_action_subtype2"] = "Exploit";
+            settings["repeating_actions_" + newId4 + "_action_target"] = "1 Action";
+            settings["repeating_actions_" + newId4 + "_action_speed"] = "Fast";
+            settings["repeating_actions_" + newId4 + "_action_type"] = "";
+            settings["repeating_actions_" + newId4 + "_action_range"] = "";
+            settings["repeating_actions_" + newId4 + "_action_roll_type"] = "-1"; // none
+            settings["repeating_actions_" + newId4 + "_action_dice"] = "";
+            settings["repeating_actions_" + newId4 + "_action_dice_bonus"] = "0";
+            settings["repeating_actions_" + newId4 + "_action_against"] = "1";
+            settings["repeating_actions_" + newId4 + "_action_healing_dice"] = "";
+            settings["repeating_actions_" + newId4 + "_action_amp_effect"] = "When you Hit a Foe, they suffer 2 Stacks of POISON.";
+            settings["repeating_actions_" + newId4 + "_action_description"] = "";
+
+            const newId5 = generateRowID();
+            settings["repeating_actions_" + newId5 + "_action_name"] = "Toxic Shock";
+            settings["repeating_actions_" + newId5 + "_action_subtype1"] = "Trigger";
+            settings["repeating_actions_" + newId5 + "_action_subtype2"] = "Exploit";
+            settings["repeating_actions_" + newId5 + "_action_target"] = "1 POISONED Foe";
+            settings["repeating_actions_" + newId5 + "_action_speed"] = "Fast";
+            settings["repeating_actions_" + newId5 + "_action_type"] = "Ranged";
+            settings["repeating_actions_" + newId5 + "_action_range"] = "3";
+            settings["repeating_actions_" + newId5 + "_action_roll_type"] = "-1"; // none
+            settings["repeating_actions_" + newId5 + "_action_dice"] = "";
+            settings["repeating_actions_" + newId5 + "_action_dice_bonus"] = "0";
+            settings["repeating_actions_" + newId5 + "_action_against"] = "1";
+            settings["repeating_actions_" + newId5 + "_action_healing_dice"] = "";
+            settings["repeating_actions_" + newId5 + "_action_trig_condition"] = "If a POISONED Foe uses a Basic Attack or Special Ability,";
+            settings["repeating_actions_" + newId5 + "_action_trig_effect"] = "Cancel that Action and deal 3 PIERCING Damage per Stack of POISON.";
+            settings["repeating_actions_" + newId5 + "_action_description"] = "";
+
+            const newId6 = generateRowID();
+            settings["repeating_actions_" + newId6 + "_action_name"] = "Shadowsteel Step";
+            settings["repeating_actions_" + newId6 + "_action_subtype1"] = "General";
+            settings["repeating_actions_" + newId6 + "_action_subtype2"] = "Exploit";
+            settings["repeating_actions_" + newId6 + "_action_target"] = "1 Square";
+            settings["repeating_actions_" + newId6 + "_action_speed"] = "Fast";
+            settings["repeating_actions_" + newId6 + "_action_type"] = "Ranged";
+            settings["repeating_actions_" + newId6 + "_action_range"] = "3";
+            settings["repeating_actions_" + newId6 + "_action_roll_type"] = "-1"; // none
+            settings["repeating_actions_" + newId6 + "_action_dice"] = "";
+            settings["repeating_actions_" + newId6 + "_action_dice_bonus"] = "0";
+            settings["repeating_actions_" + newId6 + "_action_against"] = "1";
+            settings["repeating_actions_" + newId6 + "_action_healing_dice"] = "";
+            settings["repeating_actions_" + newId6 + "_action_description"] = "Teleport to Target Square. If you occupy a Square adjacent to an Enemy, Teleport 1 other Hero from anywhere on the Battlefield to a Flanking Square. 1 per Round.";
+
+            // Tide turners
+            settings['max_tide_turners'] = "2";
+            settings['tide_turners_used'] = "0";
+
+            // Tide turner actions
+            const newIdt1 = generateRowID();
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_name"] = "Heartseeker";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_subtype1"] = "Sustain";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_subtype2"] = "Exploit";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_target"] = "Self";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_speed"] = "Slow";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_type"] = "";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_range"] = "";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_roll_type"] = "-1"; // none
+            settings["repeating_tideTurners_" + newIdt1 + "_action_dice"] = "";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_dice_bonus"] = "0";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_against"] = "1";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_healing_dice"] = "";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_sust_effect"] = "Repeat Effect.";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_description"] = "All Damage you deal gains the PIERCING property. Sust. Effect: Repeat Effect.";
+
+            const newIdt2 = generateRowID();
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_name"] = "Fool’s Luck";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_subtype1"] = "Trigger";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_subtype2"] = "Exploit";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_target"] = "1 Action";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_speed"] = "Free";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_type"] = "";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_range"] = ""; // Field
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_roll_type"] = "-1"; // none
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_dice"] = "";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_dice_bonus"] = "";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_against"] = "1";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_healing_dice"] = "";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_trig_condition"] = "If you are the Target of an Action,";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_trig_effect"] = "Target Foe becomes the Target of that Action instead (if possible). If there are no valid Targets, the Action Misses you.";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_description"] = "";
+
+            // Inventory
+            settings['melee_weapon'] = "axe_1h";
+            settings['ranged_weapon'] = "bow";
+            settings['offhand'] = "";
+            settings['armour'] = "";
+
+            // Keepsakes
+
+            // remove any existing keepsakes
+            const newIdk1 = generateRowID();
+            settings["repeating_inventory_" + newIdk1 + "_item_name"] = "Clockwork Heart";
+            settings["repeating_inventory_" + newIdk1 + "_item_speed"] = "Free";
+            settings["repeating_inventory_" + newIdk1 + "_item_usage"] = "combat";
+            settings["repeating_inventory_" + newIdk1 + "_item_effect"] = "+1 Fast Action this Turn.";
+
+            const newIdk2 = generateRowID();
+            settings["repeating_inventory_" + newIdk2 + "_item_name"] = "Emberwind Spark";
+            settings["repeating_inventory_" + newIdk2 + "_item_speed"] = "Free";
+            settings["repeating_inventory_" + newIdk2 + "_item_usage"] = "campaign";
+            settings["repeating_inventory_" + newIdk2 + "_item_effect"] = "Alter 1 Roll result by up to +/-4. Usable in any Encounter Type.";
+
+            // Anchors
+            const newIda1 = generateRowID();
+            settings["repeating_anchors_" + newIda1 + "_anchor"] = "Kendrick Maddox";
+            const newIda2 = generateRowID();
+            settings["repeating_anchors_" + newIda2 + "_anchor"] = "Airship - Sky Sailing";
+            const newIda3 = generateRowID();
+            settings["repeating_anchors_" + newIda3 + "_anchor"] = "Smuggling";
+
+            // Deadweights
+
+            // Description
+
+            // History
+
+        } else if (character == "laureat") {
+            clearSheet();
+            // basics
+            settings['character_name'] = "Laureat";
+            settings['hp'] = 38;
+            settings['hp_max'] = 38;
+            settings['class'] = "druid";
+            settings['subclass'] = "";
+            settings['tier'] = "tier-2";
+
+            // Barrier Values
+            settings['toughness'] = 4;
+            settings['resistance'] = 8;
+
+            settings['athletics'] = 8;
+            settings['endurance'] = 8;
+            settings['intimidate'] = 8;
+            settings['insight'] = 8;
+            settings['knowledge'] = 16;
+            settings['mend'] = 12;
+
+            // Defense Values
+            settings['dodge'] = 10;
+            settings['willpower'] = 4;
+
+            settings['acrobatics'] = 8;
+            settings['stealth'] = 12;
+            settings['sleight_of_hand'] = 8;
+            settings['focus'] = 12;
+            settings['fast_talk'] = 8;
+            settings['leadership'] = 8;
+
+            // CAP
+            settings['critical'] = 2;
+            settings['accuracy'] = 16;
+            settings['penetration'] = 8;
+
+            // Movement
+            settings['min_move'] = 1;
+            settings['max_move'] = 5;
+            settings['shift'] = 1;
+
+            // Maneuver
+            settings['maneuver_name'] = "Tumble";
+            settings['statname'] = "";
+            settings['maneuver_speed'] = "Slow";
+            settings['maneuver_description'] = "Move 1-3 Squares. Can move through any Combatant.";
+
+            // Basic Actions
+            settings['melee_name'] = "Staff";
+            settings['melee_dice'] = "3d8";
+            settings['melee_dice_bonus'] = "0";
+            settings['melee_range'] = "1";
+            settings['melee_target'] = "1 Foe";
+            settings['melee_against'] = "2"; // resistance
+            settings['melee_description'] = "Your first Spell each Encounter is a Free Action.";
+
+            settings['ranged_name'] = "Throwing Knife";
+            settings['ranged_dice'] = "3d6";
+            settings['ranged_dice_bonus'] = "0";
+            settings['ranged_range'] = "5";
+            settings['ranged_target'] = "1 Foe";
+            settings['ranged_against'] = "1"; // toughness
+            settings['ranged_description'] = "Your first Basic Ranged Attack each Round is a Fast Action.";
+
+            // limits
+            settings['trigger'] = "1";
+            settings['sustain'] = "2";
+            settings['amplify'] = "1";
+
+            // Class actions
+
+            const newId1 = generateRowID();
+            settings["repeating_actions_" + newId1 + "_action_name"] = "Wildfire";
+            settings["repeating_actions_" + newId1 + "_action_subtype1"] = "Sustain";
+            settings["repeating_actions_" + newId1 + "_action_subtype2"] = "Spell";
+            settings["repeating_actions_" + newId1 + "_action_target"] = "1 Foe";
+            settings["repeating_actions_" + newId1 + "_action_speed"] = "Slow";
+            settings["repeating_actions_" + newId1 + "_action_type"] = "Ranged";
+            settings["repeating_actions_" + newId1 + "_action_range"] = "5";
+            settings["repeating_actions_" + newId1 + "_action_roll_type"] = "0"; // default
+            settings["repeating_actions_" + newId1 + "_action_dice"] = "2d6";
+            settings["repeating_actions_" + newId1 + "_action_dice_bonus"] = "0";
+            settings["repeating_actions_" + newId1 + "_action_against"] = "1"; // piercing
+            settings["repeating_actions_" + newId1 + "_action_healing_dice"] = "";
+            settings["repeating_actions_" + newId1 + "_action_sust_effect"] = "Repeat Effect and also deal that Damage to Foes adjacent to your Target.";
+            settings["repeating_actions_" + newId1 + "_action_description"] = "";
+
+            const newId2 = generateRowID();
+            settings["repeating_actions_" + newId2 + "_action_name"] = "Bloom";
+            settings["repeating_actions_" + newId2 + "_action_subtype1"] = "General";
+            settings["repeating_actions_" + newId2 + "_action_subtype2"] = "Exploit";
+            settings["repeating_actions_" + newId2 + "_action_target"] = "1 Foe";
+            settings["repeating_actions_" + newId2 + "_action_speed"] = "Free";
+            settings["repeating_actions_" + newId2 + "_action_type"] = "Ranged";
+            settings["repeating_actions_" + newId2 + "_action_range"] = "5";
+            settings["repeating_actions_" + newId2 + "_action_roll_type"] = "2"; // auto-hit
+            settings["repeating_actions_" + newId2 + "_action_dice"] = "5";
+            settings["repeating_actions_" + newId2 + "_action_dice_bonus"] = "";
+            settings["repeating_actions_" + newId2 + "_action_against"] = "1"; // piercing
+            settings["repeating_actions_" + newId2 + "_action_healing_dice"] = "";
+            settings["repeating_actions_" + newId2 + "_action_description"] = "Remove all of your Sustained Effects from Target Foe. That Foe takes 5 PIERCING Damage per removed Effect. Amp. Effect: Expend 1 Fast Action to remove all Sustain Effects (not Special Abilities) on Target Foe instead.";
+
+            const newId3 = generateRowID();
+            settings["repeating_actions_" + newId3 + "_action_name"] = "Rejuvenation";
+            settings["repeating_actions_" + newId3 + "_action_subtype1"] = "Sustain";
+            settings["repeating_actions_" + newId3 + "_action_subtype2"] = "Spell";
+            settings["repeating_actions_" + newId3 + "_action_target"] = "1 Hero";
+            settings["repeating_actions_" + newId3 + "_action_speed"] = "Fast";
+            settings["repeating_actions_" + newId3 + "_action_type"] = "Ranged";
+            settings["repeating_actions_" + newId3 + "_action_range"] = "5";
+            settings["repeating_actions_" + newId3 + "_action_roll_type"] = "3"; // heal
+            settings["repeating_actions_" + newId3 + "_action_dice"] = "";
+            settings["repeating_actions_" + newId3 + "_action_dice_bonus"] = "";
+            settings["repeating_actions_" + newId3 + "_action_against"] = "1";
+            settings["repeating_actions_" + newId3 + "_action_healing_dice"] = "1d8";
+            settings["repeating_actions_" + newId3 + "_action_sust_effect"] = "Sust. Effect: Repeat Effect.";
+            settings["repeating_actions_" + newId3 + "_action_description"] = "";
+
+            const newId4 = generateRowID();
+            settings["repeating_actions_" + newId4 + "_action_name"] = "Restore";
+            settings["repeating_actions_" + newId4 + "_action_subtype1"] = "Sustain";
+            settings["repeating_actions_" + newId4 + "_action_subtype2"] = "Spell";
+            settings["repeating_actions_" + newId4 + "_action_target"] = "1 Hero";
+            settings["repeating_actions_" + newId4 + "_action_speed"] = "Slow";
+            settings["repeating_actions_" + newId4 + "_action_type"] = "Ranged";
+            settings["repeating_actions_" + newId4 + "_action_range"] = "5";
+            settings["repeating_actions_" + newId4 + "_action_roll_type"] = "-1"; // none
+            settings["repeating_actions_" + newId4 + "_action_dice"] = "";
+            settings["repeating_actions_" + newId4 + "_action_dice_bonus"] = "0";
+            settings["repeating_actions_" + newId4 + "_action_against"] = "1";
+            settings["repeating_actions_" + newId4 + "_action_healing_dice"] = "";
+            settings["repeating_actions_" + newId4 + "_action_sust_effect"] = "Repeat Effect.";
+            settings["repeating_actions_" + newId4 + "_action_description"] = "Remove up to 2 Stacks of 1 Condition from Target Hero.";
+
+            const newId5 = generateRowID();
+            settings["repeating_actions_" + newId5 + "_action_name"] = "Primal Fury";
+            settings["repeating_actions_" + newId5 + "_action_subtype1"] = "Sustain";
+            settings["repeating_actions_" + newId5 + "_action_subtype2"] = "Spell";
+            settings["repeating_actions_" + newId5 + "_action_target"] = "1 Hero";
+            settings["repeating_actions_" + newId5 + "_action_speed"] = "Slow";
+            settings["repeating_actions_" + newId5 + "_action_type"] = "Ranged";
+            settings["repeating_actions_" + newId5 + "_action_range"] = "5";
+            settings["repeating_actions_" + newId5 + "_action_roll_type"] = "-1"; // none
+            settings["repeating_actions_" + newId5 + "_action_dice"] = "";
+            settings["repeating_actions_" + newId5 + "_action_dice_bonus"] = "0";
+            settings["repeating_actions_" + newId5 + "_action_against"] = "1";
+            settings["repeating_actions_" + newId5 + "_action_healing_dice"] = "";
+            settings["repeating_actions_" + newId5 + "_action_sust_effect"] = "Repeat Effect.";
+            settings["repeating_actions_" + newId5 + "_action_description"] = "+2 P and Target Hero may make 1 Basic Melee Attack as a Free Action.";
+
+            const newId6 = generateRowID();
+            settings["repeating_actions_" + newId6 + "_action_name"] = "Rusting Entanglement";
+            settings["repeating_actions_" + newId6 + "_action_subtype1"] = "Trigger";
+            settings["repeating_actions_" + newId6 + "_action_subtype2"] = "Spell";
+            settings["repeating_actions_" + newId6 + "_action_target"] = "1 Foe";
+            settings["repeating_actions_" + newId6 + "_action_speed"] = "Fast";
+            settings["repeating_actions_" + newId6 + "_action_type"] = "Ranged";
+            settings["repeating_actions_" + newId6 + "_action_range"] = "5";
+            settings["repeating_actions_" + newId6 + "_action_roll_type"] = "-1"; // none
+            settings["repeating_actions_" + newId6 + "_action_dice"] = "";
+            settings["repeating_actions_" + newId6 + "_action_dice_bonus"] = "0";
+            settings["repeating_actions_" + newId6 + "_action_against"] = "1";
+            settings["repeating_actions_" + newId6 + "_action_healing_dice"] = "";
+            settings["repeating_actions_" + newId6 + "_action_trig_condition"] = "If a Foe takes a Move Action,";
+            settings["repeating_actions_" + newId6 + "_action_trig_effect"] = "Cancel that Action and that Foe suffers 2 Stacks of VULNERABILITY.";
+            settings["repeating_actions_" + newId6 + "_action_description"] = "";
+
+            // Tide turners
+            settings['max_tide_turners'] = "2";
+            settings['tide_turners_used'] = "0";
+
+            // Tide turner actions
+            const newIdt1 = generateRowID();
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_name"] = "Gift of Life";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_subtype1"] = "General";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_subtype2"] = "Spell";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_target"] = "All Other Heroes";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_speed"] = "Slow";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_type"] = "Ranged";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_range"] = "5";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_roll_type"] = "3"; // heal
+            settings["repeating_tideTurners_" + newIdt1 + "_action_dice"] = "";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_dice_bonus"] = "0";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_against"] = "1";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_healing_dice"] = "10";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_description"] = "Target Heroes recover from FALLEN (if possible).";
+
+            const newIdt2 = generateRowID();
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_name"] = "Stoneskin";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_subtype1"] = "Trigger";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_subtype2"] = "Spell";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_target"] = "Self";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_speed"] = "Fast";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_type"] = "";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_range"] = ""; // Field
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_roll_type"] = "-1"; // none
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_dice"] = "";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_dice_bonus"] = "";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_against"] = "1";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_healing_dice"] = "";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_trig_condition"] = "If you would take Damage from a Foe’s Action,";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_trig_effect"] = "Negate that and all other Damage you take until the  start of your next Turn.";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_description"] = "";
+
+            // Inventory
+            settings['melee_weapon'] = "staff_2h";
+            settings['ranged_weapon'] = "throwing_knives";
+            settings['offhand'] = "";
+            settings['armour'] = "";
+
+            // Keepsakes
+
+            // remove any existing keepsakes
+            const newIdk1 = generateRowID();
+            settings["repeating_inventory_" + newIdk1 + "_item_name"] = "Silverglade Shard";
+            settings["repeating_inventory_" + newIdk1 + "_item_speed"] = "Free";
+            settings["repeating_inventory_" + newIdk1 + "_item_usage"] = "";
+            settings["repeating_inventory_" + newIdk1 + "_item_effect"] = "Negate the Effect of Concentrated Miasma (Local Field Effect) on Laureat.";
+
+            const newIdk2 = generateRowID();
+            settings["repeating_inventory_" + newIdk2 + "_item_name"] = "Emberwind Spark";
+            settings["repeating_inventory_" + newIdk2 + "_item_speed"] = "Free";
+            settings["repeating_inventory_" + newIdk2 + "_item_usage"] = "campaign";
+            settings["repeating_inventory_" + newIdk2 + "_item_effect"] = "Alter 1 Roll result by up to +/-4. Usable in any Encounter Type.";
+
+            // Anchors
+            const newIda1 = generateRowID();
+            settings["repeating_anchors_" + newIda1 + "_anchor"] = "Hearth Crystals";
+            const newIda2 = generateRowID();
+            settings["repeating_anchors_" + newIda2 + "_anchor"] = "The Silverglades";
 
             // Deadweights
 
@@ -2662,7 +3161,8 @@ on("clicked:character-gen", function() {
             settings["repeating_actions_" + newId4 + "_action_dice_bonus"] = "0";
             settings["repeating_actions_" + newId4 + "_action_against"] = "1";
             settings["repeating_actions_" + newId4 + "_action_healing_dice"] = "";
-            settings["repeating_actions_" + newId4 + "_action_description"] = "If any Foe suffering Chains of Calamity is the Target of a Spell, deal 1d6 PIERCING Damage to all Foes suffering Chains of Calamity. Sust. Effect: Repeat Effect.";
+            settings["repeating_actions_" + newId4 + "_action_sust_effect"] = "Repeat Effect.";
+            settings["repeating_actions_" + newId4 + "_action_description"] = "If any Foe suffering Chains of Calamity is the Target of a Spell, deal 1d6 PIERCING Damage to all Foes suffering Chains of Calamity.";
 
             const newId5 = generateRowID();
             settings["repeating_actions_" + newId5 + "_action_name"] = "False Camaraderie";
@@ -2692,7 +3192,8 @@ on("clicked:character-gen", function() {
             settings["repeating_actions_" + newId6 + "_action_dice_bonus"] = "0";
             settings["repeating_actions_" + newId6 + "_action_against"] = "1";
             settings["repeating_actions_" + newId6 + "_action_healing_dice"] = "";
-            settings["repeating_actions_" + newId6 + "_action_description"] = "Amp. Effect: When you use a Spell that you could cast again this Encounter, you may cast that Spell again directly after as a Free Action. You cannot use that Spell for the remainder of the Encounter.";
+            settings["repeating_actions_" + newId6 + "_action_amp_effect"] = "When you use a Spell that you could cast again this Encounter, you may cast that Spell again directly after as a Free Action. You cannot use that Spell for the remainder of the Encounter.";
+            settings["repeating_actions_" + newId6 + "_action_description"] = "";
 
             // Tide turners
             settings['max_tide_turners'] = "3";
@@ -2712,7 +3213,8 @@ on("clicked:character-gen", function() {
             settings["repeating_tideTurners_" + newIdt1 + "_tide_action_dice_bonus"] = "0";
             settings["repeating_tideTurners_" + newIdt1 + "_tide_action_against"] = "2";
             settings["repeating_tideTurners_" + newIdt1 + "_tide_action_healing_dice"] = "";
-            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_description"] = "Until the start of your next Turn, if Foe is the Target of a Spell, deal 2d12 Resistance Damage. Sust. Effect: Repeat Effect.";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_sust_effect"] = "Repeat Effect.";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_description"] = "Until the start of your next Turn, if Foe is the Target of a Spell, deal 2d12 Resistance Damage.";
 
             const newIdt2 = generateRowID();
             settings["repeating_tideTurners_" + newIdt2 + "_tide_action_name"] = "Composite Magic";

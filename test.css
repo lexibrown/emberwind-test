@@ -470,6 +470,25 @@ input.sheet-medium {
     opacity: 0;
 }
 
+.sheet-description-control[value="Amplify"] ~ .sheet-action-amp-effect,
+.sheet-description-control[value="Trigger"] ~ .sheet-action-trig-effect,
+.sheet-description-control[value="Sustain"] ~ .sheet-action-sust-effect {
+    display: block;
+}
+
+.sheet-action-amp-effect,
+.sheet-action-trig-effect,
+.sheet-action-sust-effect {
+    display: none;
+}
+
+.sheet-action-amp-effect,
+.sheet-action-trig-effect,
+.sheet-action-sust-effect,
+.sheet-action-description {
+    padding: 2px 5px 0 5px;
+}
+
 .sheet-indicator {
     padding: 1px;
     font-size: 0.75em;
