@@ -192,7 +192,7 @@ div.sheet-tab-content {
     display: grid;
     width: auto;
     height: fit-content;
-    padding-bottom: 7px;
+    padding-bottom: 3px;
     grid-column-gap: 3px;
     grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 40% 1.5fr;
     grid-template-areas: "action-button action-name action-type action-target action-range action-effect action-speed";
@@ -441,18 +441,45 @@ input.sheet-medium {
 
 /*----------------- Actions ------------------*/
 
+.sheet-tide-action-damage-indicator[value="1"] ~ .sheet-tide-action-damage-toughness,
+.sheet-tide-action-damage-indicator[value="2"] ~ .sheet-tide-action-damage-resistance,
+.sheet-action-damage-indicator[value="1"] ~ .sheet-action-damage-toughness,
+.sheet-action-damage-indicator[value="2"] ~ .sheet-action-damage-resistance,
 .sheet-melee-damage-indicator[value="1"] ~ .sheet-melee-damage-toughness,
-.sheet-melee-damage-indicator[value="2"] ~ .sheet-melee-damage-resistance {
-    display: block;
+.sheet-melee-damage-indicator[value="2"] ~ .sheet-melee-damage-resistance,
+.sheet-ranged-damage-indicator[value="1"] ~ .sheet-ranged-damage-toughness,
+.sheet-ranged-damage-indicator[value="2"] ~ .sheet-ranged-damage-resistance {
+    opacity: 1;
 }
 
+.sheet-tide-action-damage-resistance,
+.sheet-action-damage-resistance,
 .sheet-melee-damage-resistance,
-.sheet-melee-damage-toughness {
-    display: none;
+.sheet-ranged-damage-resistance {
+    margin-left: -20px;
+}
+
+.sheet-tide-action-damage-resistance,
+.sheet-tide-action-damage-toughness,
+.sheet-action-damage-resistance,
+.sheet-action-damage-toughness,
+.sheet-melee-damage-resistance,
+.sheet-melee-damage-toughness,
+.sheet-ranged-damage-resistance,
+.sheet-ranged-damage-toughness {
+    opacity: 0;
+}
+
+.sheet-indicator {
+    padding: 1px;
+    font-size: 0.75em;
+    font-weight: bold;
+    font-style: italic;
 }
 
 .sheet-action-name {
     grid-area: action-name;
+    font-weight: bold;
 }
 
 .sheet-action-type {
@@ -552,10 +579,7 @@ input.sheet-medium {
     align-items: center;
 }
 
-input.sheet-roll-control[value="3"] ~ .sheet-action-healing {
-    display: block;
-}
-
+input.sheet-roll-control[value="3"] ~ .sheet-action-healing,
 input.sheet-roll-control[value="0"] ~ .sheet-action-damage,
 input.sheet-roll-control[value="2"] ~ .sheet-action-damage {
     display: block;
@@ -566,6 +590,24 @@ input.sheet-roll-control[value="2"] ~ .sheet-action-damage {
 }
 
 .sheet-action-healing {
+    display: none;
+}
+
+input.sheet-action-description-indicator[value="3"] ~ .sheet-action-healing-description,
+input.sheet-action-description-indicator[value="0"] ~ .sheet-action-damage-description,
+input.sheet-action-description-indicator[value="2"] ~ .sheet-action-auto-hit-description {
+    display: block;
+}
+
+.sheet-action-damage-description {
+    display: none;
+}
+
+.sheet-action-auto-hit-description {
+    display: none;
+}
+
+.sheet-action-healing-description {
     display: none;
 }
 

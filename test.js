@@ -185,41 +185,41 @@ on("clicked:character-gen", function() {
             // remove any existing actions
             getSectionIDs("repeating_tideTurners", function(idarray) {
                 for(var i = 0; i < idarray.length; i++) {
-                    removeRepeatingRow("repeating_tideTurners" + idarray[i]);
+                    removeRepeatingRow("repeating_tideTurners_" + idarray[i]);
                 }
             });
 
             const newIdt1 = generateRowID();
             settings["repeating_tideTurners_" + newIdt1 + "_settingsflag"] = "off";
             settings["repeating_tideTurners_" + newIdt1 + "_tide_action_name"] = "Blaze of Glory";
-            settings["repeating_tideTurners_" + newIdt1 + "_action_subtype1"] = "Sustain";
-            settings["repeating_tideTurners_" + newIdt1 + "_action_subtype2"] = "Spell";
-            settings["repeating_tideTurners_" + newIdt1 + "_action_target"] = "Self";
-            settings["repeating_tideTurners_" + newIdt1 + "_action_speed"] = "Fast";
-            settings["repeating_tideTurners_" + newIdt1 + "_action_type"] = "";
-            settings["repeating_tideTurners_" + newIdt1 + "_action_range"] = "";
-            settings["repeating_tideTurners_" + newIdt1 + "_action_roll_type"] = "-1"; // none
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_subtype1"] = "Sustain";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_subtype2"] = "Spell";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_target"] = "Self";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_speed"] = "Fast";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_type"] = "";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_range"] = "";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_roll_type"] = "-1"; // none
             settings["repeating_tideTurners_" + newIdt1 + "_action_dice"] = "";
-            settings["repeating_tideTurners_" + newIdt1 + "_action_dice_bonus"] = "0";
-            settings["repeating_tideTurners_" + newIdt1 + "_action_against"] = "1";
-            settings["repeating_tideTurners_" + newIdt1 + "_action_healing_dice"] = "";
-            settings["repeating_tideTurners_" + newIdt1 + "_action_description"] = "All your Damage-dealing Actions deal Resistance Damage and cause Hit Foe(s) to suffer 1 Stack of BURNING. Sust. Effect: Repeat Effect.";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_dice_bonus"] = "0";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_against"] = "1";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_healing_dice"] = "";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_description"] = "All your Damage-dealing Actions deal Resistance Damage and cause Hit Foe(s) to suffer 1 Stack of BURNING. Sust. Effect: Repeat Effect.";
 
             const newIdt2 = generateRowID();
             settings["repeating_tideTurners_" + newIdt2 + "_settingsflag"] = "off";
-            settings["repeating_tideTurners_" + newIdt2 + "_action_name"] = "Pegasus Charger";
-            settings["repeating_tideTurners_" + newIdt2 + "_action_subtype1"] = "Sustain";
-            settings["repeating_tideTurners_" + newIdt2 + "_action_subtype2"] = "Spell";
-            settings["repeating_tideTurners_" + newIdt2 + "_action_target"] = "Self";
-            settings["repeating_tideTurners_" + newIdt2 + "_action_speed"] = "Slow + Slow";
-            settings["repeating_tideTurners_" + newIdt2 + "_action_type"] = "";
-            settings["repeating_tideTurners_" + newIdt2 + "_action_range"] = "";
-            settings["repeating_tideTurners_" + newIdt2 + "_action_roll_type"] = "-1"; // none
-            settings["repeating_tideTurners_" + newIdt2 + "_action_dice"] = "";
-            settings["repeating_tideTurners_" + newIdt2 + "_action_dice_bonus"] = "";
-            settings["repeating_tideTurners_" + newIdt2 + "_action_against"] = "1";
-            settings["repeating_tideTurners_" + newIdt2 + "_action_healing_dice"] = "";
-            settings["repeating_tideTurners_" + newIdt2 + "_action_description"] = "Your first Move Action and first Basic Melee Attack Action each Round is a Free Action. Sust. Effect: Repeat Effect.";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_name"] = "Pegasus Charger";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_subtype1"] = "Sustain";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_subtype2"] = "Spell";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_target"] = "Self";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_speed"] = "Slow + Slow";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_type"] = "";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_range"] = "";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_roll_type"] = "-1"; // none
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_dice"] = "";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_dice_bonus"] = "";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_against"] = "1";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_healing_dice"] = "";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_description"] = "Your first Move Action and first Basic Melee Attack Action each Round is a Free Action. Sust. Effect: Repeat Effect.";
 
             // Inventory
 
@@ -228,7 +228,7 @@ on("clicked:character-gen", function() {
             // remove any existing keepsakes
             getSectionIDs("repeating_inventory", function(idarray) {
                 for(var i = 0; i < idarray.length; i++) {
-                    removeRepeatingRow("repeating_inventory" + idarray[i]);
+                    removeRepeatingRow("repeating_inventory_" + idarray[i]);
                 }
             });
 
@@ -249,7 +249,7 @@ on("clicked:character-gen", function() {
             // remove any existing anchors
             getSectionIDs("repeating_anchors", function(idarray) {
                 for(var i = 0; i < idarray.length; i++) {
-                    removeRepeatingRow("repeating_anchors" + idarray[i]);
+                    removeRepeatingRow("repeating_anchors_" + idarray[i]);
                 }
             });
 
@@ -264,7 +264,7 @@ on("clicked:character-gen", function() {
             // Deadweights
             getSectionIDs("repeating_deadweight", function(idarray) {
                 for(var i = 0; i < idarray.length; i++) {
-                    removeRepeatingRow("repeating_deadweight" + idarray[i]);
+                    removeRepeatingRow("repeating_deadweight_" + idarray[i]);
                 }
             });
 
@@ -392,36 +392,45 @@ on("change:maneuver_settings_flag", function() {
 
 on('sheet:opened change:statname change:athletics change:endurance change:intimidate change:insight change:knowledge change:mend change:acrobatics change:stealth change:sleight_of_hand change:focus change:fast_talk change:leadership', () => {
     getAttrs(['statname'], (values) => {
-        // convert "Acrobatics" to "acrobatics"
-        let actionmodAttrName = `${values.statname.toLowerCase()}`;
+    // convert "Acrobatics" to "acrobatics"
+    let actionmodAttrName = `${values.statname.toLowerCase()}`;
 
-        if (actionmodAttrName == "fast talk") {
-            actionmodAttrName = "fast_talk";
-        } else if (actionmodAttrName == "sleight of hand") {
-            actionmodAttrName = "sleight_of_hand";
-        }
+    if (actionmodAttrName == "fast talk") {
+        actionmodAttrName = "fast_talk";
+    } else if (actionmodAttrName == "sleight of hand") {
+        actionmodAttrName = "sleight_of_hand";
+    }
 
-        getAttrs([actionmodAttrName], (values) => {
-            // set the value of @{actionmod} to the value of @{acrobatics}
-            setAttrs({actionmod: values[actionmodAttrName]});
-        });
+    getAttrs([actionmodAttrName], (values) => {
+        // set the value of @{actionmod} to the value of @{acrobatics}
+        setAttrs({actionmod: values[actionmodAttrName]});
+    });
     });
 });
 
-on('sheet:opened change:melee_dice change:melee_dice_bonus change:melee_against', () => {
-    getAttrs(['melee_dice', 'melee_dice_bonus', 'melee_against'], (values) => {
-        let description = "";
-        if (values.melee_dice) {
-            if (values.melee_dice_bonus && values.melee_dice_bonus !== "0") {
-                description = values.melee_dice + " + " + values.melee_dice_bonus;
-            } else {
-                description = values.melee_dice + " damage";
-            }
+on('sheet:opened change:melee_dice change:melee_dice_bonus', () => {
+    getAttrs(['melee_dice', 'melee_dice_bonus'], (values) => {
+    let description = "";
+    if (values.melee_dice) {
+        if (values.melee_dice_bonus && values.melee_dice_bonus !== "0") {
+            description = values.melee_dice + " + " + values.melee_dice_bonus + " damage";
+        } else {
+            description = values.melee_dice + " damage";
         }
-        if (values.melee_against) {
-            // TODO show icon
-            description = description + "<img style='height: 20px' src='https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png'>"
+    }
+    setAttrs({melee_damage_description: description});
+});
+});
+on('sheet:opened change:ranged_dice change:ranged_dice_bonus', () => {
+    getAttrs(['ranged_dice', 'ranged_dice_bonus'], (values) => {
+    let description = "";
+    if (values.ranged_dice) {
+        if (values.ranged_dice_bonus && values.ranged_dice_bonus !== "0") {
+            description = values.ranged_dice + " + " + values.ranged_dice_bonus + " damage";
+        } else {
+            description = values.ranged_dice + " damage";
         }
-        setAttrs({melee_damage_description: description});
-    });
+    }
+    setAttrs({ranged_damage_description: description});
+});
 });

@@ -46,6 +46,7 @@
                     <span>Pre-gen characters:</span>
                     <select name="attr_pre_gen_character" class="selector-fit">
                         <option value="">Select</option>
+                        <option value="clear">Clear</option>
                         <optgroup label="The Skies of Axia">
                             <option value="rook">Rook</option>
                             <option value="raft">Raft</option>
@@ -448,8 +449,7 @@
                             <div class="action-button">
                                 <div>
                                     <input class="settings" type="checkbox" name="attr_maneuver_settings_flag"
-                                           value="on"
-                                           checked="checked" style="width: 25px; height: 25px"/>
+                                           value="on" style="width: 25px; height: 25px"/>
                                     <span>y</span>
                                     <button type='roll' name='roll_skill' style="font-size: 1.2em;"
                                             value='@{whisper_state}&{template:skill} {{name=@{maneuver_name}}} {{subtags=@{statname}}} {{no-roll=[[@{actionmod}]]}} {{roll=[[d20cs<@{actionmod}cf>[[@{actionmod}+1]]]]}} {{speed=@{maneuver_speed}}} {{description=@{maneuver_description}}}'>
@@ -529,7 +529,7 @@
                             <div class="action-button">
                                 <div>
                                     <input class="settings" type="checkbox" name="attr_melee_settings_flag" value="on"
-                                           checked="checked" style="width: 25px; height: 25px"/>
+                                           style="width: 25px; height: 25px"/>
                                     <span>y</span>
                                     <button type='roll' name='roll_cap'
                                             value='@{whisper_state}&{template:basic-action} {{name=@{melee_name}}} {{cap=[[d20cs<@{critical}cf>[[@{accuracy}+1]]]]}} {{damage=[[0@{melee_dice} + @{melee_dice_bonus}]]}} {{penetration=[[@{penetration}]]}} {{dmgcrit=[[10@{melee_dice}kh1*{{@{melee_dice}>1}}+@{melee_dice_bonus}]]}} {{speed=Slow}} {{type=Melee}} {{range=@{melee_range}}} {{target=@{melee_target}}} {{description=@{melee_description}}} {{against=[[@{melee_against}]]}}'>
@@ -541,17 +541,22 @@
                             <span class="action-target action-centered" name="attr_melee_target"></span>
                             <span class="action-range action-centered" name="attr_melee_range"></span>
                             <div class="action-effect action-leftCentered">
-<!--                                <p>This is some text.-->
-<!--                                    <img src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png" alt="Smiley face" width="42" height="42" align="middle">-->
-<!--                                    This is some text.</p>-->
-                                <span name="attr_melee_damage_description"></span>
-                                <span name="attr_melee_description">
-<!--                                    <input type="hidden" class="melee-damage-indicator" name="attr_melee_against">-->
-<!--                                    <img class="melee-damage-toughness" name="attr_melee_damage_toughness" style="height: 20px"-->
-<!--                                         src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">-->
-<!--                                    <img class="melee-damage-resistance" name="attr_melee_damage_resistance" style="height: 20px;"-->
-<!--                                         src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">-->
-                                </span>
+                                <div>
+                                    <div class="row">
+                                        <span name="attr_melee_damage_description"></span>
+                                        <input type="hidden" class="melee-damage-indicator" name="attr_melee_against"
+                                               value="1">
+                                        <img class="melee-damage-toughness" name="attr_melee_damage_toughness"
+                                             style="height: 17px"
+                                             src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
+                                        <img class="melee-damage-resistance" name="attr_melee_damage_resistance"
+                                             style="height: 17px;"
+                                             src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
+                                    </div>
+                                    <div class="row">
+                                        <span name="attr_melee_description"></span>
+                                    </div>
+                                </div>
                             </div>
                             <div class="action-speed action-centered">Slow</div>
                         </div>
@@ -609,7 +614,7 @@
                             <div class="action-button">
                                 <div>
                                     <input class="settings" type="checkbox" name="attr_ranged_settings_flag" value="on"
-                                           checked="checked" style="width: 25px; height: 25px"/>
+                                           style="width: 25px; height: 25px"/>
                                     <span>y</span>
                                     <button type='roll' name='roll_cap'
                                             value='@{whisper_state}&{template:basic-action} {{name=@{ranged_name}}} {{cap=[[d20cs<@{critical}cf>[[@{accuracy}+1]]]]}} {{damage=[[0@{ranged_dice} + @{ranged_dice_bonus}]]}} {{penetration=[[@{penetration}]]}} {{dmgcrit=[[10@{ranged_dice}kh1*{{@{ranged_dice}>1}}+@{ranged_dice_bonus}]]}} {{speed=Slow}} {{type=Ranged}} {{range=@{ranged_range}}} {{target=@{ranged_target}}} {{description=@{ranged_description}}} {{against=[[@{ranged_against}]]}}'>
@@ -620,7 +625,24 @@
                             <div class="action-type action-centered">Ranged</div>
                             <span class="action-target action-centered" name="attr_ranged_target"></span>
                             <span class="action-range action-centered" name="attr_ranged_range"></span>
-                            <span class="action-effect action-leftCentered" name="attr_ranged_description"></span>
+                            <div class="action-effect action-leftCentered">
+                                <div>
+                                    <div class="row">
+                                        <span name="attr_ranged_damage_description"></span>
+                                        <input type="hidden" class="ranged-damage-indicator" name="attr_ranged_against"
+                                               value="1">
+                                        <img class="ranged-damage-toughness" name="attr_ranged_damage_toughness"
+                                             style="height: 17px"
+                                             src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
+                                        <img class="ranged-damage-resistance" name="attr_ranged_damage_resistance"
+                                             style="height: 17px;"
+                                             src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
+                                    </div>
+                                    <div class="row">
+                                        <span name="attr_ranged_description"></span>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="action-speed action-centered">Slow</div>
                         </div>
 
@@ -678,11 +700,11 @@
                         <span class="action-name action-info-title">CLASS ACTIONS</span>
                         <div class="action-effect">
                             <span style="font-size: 0.75em">Trigger Limit:</span>
-                            <input class="x-small" type="number" name="attr_trigger">
+                            <input class="x-small" type="number" name="attr_trigger" value="0">
                             <span style="font-size: 0.75em">Sustain Limit:</span>
-                            <input class="x-small" type="number" name="attr_sustain">
+                            <input class="x-small" type="number" name="attr_sustain" value="0">
                             <span style="font-size: 0.75em">Amplify Limit:</span>
-                            <input class="x-small" type="number" name="attr_amplify">
+                            <input class="x-small" type="number" name="attr_amplify" value="0">
                         </div>
                     </div>
 
@@ -705,21 +727,60 @@
                                     <span class="action-name action-centered" name="attr_action_name"></span>
                                     <div class="action-type action-centered">
                                         <div class="col">
-                            <span class="row" style="border-bottom: 1px solid black"
-                                  name="attr_action_subtype1"></span>
+                                            <span class="row" style="border-bottom: 1px solid black"
+                                                  name="attr_action_subtype1"></span>
                                             <span class="row" name="attr_action_subtype2"></span>
                                         </div>
                                     </div>
                                     <span class="action-target action-centered" name="attr_action_target"></span>
                                     <div class="action-range action-centered">
                                         <div class="col">
-                                <span class="row" style="border-bottom: 1px solid black"
-                                      name="attr_action_type"></span>
+                                            <span class="row" style="border-bottom: 1px solid black"
+                                                  name="attr_action_type"></span>
                                             <span class="row" name="attr_action_range"></span>
                                         </div>
                                     </div>
-                                    <span class="action-effect action-leftCentered"
-                                          name="attr_action_description"></span>
+                                    <div class="action-effect action-leftCentered">
+                                        <div>
+                                            <div class="row">
+                                                <input type="hidden" class="action-description-indicator"
+                                                       name="attr_action_roll_type" value="0">
+                                                <div class="action-damage-description">
+                                                    <span name="attr_action_damage_description">1d6 Damage</span>
+                                                    <input type="hidden" class="action-damage-indicator"
+                                                           name="attr_action_against" value="1">
+                                                    <img class="action-damage-toughness"
+                                                         name="attr_action_damage_toughness"
+                                                         style="height: 17px"
+                                                         src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
+                                                    <img class="action-damage-resistance"
+                                                         name="attr_action_damage_resistance"
+                                                         style="height: 17px;"
+                                                         src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
+                                                </div>
+                                                <div class="action-auto-hit-description">
+                                                    <span class="indicator">AUTO-HIT</span>
+                                                    <span name="attr_action_damage_description">1d6 Damage</span>
+                                                    <input type="hidden" class="action-damage-indicator"
+                                                           name="attr_action_against" value="1">
+                                                    <img class="action-damage-toughness"
+                                                         name="attr_action_damage_toughness"
+                                                         style="height: 17px"
+                                                         src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
+                                                    <img class="action-damage-resistance"
+                                                         name="attr_action_damage_resistance"
+                                                         style="height: 17px;"
+                                                         src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
+                                                </div>
+                                                <div class="action-healing-description">
+                                                    <span name="attr_action_healing_description">Target(s) heal 1d6 HP</span>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <span name="attr_action_description"></span>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <span class="action-speed action-centered" name="attr_action_speed"></span>
                                 </div>
 
@@ -890,8 +951,8 @@
                                     <span class="action-name action-tide-centered" name="attr_tide_action_name"></span>
                                     <div class="action-type action-tide-centered">
                                         <div class="col">
-                            <span class="row" style="border-bottom: 1px solid black"
-                                  name="attr_tide_action_subtype1"></span>
+                                            <span class="row" style="border-bottom: 1px solid black"
+                                                  name="attr_tide_action_subtype1"></span>
                                             <span class="row" name="attr_tide_action_subtype2"></span>
                                         </div>
                                     </div>
@@ -899,13 +960,52 @@
                                           name="attr_tide_action_target"></span>
                                     <div class="action-range action-tide-centered">
                                         <div class="col">
-                            <span class="row" style="border-bottom: 1px solid black"
-                                  name="attr_tide_action_type"></span>
+                                            <span class="row" style="border-bottom: 1px solid black"
+                                                  name="attr_tide_action_type"></span>
                                             <span class="row" name="attr_tide_action_range"></span>
                                         </div>
                                     </div>
-                                    <span class="action-effect action-tide-leftCentered"
-                                          name="attr_tide_action_description"></span>
+                                    <div class="action-effect action-tide-leftCentered">
+                                        <div>
+                                            <div class="row">
+                                                <input type="hidden" class="action-description-indicator"
+                                                       name="attr_tide_action_roll_type" value="0">
+                                                <div class="action-damage-description">
+                                                    <span name="attr_tide_action_damage_description">1d6 Damage</span>
+                                                    <input type="hidden" class="tide-action-damage-indicator"
+                                                           name="attr_tide_action_against" value="1">
+                                                    <img class="tide-action-damage-toughness"
+                                                         name="attr_tide_action_damage_toughness"
+                                                         style="height: 17px"
+                                                         src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
+                                                    <img class="tide-action-damage-resistance"
+                                                         name="attr_tide_action_damage_resistance"
+                                                         style="height: 17px;"
+                                                         src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
+                                                </div>
+                                                <div class="action-auto-hit-description">
+                                                    <span class="indicator">AUTO-HIT</span>
+                                                    <span name="attr_tide_action_damage_description">1d6 Damage</span>
+                                                    <input type="hidden" class="tide-action-damage-indicator"
+                                                           name="attr_tide_action_against" value="1">
+                                                    <img class="tide-action-damage-toughness"
+                                                         name="attr_tide_action_damage_toughness"
+                                                         style="height: 17px"
+                                                         src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
+                                                    <img class="tide-action-damage-resistance"
+                                                         name="attr_tide_action_damage_resistance"
+                                                         style="height: 17px;"
+                                                         src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
+                                                </div>
+                                                <div class="action-healing-description">
+                                                    <span name="attr_tide_action_healing_description">Target(s) heal 1d6 HP</span>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <span name="attr_tide_action_description"></span>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <span class="action-speed action-tide-centered"
                                           name="attr_tide_action_speed"></span>
                                 </div>
@@ -2055,11 +2155,153 @@
 
 <script type="text/worker">
 
+function clearSheet(value) {
+    var settings = {};
+
+    // basics
+    settings['character_name'] = "New Character";
+    settings['hp'] = 10;
+    settings['hp_max'] = 10;
+    settings['class'] = "";
+    settings['subclass'] = "";
+    settings['tier'] = "tier-1";
+
+    // Aspects
+    settings['offensive'] = "";
+    settings['defensive'] = "";
+    settings['utility'] = "";
+
+    // Attribute
+
+    // Barrier Values
+    settings['toughness'] = 4;
+    settings['resistance'] = 4;
+
+    settings['athletics'] = 8;
+    settings['endurance'] = 8;
+    settings['intimidate'] = 8;
+    settings['insight'] = 8;
+    settings['knowledge'] = 8;
+    settings['mend'] = 8;
+
+    // Defense Values
+    settings['dodge'] = 4;
+    settings['willpower'] = 4;
+
+    settings['acrobatics'] = 8;
+    settings['stealth'] = 8;
+    settings['sleight_of_hand'] = 8;
+    settings['focus'] = 8;
+    settings['fast_talk'] = 8;
+    settings['leadership'] = 8;
+
+    // CAP
+    settings['critical'] = 2;
+    settings['accuracy'] = 10;
+    settings['penetration'] = 5;
+
+    // Movement
+    settings['min_move'] = 1;
+    settings['max_move'] = 4;
+    settings['shift'] = 1;
+
+    // Maneuver
+    settings['maneuver_name'] = "";
+    settings['statname'] = "";
+    settings['maneuver_speed'] = "";
+    settings['maneuver_description'] = "";
+
+    // Basic Actions
+    settings['melee_name'] = "";
+    settings['melee_dice'] = "1d6";
+    settings['melee_dice_bonus'] = "";
+    settings['melee_range'] = "";
+    settings['melee_target'] = "";
+    settings['melee_against'] = "";
+    settings['melee_description'] = "";
+
+    settings['ranged_name'] = "";
+    settings['ranged_dice'] = "1d6";
+    settings['ranged_dice_bonus'] = "";
+    settings['ranged_range'] = "";
+    settings['ranged_target'] = "";
+    settings['ranged_against'] = "";
+    settings['ranged_description'] = "";
+
+    // limits
+    settings['trigger'] = "0";
+    settings['sustain'] = "0";
+    settings['amplify'] = "0";
+
+    // Class actions
+    // remove any existing actions
+    getSectionIDs("repeating_actions", function(idarray) {
+        for(var i = 0; i < idarray.length; i++) {
+            removeRepeatingRow("repeating_actions_" + idarray[i]);
+        }
+    });
+
+    // Tide turners
+    settings['max_tide_turners'] = "0";
+    settings['tide_turners_used'] = "0";
+
+    // Tide turner actions
+    // remove any existing actions
+    getSectionIDs("repeating_tideTurners", function(idarray) {
+        for(var i = 0; i < idarray.length; i++) {
+            removeRepeatingRow("repeating_tideTurners_" + idarray[i]);
+        }
+    });
+
+    // Inventory
+    settings['melee_weapon'] = "";
+    settings['ranged_weapon'] = "";
+    settings['offhand'] = "";
+    settings['armour'] = "";
+
+    // Keepsakes
+    // remove any existing keepsakes
+    getSectionIDs("repeating_inventory", function(idarray) {
+        for(var i = 0; i < idarray.length; i++) {
+            removeRepeatingRow("repeating_inventory_" + idarray[i]);
+        }
+    });
+
+    // Anchors
+    // remove any existing anchors
+    getSectionIDs("repeating_anchors", function(idarray) {
+        for(var i = 0; i < idarray.length; i++) {
+            removeRepeatingRow("repeating_anchors_" + idarray[i]);
+        }
+    });
+
+    // Deadweights
+    // remove any existing deadweights
+    getSectionIDs("repeating_deadweight", function(idarray) {
+        for(var i = 0; i < idarray.length; i++) {
+            removeRepeatingRow("repeating_deadweight_" + idarray[i]);
+        }
+    });
+
+    // Description
+    settings['bio_description'] = "";
+
+    // History
+    settings['bio_history'] = "";
+    setAttrs(settings);
+
+};
+
 on("clicked:character-gen", function() {
     getAttrs(['pre_gen_character'], function(values) {
         let character = values.pre_gen_character;
         var settings = {};
-        if (character == "rook") {
+        settings['pre_gen_character'] = "";
+
+        if (character == "clear") {
+            clearSheet();
+        } else if (character == "rook") {
+            clearSheet();
             // basics
             settings['character_name'] = "Rook";
             settings['hp'] = 42;
@@ -2130,15 +2372,7 @@ on("clicked:character-gen", function() {
 
             // Class actions
 
-            // remove any existing actions
-            getSectionIDs("repeating_actions", function(idarray) {
-                for(var i = 0; i < idarray.length; i++) {
-                    removeRepeatingRow("repeating_actions_" + idarray[i]);
-                }
-            });
-
             const newId1 = generateRowID();
-            settings["repeating_actions_" + newId1 + "_settingsflag"] = "off";
             settings["repeating_actions_" + newId1 + "_action_name"] = "Skewer";
             settings["repeating_actions_" + newId1 + "_action_subtype1"] = "General";
             settings["repeating_actions_" + newId1 + "_action_subtype2"] = "Exploit";
@@ -2154,7 +2388,6 @@ on("clicked:character-gen", function() {
             settings["repeating_actions_" + newId1 + "_action_description"] = "Amp. Effect: Expend 1 Fast Action to cause Hit Grunt Foe to become FALLEN.";
 
             const newId2 = generateRowID();
-            settings["repeating_actions_" + newId2 + "_settingsflag"] = "off";
             settings["repeating_actions_" + newId2 + "_action_name"] = "Lion's Pounce";
             settings["repeating_actions_" + newId2 + "_action_subtype1"] = "General";
             settings["repeating_actions_" + newId2 + "_action_subtype2"] = "Exploit";
@@ -2170,7 +2403,6 @@ on("clicked:character-gen", function() {
             settings["repeating_actions_" + newId2 + "_action_description"] = "Make a Move Action as a Free Action. If a Foe is within Basic Melee Attack Range at the end of your Move Action, make a Basic Melee Attack against that Foe as a Free Action. That Basic Melee Attack has +2 A and +2 P.";
 
             const newId3 = generateRowID();
-            settings["repeating_actions_" + newId3 + "_settingsflag"] = "off";
             settings["repeating_actions_" + newId3 + "_action_name"] = "Guided Weapon";
             settings["repeating_actions_" + newId3 + "_action_subtype1"] = "Sustain";
             settings["repeating_actions_" + newId3 + "_action_subtype2"] = "Spell";
@@ -2186,7 +2418,6 @@ on("clicked:character-gen", function() {
             settings["repeating_actions_" + newId3 + "_action_description"] = "+2 A if Target is 1 Other Hero or +4 A if Target is Self. Sust. Effect: Repeat Effect.";
 
             const newId4 = generateRowID();
-            settings["repeating_actions_" + newId4 + "_settingsflag"] = "off";
             settings["repeating_actions_" + newId4 + "_action_name"] = "Warsong: Exhilarating Anthem";
             settings["repeating_actions_" + newId4 + "_action_subtype1"] = "General";
             settings["repeating_actions_" + newId4 + "_action_subtype2"] = "Exploit";
@@ -2202,7 +2433,6 @@ on("clicked:character-gen", function() {
             settings["repeating_actions_" + newId4 + "_action_description"] = "Target Other Heroes may alter their next Roll result by +/-2";
 
             const newId5 = generateRowID();
-            settings["repeating_actions_" + newId5 + "_settingsflag"] = "off";
             settings["repeating_actions_" + newId5 + "_action_name"] = "Word of Comfort";
             settings["repeating_actions_" + newId5 + "_action_subtype1"] = "General";
             settings["repeating_actions_" + newId5 + "_action_subtype2"] = "Spell";
@@ -2218,7 +2448,6 @@ on("clicked:character-gen", function() {
             settings["repeating_actions_" + newId5 + "_action_description"] = "Amp. Effect: Expend additional Fast Actions to heal +5x[each additional Fast Action] HP.";
 
             const newId6 = generateRowID();
-            settings["repeating_actions_" + newId6 + "_settingsflag"] = "off";
             settings["repeating_actions_" + newId6 + "_action_name"] = "Warsong: Strengthen the Line";
             settings["repeating_actions_" + newId6 + "_action_subtype1"] = "General";
             settings["repeating_actions_" + newId6 + "_action_subtype2"] = "Spell";
@@ -2238,16 +2467,7 @@ on("clicked:character-gen", function() {
             settings['tide_turners_used'] = "0";
 
             // Tide turner actions
-
-            // remove any existing actions
-            getSectionIDs("repeating_tideTurners", function(idarray) {
-                for(var i = 0; i < idarray.length; i++) {
-                    removeRepeatingRow("repeating_tideTurners_" + idarray[i]);
-                }
-            });
-
             const newIdt1 = generateRowID();
-            settings["repeating_tideTurners_" + newIdt1 + "_settingsflag"] = "off";
             settings["repeating_tideTurners_" + newIdt1 + "_tide_action_name"] = "Blaze of Glory";
             settings["repeating_tideTurners_" + newIdt1 + "_tide_action_subtype1"] = "Sustain";
             settings["repeating_tideTurners_" + newIdt1 + "_tide_action_subtype2"] = "Spell";
@@ -2263,7 +2483,6 @@ on("clicked:character-gen", function() {
             settings["repeating_tideTurners_" + newIdt1 + "_tide_action_description"] = "All your Damage-dealing Actions deal Resistance Damage and cause Hit Foe(s) to suffer 1 Stack of BURNING. Sust. Effect: Repeat Effect.";
 
             const newIdt2 = generateRowID();
-            settings["repeating_tideTurners_" + newIdt2 + "_settingsflag"] = "off";
             settings["repeating_tideTurners_" + newIdt2 + "_tide_action_name"] = "Pegasus Charger";
             settings["repeating_tideTurners_" + newIdt2 + "_tide_action_subtype1"] = "Sustain";
             settings["repeating_tideTurners_" + newIdt2 + "_tide_action_subtype2"] = "Spell";
@@ -2279,16 +2498,14 @@ on("clicked:character-gen", function() {
             settings["repeating_tideTurners_" + newIdt2 + "_tide_action_description"] = "Your first Move Action and first Basic Melee Attack Action each Round is a Free Action. Sust. Effect: Repeat Effect.";
 
             // Inventory
+            settings['melee_weapon'] = "Spear";
+            settings['ranged_weapon'] = "crossbow";
+            settings['offhand'] = "";
+            settings['armour'] = "";
 
             // Keepsakes
 
             // remove any existing keepsakes
-            getSectionIDs("repeating_inventory", function(idarray) {
-                for(var i = 0; i < idarray.length; i++) {
-                    removeRepeatingRow("repeating_inventory_" + idarray[i]);
-                }
-            });
-
             const newIdk1 = generateRowID();
             settings["repeating_inventory_" + newIdk1 + "_item_name"] = "Service Medal";
             settings["repeating_inventory_" + newIdk1 + "_item_speed"] = "Fast";
@@ -2302,14 +2519,6 @@ on("clicked:character-gen", function() {
             settings["repeating_inventory_" + newIdk2 + "_item_effect"] = "Alter 1 Roll result by up to +/-4. Usable in any Encounter Type.";
 
             // Anchors
-
-            // remove any existing anchors
-            getSectionIDs("repeating_anchors", function(idarray) {
-                for(var i = 0; i < idarray.length; i++) {
-                    removeRepeatingRow("repeating_anchors_" + idarray[i]);
-                }
-            });
-
             const newIda1 = generateRowID();
             settings["repeating_anchors_" + newIda1 + "_anchor"] = "Gelspar";
             const newIda2 = generateRowID();
@@ -2317,19 +2526,14 @@ on("clicked:character-gen", function() {
             const newIda3 = generateRowID();
             settings["repeating_anchors_" + newIda3 + "_anchor"] = "Chasers";
 
-
             // Deadweights
-            getSectionIDs("repeating_deadweight", function(idarray) {
-                for(var i = 0; i < idarray.length; i++) {
-                    removeRepeatingRow("repeating_deadweight_" + idarray[i]);
-                }
-            });
 
             // Description
 
             // History
 
         } else if (character == "piper") {
+            clearSheet();
             // basics
             settings['character_name'] = "Piper";
             settings['hp'] = 35;
@@ -2373,7 +2577,7 @@ on("clicked:character-gen", function() {
             // Maneuver
             settings['maneuver_name'] = "Tumble";
             settings['statname'] = "";
-            settings['maneuver_speed'] = "slow";
+            settings['maneuver_speed'] = "Slow";
             settings['maneuver_description'] = "Move 1-3 Squares. Can move through any Combatant.";
 
             // Basic Actions
@@ -2397,8 +2601,171 @@ on("clicked:character-gen", function() {
             settings['trigger'] = "1";
             settings['sustain'] = "1";
             settings['amplify'] = "1";
+
+            // Class actions
+
+            const newId1 = generateRowID();
+            settings["repeating_actions_" + newId1 + "_action_name"] = "Soul Strike";
+            settings["repeating_actions_" + newId1 + "_action_subtype1"] = "General";
+            settings["repeating_actions_" + newId1 + "_action_subtype2"] = "Spell";
+            settings["repeating_actions_" + newId1 + "_action_target"] = "1 Foe";
+            settings["repeating_actions_" + newId1 + "_action_speed"] = "Slow";
+            settings["repeating_actions_" + newId1 + "_action_type"] = "Ranged";
+            settings["repeating_actions_" + newId1 + "_action_range"] = "7";
+            settings["repeating_actions_" + newId1 + "_action_roll_type"] = "0"; // default
+            settings["repeating_actions_" + newId1 + "_action_dice"] = "3d12";
+            settings["repeating_actions_" + newId1 + "_action_dice_bonus"] = "0";
+            settings["repeating_actions_" + newId1 + "_action_against"] = "2";
+            settings["repeating_actions_" + newId1 + "_action_healing_dice"] = "";
+            settings["repeating_actions_" + newId1 + "_action_description"] = "";
+
+            const newId2 = generateRowID();
+            settings["repeating_actions_" + newId2 + "_action_name"] = "Mana Echoes";
+            settings["repeating_actions_" + newId2 + "_action_subtype1"] = "General";
+            settings["repeating_actions_" + newId2 + "_action_subtype2"] = "Spell";
+            settings["repeating_actions_" + newId2 + "_action_target"] = "1 Foe";
+            settings["repeating_actions_" + newId2 + "_action_speed"] = "Fast";
+            settings["repeating_actions_" + newId2 + "_action_type"] = "Ranged";
+            settings["repeating_actions_" + newId2 + "_action_range"] = "7";
+            settings["repeating_actions_" + newId2 + "_action_roll_type"] = "2"; // auto-hit
+            settings["repeating_actions_" + newId2 + "_action_dice"] = "2d8";
+            settings["repeating_actions_" + newId2 + "_action_dice_bonus"] = "";
+            settings["repeating_actions_" + newId2 + "_action_against"] = "2";
+            settings["repeating_actions_" + newId2 + "_action_healing_dice"] = "";
+            settings["repeating_actions_" + newId2 + "_action_description"] = "";
+
+            const newId3 = generateRowID();
+            settings["repeating_actions_" + newId3 + "_action_name"] = "Raging Inferno";
+            settings["repeating_actions_" + newId3 + "_action_subtype1"] = "General";
+            settings["repeating_actions_" + newId3 + "_action_subtype2"] = "Spell";
+            settings["repeating_actions_" + newId3 + "_action_target"] = "1-3 Foes";
+            settings["repeating_actions_" + newId3 + "_action_speed"] = "Slow";
+            settings["repeating_actions_" + newId3 + "_action_type"] = "Ranged";
+            settings["repeating_actions_" + newId3 + "_action_range"] = "3";
+            settings["repeating_actions_" + newId3 + "_action_roll_type"] = "0"; // default
+            settings["repeating_actions_" + newId3 + "_action_dice"] = "3d8";
+            settings["repeating_actions_" + newId3 + "_action_dice_bonus"] = "";
+            settings["repeating_actions_" + newId3 + "_action_against"] = "2";
+            settings["repeating_actions_" + newId3 + "_action_healing_dice"] = "";
+            settings["repeating_actions_" + newId3 + "_action_description"] = "";
+
+            const newId4 = generateRowID();
+            settings["repeating_actions_" + newId4 + "_action_name"] = "Chains of Calamity";
+            settings["repeating_actions_" + newId4 + "_action_subtype1"] = "Sustain";
+            settings["repeating_actions_" + newId4 + "_action_subtype2"] = "Spell";
+            settings["repeating_actions_" + newId4 + "_action_target"] = "1-3 Foes";
+            settings["repeating_actions_" + newId4 + "_action_speed"] = "Slow";
+            settings["repeating_actions_" + newId4 + "_action_type"] = "Ranged";
+            settings["repeating_actions_" + newId4 + "_action_range"] = "3";
+            settings["repeating_actions_" + newId4 + "_action_roll_type"] = "0"; // default
+            settings["repeating_actions_" + newId4 + "_action_dice"] = "1d6";
+            settings["repeating_actions_" + newId4 + "_action_dice_bonus"] = "0";
+            settings["repeating_actions_" + newId4 + "_action_against"] = "1";
+            settings["repeating_actions_" + newId4 + "_action_healing_dice"] = "";
+            settings["repeating_actions_" + newId4 + "_action_description"] = "If any Foe suffering Chains of Calamity is the Target of a Spell, deal 1d6 PIERCING Damage to all Foes suffering Chains of Calamity. Sust. Effect: Repeat Effect.";
+
+            const newId5 = generateRowID();
+            settings["repeating_actions_" + newId5 + "_action_name"] = "False Camaraderie";
+            settings["repeating_actions_" + newId5 + "_action_subtype1"] = "General";
+            settings["repeating_actions_" + newId5 + "_action_subtype2"] = "Spell";
+            settings["repeating_actions_" + newId5 + "_action_target"] = "1 Foe";
+            settings["repeating_actions_" + newId5 + "_action_speed"] = "Slow";
+            settings["repeating_actions_" + newId5 + "_action_type"] = "Ranged";
+            settings["repeating_actions_" + newId5 + "_action_range"] = "7";
+            settings["repeating_actions_" + newId5 + "_action_roll_type"] = "1"; // cap
+            settings["repeating_actions_" + newId5 + "_action_dice"] = "";
+            settings["repeating_actions_" + newId5 + "_action_dice_bonus"] = "0";
+            settings["repeating_actions_" + newId5 + "_action_against"] = "1";
+            settings["repeating_actions_" + newId5 + "_action_healing_dice"] = "";
+            settings["repeating_actions_" + newId5 + "_action_description"] = "-2 A to CAP Check. Target Foe moves up to 5 Squares toward another Foe (if possible), then makes a Basic Attack with AUTO-HIT against that Foe (if possible).";
+
+            const newId6 = generateRowID();
+            settings["repeating_actions_" + newId6 + "_action_name"] = "Time of Need";
+            settings["repeating_actions_" + newId6 + "_action_subtype1"] = "Amplify";
+            settings["repeating_actions_" + newId6 + "_action_subtype2"] = "Exploit";
+            settings["repeating_actions_" + newId6 + "_action_target"] = "1 Spell";
+            settings["repeating_actions_" + newId6 + "_action_speed"] = "Free";
+            settings["repeating_actions_" + newId6 + "_action_type"] = "";
+            settings["repeating_actions_" + newId6 + "_action_range"] = "";
+            settings["repeating_actions_" + newId6 + "_action_roll_type"] = "-1"; // none
+            settings["repeating_actions_" + newId6 + "_action_dice"] = "";
+            settings["repeating_actions_" + newId6 + "_action_dice_bonus"] = "0";
+            settings["repeating_actions_" + newId6 + "_action_against"] = "1";
+            settings["repeating_actions_" + newId6 + "_action_healing_dice"] = "";
+            settings["repeating_actions_" + newId6 + "_action_description"] = "Amp. Effect: When you use a Spell that you could cast again this Encounter, you may cast that Spell again directly after as a Free Action. You cannot use that Spell for the remainder of the Encounter.";
+
+            // Tide turners
+            settings['max_tide_turners'] = "3";
+            settings['tide_turners_used'] = "0";
+
+            // Tide turner actions
+            const newIdt1 = generateRowID();
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_name"] = "Recurring Nightmare";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_subtype1"] = "Sustain";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_subtype2"] = "Spell";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_target"] = "1 Foe";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_speed"] = "Slow";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_type"] = "Ranged";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_range"] = "7";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_roll_type"] = "2"; // auto-hit
+            settings["repeating_tideTurners_" + newIdt1 + "_action_dice"] = "2d12";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_dice_bonus"] = "0";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_against"] = "2";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_healing_dice"] = "";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_description"] = "Until the start of your next Turn, if Foe is the Target of a Spell, deal 2d12 Resistance Damage. Sust. Effect: Repeat Effect.";
+
+            const newIdt2 = generateRowID();
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_name"] = "Composite Magic";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_subtype1"] = "General";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_subtype2"] = "Exploit";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_target"] = "Self";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_speed"] = "Slow";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_type"] = "";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_range"] = "";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_roll_type"] = "-1"; // none
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_dice"] = "";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_dice_bonus"] = "";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_against"] = "1";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_healing_dice"] = "";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_description"] = "Your next 2 Spells are Free Actions.";
+
+            // Inventory
+            settings['melee_weapon'] = "Rapier";
+            settings['ranged_weapon'] = "wand";
+            settings['offhand'] = "";
+            settings['armour'] = "";
+
+            // Keepsakes
+            const newIdk1 = generateRowID();
+            settings["repeating_inventory_" + newIdk1 + "_item_name"] = "Pheonix Pinion";
+            settings["repeating_inventory_" + newIdk1 + "_item_speed"] = "Fast";
+            settings["repeating_inventory_" + newIdk1 + "_item_usage"] = "campaign";
+            settings["repeating_inventory_" + newIdk1 + "_item_effect"] = "Adjacent Hero recovers from Fallen. That Hero heals 10 HP.";
+
+            const newIdk2 = generateRowID();
+            settings["repeating_inventory_" + newIdk2 + "_item_name"] = "Emberwind Spark";
+            settings["repeating_inventory_" + newIdk2 + "_item_speed"] = "Free";
+            settings["repeating_inventory_" + newIdk2 + "_item_usage"] = "campaign";
+            settings["repeating_inventory_" + newIdk2 + "_item_effect"] = "Alter 1 Roll result by up to +/-4. Usable in any Encounter Type.";
+
+            // Anchors
+            const newIda1 = generateRowID();
+            settings["repeating_anchors_" + newIda1 + "_anchor"] = "Kendrick Maddox";
+            const newIda2 = generateRowID();
+            settings["repeating_anchors_" + newIda2 + "_anchor"] = "Red Market Merchant";
+            const newIda3 = generateRowID();
+            settings["repeating_anchors_" + newIda3 + "_anchor"] = "Elise Grant";
+            const newIda4 = generateRowID();
+            settings["repeating_anchors_" + newIda4 + "_anchor"] = "Navigation";
+
+            // Deadweights
+
+            // Description
+
+            // History
+
         }
-        setAttrs(settings, {silent: true});
+        setAttrs(settings);
     });
 });
 
@@ -2465,23 +2832,85 @@ on('sheet:opened change:statname change:athletics change:endurance change:intimi
     });
 });
 
-on('sheet:opened change:melee_dice change:melee_dice_bonus change:melee_against', () => {
-    getAttrs(['melee_dice', 'melee_dice_bonus', 'melee_against'], (values) => {
+on('sheet:opened change:melee_dice change:melee_dice_bonus', () => {
+    getAttrs(['melee_dice', 'melee_dice_bonus'], (values) => {
         let description = "";
         if (values.melee_dice) {
             if (values.melee_dice_bonus && values.melee_dice_bonus !== "0") {
-                description = values.melee_dice + " + " + values.melee_dice_bonus;
+                description = values.melee_dice + " + " + values.melee_dice_bonus + " Damage";
             } else {
-                description = values.melee_dice + " damage";
+                description = values.melee_dice + " Damage";
             }
-        }
-        if (values.melee_against) {
-            // TODO show icon
-            // description = description + "<img style='height: 20px' src='https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png'>"
         }
         setAttrs({melee_damage_description: description});
     });
 });
+on('sheet:opened change:ranged_dice change:ranged_dice_bonus', () => {
+    getAttrs(['ranged_dice', 'ranged_dice_bonus'], (values) => {
+        let description = "";
+        if (values.ranged_dice) {
+            if (values.ranged_dice_bonus && values.ranged_dice_bonus !== "0") {
+                description = values.ranged_dice + " + " + values.ranged_dice_bonus + " Damage";
+            } else {
+                description = values.ranged_dice + " Damage";
+            }
+        }
+        setAttrs({ranged_damage_description: description});
+    });
+});
+on("change:repeating_actions:action_healing_dice change:repeating_actions:action_healing_dice_bonus", function() {
+    getAttrs(["repeating_actions_action_healing_dice", "repeating_actions_action_healing_dice_bonus"], function(values) {
+        let description = "";
+        if (values.repeating_actions_action_healing_dice) {
+            if (values.repeating_actions_action_healing_dice_bonus && values.repeating_actions_action_healing_dice_bonus !== "0") {
+                description = "Target(s) heal " + values.repeating_actions_action_healing_dice + " + " + values.repeating_actions_action_healing_dice_bonus + " HP";
+            } else {
+                description = "Target(s) heal " + values.repeating_actions_action_healing_dice + " HP";
+            }
+        }
+        setAttrs({repeating_actions_action_healing_description: description});
+    });
+});
+on("change:repeating_actions:action_dice change:repeating_actions:action_dice_bonus", function() {
+    getAttrs(["repeating_actions_action_dice", "repeating_actions_action_dice_bonus"], function(values) {
+        let description = "";
+        if (values.repeating_actions_action_dice) {
+            if (values.repeating_actions_action_dice_bonus && values.repeating_actions_action_dice_bonus !== "0") {
+                description = values.repeating_actions_action_dice + " + " + values.repeating_actions_action_dice_bonus + " Damage";
+            } else {
+                description = values.repeating_actions_action_dice + " Damage";
+            }
+        }
+        setAttrs({repeating_actions_action_damage_description: description});
+    });
+});
+on("change:repeating_tideTurners:tide_action_healing_dice change:repeating_tideTurners:tide_action_healing_dice_bonus", function() {
+    getAttrs(["repeating_tideTurners_tide_action_healing_dice", "repeating_tideTurners_tide_action_healing_dice_bonus"], function(values) {
+        let description = "";
+        if (values.repeating_tideTurners_tide_action_healing_dice) {
+            if (values.repeating_tideTurners_tide_action_healing_dice_bonus && values.repeating_tideTurners_tide_action_healing_dice_bonus !== "0") {
+                description = "Target(s) heal " + values.repeating_tideTurners_tide_action_healing_dice + " + " + values.repeating_tideTurners_tide_action_healing_dice_bonus + " HP";
+            } else {
+                description = "Target(s) heal " + values.repeating_tideTurners_tide_action_healing_dice + " HP";
+            }
+        }
+        setAttrs({repeating_tideTurners_tide_action_healing_description: description});
+    });
+});
+on("change:repeating_tideTurners:tide_action_dice change:repeating_tideTurners:tide_action_dice_bonus", function() {
+    getAttrs(["repeating_tideTurners_tide_action_dice", "repeating_tideTurners_tide_action_dice_bonus"], function(values) {
+        let description = "";
+        if (values.repeating_tideTurners_tide_action_dice) {
+            if (values.repeating_tideTurners_tide_action_dice_bonus && values.repeating_tideTurners_tide_action_dice_bonus !== "0") {
+                description = values.repeating_tideTurners_tide_action_dice + " + " + values.repeating_tideTurners_tide_action_dice_bonus + " Damage";
+            } else {
+                description = values.repeating_tideTurners_tide_action_dice + " Damage";
+            }
+        }
+        setAttrs({repeating_tideTurners_tide_action_damage_description: description});
+    });
+});
+
 </script>
 <div class="rolltemplates" hidden="hidden">
     <rolltemplate class="sheet-rolltemplate-basic-action">
@@ -2537,12 +2966,12 @@ on('sheet:opened change:melee_dice change:melee_dice_bonus change:melee_against'
                 {{#rollTotal() against 1}}
                 <span> vs</span>
                 <img style="width: 20px; height: 20px"
-                     src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/shield.png">
+                     src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
                 {{/rollTotal() against 1}}
                 {{#rollTotal() against 2}}
                 <span> vs</span>
                 <img style="width: 20px; height: 20px"
-                     src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
+                     src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
                 {{/rollTotal() against 2}}
             </div>
             {{/^rollWasFumble() cap}}
@@ -2606,12 +3035,12 @@ on('sheet:opened change:melee_dice change:melee_dice_bonus change:melee_against'
                 {{#rollTotal() against 1}}
                 <span> vs</span>
                 <img style="width: 20px; height: 20px"
-                     src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/shield.png">
+                     src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
                 {{/rollTotal() against 1}}
                 {{#rollTotal() against 2}}
                 <span> vs</span>
                 <img style="width: 20px; height: 20px"
-                     src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
+                     src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
                 {{/rollTotal() against 2}}
             </div>
             {{/^rollWasFumble() cap}}
@@ -2642,12 +3071,12 @@ on('sheet:opened change:melee_dice change:melee_dice_bonus change:melee_against'
                 {{#rollTotal() against 1}}
                 <span> vs</span>
                 <img style="width: 20px; height: 20px"
-                     src="https://uxwing.com/wp-content/themes/uxwing/download/01-user_interface/shield.png">
+                     src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
                 {{/rollTotal() against 1}}
                 {{#rollTotal() against 2}}
                 <span> vs</span>
                 <img style="width: 20px; height: 20px"
-                     src="https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-basic-ui/512/magic_defense_magical_shield_down-512.png">
+                     src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
                 {{/rollTotal() against 2}}
             </div>
             {{/damage}}
