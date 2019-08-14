@@ -780,7 +780,25 @@
                                                 </div>
                                             </div>
                                             <div class="row">
+                                                <input class="description-control" type="hidden" name="attr_action_subtype1"
+                                                       value="General">
+                                                <span class="action-amp-effect" style="font-style: italic; padding: 0">
+                                                    Amp. Effect:
+                                                    <span name="attr_action_amp_effect" style="font-style: normal"></span>
+                                                </span>
+                                                <span class="action-trig-effect" style="font-style: italic; padding: 0">
+                                                    Trig. Condition:
+                                                    <span name="attr_action_trig_condition" style="font-style: normal"></span>
+                                                </span>
+                                                <span class="action-trig-effect" style="font-style: italic; padding: 0">
+                                                    Trig. Effect:
+                                                    <span name="attr_action_trig_effect" style="font-style: normal"></span>
+                                                </span>
                                                 <span name="attr_action_description"></span>
+                                                <span class="action-sust-effect" style="font-style: italic; padding: 0">
+                                                    Sust. Effect:
+                                                    <span name="attr_action_sust_effect" style="font-style: normal"></span>
+                                                </span>
                                             </div>
                                         </div>
                                     </div>
@@ -918,17 +936,17 @@
                                            value="General">
                                     <div class="action-amp-effect">
                                         <div class="bold">Amp. Effect:</div>
-                                        <textarea class="height25 width95" name="attr_action_amp_effect"></textarea>
+                                        <textarea class="height30 width95" name="attr_action_amp_effect"></textarea>
                                     </div>
                                     <div class="action-trig-effect">
                                         <div class="bold">Trig. Condition:</div>
-                                        <textarea class="height25 width95" name="attr_action_trig_condition"></textarea>
+                                        <textarea class="height30 width95" name="attr_action_trig_condition"></textarea>
                                         <div class="bold">Trig. Effect:</div>
-                                        <textarea class="height25 width95" name="attr_action_trig_effect"></textarea>
+                                        <textarea class="height30 width95" name="attr_action_trig_effect"></textarea>
                                     </div>
                                     <div class="action-sust-effect">
                                         <div class="bold">Sust. Effect:</div>
-                                        <textarea class="height25 width95" name="attr_action_sust_effect"></textarea>
+                                        <textarea class="height30 width95" name="attr_action_sust_effect">Repeat Effect.</textarea>
                                     </div>
                                     <div class="action-description">
                                         <div class="bold">Description:</div>
@@ -2434,8 +2452,8 @@ on("clicked:character-gen", function() {
             settings["repeating_actions_" + newId3 + "_action_dice_bonus"] = "";
             settings["repeating_actions_" + newId3 + "_action_against"] = "1";
             settings["repeating_actions_" + newId3 + "_action_healing_dice"] = "";
-            settings["repeating_actions_" + newId3 + "_action_sust_effect"] = "Repeat Effect.";
-            settings["repeating_actions_" + newId3 + "_action_description"] = "+2 A if Target is 1 Other Hero or +4 A if Target is Self. Sust. Effect: Repeat Effect.";
+            settings["repeating_actions_" + newId3 + "_action_sust_effect"] = "";
+            settings["repeating_actions_" + newId3 + "_action_description"] = "+2 A if Target is 1 Other Hero or +4 A if Target is Self.";
 
             const newId4 = generateRowID();
             settings["repeating_actions_" + newId4 + "_action_name"] = "Warsong: Exhilarating Anthem";
@@ -2500,8 +2518,8 @@ on("clicked:character-gen", function() {
             settings["repeating_tideTurners_" + newIdt1 + "_tide_action_dice_bonus"] = "0";
             settings["repeating_tideTurners_" + newIdt1 + "_tide_action_against"] = "1";
             settings["repeating_tideTurners_" + newIdt1 + "_tide_action_healing_dice"] = "";
-            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_sust_effect"] = "Repeat Effect.";
-            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_description"] = "All your Damage-dealing Actions deal Resistance Damage and cause Hit Foe(s) to suffer 1 Stack of BURNING. Sust. Effect: Repeat Effect.";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_sust_effect"] = "";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_description"] = "All your Damage-dealing Actions deal Resistance Damage and cause Hit Foe(s) to suffer 1 Stack of BURNING.";
 
             const newIdt2 = generateRowID();
             settings["repeating_tideTurners_" + newIdt2 + "_tide_action_name"] = "Pegasus Charger";
@@ -2516,8 +2534,8 @@ on("clicked:character-gen", function() {
             settings["repeating_tideTurners_" + newIdt2 + "_tide_action_dice_bonus"] = "";
             settings["repeating_tideTurners_" + newIdt2 + "_tide_action_against"] = "1";
             settings["repeating_tideTurners_" + newIdt2 + "_tide_action_healing_dice"] = "";
-            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_sust_effect"] = "Repeat Effect.";
-            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_description"] = "Your first Move Action and first Basic Melee Attack Action each Round is a Free Action. Sust. Effect: Repeat Effect.";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_sust_effect"] = "";
+            settings["repeating_tideTurners_" + newIdt2 + "_tide_action_description"] = "Your first Move Action and first Basic Melee Attack Action each Round is a Free Action.";
 
             // Inventory
             settings['melee_weapon'] = "Spear";
@@ -2738,8 +2756,8 @@ on("clicked:character-gen", function() {
             settings["repeating_tideTurners_" + newIdt1 + "_tide_action_dice_bonus"] = "0";
             settings["repeating_tideTurners_" + newIdt1 + "_tide_action_against"] = "1";
             settings["repeating_tideTurners_" + newIdt1 + "_tide_action_healing_dice"] = "";
-            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_sust_effect"] = "Repeat Effect.";
-            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_description"] = "All Damage you deal gains the PIERCING property. Sust. Effect: Repeat Effect.";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_sust_effect"] = "";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_description"] = "All Damage you deal gains the PIERCING property.";
 
             const newIdt2 = generateRowID();
             settings["repeating_tideTurners_" + newIdt2 + "_tide_action_name"] = "Fool’s Luck";
@@ -2909,7 +2927,7 @@ on("clicked:character-gen", function() {
             settings["repeating_actions_" + newId3 + "_action_dice_bonus"] = "";
             settings["repeating_actions_" + newId3 + "_action_against"] = "1";
             settings["repeating_actions_" + newId3 + "_action_healing_dice"] = "1d8";
-            settings["repeating_actions_" + newId3 + "_action_sust_effect"] = "Sust. Effect: Repeat Effect.";
+            settings["repeating_actions_" + newId3 + "_action_sust_effect"] = "";
             settings["repeating_actions_" + newId3 + "_action_description"] = "";
 
             const newId4 = generateRowID();
@@ -2925,7 +2943,7 @@ on("clicked:character-gen", function() {
             settings["repeating_actions_" + newId4 + "_action_dice_bonus"] = "0";
             settings["repeating_actions_" + newId4 + "_action_against"] = "1";
             settings["repeating_actions_" + newId4 + "_action_healing_dice"] = "";
-            settings["repeating_actions_" + newId4 + "_action_sust_effect"] = "Repeat Effect.";
+            settings["repeating_actions_" + newId4 + "_action_sust_effect"] = "";
             settings["repeating_actions_" + newId4 + "_action_description"] = "Remove up to 2 Stacks of 1 Condition from Target Hero.";
 
             const newId5 = generateRowID();
@@ -2941,7 +2959,7 @@ on("clicked:character-gen", function() {
             settings["repeating_actions_" + newId5 + "_action_dice_bonus"] = "0";
             settings["repeating_actions_" + newId5 + "_action_against"] = "1";
             settings["repeating_actions_" + newId5 + "_action_healing_dice"] = "";
-            settings["repeating_actions_" + newId5 + "_action_sust_effect"] = "Repeat Effect.";
+            settings["repeating_actions_" + newId5 + "_action_sust_effect"] = "";
             settings["repeating_actions_" + newId5 + "_action_description"] = "+2 P and Target Hero may make 1 Basic Melee Attack as a Free Action.";
 
             const newId6 = generateRowID();
@@ -3161,7 +3179,7 @@ on("clicked:character-gen", function() {
             settings["repeating_actions_" + newId4 + "_action_dice_bonus"] = "0";
             settings["repeating_actions_" + newId4 + "_action_against"] = "1";
             settings["repeating_actions_" + newId4 + "_action_healing_dice"] = "";
-            settings["repeating_actions_" + newId4 + "_action_sust_effect"] = "Repeat Effect.";
+            settings["repeating_actions_" + newId4 + "_action_sust_effect"] = "";
             settings["repeating_actions_" + newId4 + "_action_description"] = "If any Foe suffering Chains of Calamity is the Target of a Spell, deal 1d6 PIERCING Damage to all Foes suffering Chains of Calamity.";
 
             const newId5 = generateRowID();
@@ -3213,7 +3231,7 @@ on("clicked:character-gen", function() {
             settings["repeating_tideTurners_" + newIdt1 + "_tide_action_dice_bonus"] = "0";
             settings["repeating_tideTurners_" + newIdt1 + "_tide_action_against"] = "2";
             settings["repeating_tideTurners_" + newIdt1 + "_tide_action_healing_dice"] = "";
-            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_sust_effect"] = "Repeat Effect.";
+            settings["repeating_tideTurners_" + newIdt1 + "_tide_action_sust_effect"] = "";
             settings["repeating_tideTurners_" + newIdt1 + "_tide_action_description"] = "Until the start of your next Turn, if Foe is the Target of a Spell, deal 2d12 Resistance Damage.";
 
             const newIdt2 = generateRowID();
