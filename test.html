@@ -1039,7 +1039,25 @@
                                                 </div>
                                             </div>
                                             <div class="row">
+                                                <input class="description-control" type="hidden" name="attr_tide_action_subtype1"
+                                                       value="General">
+                                                <span class="action-amp-effect" style="font-style: italic; padding: 0">
+                                                    Amp. Effect:
+                                                    <span name="attr_tide_action_amp_effect" style="font-style: normal"></span>
+                                                </span>
+                                                <span class="action-trig-effect" style="font-style: italic; padding: 0">
+                                                    Trig. Condition:
+                                                    <span name="attr_tide_action_trig_condition" style="font-style: normal"></span>
+                                                </span>
+                                                <span class="action-trig-effect" style="font-style: italic; padding: 0">
+                                                    Trig. Effect:
+                                                    <span name="attr_tide_action_trig_effect" style="font-style: normal"></span>
+                                                </span>
                                                 <span name="attr_tide_action_description"></span>
+                                                <span class="action-sust-effect" style="font-style: italic; padding: 0">
+                                                    Sust. Effect:
+                                                    <span name="attr_tide_action_sust_effect" style="font-style: normal"></span>
+                                                </span>
                                             </div>
                                         </div>
                                     </div>
@@ -1174,12 +1192,26 @@
                                         </div>
                                     </div>
 
-                                    <div class="row" style="padding: 2px 5px 0 5px;">
-                                        <div class="bold">Description:</div>
-                                        <textarea class="height50 width95"
-                                                  name="attr_tide_action_description"></textarea>
+                                    <input class="description-control" type="hidden" name="attr_tide_action_subtype1"
+                                           value="General">
+                                    <div class="action-amp-effect">
+                                        <div class="bold">Amp. Effect:</div>
+                                        <textarea class="height30 width95" name="attr_tide_action_amp_effect"></textarea>
                                     </div>
-
+                                    <div class="action-trig-effect">
+                                        <div class="bold">Trig. Condition:</div>
+                                        <textarea class="height30 width95" name="attr_tide_action_trig_condition"></textarea>
+                                        <div class="bold">Trig. Effect:</div>
+                                        <textarea class="height30 width95" name="attr_tide_action_trig_effect"></textarea>
+                                    </div>
+                                    <div class="action-sust-effect">
+                                        <div class="bold">Sust. Effect:</div>
+                                        <textarea class="height30 width95" name="attr_tide_action_sust_effect">Repeat Effect.</textarea>
+                                    </div>
+                                    <div class="action-description">
+                                        <div class="bold">Description:</div>
+                                        <textarea class="height50 width95" name="attr_tide_action_description"></textarea>
+                                    </div>
                                 </div>
                             </div>
                         </fieldset>
