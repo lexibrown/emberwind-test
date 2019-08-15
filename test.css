@@ -90,7 +90,8 @@ div.sheet-tab-content {
 
 input.sheet-tab1:checked ~ div.sheet-tab1,
 input.sheet-tab2:checked ~ div.sheet-tab2,
-input.sheet-tab3:checked ~ div.sheet-tab3 {
+input.sheet-tab3:checked ~ div.sheet-tab3,
+input.sheet-tab4:checked ~ div.sheet-tab4 {
     display: flex;
 }
 
@@ -136,8 +137,12 @@ input.sheet-tab3 + span::before {
     left: 331px;
 }
 
+input.sheet-tab4 + span::before {
+    left: 481px;
+}
+
 div.sheet-tab-content {
-    padding: 5px 0px 5px 0px;
+    padding: 5px 0 5px 0;
 }
 
 .sheet-separator {
@@ -166,7 +171,7 @@ div.sheet-tab-content {
     grid-column-gap: 5px;
     grid-template-columns: auto;
     grid-auto-rows: fit-content(100%);
-    grid-template-areas: "image" "name" "info" "aspects" "header1" "stats1" "common1" "header2" "stats2" "common2" "header3" "common3" "header4" "common4";
+    grid-template-areas: "image" "name" "info" "aspects" "attribute1" "header1" "stats1" "common1" "attribute2" "header2" "stats2" "common2" "header3" "common3" "header4" "common4";
 }
 
 .sheet-main-inventory {
@@ -216,6 +221,66 @@ div.sheet-tab-content {
     grid-template-columns: 1fr;
     grid-auto-rows: fit-content(100%);
     grid-template-areas: "top-detail" "middle-detail" "bottom-detail";
+}
+
+.sheet-quick-guide-grid {
+    display: grid;
+    width: fit-content;
+    height: fit-content;
+    padding-bottom: 3px;
+    grid-column-gap: 3px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: fit-content(100%);
+    grid-template-areas: "guide-left guide-middle guide-right";
+}
+
+/*----------------- Quick Guide ------------------*/
+
+.sheet-guide-left {
+    grid-area: guide-left;
+    padding: 7px;
+}
+
+.sheet-guide-middle {
+    grid-area: guide-middle;
+    padding: 7px;
+}
+
+.sheet-guide-right {
+    grid-area: guide-right;
+    padding: 7px;
+    background-color: lightgrey;
+    height: fit-content;
+}
+
+.sheet-guide-header {
+    height: 50px;
+    width: 310px;
+    text-align: center;
+    display: table-cell;
+    vertical-align:middle;
+    color: white;
+    background-position-y: 2px;
+    background-position-x: 0;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url('https://tchol.org/images/red-grunge-png-1.png')
+}
+
+.sheet-guide-header-big {
+    font-weight: bold;
+    font-size: 1.6em;
+}
+
+.sheet-guide-header-small {
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
+.sheet-guide-p {
+    background: -webkit-linear-gradient(130deg, lightcoral 60%, lightskyblue 35%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /*----------------- Sections ------------------*/
@@ -325,6 +390,7 @@ input.sheet-medium {
 .sheet-aspects {
     grid-area: aspects;
     border-bottom: 3px solid dimgrey;
+    display: none;
 }
 
 .sheet-aspects-col {
@@ -332,6 +398,34 @@ input.sheet-medium {
     padding-left: 3px;
     padding-right: 3px;
 }
+
+/*----------------- Attribute section ------------------*/
+
+.sheet-attribute1 {
+    grid-area: attribute1;
+    display: none;
+}
+
+.sheet-attribute2 {
+    grid-area: attribute2;
+    display: none;
+}
+
+.sheet-attribute-col {
+    display: inline-flex;
+    width: 49%;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.sheet-character-version-control[value="aspect"] ~ .sheet-aspects,
+.sheet-character-version-control[value="attribute"] ~ .sheet-attribute1,
+.sheet-character-version-control[value="attribute"] ~ .sheet-attribute2 {
+    display: block;
+}
+
 
 /*----------------- Headers ------------------*/
 .sheet-header1 {
@@ -755,11 +849,11 @@ button[type=roll].sheet-custom-roll-button {
 }
 
 .sheet-dodge-image {
-    background-image: url("https://cdn2.iconfinder.com/data/icons/rpg-fantasy-game-skill-ui/512/game_skill_ui_evade_people_dodge_move-512.png");
+    background-image: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/dodge_transparent.png");
 }
 
 .sheet-willpower-image {
-    background-image: url("https://static.thenounproject.com/png/1110005-200.png");
+    background-image: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/willpower_transparent.png");
 }
 
 /*----------------- Inventory / Bio ------------------*/
