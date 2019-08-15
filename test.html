@@ -1418,7 +1418,37 @@
             </div>
 
             <div class="sheet-tab-content sheet-tab3">
+                <div>
+                    <div class="inventory-header">CONDITIONS</div>
+                    <div>Check off the box next to the Condition you are currently suffering from. If a max is specified,
+                        write the number of Stacks instead.
+                    </div>
+                    <div>
+                        <div class="col" style="width: 49%">
 
+                            <div style="border-bottom: 1px solid black; border-top: 1px solid black;">
+                                <input type="checkbox" name="attr_condition_daze">
+                                <div><b><i>DAZE: </i></b>-4 Accuracy</div>
+                            </div>
+                            <div style="border-bottom: 1px solid black; border-top: 1px solid black;">
+                                <input type="checkbox" name="attr_condition_off_guard">
+                                <div><b><i>OFF-GUARD: </i></b>-2 Dodge</div>
+                            </div>
+                            <div style="border-bottom: 1px solid black; border-top: 1px solid black;">
+                                <input type="checkbox" name="attr_condition_prone">
+                                <div><b><i>PRONE: </i></b>-2 Dodge</div>
+                            </div>
+
+                        </div>
+                        <div class="col" style="width: 49%">
+                            <div style="border-bottom: 1px solid black; border-top: 1px solid black;">
+                                <input type="checkbox" name="">
+                                <div><b><i>POISON [PIERCING]: </i></b>-2 Dodge</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
 
             <div class="sheet-tab-content sheet-tab4">
@@ -1574,7 +1604,7 @@
                             <div style="padding-bottom: 5px"></div>
                             <div>
                                 <i><b>Sustain Limit: </b>The total amount of Effects you can Sustain per Round. Multiple
-                                copies of the same Effect count separately.</i>
+                                    copies of the same Effect count separately.</i>
                             </div>
                             <div style="padding-bottom: 15px"></div>
                             <div>
@@ -1591,7 +1621,7 @@
                             <div style="padding-bottom: 5px"></div>
                             <div>
                                 <i><b>Amplify Limit: </b>The total amount of Amplify Effects and Amplify Actions you can
-                                use per Round.</i>
+                                    use per Round.</i>
                             </div>
                             <div style="padding-bottom: 15px"></div>
                             <div>
@@ -3710,6 +3740,7 @@
                 setAttrs({repeating_tideTurners_tide_action_damage_description: description});
             });
         });
+
 
 
 
