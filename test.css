@@ -1092,6 +1092,10 @@ input[type=checkbox].sheet-tab-hide:checked ~ .sheet-show-hide {
     height: 30px;
 }
 
+.sheet-height35 {
+    height: 35px;
+}
+
 .sheet-height40 {
     height: 40px;
 }

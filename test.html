@@ -723,7 +723,7 @@
                                             <span>y</span>
                                         </div>
                                         <button type='roll' name='roll_action'
-                                                value='@{whisper_state}&{template:action} {{name=@{action_name}}} {{subtag1=@{action_subtype1}}} {{subtag2=@{action_subtype2}}} {{rollType=[[@{action_roll_type}]]}} {{cap=[[d20cs<@{critical}cf>[[@{accuracy}+1]]]]}} {{damage=[[0@{action_dice} + @{action_dice_bonus}]]}} {{penetration=[[@{penetration}]]}} {{dmgcrit=[[10@{action_dice}kh1*{{@{action_dice}>1}}+@{action_dice_bonus}]]}} {{against=[[@{action_against}]]}} {{healing=[[0@{action_healing_dice}]]}} {{speed=@{action_speed}}} {{target=@{action_target}}} {{type=@{action_type}}} {{description=@{action_description}}} {{range=@{action_range}}}'>
+                                                value='@{whisper_state}&{template:action} {{name=@{action_name}}} {{subtag1=@{action_subtype1}}} {{subtag2=@{action_subtype2}}} {{rollType=[[@{action_roll_type}]]}} {{cap=[[d20cs<@{critical}cf>[[@{accuracy}+1]]]]}} {{damage=[[0@{action_dice} + @{action_dice_bonus}]]}} {{penetration=[[@{penetration}]]}} {{dmgcrit=[[10@{action_dice}kh1*{{@{action_dice}>1}}+@{action_dice_bonus}]]}} {{against=[[@{action_against}]]}} {{healing=[[0@{action_healing_dice}]]}} {{speed=@{action_speed}}} {{target=@{action_target}}} {{type=@{action_type}}} {{range=@{action_range}}} {{description=@{action_description}}} {{ampEffect=@{action_amp_effect}}} {{trigCondition=@{action_trig_condition}}} {{trigEffect=@{action_trig_effect}}} {{sustEffect=@{action_sust_effect}}}'>
                                         </button>
                                     </div>
 
@@ -943,17 +943,17 @@
                                            value="General">
                                     <div class="action-amp-effect">
                                         <div class="bold">Amp. Effect:</div>
-                                        <textarea class="height30 width95" name="attr_action_amp_effect"></textarea>
+                                        <textarea class="height35 width95" name="attr_action_amp_effect"></textarea>
                                     </div>
                                     <div class="action-trig-effect">
                                         <div class="bold">Trig. Condition:</div>
-                                        <textarea class="height30 width95" name="attr_action_trig_condition"></textarea>
+                                        <textarea class="height35 width95" name="attr_action_trig_condition"></textarea>
                                         <div class="bold">Trig. Effect:</div>
-                                        <textarea class="height30 width95" name="attr_action_trig_effect"></textarea>
+                                        <textarea class="height35 width95" name="attr_action_trig_effect"></textarea>
                                     </div>
                                     <div class="action-sust-effect">
                                         <div class="bold">Sust. Effect:</div>
-                                        <textarea class="height30 width95"
+                                        <textarea class="height35 width95"
                                                   name="attr_action_sust_effect">Repeat Effect.</textarea>
                                     </div>
                                     <div class="action-description">
@@ -1027,6 +1027,7 @@
                                                          name="attr_tide_action_damage_resistance"
                                                          style="height: 17px;"
                                                          src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
+                                                    <span class="tide-action-damage-piercing indicator">PIERCING</span>
                                                 </div>
                                                 <div class="action-auto-hit-description">
                                                     <span class="indicator">AUTO-HIT</span>
@@ -1041,6 +1042,7 @@
                                                          name="attr_tide_action_damage_resistance"
                                                          style="height: 17px;"
                                                          src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
+                                                    <span class="tide-action-damage-piercing indicator">PIERCING</span>
                                                 </div>
                                                 <div class="action-healing-description">
                                                     <span name="attr_tide_action_healing_description">Target(s) heal 1d6 HP</span>
@@ -1183,14 +1185,14 @@
                                                    value="0"/>
                                             <div class="col" style="padding-top: 5px">
                                                 <span style="width: auto; font-weight: bold"> vs. </span>
-                                                <input type="radio" value="1"
-                                                       name="attr_tide_action_against" checked>
+                                                <input type="radio" value="1" name="attr_tide_action_against" checked>
                                                 <img style="width: 20px; height: 20px"
                                                      src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
-                                                <input type="radio" value="2"
-                                                       name="attr_tide_action_against">
+                                                <input type="radio" value="2" name="attr_tide_action_against">
                                                 <img style="width: 20px; height: 20px"
                                                      src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
+                                                <input type="radio" value="3" name="attr_tide_action_against">
+                                                <span class="indicator">PIERCING</span>
                                             </div>
                                         </div>
 
@@ -1209,20 +1211,20 @@
                                            value="General">
                                     <div class="action-amp-effect">
                                         <div class="bold">Amp. Effect:</div>
-                                        <textarea class="height30 width95"
+                                        <textarea class="height35 width95"
                                                   name="attr_tide_action_amp_effect"></textarea>
                                     </div>
                                     <div class="action-trig-effect">
                                         <div class="bold">Trig. Condition:</div>
-                                        <textarea class="height30 width95"
+                                        <textarea class="height35 width95"
                                                   name="attr_tide_action_trig_condition"></textarea>
                                         <div class="bold">Trig. Effect:</div>
-                                        <textarea class="height30 width95"
+                                        <textarea class="height35 width95"
                                                   name="attr_tide_action_trig_effect"></textarea>
                                     </div>
                                     <div class="action-sust-effect">
                                         <div class="bold">Sust. Effect:</div>
-                                        <textarea class="height30 width95" name="attr_tide_action_sust_effect">Repeat Effect.</textarea>
+                                        <textarea class="height35 width95" name="attr_tide_action_sust_effect">Repeat Effect.</textarea>
                                     </div>
                                     <div class="action-description">
                                         <div class="bold">Description:</div>
@@ -3479,6 +3481,8 @@ on("change:repeating_tideTurners:tide_action_dice change:repeating_tideTurners:t
         setAttrs({repeating_tideTurners_tide_action_damage_description: description});
     });
 });
+
+
 
 
 </script>
