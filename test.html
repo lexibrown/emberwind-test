@@ -6,7 +6,7 @@
     </div>
     <div class="row">
         <input class="page-control" type="hidden" name="attr_sheet_type" value="pc">
-        <input class="tab-button nav" type="checkbox" name="attr_settings_select" value="options">
+        <input class="tab-button nav" type="checkbox" name="attr_settings_select" value="options"/>
         <span class='pictos nav'>y</span>
         <span class='nav pictos'>x</span>
 
@@ -14,20 +14,20 @@
             <div class="row">
                 <div class="col settings-col">
                     <div>
-                        <span style="font-weight: bold;">DISPLAY MODE</span>
+                        <span class="bold">DISPLAY MODE</span>
                     </div>
                     <div>
                         <div class="row">
-                            <input type="radio" name="attr_sheet_type" value="pc" checked="checked">
+                            <input type="radio" name="attr_sheet_type" value="pc" checked="checked"/>
                             <span>PC</span>
-                            <input type="radio" name="attr_sheet_type" value="npc">
+                            <input type="radio" name="attr_sheet_type" value="npc"/>
                             <span>NPC</span>
                         </div>
                     </div>
                 </div>
                 <div class="col settings-col">
                     <div>
-                        <span style="font-weight: bold;">ROLL MODE</span>
+                        <span class="bold">ROLL MODE</span>
                     </div>
                     <div>
                         <div class="row">
@@ -125,9 +125,9 @@
                         <div class="row">
                             <div class="col info-hp-box">
                                 <span class="info-hp-text">HP:</span>
-                                <input class="medium" type="number" name="attr_hp" value="10">
+                                <input class="medium" type="number" name="attr_hp" value="10"/>
                                 <span> / </span>
-                                <input class="medium" type="number" name="attr_hp_max" value="10">
+                                <input class="medium" type="number" name="attr_hp_max" value="10"/>
                             </div>
                             <div class="col info-class-box">
                                 <span>Class:</span>
@@ -211,11 +211,11 @@
                     <div class="attribute1 section">
                         <div class="col attribute-col red">
                             Strength:
-                            <input class="small" type="number" name="attr_strength" value="0">
+                            <input class="small" type="number" name="attr_strength" value="0"/>
                         </div>
                         <div class="col attribute-col blue">
                             Intelligence:
-                            <input class="small" type="number" name="attr_intelligence" value="0">
+                            <input class="small" type="number" name="attr_intelligence" value="0"/>
                         </div>
                     </div>
 
@@ -225,16 +225,16 @@
                     </div>
                     <div class="stats1 section">
                         <div class="col stats-col red">
-                            <img style="width: 20px; height: 20px"
+                            <img class="20-box"
                                  src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
                             Toughness:
-                            <input class="small" type="number" name="attr_toughness" value="4">
+                            <input class="small" type="number" name="attr_toughness" value="4"/>
                         </div>
                         <div class="col stats-col blue">
-                            <img style="width: 20px; height: 20px"
+                            <img class="20-box"
                                  src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
                             Resistance:
-                            <input class="small" type="number" name="attr_resistance" value="4">
+                            <input class="small" type="number" name="attr_resistance" value="4"/>
                         </div>
                     </div>
                     <div class="common1 section">
@@ -245,47 +245,45 @@
                                             value='@{whisper_state}&{template:skill} {{name=Athletics}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{athletics}cf>[[@{athletics}+1]]]]}} {{no-roll=[[1]]}}'>
                                         Athletics:
                                     </button>
-                                    <input class="small" type="number" name="attr_athletics" value="8">
+                                    <input class="small" type="number" name="attr_athletics" value="8"/>
                                 </div>
                                 <div class="skill">
                                     <button type='roll' name='roll_skill' style="font-size: 1.2em;"
                                             value='@{whisper_state}&{template:skill} {{name=Endurance}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{endurance}cf>[[@{endurance}+1]]]]}} {{no-roll=[[1]]}}'>
                                         Endurance:
                                     </button>
-                                    <input class="small" type="number" name="attr_endurance" value="8">
+                                    <input class="small" type="number" name="attr_endurance" value="8"/>
                                 </div>
                                 <div class="skill">
                                     <button type='roll' name='roll_skill'
                                             value='@{whisper_state}&{template:skill} {{name=Intimidate}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{intimidate}cf>[[@{intimidate}+1]]]]}} {{no-roll=[[1]]}}'>
                                         Intimidate:
                                     </button>
-                                    <input class="small" type="number" name="attr_intimidate" value="8">
+                                    <input class="small" type="number" name="attr_intimidate" value="8"/>
                                 </div>
                             </div>
-                            <div class="skill-label">
-                                Skills
-                            </div>
+                            <div class="skill-label">Skills</div>
                             <div class="skill-right">
                                 <div class="skill">
                                     <button type='roll' name='roll_skill'
                                             value='@{whisper_state}&{template:skill} {{name=Insight}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{insight}cf>[[@{insight}+1]]]]}} {{no-roll=[[1]]}}'>
                                         Insight:
                                     </button>
-                                    <input class="small" type="number" name="attr_insight" value="8">
+                                    <input class="small" type="number" name="attr_insight" value="8"/>
                                 </div>
                                 <div class="skill">
                                     <button type='roll' name='roll_skill' style="font-size: 1.2em;"
                                             value='@{whisper_state}&{template:skill} {{name=Knowledge}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{knowledge}cf>[[@{knowledge}+1]]]]}} {{no-roll=[[1]]}}'>
                                         Knowledge:
                                     </button>
-                                    <input class="small" type="number" name="attr_knowledge" value="8">
+                                    <input class="small" type="number" name="attr_knowledge" value="8"/>
                                 </div>
                                 <div class="skill">
                                     <button type='roll' name='roll_skill'
                                             value='@{whisper_state}&{template:skill} {{name=Mend}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{mend}cf>[[@{mend}+1]]]]}} {{no-roll=[[1]]}}'>
                                         Mend:
                                     </button>
-                                    <input class="small" type="number" name="attr_mend" value="8">
+                                    <input class="small" type="number" name="attr_mend" value="8"/>
                                 </div>
                             </div>
                         </div>
@@ -295,11 +293,11 @@
                     <div class="attribute2 section">
                         <div class="col attribute-col green">
                             Dexterity:
-                            <input class="small" type="number" name="attr_dexterity" value="0">
+                            <input class="small" type="number" name="attr_dexterity" value="0"/>
                         </div>
                         <div class="col attribute-col yellow">
                             Resilience:
-                            <input class="small" type="number" name="attr_resilience" value="0">
+                            <input class="small" type="number" name="attr_resilience" value="0"/>
                         </div>
                     </div>
 
@@ -313,14 +311,14 @@
                                     value='@{whisper_state}&{template:skill} {{name=Dodge}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{dodge}cf>[[@{dodge}+1]]]]}} {{no-roll=[[1]]}}'>
                             </button>
                             Dodge:
-                            <input class="small" type="number" name="attr_dodge" value="4">
+                            <input class="small" type="number" name="attr_dodge" value="4"/>
                         </div>
                         <div class="stats-col yellow flex-center">
                             <button class="custom-roll-button willpower-image" type='roll' name='roll_dodge'
                                     value='@{whisper_state}&{template:skill} {{name=Willpower}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{willpower}cf>[[@{willpower}+1]]]]}} {{no-roll=[[1]]}}'>
                             </button>
                             Willpower:
-                            <input class="small" type="number" name="attr_willpower" value="4">
+                            <input class="small" type="number" name="attr_willpower" value="4"/>
                         </div>
                     </div>
                     <div class="common2 section">
@@ -331,47 +329,45 @@
                                             value='@{whisper_state}&{template:skill} {{name=Acrobatics}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{acrobatics}cf>[[@{acrobatics}+1]]]]}} {{no-roll=[[1]]}}'>
                                         Acrobatics:
                                     </button>
-                                    <input class="small" type="number" name="attr_acrobatics" value="8">
+                                    <input class="small" type="number" name="attr_acrobatics" value="8"/>
                                 </div>
                                 <div class="skill">
                                     <button type='roll' name='roll_skill'
                                             value='@{whisper_state}&{template:skill} {{name=Stealth}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{stealth}cf>[[@{stealth}+1]]]]}} {{no-roll=[[1]]}}'>
                                         Stealth:
                                     </button>
-                                    <input class="small" type="number" name="attr_stealth" value="8">
+                                    <input class="small" type="number" name="attr_stealth" value="8"/>
                                 </div>
                                 <div class="skill">
                                     <button type='roll' name='roll_skill' style="font-size: 0.9em;"
                                             value='@{whisper_state}&{template:skill} {{name=Sleight of Hand}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{sleight_of_hand}cf>[[@{sleight_of_hand}+1]]]]}} {{no-roll=[[1]]}}'>
                                         Sleight of Hand:
                                     </button>
-                                    <input class="small" type="number" name="attr_sleight_of_hand" value="8">
+                                    <input class="small" type="number" name="attr_sleight_of_hand" value="8"/>
                                 </div>
                             </div>
-                            <div class="skill-label">
-                                Skills
-                            </div>
+                            <div class="skill-label">Skills</div>
                             <div class="skill-right">
                                 <div class="skill">
                                     <button type='roll' name='roll_skill'
                                             value='@{whisper_state}&{template:skill} {{name=Focus}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{focus}cf>[[@{focus}+1]]]]}} {{no-roll=[[1]]}}'>
                                         Focus:
                                     </button>
-                                    <input class="small" type="number" name="attr_focus" value="8">
+                                    <input class="small" type="number" name="attr_focus" value="8"/>
                                 </div>
                                 <div class="skill">
                                     <button type='roll' name='roll_skill'
                                             value='@{whisper_state}&{template:skill} {{name=Fast Talk}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{fast_talk}cf>[[@{fast_talk}+1]]]]}} {{no-roll=[[1]]}}'>
                                         Fast Talk:
                                     </button>
-                                    <input class="small" type="number" name="attr_fast_talk" value="8">
+                                    <input class="small" type="number" name="attr_fast_talk" value="8"/>
                                 </div>
                                 <div class="skill">
                                     <button type='roll' name='roll_skill' style="font-size: 1.2em;"
                                             value='@{whisper_state}&{template:skill} {{name=Leadership}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{leadership}cf>[[@{leadership}+1]]]]}} {{no-roll=[[1]]}}'>
                                         Leadership:
                                     </button>
-                                    <input class="small" type="number" name="attr_leadership" value="8">
+                                    <input class="small" type="number" name="attr_leadership" value="8"/>
                                 </div>
                             </div>
                         </div>
@@ -385,29 +381,29 @@
                         <div class="row">
                             <span>Roll 1d20 when an Action targets at least 1 Foe. Must be equal or less tab <b>CAP</b> Values to succeed</span>
                         </div>
-                        <div class="row" style="text-align: center;">
-                            <div class="col cap-main-col" style="text-align: center">
-                                <div class="row critical" style="padding: 3px;">
-                                    <span style="font-weight: bold">C:</span>
-                                    <input class="cap" type="number" name="attr_critical" value="2">
+                        <div class="row center-text">
+                            <div class="col cap-main-col center-text">
+                                <div class="row critical padding-3">
+                                    <span class="bold">C:</span>
+                                    <input class="cap" type="number" name="attr_critical" value="2"/>
                                 </div>
-                                <span style="font-weight: bold;">Critical</span>
+                                <span class="bold">Critical</span>
                             </div>
-                            <span class="col cap-sep-col" style="font-weight: bold;">&#129046;</span>
-                            <div class="col cap-main-col" style="text-align: center">
-                                <div class="row accuracy" style="padding: 3px;">
-                                    <span style="font-weight: bold">A:</span>
-                                    <input class="cap" type="number" name="attr_accuracy" value="10">
+                            <span class="col cap-sep-col bold">&#129046;</span>
+                            <div class="col cap-main-col center-text">
+                                <div class="row accuracy padding-3">
+                                    <span class="bold">A:</span>
+                                    <input class="cap" type="number" name="attr_accuracy" value="10"/>
                                 </div>
-                                <span style="font-weight: bold;">Accuracy</span>
+                                <span class="bold">Accuracy</span>
                             </div>
-                            <span class="col cap-sep-col" style="font-weight: bold;">&#129046;</span>
-                            <div class="col cap-main-col" style="text-align: center">
-                                <div class="row penetration" style="padding: 3px;">
-                                    <span style="font-weight: bold">P:</span>
-                                    <input class="cap" type="number" name="attr_penetration" value="5">
+                            <span class="col cap-sep-col bold">&#129046;</span>
+                            <div class="col cap-main-col center-text">
+                                <div class="row penetration padding-3">
+                                    <span class="bold">P:</span>
+                                    <input class="cap" type="number" name="attr_penetration" value="5"/>
                                 </div>
-                                <span style="font-weight: bold;">Penetration</span>
+                                <span class="bold">Penetration</span>
                             </div>
                         </div>
                     </div>
@@ -418,11 +414,11 @@
                     </div>
                     <div class="common4 section">
                         <span>Check 2 Boxes when using a Slow Action. Check 1 Box when using a Fast Action.</span>
-                        <div class="row" style="text-align: center; padding-top: 5px">
-                            <input type="checkbox" style="width: 25px; height: 25px">
-                            <input type="checkbox" style="width: 25px; height: 25px">
-                            <input type="checkbox" style="width: 25px; height: 25px">
-                            <input type="checkbox" style="width: 25px; height: 25px">
+                        <div class="row center-text" style="padding-top: 5px">
+                            <input type="checkbox" style="width: 25px; height: 25px"/>
+                            <input type="checkbox" style="width: 25px; height: 25px"/>
+                            <input type="checkbox" style="width: 25px; height: 25px"/>
+                            <input type="checkbox" style="width: 25px; height: 25px"/>
                         </div>
                     </div>
 
@@ -455,9 +451,9 @@
                         <div class="action-range action-centered"></div>
                         <div class="action-effect action-text">
                             <span>Move </span>
-                            <input class="x-small" type="number" name="attr_min_move" value="1">
+                            <input class="x-small" type="number" name="attr_min_move" value="1"/>
                             <span>-</span>
-                            <input class="x-small" type="number" name="attr_max_move" value="4">
+                            <input class="x-small" type="number" name="attr_max_move" value="4"/>
                             <span> Squares. Can move through friendly Combatants.</span>
                         </div>
                         <span class="action-speed action-centered">Slow</span>
@@ -471,7 +467,7 @@
                         <div class="action-range action-centered"></div>
                         <div class="action-effect action-text">
                             <span>Move </span>
-                            <input class="x-small" type="number" name="attr_shift" value="1">
+                            <input class="x-small" type="number" name="attr_shift" value="1"/>
                             <span> Square(s). Can move through friendly Combatants.</span>
                         </div>
                         <span class="action-speed action-centered">Fast</span>
@@ -508,7 +504,7 @@
                                name="attr_maneuver_display_settings_flag"
                                value="hide"/>
                         <div class="width60 displaySettings action-detail-grid">
-                            <div class="row" style="padding: 2px 5px 2px 5px">
+                            <div class="row padding-2525">
                                 <div class="col">
                                     <div class="bold">Name:</div>
                                     <div class="inputNameShort">
@@ -586,11 +582,10 @@
                                         <span name="attr_melee_damage_description"></span>
                                         <input type="hidden" class="melee-damage-indicator" name="attr_melee_against"
                                                value="1">
-                                        <img class="melee-damage-toughness" name="attr_melee_damage_toughness"
-                                             style="height: 17px"
+                                        <img class="melee-damage-toughness height17" name="attr_melee_damage_toughness"
                                              src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
-                                        <img class="melee-damage-resistance" name="attr_melee_damage_resistance"
-                                             style="height: 17px;"
+                                        <img class="melee-damage-resistance height17"
+                                             name="attr_melee_damage_resistance"
                                              src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
                                     </div>
                                     <div class="row">
@@ -604,7 +599,7 @@
                         <input type="hidden" class="melee_display_settings_flag" name="attr_melee_display_settings_flag"
                                value="hide"/>
                         <div class="width65 displaySettings action-detail-grid">
-                            <div class="row" style="padding: 2px 5px 2px 5px">
+                            <div class="row padding-2525">
                                 <div class="col">
                                     <div class="bold">Name:</div>
                                     <div class="inputNameShort">
@@ -620,24 +615,24 @@
                                 <div class="col">
                                     <div class="bold">Range:</div>
                                     <div>
-                                        <input class="small" type="number" name="attr_melee_range">
+                                        <input class="small" type="number" name="attr_melee_range"/>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row" style="padding: 2px 5px 2px 5px">
-                                <span style="width: auto; font-weight: bold">Damage: </span>
+                            <div class="row padding-2525">
+                                <span class="bold width-auto">Damage: </span>
                                 <input style="width: 50px" type="text" name="attr_melee_dice" value="1d6"/>
                                 <span style="width: auto; font-weight: bold"> + </span>
                                 <input style="width: 50px" type="text" name="attr_melee_dice_bonus" value="0"/>
 
                                 <div class="col" style="padding-top: 5px">
-                                    <span style="width: auto; font-weight: bold"> vs. </span>
+                                    <span class="bold width-auto"> vs. </span>
                                     <input type="radio" name="attr_melee_against" value="1"
-                                           checked="checked">
-                                    <img style="width: 20px; height: 20px"
+                                           checked="checked"/>
+                                    <img class="20-box"
                                          src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
-                                    <input type="radio" name="attr_melee_against" value="2">
-                                    <img style="width: 20px; height: 20px"
+                                    <input type="radio" name="attr_melee_against" value="2"/>
+                                    <img class="20-box"
                                          src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
                                 </div>
                             </div>
@@ -671,11 +666,11 @@
                                         <span name="attr_ranged_damage_description"></span>
                                         <input type="hidden" class="ranged-damage-indicator" name="attr_ranged_against"
                                                value="1">
-                                        <img class="ranged-damage-toughness" name="attr_ranged_damage_toughness"
-                                             style="height: 17px"
+                                        <img class="ranged-damage-toughness height17"
+                                             name="attr_ranged_damage_toughness"
                                              src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
-                                        <img class="ranged-damage-resistance" name="attr_ranged_damage_resistance"
-                                             style="height: 17px;"
+                                        <img class="ranged-damage-resistance height17"
+                                             name="attr_ranged_damage_resistance"
                                              src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
                                     </div>
                                     <div class="row">
@@ -690,7 +685,7 @@
                                name="attr_ranged_display_settings_flag"
                                value="hide"/>
                         <div class="width65 displaySettings action-detail-grid">
-                            <div class="row" style="padding: 2px 5px 2px 5px">
+                            <div class="row padding-2525">
                                 <div class="col">
                                     <div class="bold">Name:</div>
                                     <div class="inputNameShort">
@@ -710,20 +705,19 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row" style="padding: 2px 5px 2px 5px">
-                                <span style="width: auto; font-weight: bold">Damage: </span>
+                            <div class="row padding-2525">
+                                <span class="width-auto bold">Damage: </span>
                                 <input style="width: 50px" type="text" name="attr_ranged_dice" value="1d6"/>
-                                <span style="width: auto; font-weight: bold"> + </span>
+                                <span class="width-auto bold"> + </span>
                                 <input style="width: 50px" type="text" name="attr_ranged_dice_bonus" value="0"/>
 
                                 <div class="col" style="padding-top: 5px">
                                     <span style="width: auto; font-weight: bold"> vs. </span>
-                                    <input type="radio" name="attr_ranged_against" value="1"
-                                           checked="checked">
-                                    <img style="width: 20px; height: 20px"
+                                    <input type="radio" name="attr_ranged_against" value="1" checked="checked"/>
+                                    <img class="20-box"
                                          src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
-                                    <input type="radio" name="attr_ranged_against" value="2">
-                                    <img style="width: 20px; height: 20px"
+                                    <input type="radio" name="attr_ranged_against" value="2"/>
+                                    <img class="20-box"
                                          src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
                                 </div>
                             </div>
@@ -734,17 +728,16 @@
                         </div>
                     </div>
 
-
                     <!--        Class Actions Title-->
                     <div class="actions-info-grid">
                         <span class="action-name action-info-title">CLASS ACTIONS</span>
                         <div class="action-effect">
                             <span style="font-size: 0.75em">Trigger Limit:</span>
-                            <input class="x-small" type="number" name="attr_trigger" value="0">
+                            <input class="x-small" type="number" name="attr_trigger" value="0"/>
                             <span style="font-size: 0.75em">Sustain Limit:</span>
-                            <input class="x-small" type="number" name="attr_sustain" value="0">
+                            <input class="x-small" type="number" name="attr_sustain" value="0"/>
                             <span style="font-size: 0.75em">Amplify Limit:</span>
-                            <input class="x-small" type="number" name="attr_amplify" value="0">
+                            <input class="x-small" type="number" name="attr_amplify" value="0"/>
                         </div>
                     </div>
 
@@ -767,16 +760,14 @@
                                     <span class="action-name action-centered" name="attr_action_name"></span>
                                     <div class="action-type action-centered">
                                         <div class="col">
-                                            <span class="row" style="border-bottom: 1px solid black"
-                                                  name="attr_action_subtype1"></span>
+                                            <span class="row border-bottom-1" name="attr_action_subtype1"></span>
                                             <span class="row" name="attr_action_subtype2"></span>
                                         </div>
                                     </div>
                                     <span class="action-target action-centered" name="attr_action_target"></span>
                                     <div class="action-range action-centered">
                                         <div class="col">
-                                            <span class="row" style="border-bottom: 1px solid black"
-                                                  name="attr_action_type"></span>
+                                            <span class="row border-bottom-1" name="attr_action_type"></span>
                                             <span class="row" name="attr_action_range"></span>
                                             <input type="hidden" class="action-field-indicator"
                                                    name="attr_action_field"/>
@@ -787,18 +778,16 @@
                                         <div>
                                             <div class="row">
                                                 <input type="hidden" class="action-description-indicator"
-                                                       name="attr_action_roll_type" value="0">
+                                                       name="attr_action_roll_type" value="0"/>
                                                 <div class="action-damage-description">
                                                     <span name="attr_action_damage_description">1d6 Damage</span>
                                                     <input type="hidden" class="action-damage-indicator"
-                                                           name="attr_action_against" value="1">
-                                                    <img class="action-damage-toughness"
+                                                           name="attr_action_against" value="1"/>
+                                                    <img class="action-damage-toughness height17"
                                                          name="attr_action_damage_toughness"
-                                                         style="height: 17px"
                                                          src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
-                                                    <img class="action-damage-resistance"
+                                                    <img class="action-damage-resistance height17"
                                                          name="attr_action_damage_resistance"
-                                                         style="height: 17px;"
                                                          src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
                                                     <span class="action-damage-piercing indicator">PIERCING</span>
                                                 </div>
@@ -806,14 +795,12 @@
                                                     <span class="indicator">AUTO-HIT</span>
                                                     <span name="attr_action_damage_description">1d6 Damage</span>
                                                     <input type="hidden" class="action-damage-indicator"
-                                                           name="attr_action_against" value="1">
-                                                    <img class="action-damage-toughness"
+                                                           name="attr_action_against" value="1"/>
+                                                    <img class="action-damage-toughness height17"
                                                          name="attr_action_damage_toughness"
-                                                         style="height: 17px"
                                                          src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
-                                                    <img class="action-damage-resistance"
+                                                    <img class="action-damage-resistance height17"
                                                          name="attr_action_damage_resistance"
-                                                         style="height: 17px;"
                                                          src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
                                                     <span class="action-damage-piercing indicator">PIERCING</span>
                                                 </div>
@@ -823,28 +810,23 @@
                                             </div>
                                             <div class="row">
                                                 <input class="description-control" type="hidden"
-                                                       name="attr_action_subtype1"
-                                                       value="General">
-                                                <span class="action-amp-effect" style="font-style: italic; padding: 0">
+                                                       name="attr_action_subtype1" value="General"/>
+                                                <span class="action-amp-effect italic no-padding">
                                                     Amp. Effect:
-                                                    <span name="attr_action_amp_effect"
-                                                          style="font-style: normal"></span>
+                                                    <span class="normal" name="attr_action_amp_effect"></span>
                                                 </span>
-                                                <span class="action-trig-effect" style="font-style: italic; padding: 0">
+                                                <span class="action-trig-effect italic no-padding">
                                                     Trig. Condition:
-                                                    <span name="attr_action_trig_condition"
-                                                          style="font-style: normal"></span>
+                                                    <span class="normal" name="attr_action_trig_condition"></span>
                                                 </span>
-                                                <span class="action-trig-effect" style="font-style: italic; padding: 0">
+                                                <span class="action-trig-effect italic no-padding">
                                                     Trig. Effect:
-                                                    <span name="attr_action_trig_effect"
-                                                          style="font-style: normal"></span>
+                                                    <span class="normal" name="attr_action_trig_effect"></span>
                                                 </span>
                                                 <span name="attr_action_description"></span>
-                                                <span class="action-sust-effect" style="font-style: italic; padding: 0">
+                                                <span class="action-sust-effect italic no-padding">
                                                     Sust. Effect:
-                                                    <span name="attr_action_sust_effect"
-                                                          style="font-style: normal"></span>
+                                                    <span class="normal" name="attr_action_sust_effect"></span>
                                                 </span>
                                             </div>
                                         </div>
@@ -854,7 +836,7 @@
 
                                 <input type="hidden" class="displaySettingsFlag" name="attr_displaySettingsFlag"/>
                                 <div class="displaySettings width65">
-                                    <div class="row" style="padding: 2px 5px 2px 5px">
+                                    <div class="row padding-2525">
                                         <div class="col">
                                             <div class="bold">Name:</div>
                                             <div class="inputNameShort">
@@ -891,7 +873,7 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="row" style="padding: 2px 5px 2px 5px">
+                                    <div class="row padding-2525">
                                         <div class="col">
                                             <div class="bold">Target:</div>
                                             <div class="inputNameShort">
@@ -906,8 +888,8 @@
                                                     <option value="Ranged">Ranged</option>
                                                     <option value="Melee">Melee</option>
                                                 </select>
-                                                <input class="small" type="number" name="attr_action_range">
-                                                <input type="checkbox" name="attr_action_field_flag" value="on">
+                                                <input class="small" type="number" name="attr_action_range"/>
+                                                <input type="checkbox" name="attr_action_field_flag" value="on"/>
                                                 <span>Field</span>
                                             </div>
                                         </div>
@@ -924,61 +906,58 @@
                                         <!--                                        </div>-->
                                     </div>
 
-                                    <div class="row" style="padding: 2px 5px 2px 5px;">
-
+                                    <div class="row padding-2525">
                                         <input class="roll-control" type="hidden" name="attr_action_roll_type"
-                                               value="0">
+                                               value="0"/>
                                         <div class="flex-center" style="background-color: #696969; color: white">
-                                            <span style="width: auto; font-weight: bold; padding-right: 20px">Default
-                                                <input type="radio" value="0" name="attr_action_roll_type" checked>
+                                            <span class="width-auto bold" style="padding-right: 20px">Default
+                                                <input type="radio" value="0" name="attr_action_roll_type" checked/>
                                             </span>
-                                            <span style="width: auto; font-weight: bold; padding-right: 20px">CAP Only
-                                                <input type="radio" value="1" name="attr_action_roll_type">
+                                            <span class="width-auto bold" style="padding-right: 20px">CAP Only
+                                                <input type="radio" value="1" name="attr_action_roll_type"/>
                                             </span>
-                                            <span style="width: auto; font-weight: bold; padding-right: 20px">Auto-hit
-                                                <input type="radio" value="2" name="attr_action_roll_type">
+                                            <span class="width-auto bold" style="padding-right: 20px">Auto-hit
+                                                <input type="radio" value="2" name="attr_action_roll_type"/>
                                             </span>
-                                            <span style="width: auto; font-weight: bold; padding-right: 20px">Heal
-                                                <input type="radio" value="3" name="attr_action_roll_type">
+                                            <span class="width-auto bold" style="padding-right: 20px">Heal
+                                                <input type="radio" value="3" name="attr_action_roll_type"/>
                                             </span>
-                                            <span style="width: auto; font-weight: bold">None
-                                                <input type="radio" value="-1" name="attr_action_roll_type">
+                                            <span class="width-auto bold">None
+                                                <input type="radio" value="-1" name="attr_action_roll_type"/>
                                             </span>
                                         </div>
 
-                                        <div class="action-damage" style="padding: 2px 5px 2px 5px">
-                                            <span style="width: auto; font-weight: bold">Damage: </span>
-                                            <input style="width: 50px" type="text" name="attr_action_dice"
-                                                   value="1d6"/>
-                                            <span style="width: auto; font-weight: bold"> + </span>
+                                        <div class="action-damage padding-2525">
+                                            <span class="width-auto bold">Damage: </span>
+                                            <input style="width: 50px" type="text" name="attr_action_dice" value="1d6"/>
+                                            <span class="width-auto bold"> + </span>
                                             <input style="width: 50px" type="text" name="attr_action_dice_bonus"
                                                    value="0"/>
                                             <div class="col" style="padding-top: 5px">
-                                                <span style="width: auto; font-weight: bold"> vs. </span>
-                                                <input type="radio" value="1" name="attr_action_against" checked>
-                                                <img style="width: 20px; height: 20px"
+                                                <span class="width-auto bold"> vs. </span>
+                                                <input type="radio" value="1" name="attr_action_against" checked/>
+                                                <img class="20-box"
                                                      src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
-                                                <input type="radio" value="2" name="attr_action_against">
-                                                <img style="width: 20px; height: 20px"
+                                                <input type="radio" value="2" name="attr_action_against"/>
+                                                <img class="20-box"
                                                      src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
-                                                <input type="radio" value="3" name="attr_action_against">
+                                                <input type="radio" value="3" name="attr_action_against"/>
                                                 <span class="indicator">PIERCING</span>
                                             </div>
 
                                         </div>
-                                        <div class="action-healing" style="padding: 2px 5px 2px 5px">
-                                            <span style="width: auto; font-weight: bold">Healing: </span>
+                                        <div class="action-healing padding-2525">
+                                            <span class="width-auto bold">Healing: </span>
                                             <input style="width: 50px" type="text" name="attr_action_healing_dice"
                                                    value="1d6"/>
-                                            <span style="width: auto; font-weight: bold"> + </span>
+                                            <span class="width-auto bold"> + </span>
                                             <input style="width: 50px" type="text" name="attr_action_healing_dice_bonus"
                                                    value="0"/>
                                         </div>
-
                                     </div>
 
                                     <input class="description-control" type="hidden" name="attr_action_subtype1"
-                                           value="General">
+                                           value="General"/>
                                     <div class="action-amp-effect">
                                         <div class="bold">Amp. Effect:</div>
                                         <textarea class="height35 width95" name="attr_action_amp_effect"></textarea>
@@ -1009,9 +988,9 @@
                               style="color: darkorange">CLASS TIDE-TURNER ACTIONS</span>
                         <div class="action-effect">
                             <span style="font-size: 0.75em;">Max Tide-Turners:</span>
-                            <input class="x-small" type="number" value="0" name="attr_max_tide_turners">
+                            <input class="x-small" type="number" value="0" name="attr_max_tide_turners"/>
                             <span style="font-size: 0.75em;">Tide-Tuners Used:</span>
-                            <input class="x-small" type="number" value="0" name="attr_tide_turners_used">
+                            <input class="x-small" type="number" value="0" name="attr_tide_turners_used"/>
                         </div>
                     </div>
 
@@ -1034,17 +1013,16 @@
                                     <span class="action-name action-tide-centered" name="attr_tide_action_name"></span>
                                     <div class="action-type action-tide-centered">
                                         <div class="col">
-                                                    <span class="row" style="border-bottom: 1px solid black"
-                                                          name="attr_tide_action_subtype1"></span>
+                                            <span class="row border-bottom-1" name="attr_tide_action_subtype1"></span>
                                             <span class="row" name="attr_tide_action_subtype2"></span>
                                         </div>
                                     </div>
                                     <span class="action-target action-tide-centered"
-                                          name="attr_tide_action_target"></span>
+                                          name="attr_tide_action_target">
+                                    </span>
                                     <div class="action-range action-tide-centered">
                                         <div class="col">
-                                            <span class="row" style="border-bottom: 1px solid black"
-                                                  name="attr_tide_action_type"></span>
+                                            <span class="row border-bottom-1" name="attr_tide_action_type"></span>
                                             <span class="row" name="attr_tide_action_range"></span>
                                             <input type="hidden" class="action-field-indicator"
                                                    name="attr_tide_action_field"/>
@@ -1055,18 +1033,16 @@
                                         <div>
                                             <div class="row">
                                                 <input type="hidden" class="action-description-indicator"
-                                                       name="attr_tide_action_roll_type" value="0">
+                                                       name="attr_tide_action_roll_type" value="0"/>
                                                 <div class="action-damage-description">
                                                     <span name="attr_tide_action_damage_description">1d6 Damage</span>
                                                     <input type="hidden" class="tide-action-damage-indicator"
-                                                           name="attr_tide_action_against" value="1">
-                                                    <img class="tide-action-damage-toughness"
+                                                           name="attr_tide_action_against" value="1"/>
+                                                    <img class="tide-action-damage-toughness height17"
                                                          name="attr_tide_action_damage_toughness"
-                                                         style="height: 17px"
                                                          src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
                                                     <img class="tide-action-damage-resistance"
-                                                         name="attr_tide_action_damage_resistance"
-                                                         style="height: 17px;"
+                                                         name="attr_tide_action_damage_resistance height17"
                                                          src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
                                                     <span class="tide-action-damage-piercing indicator">PIERCING</span>
                                                 </div>
@@ -1074,14 +1050,12 @@
                                                     <span class="indicator">AUTO-HIT</span>
                                                     <span name="attr_tide_action_damage_description">1d6 Damage</span>
                                                     <input type="hidden" class="tide-action-damage-indicator"
-                                                           name="attr_tide_action_against" value="1">
-                                                    <img class="tide-action-damage-toughness"
+                                                           name="attr_tide_action_against" value="1"/>
+                                                    <img class="tide-action-damage-toughness height17"
                                                          name="attr_tide_action_damage_toughness"
-                                                         style="height: 17px"
                                                          src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
-                                                    <img class="tide-action-damage-resistance"
+                                                    <img class="tide-action-damage-resistance height17"
                                                          name="attr_tide_action_damage_resistance"
-                                                         style="height: 17px;"
                                                          src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
                                                     <span class="tide-action-damage-piercing indicator">PIERCING</span>
                                                 </div>
@@ -1091,39 +1065,34 @@
                                             </div>
                                             <div class="row">
                                                 <input class="description-control" type="hidden"
-                                                       name="attr_tide_action_subtype1"
-                                                       value="General">
-                                                <span class="action-amp-effect" style="font-style: italic; padding: 0">
+                                                       name="attr_tide_action_subtype1" value="General"/>
+                                                <span class="action-amp-effect italic no-padding">
                                                     Amp. Effect:
-                                                    <span name="attr_tide_action_amp_effect"
-                                                          style="font-style: normal"></span>
+                                                    <span name="attr_tide_action_amp_effect normal"></span>
                                                 </span>
-                                                <span class="action-trig-effect" style="font-style: italic; padding: 0">
+                                                <span class="action-trig-effect italic no-padding">
                                                     Trig. Condition:
-                                                    <span name="attr_tide_action_trig_condition"
-                                                          style="font-style: normal"></span>
+                                                    <span name="attr_tide_action_trig_condition normal"></span>
                                                 </span>
-                                                <span class="action-trig-effect" style="font-style: italic; padding: 0">
+                                                <span class="action-trig-effect italic no-padding">
                                                     Trig. Effect:
-                                                    <span name="attr_tide_action_trig_effect"
-                                                          style="font-style: normal"></span>
+                                                    <span name="attr_tide_action_trig_effect normal"></span>
                                                 </span>
                                                 <span name="attr_tide_action_description"></span>
-                                                <span class="action-sust-effect" style="font-style: italic; padding: 0">
+                                                <span class="action-sust-effect italic no-padding">
                                                     Sust. Effect:
-                                                    <span name="attr_tide_action_sust_effect"
-                                                          style="font-style: normal"></span>
+                                                    <span name="attr_tide_action_sust_effect normal"></span>
                                                 </span>
                                             </div>
                                         </div>
                                     </div>
-                                    <span class="action-speed action-tide-centered"
-                                          name="attr_tide_action_speed"></span>
+                                    <span class="action-speed action-tide-centered" name="attr_tide_action_speed">
+                                    </span>
                                 </div>
 
                                 <input type="hidden" class="displaySettingsFlag" name="attr_displaySettingsFlag"/>
                                 <div class="displaySettings width65">
-                                    <div class="row" style="padding: 2px 5px 2px 5px">
+                                    <div class="row padding-2525">
                                         <div class="col">
                                             <div class="bold">Name:</div>
                                             <div class="inputNameShort">
@@ -1160,7 +1129,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="row" style="padding: 2px 5px 2px 5px">
+                                    <div class="row padding-2525">
                                         <div class="col">
                                             <div class="bold">Target:</div>
                                             <div class="inputNameShort">
@@ -1175,8 +1144,8 @@
                                                     <option value="Ranged">Ranged</option>
                                                     <option value="Melee">Melee</option>
                                                 </select>
-                                                <input class="small" type="number" name="attr_tide_action_range">
-                                                <input type="checkbox" name="attr_tide_action_field_flag" value="on">
+                                                <input class="small" type="number" name="attr_tide_action_range"/>
+                                                <input type="checkbox" name="attr_tide_action_field_flag" value="on"/>
                                                 <span>Field</span>
                                             </div>
                                         </div>
@@ -1193,61 +1162,61 @@
                                         <!--                                        </div>-->
                                     </div>
 
-                                    <div class="row" style="padding: 2px 5px 2px 5px;">
+                                    <div class="row padding-2525">
 
                                         <input class="roll-control" type="hidden" name="attr_tide_action_roll_type"
-                                               value="0">
+                                               value="0"/>
                                         <div class="flex-center" style="background-color: #696969; color: white">
-                                            <span style="width: auto; font-weight: bold; padding-right: 20px">Default
-                                                <input type="radio" value="0" name="attr_tide_action_roll_type" checked>
+                                            <span class="width-auto bold" style="padding-right: 20px">Default
+                                                <input type="radio" value="0" name="attr_tide_action_roll_type"
+                                                       checked/>
                                             </span>
-                                            <span style="width: auto; font-weight: bold; padding-right: 20px">CAP Only
-                                                <input type="radio" value="1" name="attr_tide_action_roll_type">
+                                            <span class="width-auto bold" style="padding-right: 20px">CAP Only
+                                                <input type="radio" value="1" name="attr_tide_action_roll_type"/>
                                             </span>
-                                            <span style="width: auto; font-weight: bold; padding-right: 20px">Auto-hit
-                                                <input type="radio" value="2" name="attr_tide_action_roll_type">
+                                            <span class="width-auto bold" style="padding-right: 20px">Auto-hit
+                                                <input type="radio" value="2" name="attr_tide_action_roll_type"/>
                                             </span>
-                                            <span style="width: auto; font-weight: bold; padding-right: 20px">Heal
-                                                <input type="radio" value="3" name="attr_tide_action_roll_type">
+                                            <span class="width-auto bold" style="padding-right: 20px">Heal
+                                                <input type="radio" value="3" name="attr_tide_action_roll_type"/>
                                             </span>
-                                            <span style="width: auto; font-weight: bold">None
-                                                <input type="radio" value="-1" name="attr_tide_action_roll_type">
+                                            <span class="width-auto bold">None
+                                                <input type="radio" value="-1" name="attr_tide_action_roll_type"/>
                                             </span>
                                         </div>
 
-                                        <div class="action-damage" style="padding: 2px 5px 2px 5px">
-                                            <span style="width: auto; font-weight: bold">Damage: </span>
+                                        <div class="action-damage padding-2525">
+                                            <span class="width-auto bold">Damage: </span>
                                             <input style="width: 50px" type="text" name="attr_tide_action_dice"
                                                    value="1d6"/>
-                                            <span style="width: auto; font-weight: bold"> + </span>
+                                            <span class="width-auto bold"> + </span>
                                             <input style="width: 50px" type="text" name="attr_tide_action_dice_bonus"
                                                    value="0"/>
                                             <div class="col" style="padding-top: 5px">
-                                                <span style="width: auto; font-weight: bold"> vs. </span>
-                                                <input type="radio" value="1" name="attr_tide_action_against" checked>
-                                                <img style="width: 20px; height: 20px"
+                                                <span class="width-auto bold"> vs. </span>
+                                                <input type="radio" value="1" name="attr_tide_action_against" checked/>
+                                                <img class="20-box"
                                                      src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
-                                                <input type="radio" value="2" name="attr_tide_action_against">
-                                                <img style="width: 20px; height: 20px"
+                                                <input type="radio" value="2" name="attr_tide_action_against"/>
+                                                <img class="20-box"
                                                      src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
-                                                <input type="radio" value="3" name="attr_tide_action_against">
+                                                <input type="radio" value="3" name="attr_tide_action_against"/>
                                                 <span class="indicator">PIERCING</span>
                                             </div>
                                         </div>
 
-                                        <div class="action-healing" style="padding: 2px 5px 2px 5px">
-                                            <span style="width: auto; font-weight: bold">Healing: </span>
+                                        <div class="action-healing padding-2525">
+                                            <span class="width-auto bold">Healing: </span>
                                             <input style="width: 50px" type="text" name="attr_tide_action_healing_dice"
                                                    value="1d6"/>
-                                            <span style="width: auto; font-weight: bold"> + </span>
+                                            <span class="width-auto bold"> + </span>
                                             <input style="width: 50px" type="text"
-                                                   name="attr_tide_action_healing_dice_bonus"
-                                                   value="0"/>
+                                                   name="attr_tide_action_healing_dice_bonus" value="0"/>
                                         </div>
                                     </div>
 
                                     <input class="description-control" type="hidden" name="attr_tide_action_subtype1"
-                                           value="General">
+                                           value="General"/>
                                     <div class="action-amp-effect">
                                         <div class="bold">Amp. Effect:</div>
                                         <textarea class="height35 width95"
@@ -1263,7 +1232,8 @@
                                     </div>
                                     <div class="action-sust-effect">
                                         <div class="bold">Sust. Effect:</div>
-                                        <textarea class="height35 width95" name="attr_tide_action_sust_effect">Repeat Effect.</textarea>
+                                        <textarea class="height35 width95"
+                                                  name="attr_tide_action_sust_effect">Repeat Effect.</textarea>
                                     </div>
                                     <div class="action-description">
                                         <div class="bold">Description:</div>
@@ -1284,7 +1254,6 @@
                         <span class="action-name action-info-title">AT END OF COMBAT:</span>
                         <span class="action-effect action-info">Restore HP to Full and remove All Conditions.</span>
                     </div>
-
                 </div>
             </div>
 
@@ -1463,9 +1432,10 @@
                         </fieldset>
                     </div>
                     <div class="col" style="width: 64%; padding-left: 10px">
-                        <div style="border-bottom: 1px solid black; margin-bottom: 5px">
+                        <div class="border-bottom-1" style="margin-bottom: 5px">
                             <div class="inventory-header">CONDITIONS</div>
-                            <div>Check off the box next to the Condition you are currently suffering from. If a max is
+                            <div>
+                                Check off the box next to the Condition you are currently suffering from. If a max is
                                 specified, write the number of Stacks instead.
                             </div>
                             <div>
@@ -1500,8 +1470,10 @@
                                             <span><b><i>PRONE: </i></b></span>
                                         </div>
                                         <div class="condition-description">
-                                            <span><span class="indicator">OFF-GUARD</span> and cannot take Actions until they expend a Fast Action to remove
-                                                <span class="indicator">PRONE</span>.</span>
+                                            <span>
+                                                <span class="indicator">OFF-GUARD</span> and cannot take Actions until they expend a Fast Action to remove
+                                                <span class="indicator">PRONE</span>.
+                                            </span>
                                         </div>
                                     </div>
                                     <div class="condition-box">
@@ -1513,7 +1485,8 @@
                                         </div>
                                         <div class="condition-description">
                                             <span>Actions targeting Combatant gain the <span
-                                                    class="indicator">PIERCING</span> property. <span class="indicator">FRAGILITY</span> is removed at the end of Combatant’s next Turn.</span>
+                                                    class="indicator">PIERCING</span> property. <span class="indicator">FRAGILITY</span> is removed at the end of Combatant’s next Turn.
+                                            </span>
                                         </div>
                                     </div>
                                     <div class="condition-box">
@@ -1564,7 +1537,8 @@
                                         </div>
                                         <div class="condition-description">
                                             <span>Combatant takes only 1 Action during their next Turn. <span
-                                                    class="indicator">PARALYSIS</span> is removed at the end of that Turn.</span>
+                                                    class="indicator">PARALYSIS</span> is removed at the end of that Turn.
+                                            </span>
                                         </div>
                                     </div>
                                     <div class="condition-box">
@@ -1576,10 +1550,9 @@
                                         </div>
                                         <div class="condition-description">
                                             <span>Combatant cannot take Actions on their next Turn.
-                                            <span class="indicator">SLEEP</span> is removed when Combatant takes Damage or at the end of their next
-                                            Turn. Actions that Target a Sleeping Combatant gain the <span
-                                                        class="indicator">AUTO-CRIT</span>
-                                            property against just that Combatant.</span>
+                                            <span class="indicator">SLEEP</span> is removed when Combatant takes Damage or at the end of their next Turn. Actions that Target a Sleeping Combatant gain the <span
+                                                        class="indicator">AUTO-CRIT</span>property against just that Combatant.
+                                            </span>
                                         </div>
                                     </div>
                                     <div class="condition-box">
@@ -1611,7 +1584,6 @@
                                     <div class="condition-box">
                                         <div class="condition-selector-max">
                                             <input class="custom-number-input" type="number" min="0" max="2"
-                                            <input class="custom-number-input" type="number" min="0" max="2"
                                                    name="attr_condition_chill"/>
                                             <div class="subtitle">Max 2</div>
                                         </div>
@@ -1631,10 +1603,10 @@
                                 <div class="inventory-header">ANCHORS</div>
                                 <fieldset class="repeating_anchors">
                                     <div class="row">
-                                        <input name="attr_anchor" class="no-border width-half" type="text"
-                                               style="border-bottom: 2px solid black;"/>
-                                        <input name="attr_anchor_2" class="no-border width-half" type="text"
-                                               style="border-bottom: 2px solid black;"/>
+                                        <input name="attr_anchor" class="no-border width-half border-bottom-2"
+                                               type="text"/>
+                                        <input name="attr_anchor_2" class="no-border width-half border-bottom-2"
+                                               type="text"/>
                                     </div>
                                 </fieldset>
                             </div>
@@ -1643,10 +1615,10 @@
                                 <div class="inventory-header">DEADWEIGHTS</div>
                                 <fieldset class="repeating_deadweight">
                                     <div class="row">
-                                        <input name="attr_deadweight" class="no-border width-half" type="text"
-                                               style="border-bottom: 2px solid black"/>
-                                        <input name="attr_deadweight_2" class="no-border width-half" type="text"
-                                               style="border-bottom: 2px solid black;"/>
+                                        <input name="attr_deadweight" class="no-border width-half border-bottom-2"
+                                               type="text"/>
+                                        <input name="attr_deadweight_2" class="no-border width-half border-bottom-2"
+                                               type="text"/>
                                     </div>
                                 </fieldset>
                             </div>
@@ -1853,10 +1825,10 @@
         <div class="block-container block-npc">
             <div>
                 <div class="row">
-                    <input type="radio" name="attr_enemy" class="grunt" value="1" checked="checked"><span>Grunt</span>
-                    <input type="radio" name="attr_enemy" class="awakened" value="2"><span>Awakened</span>
-                    <input type="radio" name="attr_enemy" class="elite" value="3"><span>Elite</span>
-                    <input type="radio" name="attr_enemy" class="boss" value="4"><span>Boss</span>
+                    <input type="radio" name="attr_enemy" class="grunt" value="1" checked="checked"/><span>Grunt</span>
+                    <input type="radio" name="attr_enemy" class="awakened" value="2"/><span>Awakened</span>
+                    <input type="radio" name="attr_enemy" class="elite" value="3"/><span>Elite</span>
+                    <input type="radio" name="attr_enemy" class="boss" value="4"/><span>Boss</span>
 
                     <div>
                         <div class="name section">
@@ -1865,21 +1837,21 @@
                         </div>
                         <div class="row info-hp-box">
                             <span class="info-hp-text">HP:</span>
-                            <input class="medium" type="number" name="attr_hp" value="10">
+                            <input class="medium" type="number" name="attr_hp" value="10"/>
                             <span> / </span>
-                            <input class="medium" type="number" name="attr_hp_max" value="10">
+                            <input class="medium" type="number" name="attr_hp_max" value="10"/>
                         </div>
                         <div class="row stats-col red">
-                            <img style="width: 20px; height: 20px"
+                            <img class="20-box"
                                  src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
                             Toughness:
-                            <input class="small" type="number" name="attr_enemy_toughness" value="4">
+                            <input class="small" type="number" name="attr_enemy_toughness" value="4"/>
                         </div>
                         <div class="row stats-col blue">
-                            <img style="width: 20px; height: 20px"
+                            <img class="20-box"
                                  src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
                             Resistance:
-                            <input class="small" type="number" name="attr_enemy_resistance" value="4">
+                            <input class="small" type="number" name="attr_enemy_resistance" value="4"/>
                         </div>
                         <div class="row">
                             <span>Rank:</span>
@@ -1918,8 +1890,8 @@
                                 <div>
                                     <div class="sheet-hex sheet-hex-2" style="width: 100px; height: 57px">
                                         <div class="sheet-inner">
-                            <textarea name="attr_grunt_hex_1" class="no-border"
-                                      style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                                            <textarea name="attr_grunt_hex_1" class="no-border"
+                                                      style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                         </div>
                                         <div class="sheet-corner-1"></div>
                                         <div class="sheet-corner-2"></div>
@@ -1928,8 +1900,8 @@
                                 <div style="margin-top:-20px">
                                     <div class="sheet-hex sheet-hex-2" style="width: 100px; height: 57px">
                                         <div class="sheet-inner">
-                            <textarea name="attr_grunt_hex_2" class="no-border"
-                                      style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                                            <textarea name="attr_grunt_hex_2" class="no-border"
+                                                      style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                         </div>
                                         <div class="sheet-corner-1"></div>
                                         <div class="sheet-corner-2"></div>
@@ -1941,24 +1913,24 @@
                                 <div class="enemy-dice" style="margin-left: -40px; margin-top: 5px">F</div>
                                 <div class="sheet-hex sheet-hex-2" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                            <textarea name="attr_grunt_hex_3" class="no-border"
-                                      style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                                        <textarea name="attr_grunt_hex_3" class="no-border"
+                                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
                                 </div>
                                 <div class="sheet-hex sheet-hex-3" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                            <textarea name="attr_grunt_hex_4" class="no-border"
-                                      style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                                        <textarea name="attr_grunt_hex_4" class="no-border"
+                                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
                                 </div>
                                 <div class="sheet-hex sheet-hex-2" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                            <textarea name="attr_grunt_hex_5" class="no-border"
-                                      style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                                        <textarea name="attr_grunt_hex_5" class="no-border"
+                                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -1970,8 +1942,8 @@
                                 <div>
                                     <div class="sheet-hex sheet-hex-2" style="width: 100px; height: 57px">
                                         <div class="sheet-inner">
-                            <textarea name="attr_grunt_hex_6" class="no-border"
-                                      style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                                            <textarea name="attr_grunt_hex_6" class="no-border"
+                                                      style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                         </div>
                                         <div class="sheet-corner-1"></div>
                                         <div class="sheet-corner-2"></div>
@@ -1980,8 +1952,8 @@
                                 <div style="margin-top:-20px">
                                     <div class="sheet-hex sheet-hex-2" style="width: 100px; height: 57px">
                                         <div class="sheet-inner">
-                            <textarea name="attr_grunt_hex_7" class="no-border"
-                                      style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                                            <textarea name="attr_grunt_hex_7" class="no-border"
+                                                      style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                         </div>
                                         <div class="sheet-corner-1"></div>
                                         <div class="sheet-corner-2"></div>
@@ -1999,8 +1971,8 @@
                                        style="width: 10px; height: 10px"/><span></span>
                                 <div class="sheet-hex sheet-hex-1" style="width: 100px; height: 57px">
                                     <div class="sheet-inner">
-                            <textarea class="no-border"
-                                      style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                                        <textarea class="no-border"
+                                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
                                     <div class="sheet-corner-1"></div>
                                     <div class="sheet-corner-2"></div>
@@ -2698,7 +2670,6 @@
 
 
                     </div>
-
 
                 </div>
 
@@ -3981,6 +3952,9 @@
                 setAttrs({repeating_tideTurners_tide_action_damage_description: description});
             });
         });
+
+
+
 
 
 </script>

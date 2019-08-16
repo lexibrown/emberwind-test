@@ -839,18 +839,7 @@ input.sheet-cap {
     width: 60%;
 }
 
-/*-----------------  ------------------*/
-
-.sheet-title {
-    float: left;
-    font-weight: bold;
-    padding: 3px;
-}
-
-.sheet-subtitle {
-    padding: 1px;
-    font-size: 0.75em;
-}
+/*----------------- CAP Check ------------------*/
 
 .sheet-critical {
     border: 5px solid lightcoral;
@@ -874,8 +863,68 @@ input.sheet-cap {
     padding: 12px 3px 12px 3px;
 }
 
+/*-----------------  ------------------*/
+
+.sheet-title {
+    float: left;
+    font-weight: bold;
+    padding: 3px;
+}
+
+.sheet-subtitle {
+    padding: 1px;
+    font-size: 0.75em;
+}
+
+.sheet-bold {
+    font-weight: bold;
+}
+
+.sheet-italic {
+    font-style: italic;
+}
+
+.sheet-normal {
+    font-weight: normal;
+    font-style: normal;
+}
+
+.sheet-center-text {
+    text-align: center;
+}
+
+.sheet-25-box {
+    width: 25px;
+    height: 25px;
+}
+
+.sheet-20-box {
+    width: 20px;
+    height: 20px;
+}
+
+.sheet-no-padding {
+    padding: 0;
+}
+
+.sheet-padding-3 {
+    padding: 3px;
+}
+
+.sheet-padding-2525 {
+    padding: 2px 5px 2px 5px;
+}
+
 .sheet-no-border {
     border: none;
+}
+
+.sheet-border-bottom-1 {
+    border-bottom: 1px solid black;
+}
+
+.sheet-border-bottom-2 {
+    border-bottom: 2px solid black;
 }
 
 input.sheet-custom-number-input::-webkit-outer-spin-button,
@@ -1065,6 +1114,8 @@ input[type=checkbox].sheet-tab-hide:hover * {
     box-sizing: border-box;
 }
 
+/*----------------- Settings ------------------*/
+
 .sheet-settings {
     z-index: 2;
     opacity: 0;
@@ -1116,6 +1167,8 @@ input[type=checkbox].sheet-tab-hide:checked ~ .sheet-show-hide {
     display: none;
 }
 
+/*-----------------  ------------------*/
+
 .sheet-top-detail {
     grid-area: top-detail;
     background-color: #3FB315;
@@ -1135,6 +1188,10 @@ input[type=checkbox].sheet-tab-hide:checked ~ .sheet-show-hide {
 }
 
 /* Boring Pre-defined width & height options */
+
+.sheet-width-auto {
+    width: auto;
+}
 
 .sheet-width-half {
     width: 49%;
@@ -1238,6 +1295,10 @@ input[type=checkbox].sheet-tab-hide:checked ~ .sheet-show-hide {
 
 .sheet-height15 {
     height: 15px;
+}
+
+.sheet-height17 {
+    height: 17px;
 }
 
 .sheet-height25 {
