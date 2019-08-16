@@ -731,6 +731,14 @@ input.sheet-action-description-indicator[value="2"] ~ .sheet-action-auto-hit-des
     display: none;
 }
 
+.sheet-action-field {
+    display: none;
+}
+
+.sheet-action-field-indicator[value="show"] ~ .sheet-action-field {
+    display: block;
+}
+
 /*----------------- Character Columns ------------------*/
 
 .sheet-stats {

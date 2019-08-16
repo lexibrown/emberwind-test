@@ -767,17 +767,20 @@
                                     <span class="action-name action-centered" name="attr_action_name"></span>
                                     <div class="action-type action-centered">
                                         <div class="col">
-                                                    <span class="row" style="border-bottom: 1px solid black"
-                                                          name="attr_action_subtype1"></span>
+                                            <span class="row" style="border-bottom: 1px solid black"
+                                                  name="attr_action_subtype1"></span>
                                             <span class="row" name="attr_action_subtype2"></span>
                                         </div>
                                     </div>
                                     <span class="action-target action-centered" name="attr_action_target"></span>
                                     <div class="action-range action-centered">
                                         <div class="col">
-                                                    <span class="row" style="border-bottom: 1px solid black"
-                                                          name="attr_action_type"></span>
+                                            <span class="row" style="border-bottom: 1px solid black"
+                                                  name="attr_action_type"></span>
                                             <span class="row" name="attr_action_range"></span>
+                                            <input type="hidden" class="action-field-indicator"
+                                                   name="attr_action_field"/>
+                                            <span class="action-field">Field</span>
                                         </div>
                                     </div>
                                     <div class="action-effect action-leftCentered">
@@ -823,26 +826,26 @@
                                                        name="attr_action_subtype1"
                                                        value="General">
                                                 <span class="action-amp-effect" style="font-style: italic; padding: 0">
-                                                            Amp. Effect:
-                                                            <span name="attr_action_amp_effect"
-                                                                  style="font-style: normal"></span>
-                                                        </span>
+                                                    Amp. Effect:
+                                                    <span name="attr_action_amp_effect"
+                                                          style="font-style: normal"></span>
+                                                </span>
                                                 <span class="action-trig-effect" style="font-style: italic; padding: 0">
-                                                            Trig. Condition:
-                                                            <span name="attr_action_trig_condition"
-                                                                  style="font-style: normal"></span>
-                                                        </span>
+                                                    Trig. Condition:
+                                                    <span name="attr_action_trig_condition"
+                                                          style="font-style: normal"></span>
+                                                </span>
                                                 <span class="action-trig-effect" style="font-style: italic; padding: 0">
-                                                            Trig. Effect:
-                                                            <span name="attr_action_trig_effect"
-                                                                  style="font-style: normal"></span>
-                                                        </span>
+                                                    Trig. Effect:
+                                                    <span name="attr_action_trig_effect"
+                                                          style="font-style: normal"></span>
+                                                </span>
                                                 <span name="attr_action_description"></span>
                                                 <span class="action-sust-effect" style="font-style: italic; padding: 0">
-                                                            Sust. Effect:
-                                                            <span name="attr_action_sust_effect"
-                                                                  style="font-style: normal"></span>
-                                                        </span>
+                                                    Sust. Effect:
+                                                    <span name="attr_action_sust_effect"
+                                                          style="font-style: normal"></span>
+                                                </span>
                                             </div>
                                         </div>
                                     </div>
@@ -904,6 +907,8 @@
                                                     <option value="Melee">Melee</option>
                                                 </select>
                                                 <input class="small" type="number" name="attr_action_range">
+                                                <input type="checkbox" name="attr_action_field_flag" value="on">
+                                                <span>Field</span>
                                             </div>
                                         </div>
                                         <!--                                        <div class="col">-->
@@ -924,26 +929,21 @@
                                         <input class="roll-control" type="hidden" name="attr_action_roll_type"
                                                value="0">
                                         <div class="flex-center" style="background-color: #696969; color: white">
-                                                    <span style="width: auto; font-weight: bold; padding-right: 20px">Default
-                                                        <input type="radio" value="0" name="attr_action_roll_type"
-                                                               checked>
-                                                    </span>
-
+                                            <span style="width: auto; font-weight: bold; padding-right: 20px">Default
+                                                <input type="radio" value="0" name="attr_action_roll_type" checked>
+                                            </span>
                                             <span style="width: auto; font-weight: bold; padding-right: 20px">CAP Only
-                                                        <input type="radio" value="1" name="attr_action_roll_type">
-                                                    </span>
-
+                                                <input type="radio" value="1" name="attr_action_roll_type">
+                                            </span>
                                             <span style="width: auto; font-weight: bold; padding-right: 20px">Auto-hit
-                                                        <input type="radio" value="2" name="attr_action_roll_type">
-                                                    </span>
-
+                                                <input type="radio" value="2" name="attr_action_roll_type">
+                                            </span>
                                             <span style="width: auto; font-weight: bold; padding-right: 20px">Heal
-                                                        <input type="radio" value="3" name="attr_action_roll_type">
-                                                    </span>
-
+                                                <input type="radio" value="3" name="attr_action_roll_type">
+                                            </span>
                                             <span style="width: auto; font-weight: bold">None
-                                                        <input type="radio" value="-1" name="attr_action_roll_type">
-                                                    </span>
+                                                <input type="radio" value="-1" name="attr_action_roll_type">
+                                            </span>
                                         </div>
 
                                         <div class="action-damage" style="padding: 2px 5px 2px 5px">
@@ -1005,8 +1005,8 @@
 
                     <!--        Class Tide Turner Actions Title-->
                     <div class="actions-info-grid">
-                            <span class="action-name action-info-title"
-                                  style="color: darkorange">CLASS TIDE-TURNER ACTIONS</span>
+                        <span class="action-name action-info-title"
+                              style="color: darkorange">CLASS TIDE-TURNER ACTIONS</span>
                         <div class="action-effect">
                             <span style="font-size: 0.75em;">Max Tide-Turners:</span>
                             <input class="x-small" type="number" value="0" name="attr_max_tide_turners">
@@ -1043,9 +1043,12 @@
                                           name="attr_tide_action_target"></span>
                                     <div class="action-range action-tide-centered">
                                         <div class="col">
-                                                    <span class="row" style="border-bottom: 1px solid black"
-                                                          name="attr_tide_action_type"></span>
+                                            <span class="row" style="border-bottom: 1px solid black"
+                                                  name="attr_tide_action_type"></span>
                                             <span class="row" name="attr_tide_action_range"></span>
+                                            <input type="hidden" class="action-field-indicator"
+                                                   name="attr_tide_action_field"/>
+                                            <span class="action-field">Field</span>
                                         </div>
                                     </div>
                                     <div class="action-effect action-tide-leftCentered">
@@ -1091,26 +1094,26 @@
                                                        name="attr_tide_action_subtype1"
                                                        value="General">
                                                 <span class="action-amp-effect" style="font-style: italic; padding: 0">
-                                                            Amp. Effect:
-                                                            <span name="attr_tide_action_amp_effect"
-                                                                  style="font-style: normal"></span>
-                                                        </span>
+                                                    Amp. Effect:
+                                                    <span name="attr_tide_action_amp_effect"
+                                                          style="font-style: normal"></span>
+                                                </span>
                                                 <span class="action-trig-effect" style="font-style: italic; padding: 0">
-                                                            Trig. Condition:
-                                                            <span name="attr_tide_action_trig_condition"
-                                                                  style="font-style: normal"></span>
-                                                        </span>
+                                                    Trig. Condition:
+                                                    <span name="attr_tide_action_trig_condition"
+                                                          style="font-style: normal"></span>
+                                                </span>
                                                 <span class="action-trig-effect" style="font-style: italic; padding: 0">
-                                                            Trig. Effect:
-                                                            <span name="attr_tide_action_trig_effect"
-                                                                  style="font-style: normal"></span>
-                                                        </span>
+                                                    Trig. Effect:
+                                                    <span name="attr_tide_action_trig_effect"
+                                                          style="font-style: normal"></span>
+                                                </span>
                                                 <span name="attr_tide_action_description"></span>
                                                 <span class="action-sust-effect" style="font-style: italic; padding: 0">
-                                                            Sust. Effect:
-                                                            <span name="attr_tide_action_sust_effect"
-                                                                  style="font-style: normal"></span>
-                                                        </span>
+                                                    Sust. Effect:
+                                                    <span name="attr_tide_action_sust_effect"
+                                                          style="font-style: normal"></span>
+                                                </span>
                                             </div>
                                         </div>
                                     </div>
@@ -1173,6 +1176,8 @@
                                                     <option value="Melee">Melee</option>
                                                 </select>
                                                 <input class="small" type="number" name="attr_tide_action_range">
+                                                <input type="checkbox" name="attr_tide_action_field_flag" value="on">
+                                                <span>Field</span>
                                             </div>
                                         </div>
                                         <!--                                        <div class="col">-->
@@ -1193,27 +1198,21 @@
                                         <input class="roll-control" type="hidden" name="attr_tide_action_roll_type"
                                                value="0">
                                         <div class="flex-center" style="background-color: #696969; color: white">
-                                                    <span style="width: auto; font-weight: bold; padding-right: 20px">Default
-                                                        <input type="radio" value="0" name="attr_tide_action_roll_type"
-                                                               checked>
-                                                    </span>
-
+                                            <span style="width: auto; font-weight: bold; padding-right: 20px">Default
+                                                <input type="radio" value="0" name="attr_tide_action_roll_type" checked>
+                                            </span>
                                             <span style="width: auto; font-weight: bold; padding-right: 20px">CAP Only
-                                                        <input type="radio" value="1" name="attr_tide_action_roll_type">
-                                                    </span>
-
+                                                <input type="radio" value="1" name="attr_tide_action_roll_type">
+                                            </span>
                                             <span style="width: auto; font-weight: bold; padding-right: 20px">Auto-hit
-                                                        <input type="radio" value="2" name="attr_tide_action_roll_type">
-                                                    </span>
-
+                                                <input type="radio" value="2" name="attr_tide_action_roll_type">
+                                            </span>
                                             <span style="width: auto; font-weight: bold; padding-right: 20px">Heal
-                                                        <input type="radio" value="3" name="attr_tide_action_roll_type">
-                                                    </span>
-
+                                                <input type="radio" value="3" name="attr_tide_action_roll_type">
+                                            </span>
                                             <span style="width: auto; font-weight: bold">None
-                                                        <input type="radio" value="-1"
-                                                               name="attr_tide_action_roll_type">
-                                                    </span>
+                                                <input type="radio" value="-1" name="attr_tide_action_roll_type">
+                                            </span>
                                         </div>
 
                                         <div class="action-damage" style="padding: 2px 5px 2px 5px">
@@ -1771,7 +1770,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
         <div class="block-container block-npc">
@@ -3009,18 +3007,11 @@
 
                     // Keepsakes
 
-                    // remove any existing keepsakes
-                    const newIdk1 = generateRowID();
-                    settings["repeating_inventory_" + newIdk1 + "_item_name"] = "Service Medal";
-                    settings["repeating_inventory_" + newIdk1 + "_item_speed"] = "Fast";
-                    settings["repeating_inventory_" + newIdk1 + "_item_usage"] = "campaign";
-                    settings["repeating_inventory_" + newIdk1 + "_item_effect"] = "Your next Action gains AUTO-CRIT";
-
-                    const newIdk2 = generateRowID();
-                    settings["repeating_inventory_" + newIdk2 + "_item_name"] = "Emberwind Spark";
-                    settings["repeating_inventory_" + newIdk2 + "_item_speed"] = "Free";
-                    settings["repeating_inventory_" + newIdk2 + "_item_usage"] = "campaign";
-                    settings["repeating_inventory_" + newIdk2 + "_item_effect"] = "Alter 1 Roll result by up to +/-4. Usable in any Encounter Type.";
+                    settings['keepsake1_name'] = "Service Medal";
+                    settings['keepsake1_effect'] = "Your next Action gains AUTO-CRIT.";
+                    settings['keepsake1_speed'] = "Fast";
+                    settings['keepsake1_usage'] = "campaign";
+                    settings['keepsake1_used'] = "off";
 
                     // Anchors
                     const newIda1 = generateRowID();
@@ -3230,7 +3221,8 @@
                     settings["repeating_tideTurners_" + newIdt2 + "_tide_action_target"] = "1 Action";
                     settings["repeating_tideTurners_" + newIdt2 + "_tide_action_speed"] = "Free";
                     settings["repeating_tideTurners_" + newIdt2 + "_tide_action_type"] = "";
-                    settings["repeating_tideTurners_" + newIdt2 + "_tide_action_range"] = ""; // Field
+                    settings["repeating_tideTurners_" + newIdt2 + "_tide_action_range"] = "";
+                    settings["repeating_tideTurners_" + newIdt2 + "_tide_action_field_flag"] = "on"; // Field
                     settings["repeating_tideTurners_" + newIdt2 + "_tide_action_roll_type"] = "-1"; // none
                     settings["repeating_tideTurners_" + newIdt2 + "_tide_action_dice"] = "";
                     settings["repeating_tideTurners_" + newIdt2 + "_tide_action_dice_bonus"] = "";
@@ -3248,18 +3240,11 @@
 
                     // Keepsakes
 
-                    // remove any existing keepsakes
-                    const newIdk1 = generateRowID();
-                    settings["repeating_inventory_" + newIdk1 + "_item_name"] = "Clockwork Heart";
-                    settings["repeating_inventory_" + newIdk1 + "_item_speed"] = "Free";
-                    settings["repeating_inventory_" + newIdk1 + "_item_usage"] = "combat";
-                    settings["repeating_inventory_" + newIdk1 + "_item_effect"] = "+1 Fast Action this Turn.";
-
-                    const newIdk2 = generateRowID();
-                    settings["repeating_inventory_" + newIdk2 + "_item_name"] = "Emberwind Spark";
-                    settings["repeating_inventory_" + newIdk2 + "_item_speed"] = "Free";
-                    settings["repeating_inventory_" + newIdk2 + "_item_usage"] = "campaign";
-                    settings["repeating_inventory_" + newIdk2 + "_item_effect"] = "Alter 1 Roll result by up to +/-4. Usable in any Encounter Type.";
+                    settings['keepsake1_name'] = "Clockwork Heart";
+                    settings['keepsake1_effect'] = "+1 Fast Action this Turn.";
+                    settings['keepsake1_speed'] = "Free";
+                    settings['keepsake1_usage'] = "combat";
+                    settings['keepsake1_used'] = "off";
 
                     // Anchors
                     const newIda1 = generateRowID();
@@ -3470,7 +3455,8 @@
                     settings["repeating_tideTurners_" + newIdt2 + "_tide_action_target"] = "Self";
                     settings["repeating_tideTurners_" + newIdt2 + "_tide_action_speed"] = "Fast";
                     settings["repeating_tideTurners_" + newIdt2 + "_tide_action_type"] = "";
-                    settings["repeating_tideTurners_" + newIdt2 + "_tide_action_range"] = ""; // Field
+                    settings["repeating_tideTurners_" + newIdt2 + "_tide_action_range"] = "";
+                    settings["repeating_tideTurners_" + newIdt2 + "_tide_action_field_flag"] = "on"; // Field
                     settings["repeating_tideTurners_" + newIdt2 + "_tide_action_roll_type"] = "-1"; // none
                     settings["repeating_tideTurners_" + newIdt2 + "_tide_action_dice"] = "";
                     settings["repeating_tideTurners_" + newIdt2 + "_tide_action_dice_bonus"] = "";
@@ -3488,18 +3474,11 @@
 
                     // Keepsakes
 
-                    // remove any existing keepsakes
-                    const newIdk1 = generateRowID();
-                    settings["repeating_inventory_" + newIdk1 + "_item_name"] = "Silverglade Shard";
-                    settings["repeating_inventory_" + newIdk1 + "_item_speed"] = "Free";
-                    settings["repeating_inventory_" + newIdk1 + "_item_usage"] = "";
-                    settings["repeating_inventory_" + newIdk1 + "_item_effect"] = "Negate the Effect of Concentrated Miasma (Local Field Effect) on Laureat.";
-
-                    const newIdk2 = generateRowID();
-                    settings["repeating_inventory_" + newIdk2 + "_item_name"] = "Emberwind Spark";
-                    settings["repeating_inventory_" + newIdk2 + "_item_speed"] = "Free";
-                    settings["repeating_inventory_" + newIdk2 + "_item_usage"] = "campaign";
-                    settings["repeating_inventory_" + newIdk2 + "_item_effect"] = "Alter 1 Roll result by up to +/-4. Usable in any Encounter Type.";
+                    settings['keepsake1_name'] = "Silverglade Shard";
+                    settings['keepsake1_effect'] = "Negate the Effect of Concentrated Miasma (Local Field Effect) on Laureat.";
+                    settings['keepsake1_speed'] = "Free";
+                    settings['keepsake1_usage'] = "";
+                    settings['keepsake1_used'] = "off";
 
                     // Anchors
                     const newIda1 = generateRowID();
@@ -3720,17 +3699,12 @@
                     settings['armour'] = "";
 
                     // Keepsakes
-                    const newIdk1 = generateRowID();
-                    settings["repeating_inventory_" + newIdk1 + "_item_name"] = "Pheonix Pinion";
-                    settings["repeating_inventory_" + newIdk1 + "_item_speed"] = "Fast";
-                    settings["repeating_inventory_" + newIdk1 + "_item_usage"] = "campaign";
-                    settings["repeating_inventory_" + newIdk1 + "_item_effect"] = "Adjacent Hero recovers from Fallen. That Hero heals 10 HP.";
 
-                    const newIdk2 = generateRowID();
-                    settings["repeating_inventory_" + newIdk2 + "_item_name"] = "Emberwind Spark";
-                    settings["repeating_inventory_" + newIdk2 + "_item_speed"] = "Free";
-                    settings["repeating_inventory_" + newIdk2 + "_item_usage"] = "campaign";
-                    settings["repeating_inventory_" + newIdk2 + "_item_effect"] = "Alter 1 Roll result by up to +/-4. Usable in any Encounter Type.";
+                    settings['keepsake1_name'] = "Pheonix Pinion";
+                    settings['keepsake1_effect'] = "Adjacent Hero recovers from Fallen. That Hero heals 10 HP.";
+                    settings['keepsake1_speed'] = "Fast";
+                    settings['keepsake1_usage'] = "campaign";
+                    settings['keepsake1_used'] = "off";
 
                     // Anchors
                     const newIda1 = generateRowID();
@@ -3769,11 +3743,53 @@
                 });
             });
         });
+        on("change:repeating_actions:action_field_flag", function() {
+            getAttrs(["repeating_actions_action_field_flag"], function(values) {
+                setAttrs({
+                    "repeating_actions_action_field": showHide(values.repeating_actions_action_field_flag)
+                });
+                if (values.repeating_actions_action_field_flag == "on") {
+                    setAttrs({
+                        "repeating_actions_action_range": ""
+                    });
+                }
+            });
+        });
+        on("change:repeating_actions:action_range", function() {
+            getAttrs(["repeating_actions_action_range"], function(values) {
+                if (values.repeating_actions_action_range) {
+                    setAttrs({
+                        "repeating_actions_action_field_flag": "off"
+                    });
+                }
+            });
+        });
         on("change:repeating_tideTurners:settingsflag", function() {
             getAttrs(["repeating_tideTurners_settingsFlag"], function(values) {
                 setAttrs({
                     "repeating_tideTurners_displaySettingsFlag": showHide(values.repeating_tideTurners_settingsFlag)
                 });
+            });
+        });
+        on("change:repeating_tideTurners:tide_action_field_flag", function() {
+            getAttrs(["repeating_tideTurners_tide_action_field_flag"], function(values) {
+                setAttrs({
+                    "repeating_tideTurners_tide_action_field": showHide(values.repeating_tideTurners_tide_action_field_flag)
+                });
+                if (values.repeating_tideTurners_tide_action_field_flag == "on") {
+                    setAttrs({
+                        "repeating_tideTurners_tide_action_range": ""
+                    });
+                }
+            });
+        });
+        on("change:repeating_tideTurners:tide_action_range", function() {
+            getAttrs(["repeating_tideTurners_tide_action_range"], function(values) {
+                if (values.repeating_tideTurners_tide_action_range) {
+                    setAttrs({
+                        "repeating_tideTurners_tide_action_field_flag": "off"
+                    });
+                }
             });
         });
         on("change:melee_settings_flag", function() {
@@ -3894,39 +3910,6 @@
                 setAttrs({repeating_tideTurners_tide_action_damage_description: description});
             });
         });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 </script>
