@@ -1291,85 +1291,85 @@
 
             <div class="sheet-tab-content sheet-tab2">
                 <div>
-                    <div class="inventory-header">INVENTORY</div>
-                    <div class="row">
-                        <div class="col">
-                            <span>Melee:</span>
-                            <select class="selector-fit" name="attr_melee_weapon">
-                                <option value="">Select</option>
-                                <option value="sword_1h">Sword [1H]</option>
-                                <option value="sword_2h">Sword [2H]</option>
-                                <option value="mace_1h">Mace [1H]</option>
-                                <option value="mace_2h">Mace [2H]</option>
-                                <option value="axe_1h">Axe [1H]</option>
-                                <option value="axe_2h">Axe [2H]</option>
-                                <option value="polearm_1h">Pole-arm [1H]</option>
-                                <option value="polearm_2h">Pole-arm [2H]</option>
-                                <option value="sceptre_1h">Sceptre [1H]</option>
-                                <option value="staff_2h">Staff [2H]</option>
-                            </select>
-                        </div>
-                        <div class="col">
-                            <span>Ranged:</span>
-                            <select class="selector-fit" name="attr_ranged_weapon">
-                                <option value="">Select</option>
-                                <option value="bow">Bow</option>
-                                <option value="crossbow">Crossbow</option>
-                                <option value="wand">Wand</option>
-                                <option value="throwing_knives">Throwing Knives</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <span>Off-hand:</span>
-                            <select class="selector-fit" name="attr_offhand">
-                                <option value="">Select</option>
-                                <option value="light_shield">Light Shield</option>
-                                <option value="medium_shield">Medium Shield</option>
-                                <option value="heavy_shield">Heavy Shield</option>
-                                <option value="offhand_weapon">Off-hand Weapon</option>
-                                <option value="offhand_crossbow">Off-hand Crossbow</option>
-                                <option value="prayer_beads">Prayer Beads</option>
-                                <option value="focus_item">Focus Item</option>
-                            </select>
-                        </div>
-                        <div class="col">
-                            <span>Armour:</span>
-                            <select class="selector-fit" name="attr_armour">
-                                <option value="">Select</option>
-                                <option value="robes">Robes</option>
-                                <option value="light_armour">Light Armour</option>
-                                <option value="heavy_armour">Heavy Armour</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="inventory-header">KEEPSAKES</div>
-                    <fieldset class="repeating_inventory">
+                    <div class="col" style="width: 34%">
+                        <div class="inventory-header">INVENTORY</div>
                         <div class="row">
+                            <div class="col">
+                                <span>Melee:</span>
+                                <select class="selector-fit" name="attr_melee_weapon">
+                                    <option value="">Select</option>
+                                    <option value="sword_1h">Sword [1H]</option>
+                                    <option value="sword_2h">Sword [2H]</option>
+                                    <option value="mace_1h">Mace [1H]</option>
+                                    <option value="mace_2h">Mace [2H]</option>
+                                    <option value="axe_1h">Axe [1H]</option>
+                                    <option value="axe_2h">Axe [2H]</option>
+                                    <option value="polearm_1h">Pole-arm [1H]</option>
+                                    <option value="polearm_2h">Pole-arm [2H]</option>
+                                    <option value="sceptre_1h">Sceptre [1H]</option>
+                                    <option value="staff_2h">Staff [2H]</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <span>Ranged:</span>
+                                <select class="selector-fit" name="attr_ranged_weapon">
+                                    <option value="">Select</option>
+                                    <option value="bow">Bow</option>
+                                    <option value="crossbow">Crossbow</option>
+                                    <option value="wand">Wand</option>
+                                    <option value="throwing_knives">Throwing Knives</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <span>Off-hand:</span>
+                                <select class="selector-fit" name="attr_offhand">
+                                    <option value="">Select</option>
+                                    <option value="light_shield">Light Shield</option>
+                                    <option value="medium_shield">Medium Shield</option>
+                                    <option value="heavy_shield">Heavy Shield</option>
+                                    <option value="offhand_weapon">Off-hand Weapon</option>
+                                    <option value="offhand_crossbow">Off-hand Crossbow</option>
+                                    <option value="prayer_beads">Prayer Beads</option>
+                                    <option value="focus_item">Focus Item</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <span>Armour:</span>
+                                <select class="selector-fit" name="attr_armour">
+                                    <option value="">Select</option>
+                                    <option value="robes">Robes</option>
+                                    <option value="light_armour">Light Armour</option>
+                                    <option value="heavy_armour">Heavy Armour</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="inventory-header">KEEPSAKES</div>
+                        <div class="row" style="padding-bottom: 3px">
                             <div class="inventory-box">
                                 <div class="inventory-box-upper">
                                     <span>Keepsake:</span>
-                                    <input class="no-border" type="text" name="attr_item_name"/>
+                                    <input class="no-border" type="text" name="attr_keepsake1_name"/>
                                 </div>
                                 <div style="padding: 2px">
                                     <div class="flex-center-left">
                                         <div class="col" style="padding-right: 2px; padding-top: 4px;">
                                             <span>Effect:</span>
                                         </div>
-                                        <textarea class="height40 no-border" name="attr_item_effect"></textarea>
+                                        <textarea class="height40 no-border" name="attr_keepsake1_effect"></textarea>
                                     </div>
                                     <div>
                                         <span>Action:</span>
-                                        <select class="selector-fit inventory-selector" name="attr_item_speed">
+                                        <select class="selector-fit inventory-selector" name="attr_keepsake1_speed">
                                             <option value="">Select</option>
                                             <option value="Free">Free</option>
                                             <option value="Fast">Fast</option>
                                             <option value="Slow">Slow</option>
                                         </select>
                                         <span>Use:</span>
-                                        <select class="selector-fit inventory-selector" name="attr_item_usage">
+                                        <select class="selector-fit inventory-selector" name="attr_keepsake1_usage">
                                             <option value="">Select</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
@@ -1379,74 +1379,215 @@
                                             <option value="combat">1 Per Combat</option>
                                             <option value="milestone">1 Per Milestone</option>
                                         </select>
-                                        <input type="checkbox" name="attr_item_used"/>
+                                        <input type="checkbox" name="attr_keepsake1_used"/>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </fieldset>
-                </div>
-                <div style="padding-left: 10px">
-                    <div>
-                        <div class="col" style="padding-bottom: 5px">
-                            <div class="inventory-header">ANCHORS</div>
-                            <fieldset class="repeating_anchors">
-                                <div class="row">
-                                    <input name="attr_anchor" class="no-border" type="text"
-                                           style="border-bottom: 2px solid black"/>
+                        <div class="row" style="padding-bottom: 3px">
+                            <div class="inventory-box">
+                                <div class="inventory-box-upper">
+                                    <span>Keepsake:</span>
+                                    <input class="no-border" type="text" name="attr_keepsake2_name"/>
                                 </div>
-                            </fieldset>
+                                <div style="padding: 2px">
+                                    <div class="flex-center-left">
+                                        <div class="col" style="padding-right: 2px; padding-top: 4px;">
+                                            <span>Effect:</span>
+                                        </div>
+                                        <textarea class="height40 no-border" name="attr_keepsake2_effect"></textarea>
+                                    </div>
+                                    <div>
+                                        <span>Action:</span>
+                                        <select class="selector-fit inventory-selector" name="attr_keepsake2_speed">
+                                            <option value="">Select</option>
+                                            <option value="Free">Free</option>
+                                            <option value="Fast">Fast</option>
+                                            <option value="Slow">Slow</option>
+                                        </select>
+                                        <span>Use:</span>
+                                        <select class="selector-fit inventory-selector" name="attr_keepsake2_usage">
+                                            <option value="">Select</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="encounter">1 Per Encounter</option>
+                                            <option value="campaign">1 Per Campaign</option>
+                                            <option value="combat">1 Per Combat</option>
+                                            <option value="milestone">1 Per Milestone</option>
+                                        </select>
+                                        <input type="checkbox" name="attr_keepsake2_used"/>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="col" style="padding-bottom: 5px">
-                            <div class="inventory-header">DEADWEIGHTS</div>
-                            <fieldset class="repeating_deadweight">
-                                <div class="row">
-                                    <input name="attr_deadweight" class="no-border" type="text"
-                                           style="border-bottom: 2px solid black"/>
+                        <div class="inventory-header">ITEMS</div>
+                        <fieldset class="repeating_inventory">
+                            <div class="row">
+                                <div class="inventory-box">
+                                    <div class="inventory-box-upper">
+                                        <span>Item:</span>
+                                        <input class="no-border" type="text" name="attr_item_name"/>
+                                    </div>
+                                    <div style="padding: 2px">
+                                        <div class="flex-center-left">
+                                            <div class="col" style="padding-right: 2px; padding-top: 4px;">
+                                                <span>Effect:</span>
+                                            </div>
+                                            <textarea class="height40 no-border" name="attr_item_effect"></textarea>
+                                        </div>
+                                        <div>
+                                            <span>Action:</span>
+                                            <select class="selector-fit inventory-selector" name="attr_item_speed">
+                                                <option value="">Select</option>
+                                                <option value="Free">Free</option>
+                                                <option value="Fast">Fast</option>
+                                                <option value="Slow">Slow</option>
+                                            </select>
+                                            <span>Use:</span>
+                                            <select class="selector-fit inventory-selector" name="attr_item_usage">
+                                                <option value="">Select</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="encounter">1 Per Encounter</option>
+                                                <option value="campaign">1 Per Campaign</option>
+                                                <option value="combat">1 Per Combat</option>
+                                                <option value="milestone">1 Per Milestone</option>
+                                            </select>
+                                            <input type="checkbox" name="attr_item_used"/>
+                                        </div>
+                                    </div>
                                 </div>
-                            </fieldset>
-                        </div>
+                            </div>
+                        </fieldset>
                     </div>
+                    <div class="col" style="width: 64%; padding-left: 10px">
+                        <div>
+                            <div class="inventory-header">CONDITIONS</div>
+                            <div>Check off the box next to the Condition you are currently suffering from. If a max is
+                                specified,
+                                write the number of Stacks instead.
+                            </div>
+                            <div>
+                                <div class="col" style="width: 49%">
+                                    <div style="border-top: 1px solid black;">
+                                        <input type="checkbox" name="attr_condition_daze">
+                                        <div><b><i>DAZE: </i></b>-4 Accuracy</div>
+                                    </div>
+                                    <div style="border-top: 1px solid black;">
+                                        <input type="checkbox" name="attr_condition_off_guard">
+                                        <div><b><i>OFF-GUARD: </i></b>-2 Dodge</div>
+                                    </div>
+                                    <div style="border-top: 1px solid black;">
+                                        <input type="checkbox" name="attr_condition_prone">
+                                        <div><b><i>PRONE: </i></b>OFF-GUARD and cannot take Actions until they expend a
+                                            Fast
+                                            Action to remove PRONE.
+                                        </div>
+                                    </div>
+                                    <div style="border-top: 1px solid black;">
+                                        <input type="checkbox" name="attr_condition_prone">
+                                        <div><b><i>SILENCE: </i></b>Cannot use Spell or Tide-Turner Actions. SILENCE is
+                                            removed
+                                            at the end of Hero’s next Turn.
+                                        </div>
+                                    </div>
+                                    <div style="border-top: 1px solid black;">
+                                        <input type="checkbox" name="attr_condition_prone">
+                                        <div><b><i>SLEEP: </i></b>Combatant cannot take Actions on their next Turn.
+                                            SLEEP is
+                                            removed when Combatant takes Damage or at the end of their next Turn.
+                                            Actions that
+                                            Target a Sleeping Combatant gain the AUTO-CRITICAL property against just
+                                            that
+                                            Combatant.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col" style="width: 49%">
+                                    <div style="border-top: 1px solid black;">
+                                        <input type="checkbox" name="">
+                                        <div><b><i>POISON [PIERCING]: </i></b>Combatant takes 1d6 Damage per Stack at
+                                            the start
+                                            of their Turn.
+                                        </div>
+                                    </div>
+                                    <div style="border-top: 1px solid black;">
+                                        <input type="checkbox" name="attr_condition_off_guard">
+                                        <div><b><i>BURNING [PIERCING]: </i></b> Combatant takes 1d20 Damage per Stack at
+                                            the
+                                            start of their Turn.
+                                        </div>
+                                    </div>
+                                    <div style="border-top: 1px solid black;">
+                                        <input type="checkbox" name="attr_condition_prone">
+                                        <div><b><i>FRAGILITY: </i></b>Actions targeting Combatant gain the PIERCING
+                                            property.
+                                            FRAGILITY is removed at the end of Combatant’s next Turn.
+                                        </div>
+                                    </div>
+                                    <div style="border-top: 1px solid black;">
+                                        <input type="checkbox" name="attr_condition_prone">
+                                        <div><b><i>VULNERABILITY: </i></b>-1 to Barrier Values per Stack.
+                                        </div>
+                                    </div>
+                                    <div style="border-top: 1px solid black;">
+                                        <input type="checkbox" name="attr_condition_prone">
+                                        <div><b><i>WEAKNESS: </i></b>-1 to Action Damage per Stack.
+                                        </div>
+                                    </div>
+                                    <div style="border-top: 1px solid black;">
+                                        <input type="checkbox" name="attr_condition_prone">
+                                        <div><b><i>CHILL: </i></b>-1 Action Point each Round.
+                                        </div>
+                                    </div>
+                                    <div style="border-top: 1px solid black;">
+                                        <input type="checkbox" name="attr_condition_prone">
+                                        <div><b><i>PARALYSIS: </i></b> Combatant takes only 1 Action during their next
+                                            Turn.
+                                            PARALYSIS is removed at the end of that Turn.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-                    <div class="inventory-header">DESCRIPTION</div>
-                    <textarea name="attr_bio_description"></textarea>
+                        </div>
 
-                    <div class="inventory-header">HISTORY</div>
-                    <textarea name="attr_bio_history"></textarea>
+                        <div>
+                            <div class="col" style="padding-bottom: 5px">
+                                <div class="inventory-header">ANCHORS</div>
+                                <fieldset class="repeating_anchors">
+                                    <div class="row">
+                                        <input name="attr_anchor" class="no-border" type="text"
+                                               style="border-bottom: 2px solid black"/>
+                                    </div>
+                                </fieldset>
+                            </div>
+
+                            <div class="col" style="padding-bottom: 5px">
+                                <div class="inventory-header">DEADWEIGHTS</div>
+                                <fieldset class="repeating_deadweight">
+                                    <div class="row">
+                                        <input name="attr_deadweight" class="no-border" type="text"
+                                               style="border-bottom: 2px solid black"/>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+
+                        <div class="inventory-header">DESCRIPTION</div>
+                        <textarea name="attr_bio_description"></textarea>
+
+                        <div class="inventory-header">HISTORY</div>
+                        <textarea name="attr_bio_history"></textarea>
+                    </div>
                 </div>
             </div>
 
             <div class="sheet-tab-content sheet-tab3">
                 <div>
-                    <div class="inventory-header">CONDITIONS</div>
-                    <div>Check off the box next to the Condition you are currently suffering from. If a max is specified,
-                        write the number of Stacks instead.
-                    </div>
-                    <div>
-                        <div class="col" style="width: 49%">
-
-                            <div style="border-bottom: 1px solid black; border-top: 1px solid black;">
-                                <input type="checkbox" name="attr_condition_daze">
-                                <div><b><i>DAZE: </i></b>-4 Accuracy</div>
-                            </div>
-                            <div style="border-bottom: 1px solid black; border-top: 1px solid black;">
-                                <input type="checkbox" name="attr_condition_off_guard">
-                                <div><b><i>OFF-GUARD: </i></b>-2 Dodge</div>
-                            </div>
-                            <div style="border-bottom: 1px solid black; border-top: 1px solid black;">
-                                <input type="checkbox" name="attr_condition_prone">
-                                <div><b><i>PRONE: </i></b>-2 Dodge</div>
-                            </div>
-
-                        </div>
-                        <div class="col" style="width: 49%">
-                            <div style="border-bottom: 1px solid black; border-top: 1px solid black;">
-                                <input type="checkbox" name="">
-                                <div><b><i>POISON [PIERCING]: </i></b>-2 Dodge</div>
-                            </div>
-                        </div>
-                    </div>
 
                 </div>
             </div>
@@ -2607,7 +2748,20 @@
             settings['armour'] = "";
 
             // Keepsakes
-            // remove any existing keepsakes
+            settings['keepsake1_name'] = "";
+            settings['keepsake1_effect'] = "";
+            settings['keepsake1_speed'] = "";
+            settings['keepsake1_usage'] = "";
+            settings['keepsake1_used'] = "off";
+
+            settings['keepsake2_name'] = "Emberwind Spark";
+            settings['keepsake2_effect'] = "Alter 1 Roll result by up to +/- 4. Usable in any Encounter Type.";
+            settings['keepsake2_speed'] = "Free";
+            settings['keepsake2_usage'] = "campaign";
+            settings['keepsake2_used'] = "off";
+
+            // Items
+            // remove any existing items
             getSectionIDs("repeating_inventory", function(idarray) {
                 for(var i = 0; i < idarray.length; i++) {
                     removeRepeatingRow("repeating_inventory_" + idarray[i]);
@@ -3740,6 +3894,15 @@
                 setAttrs({repeating_tideTurners_tide_action_damage_description: description});
             });
         });
+
+
+
+
+
+
+
+
+
 
 
 

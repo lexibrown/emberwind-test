@@ -278,7 +278,7 @@ div.sheet-tab-content {
 }
 
 .sheet-guide-p {
-    background: -webkit-linear-gradient(130deg, lightcoral 60%, lightskyblue 35%);
+    background: -webkit-linear-gradient(130deg, lightcoral 65%, lightskyblue 50%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
