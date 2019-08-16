@@ -1423,7 +1423,7 @@
 
                         <div class="inventory-header">ITEMS</div>
                         <fieldset class="repeating_inventory">
-                            <div class="row">
+                            <div class="row" style="padding-bottom: 3px">
                                 <div class="inventory-box">
                                     <div class="inventory-box-upper">
                                         <span>Item:</span>
@@ -1463,114 +1463,190 @@
                         </fieldset>
                     </div>
                     <div class="col" style="width: 64%; padding-left: 10px">
-                        <div>
+                        <div style="border-bottom: 1px solid black; margin-bottom: 5px">
                             <div class="inventory-header">CONDITIONS</div>
                             <div>Check off the box next to the Condition you are currently suffering from. If a max is
-                                specified,
-                                write the number of Stacks instead.
+                                specified, write the number of Stacks instead.
                             </div>
                             <div>
-                                <div class="col" style="width: 49%">
-                                    <div style="border-top: 1px solid black;">
-                                        <input type="checkbox" name="attr_condition_daze">
-                                        <div><b><i>DAZE: </i></b>-4 Accuracy</div>
-                                    </div>
-                                    <div style="border-top: 1px solid black;">
-                                        <input type="checkbox" name="attr_condition_off_guard">
-                                        <div><b><i>OFF-GUARD: </i></b>-2 Dodge</div>
-                                    </div>
-                                    <div style="border-top: 1px solid black;">
-                                        <input type="checkbox" name="attr_condition_prone">
-                                        <div><b><i>PRONE: </i></b>OFF-GUARD and cannot take Actions until they expend a
-                                            Fast
-                                            Action to remove PRONE.
+                                <div class="col" style="width: 45%; padding-right: 20px">
+                                    <div class="condition-box">
+                                        <div class="condition-selector">
+                                            <input type="checkbox" name="attr_condition_daze"/>
+                                        </div>
+                                        <div class="condition-name">
+                                            <span><b><i>DAZE: </i></b></span>
+                                        </div>
+                                        <div class="condition-description">
+                                            <span>-4 Accuracy</span>
                                         </div>
                                     </div>
-                                    <div style="border-top: 1px solid black;">
-                                        <input type="checkbox" name="attr_condition_prone">
-                                        <div><b><i>SILENCE: </i></b>Cannot use Spell or Tide-Turner Actions. SILENCE is
-                                            removed
-                                            at the end of Hero’s next Turn.
+                                    <div class="condition-box">
+                                        <div class="condition-selector">
+                                            <input type="checkbox" name="attr_condition_off_guard"/>
+                                        </div>
+                                        <div class="condition-name">
+                                            <span><b><i>OFF-GUARD: </i></b></span>
+                                        </div>
+                                        <div class="condition-description">
+                                            <span>-2 Dodge</span>
                                         </div>
                                     </div>
-                                    <div style="border-top: 1px solid black;">
-                                        <input type="checkbox" name="attr_condition_prone">
-                                        <div><b><i>SLEEP: </i></b>Combatant cannot take Actions on their next Turn.
-                                            SLEEP is
-                                            removed when Combatant takes Damage or at the end of their next Turn.
-                                            Actions that
-                                            Target a Sleeping Combatant gain the AUTO-CRITICAL property against just
-                                            that
-                                            Combatant.
+                                    <div class="condition-box">
+                                        <div class="condition-selector">
+                                            <input type="checkbox" name="attr_condition_prone"/>
+                                        </div>
+                                        <div class="condition-name">
+                                            <span><b><i>PRONE: </i></b></span>
+                                        </div>
+                                        <div class="condition-description">
+                                            <span><span class="indicator">OFF-GUARD</span> and cannot take Actions until they expend a Fast Action to remove
+                                                <span class="indicator">PRONE</span>.</span>
+                                        </div>
+                                    </div>
+                                    <div class="condition-box">
+                                        <div class="condition-selector">
+                                            <input type="checkbox" name="attr_condition_fragility"/>
+                                        </div>
+                                        <div class="condition-name">
+                                            <span><b><i>FRAGILITY: </i></b></span>
+                                        </div>
+                                        <div class="condition-description">
+                                            <span>Actions targeting Combatant gain the <span
+                                                    class="indicator">PIERCING</span> property. <span class="indicator">FRAGILITY</span> is removed at the end of Combatant’s next Turn.</span>
+                                        </div>
+                                    </div>
+                                    <div class="condition-box">
+                                        <div class="condition-selector-max">
+                                            <input class="custom-number-input" type="number" min="0" max="5"
+                                                   name="attr_condition_poison"/>
+                                            <div class="subtitle">Max 5</div>
+                                        </div>
+                                        <div class="condition-name">
+                                            <span><b><i>POISON [PIERCING]: </i></b></span>
+                                        </div>
+                                        <div class="condition-description">
+                                            <span>Combatant takes 1d6 Damage per Stack at the start of their Turn.</span>
+                                        </div>
+                                    </div>
+                                    <div class="condition-box">
+                                        <div class="condition-selector-max">
+                                            <input class="custom-number-input" type="number" min="0" max="2"
+                                                   name="attr_condition_burning"/>
+                                            <div class="subtitle">Max 2</div>
+                                        </div>
+                                        <div class="condition-name">
+                                            <span><b><i>BURNING [PIERCING]: </i></b></span>
+                                        </div>
+                                        <div class="condition-description">
+                                            <span>Combatant takes 1d20 Damage per Stack at the start of their Turn.</span>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col" style="width: 49%">
-                                    <div style="border-top: 1px solid black;">
-                                        <input type="checkbox" name="">
-                                        <div><b><i>POISON [PIERCING]: </i></b>Combatant takes 1d6 Damage per Stack at
-                                            the start
-                                            of their Turn.
+                                <div class="col" style="width: 45%">
+                                    <div class="condition-box">
+                                        <div class="condition-selector">
+                                            <input type="checkbox" name="attr_condition_silence"/>
+                                        </div>
+                                        <div class="condition-name">
+                                            <span><b><i>SILENCE: </i></b></span>
+                                        </div>
+                                        <div class="condition-description">
+                                            <span>Cannot use Spell or Tide-Turner Actions. <span class="indicator">SILENCE</span> is removed at the end of Hero’s next Turn.</span>
                                         </div>
                                     </div>
-                                    <div style="border-top: 1px solid black;">
-                                        <input type="checkbox" name="attr_condition_off_guard">
-                                        <div><b><i>BURNING [PIERCING]: </i></b> Combatant takes 1d20 Damage per Stack at
-                                            the
-                                            start of their Turn.
+                                    <div class="condition-box">
+                                        <div class="condition-selector">
+                                            <input type="checkbox" name="attr_condition_paralysis"/>
+                                        </div>
+                                        <div class="condition-name">
+                                            <span><b><i>PARALYSIS: </i></b></span>
+                                        </div>
+                                        <div class="condition-description">
+                                            <span>Combatant takes only 1 Action during their next Turn. <span
+                                                    class="indicator">PARALYSIS</span> is removed at the end of that Turn.</span>
                                         </div>
                                     </div>
-                                    <div style="border-top: 1px solid black;">
-                                        <input type="checkbox" name="attr_condition_prone">
-                                        <div><b><i>FRAGILITY: </i></b>Actions targeting Combatant gain the PIERCING
-                                            property.
-                                            FRAGILITY is removed at the end of Combatant’s next Turn.
+                                    <div class="condition-box">
+                                        <div class="condition-selector">
+                                            <input type="checkbox" name="attr_condition_sleep"/>
+                                        </div>
+                                        <div class="condition-name">
+                                            <span><b><i>SLEEP: </i></b></span>
+                                        </div>
+                                        <div class="condition-description">
+                                            <span>Combatant cannot take Actions on their next Turn.
+                                            <span class="indicator">SLEEP</span> is removed when Combatant takes Damage or at the end of their next
+                                            Turn. Actions that Target a Sleeping Combatant gain the <span
+                                                        class="indicator">AUTO-CRIT</span>
+                                            property against just that Combatant.</span>
                                         </div>
                                     </div>
-                                    <div style="border-top: 1px solid black;">
-                                        <input type="checkbox" name="attr_condition_prone">
-                                        <div><b><i>VULNERABILITY: </i></b>-1 to Barrier Values per Stack.
+                                    <div class="condition-box">
+                                        <div class="condition-selector-max">
+                                            <input class="custom-number-input" type="number" min="0"
+                                                   name="attr_condition_vulnerability"/>
+                                            <div class="subtitle">Max &#8734;</div>
+                                        </div>
+                                        <div class="condition-name">
+                                            <span><b><i>VULNERABILITY: </i></b></span>
+                                        </div>
+                                        <div class="condition-description">
+                                            <span>-1 to Barrier Values per Stack.</span>
                                         </div>
                                     </div>
-                                    <div style="border-top: 1px solid black;">
-                                        <input type="checkbox" name="attr_condition_prone">
-                                        <div><b><i>WEAKNESS: </i></b>-1 to Action Damage per Stack.
+                                    <div class="condition-box">
+                                        <div class="condition-selector-max">
+                                            <input class="custom-number-input" type="number" min="0"
+                                                   name="attr_condition_weakness"/>
+                                            <div class="subtitle">Max &#x221e;</div>
+                                        </div>
+                                        <div class="condition-name">
+                                            <span><b><i>WEAKNESS: </i></b></span>
+                                        </div>
+                                        <div class="condition-description">
+                                            <span>-1 to Action Damage per Stack.</span>
                                         </div>
                                     </div>
-                                    <div style="border-top: 1px solid black;">
-                                        <input type="checkbox" name="attr_condition_prone">
-                                        <div><b><i>CHILL: </i></b>-1 Action Point each Round.
+                                    <div class="condition-box">
+                                        <div class="condition-selector-max">
+                                            <input class="custom-number-input" type="number" min="0" max="2"
+                                            <input class="custom-number-input" type="number" min="0" max="2"
+                                                   name="attr_condition_chill"/>
+                                            <div class="subtitle">Max 2</div>
                                         </div>
-                                    </div>
-                                    <div style="border-top: 1px solid black;">
-                                        <input type="checkbox" name="attr_condition_prone">
-                                        <div><b><i>PARALYSIS: </i></b> Combatant takes only 1 Action during their next
-                                            Turn.
-                                            PARALYSIS is removed at the end of that Turn.
+                                        <div class="condition-name">
+                                            <span><b><i>CHILL: </i></b></span>
+                                        </div>
+                                        <div class="condition-description">
+                                            <span>-1 Action Point each Round.</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
 
                         <div>
-                            <div class="col" style="padding-bottom: 5px">
+                            <div class="col width-half" style="padding-bottom: 5px">
                                 <div class="inventory-header">ANCHORS</div>
                                 <fieldset class="repeating_anchors">
                                     <div class="row">
-                                        <input name="attr_anchor" class="no-border" type="text"
-                                               style="border-bottom: 2px solid black"/>
+                                        <input name="attr_anchor" class="no-border width-half" type="text"
+                                               style="border-bottom: 2px solid black;"/>
+                                        <input name="attr_anchor_2" class="no-border width-half" type="text"
+                                               style="border-bottom: 2px solid black;"/>
                                     </div>
                                 </fieldset>
                             </div>
 
-                            <div class="col" style="padding-bottom: 5px">
+                            <div class="col width-half" style="padding-bottom: 5px">
                                 <div class="inventory-header">DEADWEIGHTS</div>
                                 <fieldset class="repeating_deadweight">
                                     <div class="row">
-                                        <input name="attr_deadweight" class="no-border" type="text"
+                                        <input name="attr_deadweight" class="no-border width-half" type="text"
                                                style="border-bottom: 2px solid black"/>
+                                        <input name="attr_deadweight_2" class="no-border width-half" type="text"
+                                               style="border-bottom: 2px solid black;"/>
                                     </div>
                                 </fieldset>
                             </div>
@@ -1768,6 +1844,8 @@
                                 <b>Tide-Turners: </b>Activated by expending a Tide-Turner Charge.
                             </div>
                         </div>
+                    </div>
+                    <div>For more Quick guides, and a complete set of rules, please visit: <b>https://www.emberwindgame.com</b>
                     </div>
                 </div>
             </div>
@@ -3016,10 +3094,9 @@
                     // Anchors
                     const newIda1 = generateRowID();
                     settings["repeating_anchors_" + newIda1 + "_anchor"] = "Gelspar";
+                    settings["repeating_anchors_" + newIda1 + "_anchor_2"] = "Airship - Weapons";
                     const newIda2 = generateRowID();
-                    settings["repeating_anchors_" + newIda2 + "_anchor"] = "Airship - Weapons";
-                    const newIda3 = generateRowID();
-                    settings["repeating_anchors_" + newIda3 + "_anchor"] = "Chasers";
+                    settings["repeating_anchors_" + newIda2 + "_anchor"] = "Chasers";
 
                     // Deadweights
 
@@ -3249,10 +3326,9 @@
                     // Anchors
                     const newIda1 = generateRowID();
                     settings["repeating_anchors_" + newIda1 + "_anchor"] = "Kendrick Maddox";
+                    settings["repeating_anchors_" + newIda1 + "_anchor_2"] = "Airship - Sky Sailing";
                     const newIda2 = generateRowID();
-                    settings["repeating_anchors_" + newIda2 + "_anchor"] = "Airship - Sky Sailing";
-                    const newIda3 = generateRowID();
-                    settings["repeating_anchors_" + newIda3 + "_anchor"] = "Smuggling";
+                    settings["repeating_anchors_" + newIda2 + "_anchor"] = "Smuggling";
 
                     // Deadweights
 
@@ -3483,8 +3559,7 @@
                     // Anchors
                     const newIda1 = generateRowID();
                     settings["repeating_anchors_" + newIda1 + "_anchor"] = "Hearth Crystals";
-                    const newIda2 = generateRowID();
-                    settings["repeating_anchors_" + newIda2 + "_anchor"] = "The Silverglades";
+                    settings["repeating_anchors_" + newIda1 + "_anchor_2"] = "The Silverglades";
 
                     // Deadweights
 
@@ -3709,12 +3784,10 @@
                     // Anchors
                     const newIda1 = generateRowID();
                     settings["repeating_anchors_" + newIda1 + "_anchor"] = "Kendrick Maddox";
+                    settings["repeating_anchors_" + newIda1 + "_anchor_2"] = "Red Market Merchant";
                     const newIda2 = generateRowID();
-                    settings["repeating_anchors_" + newIda2 + "_anchor"] = "Red Market Merchant";
-                    const newIda3 = generateRowID();
-                    settings["repeating_anchors_" + newIda3 + "_anchor"] = "Elise Grant";
-                    const newIda4 = generateRowID();
-                    settings["repeating_anchors_" + newIda4 + "_anchor"] = "Navigation";
+                    settings["repeating_anchors_" + newIda2 + "_anchor"] = "Elise Grant";
+                    settings["repeating_anchors_" + newIda2 + "_anchor_2"] = "Navigation";
 
                     // Deadweights
 
@@ -3813,7 +3886,6 @@
                 });
             });
         });
-
         on('sheet:opened change:statname change:athletics change:endurance change:intimidate change:insight change:knowledge change:mend change:acrobatics change:stealth change:sleight_of_hand change:focus change:fast_talk change:leadership', () => {
             getAttrs(['statname'], (values) => {
                 // convert "Acrobatics" to "acrobatics"
@@ -3831,7 +3903,6 @@
                 });
             });
         });
-
         on('sheet:opened change:melee_dice change:melee_dice_bonus', () => {
             getAttrs(['melee_dice', 'melee_dice_bonus'], (values) => {
                 let description = "";

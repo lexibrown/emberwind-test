@@ -255,10 +255,11 @@ div.sheet-tab-content {
 
 .sheet-guide-header {
     height: 50px;
-    width: 310px;
+    width: fit-content;
+    padding: 0 50px 0 50px;
     text-align: center;
     display: table-cell;
-    vertical-align:middle;
+    vertical-align: middle;
     color: white;
     background-position-y: 2px;
     background-position-x: 0;
@@ -281,6 +282,40 @@ div.sheet-tab-content {
     background: -webkit-linear-gradient(130deg, lightcoral 65%, lightskyblue 50%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+/*----------------- Conditions ------------------*/
+
+.sheet-condition-box {
+    display: grid;
+    height: fit-content;
+    border-top: 1px solid black;
+    padding: 3px 5px 3px 5px;
+    grid-column-gap: 3px;
+    grid-template-columns: 10%;
+    grid-template-areas:
+            "condition-selector condition-name"
+            "condition-selector condition-description";
+}
+
+.sheet-condition-selector,
+.sheet-condition-selector-max {
+    grid-area: condition-selector;
+    display: flex;
+    justify-content: center;
+    padding-top: 3px;
+}
+
+.sheet-condition-selector-max {
+    flex-flow: row wrap;
+}
+
+.sheet-condition-name {
+    grid-area: condition-name;
+}
+
+.sheet-condition-description {
+    grid-area: condition-description;
 }
 
 /*----------------- Sections ------------------*/
@@ -843,6 +878,18 @@ input.sheet-cap {
     border: none;
 }
 
+input.sheet-custom-number-input::-webkit-outer-spin-button,
+input.sheet-custom-number-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number].sheet-custom-number-input {
+    -moz-appearance: textfield; /* Firefox */
+    width: 1.3em;
+    height: 1.3em;
+}
+
 button[type=roll].sheet-custom-roll-button::before {
     content: '';
 }
@@ -868,8 +915,9 @@ button[type=roll].sheet-custom-roll-button {
 
 .sheet-inventory-header {
     font-weight: bold;
-    border-top: 2px solid dimgrey;
     font-variant: small-caps;
+    font-size: 1.3em;
+    border-top: 2px solid dimgrey;
     width: fit-content;
 }
 
@@ -1013,19 +1061,21 @@ input[type=checkbox].sheet-tab-hide:hover * {
 .sheet-padLeft {
     padding-Left: 10px;
     -webkit-box-sizing: border-box;
-    -mox-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
 .sheet-settings {
     z-index: 2;
     opacity: 0;
+    position: absolute;
 }
 
 /* Settings button as gear (uses letter 'y' in pictos font) as a checkbox to be used with javascript */
 .sheet-settings + span {
     display: inline-block;
-    margin-left: -25px;
+    /*margin-left: -25px;*/
+    position: relative;
     font-size: 20px;
     font-family: pictos;
     color: #A0A0A0;
@@ -1085,6 +1135,10 @@ input[type=checkbox].sheet-tab-hide:checked ~ .sheet-show-hide {
 }
 
 /* Boring Pre-defined width & height options */
+
+.sheet-width-half {
+    width: 49%;
+}
 
 .sheet-width5 {
     width: 5%;
