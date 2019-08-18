@@ -291,8 +291,8 @@ div.sheet-tab-content {
     height: fit-content;
     border-top: 1px solid black;
     padding: 3px 5px 3px 5px;
-    grid-column-gap: 3px;
-    grid-template-columns: 10%;
+    grid-column-gap: 10px;
+    grid-template-columns: 7%;
     grid-template-areas:
             "condition-selector condition-name"
             "condition-selector condition-description";
@@ -919,6 +919,10 @@ input.sheet-cap {
     border: none;
 }
 
+.sheet-transparent {
+    background-color: transparent;
+}
+
 .sheet-border-bottom-1 {
     border-bottom: 1px solid black;
 }
@@ -935,8 +939,20 @@ input.sheet-custom-number-input::-webkit-inner-spin-button {
 
 input[type=number].sheet-custom-number-input {
     -moz-appearance: textfield; /* Firefox */
-    width: 1.3em;
-    height: 1.3em;
+    width: 1.4em;
+    height: 1.5em;
+}
+
+input.sheet-move-number-input::-webkit-outer-spin-button,
+input.sheet-move-number-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number].sheet-move-number-input {
+    -moz-appearance: textfield; /* Firefox */
+    width: 1.9em;
+    height: 1.5em;
 }
 
 button[type=roll].sheet-custom-roll-button::before {
@@ -947,7 +963,7 @@ button[type=roll].sheet-custom-roll-button {
     width: 20px;
     height: 20px;
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 110% 110%;
     background-position: center;
     background-color: transparent;
 }

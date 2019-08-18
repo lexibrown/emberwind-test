@@ -225,13 +225,13 @@
                     </div>
                     <div class="stats1 section">
                         <div class="col stats-col red">
-                            <img class="20-box"
+                            <img class="25-box"
                                  src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
                             Toughness:
                             <input class="small" type="number" name="attr_toughness" value="4"/>
                         </div>
                         <div class="col stats-col blue">
-                            <img class="20-box"
+                            <img class="25-box"
                                  src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
                             Resistance:
                             <input class="small" type="number" name="attr_resistance" value="4"/>
@@ -451,9 +451,9 @@
                         <div class="action-range action-centered"></div>
                         <div class="action-effect action-text">
                             <span>Move </span>
-                            <input class="x-small" type="number" name="attr_min_move" value="1"/>
+                            <input class="move-number-input" type="number" name="attr_min_move" value="1"/>
                             <span>-</span>
-                            <input class="x-small" type="number" name="attr_max_move" value="4"/>
+                            <input class="move-number-input" type="number" name="attr_max_move" value="4"/>
                             <span> Squares. Can move through friendly Combatants.</span>
                         </div>
                         <span class="action-speed action-centered">Slow</span>
@@ -467,7 +467,7 @@
                         <div class="action-range action-centered"></div>
                         <div class="action-effect action-text">
                             <span>Move </span>
-                            <input class="x-small" type="number" name="attr_shift" value="1"/>
+                            <input class="move-number-input" type="number" name="attr_shift" value="1"/>
                             <span> Square(s). Can move through friendly Combatants.</span>
                         </div>
                         <span class="action-speed action-centered">Fast</span>
@@ -579,9 +579,9 @@
                             <div class="action-effect action-leftCentered">
                                 <div>
                                     <div class="row">
-                                        <span name="attr_melee_damage_description"></span>
                                         <input type="hidden" class="melee-damage-indicator" name="attr_melee_against"
                                                value="1">
+                                        <span name="attr_melee_damage_description"></span>
                                         <img class="melee-damage-toughness height17" name="attr_melee_damage_toughness"
                                              src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
                                         <img class="melee-damage-resistance height17"
@@ -1041,8 +1041,8 @@
                                                     <img class="tide-action-damage-toughness height17"
                                                          name="attr_tide_action_damage_toughness"
                                                          src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
-                                                    <img class="tide-action-damage-resistance"
-                                                         name="attr_tide_action_damage_resistance height17"
+                                                    <img class="tide-action-damage-resistance height17"
+                                                         name="attr_tide_action_damage_resistance"
                                                          src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
                                                     <span class="tide-action-damage-piercing indicator">PIERCING</span>
                                                 </div>
@@ -1068,20 +1068,20 @@
                                                        name="attr_tide_action_subtype1" value="General"/>
                                                 <span class="action-amp-effect italic no-padding">
                                                     Amp. Effect:
-                                                    <span name="attr_tide_action_amp_effect normal"></span>
+                                                    <span class="normal" name="attr_tide_action_amp_effect"></span>
                                                 </span>
                                                 <span class="action-trig-effect italic no-padding">
                                                     Trig. Condition:
-                                                    <span name="attr_tide_action_trig_condition normal"></span>
+                                                    <span class="normal" name="attr_tide_action_trig_condition"></span>
                                                 </span>
                                                 <span class="action-trig-effect italic no-padding">
                                                     Trig. Effect:
-                                                    <span name="attr_tide_action_trig_effect normal"></span>
+                                                    <span class="normal" name="attr_tide_action_trig_effect"></span>
                                                 </span>
                                                 <span name="attr_tide_action_description"></span>
                                                 <span class="action-sust-effect italic no-padding">
                                                     Sust. Effect:
-                                                    <span name="attr_tide_action_sust_effect normal"></span>
+                                                    <span class="normal" name="attr_tide_action_sust_effect"></span>
                                                 </span>
                                             </div>
                                         </div>
@@ -1313,81 +1313,9 @@
                                 </select>
                             </div>
                         </div>
-
-                        <div class="inventory-header">KEEPSAKES</div>
-                        <div class="row" style="padding-bottom: 3px">
-                            <div class="inventory-box">
-                                <div class="inventory-box-upper">
-                                    <span>Keepsake:</span>
-                                    <input class="no-border" type="text" name="attr_keepsake1_name"/>
-                                </div>
-                                <div style="padding: 2px">
-                                    <div class="flex-center-left">
-                                        <div class="col" style="padding-right: 2px; padding-top: 4px;">
-                                            <span>Effect:</span>
-                                        </div>
-                                        <textarea class="height40 no-border" name="attr_keepsake1_effect"></textarea>
-                                    </div>
-                                    <div>
-                                        <span>Action:</span>
-                                        <select class="selector-fit inventory-selector" name="attr_keepsake1_speed">
-                                            <option value="">Select</option>
-                                            <option value="Free">Free</option>
-                                            <option value="Fast">Fast</option>
-                                            <option value="Slow">Slow</option>
-                                        </select>
-                                        <span>Use:</span>
-                                        <select class="selector-fit inventory-selector" name="attr_keepsake1_usage">
-                                            <option value="">Select</option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="encounter">1 Per Encounter</option>
-                                            <option value="campaign">1 Per Campaign</option>
-                                            <option value="combat">1 Per Combat</option>
-                                            <option value="milestone">1 Per Milestone</option>
-                                        </select>
-                                        <input type="checkbox" name="attr_keepsake1_used"/>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row" style="padding-bottom: 3px">
-                            <div class="inventory-box">
-                                <div class="inventory-box-upper">
-                                    <span>Keepsake:</span>
-                                    <input class="no-border" type="text" name="attr_keepsake2_name"/>
-                                </div>
-                                <div style="padding: 2px">
-                                    <div class="flex-center-left">
-                                        <div class="col" style="padding-right: 2px; padding-top: 4px;">
-                                            <span>Effect:</span>
-                                        </div>
-                                        <textarea class="height40 no-border" name="attr_keepsake2_effect"></textarea>
-                                    </div>
-                                    <div>
-                                        <span>Action:</span>
-                                        <select class="selector-fit inventory-selector" name="attr_keepsake2_speed">
-                                            <option value="">Select</option>
-                                            <option value="Free">Free</option>
-                                            <option value="Fast">Fast</option>
-                                            <option value="Slow">Slow</option>
-                                        </select>
-                                        <span>Use:</span>
-                                        <select class="selector-fit inventory-selector" name="attr_keepsake2_usage">
-                                            <option value="">Select</option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="encounter">1 Per Encounter</option>
-                                            <option value="campaign">1 Per Campaign</option>
-                                            <option value="combat">1 Per Combat</option>
-                                            <option value="milestone">1 Per Milestone</option>
-                                        </select>
-                                        <input type="checkbox" name="attr_keepsake2_used"/>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="row">
+                            <span>Gold Pieces:</span>
+                            <input type="number" name="attr_gold"/>
                         </div>
 
                         <div class="inventory-header">ITEMS</div>
@@ -1396,25 +1324,28 @@
                                 <div class="inventory-box">
                                     <div class="inventory-box-upper">
                                         <span>Item:</span>
-                                        <input class="no-border" type="text" name="attr_item_name"/>
+                                        <input class="no-border transparent" type="text" name="attr_item_name"/>
                                     </div>
                                     <div style="padding: 2px">
                                         <div class="flex-center-left">
                                             <div class="col" style="padding-right: 2px; padding-top: 4px;">
                                                 <span>Effect:</span>
                                             </div>
-                                            <textarea class="height40 no-border" name="attr_item_effect"></textarea>
+                                            <textarea class="height40 no-border transparent"
+                                                      name="attr_item_effect"></textarea>
                                         </div>
                                         <div>
                                             <span>Action:</span>
-                                            <select class="selector-fit inventory-selector" name="attr_item_speed">
+                                            <select class="selector-fit inventory-selector transparent"
+                                                    name="attr_item_speed">
                                                 <option value="">Select</option>
                                                 <option value="Free">Free</option>
                                                 <option value="Fast">Fast</option>
                                                 <option value="Slow">Slow</option>
                                             </select>
                                             <span>Use:</span>
-                                            <select class="selector-fit inventory-selector" name="attr_item_usage">
+                                            <select class="selector-fit inventory-selector transparent"
+                                                    name="attr_item_usage">
                                                 <option value="">Select</option>
                                                 <option value="1">1</option>
                                                 <option value="2">2</option>
@@ -1432,173 +1363,89 @@
                         </fieldset>
                     </div>
                     <div class="col" style="width: 64%; padding-left: 10px">
-                        <div class="border-bottom-1" style="margin-bottom: 5px">
-                            <div class="inventory-header">CONDITIONS</div>
-                            <div>
-                                Check off the box next to the Condition you are currently suffering from. If a max is
-                                specified, write the number of Stacks instead.
-                            </div>
-                            <div>
-                                <div class="col" style="width: 45%; padding-right: 20px">
-                                    <div class="condition-box">
-                                        <div class="condition-selector">
-                                            <input type="checkbox" name="attr_condition_daze"/>
-                                        </div>
-                                        <div class="condition-name">
-                                            <span><b><i>DAZE: </i></b></span>
-                                        </div>
-                                        <div class="condition-description">
-                                            <span>-4 Accuracy</span>
-                                        </div>
-                                    </div>
-                                    <div class="condition-box">
-                                        <div class="condition-selector">
-                                            <input type="checkbox" name="attr_condition_off_guard"/>
-                                        </div>
-                                        <div class="condition-name">
-                                            <span><b><i>OFF-GUARD: </i></b></span>
-                                        </div>
-                                        <div class="condition-description">
-                                            <span>-2 Dodge</span>
-                                        </div>
-                                    </div>
-                                    <div class="condition-box">
-                                        <div class="condition-selector">
-                                            <input type="checkbox" name="attr_condition_prone"/>
-                                        </div>
-                                        <div class="condition-name">
-                                            <span><b><i>PRONE: </i></b></span>
-                                        </div>
-                                        <div class="condition-description">
-                                            <span>
-                                                <span class="indicator">OFF-GUARD</span> and cannot take Actions until they expend a Fast Action to remove
-                                                <span class="indicator">PRONE</span>.
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="condition-box">
-                                        <div class="condition-selector">
-                                            <input type="checkbox" name="attr_condition_fragility"/>
-                                        </div>
-                                        <div class="condition-name">
-                                            <span><b><i>FRAGILITY: </i></b></span>
-                                        </div>
-                                        <div class="condition-description">
-                                            <span>Actions targeting Combatant gain the <span
-                                                    class="indicator">PIERCING</span> property. <span class="indicator">FRAGILITY</span> is removed at the end of Combatant’s next Turn.
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="condition-box">
-                                        <div class="condition-selector-max">
-                                            <input class="custom-number-input" type="number" min="0" max="5"
-                                                   name="attr_condition_poison"/>
-                                            <div class="subtitle">Max 5</div>
-                                        </div>
-                                        <div class="condition-name">
-                                            <span><b><i>POISON [PIERCING]: </i></b></span>
-                                        </div>
-                                        <div class="condition-description">
-                                            <span>Combatant takes 1d6 Damage per Stack at the start of their Turn.</span>
-                                        </div>
-                                    </div>
-                                    <div class="condition-box">
-                                        <div class="condition-selector-max">
-                                            <input class="custom-number-input" type="number" min="0" max="2"
-                                                   name="attr_condition_burning"/>
-                                            <div class="subtitle">Max 2</div>
-                                        </div>
-                                        <div class="condition-name">
-                                            <span><b><i>BURNING [PIERCING]: </i></b></span>
-                                        </div>
-                                        <div class="condition-description">
-                                            <span>Combatant takes 1d20 Damage per Stack at the start of their Turn.</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col" style="width: 45%">
-                                    <div class="condition-box">
-                                        <div class="condition-selector">
-                                            <input type="checkbox" name="attr_condition_silence"/>
-                                        </div>
-                                        <div class="condition-name">
-                                            <span><b><i>SILENCE: </i></b></span>
-                                        </div>
-                                        <div class="condition-description">
-                                            <span>Cannot use Spell or Tide-Turner Actions. <span class="indicator">SILENCE</span> is removed at the end of Hero’s next Turn.</span>
-                                        </div>
-                                    </div>
-                                    <div class="condition-box">
-                                        <div class="condition-selector">
-                                            <input type="checkbox" name="attr_condition_paralysis"/>
-                                        </div>
-                                        <div class="condition-name">
-                                            <span><b><i>PARALYSIS: </i></b></span>
-                                        </div>
-                                        <div class="condition-description">
-                                            <span>Combatant takes only 1 Action during their next Turn. <span
-                                                    class="indicator">PARALYSIS</span> is removed at the end of that Turn.
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="condition-box">
-                                        <div class="condition-selector">
-                                            <input type="checkbox" name="attr_condition_sleep"/>
-                                        </div>
-                                        <div class="condition-name">
-                                            <span><b><i>SLEEP: </i></b></span>
-                                        </div>
-                                        <div class="condition-description">
-                                            <span>Combatant cannot take Actions on their next Turn.
-                                            <span class="indicator">SLEEP</span> is removed when Combatant takes Damage or at the end of their next Turn. Actions that Target a Sleeping Combatant gain the <span
-                                                        class="indicator">AUTO-CRIT</span>property against just that Combatant.
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="condition-box">
-                                        <div class="condition-selector-max">
-                                            <input class="custom-number-input" type="number" min="0"
-                                                   name="attr_condition_vulnerability"/>
-                                            <div class="subtitle">Max &#8734;</div>
-                                        </div>
-                                        <div class="condition-name">
-                                            <span><b><i>VULNERABILITY: </i></b></span>
-                                        </div>
-                                        <div class="condition-description">
-                                            <span>-1 to Barrier Values per Stack.</span>
-                                        </div>
-                                    </div>
-                                    <div class="condition-box">
-                                        <div class="condition-selector-max">
-                                            <input class="custom-number-input" type="number" min="0"
-                                                   name="attr_condition_weakness"/>
-                                            <div class="subtitle">Max &#x221e;</div>
-                                        </div>
-                                        <div class="condition-name">
-                                            <span><b><i>WEAKNESS: </i></b></span>
-                                        </div>
-                                        <div class="condition-description">
-                                            <span>-1 to Action Damage per Stack.</span>
-                                        </div>
-                                    </div>
-                                    <div class="condition-box">
-                                        <div class="condition-selector-max">
-                                            <input class="custom-number-input" type="number" min="0" max="2"
-                                                   name="attr_condition_chill"/>
-                                            <div class="subtitle">Max 2</div>
-                                        </div>
-                                        <div class="condition-name">
-                                            <span><b><i>CHILL: </i></b></span>
-                                        </div>
-                                        <div class="condition-description">
-                                            <span>-1 Action Point each Round.</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
                         <div>
+                            <div class="inventory-header">KEEPSAKES</div>
+                            <div class="col width-half" style="padding-bottom: 3px">
+                                <div class="inventory-box">
+                                    <div class="inventory-box-upper">
+                                        <span>Keepsake:</span>
+                                        <input class="no-border transparent" type="text" name="attr_keepsake1_name"/>
+                                    </div>
+                                    <div style="padding: 2px">
+                                        <div class="flex-center-left">
+                                            <div class="col" style="padding-right: 2px; padding-top: 4px;">
+                                                <span>Effect:</span>
+                                            </div>
+                                            <textarea class="height40 no-border transparent"
+                                                      name="attr_keepsake1_effect"></textarea>
+                                        </div>
+                                        <div>
+                                            <span>Action:</span>
+                                            <select class="selector-fit inventory-selector transparent"
+                                                    name="attr_keepsake1_speed">
+                                                <option value="">Select</option>
+                                                <option value="Free">Free</option>
+                                                <option value="Fast">Fast</option>
+                                                <option value="Slow">Slow</option>
+                                            </select>
+                                            <span>Use:</span>
+                                            <select class="selector-fit inventory-selector transparent"
+                                                    name="attr_keepsake1_usage">
+                                                <option value="">Select</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="encounter">1 Per Encounter</option>
+                                                <option value="campaign">1 Per Campaign</option>
+                                                <option value="combat">1 Per Combat</option>
+                                                <option value="milestone">1 Per Milestone</option>
+                                            </select>
+                                            <input type="checkbox" name="attr_keepsake1_used"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col width-half" style="padding-bottom: 3px">
+                                <div class="inventory-box">
+                                    <div class="inventory-box-upper">
+                                        <span>Keepsake:</span>
+                                        <input class="no-border transparent" type="text" name="attr_keepsake2_name"/>
+                                    </div>
+                                    <div style="padding: 2px">
+                                        <div class="flex-center-left">
+                                            <div class="col" style="padding-right: 2px; padding-top: 4px;">
+                                                <span>Effect:</span>
+                                            </div>
+                                            <textarea class="height40 no-border transparent"
+                                                      name="attr_keepsake2_effect"></textarea>
+                                        </div>
+                                        <div>
+                                            <span>Action:</span>
+                                            <select class="selector-fit inventory-selector transparent"
+                                                    name="attr_keepsake2_speed">
+                                                <option value="">Select</option>
+                                                <option value="Free">Free</option>
+                                                <option value="Fast">Fast</option>
+                                                <option value="Slow">Slow</option>
+                                            </select>
+                                            <span>Use:</span>
+                                            <select class="selector-fit inventory-selector transparent"
+                                                    name="attr_keepsake2_usage">
+                                                <option value="">Select</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="encounter">1 Per Encounter</option>
+                                                <option value="campaign">1 Per Campaign</option>
+                                                <option value="combat">1 Per Combat</option>
+                                                <option value="milestone">1 Per Milestone</option>
+                                            </select>
+                                            <input type="checkbox" name="attr_keepsake2_used"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                             <div class="col width-half" style="padding-bottom: 5px">
                                 <div class="inventory-header">ANCHORS</div>
                                 <fieldset class="repeating_anchors">
@@ -1622,21 +1469,203 @@
                                     </div>
                                 </fieldset>
                             </div>
+
+                            <div class="inventory-header">APPEARANCE</div>
+                            <div class="padding-3">
+                                <span class="bold">Gender:</span>
+                                <input class="width20" type="text" name="attr_bio_gender"/>
+                                <span class="bold">Age:</span>
+                                <input class="width20" type="text" name="attr_bio_age"/>
+                                <span class="bold">Height:</span>
+                                <input class="width20" type="text" name="attr_bio_height"/>
+                            </div>
+                            <div class="padding-3">
+                                <span class="bold">Build:</span>
+                                <input class="width20" type="text" name="attr_bio_build"/>
+                                <span class="bold">Hair:</span>
+                                <input class="width20" type="text" name="attr_bio_hair"/>
+                                <span class="bold">Eyes:</span>
+                                <input class="width20" type="text" name="attr_bio_eyes"/>
+                            </div>
+
+                            <div class="inventory-header">DESCRIPTION</div>
+                            <textarea name="attr_bio_description"></textarea>
+
+                            <div class="inventory-header">HISTORY</div>
+                            <textarea name="attr_bio_history"></textarea>
                         </div>
-
-                        <div class="inventory-header">DESCRIPTION</div>
-                        <textarea name="attr_bio_description"></textarea>
-
-                        <div class="inventory-header">HISTORY</div>
-                        <textarea name="attr_bio_history"></textarea>
                     </div>
                 </div>
             </div>
 
             <div class="sheet-tab-content sheet-tab3">
                 <div>
-
+                    <div class="inventory-header">CONDITIONS</div>
+                    <div>
+                        Check off the box next to the Condition you are currently suffering from. If a max is
+                        specified, write the number of Stacks instead.
+                    </div>
+                    <div>
+                        <div class="col" style="width: 40%; padding-right: 20px">
+                            <div class="condition-box">
+                                <div class="condition-selector">
+                                    <input type="checkbox" name="attr_condition_daze"/>
+                                </div>
+                                <div class="condition-name">
+                                    <span><b><i>DAZE: </i></b></span>
+                                </div>
+                                <div class="condition-description">
+                                    <span>-4 Accuracy</span>
+                                </div>
+                            </div>
+                            <div class="condition-box">
+                                <div class="condition-selector">
+                                    <input type="checkbox" name="attr_condition_off_guard"/>
+                                </div>
+                                <div class="condition-name">
+                                    <span><b><i>OFF-GUARD: </i></b></span>
+                                </div>
+                                <div class="condition-description">
+                                    <span>-2 Dodge</span>
+                                </div>
+                            </div>
+                            <div class="condition-box">
+                                <div class="condition-selector">
+                                    <input type="checkbox" name="attr_condition_prone"/>
+                                </div>
+                                <div class="condition-name">
+                                    <span><b><i>PRONE: </i></b></span>
+                                </div>
+                                <div class="condition-description">
+                                    <span>
+                                        <span class="indicator">OFF-GUARD</span> and cannot take Actions until they expend a Fast Action to remove
+                                        <span class="indicator">PRONE</span>.
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="condition-box">
+                                <div class="condition-selector">
+                                    <input type="checkbox" name="attr_condition_fragility"/>
+                                </div>
+                                <div class="condition-name">
+                                    <span><b><i>FRAGILITY: </i></b></span>
+                                </div>
+                                <div class="condition-description">
+                                    <span>Actions targeting Combatant gain the <span
+                                            class="indicator">PIERCING</span> property. <span class="indicator">FRAGILITY</span> is removed at the end of Combatant’s next Turn.
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="condition-box">
+                                <div class="condition-selector-max">
+                                    <input class="custom-number-input" type="number" min="0" max="5"
+                                           name="attr_condition_poison"/>
+                                    <div class="subtitle">Max 5</div>
+                                </div>
+                                <div class="condition-name">
+                                    <span><b><i>POISON [PIERCING]: </i></b></span>
+                                </div>
+                                <div class="condition-description">
+                                    <span>Combatant takes 1d6 Damage per Stack at the start of their Turn.</span>
+                                </div>
+                            </div>
+                            <div class="condition-box">
+                                <div class="condition-selector-max">
+                                    <input class="custom-number-input" type="number" min="0" max="2"
+                                           name="attr_condition_burning"/>
+                                    <div class="subtitle">Max 2</div>
+                                </div>
+                                <div class="condition-name">
+                                    <span><b><i>BURNING [PIERCING]: </i></b></span>
+                                </div>
+                                <div class="condition-description">
+                                    <span>Combatant takes 1d20 Damage per Stack at the start of their Turn.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col" style="width: 40%">
+                            <div class="condition-box">
+                                <div class="condition-selector">
+                                    <input type="checkbox" name="attr_condition_silence"/>
+                                </div>
+                                <div class="condition-name">
+                                    <span><b><i>SILENCE: </i></b></span>
+                                </div>
+                                <div class="condition-description">
+                                    <span>Cannot use Spell or Tide-Turner Actions. <span
+                                            class="indicator">SILENCE</span> is removed at the end of Hero’s next Turn.</span>
+                                </div>
+                            </div>
+                            <div class="condition-box">
+                                <div class="condition-selector">
+                                    <input type="checkbox" name="attr_condition_paralysis"/>
+                                </div>
+                                <div class="condition-name">
+                                    <span><b><i>PARALYSIS: </i></b></span>
+                                </div>
+                                <div class="condition-description">
+                                    <span>Combatant takes only 1 Action during their next Turn. <span
+                                            class="indicator">PARALYSIS</span> is removed at the end of that Turn.
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="condition-box">
+                                <div class="condition-selector">
+                                    <input type="checkbox" name="attr_condition_sleep"/>
+                                </div>
+                                <div class="condition-name">
+                                    <span><b><i>SLEEP: </i></b></span>
+                                </div>
+                                <div class="condition-description">
+                                    <span>Combatant cannot take Actions on their next Turn.
+                                    <span class="indicator">SLEEP</span> is removed when Combatant takes Damage or at the end of their next Turn. Actions that Target a Sleeping Combatant gain the <span
+                                                class="indicator">AUTO-CRIT</span> property against just that Combatant.
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="condition-box">
+                                <div class="condition-selector-max">
+                                    <input class="custom-number-input" type="number" min="0"
+                                           name="attr_condition_vulnerability"/>
+                                    <div class="subtitle">Max &#8734;</div>
+                                </div>
+                                <div class="condition-name">
+                                    <span><b><i>VULNERABILITY: </i></b></span>
+                                </div>
+                                <div class="condition-description">
+                                    <span>-1 to Barrier Values per Stack.</span>
+                                </div>
+                            </div>
+                            <div class="condition-box">
+                                <div class="condition-selector-max">
+                                    <input class="custom-number-input" type="number" min="0"
+                                           name="attr_condition_weakness"/>
+                                    <div class="subtitle">Max &#x221e;</div>
+                                </div>
+                                <div class="condition-name">
+                                    <span><b><i>WEAKNESS: </i></b></span>
+                                </div>
+                                <div class="condition-description">
+                                    <span>-1 to Action Damage per Stack.</span>
+                                </div>
+                            </div>
+                            <div class="condition-box">
+                                <div class="condition-selector-max">
+                                    <input class="custom-number-input" type="number" min="0" max="2"
+                                           name="attr_condition_chill"/>
+                                    <div class="subtitle">Max 2</div>
+                                </div>
+                                <div class="condition-name">
+                                    <span><b><i>CHILL: </i></b></span>
+                                </div>
+                                <div class="condition-description">
+                                    <span>-1 Action Point each Round.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
             </div>
 
             <div class="sheet-tab-content sheet-tab4">
@@ -3952,6 +3981,8 @@
                 setAttrs({repeating_tideTurners_tide_action_damage_description: description});
             });
         });
+
+
 
 
 
