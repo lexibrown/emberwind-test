@@ -813,6 +813,19 @@ input.sheet-action-description-indicator[value="2"] ~ .sheet-action-auto-hit-des
     text-decoration-style: double;
 }
 
+.sheet-lightestgrey {
+    background-color: #ededed;
+}
+
+.sheet-lightgrey {
+    background-color: lightgrey;
+}
+
+.sheet-dimgrey {
+    background-color: dimgrey;
+}
+
+
 /*----------------- Selectors ------------------*/
 
 select.sheet-selector {
@@ -833,6 +846,10 @@ input.sheet-x-small {
 
 input.sheet-small {
     width: 20%;
+}
+
+input[type=number].sheet-medium {
+    width: 50%;
 }
 
 input.sheet-cap {
@@ -907,12 +924,60 @@ input.sheet-cap {
     padding: 0;
 }
 
+.sheet-padding-2 {
+    padding: 2px;
+}
+
 .sheet-padding-3 {
     padding: 3px;
 }
 
+.sheet-padding-2505 {
+    padding: 2px 5px 0 5px;
+}
+
 .sheet-padding-2525 {
     padding: 2px 5px 2px 5px;
+}
+
+.sheet-padding-top4 {
+    padding-top: 4px;
+}
+
+.sheet-padding-top5 {
+    padding-top: 5px;
+}
+
+.sheet-padding-left10 {
+    padding-left: 10px;
+}
+
+.sheet-padding-right2 {
+    padding-right: 2px;
+}
+
+.sheet-padding-right20 {
+    padding-right: 20px;
+}
+
+.sheet-padding-bottom3 {
+    padding-bottom: 3px;
+}
+
+.sheet-padding-bottom5 {
+    padding-bottom: 5px;
+}
+
+.sheet-padding-bottom10 {
+    padding-bottom: 10px;
+}
+
+.sheet-padding-bottom15 {
+    padding-bottom: 15px;
+}
+
+.sheet-padding-bottom20 {
+    padding-bottom: 20px;
 }
 
 .sheet-no-border {
@@ -986,9 +1051,18 @@ button[type=roll].sheet-custom-roll-button {
     width: fit-content;
 }
 
+.sheet-inventory-title {
+    background-color: dimgrey;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
 .sheet-inventory-box {
     border: 2px solid dimgrey;
-    padding-bottom: 7px;
+    padding: 2px;
 }
 
 .sheet-inventory-box-upper {
@@ -1211,6 +1285,10 @@ input[type=checkbox].sheet-tab-hide:checked ~ .sheet-show-hide {
 
 .sheet-width-half {
     width: 49%;
+}
+
+.sheet-width-third {
+    width: 32%;
 }
 
 .sheet-width5 {
