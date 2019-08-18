@@ -1062,16 +1062,21 @@ button[type=roll].sheet-custom-roll-button {
 
 .sheet-inventory-box {
     border: 2px solid dimgrey;
-    padding: 2px;
 }
 
 .sheet-inventory-box-upper {
+    background-color: dimgrey;
+    color: white;
     border-bottom: 2px solid lightgrey;
     padding: 2px;
 }
 
 .sheet-inventory-selector {
     border-color: lightgrey;
+}
+
+input.sheet-white-text[type=text] {
+    color: white;
 }
 
 /*----------------- Roll templates ------------------*/
