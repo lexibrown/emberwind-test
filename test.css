@@ -821,7 +821,7 @@ select.sheet-selector {
 }
 
 select.sheet-selector-fit {
-    width: fit-content;
+    width: auto;
 }
 
 /*----------------- Inputs ------------------*/
