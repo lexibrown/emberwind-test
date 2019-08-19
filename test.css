@@ -234,6 +234,15 @@ div.sheet-tab-content {
     grid-template-areas: "guide-left guide-middle guide-right";
 }
 
+.sheet-npc-actions-grid {
+    display: grid;
+    height: fit-content;
+    padding-bottom: 3px;
+    grid-column-gap: 3px;
+    grid-template-columns: 1fr 1.5fr 1fr 1fr 50%;
+    grid-template-areas: "action-button action-name action-type action-range action-effect";
+}
+
 /*----------------- Quick Guide ------------------*/
 
 .sheet-guide-left {
@@ -709,6 +718,7 @@ input.sheet-medium {
     font-weight: bold;
     text-align: center;
     padding-top: 3px;
+    padding-bottom: 3px;
 }
 
 .sheet-action-header-left {
@@ -825,6 +835,17 @@ input.sheet-action-description-indicator[value="2"] ~ .sheet-action-auto-hit-des
     background-color: dimgrey;
 }
 
+.sheet-purple-text {
+    color: #845a91;
+}
+
+.sheet-purple {
+    background-color: #a16fb0;
+}
+
+.sheet-red-text {
+    color: indianred;
+}
 
 /*----------------- Selectors ------------------*/
 
@@ -994,6 +1015,10 @@ input.sheet-cap {
 
 .sheet-border-bottom-2 {
     border-bottom: 2px solid black;
+}
+
+.sheet-border-red {
+    border: 3px solid lightcoral;
 }
 
 input.sheet-custom-number-input::-webkit-outer-spin-button,
