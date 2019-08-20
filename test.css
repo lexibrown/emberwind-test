@@ -243,6 +243,17 @@ div.sheet-tab-content {
     grid-template-areas: "action-button action-name action-type action-range action-effect";
 }
 
+.sheet-npc-actions-info-grid {
+    display: grid;
+    width: auto;
+    height: fit-content;
+    padding-bottom: 3px;
+    grid-column-gap: 3px;
+    grid-template-columns: 1fr 1.5fr 1fr 1fr 50%;
+    grid-auto-rows: fit-content(100%);
+    grid-template-areas: "action-button action-name action-name action-name action-effect";
+}
+
 /*----------------- Quick Guide ------------------*/
 
 .sheet-guide-left {
@@ -598,7 +609,7 @@ input.sheet-medium {
 .sheet-action-damage-piercing,
 .sheet-melee-damage-resistance,
 .sheet-ranged-damage-resistance {
-    margin-left: -20px;
+    margin-left: -23px;
 }
 
 .sheet-tide-action-damage-resistance,
@@ -840,7 +851,7 @@ input.sheet-action-description-indicator[value="2"] ~ .sheet-action-auto-hit-des
 }
 
 .sheet-purple {
-    background-color: #a16fb0;
+    background-color: #c99fd6;
 }
 
 .sheet-red-text {
@@ -1287,6 +1298,25 @@ input[type=checkbox].sheet-tab-hide:checked ~ .sheet-show-hide {
     display: none;
 }
 
+
+/*----------------- NPC Sheet ------------------*/
+
+.sheet-npc-action-check-indicator[value="1"] ~ .sheet-npc-action-check-description,
+.sheet-npc-action-check-indicator[value="2"] ~ .sheet-npc-action-check-description,
+.sheet-npc-action-check-indicator[value="3"] ~ .sheet-npc-action-check-description,
+.sheet-npc-action-check-indicator[value="1"] ~ .sheet-npc-action-dodge,
+.sheet-npc-action-check-indicator[value="2"] ~ .sheet-npc-action-willpower,
+.sheet-npc-action-check-indicator[value="3"] ~ .sheet-npc-action-skill {
+    display: inline-flex;
+}
+
+.sheet-npc-action-check-description,
+.sheet-npc-action-dodge,
+.sheet-npc-action-willpower,
+.sheet-npc-action-skill {
+    display: none
+}
+
 /*-----------------  ------------------*/
 
 .sheet-top-detail {
@@ -1423,6 +1453,10 @@ input[type=checkbox].sheet-tab-hide:checked ~ .sheet-show-hide {
 
 .sheet-height17 {
     height: 17px;
+}
+
+.sheet-height20 {
+    height: 20px;
 }
 
 .sheet-height25 {

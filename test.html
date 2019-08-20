@@ -582,9 +582,9 @@
                                         <input type="hidden" class="melee-damage-indicator" name="attr_melee_against"
                                                value="1">
                                         <span name="attr_melee_damage_description"></span>
-                                        <img class="melee-damage-toughness height17" name="attr_melee_damage_toughness"
+                                        <img class="melee-damage-toughness height20" name="attr_melee_damage_toughness"
                                              src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
-                                        <img class="melee-damage-resistance height17"
+                                        <img class="melee-damage-resistance height20"
                                              name="attr_melee_damage_resistance"
                                              src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
                                     </div>
@@ -666,10 +666,10 @@
                                         <span name="attr_ranged_damage_description"></span>
                                         <input type="hidden" class="ranged-damage-indicator" name="attr_ranged_against"
                                                value="1">
-                                        <img class="ranged-damage-toughness height17"
+                                        <img class="ranged-damage-toughness height20"
                                              name="attr_ranged_damage_toughness"
                                              src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
-                                        <img class="ranged-damage-resistance height17"
+                                        <img class="ranged-damage-resistance height20"
                                              name="attr_ranged_damage_resistance"
                                              src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
                                     </div>
@@ -783,10 +783,10 @@
                                                     <span name="attr_action_damage_description">1d6 Damage</span>
                                                     <input type="hidden" class="action-damage-indicator"
                                                            name="attr_action_against" value="1"/>
-                                                    <img class="action-damage-toughness height17"
+                                                    <img class="action-damage-toughness height20"
                                                          name="attr_action_damage_toughness"
                                                          src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
-                                                    <img class="action-damage-resistance height17"
+                                                    <img class="action-damage-resistance height20"
                                                          name="attr_action_damage_resistance"
                                                          src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
                                                     <span class="action-damage-piercing indicator">PIERCING</span>
@@ -796,10 +796,10 @@
                                                     <span name="attr_action_damage_description">1d6 Damage</span>
                                                     <input type="hidden" class="action-damage-indicator"
                                                            name="attr_action_against" value="1"/>
-                                                    <img class="action-damage-toughness height17"
+                                                    <img class="action-damage-toughness height20"
                                                          name="attr_action_damage_toughness"
                                                          src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
-                                                    <img class="action-damage-resistance height17"
+                                                    <img class="action-damage-resistance height20"
                                                          name="attr_action_damage_resistance"
                                                          src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
                                                     <span class="action-damage-piercing indicator">PIERCING</span>
@@ -1039,10 +1039,10 @@
                                                     <span name="attr_tide_action_damage_description">1d6 Damage</span>
                                                     <input type="hidden" class="tide-action-damage-indicator"
                                                            name="attr_tide_action_against" value="1"/>
-                                                    <img class="tide-action-damage-toughness height17"
+                                                    <img class="tide-action-damage-toughness height20"
                                                          name="attr_tide_action_damage_toughness"
                                                          src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
-                                                    <img class="tide-action-damage-resistance height17"
+                                                    <img class="tide-action-damage-resistance height20"
                                                          name="attr_tide_action_damage_resistance"
                                                          src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
                                                     <span class="tide-action-damage-piercing indicator">PIERCING</span>
@@ -1052,10 +1052,10 @@
                                                     <span name="attr_tide_action_damage_description">1d6 Damage</span>
                                                     <input type="hidden" class="tide-action-damage-indicator"
                                                            name="attr_tide_action_against" value="1"/>
-                                                    <img class="tide-action-damage-toughness height17"
+                                                    <img class="tide-action-damage-toughness height20"
                                                          name="attr_tide_action_damage_toughness"
                                                          src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
-                                                    <img class="tide-action-damage-resistance height17"
+                                                    <img class="tide-action-damage-resistance height20"
                                                          name="attr_tide_action_damage_resistance"
                                                          src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
                                                     <span class="tide-action-damage-piercing indicator">PIERCING</span>
@@ -1992,7 +1992,7 @@
                                 <option value="3x3">3 x 3</option>
                             </select>
                             <span>Flow:</span>
-                            <input type="number" name="attr_npc_flow" value="0" />
+                            <input type="number" name="attr_npc_flow" value="0"/>
                         </div>
 
                         <div class="row width80">
@@ -2013,105 +2013,63 @@
                             <span class="action-range action-header">Range</span>
                             <span class="action-effect action-header-left">Effect</span>
                         </div>
-                        <div class="actions-info-grid">
+                        <div class="npc-actions-info-grid">
                             <span class="action-name action-info-title">BASIC ACTIONS</span>
                             <div class="action-effect">
                                 <span style="font-size: 0.75em">[Storyteller only] Actions per Turn:</span>
                                 <input class="x-small" type="number" name="attr_npc_actions" value="0"/>
                             </div>
                         </div>
-                        <fieldset class="repeating_npc_actions">
+                        <fieldset class="repeating_npcActions">
                             <div class="row">
                                 <div class="npc-actions-grid">
                                     <div class="action-button">
                                         <div>
                                             <input class="settings" type="checkbox" name="attr_settingsFlag" value="on"
-                                                   checked="checked" style="width: 20px; height: 20px"/>
+                                                   checked="checked" style="width: 25px; height: 25px"/>
                                             <span>y</span>
                                         </div>
                                         <button type='roll' name='roll_action'
-                                                value='@{whisper_state}&{template:action} {{name=@{action_name}}} {{subtag1=@{action_subtype1}}} {{subtag2=@{action_subtype2}}} {{rollType=[[@{action_roll_type}]]}} {{cap=[[d20cs<@{critical}cf>[[@{accuracy}+1]]]]}} {{damage=[[0@{action_dice} + @{action_dice_bonus}]]}} {{penetration=[[@{penetration}]]}} {{dmgcrit=[[10@{action_dice}kh1*{{@{action_dice}>1}}+@{action_dice_bonus}]]}} {{against=[[@{action_against}]]}} {{healing=[[0@{action_healing_dice}]]}} {{speed=@{action_speed}}} {{target=@{action_target}}} {{type=@{action_type}}} {{range=@{action_range}@{action_field_description}}} {{description=@{action_description}}} {{ampEffect=@{action_amp_effect}}} {{trigCondition=@{action_trig_condition}}} {{trigEffect=@{action_trig_effect}}} {{sustEffect=@{action_sust_effect}}}'>
+                                                value='@{whisper_state}&{template:action} {{name=@{npc_action_name}}} {{rollType=[[2]]}} {{damage=[[0@{npc_action_dice} + @{npc_action_dice_bonus}]]}} {{against=[[@{npc_action_against}]]}} {{type=@{npc_action_type}}} {{range=@{npc_action_range}@{npc_action_field_description}}} {{description=@{npc_action_description}}}'>
                                         </button>
                                     </div>
 
-                                    <div class="action-name action-centered" name="attr_action_name">
-                                        <div>
-                                            <div class="row">
-                                                <input type="hidden" class="action-description-indicator"
-                                                       name="attr_action_roll_type" value="0"/>
-                                                <div class="action-damage-description">
-                                                    <span name="attr_action_damage_description">vs</span>
-                                                    <input type="hidden" class="action-damage-indicator"
-                                                           name="attr_action_against" value="1"/>
-                                                    <img class="action-damage-toughness height17"
-                                                         name="attr_action_damage_toughness"
-                                                         src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/dodge_transparent.png">
-                                                    <img class="action-damage-resistance height17"
-                                                         name="attr_action_damage_resistance"
-                                                         src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/willpower_transparent.png">
-                                                </div>
-                                                <div class="action-auto-hit-description">
-                                                    <span class="indicator">AUTO-HIT</span>
-                                                </div>
-                                            </div>
+                                    <div class="action-name action-centered">
+                                        <div class="row">
+                                            <span name="attr_npc_action_name"></span>
+                                            <input type="hidden" class="npc-action-check-indicator"
+                                                   name="attr_npc_action_check" value="1"/>
+                                            <span class="npc-action-check-description">vs</span>
+                                            <img class="npc-action-dodge height20"
+                                                 src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/dodge_transparent.png">
+                                            <img class="npc-action-willpower height20"
+                                                 src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/willpower_transparent.png">
                                         </div>
                                     </div>
-                                    <span class="action-type action-centered" name="attr_action_type"></span>
-                                    <span class="action-range action-centered" name="attr_action_range"></span>
+                                    <span class="action-type action-centered" name="attr_npc_action_type"></span>
+                                    <div class="action-range action-centered">
+                                        <div class="col">
+                                            <span class="row" name="attr_npc_action_range"></span>
+                                            <input type="hidden" class="action-field-indicator"
+                                                   name="attr_npc_action_field"/>
+                                            <span class="action-field">Field</span>
+                                        </div>
+                                    </div>
                                     <div class="action-effect action-leftCentered">
                                         <div>
                                             <div class="row">
-                                                <input type="hidden" class="action-description-indicator"
-                                                       name="attr_action_roll_type" value="0"/>
-                                                <div class="action-damage-description">
-                                                    <span name="attr_action_damage_description">1d6 Damage</span>
-                                                    <input type="hidden" class="action-damage-indicator"
-                                                           name="attr_action_against" value="1"/>
-                                                    <img class="action-damage-toughness height17"
-                                                         name="attr_action_damage_toughness"
-                                                         src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
-                                                    <img class="action-damage-resistance height17"
-                                                         name="attr_action_damage_resistance"
-                                                         src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
-                                                    <span class="action-damage-piercing indicator">PIERCING</span>
-                                                </div>
-                                                <div class="action-auto-hit-description">
-                                                    <span class="indicator">AUTO-HIT</span>
-                                                    <span name="attr_action_damage_description">1d6 Damage</span>
-                                                    <input type="hidden" class="action-damage-indicator"
-                                                           name="attr_action_against" value="1"/>
-                                                    <img class="action-damage-toughness height17"
-                                                         name="attr_action_damage_toughness"
-                                                         src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
-                                                    <img class="action-damage-resistance height17"
-                                                         name="attr_action_damage_resistance"
-                                                         src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
-                                                    <span class="action-damage-piercing indicator">PIERCING</span>
-                                                </div>
-                                                <div class="action-healing-description">
-                                                    <span name="attr_action_healing_description">Target(s) heal 1d6 HP</span>
-                                                </div>
+                                                <span name="attr_npc_action_damage_description">Deal 1d10 Damage</span>
+                                                <span class="indicator">VS</span>
+                                                <input type="hidden" class="action-damage-indicator"
+                                                       name="attr_npc_action_against" value="1"/>
+                                                <img class="action-damage-toughness height20"
+                                                     src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
+                                                <img class="action-damage-resistance height20"
+                                                     src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
+                                                <span class="action-damage-piercing indicator">PIERCING</span>
                                             </div>
                                             <div class="row">
-                                                <input class="description-control" type="hidden"
-                                                       name="attr_action_subtype1" value="General"/>
-                                                <span class="action-amp-effect italic no-padding">
-                                                    Amp. Effect:
-                                                    <span class="normal" name="attr_action_amp_effect"></span>
-                                                </span>
-                                                <span class="action-trig-effect italic no-padding">
-                                                    Trig. Condition:
-                                                    <span class="normal" name="attr_action_trig_condition"></span>
-                                                </span>
-                                                <span class="action-trig-effect italic no-padding">
-                                                    Trig. Effect:
-                                                    <span class="normal" name="attr_action_trig_effect"></span>
-                                                </span>
-                                                <span name="attr_action_description"></span>
-                                                <span class="action-sust-effect italic no-padding">
-                                                    Sust. Effect:
-                                                    <span class="normal" name="attr_action_sust_effect"></span>
-                                                </span>
+                                                <span name="attr_npc_action_description"></span>
                                             </div>
                                         </div>
                                     </div>
@@ -2119,105 +2077,186 @@
 
                                 <input type="hidden" class="displaySettingsFlag" name="attr_displaySettingsFlag"/>
                                 <div class="displaySettings width85">
+
                                     <div class="row padding-2525">
-                                        <div class="col">
-                                            <div class="bold">Name:</div>
-                                            <div class="inputNameShort">
-                                                <input type="text" name="attr_action_name"/>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="bold">Type:</div>
-                                            <div>
-                                                <input type="text" name="attr_action_type"/>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="bold">Range:</div>
-                                            <div>
-                                                <input class="small" type="number" name="attr_action_range"/>
-                                                <input type="checkbox" name="attr_action_field_flag" value="on"/>
-                                                <input type="hidden" name="attr_action_field_description" value=""/>
-                                                <span>Field</span>
-                                            </div>
-                                        </div>
+                                        <span class="bold">Name:</span>
+                                        <input class="padding-right2" type="text" name="attr_npc_action_name"/>
+                                        <span class="width-auto bold"> vs. </span>
+                                        <input type="radio" value="1" name="attr_npc_action_check" checked/>
+                                        <img class="25-box"
+                                             src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/dodge_transparent.png">
+                                        <input type="radio" value="2" name="attr_npc_action_check"/>
+                                        <img class="25-box"
+                                             src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/willpower_transparent.png">
+                                        <input type="radio" value="4" name="attr_npc_action_check"/>
+                                        <span>None</span>
                                     </div>
 
                                     <div class="row padding-2525">
-                                        <input class="roll-control" type="hidden" name="attr_action_roll_type"
+                                        <span class="width-auto bold">Type:</span>
+                                        <select class="selector-fit" name="attr_npc_action_type">
+                                            <option value="">Select</option>
+                                            <option value="Melee">Melee</option>
+                                            <option value="Ranged">Ranged</option>
+                                        </select>
+                                        <span class="width-auto bold">Range:</span>
+                                        <input class="small" type="number" name="attr_npc_action_range"/>
+                                        <input type="checkbox" name="attr_npc_action_field_flag" value="on"/>
+                                        <input type="hidden" name="attr_npc_action_field_description" value=""/>
+                                        <span>Field</span>
+                                    </div>
+
+                                    <div class="row padding-2525" style="margin-top: -9px">
+                                        <span class="width-auto bold">Damage: </span>
+                                        <input style="width: 50px" type="text" name="attr_npc_action_dice" value="1d10"/>
+                                        <span class="width-auto bold"> + </span>
+                                        <input style="width: 50px" type="text" name="attr_npc_action_dice_bonus"
                                                value="0"/>
-                                        <div class="flex-center dimgrey" style="color: white">
-                                            <span class="width-auto bold padding-right20">Default
-                                                <input type="radio" value="0" name="attr_action_roll_type" checked/>
-                                            </span>
-                                            <span class="width-auto bold padding-right20">CAP Only
-                                                <input type="radio" value="1" name="attr_action_roll_type"/>
-                                            </span>
-                                            <span class="width-auto bold padding-right20">Auto-hit
-                                                <input type="radio" value="2" name="attr_action_roll_type"/>
-                                            </span>
-                                            <span class="width-auto bold padding-right20">Heal
-                                                <input type="radio" value="3" name="attr_action_roll_type"/>
-                                            </span>
-                                            <span class="width-auto bold">None
-                                                <input type="radio" value="-1" name="attr_action_roll_type"/>
-                                            </span>
-                                        </div>
                                         <div class="col padding-top5">
                                             <span class="width-auto bold"> vs. </span>
-                                            <input type="radio" value="1" name="attr_action_against_skill" checked/>
-                                            <img class="25-box"
-                                                 src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/dodge_transparent.png">
-                                            <input type="radio" value="2" name="attr_action_against_skill"/>
-                                            <img class="25-box"
-                                                 src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/willpower_transparent.png">
-                                            <input type="radio" value="3" name="attr_action_against_skill"/>
-                                            <span>Skill</span>
-                                            <input type="radio" value="4" name="attr_action_against_skill"/>
-                                            <span>None</span>
-                                        </div>
-                                        <div class="col">
-                                            <div class="bold">vs Skill(s):</div>
-                                            <div>
-                                                <input type="text" name="attr_action_vs_skill"/>
-                                            </div>
-                                        </div>
-                                        <div class="action-damage padding-2525">
-                                            <span class="width-auto bold">Damage: </span>
-                                            <input style="width: 50px" type="text" name="attr_action_dice" value="1d6"/>
-                                            <span class="width-auto bold"> + </span>
-                                            <input style="width: 50px" type="text" name="attr_action_dice_bonus"
-                                                   value="0"/>
-                                            <div class="col padding-top5">
-                                                <span class="width-auto bold"> vs. </span>
-                                                <input type="radio" value="1" name="attr_action_against" checked/>
-                                                <img class="20-box"
-                                                     src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
-                                                <input type="radio" value="2" name="attr_action_against"/>
-                                                <img class="20-box"
-                                                     src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
-                                                <input type="radio" value="3" name="attr_action_against"/>
-                                                <span class="indicator">PIERCING</span>
-                                            </div>
-
+                                            <input type="radio" value="1" name="attr_npc_action_against" checked/>
+                                            <img class="20-box"
+                                                 src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
+                                            <input type="radio" value="2" name="attr_npc_action_against"/>
+                                            <img class="20-box"
+                                                 src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
+                                            <input type="radio" value="3" name="attr_npc_action_against"/>
+                                            <span class="indicator">PIERCING</span>
                                         </div>
                                     </div>
 
                                     <div class="action-description">
                                         <div class="bold">Description:</div>
-                                        <textarea class="height50 width95" name="attr_action_description"></textarea>
+                                        <textarea class="height50 width95"
+                                                  name="attr_npc_action_description"></textarea>
                                     </div>
                                 </div>
                             </div>
                         </fieldset>
+
                         <div class="actions-info-grid">
                             <span class="action-name action-info-title purple-text">SPECIAL ABILITIES</span>
                         </div>
+                        <fieldset class="repeating_npcSpecials">
+                            <div class="row">
+                                <div class="npc-actions-grid">
+                                    <div class="action-button">
+                                        <div>
+                                            <input class="settings" type="checkbox" name="attr_settingsFlag" value="on"
+                                                   checked="checked" style="width: 25px; height: 25px"/>
+                                            <span>y</span>
+                                        </div>
+                                        <button type='roll' name='roll_action'
+                                                value='@{whisper_state}&{template:action} {{name=@{npc_action_name}}} {{rollType=[[2]]}} {{damage=[[0@{npc_action_dice} + @{npc_action_dice_bonus}]]}} {{against=[[@{npc_action_against}]]}} {{target=@{npc_action_target}}} {{type=@{npc_action_type}}} {{range=@{npc_action_range}@{npc_action_field_description}}} {{description=@{npc_action_description}}}'>
+                                        </button>
+                                    </div>
 
+                                    <div class="action-name action-centered purple">
+                                        <div class="row">
+                                            <span name="attr_npc_special_name"></span>
+                                            <input type="hidden" class="npc-action-check-indicator"
+                                                   name="attr_npc_special_check" value="1"/>
+                                            <span class="npc-action-check-description">vs</span>
+                                            <img class="npc-action-dodge height20"
+                                                 src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/dodge_transparent.png">
+                                            <img class="npc-action-willpower height20"
+                                                 src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/willpower_transparent.png">
+                                            <span class="npc-action-skill" name="attr_npc_special_skill"></span>
+                                        </div>
+                                    </div>
+                                    <span class="action-type action-centered purple" name="attr_npc_special_type"></span>
+                                    <div class="action-range action-centered purple">
+                                        <div class="col">
+                                            <span class="row" name="attr_npc_special_range"></span>
+                                            <input type="hidden" class="action-field-indicator"
+                                                   name="attr_npc_special_field"/>
+                                            <span class="action-field">Field</span>
+                                        </div>
+                                    </div>
+                                    <div class="action-effect action-leftCentered purple">
+                                        <div>
+                                            <div class="row">
+                                                <span name="attr_npc_special_damage_description">Deal 1d10 Damage</span>
+                                                <span class="indicator">VS</span>
+                                                <input type="hidden" class="action-damage-indicator"
+                                                       name="attr_npc_special_against" value="1"/>
+                                                <img class="action-damage-toughness height20"
+                                                     src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
+                                                <img class="action-damage-resistance height20"
+                                                     src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
+                                                <span class="action-damage-piercing indicator">PIERCING</span>
+                                            </div>
+                                            <div class="row">
+                                                <span name="attr_npc_special_description"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <input type="hidden" class="displaySettingsFlag" name="attr_displaySettingsFlag"/>
+                                <div class="displaySettings width85">
+
+                                    <div class="row padding-2525">
+                                        <span class="bold">Name:</span>
+                                        <input class="padding-right2 width40" type="text" name="attr_npc_special_name"/>
+                                        <span class="width-auto bold"> vs. </span>
+                                        <input type="radio" value="1" name="attr_npc_special_check" checked/>
+                                        <img class="25-box"
+                                             src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/dodge_transparent.png">
+                                        <input type="radio" value="2" name="attr_npc_special_check"/>
+                                        <img class="25-box"
+                                             src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/willpower_transparent.png">
+                                        <input type="radio" value="3" name="attr_npc_special_check"/>
+                                        <span>Skill</span>
+                                        <input type="radio" value="4" name="attr_npc_special_check"/>
+                                        <span>None</span>
+                                    </div>
+                                    <div class="row padding-2525">
+                                        <span class="width-auto bold">Skill:</span>
+                                        <input class="padding-right2 width40" type="text" name="attr_npc_special_skill"/>
+                                    </div>
+                                    <div class="row padding-2525">
+                                        <span class="width-auto bold">Type:</span>
+                                        <input class="padding-right2 width40" type="text" name="attr_npc_special_type"/>
+                                        <span class="width-auto bold">Range:</span>
+                                        <input class="small" type="number" name="attr_npc_special_range"/>
+                                        <input type="checkbox" name="attr_npc_special_field_flag" value="on"/>
+                                        <input type="hidden" name="attr_npc_special_field_description" value=""/>
+                                        <span>Field</span>
+                                    </div>
+
+                                    <div class="row padding-2525">
+                                        <span class="width-auto bold">Damage: </span>
+                                        <input style="width: 50px" type="text" name="attr_npc_special_dice" value="1d10"/>
+                                        <span class="width-auto bold"> + </span>
+                                        <input style="width: 50px" type="text" name="attr_npc_special_dice_bonus"
+                                               value="0"/>
+                                        <div class="col padding-top5">
+                                            <span class="width-auto bold"> vs. </span>
+                                            <input type="radio" value="1" name="attr_npc_special_against" checked/>
+                                            <img class="20-box"
+                                                 src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
+                                            <input type="radio" value="2" name="attr_npc_special_against"/>
+                                            <img class="20-box"
+                                                 src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
+                                            <input type="radio" value="3" name="attr_npc_special_against"/>
+                                            <span class="indicator">PIERCING</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="action-description">
+                                        <div class="bold">Description:</div>
+                                        <textarea class="height50 width95"
+                                                  name="attr_npc_special_description"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
 
                     </div>
                     <div class="col width-half">
-                        <input type="radio" name="attr_enemy" class="grunt" value="1" checked="checked"/><span>1 Ring</span>
+                        <input type="radio" name="attr_enemy" class="grunt" value="1"
+                               checked="checked"/><span>1 Ring</span>
                         <input type="radio" name="attr_enemy" class="awakened" value="2"/><span>2 Rings</span>
                         <input type="radio" name="attr_enemy" class="elite" value="3"/><span>3 Rings</span>
                         <input type="radio" name="attr_enemy" class="boss" value="4"/><span>4 Rings</span>
@@ -3020,6 +3059,120 @@
                             <div class="actions-info-grid">
                                 <span class="action-name action-info-title red-text">LEARNABLE SPECIAL ABILITIES</span>
                             </div>
+                            <fieldset class="repeating_npcLearned">
+                                <div class="row">
+                                    <div class="npc-actions-grid">
+                                        <div class="action-button">
+                                            <div>
+                                                <input class="settings" type="checkbox" name="attr_settingsFlag" value="on"
+                                                       checked="checked" style="width: 25px; height: 25px"/>
+                                                <span>y</span>
+                                            </div>
+                                            <button type='roll' name='roll_action'
+                                                    value='@{whisper_state}&{template:action} {{name=@{npc_action_name}}} {{rollType=[[2]]}} {{damage=[[0@{npc_action_dice} + @{npc_action_dice_bonus}]]}} {{against=[[@{npc_action_against}]]}} {{target=@{npc_action_target}}} {{type=@{npc_action_type}}} {{range=@{npc_action_range}@{npc_action_field_description}}} {{description=@{npc_action_description}}}'>
+                                            </button>
+                                        </div>
+
+                                        <div class="action-name action-centered red">
+                                            <div class="row">
+                                                <span name="attr_npc_action_name"></span>
+                                                <input type="hidden" class="npc-action-check-indicator"
+                                                       name="attr_npc_action_check" value="1"/>
+                                                <span class="npc-action-check-description">vs</span>
+                                                <img class="npc-action-dodge height20"
+                                                     src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/dodge_transparent.png">
+                                                <img class="npc-action-willpower height20"
+                                                     src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/willpower_transparent.png">
+                                            </div>
+                                        </div>
+                                        <span class="action-type action-centered red" name="attr_npc_action_type"></span>
+                                        <div class="action-range action-centered red">
+                                            <div class="col">
+                                                <span class="row" name="attr_npc_action_range"></span>
+                                                <input type="hidden" class="action-field-indicator"
+                                                       name="attr_npc_action_field"/>
+                                                <span class="action-field">Field</span>
+                                            </div>
+                                        </div>
+                                        <div class="action-effect action-leftCentered red">
+                                            <div>
+                                                <div class="row">
+                                                    <span name="attr_npc_action_damage_description">Deal 1d10 Damage</span>
+                                                    <span class="indicator">VS</span>
+                                                    <input type="hidden" class="action-damage-indicator"
+                                                           name="attr_npc_action_against" value="1"/>
+                                                    <img class="action-damage-toughness height20"
+                                                         src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
+                                                    <img class="action-damage-resistance height20"
+                                                         src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
+                                                    <span class="action-damage-piercing indicator">PIERCING</span>
+                                                </div>
+                                                <div class="row">
+                                                    <span name="attr_npc_action_description"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <input type="hidden" class="displaySettingsFlag" name="attr_displaySettingsFlag"/>
+                                    <div class="displaySettings width85">
+
+                                        <div class="row padding-2525">
+                                            <span class="bold">Name:</span>
+                                            <input class="padding-right2" type="text" name="attr_npc_action_name"/>
+                                            <span class="width-auto bold"> vs. </span>
+                                            <input type="radio" value="1" name="attr_npc_action_check" checked/>
+                                            <img class="25-box"
+                                                 src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/dodge_transparent.png">
+                                            <input type="radio" value="2" name="attr_npc_action_check"/>
+                                            <img class="25-box"
+                                                 src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/willpower_transparent.png">
+                                            <input type="radio" value="4" name="attr_npc_action_check"/>
+                                            <span>None</span>
+                                        </div>
+
+                                        <div class="row padding-2525">
+                                            <span class="width-auto bold">Type:</span>
+                                            <select class="selector-fit" name="attr_npc_action_type">
+                                                <option value="">Select</option>
+                                                <option value="Melee">Melee</option>
+                                                <option value="Ranged">Ranged</option>
+                                            </select>
+                                            <span class="width-auto bold">Range:</span>
+                                            <input class="small" type="number" name="attr_npc_action_range"/>
+                                            <input type="checkbox" name="attr_npc_action_field_flag" value="on"/>
+                                            <input type="hidden" name="attr_npc_action_field_description" value=""/>
+                                            <span>Field</span>
+                                        </div>
+
+                                        <div class="row padding-2525" style="margin-top: -9px">
+                                            <span class="width-auto bold">Damage: </span>
+                                            <input style="width: 50px" type="text" name="attr_npc_action_dice" value="1d10"/>
+                                            <span class="width-auto bold"> + </span>
+                                            <input style="width: 50px" type="text" name="attr_npc_action_dice_bonus"
+                                                   value="0"/>
+                                            <div class="col padding-top5">
+                                                <span class="width-auto bold"> vs. </span>
+                                                <input type="radio" value="1" name="attr_npc_action_against" checked/>
+                                                <img class="20-box"
+                                                     src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
+                                                <input type="radio" value="2" name="attr_npc_action_against"/>
+                                                <img class="20-box"
+                                                     src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
+                                                <input type="radio" value="3" name="attr_npc_action_against"/>
+                                                <span class="indicator">PIERCING</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="action-description">
+                                            <div class="bold">Description:</div>
+                                            <textarea class="height50 width95"
+                                                      name="attr_npc_action_description"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+
                         </div>
 
                     </div>
@@ -4328,9 +4481,52 @@
         });
 
 
-
-
-
+        on("change:repeating_npcActions:settingsflag", function() {
+            getAttrs(["repeating_npcActions_settingsFlag"], function(values) {
+                setAttrs({
+                    "repeating_npcActions_displaySettingsFlag": showHide(values.repeating_npcActions_settingsFlag)
+                });
+            });
+        });
+        on("change:repeating_npcActions:npc_action_field_flag", function() {
+            getAttrs(["repeating_npcActions_npc_action_field_flag"], function(values) {
+                setAttrs({
+                    "repeating_npcActions_npc_action_field": showHide(values.repeating_npcActions_npc_action_field_flag)
+                });
+                if (values.repeating_npcActions_npc_action_field_flag == "on") {
+                    setAttrs({
+                        "repeating_npcActions_npc_action_range": "",
+                        "repeating_npcActions_npc_action_field_description": "Field"
+                    });
+                } else {
+                    setAttrs({
+                        "repeating_npcActions_npc_action_field_description": ""
+                    });
+                }
+            });
+        });
+        on("change:repeating_npcActions:npc_action_range", function() {
+            getAttrs(["repeating_npcActions_npc_action_range"], function(values) {
+                if (values.repeating_npcActions_npc_action_range) {
+                    setAttrs({
+                        "repeating_npcActions_npc_action_field_flag": "off"
+                    });
+                }
+            });
+        });
+        on("change:repeating_npcActions:npc_action_dice change:repeating_npcActions:npc_action_dice_bonus", function() {
+            getAttrs(["repeating_npcActions_npc_action_dice", "repeating_npcActions_npc_action_dice_bonus"], function(values) {
+                let description = "";
+                if (values.repeating_npcActions_npc_action_dice) {
+                    if (values.repeating_npcActions_npc_action_dice_bonus && values.repeating_npcActions_npc_action_dice_bonus !== "0") {
+                        description = "Deal " + values.repeating_npcActions_npc_action_dice + " + " + values.repeating_npcActions_npc_action_dice_bonus + " Damage";
+                    } else {
+                        description = "Deal " + values.repeating_npcActions_npc_action_dice + " Damage";
+                    }
+                }
+                setAttrs({repeating_npcActions_npc_action_damage_description: description});
+            });
+        });
 </script>
 <div class="rolltemplates" hidden="hidden">
     <rolltemplate class="sheet-rolltemplate-basic-action">
