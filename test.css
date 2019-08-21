@@ -755,9 +755,10 @@ input.sheet-medium {
     align-items: center;
 }
 
-input.sheet-roll-control[value="3"] ~ .sheet-action-healing,
 input.sheet-roll-control[value="0"] ~ .sheet-action-damage,
-input.sheet-roll-control[value="2"] ~ .sheet-action-damage {
+input.sheet-roll-control[value="2"] ~ .sheet-action-damage,
+input.sheet-roll-control[value="3"] ~ .sheet-action-healing,
+input.sheet-roll-control[value="4"] ~ .sheet-action-trigger {
     display: block;
 }
 
@@ -766,6 +767,10 @@ input.sheet-roll-control[value="2"] ~ .sheet-action-damage {
 }
 
 .sheet-action-healing {
+    display: none;
+}
+
+.sheet-action-trigger {
     display: none;
 }
 
@@ -970,6 +975,10 @@ input.sheet-cap {
 
 .sheet-padding-2525 {
     padding: 2px 5px 2px 5px;
+}
+
+.sheet-padding-0525 {
+    padding: 0 5px 2px 5px;
 }
 
 .sheet-padding-top4 {
@@ -1303,18 +1312,30 @@ input[type=checkbox].sheet-tab-hide:checked ~ .sheet-show-hide {
 
 .sheet-npc-action-check-indicator[value="1"] ~ .sheet-npc-action-check-description,
 .sheet-npc-action-check-indicator[value="2"] ~ .sheet-npc-action-check-description,
-.sheet-npc-action-check-indicator[value="3"] ~ .sheet-npc-action-check-description,
+.sheet-npc-action-check-indicator[value="4"] ~ .sheet-npc-action-check-description,
 .sheet-npc-action-check-indicator[value="1"] ~ .sheet-npc-action-dodge,
 .sheet-npc-action-check-indicator[value="2"] ~ .sheet-npc-action-willpower,
-.sheet-npc-action-check-indicator[value="3"] ~ .sheet-npc-action-skill {
+.sheet-npc-action-check-indicator[value="3"] ~ .sheet-npc-action-auto-hit,
+.sheet-npc-action-check-indicator[value="4"] ~ .sheet-npc-action-skill {
     display: inline-flex;
 }
 
 .sheet-npc-action-check-description,
 .sheet-npc-action-dodge,
 .sheet-npc-action-willpower,
+.sheet-npc-action-auto-hit,
 .sheet-npc-action-skill {
     display: none
+}
+
+.sheet-description-control[value="4"] ~ .sheet-npc-action-trigger,
+.sheet-description-control[value="2"] ~ .sheet-npc-action-damage {
+    display: block;
+}
+
+.sheet-npc-action-trigger,
+.sheet-npc-action-damage {
+    display: none;
 }
 
 /*-----------------  ------------------*/
