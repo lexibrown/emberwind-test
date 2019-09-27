@@ -74,23 +74,31 @@
                     </div>
                 </div>
                 <div class="settings-row block-container block-npc">
-                    <span>Pre-gen foes:</span>
-                    <select name="attr_pre_gen_foe" class="selector-fit">
-                        <option value="">Select</option>
-                        <option value="blood_bound">Blood Hound</option>
-                        <option value="hound_master">Hound Master</option>
-                        <option value="rift_mage">Rift Mage</option>
-                        <option value="slither_spine">Slither Spine</option>
-                        <option value="slaughter_fish">Slaughter Fish</option>
-                        <option value="slaughter_swarm">Slaughter Swarm</option>
-                        <option value="chaser_streetjack">Chaser Streetjack</option>
-                        <option value="chaser_mistwalker">Chaser Mistwalker</option>
-                        <option value="chaser_doorcrasher">Chaser Doorcrasher</option>
-                        <option value="riftslip_fox">Riftslip Fox</option>
-                        <option value="riftborn_fox">Riftborn Fox</option>
-                        <option value="reefspine_rumbler">Reefspine Rumbler</option>
-                    </select>
-                    <button type="action" name="act_foe_gen">Generate!</button>
+                    <div class="row">
+                        <input type="radio" name="attr_enemy" value="1" checked="checked"/><span>1 Ring</span>
+                        <input type="radio" name="attr_enemy" value="2"/><span>2 Rings</span>
+                        <input type="radio" name="attr_enemy" value="3"/><span>3 Rings</span>
+                        <input type="radio" name="attr_enemy" value="4"/><span>4 Rings</span>
+                    </div>
+                    <div class="row">
+                        <span>Pre-gen foes:</span>
+                        <select name="attr_pre_gen_foe" class="selector-fit">
+                            <option value="">Select</option>
+                            <option value="blood_bound">Blood Hound</option>
+                            <option value="hound_master">Hound Master</option>
+                            <option value="rift_mage">Rift Mage</option>
+                            <option value="slither_spine">Slither Spine</option>
+                            <option value="slaughter_fish">Slaughter Fish</option>
+                            <option value="slaughter_swarm">Slaughter Swarm</option>
+                            <option value="chaser_streetjack">Chaser Streetjack</option>
+                            <option value="chaser_mistwalker">Chaser Mistwalker</option>
+                            <option value="chaser_doorcrasher">Chaser Doorcrasher</option>
+                            <option value="riftslip_fox">Riftslip Fox</option>
+                            <option value="riftborn_fox">Riftborn Fox</option>
+                            <option value="reefspine_rumbler">Reefspine Rumbler</option>
+                        </select>
+                        <button type="action" name="act_foe_gen">Generate!</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1938,7 +1946,6 @@
         <div class="block-container block-npc">
             <div>
                 <div class="row">
-
                     <div class="col width-half">
                         <div class="name padding-bottom10">
                             <span>Name:</span>
@@ -2013,6 +2020,7 @@
                             <span class="action-range action-header">Range</span>
                             <span class="action-effect action-header-left">Effect</span>
                         </div>
+
                         <div class="npc-actions-info-grid">
                             <span class="action-name action-info-title">BASIC ACTIONS</span>
                             <div class="action-effect">
@@ -2138,7 +2146,6 @@
                         <div class="actions-info-grid">
                             <span class="action-name action-info-title purple-text">SPECIAL ABILITIES</span>
                         </div>
-
                         <fieldset class="repeating_npcSpecials">
                             <div class="row">
                                 <div class="npc-actions-grid">
@@ -2299,116 +2306,261 @@
                             </div>
                         </fieldset>
 
+                        <div class="actions-info-grid">
+                            <span class="action-name action-info-title red-text">LEARNABLE SPECIAL ABILITIES</span>
+                        </div>
+                        <fieldset class="repeating_npcLearned">
+                            <div class="row">
+                                <div class="npc-actions-grid">
+                                    <div class="action-button">
+                                        <div>
+                                            <input class="settings" type="checkbox" name="attr_settingsFlag"
+                                                   value="on"
+                                                   checked="checked" style="width: 25px; height: 25px"/>
+                                            <span>y</span>
+                                        </div>
+                                        <button type='roll' name='roll_action'
+                                                value='@{whisper_state}&{template:action} {{name=@{npc_learn_name}}} {{rollType=[[@{npc_learn_roll_type}]]}} {{damage=[[0@{npc_learn_dice} + @{npc_learn_dice_bonus}]]}} {{against=[[@{npc_learn_against}]]}} {{range=@{npc_learn_range}@{npc_learn_field_description}}} {{description=@{npc_learn_description}}} {{trigCondition=@{npc_learn_trig_condition}}} {{trigEffect=@{npc_learn_trig_effect}}}'>
+                                        </button>
+                                    </div>
+
+                                    <div class="action-name action-centered red">
+                                        <div class="row">
+                                            <span name="attr_npc_learn_name"></span>
+                                            <input type="hidden" class="npc-action-check-indicator"
+                                                   name="attr_npc_learn_check" value="1"/>
+                                            <span class="npc-action-check-description">vs</span>
+                                            <img class="npc-action-dodge height20"
+                                                 src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/dodge_transparent.png">
+                                            <img class="npc-action-willpower height20"
+                                                 src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/willpower_transparent.png">
+                                            <div class="npc-action-auto-hit indicator">AUTO-HIT</div>
+                                            <span class="npc-action-skill" name="attr_npc_learn_skill"></span>
+                                        </div>
+                                    </div>
+                                    <span class="action-type action-centered red"
+                                          name="attr_npc_learn_type"></span>
+                                    <div class="action-range action-centered red">
+                                        <div class="col">
+                                            <span class="row" name="attr_npc_learn_range"></span>
+                                            <input type="hidden" class="action-field-indicator"
+                                                   name="attr_npc_learn_field"/>
+                                            <span class="action-field">Field</span>
+                                        </div>
+                                    </div>
+                                    <div class="action-effect action-leftCentered red">
+                                        <div>
+                                            <input class="description-control" type="hidden"
+                                                   name="attr_npc_learn_roll_type"
+                                                   value="-1"/>
+                                            <div class="npc-action-damage">
+                                                <span name="attr_npc_learn_damage_description">Deal 1d10 Damage</span>
+                                                <span class="indicator">VS</span>
+                                                <input type="hidden" class="action-damage-indicator"
+                                                       name="attr_npc_learn_against" value="1"/>
+                                                <img class="action-damage-toughness height20"
+                                                     src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
+                                                <img class="action-damage-resistance height20"
+                                                     src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
+                                                <span class="action-damage-piercing indicator">PIERCING</span>
+                                            </div>
+                                            <div>
+                                                <span name="attr_npc_learn_description"></span>
+                                            </div>
+                                            <span class="npc-action-trigger italic no-padding">
+                                                    Trig. Condition:
+                                                    <span class="normal" name="attr_npc_learn_trig_condition"></span>
+                                                </span>
+                                            <span class="npc-action-trigger italic no-padding">
+                                                    Trig. Effect:
+                                                    <span class="normal" name="attr_npc_learn_trig_effect"></span>
+                                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <input type="hidden" class="displaySettingsFlag" name="attr_displaySettingsFlag"/>
+                                <div class="displaySettings width85">
+
+                                    <div class="row padding-2525">
+                                        <span class="bold">Name:</span>
+                                        <input class="padding-right2 width30" type="text"
+                                               name="attr_npc_learn_name"/>
+                                        <span class="width-auto bold"> vs. </span>
+                                        <input type="radio" value="1" name="attr_npc_learn_check" checked/>
+                                        <img class="25-box"
+                                             src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/dodge_transparent.png">
+                                        <input type="radio" value="2" name="attr_npc_learn_check"/>
+                                        <img class="25-box"
+                                             src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/willpower_transparent.png">
+                                        <input type="radio" value="3" name="attr_npc_learn_check"/>
+                                        <span>Auto-hit</span>
+                                        <input type="radio" value="4" name="attr_npc_learn_check"/>
+                                        <span>Skill</span>
+                                        <input type="radio" value="5" name="attr_npc_learn_check"/>
+                                        <span>None</span>
+                                    </div>
+                                    <div class="row padding-2525">
+                                        <input type="hidden" class="npc-action-check-indicator"
+                                               name="attr_npc_learn_check" value="1"/>
+                                        <span class="npc-action-skill width-auto bold">vs. Skill:</span>
+                                        <input class="npc-action-skill padding-right2 width40" type="text"
+                                               name="attr_npc_learn_skill" value="Skill"/>
+
+                                        <span class="width-auto bold">Type:</span>
+                                        <input class="padding-right2 width5" type="text"
+                                               name="attr_npc_learn_type" placeholder="A"/>
+                                        <span class="width-auto bold">Range:</span>
+                                        <input class="small" type="number" name="attr_npc_learn_range"/>
+                                        <input type="checkbox" name="attr_npc_learn_field_flag" value="on"/>
+                                        <input type="hidden" name="attr_npc_learn_field_description" value=""/>
+                                        <span>Field</span>
+                                    </div>
+
+                                    <input class="roll-control" type="hidden" name="attr_npc_learn_roll_type"
+                                           value="-1"/>
+                                    <div class="flex-center dimgrey" style="color: white">
+                                            <span class="width-auto bold padding-right20">Default
+                                                <input type="radio" value="-1" name="attr_npc_learn_roll_type"
+                                                       checked/>
+                                            </span>
+                                        <span class="width-auto bold padding-right20">Damage
+                                                <input type="radio" value="2" name="attr_npc_learn_roll_type"/>
+                                            </span>
+                                        <span class="width-auto bold padding-right20">Trigger
+                                                <input type="radio" value="4" name="attr_npc_learn_roll_type"/>
+                                            </span>
+                                    </div>
+
+                                    <div class="action-damage padding-2525">
+                                        <span class="width-auto bold">Damage: </span>
+                                        <input style="width: 50px" type="text" name="attr_npc_learn_dice"
+                                               value="1d10"/>
+                                        <span class="width-auto bold"> + </span>
+                                        <input style="width: 50px" type="text" name="attr_npc_learn_dice_bonus"
+                                               value="0"/>
+                                        <div class="col padding-top5">
+                                            <span class="width-auto bold"> vs. </span>
+                                            <input type="radio" value="1" name="attr_npc_learn_against" checked/>
+                                            <img class="20-box"
+                                                 src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
+                                            <input type="radio" value="2" name="attr_npc_learn_against"/>
+                                            <img class="20-box"
+                                                 src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
+                                            <input type="radio" value="3" name="attr_npc_learn_against"/>
+                                            <span class="indicator">PIERCING</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="action-trigger padding-2525">
+                                        <div class="bold">Trig. Condition:</div>
+                                        <textarea class="height35 width95"
+                                                  name="attr_npc_learn_trig_condition"></textarea>
+                                        <div class="bold">Trig. Effect:</div>
+                                        <textarea class="height35 width95"
+                                                  name="attr_npc_learn_trig_effect"></textarea>
+                                    </div>
+
+                                    <div class="action-description">
+                                        <div class="bold">Description:</div>
+                                        <textarea class="height50 width95"
+                                                  name="attr_npc_learn_description"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+
                     </div>
                     <div class="col width-half">
-                        <input type="radio" name="attr_enemy" class="grunt" value="1"
-                               checked="checked"/><span>1 Ring</span>
-                        <input type="radio" name="attr_enemy" class="awakened" value="2"/><span>2 Rings</span>
-                        <input type="radio" name="attr_enemy" class="elite" value="3"/><span>3 Rings</span>
-                        <input type="radio" name="attr_enemy" class="boss" value="4"/><span>4 Rings</span>
+                        <input type="hidden" class="npc-ring-indicator" name="attr_enemy" value="1"/>
 
                         <div class="enemy-hex grunt">
-                            <div style="width: 390px; height: 330px; margin-top: -30px">
-                                <div class="row" style="padding-left: 92px; padding-top: 20px">
-                                    <div class="enemy-dice" style="margin-left: -20px; margin-top: -60px">A</div>
-                                    <div>
-                                        <div class="sheet-hex sheet-hex-2" style="width: 100px; height: 57px">
-                                            <div class="sheet-inner">
+                            <div class="row" style="padding-left: 92px; padding-top: 20px">
+                                <div class="enemy-dice" style="margin-left: -20px; margin-top: -60px">A</div>
+                                <div>
+                                    <div class="sheet-hex sheet-hex-2" style="width: 100px; height: 57px">
+                                        <div class="sheet-inner">
                                             <textarea name="attr_grunt_hex_1" class="no-border"
-                                                      style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
-                                            </div>
-                                            <div class="sheet-corner-1"></div>
-                                            <div class="sheet-corner-2"></div>
+                                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                         </div>
+                                        <div class="sheet-corner-1"></div>
+                                        <div class="sheet-corner-2"></div>
                                     </div>
-                                    <div style="margin-top:-20px">
-                                        <div class="sheet-hex sheet-hex-2" style="width: 100px; height: 57px">
-                                            <div class="sheet-inner">
-                                            <textarea name="attr_grunt_hex_2" class="no-border"
-                                                      style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
-                                            </div>
-                                            <div class="sheet-corner-1"></div>
-                                            <div class="sheet-corner-2"></div>
-                                        </div>
-                                    </div>
-                                    <div class="enemy-dice" style="margin-left: 190px; margin-top: -40px">B</div>
                                 </div>
-                                <div class="row" style="padding-left: 40px">
-                                    <div class="enemy-dice" style="margin-left: -40px; margin-top: 5px">F</div>
+                                <div style="margin-top:-20px">
                                     <div class="sheet-hex sheet-hex-2" style="width: 100px; height: 57px">
                                         <div class="sheet-inner">
-                                        <textarea name="attr_grunt_hex_3" class="no-border"
+                                        <textarea name="attr_grunt_hex_2" class="no-border"
                                                   style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                         </div>
                                         <div class="sheet-corner-1"></div>
                                         <div class="sheet-corner-2"></div>
                                     </div>
-                                    <div class="sheet-hex sheet-hex-3" style="width: 100px; height: 57px">
-                                        <div class="sheet-inner">
-                                        <textarea name="attr_grunt_hex_4" class="no-border"
-                                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
-                                        </div>
-                                        <div class="sheet-corner-1"></div>
-                                        <div class="sheet-corner-2"></div>
+                                </div>
+                                <div class="enemy-dice" style="margin-left: 190px; margin-top: -40px">B</div>
+                            </div>
+                            <div class="row" style="padding-left: 40px">
+                                <div class="enemy-dice" style="margin-left: -40px; margin-top: 5px">F</div>
+                                <div class="sheet-hex sheet-hex-2" style="width: 100px; height: 57px">
+                                    <div class="sheet-inner">
+                                    <textarea name="attr_grunt_hex_3" class="no-border"
+                                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                     </div>
+                                    <div class="sheet-corner-1"></div>
+                                    <div class="sheet-corner-2"></div>
+                                </div>
+                                <div class="sheet-hex sheet-hex-3" style="width: 100px; height: 57px">
+                                    <div class="sheet-inner">
+                                    <textarea name="attr_grunt_hex_4" class="no-border"
+                                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                                    </div>
+                                    <div class="sheet-corner-1"></div>
+                                    <div class="sheet-corner-2"></div>
+                                </div>
+                                <div class="sheet-hex sheet-hex-2" style="width: 100px; height: 57px">
+                                    <div class="sheet-inner">
+                                    <textarea name="attr_grunt_hex_5" class="no-border"
+                                              style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                                    </div>
+                                    <div class="sheet-corner-1"></div>
+                                    <div class="sheet-corner-2"></div>
+                                </div>
+                                <div class="enemy-dice" style="margin-left: 315px; margin-top: 5px">C</div>
+                            </div>
+                            <div class="row" style="padding-left: 92px">
+                                <div class="enemy-dice" style="margin-left: -20px; margin-top: 75px">E</div>
+                                <div>
                                     <div class="sheet-hex sheet-hex-2" style="width: 100px; height: 57px">
                                         <div class="sheet-inner">
-                                        <textarea name="attr_grunt_hex_5" class="no-border"
+                                        <textarea name="attr_grunt_hex_6" class="no-border"
                                                   style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                         </div>
                                         <div class="sheet-corner-1"></div>
                                         <div class="sheet-corner-2"></div>
                                     </div>
-                                    <div class="enemy-dice" style="margin-left: 315px; margin-top: 5px">C</div>
                                 </div>
-                                <div class="row" style="padding-left: 92px">
-                                    <div class="enemy-dice" style="margin-left: -20px; margin-top: 75px">E</div>
-                                    <div>
-                                        <div class="sheet-hex sheet-hex-2" style="width: 100px; height: 57px">
-                                            <div class="sheet-inner">
-                                            <textarea name="attr_grunt_hex_6" class="no-border"
-                                                      style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
-                                            </div>
-                                            <div class="sheet-corner-1"></div>
-                                            <div class="sheet-corner-2"></div>
+                                <div style="margin-top:-20px">
+                                    <div class="sheet-hex sheet-hex-2" style="width: 100px; height: 57px">
+                                        <div class="sheet-inner">
+                                        <textarea name="attr_grunt_hex_7" class="no-border"
+                                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                         </div>
+                                        <div class="sheet-corner-1"></div>
+                                        <div class="sheet-corner-2"></div>
                                     </div>
-                                    <div style="margin-top:-20px">
-                                        <div class="sheet-hex sheet-hex-2" style="width: 100px; height: 57px">
-                                            <div class="sheet-inner">
-                                            <textarea name="attr_grunt_hex_7" class="no-border"
-                                                      style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
-                                            </div>
-                                            <div class="sheet-corner-1"></div>
-                                            <div class="sheet-corner-2"></div>
-                                        </div>
-                                    </div>
-                                    <div class="enemy-dice" style="margin-left: 190px; margin-top: 75px">D</div>
                                 </div>
+                                <div class="enemy-dice" style="margin-left: 190px; margin-top: 75px">D</div>
                             </div>
                         </div>
 
                         <div class="enemy-hex awakened">
                             <div class="row" style="padding-left: 104px">
+                                <div class="enemy-dice" style="margin-left: -20px; margin-top: -60px">A</div>
                                 <div>
-                                    <input type="checkbox" class="hex-button"
-                                           style="width: 10px; height: 10px"/><span></span>
                                     <div class="sheet-hex sheet-hex-1" style="width: 100px; height: 57px">
                                         <div class="sheet-inner">
-                                        <textarea class="no-border"
-                                                  style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
-                                        </div>
-                                        <div class="sheet-corner-1"></div>
-                                        <div class="sheet-corner-2"></div>
-                                    </div>
-                                </div>
-                                <div style="margin-top:-20px;">
-                                    <input type="checkbox" class="hex-button"
-                                           style="width: 10px; height: 10px"/><span></span>
-                                    <div class="sheet-hex sheet-veteran-hex-3" style="width: 100px; height: 57px">
-                                        <div class="sheet-inner">
-                            <textarea class="no-border"
-                                      style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                                            <textarea class="no-border"
+                                                style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                         </div>
                                         <div class="sheet-corner-1"></div>
                                         <div class="sheet-corner-2"></div>
@@ -2416,49 +2568,56 @@
                                 </div>
                                 <div style="margin-top:-20px">
                                     <input type="checkbox" class="hex-button"
-                                           style="width: 10px; height: 10px"/><span></span>
-                                    <div class="sheet-hex sheet-hex-1" style="width: 100px; height: 57px">
+                                           style="width: 10px; height: 10px" checked/><span></span>
+                                    <div class="sheet-hex sheet-veteran-hex-3" style="width: 100px; height: 57px">
                                         <div class="sheet-inner">
-                            <textarea class="no-border"
-                                      style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                                            <textarea class="no-border"
+                                                style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                         </div>
                                         <div class="sheet-corner-1"></div>
                                         <div class="sheet-corner-2"></div>
                                     </div>
                                 </div>
+                                <div style="margin-top:-20px">
+                                    <div class="sheet-hex sheet-hex-1" style="width: 100px; height: 57px">
+                                        <div class="sheet-inner">
+                                            <textarea class="no-border"
+                                                      style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                                        </div>
+                                        <div class="sheet-corner-1"></div>
+                                        <div class="sheet-corner-2"></div>
+                                    </div>
+                                </div>
+                                <div class="enemy-dice" style="margin-left: 290px; margin-top: -60px">B</div>
                             </div>
                             <div class="row" style="padding-left: 52px">
                                 <div>
                                     <input type="checkbox" class="hex-button"
-                                           style="width: 10px; height: 10px"/><span></span>
+                                           style="width: 10px; height: 10px" checked/><span></span>
                                     <div class="sheet-hex sheet-veteran-hex-3" style="width: 100px; height: 57px">
                                         <div class="sheet-inner">
-                            <textarea class="no-border"
-                                      style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                                            <textarea class="no-border"
+                                                      style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                         </div>
                                         <div class="sheet-corner-1"></div>
                                         <div class="sheet-corner-2"></div>
                                     </div>
                                 </div>
                                 <div style="margin-top:-20px;">
-                                    <input type="checkbox" class="hex-button" disabled="disabled"
-                                           style="width: 10px; height: 10px"/>
                                     <div class="sheet-hex sheet-hex-2" style="width: 100px; height: 57px">
                                         <div class="sheet-inner">
-                            <textarea class="no-border"
-                                      style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                                            <textarea class="no-border"
+                                                      style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                         </div>
                                         <div class="sheet-corner-1"></div>
                                         <div class="sheet-corner-2"></div>
                                     </div>
                                 </div>
                                 <div style="margin-top:-20px;">
-                                    <input type="checkbox" class="hex-button" disabled="disabled"
-                                           style="width: 10px; height: 10px"/>
                                     <div class="sheet-hex sheet-hex-2" style="width: 100px; height: 57px">
                                         <div class="sheet-inner">
-                            <textarea class="no-border"
-                                      style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                                            <textarea class="no-border"
+                                                      style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                         </div>
                                         <div class="sheet-corner-1"></div>
                                         <div class="sheet-corner-2"></div>
@@ -2466,11 +2625,11 @@
                                 </div>
                                 <div style="margin-top:-20px;">
                                     <input type="checkbox" class="hex-button"
-                                           style="width: 10px; height: 10px"/><span></span>
+                                           style="width: 10px; height: 10px" checked/><span></span>
                                     <div class="sheet-hex sheet-veteran-hex-3" style="width: 100px; height: 57px">
                                         <div class="sheet-inner">
-                            <textarea class="no-border"
-                                      style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                                            <textarea class="no-border"
+                                                      style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                         </div>
                                         <div class="sheet-corner-1"></div>
                                         <div class="sheet-corner-2"></div>
@@ -2478,99 +2637,87 @@
                                 </div>
                             </div>
                             <div class="row">
+                                <div class="enemy-dice" style="margin-left: -40px; margin-top: 5px">F</div>
                                 <div>
-                                    <input type="checkbox" class="hex-button"
-                                           style="width: 10px; height: 10px"/><span></span>
                                     <div class="sheet-hex sheet-hex-1" style="width: 100px; height: 57px">
                                         <div class="sheet-inner">
-                            <textarea class="no-border"
-                                      style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                                            <textarea class="no-border"
+                                                      style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                         </div>
                                         <div class="sheet-corner-1"></div>
                                         <div class="sheet-corner-2"></div>
                                     </div>
                                 </div>
                                 <div style="margin-top:-20px;">
-                                    <input type="checkbox" class="hex-button" disabled="disabled"
-                                           style="width: 10px; height: 10px"/>
                                     <div class="sheet-hex sheet-hex-2" style="width: 100px; height: 57px">
                                         <div class="sheet-inner">
-                            <textarea class="no-border"
-                                      style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                                            <textarea class="no-border"
+                                                      style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                         </div>
                                         <div class="sheet-corner-1"></div>
                                         <div class="sheet-corner-2"></div>
                                     </div>
                                 </div>
                                 <div style="margin-top:-20px;">
-                                    <input type="checkbox" class="hex-button" disabled="disabled"
-                                           style="width: 10px; height: 10px"/>
                                     <div class="sheet-hex sheet-hex-3" style="width: 100px; height: 57px">
                                         <div class="sheet-inner">
-                            <textarea class="no-border"
-                                      style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                                            <textarea class="no-border"
+                                                      style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                         </div>
                                         <div class="sheet-corner-1"></div>
                                         <div class="sheet-corner-2"></div>
                                     </div>
                                 </div>
                                 <div style="margin-top:-20px;">
-                                    <input type="checkbox" class="hex-button" disabled="disabled"
-                                           style="width: 10px; height: 10px"/>
                                     <div class="sheet-hex sheet-hex-2" style="width: 100px; height: 57px">
                                         <div class="sheet-inner">
-                            <textarea class="no-border"
-                                      style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                                            <textarea class="no-border"
+                                                      style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                         </div>
                                         <div class="sheet-corner-1"></div>
                                         <div class="sheet-corner-2"></div>
                                     </div>
                                 </div>
-                                <div style="margin-top:-20px">
-                                    <input type="checkbox" class="hex-button"
-                                           style="width: 10px; height: 10px"/><span></span>
+                                <div style="margin-top:-20px;">
                                     <div class="sheet-hex sheet-hex-1" style="width: 100px; height: 57px">
                                         <div class="sheet-inner">
-                            <textarea class="no-border"
-                                      style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                                            <textarea class="no-border"
+                                                      style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                         </div>
                                         <div class="sheet-corner-1"></div>
                                         <div class="sheet-corner-2"></div>
                                     </div>
                                 </div>
+                                <div class="enemy-dice" style="margin-left: 520px; margin-top: 5px">C</div>
                             </div>
                             <div class="row" style="padding-left: 52px">
                                 <div>
                                     <input type="checkbox" class="hex-button"
-                                           style="width: 10px; height: 10px"/><span></span>
+                                           style="width: 10px; height: 10px" checked/><span></span>
                                     <div class="sheet-hex sheet-veteran-hex-3" style="width: 100px; height: 57px">
                                         <div class="sheet-inner">
-                            <textarea class="no-border"
-                                      style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                                            <textarea class="no-border"
+                                                      style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                         </div>
                                         <div class="sheet-corner-1"></div>
                                         <div class="sheet-corner-2"></div>
                                     </div>
                                 </div>
                                 <div style="margin-top:-20px;">
-                                    <input type="checkbox" class="hex-button" disabled="disabled"
-                                           style="width: 10px; height: 10px"/>
                                     <div class="sheet-hex sheet-hex-2" style="width: 100px; height: 57px">
                                         <div class="sheet-inner">
-                            <textarea class="no-border"
-                                      style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                                            <textarea class="no-border"
+                                                      style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                         </div>
                                         <div class="sheet-corner-1"></div>
                                         <div class="sheet-corner-2"></div>
                                     </div>
                                 </div>
                                 <div style="margin-top:-20px;">
-                                    <input type="checkbox" class="hex-button" disabled="disabled"
-                                           style="width: 10px; height: 10px"/>
                                     <div class="sheet-hex sheet-hex-2" style="width: 100px; height: 57px">
                                         <div class="sheet-inner">
-                            <textarea class="no-border"
-                                      style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                                            <textarea class="no-border"
+                                                      style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                         </div>
                                         <div class="sheet-corner-1"></div>
                                         <div class="sheet-corner-2"></div>
@@ -2578,11 +2725,11 @@
                                 </div>
                                 <div style="margin-top:-20px;">
                                     <input type="checkbox" class="hex-button"
-                                           style="width: 10px; height: 10px"/><span></span>
+                                           style="width: 10px; height: 10px" checked/><span></span>
                                     <div class="sheet-hex sheet-veteran-hex-3" style="width: 100px; height: 57px">
                                         <div class="sheet-inner">
-                            <textarea class="no-border"
-                                      style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                                            <textarea class="no-border"
+                                                      style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                         </div>
                                         <div class="sheet-corner-1"></div>
                                         <div class="sheet-corner-2"></div>
@@ -2590,25 +2737,12 @@
                                 </div>
                             </div>
                             <div class="row" style="padding-left: 104px">
+                                <div class="enemy-dice" style="margin-left: -20px; margin-top: 75px">E</div>
                                 <div>
-                                    <input type="checkbox" class="hex-button"
-                                           style="width: 10px; height: 10px"/><span></span>
                                     <div class="sheet-hex sheet-hex-1" style="width: 100px; height: 57px">
                                         <div class="sheet-inner">
-                            <textarea class="no-border"
-                                      style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
-                                        </div>
-                                        <div class="sheet-corner-1"></div>
-                                        <div class="sheet-corner-2"></div>
-                                    </div>
-                                </div>
-                                <div style="margin-top:-20px;">
-                                    <input type="checkbox" class="hex-button"
-                                           style="width: 10px; height: 10px"/><span></span>
-                                    <div class="sheet-hex sheet-veteran-hex-3" style="width: 100px; height: 57px">
-                                        <div class="sheet-inner">
-                            <textarea class="no-border"
-                                      style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                                            <textarea class="no-border"
+                                                      style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                         </div>
                                         <div class="sheet-corner-1"></div>
                                         <div class="sheet-corner-2"></div>
@@ -2616,16 +2750,27 @@
                                 </div>
                                 <div style="margin-top:-20px">
                                     <input type="checkbox" class="hex-button"
-                                           style="width: 10px; height: 10px"/><span></span>
-                                    <div class="sheet-hex sheet-hex-1" style="width: 100px; height: 57px">
+                                           style="width: 10px; height: 10px" checked/><span></span>
+                                    <div class="sheet-hex sheet-veteran-hex-3" style="width: 100px; height: 57px">
                                         <div class="sheet-inner">
-                            <textarea class="no-border"
-                                      style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                                            <textarea class="no-border"
+                                                      style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                         </div>
                                         <div class="sheet-corner-1"></div>
                                         <div class="sheet-corner-2"></div>
                                     </div>
                                 </div>
+                                <div style="margin-top:-20px">
+                                    <div class="sheet-hex sheet-hex-1" style="width: 100px; height: 57px">
+                                        <div class="sheet-inner">
+                                            <textarea class="no-border"
+                                                      style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                                        </div>
+                                        <div class="sheet-corner-1"></div>
+                                        <div class="sheet-corner-2"></div>
+                                    </div>
+                                </div>
+                                <div class="enemy-dice" style="margin-left: 290px; margin-top: 75px">D</div>
                             </div>
                         </div>
 
@@ -2636,8 +2781,8 @@
                                            style="width: 10px; height: 10px"/><span></span>
                                     <div class="sheet-hex sheet-hex-1" style="width: 100px; height: 57px">
                                         <div class="sheet-inner">
-                            <textarea class="no-border"
-                                      style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
+                                            <textarea class="no-border"
+                                                      style="width: 50%; height: 100%; background: transparent; color: black; text-align: center"></textarea>
                                         </div>
                                         <div class="sheet-corner-1"></div>
                                         <div class="sheet-corner-2"></div>
@@ -3093,178 +3238,6 @@
                         <div class="enemy-hex boss">
 
 
-                        </div>
-
-                        <div class="row">
-                            <div class="npc-actions-grid">
-                                <span class="action-name action-header">Name</span>
-                                <span class="action-type action-header">Type</span>
-                                <span class="action-range action-header">Range</span>
-                                <span class="action-effect action-header-left">Effect</span>
-                            </div>
-                            <div class="actions-info-grid">
-                                <span class="action-name action-info-title red-text">LEARNABLE SPECIAL ABILITIES</span>
-                            </div>
-                            <fieldset class="repeating_npcLearned">
-                                <div class="row">
-                                    <div class="npc-actions-grid">
-                                        <div class="action-button">
-                                            <div>
-                                                <input class="settings" type="checkbox" name="attr_settingsFlag"
-                                                       value="on"
-                                                       checked="checked" style="width: 25px; height: 25px"/>
-                                                <span>y</span>
-                                            </div>
-                                            <button type='roll' name='roll_action'
-                                                    value='@{whisper_state}&{template:action} {{name=@{npc_learn_name}}} {{rollType=[[@{npc_learn_roll_type}]]}} {{damage=[[0@{npc_learn_dice} + @{npc_learn_dice_bonus}]]}} {{against=[[@{npc_learn_against}]]}} {{range=@{npc_learn_range}@{npc_learn_field_description}}} {{description=@{npc_learn_description}}} {{trigCondition=@{npc_learn_trig_condition}}} {{trigEffect=@{npc_learn_trig_effect}}}'>
-                                            </button>
-                                        </div>
-
-                                        <div class="action-name action-centered red">
-                                            <div class="row">
-                                                <span name="attr_npc_learn_name"></span>
-                                                <input type="hidden" class="npc-action-check-indicator"
-                                                       name="attr_npc_learn_check" value="1"/>
-                                                <span class="npc-action-check-description">vs</span>
-                                                <img class="npc-action-dodge height20"
-                                                     src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/dodge_transparent.png">
-                                                <img class="npc-action-willpower height20"
-                                                     src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/willpower_transparent.png">
-                                                <div class="npc-action-auto-hit indicator">AUTO-HIT</div>
-                                                <span class="npc-action-skill" name="attr_npc_learn_skill"></span>
-                                            </div>
-                                        </div>
-                                        <span class="action-type action-centered red"
-                                              name="attr_npc_learn_type"></span>
-                                        <div class="action-range action-centered red">
-                                            <div class="col">
-                                                <span class="row" name="attr_npc_learn_range"></span>
-                                                <input type="hidden" class="action-field-indicator"
-                                                       name="attr_npc_learn_field"/>
-                                                <span class="action-field">Field</span>
-                                            </div>
-                                        </div>
-                                        <div class="action-effect action-leftCentered red">
-                                            <div>
-                                                <input class="description-control" type="hidden"
-                                                       name="attr_npc_learn_roll_type"
-                                                       value="-1"/>
-                                                <div class="npc-action-damage">
-                                                    <span name="attr_npc_learn_damage_description">Deal 1d10 Damage</span>
-                                                    <span class="indicator">VS</span>
-                                                    <input type="hidden" class="action-damage-indicator"
-                                                           name="attr_npc_learn_against" value="1"/>
-                                                    <img class="action-damage-toughness height20"
-                                                         src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
-                                                    <img class="action-damage-resistance height20"
-                                                         src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
-                                                    <span class="action-damage-piercing indicator">PIERCING</span>
-                                                </div>
-                                                <div>
-                                                    <span name="attr_npc_learn_description"></span>
-                                                </div>
-                                                <span class="npc-action-trigger italic no-padding">
-                                                    Trig. Condition:
-                                                    <span class="normal" name="attr_npc_learn_trig_condition"></span>
-                                                </span>
-                                                <span class="npc-action-trigger italic no-padding">
-                                                    Trig. Effect:
-                                                    <span class="normal" name="attr_npc_learn_trig_effect"></span>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <input type="hidden" class="displaySettingsFlag" name="attr_displaySettingsFlag"/>
-                                    <div class="displaySettings width85">
-
-                                        <div class="row padding-2525">
-                                            <span class="bold">Name:</span>
-                                            <input class="padding-right2 width30" type="text"
-                                                   name="attr_npc_learn_name"/>
-                                            <span class="width-auto bold"> vs. </span>
-                                            <input type="radio" value="1" name="attr_npc_learn_check" checked/>
-                                            <img class="25-box"
-                                                 src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/dodge_transparent.png">
-                                            <input type="radio" value="2" name="attr_npc_learn_check"/>
-                                            <img class="25-box"
-                                                 src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/willpower_transparent.png">
-                                            <input type="radio" value="3" name="attr_npc_learn_check"/>
-                                            <span>Auto-hit</span>
-                                            <input type="radio" value="4" name="attr_npc_learn_check"/>
-                                            <span>Skill</span>
-                                            <input type="radio" value="5" name="attr_npc_learn_check"/>
-                                            <span>None</span>
-                                        </div>
-                                        <div class="row padding-2525">
-                                            <input type="hidden" class="npc-action-check-indicator"
-                                                   name="attr_npc_learn_check" value="1"/>
-                                            <span class="npc-action-skill width-auto bold">vs. Skill:</span>
-                                            <input class="npc-action-skill padding-right2 width40" type="text"
-                                                   name="attr_npc_learn_skill" value="Skill"/>
-
-                                            <span class="width-auto bold">Type:</span>
-                                            <input class="padding-right2 width5" type="text"
-                                                   name="attr_npc_learn_type" placeholder="A"/>
-                                            <span class="width-auto bold">Range:</span>
-                                            <input class="small" type="number" name="attr_npc_learn_range"/>
-                                            <input type="checkbox" name="attr_npc_learn_field_flag" value="on"/>
-                                            <input type="hidden" name="attr_npc_learn_field_description" value=""/>
-                                            <span>Field</span>
-                                        </div>
-
-                                        <input class="roll-control" type="hidden" name="attr_npc_learn_roll_type"
-                                               value="-1"/>
-                                        <div class="flex-center dimgrey" style="color: white">
-                                            <span class="width-auto bold padding-right20">Default
-                                                <input type="radio" value="-1" name="attr_npc_learn_roll_type"
-                                                       checked/>
-                                            </span>
-                                            <span class="width-auto bold padding-right20">Damage
-                                                <input type="radio" value="2" name="attr_npc_learn_roll_type"/>
-                                            </span>
-                                            <span class="width-auto bold padding-right20">Trigger
-                                                <input type="radio" value="4" name="attr_npc_learn_roll_type"/>
-                                            </span>
-                                        </div>
-
-                                        <div class="action-damage padding-2525">
-                                            <span class="width-auto bold">Damage: </span>
-                                            <input style="width: 50px" type="text" name="attr_npc_learn_dice"
-                                                   value="1d10"/>
-                                            <span class="width-auto bold"> + </span>
-                                            <input style="width: 50px" type="text" name="attr_npc_learn_dice_bonus"
-                                                   value="0"/>
-                                            <div class="col padding-top5">
-                                                <span class="width-auto bold"> vs. </span>
-                                                <input type="radio" value="1" name="attr_npc_learn_against" checked/>
-                                                <img class="20-box"
-                                                     src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
-                                                <input type="radio" value="2" name="attr_npc_learn_against"/>
-                                                <img class="20-box"
-                                                     src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
-                                                <input type="radio" value="3" name="attr_npc_learn_against"/>
-                                                <span class="indicator">PIERCING</span>
-                                            </div>
-                                        </div>
-
-                                        <div class="action-trigger padding-2525">
-                                            <div class="bold">Trig. Condition:</div>
-                                            <textarea class="height35 width95"
-                                                      name="attr_npc_learn_trig_condition"></textarea>
-                                            <div class="bold">Trig. Effect:</div>
-                                            <textarea class="height35 width95"
-                                                      name="attr_npc_learn_trig_effect"></textarea>
-                                        </div>
-
-                                        <div class="action-description">
-                                            <div class="bold">Description:</div>
-                                            <textarea class="height50 width95"
-                                                      name="attr_npc_learn_description"></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                            </fieldset>
                         </div>
 
                     </div>
