@@ -2150,7 +2150,7 @@
                                             <span>y</span>
                                         </div>
                                         <button type='roll' name='roll_action'
-                                                value='@{whisper_state}&{template:npc-action} {{name=@{npc_special_name}}} {{rollType=[[npc_special_roll_type]]}} {{damage=[[0@{npc_special_dice} + @{npc_special_dice_bonus}]]}} {{against=[[@{npc_special_against}]]}} {{type=@{npc_special_type}}} {{range=@{npc_special_range}@{npc_special_field_description}}} {{description=@{npc_special_description}}} {{trigCondition=@{npc_special_trig_condition}}} {{trigEffect=@{npc_special_trig_effect}}}'>
+                                                value='@{whisper_state}&{template:action} {{name=@{npc_special_name}}} {{rollType=[[@{npc_special_roll_type}]]}} {{damage=[[0@{npc_special_dice} + @{npc_special_dice_bonus}]]}} {{against=[[@{npc_special_against}]]}} {{range=@{npc_special_range}@{npc_special_field_description}}} {{description=@{npc_special_description}}} {{trigCondition=@{npc_special_trig_condition}}} {{trigEffect=@{npc_special_trig_effect}}}'>
                                         </button>
                                     </div>
 
@@ -3116,7 +3116,7 @@
                                                 <span>y</span>
                                             </div>
                                             <button type='roll' name='roll_action'
-                                                    value='@{whisper_state}&{template:action} {{name=@{npc_action_name}}} {{rollType=[[2]]}} {{damage=[[0@{npc_action_dice} + @{npc_action_dice_bonus}]]}} {{against=[[@{npc_action_against}]]}} {{target=@{npc_action_target}}} {{type=@{npc_action_type}}} {{range=@{npc_action_range}@{npc_action_field_description}}} {{description=@{npc_action_description}}}'>
+                                                    value='@{whisper_state}&{template:action} {{name=@{npc_learn_name}}} {{rollType=[[@{npc_learn_roll_type}]]}} {{damage=[[0@{npc_learn_dice} + @{npc_learn_dice_bonus}]]}} {{against=[[@{npc_learn_against}]]}} {{range=@{npc_learn_range}@{npc_learn_field_description}}} {{description=@{npc_learn_description}}} {{trigCondition=@{npc_learn_trig_condition}}} {{trigEffect=@{npc_learn_trig_effect}}}'>
                                             </button>
                                         </div>
 
@@ -4952,64 +4952,6 @@
             </div>
             {{/roll}}
             {{/^rollTotal() no-roll 0}}
-        </div>
-    </rolltemplate>
-    <rolltemplate class="sheet-rolltemplate-npc-action">
-        <div class="container">
-            <div style="background-color: #696969">
-                <div><h1 class="tcat-header">{{name}}</h1></div>
-                <div><span class="tcat-subheader">{{type}}</span></div>
-            </div>
-
-            {{#range}}
-            <div class="tcat-text">
-                <span class="tcat">Range: </span>{{range}}
-            </div>
-            {{/range}}
-
-            {{#rollTotal() rollType 4}}
-            {{#trigCondition}}
-            <div class="tcat-text">
-                <span class="tcat">Trig. Condition: </span>{{trigCondition}}
-            </div>
-            {{/trigCondition}}
-            {{#trigEffect}}
-            <div class="tcat-text">
-                <span class="tcat">Trig. Effect: </span>{{trigEffect}}
-            </div>
-            {{/trigEffect}}
-            {{/rollTotal() rollType 4}}
-
-            {{#description}}
-            <div class="tcat-text">
-                <span class="tcat">Description: </span>{{description}}
-            </div>
-            {{/description}}
-
-            <div class="separator"></div>
-
-          <!--            Damage-->
-            {{#rollTotal() rollType 2}}
-            {{#damage}}
-            <div style="padding-top: 5px;">
-                <span class="tcat">Damage: </span>{{damage}}
-                {{#rollTotal() against 1}}
-                <span> vs</span>
-                <img style="width: 20px; height: 20px"
-                     src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
-                {{/rollTotal() against 1}}
-                {{#rollTotal() against 2}}
-                <span> vs</span>
-                <img style="width: 20px; height: 20px"
-                     src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
-                {{/rollTotal() against 2}}
-                {{#rollTotal() against 3}}
-                <span class="indicator">PIERCING</span>
-                {{/rollTotal() against 3}}
-            </div>
-            {{/damage}}
-            {{/rollTotal() rollType 2}}
-
         </div>
     </rolltemplate>
 </div>
