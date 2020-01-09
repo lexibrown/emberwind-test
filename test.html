@@ -1946,74 +1946,70 @@
         <div class="block-container block-npc">
             <div>
                 <div class="row">
+                    <div class="name padding-bottom10">
+                        <span>Name:</span>
+                        <input class="kungfont" type="text" name="attr_character_name"/>
+                    </div>
+                    <div class="row padding-bottom5">
+                        <div class="col border-red" style="padding: 2px 2px 2px 0">
+                            <span class="info-hp-text">HP:</span>
+                            <input type="number" name="attr_hp" value="10"/>
+                            <span> / </span>
+                            <input type="number" name="attr_hp_max" value="10"/>
+                        </div>
+                        <div class="col red padding-3 bold">
+                            <img class="25-box"
+                                 src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
+                            Toughness:
+                            <input class="small" type="number" name="attr_enemy_toughness" value="4"/>
+                        </div>
+                        <div class="col blue padding-3 bold">
+                            <img class="25-box"
+                                 src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
+                            Resistance:
+                            <input class="small" type="number" name="attr_enemy_resistance" value="4"/>
+                        </div>
+                        <span>Rank:</span>
+                        <select class="selector-fit inventory-selector" name="attr_npc_rank">
+                            <option value="">Select</option>
+                            <option value="Grunt">Grunt</option>
+                            <option value="Awakened">Awakened</option>
+                            <option value="Elite">Elite</option>
+                            <option value="Boss">Boss</option>
+                        </select>
+                        <span>Type:</span>
+                        <select class="selector-fit inventory-selector" name="attr_npc_type">
+                            <option value="">Select</option>
+                            <option value="beast">Beast</option>
+                            <option value="carrion">Carrion</option>
+                            <option value="construct">Construct</option>
+                            <option value="human">Human</option>
+                            <option value="ka">Ka</option>
+                            <option value="plant">Plant</option>
+                            <option value="rift">Rift</option>
+                        </select>
+                        <span>Size:</span>
+                        <select class="selector-fit inventory-selector" name="attr_npc_size">
+                            <option value="">Select</option>
+                            <option value="1x1">1 x 1</option>
+                            <option value="2x2">2 x 2</option>
+                            <option value="3x3">3 x 3</option>
+                        </select>
+                        <span>Flow:</span>
+                        <input type="number" name="attr_npc_flow" value="0"/>
+                    </div>
+
                     <div class="col width-half">
-                        <div class="name padding-bottom10">
-                            <span>Name:</span>
-                            <input class="kungfont" type="text" name="attr_character_name"/>
-                        </div>
-                        <div class="row padding-bottom5">
-                            <div class="col border-red" style="padding: 2px 2px 2px 0">
-                                <span class="info-hp-text">HP:</span>
-                                <input type="number" name="attr_hp" value="10"/>
-                                <span> / </span>
-                                <input type="number" name="attr_hp_max" value="10"/>
-                            </div>
-                            <div class="col red padding-3 bold">
-                                <img class="25-box"
-                                     src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
-                                Toughness:
-                                <input class="small" type="number" name="attr_enemy_toughness" value="4"/>
-                            </div>
-                            <div class="col blue padding-3 bold">
-                                <img class="25-box"
-                                     src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
-                                Resistance:
-                                <input class="small" type="number" name="attr_enemy_resistance" value="4"/>
-                            </div>
-                        </div>
-                        <div class="row padding-bottom5">
-                            <span>Rank:</span>
-                            <select class="selector-fit inventory-selector" name="attr_npc_rank">
-                                <option value="">Select</option>
-                                <option value="Grunt">Grunt</option>
-                                <option value="Awakened">Awakened</option>
-                                <option value="Elite">Elite</option>
-                                <option value="Boss">Boss</option>
-                            </select>
-                            <span>Type:</span>
-                            <select class="selector-fit inventory-selector" name="attr_npc_type">
-                                <option value="">Select</option>
-                                <option value="beast">Beast</option>
-                                <option value="carrion">Carrion</option>
-                                <option value="construct">Construct</option>
-                                <option value="human">Human</option>
-                                <option value="ka">Ka</option>
-                                <option value="plant">Plant</option>
-                                <option value="rift">Rift</option>
-                            </select>
-                            <span>Size:</span>
-                            <select class="selector-fit inventory-selector" name="attr_npc_size">
-                                <option value="">Select</option>
-                                <option value="1x1">1 x 1</option>
-                                <option value="2x2">2 x 2</option>
-                                <option value="3x3">3 x 3</option>
-                            </select>
-                            <span>Flow:</span>
-                            <input type="number" name="attr_npc_flow" value="0"/>
+
+                        <div class="width95 padding-2">
+                            <span class="action-info-title">DEFAULT CHARACTERISTICS</span>
+                            <fieldset class="repeating_npcCharacteristics">
+                                <div class="row" style="margin-bottom: -10px">
+                                    <textarea name="attr_npc_characteristic" class="no-border lightgrey height35"></textarea>
+                                </div>
+                            </fieldset>
                         </div>
 
-                        <div class="row width80">
-                            <span class="action-info-title">DEFAULT CHARACTERISTICS</span>
-                            <fieldset class="repeating_npc_characteristics">
-                                <textarea class="lightgrey height25"></textarea>
-                            </fieldset>
-                        </div>
-                        <div class="row width80">
-                            <span class="action-info-title">OPTIONAL MODIFIERS</span>
-                            <fieldset class="repeating_npc_modifiers">
-                                <textarea class="lightgrey height20"></textarea>
-                            </fieldset>
-                        </div>
                         <div class="npc-actions-grid">
                             <span class="action-name action-header">Name</span>
                             <span class="action-type action-header">Type</span>
@@ -2472,6 +2468,16 @@
 
                     </div>
                     <div class="col width-half">
+
+                        <div class="width95 padding-2">
+                            <span class="action-info-title">OPTIONAL MODIFIERS</span>
+                            <fieldset class="repeating_npcModifiers">
+                                <div class="row" style="margin-bottom: -10px">
+                                    <textarea name="attr_npc_modifier" class="no-border lightgrey height35"></textarea>
+                                </div>
+                            </fieldset>
+                        </div>
+
                         <input type="hidden" class="npc-ring-indicator" name="attr_enemy" value="1"/>
 
                         <div class="enemy-hex grunt">
