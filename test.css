@@ -285,7 +285,7 @@ div.sheet-tab-content {
     background-position-x: 0;
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    background-image: url('https://tchol.org/images/red-grunge-png-1.png')
+    background-image: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/guide.png");
 }
 
 .sheet-guide-header-big {
