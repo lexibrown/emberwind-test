@@ -110,7 +110,6 @@
             <input type="radio" name="attr_tab" class="sheet-tab sheet-tab3" value="3"><span title="Conditions"></span>
             <input type="radio" name="attr_tab" class="sheet-tab sheet-tab4" value="4"><span title="Quick Guide"></span>
             <div class="separator"></div>
-
             <div class="main sheet-tab-content sheet-tab1">
 
                 <!--    Character information and stats-->
@@ -2004,8 +2003,11 @@
                         <div class="width95 padding-2">
                             <span class="action-info-title">DEFAULT CHARACTERISTICS</span>
                             <fieldset class="repeating_npcCharacteristics">
-                                <div class="row" style="margin-bottom: -10px">
-                                    <textarea name="attr_npc_characteristic" class="no-border lightgrey height35"></textarea>
+                                <div class="row" style="padding: 2px 30px 2px 30px;">
+                                    <div class="auto-expand lightgrey">
+                                        <span name="attr_npc_characteristic"></span>
+                                        <textarea spellcheck="false" name="attr_npc_characteristic"></textarea>
+                                    </div>
                                 </div>
                             </fieldset>
                         </div>
@@ -2472,8 +2474,11 @@
                         <div class="width95 padding-2">
                             <span class="action-info-title">OPTIONAL MODIFIERS</span>
                             <fieldset class="repeating_npcModifiers">
-                                <div class="row" style="margin-bottom: -10px">
-                                    <textarea name="attr_npc_modifier" class="no-border lightgrey height35"></textarea>
+                                <div class="row" style="padding: 2px 30px 2px 30px;">
+                                    <div class="auto-expand lightgrey">
+                                        <span name="attr_npc_modifier"></span>
+                                        <textarea spellcheck="false" name="attr_npc_modifier"></textarea>
+                                    </div>
                                 </div>
                             </fieldset>
                         </div>

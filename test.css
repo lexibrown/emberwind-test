@@ -1689,8 +1689,45 @@ input[type=checkbox].sheet-hex-button {
 .sheet-hex.sheet-hex-2 { background: #B698C7; }
 .sheet-hex.sheet-hex-3 { background: #9E76B3; }
 
-
 .sheet-hex.sheet-veteran-hex-1 { background: #FABEAF; }
 .sheet-hex.sheet-veteran-hex-2 { background: #F9B09F; }
 .sheet-hex.sheet-veteran-hex-3 { background: #F69E8C; }
 
+.sheet-auto-expand {
+    position: relative;
+    min-height: 18px;
+    cursor: text;
+    word-wrap: break-word;
+    border-radius: 2px;
+    padding: 2px;
+}
+
+.sheet-auto-expand span {
+    visibility: hidden;
+    white-space: pre-wrap;
+    display: block;
+}
+
+.sheet-auto-expand textarea {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    margin: 0;
+    overflow: hidden;
+    resize: none;
+    height: 100%;
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    background: transparent;
+    border: none;
+    border-radius: 2px;
+    box-shadow: none;
+    color: inherit;
+    font: inherit;
+    letter-spacing: inherit;
+    padding: inherit;
+    text-align: inherit;
+    text-transform: inherit;
+}
