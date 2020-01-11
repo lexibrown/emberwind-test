@@ -1338,6 +1338,47 @@ input[type=checkbox].sheet-tab-hide:checked ~ .sheet-show-hide {
     display: none;
 }
 
+/*----------------- Expandable textarea ------------------*/
+
+.sheet-auto-expand {
+    position: relative;
+    min-height: 18px;
+    cursor: text;
+    word-wrap: break-word;
+    border-radius: 2px;
+    padding: 2px;
+}
+
+.sheet-auto-expand span {
+    visibility: hidden;
+    white-space: pre-wrap;
+    display: block;
+}
+
+.sheet-auto-expand textarea {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    margin: 0;
+    overflow: hidden;
+    resize: none;
+    height: 100%;
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    background: transparent;
+    border: none;
+    border-radius: 2px;
+    box-shadow: none;
+    color: inherit;
+    font: inherit;
+    letter-spacing: inherit;
+    padding: inherit;
+    text-align: inherit;
+    text-transform: inherit;
+}
+
 /*-----------------  ------------------*/
 
 .sheet-top-detail {
@@ -1560,6 +1601,19 @@ div.sheet-enemy-hex {
     display: block;
 }
 
+/*------------- Hex colours ------------------*/
+
+.sheet-hex.sheet-hex-0 { background: #ECE5F1; }
+.sheet-hex.sheet-hex-1 { background: #D5C6E1; }
+.sheet-hex.sheet-hex-2 { background: #B698C7; }
+.sheet-hex.sheet-hex-3 { background: #9E76B3; }
+
+.sheet-hex.sheet-veteran-hex-1 { background: #FABEAF; }
+.sheet-hex.sheet-veteran-hex-2 { background: #F9B09F; }
+.sheet-hex.sheet-veteran-hex-3 { background: #F69E8C; }
+
+/*------------- Normal hexes ------------------*/
+
 input[type=checkbox].sheet-hex-button:checked ~ .sheet-hex.sheet-veteran-hex-1.sheet-inner + textarea,
 input[type=checkbox].sheet-hex-button:checked ~ .sheet-hex.sheet-veteran-hex-2,
 input[type=checkbox].sheet-hex-button:checked ~ .sheet-hex.sheet-veteran-hex-3,
@@ -1684,50 +1738,95 @@ input[type=checkbox].sheet-hex-button {
     margin: 0 auto;
 }
 
-.sheet-hex.sheet-hex-0 { background: #ECE5F1; }
-.sheet-hex.sheet-hex-1 { background: #D5C6E1; }
-.sheet-hex.sheet-hex-2 { background: #B698C7; }
-.sheet-hex.sheet-hex-3 { background: #9E76B3; }
+/*------------- Small hexes ---------------*/
 
-.sheet-hex.sheet-veteran-hex-1 { background: #FABEAF; }
-.sheet-hex.sheet-veteran-hex-2 { background: #F9B09F; }
-.sheet-hex.sheet-veteran-hex-3 { background: #F69E8C; }
-
-.sheet-auto-expand {
+.sheet-small-hex {
+    width: 75px;
+    height: 43px;
+    background-color: #ccc;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: auto 173px;
     position: relative;
-    min-height: 18px;
-    cursor: text;
-    word-wrap: break-word;
-    border-radius: 2px;
-    padding: 2px;
+    float: left;
+    margin: 16px 2px;
+    text-align: center;
+    zoom: 1;
 }
 
-.sheet-auto-expand span {
-    visibility: hidden;
-    white-space: pre-wrap;
+.sheet-small-hex.sheet-hex-gap {
+    margin-left: 86px;
+}
+
+.sheet-small-hex a {
     display: block;
-}
-
-.sheet-auto-expand textarea {
+    width: 100%;
+    height: 100%;
+    text-indent: -9999em;
     position: absolute;
-    z-index: 0;
     top: 0;
     left: 0;
-    margin: 0;
-    overflow: hidden;
-    resize: none;
-    height: 100%;
+}
+
+.sheet-small-hex .sheet-corner-1,
+.sheet-small-hex .sheet-corner-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    display: block;
-    box-sizing: border-box;
-    background: transparent;
-    border: none;
-    border-radius: 2px;
-    box-shadow: none;
-    color: inherit;
-    font: inherit;
-    letter-spacing: inherit;
-    padding: inherit;
-    text-align: inherit;
-    text-transform: inherit;
+    height: 100%;
+    background: inherit;
+    z-index: -2;
+    overflow: hidden;
+    backface-visibility: hidden;
+}
+
+.sheet-small-hex .sheet-corner-1 {
+    z-index:-1;
+    transform: rotate(60deg);
+}
+
+.sheet-small-hex .sheet-corner-2 {
+    transform: rotate(-60deg);
+}
+
+.sheet-small-hex .sheet-corner-1::before,
+.sheet-small-hex .sheet-corner-2::before {
+    width: 173px;
+    height: 173px;
+    content: '';
+    position: absolute;
+    background: inherit;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-repeat: no-repeat;
+    backface-visibility: hidden;
+}
+
+.sheet-small-hex .sheet-corner-1::before {
+    transform: rotate(-60deg) translate(-87px, 0px);
+    transform-origin: 0 0;
+}
+
+.sheet-small-hex .sheet-corner-2::before {
+    transform: rotate(60deg) translate(-48px, -11px);
+    bottom: 0;
+}
+
+/* Custom styles*/
+.sheet-small-hex .sheet-inner { color: #eee; }
+
+.sheet-small-hex hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    width: 60%;
+    margin: 15px auto;
+}
+
+.sheet-small-hex p {
+    font-size: 16px;
+    font-family: 'Kotta One', serif;
+    width: 80%;
+    margin: 0 auto;
 }
