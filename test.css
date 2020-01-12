@@ -1596,10 +1596,10 @@ div.sheet-enemy-hex {
 }
 
 .sheet-elite {
-    padding-top: 75px;
     padding-left: 40px;
     height: 580px;
     width: 690px;
+    margin-top: -25px;
 }
 
 .sheet-boss {
@@ -1615,48 +1615,44 @@ div.sheet-enemy-hex {
 
 /*------------- Hex colours ------------------*/
 
-.sheet-hex.sheet-hex-4 { background: #ECE5F1; }
-.sheet-hex.sheet-hex-3 { background: #ECE5F1; }
-.sheet-hex.sheet-hex-2 { background: #D5C6E1; }
-.sheet-hex.sheet-hex-1 { background: #B698C7; }
-.sheet-hex.sheet-hex-0 { background: #9E76B3; }
+.sheet-hex.sheet-hex-4, .sheet-small-hex.sheet-hex-4 { background: #ECE5F1; }
+.sheet-hex.sheet-hex-3, .sheet-small-hex.sheet-hex-3 { background: #ECE5F1; }
+.sheet-hex.sheet-hex-2, .sheet-small-hex.sheet-hex-2 { background: #D5C6E1; }
+.sheet-hex.sheet-hex-1, .sheet-small-hex.sheet-hex-1 { background: #B698C7; }
+.sheet-hex.sheet-hex-0, .sheet-small-hex.sheet-hex-0 { background: #9E76B3; }
 
-.sheet-hex.sheet-veteran-hex-4 { background: #FABEAF; }
-.sheet-hex.sheet-veteran-hex-3 { background: #FABEAF; }
-.sheet-hex.sheet-veteran-hex-2 { background: #F9B09F; }
-.sheet-hex.sheet-veteran-hex-1 { background: #F69E8C; }
+.sheet-hex.sheet-veteran-hex-4, .sheet-small-hex.sheet-veteran-hex-4 { background: #FABEAF; }
+.sheet-hex.sheet-veteran-hex-3, .sheet-small-hex.sheet-veteran-hex-3 { background: #FABEAF; }
+.sheet-hex.sheet-veteran-hex-2, .sheet-small-hex.sheet-veteran-hex-2 { background: #F9B09F; }
+.sheet-hex.sheet-veteran-hex-1, .sheet-small-hex.sheet-veteran-hex-1 { background: #F69E8C; }
 
-.sheet-small-hex.sheet-hex-4 { background: #ECE5F1; }
-.sheet-small-hex.sheet-hex-3 { background: #ECE5F1; }
-.sheet-small-hex.sheet-hex-2 { background: #D5C6E1; }
-.sheet-small-hex.sheet-hex-1 { background: #B698C7; }
-.sheet-small-hex.sheet-hex-0 { background: #9E76B3; }
+/*------------- Hexes ------------------*/
 
-.sheet-small-hex.sheet-veteran-hex-4 { background: #FABEAF; }
-.sheet-small-hex.sheet-veteran-hex-3 { background: #FABEAF; }
-.sheet-small-hex.sheet-veteran-hex-2 { background: #F9B09F; }
-.sheet-small-hex.sheet-veteran-hex-1 { background: #F69E8C; }
-
-/*------------- Normal hexes ------------------*/
-
-input[type=checkbox].sheet-hex-button:checked ~ .sheet-hex.sheet-veteran-hex-1.sheet-inner + textarea,
+input[type=checkbox].sheet-hex-button:checked ~ .sheet-hex.sheet-veteran-hex-1,
 input[type=checkbox].sheet-hex-button:checked ~ .sheet-hex.sheet-veteran-hex-2,
 input[type=checkbox].sheet-hex-button:checked ~ .sheet-hex.sheet-veteran-hex-3,
-input[type=checkbox].sheet-hex-button:checked ~ .sheet-hex.sheet-veteran-hex-4 {
+input[type=checkbox].sheet-hex-button:checked ~ .sheet-hex.sheet-veteran-hex-4,
+input[type=checkbox].sheet-small-hex-button:checked ~ .sheet-small-hex.sheet-veteran-hex-1,
+input[type=checkbox].sheet-small-hex-button:checked ~ .sheet-small-hex.sheet-veteran-hex-2,
+input[type=checkbox].sheet-small-hex-button:checked ~ .sheet-small-hex.sheet-veteran-hex-3,
+input[type=checkbox].sheet-small-hex-button:checked ~ .sheet-small-hex.sheet-veteran-hex-4 {
     background-color: transparent;
 }
 
-input[type=checkbox].sheet-hex-button:checked + span::before {
+input[type=checkbox].sheet-hex-button:checked + span::before,
+input[type=checkbox].sheet-small-hex-button:checked + span::before {
     content: "&";
     font-family: pictos;
     color: green;
 }
 
-input[type=checkbox].sheet-hex-button:hover + span + div {
+input[type=checkbox].sheet-hex-button:hover + span + div,
+input[type=checkbox].sheet-small-hex-button:hover + span + div {
     background-color: indianred;
 }
 
-.sheet-hex-button + span::before {
+.sheet-hex-button + span::before,
+.sheet-small-hex-button + span::before {
     cursor: pointer;
     content: "*";
     font-family: pictos;
@@ -1684,22 +1680,10 @@ input[type=checkbox].sheet-hex-button {
     zoom: 1;
 }
 
-.sheet-hex.sheet-hex-gap {
-    margin-left: 86px;
-}
-
-.sheet-hex a {
-    display: block;
-    width: 100%;
-    height: 100%;
-    text-indent: -9999em;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
 .sheet-hex .sheet-corner-1,
-.sheet-hex .sheet-corner-2 {
+.sheet-hex .sheet-corner-2,
+.sheet-small-hex .sheet-corner-1,
+.sheet-small-hex .sheet-corner-2 {
     position: absolute;
     top: 0;
     left: 0;
@@ -1711,17 +1695,21 @@ input[type=checkbox].sheet-hex-button {
     backface-visibility: hidden;
 }
 
-.sheet-hex .sheet-corner-1 {
+.sheet-hex .sheet-corner-1,
+.sheet-small-hex .sheet-corner-1 {
     z-index:-1;
     transform: rotate(60deg);
 }
 
-.sheet-hex .sheet-corner-2 {
+.sheet-hex .sheet-corner-2,
+.sheet-small-hex .sheet-corner-2 {
     transform: rotate(-60deg);
 }
 
 .sheet-hex .sheet-corner-1::before,
-.sheet-hex .sheet-corner-2::before {
+.sheet-hex .sheet-corner-2::before,
+.sheet-small-hex .sheet-corner-1::before,
+.sheet-small-hex .sheet-corner-2::before {
     width: 173px;
     height: 173px;
     content: '';
@@ -1734,65 +1722,30 @@ input[type=checkbox].sheet-hex-button {
     backface-visibility: hidden;
 }
 
-.sheet-hex .sheet-corner-1::before {
+.sheet-hex .sheet-corner-1::before,
+.sheet-small-hex .sheet-corner-1::before {
     transform: rotate(-60deg) translate(-87px, 0px);
     transform-origin: 0 0;
 }
 
-.sheet-hex .sheet-corner-2::before {
+.sheet-hex .sheet-corner-2::before,
+.sheet-small-hex .sheet-corner-2::before {
     transform: rotate(60deg) translate(-48px, -11px);
     bottom: 0;
 }
 
 /* Custom styles*/
-.sheet-hex .sheet-inner { color: #eee; }
-
-.sheet-hex hr {
-    border: 0;
-    border-top: 1px solid #eee;
-    width: 60%;
-    margin: 15px auto;
-}
-
-.sheet-hex p {
-    font-size: 16px;
-    font-family: 'Kotta One', serif;
-    width: 80%;
-    margin: 0 auto;
+.sheet-hex .sheet-inner,
+.sheet-small-hex .sheet-inner {
+    color: #eee;
 }
 
 /*------------- Small hexes ---------------*/
-
-input[type=checkbox].sheet-small-hex-button:checked ~ .sheet-small-hex.sheet-veteran-hex-1.sheet-inner + textarea,
-input[type=checkbox].sheet-small-hex-button:checked ~ .sheet-small-hex.sheet-veteran-hex-2,
-input[type=checkbox].sheet-small-hex-button:checked ~ .sheet-small-hex.sheet-veteran-hex-3,
-input[type=checkbox].sheet-small-hex-button:checked ~ .sheet-small-hex.sheet-veteran-hex-4 {
-    background-color: transparent;
-}
-
-input[type=checkbox].sheet-small-hex-button:checked + span::before {
-    content: "&";
-    font-family: pictos;
-    color: green;
-}
-
-input[type=checkbox].sheet-small-hex-button:hover + span + div {
-    background-color: indianred;
-}
-
-.sheet-small-hex-button + span::before {
-    cursor: pointer;
-    content: "*";
-    font-family: pictos;
-    color: red;
-    margin-left: -10px;
-}
 
 input[type=checkbox].sheet-small-hex-button {
     opacity: 0;
     z-index: 3;
     margin-left: -45px;
-    margin-top: 10px;
 }
 
 .sheet-small-hex {
@@ -1809,79 +1762,3 @@ input[type=checkbox].sheet-small-hex-button {
     zoom: 1;
 }
 
-.sheet-small-hex.sheet-hex-gap {
-    margin-left: 86px;
-}
-
-.sheet-small-hex a {
-    display: block;
-    width: 100%;
-    height: 100%;
-    text-indent: -9999em;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.sheet-small-hex .sheet-corner-1,
-.sheet-small-hex .sheet-corner-2 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    z-index: -2;
-    overflow: hidden;
-    backface-visibility: hidden;
-}
-
-.sheet-small-hex .sheet-corner-1 {
-    z-index:-1;
-    transform: rotate(60deg);
-}
-
-.sheet-small-hex .sheet-corner-2 {
-    transform: rotate(-60deg);
-}
-
-.sheet-small-hex .sheet-corner-1::before,
-.sheet-small-hex .sheet-corner-2::before {
-    width: 173px;
-    height: 173px;
-    content: '';
-    position: absolute;
-    background: inherit;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    background-repeat: no-repeat;
-    backface-visibility: hidden;
-}
-
-.sheet-small-hex .sheet-corner-1::before {
-    transform: rotate(-60deg) translate(-87px, 0px);
-    transform-origin: 0 0;
-}
-
-.sheet-small-hex .sheet-corner-2::before {
-    transform: rotate(60deg) translate(-48px, -11px);
-    bottom: 0;
-}
-
-/* Custom styles*/
-.sheet-small-hex .sheet-inner { color: #eee; }
-
-.sheet-small-hex hr {
-    border: 0;
-    border-top: 1px solid #eee;
-    width: 60%;
-    margin: 15px auto;
-}
-
-.sheet-small-hex p {
-    font-size: 16px;
-    font-family: 'Kotta One', serif;
-    width: 80%;
-    margin: 0 auto;
-}
