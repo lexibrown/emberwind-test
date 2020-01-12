@@ -441,6 +441,15 @@ input.sheet-medium {
     padding-left: 5px;
 }
 
+.sheet-info-custom-class {
+    padding: 2px 0 2px 5px;
+    display: none;
+}
+
+.sheet-class-control[value="custom"] ~ .sheet-info-custom-class {
+    display: block;
+}
+
 /*----------------- Aspects section ------------------*/
 .sheet-aspects {
     grid-area: aspects;
