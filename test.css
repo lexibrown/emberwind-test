@@ -1587,7 +1587,10 @@ div.sheet-enemy-hex {
 }
 
 .sheet-elite {
-
+    padding-top: 75px;
+    padding-left: 40px;
+    height: 580px;
+    width: 690px;
 }
 
 .sheet-boss {
@@ -1603,23 +1606,34 @@ div.sheet-enemy-hex {
 
 /*------------- Hex colours ------------------*/
 
-.sheet-hex.sheet-hex-0 { background: #ECE5F1; }
-.sheet-hex.sheet-hex-1 { background: #D5C6E1; }
-.sheet-hex.sheet-hex-2 { background: #B698C7; }
-.sheet-hex.sheet-hex-3 { background: #9E76B3; }
+.sheet-hex.sheet-hex-4 { background: #ECE5F1; }
+.sheet-hex.sheet-hex-3 { background: #ECE5F1; }
+.sheet-hex.sheet-hex-2 { background: #D5C6E1; }
+.sheet-hex.sheet-hex-1 { background: #B698C7; }
+.sheet-hex.sheet-hex-0 { background: #9E76B3; }
 
-.sheet-hex.sheet-veteran-hex-1 { background: #FABEAF; }
+.sheet-hex.sheet-veteran-hex-4 { background: #FABEAF; }
+.sheet-hex.sheet-veteran-hex-3 { background: #FABEAF; }
 .sheet-hex.sheet-veteran-hex-2 { background: #F9B09F; }
-.sheet-hex.sheet-veteran-hex-3 { background: #F69E8C; }
+.sheet-hex.sheet-veteran-hex-1 { background: #F69E8C; }
+
+.sheet-small-hex.sheet-hex-4 { background: #ECE5F1; }
+.sheet-small-hex.sheet-hex-3 { background: #ECE5F1; }
+.sheet-small-hex.sheet-hex-2 { background: #D5C6E1; }
+.sheet-small-hex.sheet-hex-1 { background: #B698C7; }
+.sheet-small-hex.sheet-hex-0 { background: #9E76B3; }
+
+.sheet-small-hex.sheet-veteran-hex-4 { background: #FABEAF; }
+.sheet-small-hex.sheet-veteran-hex-3 { background: #FABEAF; }
+.sheet-small-hex.sheet-veteran-hex-2 { background: #F9B09F; }
+.sheet-small-hex.sheet-veteran-hex-1 { background: #F69E8C; }
 
 /*------------- Normal hexes ------------------*/
 
 input[type=checkbox].sheet-hex-button:checked ~ .sheet-hex.sheet-veteran-hex-1.sheet-inner + textarea,
 input[type=checkbox].sheet-hex-button:checked ~ .sheet-hex.sheet-veteran-hex-2,
 input[type=checkbox].sheet-hex-button:checked ~ .sheet-hex.sheet-veteran-hex-3,
-input[type=checkbox].sheet-hex-button:checked ~ .sheet-hex.sheet-hex-1,
-input[type=checkbox].sheet-hex-button:checked ~ .sheet-hex.sheet-hex-2,
-input[type=checkbox].sheet-hex-button:checked ~ .sheet-hex.sheet-hex-3 {
+input[type=checkbox].sheet-hex-button:checked ~ .sheet-hex.sheet-veteran-hex-4 {
     background-color: transparent;
 }
 
@@ -1644,7 +1658,7 @@ input[type=checkbox].sheet-hex-button:hover + span + div {
 input[type=checkbox].sheet-hex-button {
     opacity: 0;
     z-index: 3;
-    margin-left: -60px;
+    margin-left: -55px;
 }
 
 .sheet-hex {
@@ -1740,6 +1754,38 @@ input[type=checkbox].sheet-hex-button {
 
 /*------------- Small hexes ---------------*/
 
+input[type=checkbox].sheet-small-hex-button:checked ~ .sheet-small-hex.sheet-veteran-hex-1.sheet-inner + textarea,
+input[type=checkbox].sheet-small-hex-button:checked ~ .sheet-small-hex.sheet-veteran-hex-2,
+input[type=checkbox].sheet-small-hex-button:checked ~ .sheet-small-hex.sheet-veteran-hex-3,
+input[type=checkbox].sheet-small-hex-button:checked ~ .sheet-small-hex.sheet-veteran-hex-4 {
+    background-color: transparent;
+}
+
+input[type=checkbox].sheet-small-hex-button:checked + span::before {
+    content: "&";
+    font-family: pictos;
+    color: green;
+}
+
+input[type=checkbox].sheet-small-hex-button:hover + span + div {
+    background-color: indianred;
+}
+
+.sheet-small-hex-button + span::before {
+    cursor: pointer;
+    content: "*";
+    font-family: pictos;
+    color: red;
+    margin-left: -10px;
+}
+
+input[type=checkbox].sheet-small-hex-button {
+    opacity: 0;
+    z-index: 3;
+    margin-left: -45px;
+    margin-top: 10px;
+}
+
 .sheet-small-hex {
     width: 75px;
     height: 43px;
@@ -1749,7 +1795,7 @@ input[type=checkbox].sheet-hex-button {
     background-size: auto 173px;
     position: relative;
     float: left;
-    margin: 16px 2px;
+    margin: 13px 2px;
     text-align: center;
     zoom: 1;
 }
