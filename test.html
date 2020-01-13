@@ -986,8 +986,7 @@
                                     </div>
                                     <div class="action-sust-effect">
                                         <div class="bold">Sust. Effect:</div>
-                                        <textarea class="height35 width95"
-                                                  name="attr_action_sust_effect">Repeat Effect.</textarea>
+                                        <textarea class="height35 width95" name="attr_action_sust_effect"></textarea>
                                     </div>
                                     <div class="action-description">
                                         <div class="bold">Description:</div>
@@ -5485,19 +5484,11 @@
                 <span class="tcat">Trig. Effect: </span>{{trigEffect}}
             </div>
             {{/trigEffect}}
-
             {{#sustEffect}}
-            {{^ampEffect}}
-            {{^trigCondition}}
-            {{^trigEffect}}
             <div class="tcat-text">
                 <span class="tcat">Sust. Effect: </span>{{sustEffect}}
             </div>
-            {{/trigEffect}}
-            {{/trigCondition}}
-            {{/ampEffect}}
             {{/sustEffect}}
-
             {{#description}}
             <div class="tcat-text">
                 <span class="tcat">Description: </span>{{description}}
