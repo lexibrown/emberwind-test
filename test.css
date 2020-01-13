@@ -1618,7 +1618,7 @@ div.sheet-enemy-hex {
 
 /*------------- Hex colours ------------------*/
 
-.sheet-hex.sheet-hex-4, .sheet-small-hex.sheet-hex-4 { background: #ECE5F1; }
+.sheet-hex.sheet-hex-4, .sheet-small-hex.sheet-hex-4 { background: #F8F6FA; }
 .sheet-hex.sheet-hex-3, .sheet-small-hex.sheet-hex-3 { background: #ECE5F1; }
 .sheet-hex.sheet-hex-2, .sheet-small-hex.sheet-hex-2 { background: #D5C6E1; }
 .sheet-hex.sheet-hex-1, .sheet-small-hex.sheet-hex-1 { background: #B698C7; }
