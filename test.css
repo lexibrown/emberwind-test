@@ -315,7 +315,8 @@ div.sheet-tab-content {
     grid-template-columns: 7%;
     grid-template-areas:
             "condition-selector condition-name"
-            "condition-selector condition-description";
+            "condition-selector condition-description"
+            "condition-selector condition-description-foe";
 }
 
 .sheet-condition-selector,
@@ -336,6 +337,10 @@ div.sheet-tab-content {
 
 .sheet-condition-description {
     grid-area: condition-description;
+}
+
+.sheet-condition-description-foe {
+    grid-area: condition-description-foe;
 }
 
 /*----------------- Sections ------------------*/

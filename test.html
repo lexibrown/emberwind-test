@@ -1610,7 +1610,10 @@
                                     <span><b><i>DAZE: </i></b></span>
                                 </div>
                                 <div class="condition-description">
-                                    <span>-4 Accuracy</span>
+                                    <span>Hero: -4 Accuracy</span>
+                                </div>
+                                <div class="condition-description-foe">
+                                    <span>Foe: Heroes have +4 Dodge</span>
                                 </div>
                             </div>
                             <div class="condition-box">
@@ -1621,7 +1624,10 @@
                                     <span><b><i>OFF-GUARD: </i></b></span>
                                 </div>
                                 <div class="condition-description">
-                                    <span>-2 Dodge</span>
+                                    <span>Hero: -2 Dodge</span>
+                                </div>
+                                <div class="condition-description-foe">
+                                    <span>Foe: +2 Accuracy to Hero CAP Checks.</span>
                                 </div>
                             </div>
                             <div class="condition-box">
@@ -1633,24 +1639,49 @@
                                 </div>
                                 <div class="condition-description">
                                     <span>
-                                        <span class="indicator">OFF-GUARD</span> and cannot take Actions until they expend a Fast Action to remove
+                                        Hero: <span class="indicator">OFF-GUARD</span> and cannot take Actions until they expend a Fast Action to remove
                                         <span class="indicator">PRONE</span>.
+                                    </span>
+                                </div>
+                                <div class="condition-description-foe">
+                                    <span>
+                                        Foe: <span class="indicator">OFF-GUARD</span> and removes
+                                        <span class="indicator">PRONE</span> by skipping the first Action of their Action Chain.
                                     </span>
                                 </div>
                             </div>
                             <div class="condition-box">
                                 <div class="condition-selector">
-                                    <input type="checkbox" name="attr_condition_fragility"/>
+                                    <input type="checkbox" name="attr_condition_silence"/>
                                 </div>
                                 <div class="condition-name">
-                                    <span><b><i>FRAGILITY: </i></b></span>
+                                    <span><b><i>SILENCE: </i></b></span>
                                 </div>
                                 <div class="condition-description">
-                                    <span>Actions targeting Combatant gain the <span
-                                            class="indicator">PIERCING</span> property. <span class="indicator">FRAGILITY</span> is removed at the end of Combatant’s next Turn.
+                                    <span>Hero: Cannot use Spell or Tide-Turner Actions. <span
+                                            class="indicator">SILENCE</span> is removed at the end of Hero’s next Turn.</span>
+                                </div>
+                                <div class="condition-description-foe">
+                                    <span> Foe: Cannot use Special Ability Hexes. <span
+                                            class="indicator">SILENCE</span> is removed at the end of the Foe’s next Turn.</span>
+                                </div>
+                            </div>
+                            <div class="condition-box">
+                                <div class="condition-selector">
+                                    <input type="checkbox" name="attr_condition_sleep"/>
+                                </div>
+                                <div class="condition-name">
+                                    <span><b><i>SLEEP: </i></b></span>
+                                </div>
+                                <div class="condition-description">
+                                    <span>Combatant cannot take Actions on their next Turn.
+                                    <span class="indicator">SLEEP</span> is removed when Combatant takes Damage or at the end of their next Turn. Actions that Target a Sleeping Combatant gain the <span
+                                                class="indicator">AUTO-CRIT</span> property against just that Combatant.
                                     </span>
                                 </div>
                             </div>
+                        </div>
+                        <div class="col" style="width: 40%">
                             <div class="condition-box">
                                 <div class="condition-selector-max">
                                     <input class="custom-number-input" type="number" min="0" max="5"
@@ -1677,18 +1708,17 @@
                                     <span>Combatant takes 1d20 Damage per Stack at the start of their Turn.</span>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col" style="width: 40%">
                             <div class="condition-box">
                                 <div class="condition-selector">
-                                    <input type="checkbox" name="attr_condition_silence"/>
+                                    <input type="checkbox" name="attr_condition_fragility"/>
                                 </div>
                                 <div class="condition-name">
-                                    <span><b><i>SILENCE: </i></b></span>
+                                    <span><b><i>FRAGILITY: </i></b></span>
                                 </div>
                                 <div class="condition-description">
-                                    <span>Cannot use Spell or Tide-Turner Actions. <span
-                                            class="indicator">SILENCE</span> is removed at the end of Hero’s next Turn.</span>
+                                    <span>Actions targeting Combatant gain the <span
+                                            class="indicator">PIERCING</span> property. <span class="indicator">FRAGILITY</span> is removed at the end of Combatant’s next Turn.
+                                    </span>
                                 </div>
                             </div>
                             <div class="condition-box">
@@ -1701,20 +1731,6 @@
                                 <div class="condition-description">
                                     <span>Combatant takes only 1 Action during their next Turn. <span
                                             class="indicator">PARALYSIS</span> is removed at the end of that Turn.
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="condition-box">
-                                <div class="condition-selector">
-                                    <input type="checkbox" name="attr_condition_sleep"/>
-                                </div>
-                                <div class="condition-name">
-                                    <span><b><i>SLEEP: </i></b></span>
-                                </div>
-                                <div class="condition-description">
-                                    <span>Combatant cannot take Actions on their next Turn.
-                                    <span class="indicator">SLEEP</span> is removed when Combatant takes Damage or at the end of their next Turn. Actions that Target a Sleeping Combatant gain the <span
-                                                class="indicator">AUTO-CRIT</span> property against just that Combatant.
                                     </span>
                                 </div>
                             </div>
