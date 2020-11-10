@@ -38,6 +38,19 @@
                         </div>
                     </div>
                 </div>
+                <div class="col settings-col">
+                    <div>
+                        <span class="bold">MOD DISPLAY</span>
+                    </div>
+                    <div>
+                        <div class="row">
+                            <input type="radio" name="attr_mod_state" value="off" checked="checked">
+                            <span>HIDE</span>
+                            <input type="radio" name="attr_mod_state" value="on">
+                            <span>SHOW</span>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="row">
                 <input class="page-control" type="hidden" name="attr_sheet_type" value="pc">
@@ -109,7 +122,149 @@
                 title="Inventory & Bio"></span>
             <input type="radio" name="attr_tab" class="sheet-tab sheet-tab3" value="3"><span title="Conditions"></span>
             <input type="radio" name="attr_tab" class="sheet-tab sheet-tab4" value="4"><span title="Quick Guide"></span>
+
             <div class="separator"></div>
+
+            <input class="page-control" type="hidden" name="attr_mod_state" value="on">
+            <div class="block-container mod-block">
+                <div class="flex-center padding-top5">
+                    <!--                BARRIER/DEFENSE. MODS-->
+                    <div class="col advantage-box width-third padding-right2">
+                        <div class="header">
+                            <span class="header">Barrier/Defense Mods</span>
+                        </div>
+                        <div class="center-text padding-top5">
+                            <div class="col width20 center-text">
+                                <div class="row mod-box-red padding-3">
+                                    <input class="cap" type="number" name="attr_toughness_mod" value="0"/>
+                                </div>
+                                <span class="bold">Toughness</span>
+                            </div>
+                            <div class="col width20 center-text">
+                                <div class="row mod-box-blue padding-3">
+                                    <input class="cap" type="number" name="attr_resistance_mod" value="0"/>
+                                </div>
+                                <span class="bold">Resistance</span>
+                            </div>
+                            <div class="col width20 center-text">
+                                <div class="row mod-box-green padding-3">
+                                    <input class="cap" type="number" name="attr_dodge_mod" value="0"/>
+                                </div>
+                                <span class="bold">Dodge</span>
+                            </div>
+                            <div class="col width20 center-text">
+                                <div class="row mod-box-yellow padding-3">
+                                    <input class="cap" type="number" name="attr_willpower_mod" value="0"/>
+                                </div>
+                                <span class="bold">Willpower</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--                ADV/DISADV-->
+                    <div class="col advantage-box width15 padding-right2">
+<!--                        <div class="header">-->
+<!--                            <span class="header">Roll Mod</span>-->
+<!--                        </div>-->
+                        <div class="center-text padding-top5">
+                            <div class="col">
+                                <div class="row padding-top5">
+                                    <button class="toggle-advantage" type="action" name="act_advantage">
+                                        <span style="font-family: pictos;">{</span>
+                                    </button>
+                                </div>
+                                <div class="row padding-top5">
+                                    <button class="toggle-normal" type="action" name="act_normal">
+                                        <span style="font-family: pictos;">r</span>
+                                    </button>
+                                </div>
+                                <div class="row padding-top5">
+                                    <button class="toggle-advantage" type="action" name="act_disadvantage">
+                                        <span style="font-family: pictos;">}</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="row">
+                                    <div class="sheet-small-hex sheet-advantage-hex">
+                                        <div class="sheet-inner">
+                                            <span class="" style="width: 75%; height: 50%; text-align: center; font-size: 24px;" name="attr_advantage_roll">0</span>
+                                            <span class="row">Stack(s)</span>
+                                        </div>
+                                        <div class="sheet-corner-1"></div>
+                                        <div class="sheet-corner-2"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <span class="kungfont" style="font-size: 20px; color: #EE5F57" name="attr_advantage_stack_text">Normal Roll</span>
+                            </div>
+                        </div>
+                        <input type='hidden' name='attr_advantage_roll' value='0'/>
+                        <input type='hidden' name='attr_advantage_stack' value='0'/>
+                        <input type='hidden' name='attr_advantage_stack_text' value='Advantage'/>
+                        <input type='hidden' name='attr_advantage_dice' value=''/>
+                    </div>
+                    <!--                CAP MODS-->
+                    <div class="col advantage-box width30 padding-right2">
+                        <div class="header">
+                            <span class="header">CAP Mods</span>
+                        </div>
+                        <div class="center-text padding-top5">
+                            <div class="col cap-main-col center-text">
+                                <div class="row critical padding-3">
+                                    <span class="bold">C:</span>
+                                    <input class="cap" type="number" name="attr_critical_mod" value="0"/>
+                                </div>
+                                <span class="bold">Critical</span>
+                            </div>
+                            <div class="col cap-main-col center-text">
+                                <div class="row accuracy padding-3">
+                                    <span class="bold">A:</span>
+                                    <input class="cap" type="number" name="attr_accuracy_mod" value="0"/>
+                                </div>
+                                <span class="bold">Accuracy</span>
+                            </div>
+                            <div class="col cap-main-col center-text">
+                                <div class="row penetration padding-3">
+                                    <span class="bold">P:</span>
+                                    <input class="cap" type="number" name="attr_penetration_mod" value="0"/>
+                                </div>
+                                <span class="bold">Penetration</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--                DAMAGE. MODS-->
+                    <div class="col advantage-box width20 padding-right2">
+                        <div class="header">
+                            <span class="header">Damage Mods</span>
+                        </div>
+                        <div class="center-text padding-top5">
+                            <div class="col width30 center-text">
+                                <div class="row mod-box padding-3">
+                                    <input class="cap" type="number" name="attr_damage_bonus_mod" value="0"/>
+                                </div>
+                                <span class="bold">Bonus</span>
+                            </div>
+                            <div class="col width50 center-text">
+                                <div class="row mod-box padding-3">
+                                    <input class="width95" type="text" name="attr_damage_dice_mod" placeholder="(ex. 1d6)"/>
+                                </div>
+                                <span class="bold">Dice</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col advantage-box width10">
+                        <div class="center-text padding-top5">
+                            <button class="toggle-normal 25-box" type="action" name="act_reset_mods">
+                                <span style="font-family: pictos;">r</span>
+                            </button>
+                            <div class="col"><span class="bold">Reset All Mods</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="separator"></div>
+            </div>
+
             <div class="main sheet-tab-content sheet-tab1">
 
                 <!--    Character information and stats-->
@@ -257,21 +412,21 @@
                             <div class="skill-left">
                                 <div class="skill">
                                     <button type='roll' name='roll_skill'
-                                            value='@{whisper_state}&{template:skill} {{name=Athletics}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{athletics}cf>[[@{athletics}+1]]]]}} {{no-roll=[[1]]}}'>
+                                            value='@{whisper_state}&{template:skill} {{name=Athletics}} {{subtags=@{character_name}}} {{roll=[[[[@{advantage_roll}+1]]d20@{advantage_dice}cs<@{athletics}cf>[[@{athletics}+1]]]]}} {{no-roll=[[1]]}}'>
                                         Athletics:
                                     </button>
                                     <input class="small" type="number" name="attr_athletics" value="8"/>
                                 </div>
                                 <div class="skill">
                                     <button type='roll' name='roll_skill' style="font-size: 1.2em;"
-                                            value='@{whisper_state}&{template:skill} {{name=Endurance}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{endurance}cf>[[@{endurance}+1]]]]}} {{no-roll=[[1]]}}'>
+                                            value='@{whisper_state}&{template:skill} {{name=Endurance}} {{subtags=@{character_name}}} {{roll=[[[[@{advantage_roll}+1]]d20@{advantage_dice}cs<@{endurance}cf>[[@{endurance}+1]]]]}} {{no-roll=[[1]]}}'>
                                         Endurance:
                                     </button>
                                     <input class="small" type="number" name="attr_endurance" value="8"/>
                                 </div>
                                 <div class="skill">
                                     <button type='roll' name='roll_skill'
-                                            value='@{whisper_state}&{template:skill} {{name=Intimidate}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{intimidate}cf>[[@{intimidate}+1]]]]}} {{no-roll=[[1]]}}'>
+                                            value='@{whisper_state}&{template:skill} {{name=Intimidate}} {{subtags=@{character_name}}} {{roll=[[[[@{advantage_roll}+1]]d20@{advantage_dice}cs<@{intimidate}cf>[[@{intimidate}+1]]]]}} {{no-roll=[[1]]}}'>
                                         Intimidate:
                                     </button>
                                     <input class="small" type="number" name="attr_intimidate" value="8"/>
@@ -281,21 +436,21 @@
                             <div class="skill-right">
                                 <div class="skill">
                                     <button type='roll' name='roll_skill'
-                                            value='@{whisper_state}&{template:skill} {{name=Insight}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{insight}cf>[[@{insight}+1]]]]}} {{no-roll=[[1]]}}'>
+                                            value='@{whisper_state}&{template:skill} {{name=Insight}} {{subtags=@{character_name}}} {{roll=[[[[@{advantage_roll}+1]]d20@{advantage_dice}cs<@{insight}cf>[[@{insight}+1]]]]}} {{no-roll=[[1]]}}'>
                                         Insight:
                                     </button>
                                     <input class="small" type="number" name="attr_insight" value="8"/>
                                 </div>
                                 <div class="skill">
                                     <button type='roll' name='roll_skill' style="font-size: 1.2em;"
-                                            value='@{whisper_state}&{template:skill} {{name=Knowledge}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{knowledge}cf>[[@{knowledge}+1]]]]}} {{no-roll=[[1]]}}'>
+                                            value='@{whisper_state}&{template:skill} {{name=Knowledge}} {{subtags=@{character_name}}} {{roll=[[[[@{advantage_roll}+1]]d20@{advantage_dice}cs<@{knowledge}cf>[[@{knowledge}+1]]]]}} {{no-roll=[[1]]}}'>
                                         Knowledge:
                                     </button>
                                     <input class="small" type="number" name="attr_knowledge" value="8"/>
                                 </div>
                                 <div class="skill">
                                     <button type='roll' name='roll_skill'
-                                            value='@{whisper_state}&{template:skill} {{name=Mend}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{mend}cf>[[@{mend}+1]]]]}} {{no-roll=[[1]]}}'>
+                                            value='@{whisper_state}&{template:skill} {{name=Mend}} {{subtags=@{character_name}}} {{roll=[[[[@{advantage_roll}+1]]d20@{advantage_dice}cs<@{mend}cf>[[@{mend}+1]]]]}} {{no-roll=[[1]]}}'>
                                         Mend:
                                     </button>
                                     <input class="small" type="number" name="attr_mend" value="8"/>
@@ -323,14 +478,14 @@
                     <div class="stats2 section">
                         <div class="stats-col green flex-center">
                             <button class="custom-roll-button dodge-image" type='roll' name='roll_dodge'
-                                    value='@{whisper_state}&{template:skill} {{name=Dodge}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{dodge}cf>[[@{dodge}+1]]]]}} {{no-roll=[[1]]}}'>
+                                    value='@{whisper_state}&{template:skill} {{name=Dodge}} {{subtags=@{character_name}}} {{roll=[[[[@{advantage_roll}+1]]d20@{advantage_dice}cs<[[@{dodge}+@{dodge_mod}]]cf>[[@{dodge}+@{dodge_mod}+1]]]]}} {{no-roll=[[1]]}}'>
                             </button>
                             Dodge:
                             <input class="small" type="number" name="attr_dodge" value="4"/>
                         </div>
                         <div class="stats-col yellow flex-center">
                             <button class="custom-roll-button willpower-image" type='roll' name='roll_dodge'
-                                    value='@{whisper_state}&{template:skill} {{name=Willpower}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{willpower}cf>[[@{willpower}+1]]]]}} {{no-roll=[[1]]}}'>
+                                    value='@{whisper_state}&{template:skill} {{name=Willpower}} {{subtags=@{character_name}}} {{roll=[[[[@{advantage_roll}+1]]d20@{advantage_dice}cs<[[@{willpower}+@{willpower_mod}]]cf>[[@{willpower}+@{willpower_mod}+1]]]]}} {{no-roll=[[1]]}}'>
                             </button>
                             Willpower:
                             <input class="small" type="number" name="attr_willpower" value="4"/>
@@ -341,21 +496,21 @@
                             <div class="skill-left">
                                 <div class="skill">
                                     <button type='roll' name='roll_skill' style="font-size: 1.2em;"
-                                            value='@{whisper_state}&{template:skill} {{name=Acrobatics}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{acrobatics}cf>[[@{acrobatics}+1]]]]}} {{no-roll=[[1]]}}'>
+                                            value='@{whisper_state}&{template:skill} {{name=Acrobatics}} {{subtags=@{character_name}}} {{roll=[[[[@{advantage_roll}+1]]d20@{advantage_dice}cs<@{acrobatics}cf>[[@{acrobatics}+1]]]]}} {{no-roll=[[1]]}}'>
                                         Acrobatics:
                                     </button>
                                     <input class="small" type="number" name="attr_acrobatics" value="8"/>
                                 </div>
                                 <div class="skill">
                                     <button type='roll' name='roll_skill'
-                                            value='@{whisper_state}&{template:skill} {{name=Stealth}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{stealth}cf>[[@{stealth}+1]]]]}} {{no-roll=[[1]]}}'>
+                                            value='@{whisper_state}&{template:skill} {{name=Stealth}} {{subtags=@{character_name}}} {{roll=[[[[@{advantage_roll}+1]]d20@{advantage_dice}cs<@{stealth}cf>[[@{stealth}+1]]]]}} {{no-roll=[[1]]}}'>
                                         Stealth:
                                     </button>
                                     <input class="small" type="number" name="attr_stealth" value="8"/>
                                 </div>
                                 <div class="skill">
                                     <button type='roll' name='roll_skill' style="font-size: 0.9em;"
-                                            value='@{whisper_state}&{template:skill} {{name=Sleight of Hand}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{sleight_of_hand}cf>[[@{sleight_of_hand}+1]]]]}} {{no-roll=[[1]]}}'>
+                                            value='@{whisper_state}&{template:skill} {{name=Sleight of Hand}} {{subtags=@{character_name}}} {{roll=[[[[@{advantage_roll}+1]]d20@{advantage_dice}cs<@{sleight_of_hand}cf>[[@{sleight_of_hand}+1]]]]}} {{no-roll=[[1]]}}'>
                                         Sleight of Hand:
                                     </button>
                                     <input class="small" type="number" name="attr_sleight_of_hand" value="8"/>
@@ -365,21 +520,21 @@
                             <div class="skill-right">
                                 <div class="skill">
                                     <button type='roll' name='roll_skill'
-                                            value='@{whisper_state}&{template:skill} {{name=Focus}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{focus}cf>[[@{focus}+1]]]]}} {{no-roll=[[1]]}}'>
+                                            value='@{whisper_state}&{template:skill} {{name=Focus}} {{subtags=@{character_name}}} {{roll=[[[[@{advantage_roll}+1]]d20@{advantage_dice}cs<@{focus}cf>[[@{focus}+1]]]]}} {{no-roll=[[1]]}}'>
                                         Focus:
                                     </button>
                                     <input class="small" type="number" name="attr_focus" value="8"/>
                                 </div>
                                 <div class="skill">
                                     <button type='roll' name='roll_skill'
-                                            value='@{whisper_state}&{template:skill} {{name=Fast Talk}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{fast_talk}cf>[[@{fast_talk}+1]]]]}} {{no-roll=[[1]]}}'>
+                                            value='@{whisper_state}&{template:skill} {{name=Fast Talk}} {{subtags=@{character_name}}} {{roll=[[[[@{advantage_roll}+1]]d20@{advantage_dice}cs<@{fast_talk}cf>[[@{fast_talk}+1]]]]}} {{no-roll=[[1]]}}'>
                                         Fast Talk:
                                     </button>
                                     <input class="small" type="number" name="attr_fast_talk" value="8"/>
                                 </div>
                                 <div class="skill">
                                     <button type='roll' name='roll_skill' style="font-size: 1.2em;"
-                                            value='@{whisper_state}&{template:skill} {{name=Leadership}} {{subtags=@{character_name}}} {{roll=[[d20cs<@{leadership}cf>[[@{leadership}+1]]]]}} {{no-roll=[[1]]}}'>
+                                            value='@{whisper_state}&{template:skill} {{name=Leadership}} {{subtags=@{character_name}}} {{roll=[[[[@{advantage_roll}+1]]d20@{advantage_dice}cs<@{leadership}cf>[[@{leadership}+1]]]]}} {{no-roll=[[1]]}}'>
                                         Leadership:
                                     </button>
                                     <input class="small" type="number" name="attr_leadership" value="8"/>
@@ -503,7 +658,7 @@
                                            value="on" style="width: 25px; height: 25px"/>
                                     <span>y</span>
                                     <button type='roll' name='roll_skill' style="font-size: 1.2em;"
-                                            value='@{whisper_state}&{template:skill} {{name=@{maneuver_name}}} {{subtags=@{statname}}} {{no-roll=[[@{actionmod}]]}} {{roll=[[d20cs<@{actionmod}cf>[[@{actionmod}+1]]]]}} {{speed=@{maneuver_speed}}} {{description=@{maneuver_description}}}'>
+                                            value='@{whisper_state}&{template:skill} {{name=@{maneuver_name}}} {{subtags=@{statname}}} {{no-roll=[[@{actionmod}]]}} {{roll=[[[[@{advantage_roll}+1]]d20@{advantage_dice}cs<@{actionmod}cf>[[@{actionmod}+1]]]]}} {{speed=@{maneuver_speed}}} {{description=@{maneuver_description}}}'>
                                     </button>
                                 </div>
                             </div>
@@ -583,7 +738,7 @@
                                            style="width: 25px; height: 25px"/>
                                     <span>y</span>
                                     <button type='roll' name='roll_cap'
-                                            value='@{whisper_state}&{template:basic-action} {{name=@{melee_name}}} {{cap=[[d20cs<@{critical}cf>[[@{accuracy}+1]]]]}} {{damage=[[0@{melee_dice} + @{melee_dice_bonus}]]}} {{penetration=[[@{penetration}]]}} {{dmgcrit=[[10@{melee_dice}kh1*{{@{melee_dice}>1}}+@{melee_dice_bonus}]]}} {{speed=Slow}} {{type=Melee}} {{range=@{melee_range}}} {{target=@{melee_target}}} {{description=@{melee_description}}} {{against=[[@{melee_against}]]}}'>
+                                            value='@{whisper_state}&{template:basic-action} {{name=@{melee_name}}} {{cap=[[[[@{advantage_roll}+1]]d20@{advantage_dice}cs<[[@{critical}+@{critical_mod}]]cf>[[@{accuracy}+@{accuracy_mod}+1]]]]}} {{damage=[[0@{melee_dice} + @{melee_dice_bonus}]]}} {{penetration=[[@{penetration}+@{penetration_mod}]]}} {{dmgcrit=[[10@{melee_dice}kh1*{{@{melee_dice}>1}}+@{melee_dice_bonus}]]}} {{speed=Slow}} {{type=Melee}} {{range=@{melee_range}}} {{target=@{melee_target}}} {{description=@{melee_description}}} {{against=[[@{melee_against}]]}}'>
                                     </button>
                                 </div>
                             </div>
@@ -667,7 +822,7 @@
                                            style="width: 25px; height: 25px"/>
                                     <span>y</span>
                                     <button type='roll' name='roll_cap'
-                                            value='@{whisper_state}&{template:basic-action} {{name=@{ranged_name}}} {{cap=[[d20cs<@{critical}cf>[[@{accuracy}+1]]]]}} {{damage=[[0@{ranged_dice} + @{ranged_dice_bonus}]]}} {{penetration=[[@{penetration}]]}} {{dmgcrit=[[10@{ranged_dice}kh1*{{@{ranged_dice}>1}}+@{ranged_dice_bonus}]]}} {{speed=Slow}} {{type=Ranged}} {{range=@{ranged_range}}} {{target=@{ranged_target}}} {{description=@{ranged_description}}} {{against=[[@{ranged_against}]]}}'>
+                                            value='@{whisper_state}&{template:basic-action} {{name=@{ranged_name}}} {{cap=[[[[@{advantage_roll}+1]]d20@{advantage_dice}cs<[[@{critical}+@{critical_mod}]]cf>[[@{accuracy}+@{accuracy_mod}+1]]]]}} {{damage=[[0@{ranged_dice} + @{ranged_dice_bonus}]]}} {{penetration=[[@{penetration}+@{penetration_mod}]]}} {{dmgcrit=[[10@{ranged_dice}kh1*{{@{ranged_dice}>1}}+@{ranged_dice_bonus}]]}} {{speed=Slow}} {{type=Ranged}} {{range=@{ranged_range}}} {{target=@{ranged_target}}} {{description=@{ranged_description}}} {{against=[[@{ranged_against}]]}}'>
                                     </button>
                                 </div>
                             </div>
@@ -768,7 +923,7 @@
                                             <span>y</span>
                                         </div>
                                         <button type='roll' name='roll_action'
-                                                value='@{whisper_state}&{template:action} {{tideTurner=[[0]]}} {{name=@{action_name}}} {{subtag1=@{action_subtype1}}} {{subtag2=@{action_subtype2}}} {{rollType=[[@{action_roll_type}]]}} {{cap=[[d20cs<@{critical}cf>[[@{accuracy}+1]]]]}} {{damage=[[0@{action_dice} + @{action_dice_bonus}]]}} {{penetration=[[@{penetration}]]}} {{dmgcrit=[[10@{action_dice}kh1*{{@{action_dice}>1}}+@{action_dice_bonus}]]}} {{against=[[@{action_against}]]}} {{healing=[[0@{action_healing_dice} + @{action_healing_dice_bonus}]]}} {{speed=@{action_speed}}} {{target=@{action_target}}} {{type=@{action_type}}} {{range=@{action_range}@{action_field_description}}} {{description=@{action_description}}} {{ampEffect=@{action_amp_effect}}} {{trigCondition=@{action_trig_condition}}} {{trigEffect=@{action_trig_effect}}} {{sustEffect=@{action_sust_effect}}}'>
+                                                value='@{whisper_state}&{template:action} {{tideTurner=[[0]]}} {{name=@{action_name}}} {{subtag1=@{action_subtype1}}} {{subtag2=@{action_subtype2}}} {{rollType=[[@{action_roll_type}]]}} {{cap=[[[[@{advantage_roll}+1]]d20@{advantage_dice}cs<[[@{critical}+@{critical_mod}]]cf>[[@{accuracy}+@{accuracy_mod}+1]]]]}} {{damage=[[0@{action_dice} + @{action_dice_bonus}]]}} {{penetration=[[@{penetration}+@{penetration_mod}]]}} {{dmgcrit=[[10@{action_dice}kh1*{{@{action_dice}>1}}+@{action_dice_bonus}]]}} {{against=[[@{action_against}]]}} {{healing=[[0@{action_healing_dice} + @{action_healing_dice_bonus}]]}} {{speed=@{action_speed}}} {{target=@{action_target}}} {{type=@{action_type}}} {{range=@{action_range}@{action_field_description}}} {{description=@{action_description}}} {{ampEffect=@{action_amp_effect}}} {{trigCondition=@{action_trig_condition}}} {{trigEffect=@{action_trig_effect}}} {{sustEffect=@{action_sust_effect}}}'>
                                         </button>
                                     </div>
 
@@ -1021,7 +1176,7 @@
                                             <span>y</span>
                                         </div>
                                         <button type='roll' name='roll_action'
-                                                value='@{whisper_state}&{template:action} {{tideTurner=[[1]]}} {{name=@{tide_action_name}}} {{subtag1=@{tide_action_subtype1}}} {{subtag2=@{tide_action_subtype2}}} {{rollType=[[@{tide_action_roll_type}]]}} {{cap=[[d20cs<@{critical}cf>[[@{accuracy}+1]]]]}} {{damage=[[0@{tide_action_dice} + @{tide_action_dice_bonus}]]}} {{penetration=[[@{penetration}]]}} {{dmgcrit=[[10@{tide_action_dice}kh1*{{@{tide_action_dice}>1}}+@{tide_action_dice_bonus}]]}} {{against=[[@{tide_action_against}]]}} {{healing=[[0@{tide_action_healing_dice} + @{tide_action_healing_dice_bonus}]]}} {{speed=@{tide_action_speed}}} {{target=@{tide_action_target}}} {{type=@{tide_action_type}}} {{range=@{tide_action_range}@{tide_action_field_description}}} {{description=@{tide_action_description}}} {{ampEffect=@{tide_action_amp_effect}}} {{trigCondition=@{tide_action_trig_condition}}} {{trigEffect=@{tide_action_trig_effect}}} {{sustEffect=@{tide_action_sust_effect}}}'>
+                                                value='@{whisper_state}&{template:action} {{tideTurner=[[1]]}} {{name=@{tide_action_name}}} {{subtag1=@{tide_action_subtype1}}} {{subtag2=@{tide_action_subtype2}}} {{rollType=[[@{tide_action_roll_type}]]}} {{cap=[[[[@{advantage_roll}+1]]d20@{advantage_dice}cs<[[@{critical}+@{critical_mod}]]cf>[[@{accuracy}+@{accuracy_mod}+1]]]]}} {{damage=[[0@{tide_action_dice} + @{tide_action_dice_bonus}]]}} {{penetration=[[@{penetration}+@{penetration_mod}]]}} {{dmgcrit=[[10@{tide_action_dice}kh1*{{@{tide_action_dice}>1}}+@{tide_action_dice_bonus}]]}} {{against=[[@{tide_action_against}]]}} {{healing=[[0@{tide_action_healing_dice} + @{tide_action_healing_dice_bonus}]]}} {{speed=@{tide_action_speed}}} {{target=@{tide_action_target}}} {{type=@{tide_action_type}}} {{range=@{tide_action_range}@{tide_action_field_description}}} {{description=@{tide_action_description}}} {{ampEffect=@{tide_action_amp_effect}}} {{trigCondition=@{tide_action_trig_condition}}} {{trigEffect=@{tide_action_trig_effect}}} {{sustEffect=@{tide_action_sust_effect}}}'>
                                         </button>
                                     </div>
 
@@ -5058,6 +5213,73 @@
 
                 }
                 setAttrs(settings);
+            });
+        });
+
+        on("clicked:advantage", function() {
+            getAttrs(["advantage_stack"], function(values) {
+                setAttrs({
+                    "advantage_stack": values.advantage_stack + 1,
+                    "advantage_roll": Math.abs(values.advantage_stack + 1),
+                    "advantage_stack_text": updateAdvantageText(values.advantage_stack + 1),
+                    "advantage_dice": updateAdvantageDice(values.advantage_stack + 1)
+                });
+            });
+        });
+        on("clicked:disadvantage", function() {
+            getAttrs(["advantage_stack"], function(values) {
+                setAttrs({
+                    "advantage_stack": values.advantage_stack - 1,
+                    "advantage_roll": Math.abs(values.advantage_stack - 1),
+                    "advantage_stack_text": updateAdvantageText(values.advantage_stack - 1),
+                    "advantage_dice": updateAdvantageDice(values.advantage_stack - 1)
+                });
+            });
+        });
+        on("clicked:normal", function() {
+            setAttrs({
+                "advantage_stack": 0,
+                "advantage_roll": 0,
+                "advantage_stack_text": updateAdvantageText(0),
+                "advantage_dice": updateAdvantageDice(0)
+            });
+        });
+
+        function updateAdvantageText(value) {
+            if (value == 0) {
+                return "Normal Roll";
+            } else if (value > 0) {
+                return "Advantage";
+            } else {
+                return "Disadvantage";
+            }
+        };
+
+        function updateAdvantageDice(value) {
+            if (value == 0) {
+                return "";
+            } else if (value > 0) {
+                return "kl1";
+            } else {
+                return "kh1";
+            }
+        };
+
+        on("clicked:reset_mods", function() {
+            setAttrs({
+                "advantage_stack": 0,
+                "advantage_roll": 0,
+                "advantage_stack_text": updateAdvantageText(0),
+                "advantage_dice": updateAdvantageDice(0),
+                "toughness_mod": 0,
+                "resistance_mod": 0,
+                "dodge_mod": 0,
+                "willpower_mod":0,
+                "critical_mod": 0,
+                "accuracy_mod": 0,
+                "penetration_mod": 0,
+                "damage_bonus_mod": 0,
+                "damage_dice_mod": ""
             });
         });
 

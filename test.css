@@ -151,6 +151,54 @@ div.sheet-tab-content {
     height: 3px;
 }
 
+/*----------------- Advantage Tabs ------------------*/
+
+.sheet-advantage-box {
+    width: auto;
+    /*height: 125px;*/
+    /*background-color: #EE5F57;*/
+}
+
+.sheet-small-hex.sheet-advantage-hex {
+    background: #EE5F57;
+}
+
+.sheet-toggle-advantage,
+.sheet-toggle-normal,
+.sheet-toggle-disadvantage {
+    /*content: attr(title);*/
+    border: 2px solid white;
+    margin: -5px 0 0 0;
+    text-align: center;
+    background: dimgrey;
+    /*font-size: 16px;*/
+    color: white;
+}
+
+input.sheet-page-control[value="on"] ~ .sheet-block-container.sheet-mod-block {
+    display: block;
+}
+
+.sheet-mod-box {
+    border: 5px solid #bababa;
+}
+
+.sheet-mod-box-red {
+    border: 5px solid #FEB8AE;
+}
+
+.sheet-mod-box-blue {
+    border: 5px solid #B8DCF9;
+}
+
+.sheet-mod-box-green {
+    border: 5px solid #BAE0CB;
+}
+
+.sheet-mod-box-yellow {
+    border: 5px solid #FDD5B0;
+}
+
 /*----------------- GRIDS ------------------*/
 
 .sheet-main {
@@ -497,6 +545,16 @@ input.sheet-medium {
 
 
 /*----------------- Headers ------------------*/
+
+div.sheet-header {
+    background-color: dimgrey;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
 .sheet-header1 {
     grid-area: header1;
     background-color: dimgrey;
