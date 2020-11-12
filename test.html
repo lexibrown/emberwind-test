@@ -833,9 +833,9 @@
                             <div class="action-effect action-leftCentered">
                                 <div>
                                     <div class="row">
-                                        <span name="attr_ranged_damage_description"></span>
                                         <input type="hidden" class="ranged-damage-indicator" name="attr_ranged_against"
                                                value="1">
+                                        <span name="attr_ranged_damage_description"></span>
                                         <img class="ranged-damage-toughness height20"
                                              name="attr_ranged_damage_toughness"
                                              src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
@@ -1080,8 +1080,9 @@
                                     <div class="row padding-2525">
                                         <input class="roll-control" type="hidden" name="attr_action_roll_type"
                                                value="0"/>
+
                                         <div class="flex-center dimgrey" style="color: white">
-                                            <span class="width-auto bold padding-right20">Default
+                                            <span class="width-auto bold padding-right20">CAP + Damage
                                                 <input type="radio" value="0" name="attr_action_roll_type" checked/>
                                             </span>
                                             <span class="width-auto bold padding-right20">CAP Only
@@ -1097,25 +1098,37 @@
                                                 <input type="radio" value="-1" name="attr_action_roll_type"/>
                                             </span>
                                         </div>
-
                                         <div class="action-damage padding-2525">
-                                            <span class="width-auto bold">Damage: </span>
-                                            <input style="width: 50px" type="text" name="attr_action_dice" value="1d6"/>
-                                            <span class="width-auto bold"> + </span>
-                                            <input style="width: 50px" type="text" name="attr_action_dice_bonus"
-                                                   value="0"/>
-                                            <div class="col padding-top5">
-                                                <span class="width-auto bold"> vs. </span>
-                                                <input type="radio" value="1" name="attr_action_against" checked/>
-                                                <img class="20-box"
-                                                     src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
-                                                <input type="radio" value="2" name="attr_action_against"/>
-                                                <img class="20-box"
-                                                     src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
-                                                <input type="radio" value="3" name="attr_action_against"/>
-                                                <span class="indicator">PIERCING</span>
+                                            <input class="custom-damage-control" type="hidden" name="attr_damage_type" value="0"/>
+                                            <div class="flex-center grey padding-2525">
+                                                <span class="width-auto bold padding-left10">Custom
+                                                    <input type="radio" value="0" name="attr_damage_type" checked/>
+                                                </span>
+                                                    <span class="width-auto bold padding-left10">[Melee Weapon Damage]
+                                                    <input type="radio" value="1" name="attr_damage_type"/>
+                                                </span>
+                                                    <span class="width-auto bold padding-left10">[Ranged Weapon Damage]
+                                                    <input type="radio" value="2" name="attr_damage_type"/>
+                                                </span>
                                             </div>
-
+                                            <div class="action-custom-damage padding-top4">
+                                                <span class="width-auto bold">Damage: </span>
+                                                <input style="width: 50px" type="text" name="attr_action_dice" value="1d6"/>
+                                                <span class="width-auto bold"> + </span>
+                                                <input style="width: 50px" type="text" name="attr_action_dice_bonus"
+                                                       value="0"/>
+                                                <div class="col padding-top5">
+                                                    <span class="width-auto bold"> vs. </span>
+                                                    <input type="radio" value="1" name="attr_action_against" checked/>
+                                                    <img class="20-box"
+                                                         src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
+                                                    <input type="radio" value="2" name="attr_action_against"/>
+                                                    <img class="20-box"
+                                                         src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
+                                                    <input type="radio" value="3" name="attr_action_against"/>
+                                                    <span class="indicator">PIERCING</span>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="action-healing padding-2525">
                                             <span class="width-auto bold">Healing: </span>
@@ -1339,7 +1352,7 @@
                                         <input class="roll-control" type="hidden" name="attr_tide_action_roll_type"
                                                value="0"/>
                                         <div class="flex-center dimgrey" style="color: white">
-                                            <span class="width-auto bold padding-right20">Default
+                                            <span class="width-auto bold padding-right20">CAP + Damage
                                                 <input type="radio" value="0" name="attr_tide_action_roll_type"
                                                        checked/>
                                             </span>
@@ -1356,27 +1369,38 @@
                                                 <input type="radio" value="-1" name="attr_tide_action_roll_type"/>
                                             </span>
                                         </div>
-
                                         <div class="action-damage padding-2525">
-                                            <span class="width-auto bold">Damage: </span>
-                                            <input style="width: 50px" type="text" name="attr_tide_action_dice"
-                                                   value="1d6"/>
-                                            <span class="width-auto bold"> + </span>
-                                            <input style="width: 50px" type="text" name="attr_tide_action_dice_bonus"
-                                                   value="0"/>
-                                            <div class="col padding-top5">
-                                                <span class="width-auto bold"> vs. </span>
-                                                <input type="radio" value="1" name="attr_tide_action_against" checked/>
-                                                <img class="20-box"
-                                                     src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
-                                                <input type="radio" value="2" name="attr_tide_action_against"/>
-                                                <img class="20-box"
-                                                     src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
-                                                <input type="radio" value="3" name="attr_tide_action_against"/>
-                                                <span class="indicator">PIERCING</span>
+                                            <input class="custom-damage-control" type="hidden" name="attr_tide_damage_type" value="0"/>
+                                            <div class="flex-center grey padding-2525">
+                                                <span class="width-auto bold padding-right20">Custom
+                                                    <input type="radio" value="0" name="attr_tide_damage_type" checked/>
+                                                </span>
+                                                <span class="width-auto bold padding-right20">[Melee Weapon Damage]
+                                                    <input type="radio" value="1" name="attr_tide_damage_type"/>
+                                                </span>
+                                                <span class="width-auto bold padding-right20">[Ranged Weapon Damage]
+                                                    <input type="radio" value="2" name="attr_tide_damage_type"/>
+                                                </span>
+                                            </div>
+                                            <div class="action-custom-damage">
+                                                <span class="width-auto bold">Damage: </span>
+                                                <input style="width: 50px" type="text" name="attr_tide_action_dice" value="1d6"/>
+                                                <span class="width-auto bold"> + </span>
+                                                <input style="width: 50px" type="text" name="attr_tide_action_dice_bonus"
+                                                       value="0"/>
+                                                <div class="col padding-top5">
+                                                    <span class="width-auto bold"> vs. </span>
+                                                    <input type="radio" value="1" name="attr_tide_action_against" checked/>
+                                                    <img class="20-box"
+                                                         src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
+                                                    <input type="radio" value="2" name="attr_tide_action_against"/>
+                                                    <img class="20-box"
+                                                         src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
+                                                    <input type="radio" value="3" name="attr_tide_action_against"/>
+                                                    <span class="indicator">PIERCING</span>
+                                                </div>
                                             </div>
                                         </div>
-
                                         <div class="action-healing padding-2525">
                                             <span class="width-auto bold">Healing: </span>
                                             <input style="width: 50px" type="text" name="attr_tide_action_healing_dice"
@@ -5325,6 +5349,30 @@
                 }
             });
         });
+        on("change:repeating_actions:damage_type", function() {
+            getAttrs(["repeating_actions_damage_type", 'ranged_dice', 'ranged_dice_bonus', 'ranged_against', 'melee_dice', 'melee_dice_bonus', 'melee_against'], function(values) {
+                if (values.repeating_actions_damage_type == 1) {
+                    setAttrs({
+                        "repeating_actions_action_dice": values.melee_dice,
+                        "repeating_actions_action_dice_bonus": values.melee_dice_bonus,
+                        "repeating_actions_action_against": values.melee_against
+                    });
+                } else if (values.repeating_actions_damage_type == 2) {
+                    setAttrs({
+                        "repeating_actions_action_dice": values.ranged_dice,
+                        "repeating_actions_action_dice_bonus": values.ranged_dice_bonus,
+                        "repeating_actions_action_against": values.ranged_against
+                    });
+                } else {
+                    setAttrs({ //action-damage-indicator
+                        "repeating_actions_action_dice": "",
+                        "repeating_actions_action_dice_bonus": "",
+                        "repeating_actions_action_against": "1"
+                    });
+                }
+            });
+        });
+
         on("change:repeating_tideTurners:settingsflag", function() {
             getAttrs(["repeating_tideTurners_settingsFlag"], function(values) {
                 setAttrs({

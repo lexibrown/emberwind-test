@@ -678,11 +678,15 @@ div.sheet-header {
 .sheet-tide-action-damage-resistance,
 .sheet-tide-action-damage-piercing,
 .sheet-action-damage-resistance,
-.sheet-action-damage-piercing,
-.sheet-melee-damage-resistance,
-.sheet-ranged-damage-resistance {
+.sheet-action-damage-piercing {
     margin-left: -23px;
 }
+
+.sheet-melee-damage-resistance,
+.sheet-ranged-damage-resistance {
+    margin-left: -20px;
+}
+
 
 .sheet-tide-action-damage-resistance,
 .sheet-tide-action-damage-toughness,
@@ -834,7 +838,15 @@ input.sheet-roll-control[value="4"] ~ .sheet-action-trigger {
     display: block;
 }
 
+input.sheet-custom-damage-control[value="0"] ~ .sheet-action-custom-damage {
+    display: block;
+}
+
 .sheet-action-damage {
+    display: none;
+}
+
+.sheet-action-custom-damage {
     display: none;
 }
 
@@ -917,6 +929,11 @@ input.sheet-action-description-indicator[value="2"] ~ .sheet-action-auto-hit-des
 
 .sheet-lightgrey {
     background-color: #E7E8EA;
+}
+
+.sheet-grey {
+    /*background-color: darkgrey;*/
+    background-color: lightgrey;
 }
 
 .sheet-dimgrey {
