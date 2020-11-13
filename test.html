@@ -4494,7 +4494,7 @@
                     settings["repeating_tideTurners_" + newIdt1 + "_tide_action_type"] = "";
                     settings["repeating_tideTurners_" + newIdt1 + "_tide_action_range"] = "";
                     settings["repeating_tideTurners_" + newIdt1 + "_tide_action_roll_type"] = "-1"; // none
-                    settings["repeating_tideTurners_" + newIdt1 + "_action_dice"] = "";
+                    settings["repeating_tideTurners_" + newIdt1 + "_tide_action_dice"] = "";
                     settings["repeating_tideTurners_" + newIdt1 + "_tide_action_dice_bonus"] = "0";
                     settings["repeating_tideTurners_" + newIdt1 + "_tide_action_against"] = "1";
                     settings["repeating_tideTurners_" + newIdt1 + "_tide_action_healing_dice"] = "";
@@ -4724,7 +4724,7 @@
                     settings["repeating_tideTurners_" + newIdt1 + "_tide_action_type"] = "";
                     settings["repeating_tideTurners_" + newIdt1 + "_tide_action_range"] = "";
                     settings["repeating_tideTurners_" + newIdt1 + "_tide_action_roll_type"] = "-1"; // none
-                    settings["repeating_tideTurners_" + newIdt1 + "_action_dice"] = "";
+                    settings["repeating_tideTurners_" + newIdt1 + "_tide_action_dice"] = "";
                     settings["repeating_tideTurners_" + newIdt1 + "_tide_action_dice_bonus"] = "0";
                     settings["repeating_tideTurners_" + newIdt1 + "_tide_action_against"] = "1";
                     settings["repeating_tideTurners_" + newIdt1 + "_tide_action_healing_dice"] = "";
@@ -4958,7 +4958,7 @@
                     settings["repeating_tideTurners_" + newIdt1 + "_tide_action_type"] = "Ranged";
                     settings["repeating_tideTurners_" + newIdt1 + "_tide_action_range"] = "5";
                     settings["repeating_tideTurners_" + newIdt1 + "_tide_action_roll_type"] = "3"; // heal
-                    settings["repeating_tideTurners_" + newIdt1 + "_action_dice"] = "";
+                    settings["repeating_tideTurners_" + newIdt1 + "_tide_action_dice"] = "";
                     settings["repeating_tideTurners_" + newIdt1 + "_tide_action_dice_bonus"] = "0";
                     settings["repeating_tideTurners_" + newIdt1 + "_tide_action_against"] = "1";
                     settings["repeating_tideTurners_" + newIdt1 + "_tide_action_healing_dice"] = "10";
@@ -5185,7 +5185,7 @@
                     settings["repeating_tideTurners_" + newIdt1 + "_tide_action_type"] = "Ranged";
                     settings["repeating_tideTurners_" + newIdt1 + "_tide_action_range"] = "7";
                     settings["repeating_tideTurners_" + newIdt1 + "_tide_action_roll_type"] = "2"; // auto-hit
-                    settings["repeating_tideTurners_" + newIdt1 + "_action_dice"] = "2d12";
+                    settings["repeating_tideTurners_" + newIdt1 + "_tide_action_dice"] = "2d12";
                     settings["repeating_tideTurners_" + newIdt1 + "_tide_action_dice_bonus"] = "0";
                     settings["repeating_tideTurners_" + newIdt1 + "_tide_action_against"] = "2";
                     settings["repeating_tideTurners_" + newIdt1 + "_tide_action_healing_dice"] = "";
@@ -5364,7 +5364,7 @@
                         "repeating_actions_action_against": values.ranged_against
                     });
                 } else {
-                    setAttrs({ //action-damage-indicator
+                    setAttrs({
                         "repeating_actions_action_dice": "",
                         "repeating_actions_action_dice_bonus": "",
                         "repeating_actions_action_against": "1"
@@ -5406,6 +5406,30 @@
                 }
             });
         });
+        on("change:repeating_tideTurners:tide_damage_type", function() {
+            getAttrs(["repeating_tideTurners_tide_damage_type", 'ranged_dice', 'ranged_dice_bonus', 'ranged_against', 'melee_dice', 'melee_dice_bonus', 'melee_against'], function(values) {
+                if (values.repeating_tideTurners_tide_damage_type == 1) {
+                    setAttrs({
+                        "repeating_tideTurners_tide_action_dice": values.melee_dice,
+                        "repeating_tideTurners_tide_action_dice_bonus": values.melee_dice_bonus,
+                        "repeating_tideTurners_tide_action_against": values.melee_against
+                    });
+                } else if (values.repeating_tideTurners_tide_damage_type == 2) {
+                    setAttrs({
+                        "repeating_tideTurners_tide_action_dice": values.ranged_dice,
+                        "repeating_tideTurners_tide_action_dice_bonus": values.ranged_dice_bonus,
+                        "repeating_tideTurners_tide_action_against": values.ranged_against
+                    });
+                } else {
+                    setAttrs({
+                        "repeating_tideTurners_tide_action_dice": "",
+                        "repeating_tideTurners_tide_action_dice_bonus": "",
+                        "repeating_tideTurners_tide_action_against": "1"
+                    });
+                }
+            });
+        });
+
         on("change:melee_settings_flag", function() {
             getAttrs(["melee_settings_flag"], function(values) {
                 setAttrs({
@@ -5427,6 +5451,215 @@
                 });
             });
         });
+
+        // melee_dice melee_dice_bonus melee_against
+        on("change:melee_dice", () => {
+            getSectionIDs("repeating_actions", function(idarray) {
+                const types = [];
+                for (let i = 0; i < idarray.length; i++) {
+                    types.push("repeating_actions_" + idarray[i] + "_damage_type");
+                }
+
+                getAttrs(types.concat(["melee_dice"]), function (values) {
+                    let output = {};
+                    for (let i = 0; i < idarray.length; i++) {
+                        if (values["repeating_actions_" + idarray[i] + "_damage_type"] == 1) {
+                            output["repeating_actions_" + idarray[i] + "_action_dice"] = values.melee_dice;
+                        }
+                    }
+                    if(output) setAttrs(output);
+                });
+            });
+            getSectionIDs("repeating_tideTurners", function(idarray) {
+                const types = [];
+                for (let i = 0; i < idarray.length; i++) {
+                    types.push("repeating_tideTurners_" + idarray[i] + "_tide_damage_type");
+                }
+
+                getAttrs(types.concat(["melee_dice"]), function (values) {
+                    let output = {};
+                    for (let i = 0; i < idarray.length; i++) {
+                        if (values["repeating_tideTurners_" + idarray[i] + "_tide_damage_type"] == 1) {
+                            output["repeating_tideTurners_" + idarray[i] + "_tide_action_dice"] = values.melee_dice;
+                        }
+                    }
+                    if(output) setAttrs(output);
+                });
+            });
+        });
+        on("change:melee_dice_bonus", () => {
+            getSectionIDs("repeating_actions", function(idarray) {
+                const types = [];
+                for (let i = 0; i < idarray.length; i++) {
+                    types.push("repeating_actions_" + idarray[i] + "_damage_type");
+                }
+
+                getAttrs(types.concat(["melee_dice_bonus"]), function (values) {
+                    let output = {};
+                    for (let i = 0; i < idarray.length; i++) {
+                        if (values["repeating_actions_" + idarray[i] + "_damage_type"] == 1) {
+                            output["repeating_actions_" + idarray[i] + "_action_dice_bonus"] = values.melee_dice_bonus;
+                        }
+                    }
+                    if(output) setAttrs(output);
+                });
+            });
+            getSectionIDs("repeating_tideTurners", function(idarray) {
+                const types = [];
+                for (let i = 0; i < idarray.length; i++) {
+                    types.push("repeating_tideTurners_" + idarray[i] + "_tide_damage_type");
+                }
+
+                getAttrs(types.concat(["melee_dice_bonus"]), function (values) {
+                    let output = {};
+                    for (let i = 0; i < idarray.length; i++) {
+                        if (values["repeating_tideTurners_" + idarray[i] + "_tide_damage_type"] == 1) {
+                            output["repeating_tideTurners_" + idarray[i] + "_tide_action_dice_bonus"] = values.melee_dice_bonus;
+                        }
+                    }
+                    if(output) setAttrs(output);
+                });
+            });
+        });
+        on("change:melee_against", () => {
+            getSectionIDs("repeating_actions", function(idarray) {
+                const types = [];
+                for (let i = 0; i < idarray.length; i++) {
+                    types.push("repeating_actions_" + idarray[i] + "_damage_type");
+                }
+
+                getAttrs(types.concat(["melee_against"]), function (values) {
+                    let output = {};
+                    for (let i = 0; i < idarray.length; i++) {
+                        if (values["repeating_actions_" + idarray[i] + "_damage_type"] == 1) {
+                            output["repeating_actions_" + idarray[i] + "_action_against"] = values.melee_against;
+                        }
+                    }
+                    if(output) setAttrs(output);
+                });
+            });
+            getSectionIDs("repeating_tideTurners", function(idarray) {
+                const types = [];
+                for (let i = 0; i < idarray.length; i++) {
+                    types.push("repeating_tideTurners_" + idarray[i] + "_tide_damage_type");
+                }
+
+                getAttrs(types.concat(["melee_against"]), function (values) {
+                    let output = {};
+                    for (let i = 0; i < idarray.length; i++) {
+                        if (values["repeating_tideTurners_" + idarray[i] + "_tide_damage_type"] == 1) {
+                            output["repeating_tideTurners_" + idarray[i] + "_tide_action_against"] = values.melee_against;
+                        }
+                    }
+                    if(output) setAttrs(output);
+                });
+            });
+        });
+
+        // ranged_dice ranged_dice_bonus ranged_against
+        on("change:ranged_dice", () => {
+            getSectionIDs("repeating_actions", function(idarray) {
+                const types = [];
+                for (let i = 0; i < idarray.length; i++) {
+                    types.push("repeating_actions_" + idarray[i] + "_damage_type");
+                }
+
+                getAttrs(types.concat(["ranged_dice"]), function (values) {
+                    let output = {};
+                    for (let i = 0; i < idarray.length; i++) {
+                        if (values["repeating_actions_" + idarray[i] + "_damage_type"] == 2) {
+                            output["repeating_actions_" + idarray[i] + "_action_dice"] = values.ranged_dice;
+                        }
+                    }
+                    if(output) setAttrs(output);
+                });
+            });
+            getSectionIDs("repeating_tideTurners", function(idarray) {
+                const types = [];
+                for (let i = 0; i < idarray.length; i++) {
+                    types.push("repeating_tideTurners_" + idarray[i] + "_tide_damage_type");
+                }
+
+                getAttrs(types.concat(["ranged_dice"]), function (values) {
+                    let output = {};
+                    for (let i = 0; i < idarray.length; i++) {
+                        if (values["repeating_tideTurners_" + idarray[i] + "_tide_damage_type"] == 2) {
+                            output["repeating_tideTurners_" + idarray[i] + "_tide_action_dice"] = values.ranged_dice;
+                        }
+                    }
+                    if(output) setAttrs(output);
+                });
+            });
+        });
+        on("change:ranged_dice_bonus", () => {
+            getSectionIDs("repeating_actions", function(idarray) {
+                const types = [];
+                for (let i = 0; i < idarray.length; i++) {
+                    types.push("repeating_actions_" + idarray[i] + "_damage_type");
+                }
+
+                getAttrs(types.concat(["ranged_dice_bonus"]), function (values) {
+                    let output = {};
+                    for (let i = 0; i < idarray.length; i++) {
+                        if (values["repeating_actions_" + idarray[i] + "_damage_type"] == 2) {
+                            output["repeating_actions_" + idarray[i] + "_action_dice_bonus"] = values.ranged_dice_bonus;
+                        }
+                    }
+                    if(output) setAttrs(output);
+                });
+            });
+            getSectionIDs("repeating_tideTurners", function(idarray) {
+                const types = [];
+                for (let i = 0; i < idarray.length; i++) {
+                    types.push("repeating_tideTurners_" + idarray[i] + "_tide_damage_type");
+                }
+
+                getAttrs(types.concat(["ranged_dice_bonus"]), function (values) {
+                    let output = {};
+                    for (let i = 0; i < idarray.length; i++) {
+                        if (values["repeating_tideTurners_" + idarray[i] + "_tide_damage_type"] == 2) {
+                            output["repeating_tideTurners_" + idarray[i] + "_tide_action_dice_bonus"] = values.ranged_dice_bonus;
+                        }
+                    }
+                    if(output) setAttrs(output);
+                });
+            });
+        });
+        on("change:ranged_against", () => {
+            getSectionIDs("repeating_actions", function(idarray) {
+                const types = [];
+                for (let i = 0; i < idarray.length; i++) {
+                    types.push("repeating_actions_" + idarray[i] + "_damage_type");
+                }
+
+                getAttrs(types.concat(["ranged_against"]), function (values) {
+                    let output = {};
+                    for (let i = 0; i < idarray.length; i++) {
+                        if (values["repeating_actions_" + idarray[i] + "_damage_type"] == 2) {
+                            output["repeating_actions_" + idarray[i] + "_action_against"] = values.ranged_against;
+                        }
+                    }
+                    if(output) setAttrs(output);
+                });
+            });
+            getSectionIDs("repeating_tideTurners", function(idarray) {
+                const types = [];
+                for (let i = 0; i < idarray.length; i++) {
+                    types.push("repeating_tideTurners_" + idarray[i] + "_tide_damage_type");
+                }
+
+                getAttrs(types.concat(["ranged_against"]), function (values) {
+                    let output = {};
+                    for (let i = 0; i < idarray.length; i++) {
+                        if (values["repeating_tideTurners_" + idarray[i] + "_tide_damage_type"] == 2) {
+                            output["repeating_tideTurners_" + idarray[i] + "_tide_action_against"] = values.ranged_against;
+                        }
+                    }
+                    if(output) setAttrs(output);
+                });
+            });
+        });
+
         on('sheet:opened change:statname change:athletics change:endurance change:intimidate change:insight change:knowledge change:mend change:acrobatics change:stealth change:sleight_of_hand change:focus change:fast_talk change:leadership', () => {
             getAttrs(['statname'], (values) => {
                 // convert "Acrobatics" to "acrobatics"
