@@ -9,6 +9,7 @@
         <input class="tab-button nav" type="checkbox" name="attr_settings_select" value="options"/>
         <span class='pictos nav'>y</span>
         <span class='nav pictos'>x</span>
+        <span>Settings</span>
 
         <div class="block-container block-settings">
             <div class="row">
@@ -280,21 +281,44 @@
                     <!--        Name Section-->
                     <div class="name section">
                         <span>Name:</span>
-                        <input class="kungfont" type="text" name="attr_character_name"/>
+                        <input class="kungfont no-border" type="text" name="attr_character_name"/>
                     </div>
 
-                    <!--        Information section. Includes: HP, Class, Subclass and Tier-->
+                    <!--        Information section. Includes: Tier and experience points-->
+                    <div class="tier section">
+                        <div class="col width-third info-tier-box">
+                            <span>Tier:</span>
+                            <select name="attr_tier" class="selector-fit no-border border-bottom-grey-1 padding-left10">
+                                <option value="tier-1">1</option>
+                                <option value="tier-2">2</option>
+                                <option value="tier-3">3</option>
+                                <option value="tier-4">4</option>
+                            </select>
+                        </div>
+                        <div class="col padding-top4">
+                            <span>Exp:
+                                <input class="no-border border-bottom-grey-1 width-auto" type="text" name="attr_exp"/>
+                                 / 1000
+                            </span>
+                        </div>
+                    </div>
+
+                    <!--        Information section. Includes: HP, Class and Subclass-->
                     <div class="info section">
                         <div class="row">
+
+                            <div class="col info-hp-text">
+                                <span>HP:</span>
+                            </div>
                             <div class="col info-hp-box">
-                                <span class="info-hp-text">HP:</span>
                                 <input type="number" name="attr_hp" value="10"/>
                                 <span> / </span>
                                 <input type="number" name="attr_hp_max" value="10"/>
                             </div>
+
                             <div class="col info-class-box">
                                 <span>Class:</span>
-                                <select name="attr_class" class="selector-fit">
+                                <select name="attr_class" class="selector-fit no-border border-bottom-grey-1">
                                     <option value="null">Select</option>
                                     <option value="archer">Archer</option>
                                     <option value="ardent">Ardent</option>
@@ -310,66 +334,57 @@
                             </div>
                         </div>
                         <div class="row">
-                            <input class="class-control" type="hidden" name="attr_class" value="">
-                            <div class="info-custom-class">
-                                <span>Custom Class:</span>
-                                <input type="text" name="attr_custom_class" style="width: 65%;"/>
+                            <div class="info-subclass-box">
+                                <span>Subclass:</span>
+                                <input type="text" name="attr_subclass" class="no-border border-bottom-grey-1"/>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col info-subclass-box">
-                                <span>Subclass:</span>
-                                <input type="text" name="attr_subclass" style="width: 65%;"/>
-                            </div>
-                            <div class="col info-tier-box">
-                                <span>Tier:</span>
-                                <select name="attr_tier" class="selector-fit">
-                                    <option value="tier-1">1</option>
-                                    <option value="tier-2">2</option>
-                                    <option value="tier-3">3</option>
-                                    <option value="tier-4">4</option>
-                                </select>
+                            <input class="class-control" type="hidden" name="attr_class" value="">
+                            <div class="info-custom-class">
+                                <span>Custom Class:</span>
+                                <input type="text" name="attr_custom_class" class="no-border border-bottom-grey-1"/>
                             </div>
                         </div>
                     </div>
 
                     <!--        Aspects-->
                     <div class="aspects section">
-                        <div class="row">
-                            <span class="title">Aspects:</span>
+                        <div class="header1 section">
+                            <span class="header">Aspects</span>
                         </div>
                         <div class="row">
                             <div class="col aspects-col">
-                                <span class="subtitle">OFFENSIVE</span>
+                                <span class="subtitle bold">Offensive</span>
                                 <select name="attr_offensive" class="selector">
                                     <option value="null">Select</option>
                                     <option value="deadly">Deadly</option>
-                                    <option value="precise">Precise</option>
+                                    <option value="keen">Keen</option>
                                     <option value="powerful">Powerful</option>
+                                    <option value="precise">Precise</option>
                                     <option value="steady">Steady</option>
                                     <option value="vicious">Vicious</option>
-                                    <option value="keen">Keen</option>
                                 </select>
                             </div>
                             <div class="col aspects-col">
-                                <span class="subtitle">DEFENSIVE</span>
+                                <span class="subtitle bold">Defensive</span>
                                 <select name="attr_defensive" class="selector">
                                     <option value="null">Select</option>
-                                    <option value="vigorous">Vigorous</option>
-                                    <option value="tough">Tough</option>
-                                    <option value="resistant">Resistant</option>
-                                    <option value="evasive">Evasive</option>
-                                    <option value="willful">Willful</option>
                                     <option value="defiant">Defiant</option>
+                                    <option value="evasive">Evasive</option>
+                                    <option value="resistant">Resistant</option>
+                                    <option value="tough">Tough</option>
+                                    <option value="vigorous">Vigorous</option>
+                                    <option value="willful">Willful</option>
                                 </select>
                             </div>
                             <div class="col aspects-col">
-                                <span class="subtitle">UTILITY</span>
+                                <span class="subtitle bold">Utility</span>
                                 <select name="attr_utility" class="selector">
                                     <option value="null">Select</option>
-                                    <option value="focused">Focused</option>
                                     <option value="charged">Charged</option>
                                     <option value="dynamic">Dynamic</option>
+                                    <option value="focused">Focused</option>
                                     <option value="heroic">Heroic</option>
                                     <option value="spirited">Spirited</option>
                                     <option value="swift">Swift</option>
@@ -380,13 +395,21 @@
 
                     <!--                    Attributes 1-->
                     <div class="attribute1 section">
-                        <div class="col attribute-col red">
-                            Strength:
-                            <input class="small" type="number" name="attr_strength" value="0"/>
+                        <div class="col width-half">
+                            <div class="col attribute-col red">
+                                Strength:
+                            </div>
+                            <div class="col light-red stat-value">
+                                <input class="small light-red no-border" type="number" name="attr_strength" value="0"/>
+                            </div>
                         </div>
-                        <div class="col attribute-col blue">
-                            Intelligence:
-                            <input class="small" type="number" name="attr_intelligence" value="0"/>
+                        <div class="col width-half">
+                            <div class="col attribute-col blue">
+                                Intelligence:
+                            </div>
+                            <div class="col light-blue stat-value">
+                                <input class="small light-blue no-border" type="number" name="attr_intelligence" value="0"/>
+                            </div>
                         </div>
                     </div>
 
@@ -395,17 +418,25 @@
                         <span class="header">Barrier Values</span>
                     </div>
                     <div class="stats1 section">
-                        <div class="col stats-col red">
-                            <img class="25-box"
-                                 src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
-                            Toughness:
-                            <input class="small" type="number" name="attr_toughness" value="4"/>
+                        <div class="col width-half">
+                            <div class="col red stats-col">
+                                <img class="25-box"
+                                     src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
+                                Toughness:
+                            </div>
+                            <div class="col light-red stat-value">
+                                <input class="small light-red no-border" type="number" name="attr_toughness" value="4"/>
+                            </div>
                         </div>
-                        <div class="col stats-col blue">
-                            <img class="25-box"
-                                 src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
-                            Resistance:
-                            <input class="small" type="number" name="attr_resistance" value="4"/>
+                        <div class="col width-half">
+                            <div class="col blue stats-col">
+                                <img class="25-box"
+                                     src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
+                                Resistance:
+                            </div>
+                            <div class="col light-blue stat-value">
+                                <input class="small light-blue no-border" type="number" name="attr_resistance" value="4"/>
+                            </div>
                         </div>
                     </div>
                     <div class="common1 section">
@@ -462,13 +493,21 @@
 
                     <!--                    Attributes 2-->
                     <div class="attribute2 section">
-                        <div class="col attribute-col green">
-                            Dexterity:
-                            <input class="small" type="number" name="attr_dexterity" value="0"/>
+                        <div class="col width-half">
+                            <div class="col attribute-col green">
+                                Dexterity:
+                            </div>
+                            <div class="col light-green stat-value">
+                                <input class="small light-green no-border" type="number" name="attr_dexterity" value="0"/>
+                            </div>
                         </div>
-                        <div class="col attribute-col yellow">
-                            Resilience:
-                            <input class="small" type="number" name="attr_resilience" value="0"/>
+                        <div class="col width-half">
+                            <div class="col attribute-col yellow">
+                                Resilience:
+                            </div>
+                            <div class="col light-yellow stat-value">
+                                <input class="small light-yellow no-border" type="number" name="attr_resilience" value="0"/>
+                            </div>
                         </div>
                     </div>
 
@@ -477,19 +516,27 @@
                         <span class="header">Defense Values</span>
                     </div>
                     <div class="stats2 section">
-                        <div class="stats-col green flex-center">
-                            <button class="custom-roll-button dodge-image" type='roll' name='roll_dodge'
-                                    value='@{whisper_state}&{template:skill} {{name=Dodge}} {{subtags=@{character_name}}} {{roll=[[[[@{advantage_roll}+1]]d20@{advantage_dice}cs<[[@{dodge}+@{dodge_mod}]]cf>[[@{dodge}+@{dodge_mod}+1]]]]}} {{no-roll=[[1]]}}'>
-                            </button>
-                            Dodge:
-                            <input class="small" type="number" name="attr_dodge" value="4"/>
+                        <div class="col width-half">
+                            <div class="flex-center green stats-col">
+                                <button class="custom-roll-button dodge-image" type='roll' name='roll_dodge'
+                                        value='@{whisper_state}&{template:skill} {{name=Dodge}} {{subtags=@{character_name}}} {{roll=[[[[@{advantage_roll}+1]]d20@{advantage_dice}cs<[[@{dodge}+@{dodge_mod}]]cf>[[@{dodge}+@{dodge_mod}+1]]]]}} {{no-roll=[[1]]}}'>
+                                </button>
+                                Dodge:
+                            </div>
+                            <div class="col light-green stat-value">
+                                <input class="small light-green no-border" type="number" name="attr_dodge" value="4"/>
+                            </div>
                         </div>
-                        <div class="stats-col yellow flex-center">
-                            <button class="custom-roll-button willpower-image" type='roll' name='roll_dodge'
-                                    value='@{whisper_state}&{template:skill} {{name=Willpower}} {{subtags=@{character_name}}} {{roll=[[[[@{advantage_roll}+1]]d20@{advantage_dice}cs<[[@{willpower}+@{willpower_mod}]]cf>[[@{willpower}+@{willpower_mod}+1]]]]}} {{no-roll=[[1]]}}'>
-                            </button>
-                            Willpower:
-                            <input class="small" type="number" name="attr_willpower" value="4"/>
+                        <div class="col width-half">
+                            <div class="flex-center yellow stats-col">
+                                <button class="custom-roll-button willpower-image" type='roll' name='roll_dodge'
+                                        value='@{whisper_state}&{template:skill} {{name=Willpower}} {{subtags=@{character_name}}} {{roll=[[[[@{advantage_roll}+1]]d20@{advantage_dice}cs<[[@{willpower}+@{willpower_mod}]]cf>[[@{willpower}+@{willpower_mod}+1]]]]}} {{no-roll=[[1]]}}'>
+                                </button>
+                                Willpower:
+                            </div>
+                            <div class="col light-yellow stat-value">
+                                <input class="small light-yellow no-border" type="number" name="attr_willpower" value="4"/>
+                            </div>
                         </div>
                     </div>
                     <div class="common2 section">
@@ -510,7 +557,7 @@
                                     <input class="small" type="number" name="attr_stealth" value="8"/>
                                 </div>
                                 <div class="skill">
-                                    <button type='roll' name='roll_skill' style="font-size: 0.9em;"
+                                    <button type='roll' name='roll_skill' style="font-size: 1.0em;"
                                             value='@{whisper_state}&{template:skill} {{name=Sleight of Hand}} {{subtags=@{character_name}}} {{roll=[[[[@{advantage_roll}+1]]d20@{advantage_dice}cs<@{sleight_of_hand}cf>[[@{sleight_of_hand}+1]]]]}} {{no-roll=[[1]]}}'>
                                         Sleight of Hand:
                                     </button>
@@ -549,48 +596,72 @@
                         <span class="header">CAP Check</span>
                     </div>
                     <div class="common3 section">
-                        <div class="row">
-                            <span>Roll 1d20 when an Action targets at least 1 Foe. Must be equal or less tab <b>CAP</b> Values to succeed</span>
-                        </div>
                         <div class="row center-text">
                             <div class="col cap-main-col center-text">
+                                <span class="bold">Critical</span>
                                 <div class="row critical padding-3">
                                     <span class="bold">C:</span>
-                                    <input class="cap" type="number" name="attr_critical" value="2"/>
+                                    <input class="cap no-border center-text" type="number" name="attr_critical" value="2"/>
                                 </div>
-                                <span class="bold">Critical</span>
                             </div>
-                            <span class="col cap-sep-col bold">&#129046;</span>
+                            <span class="col cap-sep-col bold"></span>
                             <div class="col cap-main-col center-text">
+                                <span class="bold">Accuracy</span>
                                 <div class="row accuracy padding-3">
                                     <span class="bold">A:</span>
-                                    <input class="cap" type="number" name="attr_accuracy" value="10"/>
+                                    <input class="cap no-border center-text" type="number" name="attr_accuracy" value="10"/>
                                 </div>
-                                <span class="bold">Accuracy</span>
                             </div>
-                            <span class="col cap-sep-col bold">&#129046;</span>
+                            <span class="col cap-sep-col bold"></span>
                             <div class="col cap-main-col center-text">
+                                <span class="bold">Penetration</span>
                                 <div class="row penetration padding-3">
                                     <span class="bold">P:</span>
-                                    <input class="cap" type="number" name="attr_penetration" value="5"/>
+                                    <input class="cap no-border center-text" type="number" name="attr_penetration" value="5"/>
                                 </div>
-                                <span class="bold">Penetration</span>
                             </div>
+                        </div>
+                        <div class="row">
+                            <span>
+                                • Roll 1d20 when your Action Targets at least 1 Foe.
+                            </span>
+                            <br></br>
+                            <span>
+                                • Must be <= than <b>CAP</b> Values to succeed.
+                            </span>
+<!--                            <span>Roll 1d20 when an Action targets at least 1 Foe. Must be equal or less tab <b>CAP</b> Values to succeed</span>-->
+                        </div>
+                    </div>
+
+                    <!--        Special Action Limits-->
+                    <div class="header4 section">
+                        <span class="header">Special Action Limits</span>
+                    </div>
+                    <div class="common4 section">
+                        <div class="row center-text">
+                            <span class="bold">Trigger:</span>
+                            <input class="no-border border-bottom-grey-1 center-text padding-3" type="number" name="attr_trigger" value="0"/>
+                            <span class="bold">Sustain:</span>
+                            <input class="no-border border-bottom-grey-1 center-text padding-3" type="number" name="attr_sustain" value="0"/>
+                            <span class="bold">Amplify:</span>
+                            <input class="no-border border-bottom-grey-1 center-text padding-3" type="number" name="attr_amplify" value="0"/>
                         </div>
                     </div>
 
                     <!--        Action Pool-->
-                    <div class="header4 section">
+                    <div class="header5 section">
                         <span class="header">Action Pool</span>
                     </div>
-                    <div class="common4 section">
-                        <span>Check 2 Boxes when using a Slow Action. Check 1 Box when using a Fast Action.</span>
+                    <div class="common5 section">
                         <div class="row center-text padding-top5">
                             <input type="checkbox" style="width: 25px; height: 25px"/>
                             <input type="checkbox" style="width: 25px; height: 25px"/>
                             <input type="checkbox" style="width: 25px; height: 25px"/>
                             <input type="checkbox" style="width: 25px; height: 25px"/>
                         </div>
+                        <span class="padding-left10 padding-right20">• Slow Action: Check 2</span>
+                        <span class="padding-left10">• Fast Action: Check 1</span>
+<!--                        <span>Check 2 Boxes when using a Slow Action. Check 1 Box when using a Fast Action.</span>-->
                     </div>
 
                 </div>
@@ -611,7 +682,7 @@
                     <!--        Movement Row-->
                     <div class="actions-info-grid">
                         <span class="action-name action-info-title">MOVEMENT</span>
-                        <span class="action-effect action-info">You cannot end your Movement in an Occupied Square.</span>
+                        <span class="action-effect action-info">• You cannot end your Movement in an Occupied Square.</span>
                     </div>
 
                     <!--        Move Row-->
@@ -647,30 +718,29 @@
                     <!--        Maneuver Title-->
                     <div class="actions-info-grid">
                         <span class="action-name action-info-title">MANEUVER</span>
-                        <span class="action-effect action-info">You cannot end your Maneuver in an Occupied Square.</span>
+                        <span class="action-effect action-info">• You cannot end your Maneuver in an Occupied Square.</span>
                     </div>
 
                     <!--        Maneuver Row-->
                     <div class="width100">
                         <div class="actions-grid">
-                            <div class="action-button">
-                                <div>
-                                    <input class="settings" type="checkbox" name="attr_maneuver_settings_flag"
-                                           value="on" style="width: 25px; height: 25px"/>
-                                    <span>y</span>
-                                    <button type='roll' name='roll_skill' style="font-size: 1.2em;"
-                                            value='@{whisper_state}&{template:skill} {{name=@{maneuver_name}}} {{subtags=@{statname}}} {{no-roll=[[@{actionmod}]]}} {{roll=[[[[@{advantage_roll}+1]]d20@{advantage_dice}cs<@{actionmod}cf>[[@{actionmod}+1]]]]}} {{speed=@{maneuver_speed}}} {{description=@{maneuver_description}}}'>
-                                    </button>
-                                </div>
+                            <div class="action-name action-centered">
+                                <button type='roll' name='roll_skill' style="font-size: 1.2em;"
+                                        value='@{whisper_state}&{template:skill} {{name=@{maneuver_name}}} {{subtags=@{statname}}} {{no-roll=[[@{actionmod}]]}} {{roll=[[[[@{advantage_roll}+1]]d20@{advantage_dice}cs<@{actionmod}cf>[[@{actionmod}+1]]]]}} {{speed=@{maneuver_speed}}} {{description=@{maneuver_description}}}'>
+                                    <span name="attr_maneuver_name"></span>
+                                </button>
                             </div>
-                            <span class="action-name action-centered" name="attr_maneuver_name"></span>
                             <div class="action-type action-centered"></div>
                             <div class="action-target action-centered"></div>
                             <div class="action-range action-centered"></div>
                             <span class="action-effect action-leftCentered" name="attr_maneuver_description"></span>
                             <span class="action-speed action-centered" name="attr_maneuver_speed"></span>
+                            <div class="action-button settings-box">
+                                <input class="settings" type="checkbox" name="attr_maneuver_settings_flag"
+                                       value="on" style="width: 25px; height: 25px"/>
+                                <span>i</span>
+                            </div>
                         </div>
-
                         <input type="hidden" class="maneuver_display_settings_flag"
                                name="attr_maneuver_display_settings_flag"
                                value="hide"/>
@@ -733,17 +803,12 @@
                     <!--        Basic Action Melee-->
                     <div class="width100">
                         <div class="actions-grid">
-                            <div class="action-button">
-                                <div>
-                                    <input class="settings" type="checkbox" name="attr_melee_settings_flag" value="on"
-                                           style="width: 25px; height: 25px"/>
-                                    <span>y</span>
-                                    <button type='roll' name='roll_cap'
-                                            value='@{whisper_state}&{template:basic-action} {{name=@{melee_name}}} {{cap=[[[[@{advantage_roll}+1]]d20@{advantage_dice}cs<[[@{critical}+@{critical_mod}]]cf>[[@{accuracy}+@{accuracy_mod}+1]]]]}} {{damage=[[0@{melee_dice} + @{melee_dice_bonus}@{damage_mod_text}]]}} {{penetration=[[@{penetration}+@{penetration_mod}]]}} {{dmgcrit=[[10@{melee_dice}kh1*{{@{melee_dice}>1}}+@{melee_dice_bonus}@{damage_mod_text}]]}} {{speed=Slow}} {{type=Melee}} {{range=@{melee_range}}} {{target=@{melee_target}}} {{description=@{melee_description}}} {{against=[[@{melee_against}]]}}'>
-                                    </button>
-                                </div>
+                            <div class="action-name action-centered">
+                                <button type='roll' name='roll_cap'
+                                        value='@{whisper_state}&{template:basic-action} {{name=@{melee_name}}} {{cap=[[[[@{advantage_roll}+1]]d20@{advantage_dice}cs<[[@{critical}+@{critical_mod}]]cf>[[@{accuracy}+@{accuracy_mod}+1]]]]}} {{damage=[[0@{melee_dice} + @{melee_dice_bonus}@{damage_mod_text}]]}} {{penetration=[[@{penetration}+@{penetration_mod}]]}} {{dmgcrit=[[10@{melee_dice}kh1*{{@{melee_dice}>1}}+@{melee_dice_bonus}@{damage_mod_text}]]}} {{speed=Slow}} {{type=Melee}} {{range=@{melee_range}}} {{target=@{melee_target}}} {{description=@{melee_description}}} {{against=[[@{melee_against}]]}}'>
+                                    <span name="attr_melee_name"></span>
+                                </button>
                             </div>
-                            <span class="action-name action-centered" name="attr_melee_name"></span>
                             <div class="action-type action-centered">Melee</div>
                             <span class="action-target action-centered" name="attr_melee_target"></span>
                             <span class="action-range action-centered" name="attr_melee_range"></span>
@@ -765,6 +830,11 @@
                                 </div>
                             </div>
                             <div class="action-speed action-centered">Slow</div>
+                            <div class="action-button settings-box">
+                                <input class="settings" type="checkbox" name="attr_melee_settings_flag"
+                                       value="on" style="width: 25px; height: 25px"/>
+                                <span>i</span>
+                            </div>
                         </div>
 
                         <input type="hidden" class="melee_display_settings_flag" name="attr_melee_display_settings_flag"
@@ -817,17 +887,12 @@
                     <!--        Basic Action Ranged-->
                     <div class="width100">
                         <div class="actions-grid">
-                            <div class="action-button">
-                                <div>
-                                    <input class="settings" type="checkbox" name="attr_ranged_settings_flag" value="on"
-                                           style="width: 25px; height: 25px"/>
-                                    <span>y</span>
-                                    <button type='roll' name='roll_cap'
-                                            value='@{whisper_state}&{template:basic-action} {{name=@{ranged_name}}} {{cap=[[[[@{advantage_roll}+1]]d20@{advantage_dice}cs<[[@{critical}+@{critical_mod}]]cf>[[@{accuracy}+@{accuracy_mod}+1]]]]}} {{damage=[[0@{ranged_dice} + @{ranged_dice_bonus}@{damage_mod_text}]]}} {{penetration=[[@{penetration}+@{penetration_mod}]]}} {{dmgcrit=[[10@{ranged_dice}kh1*{{@{ranged_dice}>1}}+@{ranged_dice_bonus}@{damage_mod_text}]]}} {{speed=Slow}} {{type=Ranged}} {{range=@{ranged_range}}} {{target=@{ranged_target}}} {{description=@{ranged_description}}} {{against=[[@{ranged_against}]]}}'>
-                                    </button>
-                                </div>
+                            <div class="action-name action-centered">
+                                <button type='roll' name='roll_cap'
+                                        value='@{whisper_state}&{template:basic-action} {{name=@{ranged_name}}} {{cap=[[[[@{advantage_roll}+1]]d20@{advantage_dice}cs<[[@{critical}+@{critical_mod}]]cf>[[@{accuracy}+@{accuracy_mod}+1]]]]}} {{damage=[[0@{ranged_dice} + @{ranged_dice_bonus}@{damage_mod_text}]]}} {{penetration=[[@{penetration}+@{penetration_mod}]]}} {{dmgcrit=[[10@{ranged_dice}kh1*{{@{ranged_dice}>1}}+@{ranged_dice_bonus}@{damage_mod_text}]]}} {{speed=Slow}} {{type=Ranged}} {{range=@{ranged_range}}} {{target=@{ranged_target}}} {{description=@{ranged_description}}} {{against=[[@{ranged_against}]]}}'>
+                                    <span name="attr_ranged_name"></span>
+                                </button>
                             </div>
-                            <span class="action-name action-centered" name="attr_ranged_name"></span>
                             <div class="action-type action-centered">Ranged</div>
                             <span class="action-target action-centered" name="attr_ranged_target"></span>
                             <span class="action-range action-centered" name="attr_ranged_range"></span>
@@ -850,6 +915,11 @@
                                 </div>
                             </div>
                             <div class="action-speed action-centered">Slow</div>
+                            <div class="action-button settings-box">
+                                <input class="settings" type="checkbox" name="attr_ranged_settings_flag"
+                                       value="on" style="width: 25px; height: 25px"/>
+                                <span>i</span>
+                            </div>
                         </div>
 
                         <input type="hidden" class="ranged_display_settings_flag"
@@ -902,14 +972,6 @@
                     <!--        Class Actions Title-->
                     <div class="actions-info-grid">
                         <span class="action-name action-info-title">CLASS ACTIONS</span>
-                        <div class="action-effect">
-                            <span style="font-size: 0.75em">Trigger Limit:</span>
-                            <input class="x-small" type="number" name="attr_trigger" value="0"/>
-                            <span style="font-size: 0.75em">Sustain Limit:</span>
-                            <input class="x-small" type="number" name="attr_sustain" value="0"/>
-                            <span style="font-size: 0.75em">Amplify Limit:</span>
-                            <input class="x-small" type="number" name="attr_amplify" value="0"/>
-                        </div>
                     </div>
 
                     <!--        Class Actions-->
@@ -917,18 +979,12 @@
                         <fieldset class="repeating_actions">
                             <div class="row">
                                 <div class="actions-grid">
-                                    <div class="action-button">
-                                        <div>
-                                            <input class="settings" type="checkbox" name="attr_settingsFlag" value="on"
-                                                   checked="checked" style="width: 25px; height: 25px"/>
-                                            <span>y</span>
-                                        </div>
+                                    <div class="action-name action-centered">
                                         <button type='roll' name='roll_action'
                                                 value='@{whisper_state}&{template:action} {{tideTurner=[[0]]}} {{name=@{action_name}}} {{subtag1=@{action_subtype1}}} {{subtag2=@{action_subtype2}}} {{rollType=[[@{action_roll_type}]]}} {{cap=[[[[@{advantage_roll}+1]]d20@{advantage_dice}cs<[[@{critical}+@{critical_mod}]]cf>[[@{accuracy}+@{accuracy_mod}+1]]]]}} {{damage=[[0@{action_dice} + @{action_dice_bonus}@{damage_mod_text}]]}} {{penetration=[[@{penetration}+@{penetration_mod}]]}} {{dmgcrit=[[10@{action_dice}kh1*{{@{action_dice}>1}}+@{action_dice_bonus}@{damage_mod_text}]]}} {{against=[[@{action_against}]]}} {{healing=[[0@{action_healing_dice} + @{action_healing_dice_bonus}]]}} {{speed=@{action_speed}}} {{target=@{action_target}}} {{type=@{action_type}}} {{range=@{action_range}@{action_field_description}}} {{description=@{action_description}}} {{ampEffect=@{action_amp_effect}}} {{trigCondition=@{action_trig_condition}}} {{trigEffect=@{action_trig_effect}}} {{sustEffect=@{action_sust_effect}}}'>
+                                            <span name="attr_action_name"></span>
                                         </button>
                                     </div>
-
-                                    <span class="action-name action-centered" name="attr_action_name"></span>
                                     <div class="action-type action-centered">
                                         <div class="col">
                                             <span class="row border-bottom-1" name="attr_action_subtype1"></span>
@@ -1003,6 +1059,11 @@
                                         </div>
                                     </div>
                                     <span class="action-speed action-centered" name="attr_action_speed"></span>
+                                    <div class="action-button settings-box">
+                                        <input class="settings" type="checkbox" name="attr_settingsFlag"
+                                               value="on" style="width: 25px; height: 25px"/>
+                                        <span>i</span>
+                                    </div>
                                 </div>
 
                                 <input type="hidden" class="displaySettingsFlag" name="attr_displaySettingsFlag"/>
@@ -1183,18 +1244,12 @@
                         <fieldset class="repeating_tideTurners">
                             <div class="row">
                                 <div class="actions-grid">
-                                    <div class="action-button">
-                                        <div>
-                                            <input class="settings" type="checkbox" name="attr_settingsFlag" value="on"
-                                                   checked="checked" style="width: 25px; height: 25px"/>
-                                            <span>y</span>
-                                        </div>
+                                    <div class="action-name action-tide-centered">
                                         <button type='roll' name='roll_action'
                                                 value='@{whisper_state}&{template:action} {{tideTurner=[[1]]}} {{name=@{tide_action_name}}} {{subtag1=@{tide_action_subtype1}}} {{subtag2=@{tide_action_subtype2}}} {{rollType=[[@{tide_action_roll_type}]]}} {{cap=[[[[@{advantage_roll}+1]]d20@{advantage_dice}cs<[[@{critical}+@{critical_mod}]]cf>[[@{accuracy}+@{accuracy_mod}+1]]]]}} {{damage=[[0@{tide_action_dice} + @{tide_action_dice_bonus}@{damage_mod_text}]]}} {{penetration=[[@{penetration}+@{penetration_mod}]]}} {{dmgcrit=[[10@{tide_action_dice}kh1*{{@{tide_action_dice}>1}}+@{tide_action_dice_bonus}@{damage_mod_text}]]}} {{against=[[@{tide_action_against}]]}} {{healing=[[0@{tide_action_healing_dice} + @{tide_action_healing_dice_bonus}]]}} {{speed=@{tide_action_speed}}} {{target=@{tide_action_target}}} {{type=@{tide_action_type}}} {{range=@{tide_action_range}@{tide_action_field_description}}} {{description=@{tide_action_description}}} {{ampEffect=@{tide_action_amp_effect}}} {{trigCondition=@{tide_action_trig_condition}}} {{trigEffect=@{tide_action_trig_effect}}} {{sustEffect=@{tide_action_sust_effect}}}'>
+                                            <span name="attr_tide_action_name"></span>
                                         </button>
                                     </div>
-
-                                    <span class="action-name action-tide-centered" name="attr_tide_action_name"></span>
                                     <div class="action-type action-tide-centered">
                                         <div class="col">
                                             <span class="row border-bottom-1" name="attr_tide_action_subtype1"></span>
@@ -1270,8 +1325,12 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <span class="action-speed action-tide-centered" name="attr_tide_action_speed">
-                                    </span>
+                                    <span class="action-speed action-tide-centered" name="attr_tide_action_speed"></span>
+                                    <div class="action-button settings-box">
+                                        <input class="settings" type="checkbox" name="attr_settingsFlag"
+                                               value="on" style="width: 25px; height: 25px"/>
+                                        <span>i</span>
+                                    </div>
                                 </div>
 
                                 <input type="hidden" class="displaySettingsFlag" name="attr_displaySettingsFlag"/>
