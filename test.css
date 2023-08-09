@@ -2,15 +2,17 @@
 
 @font-face {
     font-family: Fungfont;
-    src: url(https://github.com/Roll20/roll20-character-sheets/blob/master/Emberwind/fonts/Kungfont-Regular.otf) format("opentype");
+    src: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Emberwind/fonts/Kungfont-Regular.otf") format("opentype");
+    /*src: url(https://github.com/Roll20/roll20-character-sheets/blob/master/Emberwind/fonts/Kungfont-Regular.otf) format("truetype");*/
 }
 
 @font-face {
     font-family: ProximaNova;
-    src: url(https://github.com/Roll20/roll20-character-sheets/blob/master/Emberwind/fonts/ProximaNova-Regular.ttf) format("opentype");
+    src: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Emberwind/fonts/ProximaNova-Regular.ttf");
+    /*src: url(https://github.com/lexibrown/roll20-character-sheets/raw/master/Emberwind/fonts/ProximaNova-Regular.ttf) format("truetype");*/
 }
 
-.kungfont {
+.charsheet .kungfont {
     font-family: Fungfont, serif;
     font-size: 32px;
     border: 2px solid transparent;
@@ -22,9 +24,67 @@
 
 /*----------------- Container ------------------*/
 
-.container, .charsheet {
+.charsheet {
+    background-color: white;
+    color: black;
+}
+
+.container {
     width: 1100px;
     height: 900px;
+}
+
+body.sheet-darkmode button,
+body.sheet-darkmode input,
+body.sheet-darkmode optgroup,
+body.sheet-darkmode select,
+body.sheet-darkmode textarea,
+body.sheet-darkmode .charsheet {
+    color: #eee
+}
+
+body.sheet-darkmode .btn,
+body.sheet-darkmode .btn.btn-default {
+    color: #c8c3bc;
+    text-shadow: rgba(24, 26, 27, .75) 0px 1px 1px;
+    background-color: #1e2021;
+    background-image: linear-gradient(#181a1b, #26292b);
+    border-color: #3e4446 #3e4446 #43494c;
+    box-shadow: rgba(24, 26, 27, .2) 0px 1px 0px inset, rgba(0, 0, 0, .05) 0px 1px 2px
+}
+
+/*----------------- Images ------------------*/
+
+img.toughness-img {
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/toughness-b.png");
+}
+
+body.sheet-darkmode img.toughness-img {
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/toughness-w.png");
+}
+
+img.resistance-img {
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/resistance-b.png");
+}
+
+body.sheet-darkmode img.resistance-img {
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/resistance-w.png");
+}
+
+img.dodge-img {
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/dodge-b.png");
+}
+
+body.sheet-darkmode img.dodge-img {
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/dodge-w.png");
+}
+
+img.willpower-img {
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/willpower-b.png");
+}
+
+body.sheet-darkmode img.willpower-img {
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/willpower-w.png");
 }
 
 /*----------------- Sheet Settings ------------------*/
@@ -98,7 +158,7 @@ input.page-control[value="npc"] ~ .block-container.block-npc {
 button.tab {
     width: 150px;
     height: 25px;
-    border: 2px solid white;
+    border: none;
     margin: -5px 0 0 0;
     text-align: center;
     display: inline-block;
@@ -111,14 +171,14 @@ button.tab:hover {
     background: dimgrey;
     color: white;
     font-weight: bold;
-    border-style: solid;
+    /*border-style: solid;*/
 }
 
 button.tab:focus, button.tab:visited {
     background: dimgrey;
     /*color: white;*/
     font-weight: bold;
-    border-style: solid;
+    /*border-style: solid;*/
 }
 
 input.tab {
@@ -201,6 +261,13 @@ div.tab-content {
     color: white;
 }
 
+.toggle-advantage:hover,
+.toggle-normal:hover,
+.toggle-disadvantage:hover {
+    background: darkgray;
+    color: white;
+}
+
 input.page-control[value="on"] ~ .block-container.mod-block {
     display: block;
 }
@@ -230,7 +297,7 @@ input.page-control[value="on"] ~ .block-container.mod-block {
 .main {
     display: grid;
     grid-gap: 4px;
-    grid-template-columns: 30% 1fr;
+    grid-template-columns: 35% 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: "main-stats main-actions";
 }
@@ -241,11 +308,11 @@ input.page-control[value="on"] ~ .block-container.mod-block {
     width: fit-content;
     height: fit-content;
     padding-right: 5px;
-    grid-row-gap: 5px;
+    grid-row-gap: 2px;
     grid-column-gap: 5px;
     grid-template-columns: auto;
     grid-auto-rows: fit-content(100%);
-    grid-template-areas: "image" "name" "info" "aspects" "attribute1" "header1" "stats1" "common1" "attribute2" "header2" "stats2" "common2" "header3" "common3" "header4" "common4";
+    grid-template-areas: "image" "name" "tier" "info" "aspects" "attribute1" "header1" "stats1" "common1" "attribute2" "header2" "stats2" "common2" "header3" "common3" "header4" "common4" "header5" "common5";
 }
 
 .main-inventory {
@@ -442,15 +509,32 @@ input.page-control[value="on"] ~ .block-container.mod-block {
 }
 
 .condition-grid > div,
-.condition-with-foe-grid > div{
+.condition-with-foe-grid > div {
     background-color: white;
     padding: 5px;
     border-bottom: 1px solid dimgrey;
 }
 
-.condition-grid > div:nth-child(1), .condition-grid > div:nth-child(2),
-.condition-with-foe-grid > div:nth-child(1), .condition-with-foe-grid > div:nth-child(2), .condition-with-foe-grid > div:nth-child(3) {
+body.sheet-darkmode .condition-grid > div,
+body.sheet-darkmode .condition-with-foe-grid > div {
+    background-color: dimgrey;
+    border-bottom: 1px solid white;
+}
+
+.condition-grid > div:nth-child(1),
+.condition-grid > div:nth-child(2),
+.condition-with-foe-grid > div:nth-child(1),
+.condition-with-foe-grid > div:nth-child(2),
+.condition-with-foe-grid > div:nth-child(3) {
     border-right: 1px solid dimgrey;
+}
+
+body.sheet-darkmode .condition-grid > div:nth-child(1),
+body.sheet-darkmode .condition-grid > div:nth-child(2),
+body.sheet-darkmode .condition-with-foe-grid > div:nth-child(1),
+body.sheet-darkmode .condition-with-foe-grid > div:nth-child(2),
+body.sheet-darkmode .condition-with-foe-grid > div:nth-child(3) {
+    border-right: 1px solid white;
 }
 
 .condition-grid > .condition,
@@ -527,39 +611,93 @@ input.page-control[value="on"] ~ .block-container.mod-block {
     align-items: center;
 }
 
+.name-header {
+    height: 40px;
+    width: 115px;
+    margin-left: -20px;
+    padding: 0 5px 0 5px;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    color: white;
+    background-position-y: 2px;
+    background-position-x: 0;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/step-header.PNG");
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
 .name span {
     float: left;
     width: fit-content;
     font-weight: bold;
+    margin-left: 20px;
+    padding-top: 10px;
     position: center;
-    padding: 3px;
+    font-size: 1.25em;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
 }
 
 .name input {
     width: 85%;
     padding: 3px;
+    border-bottom: 1px solid dimgrey;
+}
+
+/*----------------- Tier section ------------------*/
+
+.tier {
+    grid-area: tier;
+    display: flex;
+    border-bottom: 2px solid lightgrey;
+}
+
+.tier span {
+    font-weight: bold;
+    padding: 3px;
+}
+
+.tier input {
+    padding: 3px;
+    text-align: center;
+}
+
+.info-tier-box {
+    padding-top: 2px;
 }
 
 /*----------------- Info section ------------------*/
 .info {
     grid-area: info;
     height: auto;
-    border: 3px solid #EE5F57;
-}
-
-.info-hp-box {
-    width: 45%;
-    padding-top: 5px;
-    padding-bottom: 4px;
-    border-right: 3px solid #EE5F57;
-    border-bottom: 3px solid #EE5F57;
+    /*border: 3px solid #EE5F57;*/
 }
 
 .info-hp-text {
-    background-color: #EE5F57;
-    color: white;
-    font-weight: bold;
+    border: 3px solid lightgrey;
+    background-color: lightgrey;
     padding: 10px 5px 10px 5px;
+    color: dimgrey;
+    font-weight: bold;
+}
+
+.info-hp-box {
+    width: 35%;
+    background-color: #e6e7e8;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    margin-left: -5px;
+    border: 3px solid lightgrey;
+}
+
+.info-hp-box input {
+    font-weight: bold;
+    text-align: right;
+    background: transparent;
 }
 
 input.medium {
@@ -574,19 +712,20 @@ input.medium {
 
 .info-class-box {
     align-content: center;
-    padding-top: 5px;
-    padding-right: 5px;
-    float: right;
+    padding-top: 7px;
+    padding-left: 5px;
+    font-weight: bold;
 }
 
 .info-subclass-box {
-    width: 65%;
-    padding-left: 5px;
+    padding: 2px 5px 2px 5px;
+    font-weight: bold;
 }
 
 .info-custom-class {
     padding: 2px 0 2px 5px;
     display: none;
+    font-weight: bold;
 }
 
 .class-control[value="custom"] ~ .info-custom-class {
@@ -596,7 +735,7 @@ input.medium {
 /*----------------- Aspects section ------------------*/
 .aspects {
     grid-area: aspects;
-    border-bottom: 3px solid dimgrey;
+    border-bottom: 3px solid lightgrey;
     display: none;
 }
 
@@ -604,6 +743,46 @@ input.medium {
     width: 30%;
     padding-left: 3px;
     padding-right: 3px;
+}
+
+/*----------------- Headers ------------------*/
+
+div.header {
+    background-color: dimgrey;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.header1 {
+    grid-area: header1;
+}
+
+.header2 {
+    grid-area: header2;
+}
+
+.header3 {
+    grid-area: header3;
+}
+
+.header4 {
+    grid-area: header4;
+}
+
+.header5 {
+    grid-area: header5;
+}
+
+.header1, .header2, .header3, .header4, .header5 {
+    background-color: dimgrey;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 2px;
+    padding-bottom: 2px;
 }
 
 /*----------------- Attribute section ------------------*/
@@ -620,69 +799,18 @@ input.medium {
 
 .attribute-col {
     display: inline-flex;
-    width: 49%;
+    width: 70%;
     font-weight: bold;
     text-align: center;
-    padding-top: 3px;
-    padding-bottom: 3px;
+    padding-top: 6px;
+    padding-bottom: 8px;
+    padding-right: 2px;
 }
 
 .character-version-control[value="aspect"] ~ .aspects,
 .character-version-control[value="attribute"] ~ .attribute1,
 .character-version-control[value="attribute"] ~ .attribute2 {
     display: block;
-}
-
-
-/*----------------- Headers ------------------*/
-
-div.header {
-    background-color: dimgrey;
-    color: white;
-    text-align: center;
-    font-weight: bold;
-    padding-top: 2px;
-    padding-bottom: 2px;
-}
-
-.header1 {
-    grid-area: header1;
-    background-color: dimgrey;
-    color: white;
-    text-align: center;
-    font-weight: bold;
-    padding-top: 2px;
-    padding-bottom: 2px;
-}
-
-.header2 {
-    grid-area: header2;
-    background-color: dimgrey;
-    color: white;
-    text-align: center;
-    font-weight: bold;
-    padding-top: 2px;
-    padding-bottom: 2px;
-}
-
-.header3 {
-    grid-area: header3;
-    background-color: dimgrey;
-    color: white;
-    text-align: center;
-    font-weight: bold;
-    padding-top: 2px;
-    padding-bottom: 2px;
-}
-
-.header4 {
-    grid-area: header4;
-    background-color: dimgrey;
-    color: white;
-    text-align: center;
-    font-weight: bold;
-    padding-top: 2px;
-    padding-bottom: 2px;
 }
 
 /*----------------- Stats ------------------*/
@@ -697,11 +825,22 @@ div.header {
 
 .stats-col {
     display: inline-flex;
-    width: 49%;
+    width: 70%;
     font-weight: bold;
     text-align: center;
+    padding: 3px 0 4px 2px;
+}
+
+.stat-value {
+    float: right;
     padding-top: 3px;
     padding-bottom: 3px;
+    margin-left: -2px;
+}
+
+.stat-value input {
+    text-align: right;
+    font-weight: bold;
 }
 
 /*----------------- Common ------------------*/
@@ -716,6 +855,7 @@ div.header {
 
 .skill-left {
     grid-area: skill-left;
+    border: 1px solid dimgrey;
 }
 
 .skill-label {
@@ -727,19 +867,51 @@ div.header {
     font-weight: bold;
     padding-top: 3px;
     padding-bottom: 3px;
+    margin-bottom: 0;
 }
 
 .skill-right {
     grid-area: skill-right;
+    border: 1px solid dimgrey;
 }
 
 .skill {
-    text-align: center;
+    display: block;
+    /*width: 99%;*/
+    height: auto;
+    /*text-align: center;*/
     font-weight: bold;
     font-size: 0.75em;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    border: 3px solid dimgrey;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border: 1px solid dimgrey;
+    background: #e6e7e8;
+    /*margin-bottom: -5px;*/
+}
+
+.skill input {
+    float: right;
+    text-align: right;
+    border: none;
+    background: transparent;
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
+.skill button[type=roll] {
+    background: transparent;
+    border: none;
+    font-weight: bold;
+    /*float: left;*/
+    padding: 2px;
+}
+
+.skill button[type=roll]:before {
+    /*content: " ";*/
+}
+
+.skill button[type=roll]:hover {
+    background-color: lightgrey;
 }
 
 .common3 {
@@ -748,6 +920,10 @@ div.header {
 
 .common4 {
     grid-area: common4;
+}
+
+.common5 {
+    grid-area: common5;
 }
 
 /*----------------- Actions ------------------*/
@@ -823,6 +999,26 @@ div.header {
     font-weight: bold;
 }
 
+.action-name button[type=roll] {
+    background: transparent;
+    border: none;
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+    white-space: normal;
+    word-wrap: break-word;
+    font-size: 1.0em;
+}
+
+.action-name button[type=roll]:before {
+    content: " ";
+}
+
+.action-name button[type=roll]:hover {
+    background-color: #e6e7e8;
+    color: blue;
+}
+
 .action-type {
     grid-area: action-type;
 }
@@ -896,6 +1092,7 @@ div.header {
     text-align: center;
     padding-top: 3px;
     padding-bottom: 3px;
+    margin-right: -5px;
 }
 
 .action-header-left {
@@ -907,6 +1104,7 @@ div.header {
     text-align: left;
     padding-top: 3px;
     padding-left: 5px;
+    margin-right: -5px;
 }
 
 .action-info-title {
@@ -998,6 +1196,7 @@ input.action-description-indicator[value="2"] ~ .action-auto-hit-description {
 
 .light-red {
     background-color: #feeceb;
+    /*background-color: #fbd4c9;*/
 }
 
 .light-red-text {
@@ -1010,6 +1209,10 @@ input.action-description-indicator[value="2"] ~ .action-auto-hit-description {
 
 .red-text {
     color: #f1413a;
+}
+
+body.sheet-darkmode .red-text {
+    color: #FEB8AE;
 }
 
 .deep-red {
@@ -1029,6 +1232,14 @@ input.action-description-indicator[value="2"] ~ .action-auto-hit-description {
     color: #14a4de;
 }
 
+body.sheet-darkmode .blue-text {
+    color: #cbe0f5;
+}
+
+.light-blue {
+    background-color: #cbe0f5;
+}
+
 .green {
     background-color: #BAE0CB;
 }
@@ -1037,12 +1248,28 @@ input.action-description-indicator[value="2"] ~ .action-auto-hit-description {
     color: #4abb88;
 }
 
+body.sheet-darkmode .green-text {
+    color: #d3ebdc;
+}
+
+.light-green {
+    background-color: #d3ebdc;
+}
+
 .yellow {
     background-color: #FDD5B0;
 }
 
 .yellow-text {
     color: #F9B276;
+}
+
+body.sheet-darkmode .yellow-text {
+    color: #fee3cb;
+}
+
+.light-yellow {
+    background-color: #fee3cb;
 }
 
 .red .blue .green .yellow {
@@ -1108,6 +1335,10 @@ input[type=number].medium {
 
 input.cap {
     width: 60%;
+}
+
+input.right {
+    text-align: right;
 }
 
 /*----------------- CAP Check ------------------*/
@@ -1298,6 +1529,14 @@ input.cap {
     border-bottom: 2px solid black;
 }
 
+.border-bottom-grey-1 {
+    border-bottom: 1px solid dimgrey;
+}
+
+.border-bottom-grey-2 {
+    border-bottom: 2px solid dimgrey;
+}
+
 .border-red {
     border: 3px solid #EE5F57;
 }
@@ -1325,6 +1564,8 @@ input[type=number].move-number-input {
     -moz-appearance: textfield; /* Firefox */
     width: 1.9em;
     height: 1.5em;
+    border: none;
+    border-bottom: 1px solid grey;
 }
 
 .charsheet button[type=roll].custom-roll-button::before {
@@ -1437,17 +1678,28 @@ input[type=checkbox].tab-hide:hover * {
 
 /*----------------- Settings ------------------*/
 
+.settings-box {
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: #3FB315;
+}
+
 .settings {
     z-index: 2;
     opacity: 0;
+    bottom: 50%;
+    left: -50%;
     position: absolute;
 }
 
 /* Settings button as gear (uses letter 'y' in pictos font) as a checkbox to be used with js */
 .settings + span {
     display: inline-block;
-    /*margin-left: -25px;*/
-    position: relative;
+    position: absolute;
+    bottom: 50%;
+    left: -50%;
     font-size: 20px;
     font-family: pictos, fantasy;
     color: #A0A0A0;
@@ -1967,13 +2219,21 @@ input[type=checkbox].small-hex-button {
 
 /*----------------- Roll templates ------------------*/
 
-.sheet-rolltemplate-skill .container,
-.sheet-rolltemplate-basic-action .container,
-.sheet-rolltemplate-action .container {
+
+.sheet-rolltemplate-skill .sheet-container,
+.sheet-rolltemplate-basic-action .sheet-container,
+.sheet-rolltemplate-action .sheet-container {
     background-color: #ffffff;
     border: 1px solid;
     padding: 2px;
     width: 189px;
+}
+
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-skill .sheet-container,
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-basic-action .sheet-container,
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-action .sheet-container {
+    background-color: gray;
+    color: white;
 }
 
 .sheet-rolltemplate-skill div,
@@ -1982,9 +2242,9 @@ input[type=checkbox].small-hex-button {
     padding: 2px;
 }
 
-.sheet-rolltemplate-skill .tcat,
-.sheet-rolltemplate-basic-action .tcat,
-.sheet-rolltemplate-action .tcat {
+.sheet-rolltemplate-skill .sheet-tcat,
+.sheet-rolltemplate-basic-action .sheet-tcat,
+.sheet-rolltemplate-action .sheet-tcat {
     font-weight: bold;
     font-size: 0.75em;
     font-variant: small-caps;
@@ -1993,15 +2253,15 @@ input[type=checkbox].small-hex-button {
     text-align: left;
 }
 
-.sheet-rolltemplate-skill .tcat-text,
-.sheet-rolltemplate-basic-action .tcat-text,
-.sheet-rolltemplate-action .tcat-text {
+.sheet-rolltemplate-skill .sheet-tcat-text,
+.sheet-rolltemplate-basic-action .sheet-tcat-text,
+.sheet-rolltemplate-action .sheet-tcat-text {
     font-size: 0.85em;
 }
 
-.sheet-rolltemplate-skill .tcat-header,
-.sheet-rolltemplate-basic-action .tcat-header,
-.sheet-rolltemplate-action .tcat-header {
+.sheet-rolltemplate-skill .sheet-tcat-header,
+.sheet-rolltemplate-basic-action .sheet-tcat-header,
+.sheet-rolltemplate-action .sheet-tcat-header {
     color: white;
     font-weight: bold;
     font-size: 1em;
@@ -2009,17 +2269,17 @@ input[type=checkbox].small-hex-button {
     line-height: 20px;
 }
 
-.sheet-rolltemplate-skill .tcat-subheader,
-.sheet-rolltemplate-basic-action .tcat-subheader,
-.sheet-rolltemplate-action .tcat-subheader {
+.sheet-rolltemplate-skill .sheet-tcat-subheader,
+.sheet-rolltemplate-basic-action .sheet-tcat-subheader,
+.sheet-rolltemplate-action .sheet-tcat-subheader {
     color: white;
     font-size: 0.8em;
     font-style: italic;
 }
 
-.sheet-rolltemplate-skill .separator,
-.sheet-rolltemplate-basic-action .separator,
-.sheet-rolltemplate-action .separator {
+.sheet-rolltemplate-skill .sheet-separator,
+.sheet-rolltemplate-basic-action .sheet-separator,
+.sheet-rolltemplate-action .sheet-separator {
     background-color: #d3d3d3;
     width: auto;
     height: 1px;
@@ -2030,6 +2290,13 @@ input[type=checkbox].small-hex-button {
 .sheet-rolltemplate-action .inlinerollresult {
     background-color: #ffffff;
     border: 3px solid #000000;
+}
+
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-skill .inlinerollresult,
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-basic-action .inlinerollresult,
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-action .inlinerollresult {
+    background-color: gray;
+    color: white;
 }
 
 .sheet-rolltemplate-skill .inlinerollresult.fullcrit,
