@@ -297,6 +297,24 @@ input.page-control[value="on"] ~ .block-container.mod-block {
     grid-template-areas: "top-detail" "middle-detail" "bottom-detail";
 }
 
+.condition-grid {
+    display: grid;
+    width: auto;
+    grid-template-columns: 2fr 0.75fr 75%;
+    grid-auto-rows: fit-content(100%);
+    grid-template-areas: "condition value description";
+}
+
+.condition-grid > div {
+    background-color: white;
+    padding: 5px;
+    border-bottom: 1px solid dimgrey;
+}
+
+.condition-grid > div:nth-child(1), .condition-grid > div:nth-child(2) {
+    border-right: 1px solid dimgrey;
+}
+
 .quick-guide-grid {
     display: grid;
     width: auto;
@@ -403,7 +421,7 @@ input.page-control[value="on"] ~ .block-container.mod-block {
     background-position-x: 0;
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    background-image: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/guide.png");
+    background-image: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/step-header.PNG");
 }
 
 .guide-header-big {
@@ -973,6 +991,10 @@ input.action-description-indicator[value="2"] ~ .action-auto-hit-description {
 
 /*----------------- Colours ------------------*/
 
+.white-text {
+    color: white;
+}
+
 .light-red {
     background-color: #feeceb;
 }
@@ -1327,10 +1349,11 @@ input[type=number].move-number-input {
 
 .inventory-header {
     font-weight: bold;
-    font-variant: small-caps;
-    font-size: 1.3em;
-    border-top: 2px solid dimgrey;
+    /*font-variant: small-caps;*/
+    font-size: 1.7em;
+    border-bottom: 2px solid dimgrey;
     width: fit-content;
+    margin-bottom: 5px;
 }
 
 .inventory-title {
