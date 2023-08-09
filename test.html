@@ -662,13 +662,13 @@
                     </div>
 
                     <!--        Maneuver Row-->
-                    <div class="width100">
-                        <div class="actions-grid">
+                    <details class="width100">
+                        <summary class="actions-grid">
                             <div class="action-button">
                                 <div>
-                                    <input class="settings" type="checkbox" name="attr_maneuver_settings_flag"
-                                           value="on" style="width: 25px; height: 25px"/>
-                                    <span>y</span>
+                                    <!--                                    <input class="settings" type="checkbox" name="attr_maneuver_settings_flag"-->
+                                    <!--                                           value="on" style="width: 25px; height: 25px"/>-->
+                                    <!--                                    <span>y</span>-->
                                     <button type="roll" name="roll_skill" style="font-size: 1.2em;"
                                             value="@{whisper_state}&{template:skill} {{name=@{maneuver_name}}} {{subtags=@{statname}}} {{no-roll=[[@{actionmod}]]}} {{roll=[[[[@{advantage_roll}+1]]d20@{advantage_dice}cs<@{actionmod}cf>[[@{actionmod}+1]]]]}} {{speed=@{maneuver_speed}}} {{description=@{maneuver_description}}}">
                                     </button>
@@ -680,11 +680,11 @@
                             <div class="action-range action-centered"></div>
                             <span class="action-effect action-leftCentered" name="attr_maneuver_description"></span>
                             <span class="action-speed action-centered" name="attr_maneuver_speed"></span>
-                        </div>
+                        </summary>
 
-                        <input type="hidden" class="maneuver_display_settings_flag"
-                               name="attr_maneuver_display_settings_flag"
-                               value="hide"/>
+                        <!--                        <input type="hidden" class="maneuver_display_settings_flag"-->
+                        <!--                               name="attr_maneuver_display_settings_flag"-->
+                        <!--                               value="hide"/>-->
                         <div class="width60 displaySettings action-detail-grid">
                             <div class="sheet-row padding-2525">
                                 <div class="sheet-col">
@@ -734,7 +734,7 @@
                                 <textarea class="height50 width95" name="attr_maneuver_description"></textarea>
                             </div>
                         </div>
-                    </div>
+                    </details>
 
                     <!--        Basic Actions Title-->
                     <div class="actions-info-grid">
@@ -742,13 +742,13 @@
                     </div>
 
                     <!--        Basic Action Melee-->
-                    <div class="width100">
-                        <div class="actions-grid">
+                    <details class="width100">
+                        <summary class="actions-grid">
                             <div class="action-button">
                                 <div>
-                                    <input class="settings" type="checkbox" name="attr_melee_settings_flag" value="on"
-                                           style="width: 25px; height: 25px"/>
-                                    <span>y</span>
+                                    <!--                                    <input class="settings" type="checkbox" name="attr_melee_settings_flag" value="on"-->
+                                    <!--                                           style="width: 25px; height: 25px"/>-->
+                                    <!--                                    <span>y</span>-->
                                     <button type="roll" name="roll_cap"
                                             value="@{whisper_state}&{template:basic-action} {{name=@{melee_name}}} {{cap=[[[[@{advantage_roll}+1]]d20@{advantage_dice}cs<[[@{critical}+@{critical_mod}]]cf>[[@{accuracy}+@{accuracy_mod}+1]]]]}} {{damage=[[0@{melee_dice} + @{melee_dice_bonus}@{damage_mod_text}]]}} {{penetration=[[@{penetration}+@{penetration_mod}]]}} {{dmgcrit=[[10@{melee_dice}kh1*{{@{melee_dice}>1}}+@{melee_dice_bonus}@{damage_mod_text}]]}} {{speed=Slow}} {{type=Melee}} {{range=@{melee_range}}} {{target=@{melee_target}}} {{description=@{melee_description}}} {{against=[[@{melee_against}]]}}">
                                     </button>
@@ -776,10 +776,10 @@
                                 </div>
                             </div>
                             <div class="action-speed action-centered">Slow</div>
-                        </div>
+                        </summary>
 
-                        <input type="hidden" class="melee_display_settings_flag" name="attr_melee_display_settings_flag"
-                               value="hide"/>
+                        <!--                        <input type="hidden" class="melee_display_settings_flag" name="attr_melee_display_settings_flag"-->
+                        <!--                               value="hide"/>-->
                         <div class="width65 displaySettings action-detail-grid">
                             <div class="sheet-row padding-2525">
                                 <div class="sheet-col">
@@ -823,16 +823,16 @@
                                 <textarea class="height50 width95" name="attr_melee_description"></textarea>
                             </div>
                         </div>
-                    </div>
+                    </details>
 
                     <!--        Basic Action Ranged-->
-                    <div class="width100">
-                        <div class="actions-grid">
+                    <details class="width100">
+                        <summary class="actions-grid">
                             <div class="action-button">
                                 <div>
-                                    <input class="settings" type="checkbox" name="attr_ranged_settings_flag" value="on"
-                                           style="width: 25px; height: 25px"/>
-                                    <span>y</span>
+                                    <!--                                    <input class="settings" type="checkbox" name="attr_ranged_settings_flag" value="on"-->
+                                    <!--                                           style="width: 25px; height: 25px"/>-->
+                                    <!--                                    <span>y</span>-->
                                     <button type="roll" name="roll_cap"
                                             value="@{whisper_state}&{template:basic-action} {{name=@{ranged_name}}} {{cap=[[[[@{advantage_roll}+1]]d20@{advantage_dice}cs<[[@{critical}+@{critical_mod}]]cf>[[@{accuracy}+@{accuracy_mod}+1]]]]}} {{damage=[[0@{ranged_dice} + @{ranged_dice_bonus}@{damage_mod_text}]]}} {{penetration=[[@{penetration}+@{penetration_mod}]]}} {{dmgcrit=[[10@{ranged_dice}kh1*{{@{ranged_dice}>1}}+@{ranged_dice_bonus}@{damage_mod_text}]]}} {{speed=Slow}} {{type=Ranged}} {{range=@{ranged_range}}} {{target=@{ranged_target}}} {{description=@{ranged_description}}} {{against=[[@{ranged_against}]]}}">
                                     </button>
@@ -861,11 +861,11 @@
                                 </div>
                             </div>
                             <div class="action-speed action-centered">Slow</div>
-                        </div>
+                        </summary>
 
-                        <input type="hidden" class="ranged_display_settings_flag"
-                               name="attr_ranged_display_settings_flag"
-                               value="hide"/>
+                        <!--                        <input type="hidden" class="ranged_display_settings_flag"-->
+                        <!--                               name="attr_ranged_display_settings_flag"-->
+                        <!--                               value="hide"/>-->
                         <div class="width65 displaySettings action-detail-grid">
                             <div class="sheet-row padding-2525">
                                 <div class="sheet-col">
@@ -908,7 +908,7 @@
                                 <textarea class="height50 width95" name="attr_ranged_description"></textarea>
                             </div>
                         </div>
-                    </div>
+                    </details>
 
                     <!--        Class Actions Title-->
                     <div class="actions-info-grid">
@@ -926,14 +926,14 @@
                     <!--        Class Actions-->
                     <div class="width100">
                         <fieldset class="repeating_actions">
-                            <div class="sheet-row">
-                                <div class="actions-grid">
+                            <details class="sheet-row">
+                                <summary class="actions-grid">
                                     <div class="action-button">
-                                        <div>
-                                            <input class="settings" type="checkbox" name="attr_settingsFlag" value="on"
-                                                   checked="checked" style="width: 25px; height: 25px"/>
-                                            <span>y</span>
-                                        </div>
+                                        <!--                                        <div>-->
+                                        <!--                                            <input class="settings" type="checkbox" name="attr_settingsFlag" value="on"-->
+                                        <!--                                                   checked="checked" style="width: 25px; height: 25px"/>-->
+                                        <!--                                            <span>y</span>-->
+                                        <!--                                        </div>-->
                                         <button type="roll" name="roll_action"
                                                 value="@{whisper_state}&{template:action} {{tideTurner=[[0]]}} {{name=@{action_name}}} {{subtag1=@{action_subtype1}}} {{subtag2=@{action_subtype2}}} {{rollType=[[@{action_roll_type}]]}} {{cap=[[[[@{advantage_roll}+1]]d20@{advantage_dice}cs<[[@{critical}+@{critical_mod}]]cf>[[@{accuracy}+@{accuracy_mod}+1]]]]}} {{damage=[[0@{action_dice} + @{action_dice_bonus}@{damage_mod_text}]]}} {{penetration=[[@{penetration}+@{penetration_mod}]]}} {{dmgcrit=[[10@{action_dice}kh1*{{@{action_dice}>1}}+@{action_dice_bonus}@{damage_mod_text}]]}} {{against=[[@{action_against}]]}} {{healing=[[0@{action_healing_dice} + @{action_healing_dice_bonus}]]}} {{speed=@{action_speed}}} {{target=@{action_target}}} {{type=@{action_type}}} {{range=@{action_range}@{action_field_description}}} {{description=@{action_description}}} {{ampEffect=@{action_amp_effect}}} {{trigCondition=@{action_trig_condition}}} {{trigEffect=@{action_trig_effect}}} {{sustEffect=@{action_sust_effect}}}">
                                         </button>
@@ -1014,9 +1014,9 @@
                                         </div>
                                     </div>
                                     <span class="action-speed action-centered" name="attr_action_speed"></span>
-                                </div>
+                                </summary>
 
-                                <input type="hidden" class="displaySettingsFlag" name="attr_displaySettingsFlag"/>
+                                <!--                                <input type="hidden" class="displaySettingsFlag" name="attr_displaySettingsFlag"/>-->
                                 <div class="displaySettings width65">
                                     <div class="sheet-row padding-2525">
                                         <div class="sheet-col">
@@ -1175,7 +1175,7 @@
                                         <textarea class="height50 width95" name="attr_action_description"></textarea>
                                     </div>
                                 </div>
-                            </div>
+                            </details>
                         </fieldset>
                     </div>
 
@@ -1194,14 +1194,14 @@
                     <!--        Class Tide Turner Actions-->
                     <div class="width100">
                         <fieldset class="repeating_tideTurners">
-                            <div class="sheet-row">
-                                <div class="actions-grid">
+                            <details class="sheet-row">
+                                <summary class="actions-grid">
                                     <div class="action-button">
-                                        <div>
-                                            <input class="settings" type="checkbox" name="attr_settingsFlag" value="on"
-                                                   checked="checked" style="width: 25px; height: 25px"/>
-                                            <span>y</span>
-                                        </div>
+                                        <!--                                        <div>-->
+                                        <!--                                            <input class="settings" type="checkbox" name="attr_settingsFlag" value="on"-->
+                                        <!--                                                   checked="checked" style="width: 25px; height: 25px"/>-->
+                                        <!--                                            <span>y</span>-->
+                                        <!--                                        </div>-->
                                         <button type="roll" name="roll_action"
                                                 value="@{whisper_state}&{template:action} {{tideTurner=[[1]]}} {{name=@{tide_action_name}}} {{subtag1=@{tide_action_subtype1}}} {{subtag2=@{tide_action_subtype2}}} {{rollType=[[@{tide_action_roll_type}]]}} {{cap=[[[[@{advantage_roll}+1]]d20@{advantage_dice}cs<[[@{critical}+@{critical_mod}]]cf>[[@{accuracy}+@{accuracy_mod}+1]]]]}} {{damage=[[0@{tide_action_dice} + @{tide_action_dice_bonus}@{damage_mod_text}]]}} {{penetration=[[@{penetration}+@{penetration_mod}]]}} {{dmgcrit=[[10@{tide_action_dice}kh1*{{@{tide_action_dice}>1}}+@{tide_action_dice_bonus}@{damage_mod_text}]]}} {{against=[[@{tide_action_against}]]}} {{healing=[[0@{tide_action_healing_dice} + @{tide_action_healing_dice_bonus}]]}} {{speed=@{tide_action_speed}}} {{target=@{tide_action_target}}} {{type=@{tide_action_type}}} {{range=@{tide_action_range}@{tide_action_field_description}}} {{description=@{tide_action_description}}} {{ampEffect=@{tide_action_amp_effect}}} {{trigCondition=@{tide_action_trig_condition}}} {{trigEffect=@{tide_action_trig_effect}}} {{sustEffect=@{tide_action_sust_effect}}}">
                                         </button>
@@ -1286,9 +1286,9 @@
                                     </div>
                                     <span class="action-speed action-tide-centered" name="attr_tide_action_speed">
                                     </span>
-                                </div>
+                                </summary>
 
-                                <input type="hidden" class="displaySettingsFlag" name="attr_displaySettingsFlag"/>
+                                <!--                                <input type="hidden" class="displaySettingsFlag" name="attr_displaySettingsFlag"/>-->
                                 <div class="displaySettings width65">
                                     <div class="sheet-row padding-2525">
                                         <div class="sheet-col">
@@ -1410,10 +1410,10 @@
                                                     <span class="width-auto bold"> vs. </span>
                                                     <input type="radio" value="1" name="attr_tide_action_against"
                                                            checked/>
-                                                    <img class="size-20-box"
+                                                    <img class="size-20-box" alt="Toughness"
                                                          src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
                                                     <input type="radio" value="2" name="attr_tide_action_against"/>
-                                                    <img class="size-20-box"
+                                                    <img class="size-20-box" alt="Resistance"
                                                          src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">
                                                     <input type="radio" value="3" name="attr_tide_action_against"/>
                                                     <span class="indicator">PIERCING</span>
@@ -1447,8 +1447,9 @@
                                     </div>
                                     <div class="action-sust-effect">
                                         <div class="bold">Sust. Effect:</div>
-                                        <textarea class="height35 width95"
-                                                  name="attr_tide_action_sust_effect"></textarea>
+                                        <label>
+                                            <textarea class="height35 width95" name="attr_tide_action_sust_effect"></textarea>
+                                        </label>
                                     </div>
                                     <div class="action-description">
                                         <div class="bold">Description:</div>
@@ -1456,7 +1457,7 @@
                                                   name="attr_tide_action_description"></textarea>
                                     </div>
                                 </div>
-                            </div>
+                            </details>
                         </fieldset>
                     </div>
 
@@ -1464,7 +1465,7 @@
                     <div class="actions-info-grid">
                         <span class="action-name action-info-title">YOUR TURN:</span>
                         <span class="action-effect action-info">
-                            <b> 1. </b>Restore Action Pool.
+                            <b> 1. </b> Restore Action Pool.
                             <b> 2. </b> Select Sustains.
                             <b> 3. </b> Use up to your Action Pool of Actions.
                         </span>
@@ -1479,7 +1480,7 @@
             <div class="tab-content tab2 tab-inventory">
                 <div>
                     <div class="sheet-col" style="width: 34%">
-                        <div class="inventory-header">INVENTORY</div>
+                        <div class="inventory-header">Inventory</div>
                         <div class="sheet-row">
                             <div class="sheet-col inventory-title width-half">Melee</div>
                             <div class="sheet-col inventory-title width-half">Ranged</div>
@@ -1545,20 +1546,20 @@
                             </div>
                         </div>
                         <div class="sheet-row">
-                            <div class="sheet-col inventory-title width-half">Gold Zeniths</div>
+                            <div class="sheet-col inventory-title width100">Gold Zeniths</div>
                         </div>
                         <div class="sheet-row padding-bottom3">
-                            <div class="sheet-col width-half lightgrey">
+                            <div class="sheet-col width100 lightgrey">
                                 <div class="flex-center">
-                                    <input class="medium center-text transparent no-border" type="number"
+                                    <input class="medium center-text transparent no-border" type="text"
                                            name="attr_gold" value="0"/>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="inventory-header">ITEMS</div>
+                        <div class="inventory-header">Items</div>
                         <fieldset class="repeating_inventory">
-                            <div class="sheet-row lightestgrey" style="margin-bottom: 3px">
+                            <div class="sheet-row lightgrey" style="margin-bottom: 3px">
                                 <div class="inventory-box">
                                     <div class="inventory-box-upper">
                                         <span class="bold">Item:</span>
@@ -1576,7 +1577,7 @@
                                         <div class="padding-bottom3">
                                             <span class="bold">Usable In:</span>
                                             <input type="radio" name="attr_item_usable" value="0" checked/>
-                                            <span>Combat Only</span>
+                                            <span >Combat Only</span>
                                             <input type="radio" name="attr_item_usable" value="1"/>
                                             <span>Any Encounter</span>
                                         </div>
@@ -1610,8 +1611,8 @@
                     </div>
                     <div class="sheet-col padding-left10" style="width: 64%">
                         <div>
-                            <div class="inventory-header">KEEPSAKES</div>
-                            <div class="sheet-col width-half lightestgrey" style="margin-bottom: 3px">
+                            <div class="inventory-header">Keepsakes</div>
+                            <div class="sheet-col width-half lightgrey" style="margin-bottom: 3px">
                                 <div class="inventory-box">
                                     <div class="inventory-box-upper">
                                         <span class="bold">Keepsake:</span>
@@ -1659,7 +1660,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="sheet-col width-half lightestgrey" style="margin-bottom: 3px">
+                            <div class="sheet-col width-half lightgrey" style="margin-bottom: 3px">
                                 <div class="inventory-box">
                                     <div class="inventory-box-upper">
                                         <span class="bold">Keepsake:</span>
@@ -1709,7 +1710,7 @@
                             </div>
 
                             <div class="sheet-col width-half padding-bottom5">
-                                <div class="inventory-header">ANCHORS</div>
+                                <div class="inventory-header">Anchors</div>
                                 <fieldset class="repeating_anchors">
                                     <div class="sheet-row">
                                         <input name="attr_anchor" class="no-border width-half border-bottom-2"
@@ -1721,7 +1722,7 @@
                             </div>
 
                             <div class="sheet-col width-half padding-bottom5">
-                                <div class="inventory-header">DEADWEIGHTS</div>
+                                <div class="inventory-header">Deadweights</div>
                                 <fieldset class="repeating_deadweight">
                                     <div class="sheet-row">
                                         <input name="attr_deadweight" class="no-border width-half border-bottom-2"
@@ -1733,7 +1734,7 @@
                             </div>
                             <div class="separator" style="margin-bottom: 5px"></div>
 
-                            <div class="inventory-header">APPEARANCE</div>
+                            <div class="inventory-header">Appearance</div>
                             <div class="sheet-row">
                                 <div class="sheet-col inventory-title width-third">Gender</div>
                                 <div class="sheet-col inventory-title width-third">Age</div>
@@ -1785,10 +1786,10 @@
                                 </div>
                             </div>
 
-                            <div class="inventory-header">DESCRIPTION</div>
+                            <div class="inventory-header">Description</div>
                             <textarea name="attr_bio_description"></textarea>
 
-                            <div class="inventory-header">HISTORY</div>
+                            <div class="inventory-header">History</div>
                             <textarea name="attr_bio_history"></textarea>
                         </div>
                     </div>
@@ -1805,53 +1806,76 @@
                     <div>
                         <div class="condition-grid" style="border-top: 1px solid dimgrey">
                             <div class="condition center-text">
-                                <p class="italic bold">POISON</p>
-                                <p class="yellow-text">DAMAGE OVER TIME</p>
+                                <span>
+                                    <span class="italic bold">POISON</span>
+                                    <br>
+                                    <span class="yellow-text">DAMAGE OVER TIME</span>
+                                </span>
                             </div>
                             <div class="value center-text">
-                                <input type="checkbox" name="attr_condition_poison_1"/>
-                                <input type="checkbox" name="attr_condition_poison_2"/>
-                                <input type="checkbox" name="attr_condition_poison_3"/>
-                                <input type="checkbox" name="attr_condition_poison_4"/>
-                                <input type="checkbox" name="attr_condition_poison_5"/>
+                                <div>
+                                    <input type="checkbox" name="attr_condition_poison_1"/>
+                                    <input type="checkbox" name="attr_condition_poison_2"/>
+                                    <input type="checkbox" name="attr_condition_poison_3"/>
+                                    <br>
+                                    <input type="checkbox" name="attr_condition_poison_4"/>
+                                    <input type="checkbox" name="attr_condition_poison_5"/>
+                                </div>
                             </div>
                             <div class="description">
-                                Combatant takes 1d6 x [Stack] <b><i>PIERCING</i></b> Damage at the start of each of
-                                their Turns.
+                                <span>
+                                    Combatant takes 1d6 x [Stack] <b><i>PIERCING</i></b> Damage at the start of each of
+                                    their Turns.
+                                </span>
                             </div>
                         </div>
                         <div class="condition-grid">
                             <div class="condition center-text">
-                                <p class="italic bold">BURNING</p>
-                                <p class="yellow-text">DAMAGE OVER TIME</p>
+                                <span>
+                                    <span class="italic bold">BURNING</span>
+                                    <br>
+                                    <span class="yellow-text">DAMAGE OVER TIME</span>
+                                </span>
                             </div>
                             <div class="value center-text">
-                                <input type="checkbox" name="attr_condition_burning_1"/>
-                                <input type="checkbox" name="attr_condition_burning_2"/>
+                                <div>
+                                    <input type="checkbox" name="attr_condition_burning_1"/>
+                                    <input type="checkbox" name="attr_condition_burning_2"/>
+                                </div>
                             </div>
                             <div class="description">
-                                Combatant takes 1d20 x [Stack] <b><i>PIERCING</i></b> Damage at the start of each of
-                                their Turns.
+                                <span>
+                                    Combatant takes 1d20 x [Stack] <b><i>PIERCING</i></b> Damage at the start of each of
+                                    their Turns.
+                                </span>
                             </div>
                         </div>
 
                         <div class="condition-grid">
                             <div class="condition center-text">
-                                <p class="italic bold">FRAGILITY</p>
-                                <p class="red-text">DAMAGE</p>
+                                <span>
+                                    <span class="italic bold">FRAGILITY</span>
+                                    <br>
+                                    <span class="red-text">DAMAGE</span>
+                                </span>
                             </div>
                             <div class="value center-text">
                                 <input type="checkbox" name="attr_condition_fragility"/>
                             </div>
                             <div class="description">
-                                All Damage Combatant takes has the <b><i>PIERCING</i></b> property.
-                                <b><i>FRAGILITY</i></b> is removed next Round at the end of Combatant’s Turn.
+                                <span>
+                                    All Damage Combatant takes has the <b><i>PIERCING</i></b> property.
+                                    <b><i>FRAGILITY</i></b> is removed next Round at the end of Combatant’s Turn.
+                                </span>
                             </div>
                         </div>
                         <div class="condition-grid">
                             <div class="condition center-text">
-                                <p class="italic bold">VULNERABILITY</p>
-                                <p class="red-text">DAMAGE</p>
+                                <span>
+                                    <span class="italic bold">VULNERABILITY</span>
+                                    <br>
+                                    <span class="red-text">DAMAGE</span>
+                                </span>
                             </div>
                             <div class="value center-text">
                                 <div class="condition-selector-max">
@@ -1861,19 +1885,22 @@
                                 </div>
                             </div>
                             <div class="description">
-                                    <span>-1 x [Stack]
-                                        <img class="size-25-box" alt="Toughness"
-                                             src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
-                                        &
-                                        <img class="size-25-box" alt="Resistance"
-                                             src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">.
-                                    </span>
+                                <span>-1 x [Stack]
+                                    <img class="size-25-box" alt="Toughness"
+                                         src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/toughness_transparent.png">
+                                    &
+                                    <img class="size-25-box" alt="Resistance"
+                                         src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/resistance_transparent.png">.
+                                </span>
                             </div>
                         </div>
                         <div class="condition-grid">
                             <div class="condition center-text">
-                                <p class="italic bold">WEAKNESS</p>
-                                <p class="red-text">DAMAGE</p>
+                                <span>
+                                    <span class="italic bold">WEAKNESS</span>
+                                    <br>
+                                    <span class="red-text">DAMAGE</span>
+                                </span>
                             </div>
                             <div class="value center-text">
                                 <div class="condition-selector-max">
@@ -1887,128 +1914,161 @@
                             </div>
                         </div>
 
-                        <div class="condition-grid">
+                        <div class="condition-with-foe-grid">
                             <div class="condition center-text">
-                                <p class="italic bold">DAZE</p>
-                                <p class="green-text">HIT RATE</p>
+                                <span>
+                                    <span class="italic bold">DAZE</span>
+                                    <br>
+                                    <span class="green-text">HIT RATE</span>
+                                </span>
                             </div>
                             <div class="value center-text">
                                 <input type="checkbox" name="attr_condition_daze"/>
                             </div>
-                            <div class="description">
-                                <p>On Hero: -4 <b>A</b></p>
-                                <p>On Foe: Heroes have +4
+                            <div class="description-hero">
+                                <div class="width-third">On Hero: -4 <b>A</b></div>
+                            </div>
+                            <div class="description-foe">
+                                <span>
+                                    On Foe: Heroes have +4
                                     <img class="size-25-box" alt="Dodge"
                                          src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/dodge_transparent.png">
                                     against Actions used by Foe.
-                                </p>
+                                </span>
                             </div>
                         </div>
-                        <div class="condition-grid">
-                            <div class="condition center-text">
-                                <p class="italic bold">OFF-GUARD</p>
-                                <p class="green-text">HIT RATE</p>
-                            </div>
-                            <div class="value center-text">
-                                <input type="checkbox" name="attr_condition_off_guard"/>
-                            </div>
-                            <div class="description">
-                                <p>On Hero: -2 <img class="size-25-box" alt="Dodge"
-                                                    src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/dodge_transparent.png">
-                                </p>
-                                <p>
-                                    On Foe: +2 <b>A</b> to <b>CAP</b> Checks to Actions that Target only this Foe.
-                                </p>
-                            </div>
+                    </div>
+                    <div class="condition-with-foe-grid">
+                        <div class="condition center-text">
+                            <span>
+                                <span class="italic bold">OFF-GUARD</span>
+                                <br>
+                                <span class="green-text">HIT RATE</span>
+                            </span>
                         </div>
-                        <div class="condition-grid">
-                            <div class="condition center-text">
-                                <p class="italic bold">PRONE</p>
-                                <p class="green-text">HIT RATE</p>
-                            </div>
-                            <div class="value center-text">
-                                <input type="checkbox" name="attr_condition_prone"/>
-                            </div>
-                            <div class="description">
-                                <p>
-                                    On Hero: <span class="indicator">OFF-GUARD</span> and cannot take Actions.
-                                    Remove <span class="indicator">PRONE</span> by expending 1 Fast Action during
-                                    your Turn.
-                                </p>
-                                <p>
-                                    On Foe: <span class="indicator">OFF-GUARD</span> and skips 1st Action Hex of
-                                    Action Chain to remove <span class="indicator">PRONE</span>.
-                                </p>
-                            </div>
+                        <div class="value center-text">
+                            <input type="checkbox" name="attr_condition_off_guard"/>
                         </div>
-                        <div class="condition-grid">
-                            <div class="condition center-text">
-                                <p class="italic bold">SLEEP</p>
-                                <p class="green-text">HIT RATE</p>
-                                <p class="blue-text">ACTION RESTRICTION</p>
-                            </div>
-                            <div class="value center-text">
-                                <input type="checkbox" name="attr_condition_sleep"/>
-                            </div>
-                            <div class="description">
-                                Combatant cannot take Actions during their next Turn. <span
-                                    class="indicator">SLEEP</span>
-                                is removed at the end of that Turn or if theCombatant takes Damage. Actions that
-                                Target only that Combatant gains the <span class="indicator">AUTO-CRIT</span>
-                                property.
-                            </div>
+                        <div class="description-hero">
+                            <span class="width-third">
+                                On Hero: -2
+                                <img class="size-25-box" alt="Dodge"
+                                     src="https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/dodge_transparent.png">
+                            </span>
                         </div>
+                        <div class="description-foe">
+                            <span>
+                                On Foe: +2 <b>A</b> to <b>CAP</b> Checks to Actions that Target only this Foe.
+                            </span>
+                        </div>
+                    </div>
+                    <div class="condition-with-foe-grid">
+                        <div class="condition center-text">
+                            <span>
+                                <span class="italic bold">PRONE</span>
+                                <br>
+                                <span class="green-text">HIT RATE</span>
+                            </span>
+                        </div>
+                        <div class="value center-text">
+                            <input type="checkbox" name="attr_condition_prone"/>
+                        </div>
+                        <div class="description-hero">
+                            <span>
+                                On Hero: <span class="indicator">OFF-GUARD</span> and cannot take Actions.
+                                Remove <span class="indicator">PRONE</span> by expending 1 Fast Action during
+                                your Turn.
+                            </span>
+                        </div>
+                        <div class="description-foe">
+                            <span>
+                                On Foe: <span class="indicator">OFF-GUARD</span> and skips 1st Action Hex of
+                                Action Chain to remove <span class="indicator">PRONE</span>.
+                            </span>
+                        </div>
+                    </div>
+                    <div class="condition-grid">
+                        <div class="condition center-text">
+                            <span>
+                                <span class="italic bold">SLEEP</span>
+                                <br>
+                                <span class="green-text">HIT RATE</span>
+                                <br>
+                                <span class="blue-text">ACTION RESTRICTION</span>
+                            </span>
+                        </div>
+                        <div class="value center-text">
+                            <input type="checkbox" name="attr_condition_sleep"/>
+                        </div>
+                        <div class="description">
+                            <span>
+                                Combatant cannot take Actions during their next Turn.
+                                <span class="indicator">SLEEP</span> is removed at the end of that Turn or if the
+                                Combatant takes Damage. Actions that Target only that Combatant gains the
+                                <span class="indicator">AUTO-CRIT</span> property.
+                            </span>
+                        </div>
+                    </div>
 
-                        <div class="condition-grid">
-                            <div class="condition center-text">
-                                <p class="italic bold">SILENCE</p>
-                                <p class="blue-text">ACTION RESTRICTION</p>
-                            </div>
-                            <div class="value center-text">
-                                <input type="checkbox" name="attr_condition_silence"/>
-                            </div>
-                            <div class="description">
-                                <p>
-                                    On Hero: Cannot use Spells or Tide-Turners. <span
-                                        class="indicator">SILENCE</span>
-                                    is removed next Round at the end of Hero’s Turn.
-                                </p>
-                                <p>
-                                    On Foe: Skips Special Ability Hexes. <span class="indicator">SILENCE</span> is
-                                    removed next Round at the end of Foe’s Turn.
-                                </p>
-                            </div>
+                    <div class="condition-with-foe-grid">
+                        <div class="condition center-text">
+                            <span>
+                                <span class="italic bold">SILENCE</span>
+                                <br>
+                                <span class="blue-text">ACTION RESTRICTION</span>
+                            </span>
                         </div>
-                        <div class="condition-grid">
-                            <div class="condition center-text">
-                                <p class="italic bold">CHILL</p>
-                                <p class="blue-text">ACTION RESTRICTION</p>
-                            </div>
-                            <div class="value center-text">
-                                <div class="condition-selector-max">
-                                    <input class="custom-number-input" type="number" min="0" max="2"
-                                           name="attr_condition_chill"/>
-                                    <div class="subtitle">Max 2</div>
-                                </div>
-                            </div>
-                            <div class="description">
-                                <p>On Hero: Restore -1 Action Point at the start of each your Turns.</p>
-                                <p>On Foe: Skip last Action in Action Chain.</p>
-                            </div>
+                        <div class="value center-text">
+                            <input type="checkbox" name="attr_condition_silence"/>
                         </div>
-                        <div class="condition-grid">
-                            <div class="condition center-text">
-                                <p class="italic bold">PARALYSIS</p>
-                                <p class="blue-text">ACTION RESTRICTION</p>
-                            </div>
-                            <div class="value center-text">
-                                <input type="checkbox" name="attr_condition_paralysis"/>
-                            </div>
-                            <div class="description">
-                                    <span>Combatant takes only 1 Action during their next Turn. <span
-                                            class="indicator">PARALYSIS</span> is removed at the end of that Turn.
-                                    </span>
-                            </div>
+                        <div class="description-hero">
+                            <span>
+                                On Hero: Cannot use Spells or Tide-Turners. <span
+                                    class="indicator">SILENCE</span>
+                                is removed next Round at the end of Hero’s Turn.
+                            </span>
+                        </div>
+                        <div class="description-foe">
+                            <span>
+                                On Foe: Skips Special Ability Hexes. <span class="indicator">SILENCE</span> is
+                                removed next Round at the end of Foe’s Turn.
+                            </span>
+                        </div>
+                    </div>
+                    <div class="condition-with-foe-grid">
+                        <div class="condition center-text">
+                            <span>
+                                <span class="italic bold">CHILL</span>
+                                <br>
+                                <span class="blue-text">ACTION RESTRICTION</span>
+                            </span>
+                        </div>
+                        <div class="value center-text">
+                            <input type="checkbox" name="attr_condition_chill"/>
+                        </div>
+                        <div class="description-hero">
+                            <span>On Hero: Restore -1 Action Point at the start of each your Turns.</span>
+                        </div>
+                        <div class="description-foe">
+                            <span>On Foe: Skip last Action in Action Chain.</span>
+                        </div>
+                    </div>
+                    <div class="condition-grid">
+                        <div class="condition center-text">
+                            <span>
+                                <span class="italic bold">PARALYSIS</span>
+                                <br>
+                                <span class="blue-text">ACTION RESTRICTION</span>
+                            </span>
+                        </div>
+                        <div class="value center-text">
+                            <input type="checkbox" name="attr_condition_paralysis"/>
+                        </div>
+                        <div class="description">
+                            <span>
+                                Combatant takes only 1 Action during their next Turn. <span
+                                    class="indicator">PARALYSIS</span> is removed at the end of that Turn.
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -2090,7 +2150,7 @@
 
                             <div class="guide-middle-grid">
                                 <div>
-                                    <div class="sheet-row padding-bottom25">
+                                    <div class="sheet-row" style="padding-bottom: 28px;">
                                         <div class="sheet-col bold red-text" style="width: 13%; font-size: 3em;">
                                             C
                                         </div>
@@ -2142,11 +2202,11 @@
                                 </div>
                                 <div class="chevron-arrow-right"></div>
                                 <div>
-                                    <div class="sheet-row padding-bottom10">
+                                    <div class="sheet-row" style="padding-bottom: 45px;">
                                         <div class="sheet-col bold guide-p" style="width: 13%; font-size: 3em;">
                                             P
                                         </div>
-                                        <div class="sheet-col" style="width: 80%">
+                                        <div class="sheet-col" style="width: 80%;">
                                             <div>
                                                 If your Roll Result is ≤ your "<span class="guide-p bold">P</span>"
                                                 Value, your Action bypasses your Target's Barrier Values. If your Roll
@@ -2278,10 +2338,10 @@
                     </div>
                 </div>
             </div>
-
         </div>
 
     </div>
+
 </div>
 
 <div class="block-container block-npc">
@@ -4279,10 +4339,6 @@
 
 </div>
 
-</div>
-
-</div>
-
 <script type="text/worker">
 
         const tabs = ["character", "inventory", "conditions", "guide"];
@@ -6061,6 +6117,16 @@
                 setAttrs({repeating_npcLearned_npc_learn_damage_description: description});
             });
         });
+
+
+
+
+
+
+
+
+
+
 
 
 

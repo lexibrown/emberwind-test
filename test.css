@@ -273,7 +273,7 @@ input.page-control[value="on"] ~ .block-container.mod-block {
     height: fit-content;
     padding-bottom: 3px;
     grid-column-gap: 3px;
-    grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 40% 1.5fr;
+    grid-template-columns: 0.5fr 1.5fr 1fr 1fr 1fr 40% 1.5fr;
     grid-template-areas: "action-button action-name action-type action-target action-range action-effect action-speed";
 }
 
@@ -283,7 +283,7 @@ input.page-control[value="on"] ~ .block-container.mod-block {
     height: fit-content;
     padding-bottom: 3px;
     grid-column-gap: 3px;
-    grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 40% 1fr;
+    grid-template-columns: 0.5fr 1.5fr 1fr 1fr 1fr 40% 1fr;
     grid-auto-rows: fit-content(100%);
     grid-template-areas: "action-button action-name action-name action-name action-name action-effect action-effect";
 }
@@ -295,24 +295,6 @@ input.page-control[value="on"] ~ .block-container.mod-block {
     grid-template-columns: 1fr;
     grid-auto-rows: fit-content(100%);
     grid-template-areas: "top-detail" "middle-detail" "bottom-detail";
-}
-
-.condition-grid {
-    display: grid;
-    width: auto;
-    grid-template-columns: 2fr 0.75fr 75%;
-    grid-auto-rows: fit-content(100%);
-    grid-template-areas: "condition value description";
-}
-
-.condition-grid > div {
-    background-color: white;
-    padding: 5px;
-    border-bottom: 1px solid dimgrey;
-}
-
-.condition-grid > div:nth-child(1), .condition-grid > div:nth-child(2) {
-    border-right: 1px solid dimgrey;
 }
 
 .quick-guide-grid {
@@ -443,20 +425,50 @@ input.page-control[value="on"] ~ .block-container.mod-block {
 
 /*----------------- Conditions ------------------*/
 
-.condition-box {
+.condition-grid {
     display: grid;
-    height: fit-content;
-    border-top: 1px solid black;
-    padding: 3px 5px 3px 5px;
-    grid-column-gap: 10px;
-    grid-template-columns: 7%;
-    grid-template-areas:
-            "condition-selector condition-name"
-            "condition-selector condition-description"
-            "condition-selector condition-description-foe";
+    width: auto;
+    grid-template-columns: 2fr 0.75fr 75%;
+    grid-auto-rows: fit-content(100%);
+    grid-template-areas: "condition value description";
 }
 
-.condition-selector,
+.condition-with-foe-grid {
+    display: grid;
+    width: auto;
+    grid-template-columns: 2fr 0.75fr 37.5% 37.5%;
+    grid-auto-rows: fit-content(100%);
+    grid-template-areas: "condition value description-hero description-foe";
+}
+
+.condition-grid > div,
+.condition-with-foe-grid > div{
+    background-color: white;
+    padding: 5px;
+    border-bottom: 1px solid dimgrey;
+}
+
+.condition-grid > div:nth-child(1), .condition-grid > div:nth-child(2),
+.condition-with-foe-grid > div:nth-child(1), .condition-with-foe-grid > div:nth-child(2), .condition-with-foe-grid > div:nth-child(3) {
+    border-right: 1px solid dimgrey;
+}
+
+.condition-grid > .condition,
+.condition-with-foe-grid > .condition,
+.condition-grid > .value,
+.condition-with-foe-grid > .value {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.condition-grid > .description,
+.condition-with-foe-grid > .description-hero,
+.condition-with-foe-grid > .description-foe {
+    display: flex;
+    align-items: center;
+}
+
 .condition-selector-max {
     grid-area: condition-selector;
     display: flex;
@@ -468,17 +480,6 @@ input.page-control[value="on"] ~ .block-container.mod-block {
     flex-flow: row wrap;
 }
 
-.condition-name {
-    grid-area: condition-name;
-}
-
-.condition-description {
-    grid-area: condition-description;
-}
-
-.condition-description-foe {
-    grid-area: condition-description-foe;
-}
 
 /*----------------- Sections ------------------*/
 
@@ -562,7 +563,7 @@ input.page-control[value="on"] ~ .block-container.mod-block {
 }
 
 input.medium {
-    width: 30%;
+    width: 50%;
     padding: 2px;
 }
 
@@ -812,7 +813,7 @@ div.header {
 .indicator,
 .sheet-rolltemplate-action .indicator {
     padding: 1px;
-    font-size: 0.75em;
+    font-size: 1em;
     font-weight: bold;
     font-style: italic;
 }
@@ -843,7 +844,7 @@ div.header {
 }
 
 .action-centered {
-    background-color: lightgrey;
+    background-color: #e6e7e8;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -852,14 +853,14 @@ div.header {
 }
 
 .action-leftCentered {
-    background-color: lightgrey;
+    background-color: #e6e7e8;
     display: flex;
     align-items: center;
     padding: 3px;
 }
 
 .action-text {
-    background-color: lightgrey;
+    background-color: #e6e7e8;
     text-align: center;
     padding: 3px;
 }
@@ -1025,7 +1026,7 @@ input.action-description-indicator[value="2"] ~ .action-auto-hit-description {
 }
 
 .blue-text {
-    color: #B8DCF9;
+    color: #14a4de;
 }
 
 .green {
@@ -1041,7 +1042,7 @@ input.action-description-indicator[value="2"] ~ .action-auto-hit-description {
 }
 
 .yellow-text {
-    color: #FDD5B0;
+    color: #F9B276;
 }
 
 .red .blue .green .yellow {
@@ -1054,7 +1055,8 @@ input.action-description-indicator[value="2"] ~ .action-auto-hit-description {
 }
 
 .lightgrey {
-    background-color: #E7E8EA;
+    /*background-color: #E7E8EA;*/
+    background-color: #e6e7e8;
 }
 
 .grey {
@@ -1310,6 +1312,7 @@ input[type=number].custom-number-input {
     -moz-appearance: textfield; /* Firefox */
     width: 1.4em;
     height: 1.5em;
+    text-align: center;
 }
 
 input.move-number-input::-webkit-outer-spin-button,
@@ -1485,6 +1488,9 @@ input[type=checkbox].tab-hide:checked ~ .show-hide {
     display: none;
 }
 
+.charsheet summary {
+    cursor: pointer;
+}
 
 /*----------------- NPC Sheet ------------------*/
 
