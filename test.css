@@ -22,6 +22,17 @@
     font-family: ProximaNova, serif;
 }
 
+.top-logo {
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/emberwind-logo-black.png");
+    float: right;
+    margin-bottom: -60px
+}
+
+body.sheet-darkmode .top-logo {
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/emberwind-logo-color.png");
+    margin-bottom: -40px
+}
+
 /*----------------- Container ------------------*/
 
 .charsheet {
