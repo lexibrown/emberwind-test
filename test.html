@@ -172,17 +172,17 @@
                             <div class="sheet-col">
                                 <div class="sheet-row padding-top5">
                                     <button class="toggle-advantage" type="action" name="act_advantage">
-                                        <span style="font-family: pictos;">{</span>
+                                        <span class="text-pictos">{</span>
                                     </button>
                                 </div>
                                 <div class="sheet-row padding-top5">
                                     <button class="toggle-normal" type="action" name="act_normal">
-                                        <span style="font-family: pictos;">r</span>
+                                        <span class="text-pictos">r</span>
                                     </button>
                                 </div>
                                 <div class="sheet-row padding-top5">
                                     <button class="toggle-advantage" type="action" name="act_disadvantage">
-                                        <span style="font-family: pictos;">}</span>
+                                        <span class="text-pictos">}</span>
                                     </button>
                                 </div>
                             </div>
@@ -191,9 +191,9 @@
                                     <div class="small-hex advantage-hex">
                                         <div class="inner">
                                             <span class=""
-                                                  style="width: 75%; height: 50%; text-align: center; font-size: 24px;"
+                                                  style="width: 75%; height: 50%; text-align: center; font-size: 24px; z-index: 3"
                                                   name="attr_advantage_roll">0</span>
-                                            <span class="sheet-row">Stack(s)</span>
+                                            <span class="sheet-row" style="z-index: 3">Stack(s)</span>
                                         </div>
                                         <div class="corner-1"></div>
                                         <div class="corner-2"></div>
@@ -248,7 +248,8 @@
                         <div class="center-text padding-top5">
                             <div class="sheet-col width30 center-text">
                                 <div class="sheet-row mod-box padding-3">
-                                    <input class="cap transparent" type="number" name="attr_damage_bonus_mod" placeholder="0"/>
+                                    <input class="cap transparent" type="number" name="attr_damage_bonus_mod"
+                                           placeholder="0"/>
                                 </div>
                                 <span class="bold">Bonus</span>
                             </div>
@@ -296,7 +297,8 @@
                     <div class="tier section">
                         <div class="sheet-col width-third info-tier-box">
                             <span>Tier:</span>
-                            <select name="attr_tier" class="transparent selector-fit no-border border-bottom-grey-1 padding-left10">
+                            <select name="attr_tier"
+                                    class="transparent selector-fit no-border border-bottom-grey-1 padding-left10">
                                 <option value="tier-1">1</option>
                                 <option value="tier-2">2</option>
                                 <option value="tier-3">3</option>
@@ -305,7 +307,8 @@
                         </div>
                         <div class="sheet-col padding-top4">
                             <span>Exp:
-                                <input class="transparent no-border border-bottom-grey-1 width65" type="text" name="attr_exp"/>
+                                <input class="transparent no-border border-bottom-grey-1 width65" type="text"
+                                       name="attr_exp"/>
                                  / 1000
                             </span>
                         </div>
@@ -319,9 +322,9 @@
                                 <span>HP:</span>
                             </div>
                             <div class="sheet-col info-hp-box">
-                                <input type="number" name="attr_hp" value="10"/>
+                                <input class="no-border transparent" type="number" name="attr_hp" value="10"/>
                                 <span> / </span>
-                                <input type="number" name="attr_hp_max" value="10"/>
+                                <input class="no-border transparent" type="number" name="attr_hp_max" value="10"/>
                             </div>
 
                             <div class="sheet-col info-class-box">
@@ -345,13 +348,15 @@
                             <input class="class-control" type="hidden" name="attr_class" value="">
                             <div class="info-custom-class">
                                 <span>Custom Class:</span>
-                                <input type="text" name="attr_custom_class" class="transparent no-border border-bottom-grey-1 width70"/>
+                                <input type="text" name="attr_custom_class"
+                                       class="transparent no-border border-bottom-grey-1 width70"/>
                             </div>
                         </div>
                         <div class="sheet-row">
                             <div class="info-subclass-box">
                                 <span>Subclass:</span>
-                                <input type="text" name="attr_subclass" class="transparent no-border border-bottom-grey-1 width80"/>
+                                <input type="text" name="attr_subclass"
+                                       class="transparent no-border border-bottom-grey-1 width80"/>
                             </div>
                         </div>
                     </div>
@@ -408,7 +413,8 @@
                                 Strength:
                             </div>
                             <div class="sheet-col light-red stat-value">
-                                <input class="light-red no-border" type="number" name="attr_strength" value="0"/>
+                                <input class="light-red no-border black-text" type="number" name="attr_strength"
+                                       value="0"/>
                             </div>
                         </div>
                         <div class="sheet-col width-half">
@@ -416,7 +422,8 @@
                                 Intelligence:
                             </div>
                             <div class="sheet-col light-blue stat-value">
-                                <input class="light-blue no-border" type="number" name="attr_intelligence" value="0"/>
+                                <input class="light-blue no-border black-text" type="number" name="attr_intelligence"
+                                       value="0"/>
                             </div>
                         </div>
                     </div>
@@ -428,20 +435,22 @@
                     <div class="stats1 section">
                         <div class="sheet-col width-half">
                             <div class="sheet-col red stats-col">
-                                <img class="toughness-img size-25-box">
+                                <img class="toughness-image size-25-box">
                                 Toughness:
                             </div>
                             <div class="sheet-col light-red stat-value">
-                                <input class="light-red no-border" type="number" name="attr_toughness" value="4"/>
+                                <input class="light-red no-border black-text" type="number" name="attr_toughness"
+                                       value="4"/>
                             </div>
                         </div>
                         <div class="sheet-col width-half">
                             <div class="sheet-col blue stats-col">
-                                <img class="resistance-img size-25-box">
+                                <img class="resistance-image size-25-box">
                                 Resistance:
                             </div>
                             <div class="sheet-col light-blue stat-value">
-                                <input class="light-blue no-border" type="number" name="attr_resistance" value="4"/>
+                                <input class="light-blue no-border black-text" type="number" name="attr_resistance"
+                                       value="4"/>
                             </div>
                         </div>
                     </div>
@@ -453,21 +462,21 @@
                                             value="@{whisper_state}&{template:skill} {{name=Athletics}} {{subtags=@{character_name}}} {{roll=[[[[@{advantage_roll}+1]]d20@{advantage_dice}cs<@{athletics}cf>[[@{athletics}+1]]]]}} {{no-roll=[[1]]}}">
                                         Athletics:
                                     </button>
-                                    <input class="small" type="number" name="attr_athletics" value="8"/>
+                                    <input class="small transparent" type="number" name="attr_athletics" value="8"/>
                                 </div>
                                 <div class="skill">
-                                    <button type="roll" name="roll_skill" style="font-size: 1.2em;"
+                                    <button type="roll" name="roll_skill"
                                             value="@{whisper_state}&{template:skill} {{name=Endurance}} {{subtags=@{character_name}}} {{roll=[[[[@{advantage_roll}+1]]d20@{advantage_dice}cs<@{endurance}cf>[[@{endurance}+1]]]]}} {{no-roll=[[1]]}}">
                                         Endurance:
                                     </button>
-                                    <input class="small" type="number" name="attr_endurance" value="8"/>
+                                    <input class="small transparent" type="number" name="attr_endurance" value="8"/>
                                 </div>
                                 <div class="skill">
                                     <button type="roll" name="roll_skill"
                                             value="@{whisper_state}&{template:skill} {{name=Intimidate}} {{subtags=@{character_name}}} {{roll=[[[[@{advantage_roll}+1]]d20@{advantage_dice}cs<@{intimidate}cf>[[@{intimidate}+1]]]]}} {{no-roll=[[1]]}}">
                                         Intimidate:
                                     </button>
-                                    <input class="small" type="number" name="attr_intimidate" value="8"/>
+                                    <input class="small transparent" type="number" name="attr_intimidate" value="8"/>
                                 </div>
                             </div>
                             <div class="skill-label">Skills</div>
@@ -477,21 +486,21 @@
                                             value="@{whisper_state}&{template:skill} {{name=Insight}} {{subtags=@{character_name}}} {{roll=[[[[@{advantage_roll}+1]]d20@{advantage_dice}cs<@{insight}cf>[[@{insight}+1]]]]}} {{no-roll=[[1]]}}">
                                         Insight:
                                     </button>
-                                    <input class="small" type="number" name="attr_insight" value="8"/>
+                                    <input class="small transparent" type="number" name="attr_insight" value="8"/>
                                 </div>
                                 <div class="skill">
                                     <button type="roll" name="roll_skill" style="font-size: 1.2em;"
                                             value="@{whisper_state}&{template:skill} {{name=Knowledge}} {{subtags=@{character_name}}} {{roll=[[[[@{advantage_roll}+1]]d20@{advantage_dice}cs<@{knowledge}cf>[[@{knowledge}+1]]]]}} {{no-roll=[[1]]}}">
                                         Knowledge:
                                     </button>
-                                    <input class="small" type="number" name="attr_knowledge" value="8"/>
+                                    <input class="small transparent" type="number" name="attr_knowledge" value="8"/>
                                 </div>
                                 <div class="skill">
                                     <button type="roll" name="roll_skill"
                                             value="@{whisper_state}&{template:skill} {{name=Mend}} {{subtags=@{character_name}}} {{roll=[[[[@{advantage_roll}+1]]d20@{advantage_dice}cs<@{mend}cf>[[@{mend}+1]]]]}} {{no-roll=[[1]]}}">
                                         Mend:
                                     </button>
-                                    <input class="small" type="number" name="attr_mend" value="8"/>
+                                    <input class="small transparent" type="number" name="attr_mend" value="8"/>
                                 </div>
                             </div>
                         </div>
@@ -504,7 +513,8 @@
                                 Dexterity:
                             </div>
                             <div class="sheet-col light-green stat-value">
-                                <input class="light-green no-border" type="number" name="attr_dexterity" value="0"/>
+                                <input class="light-green no-border black-text" type="number" name="attr_dexterity"
+                                       value="0"/>
                             </div>
                         </div>
                         <div class="sheet-col width-half">
@@ -512,7 +522,8 @@
                                 Resilience:
                             </div>
                             <div class="sheet-col light-yellow stat-value">
-                                <input class="light-yellow no-border" type="number" name="attr_resilience"value="0"/>
+                                <input class="light-yellow no-border black-text" type="number" name="attr_resilience"
+                                       value="0"/>
                             </div>
                         </div>
                     </div>
@@ -523,25 +534,27 @@
                     </div>
                     <div class="stats2 section">
                         <div class="sheet-col width-half">
-                            <div class="flex-center green stats-col">
+                            <div class="sheet-col green stats-col">
                                 <button class="custom-roll-button dodge-image" type='roll' name='roll_dodge'
                                         value='@{whisper_state}&{template:skill} {{name=Dodge}} {{subtags=@{character_name}}} {{roll=[[[[@{advantage_roll}+1]]d20@{advantage_dice}cs<[[@{dodge}+@{dodge_mod}]]cf>[[@{dodge}+@{dodge_mod}+1]]]]}} {{no-roll=[[1]]}}'>
                                 </button>
                                 Dodge:
                             </div>
                             <div class="sheet-col light-green stat-value">
-                                <input class="light-green no-border" type="number" name="attr_dodge" value="4"/>
+                                <input class="light-green no-border black-text" type="number" name="attr_dodge"
+                                       value="4"/>
                             </div>
                         </div>
                         <div class="sheet-col width-half">
-                            <div class="flex-center yellow stats-col">
+                            <div class="sheet-col yellow stats-col">
                                 <button class="custom-roll-button willpower-image" type='roll' name='roll_dodge'
                                         value='@{whisper_state}&{template:skill} {{name=Willpower}} {{subtags=@{character_name}}} {{roll=[[[[@{advantage_roll}+1]]d20@{advantage_dice}cs<[[@{willpower}+@{willpower_mod}]]cf>[[@{willpower}+@{willpower_mod}+1]]]]}} {{no-roll=[[1]]}}'>
                                 </button>
                                 Willpower:
                             </div>
                             <div class="sheet-col light-yellow stat-value">
-                                <input class="light-yellow no-border" type="number" name="attr_willpower" value="4"/>
+                                <input class="light-yellow no-border black-text" type="number" name="attr_willpower"
+                                       value="4"/>
                             </div>
                         </div>
                     </div>
@@ -549,25 +562,26 @@
                         <div class="skills-grid">
                             <div class="skill-left">
                                 <div class="skill">
-                                    <button type="roll" name="roll_skill" style="font-size: 1.2em;"
+                                    <button type="roll" name="roll_skill"
                                             value="@{whisper_state}&{template:skill} {{name=Acrobatics}} {{subtags=@{character_name}}} {{roll=[[[[@{advantage_roll}+1]]d20@{advantage_dice}cs<@{acrobatics}cf>[[@{acrobatics}+1]]]]}} {{no-roll=[[1]]}}">
                                         Acrobatics:
                                     </button>
-                                    <input class="small" type="number" name="attr_acrobatics" value="8"/>
+                                    <input class="small transparent" type="number" name="attr_acrobatics" value="8"/>
                                 </div>
                                 <div class="skill">
                                     <button type="roll" name="roll_skill"
                                             value="@{whisper_state}&{template:skill} {{name=Stealth}} {{subtags=@{character_name}}} {{roll=[[[[@{advantage_roll}+1]]d20@{advantage_dice}cs<@{stealth}cf>[[@{stealth}+1]]]]}} {{no-roll=[[1]]}}">
                                         Stealth:
                                     </button>
-                                    <input class="small" type="number" name="attr_stealth" value="8"/>
+                                    <input class="small transparent" type="number" name="attr_stealth" value="8"/>
                                 </div>
                                 <div class="skill">
-                                    <button type="roll" name="roll_skill" style="font-size: 1.0em;"
+                                    <button type="roll" name="roll_skill"
                                             value="@{whisper_state}&{template:skill} {{name=Sleight of Hand}} {{subtags=@{character_name}}} {{roll=[[[[@{advantage_roll}+1]]d20@{advantage_dice}cs<@{sleight_of_hand}cf>[[@{sleight_of_hand}+1]]]]}} {{no-roll=[[1]]}}">
                                         Sleight of Hand:
                                     </button>
-                                    <input class="small" type="number" name="attr_sleight_of_hand" value="8"/>
+                                    <input class="small transparent" type="number" name="attr_sleight_of_hand"
+                                           value="8"/>
                                 </div>
                             </div>
                             <div class="skill-label">Skills</div>
@@ -577,21 +591,21 @@
                                             value="@{whisper_state}&{template:skill} {{name=Focus}} {{subtags=@{character_name}}} {{roll=[[[[@{advantage_roll}+1]]d20@{advantage_dice}cs<@{focus}cf>[[@{focus}+1]]]]}} {{no-roll=[[1]]}}">
                                         Focus:
                                     </button>
-                                    <input class="small" type="number" name="attr_focus" value="8"/>
+                                    <input class="small transparent" type="number" name="attr_focus" value="8"/>
                                 </div>
                                 <div class="skill">
                                     <button type="roll" name="roll_skill"
                                             value="@{whisper_state}&{template:skill} {{name=Fast Talk}} {{subtags=@{character_name}}} {{roll=[[[[@{advantage_roll}+1]]d20@{advantage_dice}cs<@{fast_talk}cf>[[@{fast_talk}+1]]]]}} {{no-roll=[[1]]}}">
                                         Fast Talk:
                                     </button>
-                                    <input class="small" type="number" name="attr_fast_talk" value="8"/>
+                                    <input class="small transparent" type="number" name="attr_fast_talk" value="8"/>
                                 </div>
                                 <div class="skill">
-                                    <button type="roll" name="roll_skill" style="font-size: 1.2em;"
+                                    <button type="roll" name="roll_skill"
                                             value="@{whisper_state}&{template:skill} {{name=Leadership}} {{subtags=@{character_name}}} {{roll=[[[[@{advantage_roll}+1]]d20@{advantage_dice}cs<@{leadership}cf>[[@{leadership}+1]]]]}} {{no-roll=[[1]]}}">
                                         Leadership:
                                     </button>
-                                    <input class="small" type="number" name="attr_leadership" value="8"/>
+                                    <input class="small transparent" type="number" name="attr_leadership" value="8"/>
                                 </div>
                             </div>
                         </div>
@@ -607,7 +621,8 @@
                                 <span class="bold">Critical</span>
                                 <div class="sheet-row critical padding-3">
                                     <span class="bold">C:</span>
-                                    <input class="cap transparent no-border center-text" type="number" name="attr_critical"
+                                    <input class="cap transparent no-border center-text" type="number"
+                                           name="attr_critical"
                                            value="2"/>
                                 </div>
                             </div>
@@ -616,7 +631,8 @@
                                 <span class="bold">Accuracy</span>
                                 <div class="sheet-row accuracy padding-3">
                                     <span class="bold">A:</span>
-                                    <input class="cap transparent no-border center-text" type="number" name="attr_accuracy"
+                                    <input class="cap transparent no-border center-text" type="number"
+                                           name="attr_accuracy"
                                            value="10"/>
                                 </div>
                             </div>
@@ -625,7 +641,8 @@
                                 <span class="bold">Penetration</span>
                                 <div class="sheet-row penetration padding-3">
                                     <span class="bold">P:</span>
-                                    <input class="cap transparent no-border center-text" type="number" name="attr_penetration"
+                                    <input class="cap transparent no-border center-text" type="number"
+                                           name="attr_penetration"
                                            value="5"/>
                                 </div>
                             </div>
@@ -648,13 +665,16 @@
                     <div class="common4 section">
                         <div class="sheet-row center-text">
                             <span class="bold">Trigger:</span>
-                            <input class="transparent no-border border-bottom-grey-1 center-text padding-3" type="number"
+                            <input class="transparent no-border border-bottom-grey-1 center-text padding-3"
+                                   type="number"
                                    name="attr_trigger" value="0"/>
                             <span class="bold">Sustain:</span>
-                            <input class="transparent no-border border-bottom-grey-1 center-text padding-3" type="number"
+                            <input class="transparent no-border border-bottom-grey-1 center-text padding-3"
+                                   type="number"
                                    name="attr_sustain" value="0"/>
                             <span class="bold">Amplify:</span>
-                            <input class="transparent no-border border-bottom-grey-1 center-text padding-3" type="number"
+                            <input class="transparent no-border border-bottom-grey-1 center-text padding-3"
+                                   type="number"
                                    name="attr_amplify" value="0"/>
                         </div>
                     </div>
@@ -755,7 +775,7 @@
                         <!--                        <input type="hidden" class="maneuver_display_settings_flag"-->
                         <!--                               name="attr_maneuver_display_settings_flag"-->
                         <!--                               value="hide"/>-->
-                        <div class="width60 displaySettings action-detail-grid">
+                        <div class="width65 displaySettings action-detail-grid">
                             <div class="sheet-row padding-2525">
                                 <div class="sheet-col">
                                     <div class="bold">Name:</div>
@@ -834,7 +854,8 @@
                                         <input type="hidden" class="melee-damage-indicator" name="attr_melee_against"
                                                value="1">
                                         <span name="attr_melee_damage_description"></span>
-                                        <img class="toughness-img melee-damage-toughness height20" name="attr_melee_damage_toughness">
+                                        <img class="toughness-img melee-damage-toughness height20"
+                                             name="attr_melee_damage_toughness">
                                         <img class="resistance-img melee-damage-resistance height20"
                                              name="attr_melee_damage_resistance">
                                     </div>
@@ -877,11 +898,20 @@
 
                                 <div class="sheet-col padding-top5">
                                     <span class="bold width-auto"> vs. </span>
-                                    <input type="radio" name="attr_melee_against" value="1"
-                                           checked="checked"/>
-                                    <img class="toughness-img size-20-box">
-                                    <input type="radio" name="attr_melee_against" value="2"/>
-                                    <img class="resistance-img size-20-box">
+                                </div>
+
+                                <div class="sheet-col padding-top5">
+                                    <label>
+                                        <input type="radio" name="attr_melee_against" value="1"
+                                               checked="checked"/>
+                                        <img class="toughness-img size-20-box">
+                                    </label>
+                                </div>
+                                <div class="sheet-col padding-top5">
+                                    <label>
+                                        <input type="radio" name="attr_melee_against" value="2"/>
+                                        <img class="resistance-img size-20-box">
+                                    </label>
                                 </div>
                             </div>
                             <div class="sheet-row padding-2505">
@@ -956,13 +986,20 @@
                                 <input style="width: 50px" type="text" name="attr_ranged_dice" value="1d6"/>
                                 <span class="width-auto bold"> + </span>
                                 <input style="width: 50px" type="text" name="attr_ranged_dice_bonus" value="0"/>
-
                                 <div class="sheet-col padding-top5">
-                                    <span style="width: auto; font-weight: bold"> vs. </span>
-                                    <input type="radio" name="attr_ranged_against" value="1" checked="checked"/>
-                                    <img class="toughness-img size-20-box">
-                                    <input type="radio" name="attr_ranged_against" value="2"/>
-                                    <img class="resistance-img size-20-box">
+                                    <span class="bold width-auto"> vs. </span>
+                                </div>
+                                <div class="sheet-col padding-top5">
+                                    <label>
+                                        <input type="radio" name="attr_ranged_against" value="1" checked="checked"/>
+                                        <img class="toughness-img size-20-box">
+                                    </label>
+                                </div>
+                                <div class="sheet-col padding-top5">
+                                    <label>
+                                        <input type="radio" name="attr_ranged_against" value="2"/>
+                                        <img class="resistance-img size-20-box">
+                                    </label>
                                 </div>
                             </div>
                             <div class="sheet-row padding-2505">
@@ -996,14 +1033,16 @@
                                     <span class="action-name action-centered" name="attr_action_name"></span>
                                     <div class="action-type action-centered">
                                         <div class="sheet-col">
-                                            <span class="sheet-row border-bottom-1" name="attr_action_subtype1"></span>
+                                            <span class="sheet-row action-type-border-bottom-1"
+                                                  name="attr_action_subtype1"></span>
                                             <span class="sheet-row" name="attr_action_subtype2"></span>
                                         </div>
                                     </div>
                                     <span class="action-target action-centered" name="attr_action_target"></span>
                                     <div class="action-range action-centered">
                                         <div class="sheet-col">
-                                            <span class="sheet-row border-bottom-1" name="attr_action_type"></span>
+                                            <span class="sheet-row action-type-border-bottom-1"
+                                                  name="attr_action_type"></span>
                                             <span class="sheet-row" name="attr_action_range"></span>
                                             <input type="hidden" class="action-field-indicator"
                                                    name="attr_action_field"/>
@@ -1143,84 +1182,147 @@
                                         <input class="roll-control" type="hidden" name="attr_action_roll_type"
                                                value="0"/>
 
-                                        <div class="flex-center dimgrey" style="color: white">
-                                            <span class="width-auto bold padding-right20">CAP + Damage
-                                                <input type="radio" value="0" name="attr_action_roll_type" checked/>
-                                            </span>
-                                            <span class="width-auto bold padding-right20">CAP Only
-                                                <input type="radio" value="1" name="attr_action_roll_type"/>
-                                            </span>
-                                            <span class="width-auto bold padding-right20">Auto-hit
-                                                <input type="radio" value="2" name="attr_action_roll_type"/>
-                                            </span>
-                                            <span class="width-auto bold padding-right20">Heal
-                                                <input type="radio" value="3" name="attr_action_roll_type"/>
-                                            </span>
-                                            <span class="width-auto bold">None
-                                                <input type="radio" value="-1" name="attr_action_roll_type"/>
-                                            </span>
+                                        <div class="flex-center action-type-bar white-text">
+                                            <div class="sheet-col">
+                                                <label class="bold">CAP + Damage
+                                                    <input type="radio" value="0" name="attr_action_roll_type" checked/>
+                                                </label>
+                                            </div>
+                                            <div class="sheet-col">
+                                                <label class="bold">CAP Only
+                                                    <input type="radio" value="1" name="attr_action_roll_type"/>
+                                                </label>
+                                            </div>
+                                            <div class="sheet-col">
+                                                <label class="bold">Auto-hit
+                                                    <input type="radio" value="2" name="attr_action_roll_type"/>
+                                                </label>
+                                            </div>
+                                            <div class="sheet-col">
+                                                <label class="bold">Heal
+                                                    <input type="radio" value="3" name="attr_action_roll_type"/>
+                                                </label>
+                                            </div>
+                                            <div class="sheet-col">
+                                                <label class="bold">None
+                                                    <input type="radio" value="-1" name="attr_action_roll_type"/>
+                                                </label>
+                                            </div>
                                         </div>
                                         <div class="action-damage padding-2525">
                                             <input class="custom-damage-control" type="hidden" name="attr_damage_type"
                                                    value="0"/>
-                                            <div class="flex-center grey padding-2525">
-                                                <span class="width-auto bold padding-left10">Custom
-                                                    <input type="radio" value="0" name="attr_damage_type" checked/>
-                                                </span>
-                                                <span class="width-auto bold padding-left10">[Melee Weapon Damage]
-                                                    <input type="radio" value="1" name="attr_damage_type"/>
-                                                </span>
-                                                <span class="width-auto bold padding-left10">[Ranged Weapon Damage]
-                                                    <input type="radio" value="2" name="attr_damage_type"/>
-                                                </span>
+                                            <div class="flex-center action-attack-bar padding-2525">
+                                                <div class="sheet-col">
+                                                    <label class="bold">Custom
+                                                        <input type="radio" value="0" name="attr_damage_type" checked/>
+                                                    </label>
+                                                </div>
+                                                <div class="sheet-col">
+                                                    <label class="bold">[Melee Weapon Damage]
+                                                        <input type="radio" value="1" name="attr_damage_type"/>
+                                                    </label>
+                                                </div>
+                                                <div class="sheet-col">
+                                                    <label class="bold">[Ranged Weapon Damage]
+                                                        <input type="radio" value="2" name="attr_damage_type"/>
+                                                    </label>
+                                                </div>
                                             </div>
                                             <div class="action-custom-damage padding-top4">
-                                                <span class="width-auto bold">Damage: </span>
-                                                <input style="width: 50px" type="text" name="attr_action_dice"
-                                                       value="1d6"/>
-                                                <span class="width-auto bold"> + </span>
-                                                <input style="width: 50px" type="text" name="attr_action_dice_bonus"
-                                                       value="0"/>
+                                                <div class="sheet-col">
+                                                    <label class="width-auto bold padding-right5">Damage:
+                                                        <input style="width: 50px" type="text" name="attr_action_dice"
+                                                               value="1d6"/>
+                                                    </label>
+                                                </div>
                                                 <div class="sheet-col padding-top5">
-                                                    <span class="width-auto bold"> vs. </span>
-                                                    <input type="radio" value="1" name="attr_action_against" checked/>
-                                                    <img class="toughness-img size-20-box">
-                                                    <input type="radio" value="2" name="attr_action_against"/>
-                                                    <img class="resistance-img size-20-box">
-                                                    <input type="radio" value="3" name="attr_action_against"/>
-                                                    <span class="indicator">PIERCING</span>
+                                                    <span class="padding-right5 bold"> + </span>
+                                                </div>
+                                                <div class="sheet-col">
+                                                    <label class="width-auto bold">
+                                                        <input style="width: 50px" type="text"
+                                                               name="attr_action_dice_bonus"
+                                                               value="0"/>
+                                                    </label>
+                                                </div>
+                                                <div class="sheet-col padding-top5">
+                                                    <span class="bold padding-right5"> vs. </span>
+                                                </div>
+                                                <div class="sheet-col padding-top5">
+                                                    <label>
+                                                        <input type="radio" name="attr_action_against" value="1"
+                                                               checked="checked"/>
+                                                        <img class="toughness-img size-20-box">
+                                                    </label>
+                                                </div>
+                                                <div class="sheet-col padding-top5">
+                                                    <label>
+                                                        <input type="radio" name="attr_action_against" value="2"/>
+                                                        <img class="resistance-img size-20-box">
+                                                    </label>
+                                                </div>
+                                                <div class="sheet-col padding-top5">
+                                                    <label>
+                                                        <input type="radio" value="3" name="attr_action_against"/>
+                                                        <span class="indicator">PIERCING</span>
+                                                    </label>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="action-healing padding-2525">
-                                            <span class="width-auto bold">Healing: </span>
-                                            <input style="width: 50px" type="text" name="attr_action_healing_dice"
-                                                   value="1d6"/>
-                                            <span class="width-auto bold"> + </span>
-                                            <input style="width: 50px" type="text" name="attr_action_healing_dice_bonus"
-                                                   value="0"/>
+                                            <div class="sheet-col">
+                                                <label class="width-auto bold padding-right5">
+                                                    Healing:
+                                                    <input style="width: 50px" type="text"
+                                                           name="attr_action_healing_dice" value="1d6"/>
+                                                </label>
+                                            </div>
+                                            <div class="sheet-col padding-top5">
+                                                <span class="padding-right5 bold"> + </span>
+                                            </div>
+                                            <div class="sheet-col">
+                                                <label class="width-auto bold">
+                                                    <input style="width: 50px" type="text"
+                                                           name="attr_action_healing_dice_bonus" value="0"/>
+                                                </label>
+                                            </div>
                                         </div>
                                     </div>
 
                                     <input class="description-control" type="hidden" name="attr_action_subtype1"
                                            value="General"/>
                                     <div class="action-amp-effect">
-                                        <div class="bold">Amp. Effect:</div>
-                                        <textarea class="height35 width95" name="attr_action_amp_effect"></textarea>
+                                        <label class="bold">
+                                            Amp. Effect:
+                                            <textarea class="height35 width95" name="attr_action_amp_effect"></textarea>
+                                        </label>
                                     </div>
                                     <div class="action-trig-effect">
-                                        <div class="bold">Trig. Condition:</div>
-                                        <textarea class="height35 width95" name="attr_action_trig_condition"></textarea>
-                                        <div class="bold">Trig. Effect:</div>
-                                        <textarea class="height35 width95" name="attr_action_trig_effect"></textarea>
+                                        <label class="bold">
+                                            Trig. Condition:
+                                            <textarea class="height35 width95"
+                                                      name="attr_action_trig_condition"></textarea>
+                                        </label>
+                                        <label class="bold">
+                                            Trig. Effect:
+                                            <textarea class="height35 width95"
+                                                      name="attr_action_trig_effect"></textarea>
+                                        </label>
                                     </div>
                                     <div class="action-sust-effect">
-                                        <div class="bold">Sust. Effect:</div>
-                                        <textarea class="height35 width95" name="attr_action_sust_effect"></textarea>
+                                        <label class="bold">
+                                            Sust. Effect:
+                                            <textarea class="height35 width95"
+                                                      name="attr_action_sust_effect"></textarea>
+                                        </label>
                                     </div>
                                     <div class="action-description">
-                                        <div class="bold">Description:</div>
-                                        <textarea class="height50 width95" name="attr_action_description"></textarea>
+                                        <label class="bold">
+                                            Description:
+                                            <textarea class="height50 width95"
+                                                      name="attr_action_description"></textarea>
+                                        </label>
                                     </div>
                                 </div>
                             </details>
@@ -1232,10 +1334,18 @@
                         <span class="action-name action-info-title"
                               style="color: #F9B276">CLASS TIDE-TURNER ACTIONS</span>
                         <div class="action-effect">
-                            <span style="font-size: 0.75em;">Max Tide-Turners:</span>
-                            <input class="x-small" type="number" value="0" name="attr_max_tide_turners"/>
-                            <span style="font-size: 0.75em;">Tide-Tuners Used:</span>
-                            <input class="x-small" type="number" value="0" name="attr_tide_turners_used"/>
+                            <div class="sheet-col">
+                                <label style="font-size: 0.75em;">
+                                    Max Tide-Turners:
+                                    <input class="x-small" type="number" value="0" name="attr_max_tide_turners"/>
+                                </label>
+                            </div>
+                            <div class="sheet-col">
+                                <label style="font-size: 0.75em;">
+                                    Tide-Tuners Used:
+                                    <input class="x-small" type="number" value="0" name="attr_tide_turners_used"/>
+                                </label>
+                            </div>
                         </div>
                     </div>
 
@@ -1410,65 +1520,114 @@
 
                                         <input class="roll-control" type="hidden" name="attr_tide_action_roll_type"
                                                value="0"/>
-                                        <div class="flex-center dimgrey" style="color: white">
-                                            <span class="width-auto bold padding-right20">CAP + Damage
-                                                <input type="radio" value="0" name="attr_tide_action_roll_type"
-                                                       checked/>
-                                            </span>
-                                            <span class="width-auto bold padding-right20">CAP Only
-                                                <input type="radio" value="1" name="attr_tide_action_roll_type"/>
-                                            </span>
-                                            <span class="width-auto bold padding-right20">Auto-hit
-                                                <input type="radio" value="2" name="attr_tide_action_roll_type"/>
-                                            </span>
-                                            <span class="width-auto bold padding-right20">Heal
-                                                <input type="radio" value="3" name="attr_tide_action_roll_type"/>
-                                            </span>
-                                            <span class="width-auto bold">None
-                                                <input type="radio" value="-1" name="attr_tide_action_roll_type"/>
-                                            </span>
+                                        <div class="flex-center action-type-bar">
+                                            <div class="sheet-col">
+                                                <label class="bold">CAP + Damage
+                                                    <input type="radio" value="0" name="attr_tide_action_roll_type"
+                                                           checked/>
+                                                </label>
+                                            </div>
+                                            <div class="sheet-col">
+                                                <label class="bold">CAP Only
+                                                    <input type="radio" value="1" name="attr_tide_action_roll_type"/>
+                                                </label>
+                                            </div>
+                                            <div class="sheet-col">
+                                                <label class="bold">Auto-hit
+                                                    <input type="radio" value="2" name="attr_tide_action_roll_type"/>
+                                                </label>
+                                            </div>
+                                            <div class="sheet-col">
+                                                <label class="bold">Heal
+                                                    <input type="radio" value="3" name="attr_tide_action_roll_type"/>
+                                                </label>
+                                            </div>
+                                            <div class="sheet-col">
+                                                <label class="bold">None
+                                                    <input type="radio" value="-1" name="attr_tide_action_roll_type"/>
+                                                </label>
+                                            </div>
                                         </div>
                                         <div class="action-damage padding-2525">
                                             <input class="custom-damage-control" type="hidden"
                                                    name="attr_tide_damage_type" value="0"/>
-                                            <div class="flex-center grey padding-2525">
-                                                <span class="width-auto bold padding-right20">Custom
-                                                    <input type="radio" value="0" name="attr_tide_damage_type" checked/>
-                                                </span>
-                                                <span class="width-auto bold padding-right20">[Melee Weapon Damage]
-                                                    <input type="radio" value="1" name="attr_tide_damage_type"/>
-                                                </span>
-                                                <span class="width-auto bold padding-right20">[Ranged Weapon Damage]
-                                                    <input type="radio" value="2" name="attr_tide_damage_type"/>
-                                                </span>
+                                            <div class="flex-center action-attack-bar padding-2525">
+                                                <div class="sheet-col">
+                                                    <label class="bold">Custom
+                                                        <input type="radio" value="0" name="attr_tide_damage_type"
+                                                               checked/>
+                                                    </label>
+                                                </div>
+                                                <div class="sheet-col">
+                                                    <label class="bold">[Melee Weapon Damage]
+                                                        <input type="radio" value="1" name="attr_tide_damage_type"/>
+                                                    </label>
+                                                </div>
+                                                <div class="sheet-col">
+                                                    <label class="bold">[Ranged Weapon Damage]
+                                                        <input type="radio" value="2" name="attr_tide_damage_type"/>
+                                                    </label>
+                                                </div>
                                             </div>
                                             <div class="action-custom-damage">
-                                                <span class="width-auto bold">Damage: </span>
-                                                <input style="width: 50px" type="text" name="attr_tide_action_dice"
-                                                       value="1d6"/>
-                                                <span class="width-auto bold"> + </span>
-                                                <input style="width: 50px" type="text"
-                                                       name="attr_tide_action_dice_bonus"
-                                                       value="0"/>
+                                                <div class="sheet-col">
+                                                    <label class="width-auto bold padding-right5">Damage:
+                                                        <input style="width: 50px" type="text"
+                                                               name="attr_tide_action_dice"
+                                                               value="1d6"/>
+                                                    </label>
+                                                </div>
                                                 <div class="sheet-col padding-top5">
-                                                    <span class="width-auto bold"> vs. </span>
-                                                    <input type="radio" value="1" name="attr_tide_action_against"
-                                                           checked/>
-                                                    <img class="toughness-img size-20-box" alt="Toughness">
-                                                    <input type="radio" value="2" name="attr_tide_action_against"/>
-                                                    <img class="resistance-img size-20-box" alt="Resistance">
-                                                    <input type="radio" value="3" name="attr_tide_action_against"/>
-                                                    <span class="indicator">PIERCING</span>
+                                                    <span class="padding-right5 bold"> + </span>
+                                                </div>
+                                                <div class="sheet-col">
+                                                    <label class="width-auto bold">
+                                                        <input style="width: 50px" type="text"
+                                                               name="attr_tide_action_dice_bonus"
+                                                               value="0"/>
+                                                    </label>
+                                                </div>
+                                                <div class="sheet-col padding-top5">
+                                                    <span class="bold padding-right5"> vs. </span>
+                                                </div>
+                                                <div class="sheet-col padding-top5">
+                                                    <label>
+                                                        <input type="radio" name="attr_tide_action_against" value="1"
+                                                               checked="checked"/>
+                                                        <img class="toughness-img size-20-box">
+                                                    </label>
+                                                </div>
+                                                <div class="sheet-col padding-top5">
+                                                    <label>
+                                                        <input type="radio" name="attr_tide_action_against" value="2"/>
+                                                        <img class="resistance-img size-20-box">
+                                                    </label>
+                                                </div>
+                                                <div class="sheet-col padding-top5">
+                                                    <label>
+                                                        <input type="radio" value="3" name="attr_tide_action_against"/>
+                                                        <span class="indicator">PIERCING</span>
+                                                    </label>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="action-healing padding-2525">
-                                            <span class="width-auto bold">Healing: </span>
-                                            <input style="width: 50px" type="text" name="attr_tide_action_healing_dice"
-                                                   value="1d6"/>
-                                            <span class="width-auto bold"> + </span>
-                                            <input style="width: 50px" type="text"
-                                                   name="attr_tide_action_healing_dice_bonus" value="0"/>
+                                            <div class="sheet-col">
+                                                <label class="width-auto bold padding-right5">
+                                                    Healing:
+                                                    <input style="width: 50px" type="text"
+                                                           name="attr_tide_action_healing_dice" value="1d6"/>
+                                                </label>
+                                            </div>
+                                            <div class="sheet-col padding-top5">
+                                                <span class="padding-right5 bold"> + </span>
+                                            </div>
+                                            <div class="sheet-col">
+                                                <label class="width-auto bold">
+                                                    <input style="width: 50px" type="text"
+                                                           name="attr_tide_action_healing_dice_bonus" value="0"/>
+                                                </label>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -1530,9 +1689,9 @@
                             <div class="sheet-col inventory-title width-half">Ranged</div>
                         </div>
                         <div class="sheet-row padding-bottom3">
-                            <div class="sheet-col width-half lightgrey">
+                            <div class="sheet-col width-half inventory-box-lower">
                                 <div class="flex-center">
-                                    <select class="selector transparent" name="attr_melee_weapon">
+                                    <select class="selector no-border transparent" name="attr_melee_weapon">
                                         <option value="">Select</option>
                                         <option value="sword_1h">Sword [1H]</option>
                                         <option value="sword_2h">Sword [2H]</option>
@@ -1547,9 +1706,9 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="sheet-col width-half lightgrey">
+                            <div class="sheet-col width-half inventory-box-lower">
                                 <div class="flex-center">
-                                    <select class="selector transparent" name="attr_ranged_weapon">
+                                    <select class="selector no-border transparent" name="attr_ranged_weapon">
                                         <option value="">Select</option>
                                         <option value="bow">Bow</option>
                                         <option value="crossbow">Crossbow</option>
@@ -1564,9 +1723,9 @@
                             <div class="sheet-col inventory-title width-half">Armour</div>
                         </div>
                         <div class="sheet-row padding-bottom3">
-                            <div class="sheet-col width-half lightgrey">
+                            <div class="sheet-col width-half inventory-box-lower">
                                 <div class="flex-center">
-                                    <select class="selector transparent" name="attr_offhand">
+                                    <select class="selector no-border transparent" name="attr_offhand">
                                         <option value="">Select</option>
                                         <option value="light_shield">Light Shield</option>
                                         <option value="medium_shield">Medium Shield</option>
@@ -1578,9 +1737,9 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="sheet-col width-half lightgrey">
+                            <div class="sheet-col width-half inventory-box-lower">
                                 <div class="flex-center">
-                                    <select class="selector transparent" name="attr_armour">
+                                    <select class="selector no-border transparent" name="attr_armour">
                                         <option value="">Select</option>
                                         <option value="robes">Robes</option>
                                         <option value="light_armour">Light Armour</option>
@@ -1593,7 +1752,7 @@
                             <div class="sheet-col inventory-title width100">Gold Zeniths</div>
                         </div>
                         <div class="sheet-row padding-bottom3">
-                            <div class="sheet-col width100 lightgrey">
+                            <div class="sheet-col width100 inventory-box-lower">
                                 <div class="flex-center">
                                     <input class="medium center-text transparent no-border" type="text"
                                            name="attr_gold" value="0"/>
@@ -1603,14 +1762,14 @@
 
                         <div class="inventory-header">Items</div>
                         <fieldset class="repeating_inventory">
-                            <div class="sheet-row lightgrey" style="margin-bottom: 3px">
+                            <div class="sheet-row" style="margin-bottom: 3px">
                                 <div class="inventory-box">
                                     <div class="inventory-box-upper">
                                         <span class="bold">Item:</span>
                                         <input class="no-border transparent white-text" type="text"
                                                name="attr_item_name"/>
                                     </div>
-                                    <div class="padding-2">
+                                    <div class="padding-2 inventory-box-lower">
                                         <div class="flex-center-left">
                                             <div class="sheet-col padding-top4 padding-right2">
                                                 <span class="bold">Effect:</span>
@@ -1656,14 +1815,14 @@
                     <div class="sheet-col padding-left10" style="width: 64%">
                         <div>
                             <div class="inventory-header">Keepsakes</div>
-                            <div class="sheet-col width-half lightgrey" style="margin-bottom: 3px">
+                            <div class="sheet-col width-half" style="margin-bottom: 3px">
                                 <div class="inventory-box">
                                     <div class="inventory-box-upper">
                                         <span class="bold">Keepsake:</span>
                                         <input class="no-border transparent white-text" type="text"
                                                name="attr_keepsake1_name"/>
                                     </div>
-                                    <div class="padding-2">
+                                    <div class="padding-2 inventory-box-lower">
                                         <div class="flex-center-left">
                                             <div class="sheet-col padding-top4 padding-right2">
                                                 <span class="bold">Effect:</span>
@@ -1704,14 +1863,14 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="sheet-col width-half lightgrey" style="margin-bottom: 3px">
+                            <div class="sheet-col width-half" style="margin-bottom: 3px">
                                 <div class="inventory-box">
                                     <div class="inventory-box-upper">
                                         <span class="bold">Keepsake:</span>
                                         <input class="no-border transparent white-text" type="text"
                                                name="attr_keepsake2_name"/>
                                     </div>
-                                    <div class="padding-2">
+                                    <div class="padding-2 inventory-box-lower">
                                         <div class="flex-center-left">
                                             <div class="sheet-col padding-top4 padding-right2">
                                                 <span class="bold">Effect:</span>
@@ -1785,19 +1944,19 @@
                                 <div class="sheet-col inventory-title width-third">Height</div>
                             </div>
                             <div class="sheet-row padding-bottom3">
-                                <div class="sheet-col width-third lightgrey">
+                                <div class="sheet-col width-third inventory-box-lower">
                                     <div class="flex-center">
                                         <input class="center-text transparent no-border" type="text"
                                                name="attr_bio_gender"/>
                                     </div>
                                 </div>
-                                <div class="sheet-col width-third lightgrey">
+                                <div class="sheet-col width-third inventory-box-lower">
                                     <div class="flex-center">
                                         <input class="center-text transparent no-border" type="text"
                                                name="attr_bio_age"/>
                                     </div>
                                 </div>
-                                <div class="sheet-col width-third lightgrey">
+                                <div class="sheet-col width-third inventory-box-lower">
                                     <div class="flex-center">
                                         <input class="center-text transparent no-border" type="text"
                                                name="attr_bio_height"/>
@@ -1810,19 +1969,19 @@
                                 <div class="sheet-col inventory-title width-third">Eyes</div>
                             </div>
                             <div class="sheet-row padding-bottom3">
-                                <div class="sheet-col width-third lightgrey">
+                                <div class="sheet-col width-third inventory-box-lower">
                                     <div class="flex-center">
                                         <input class="center-text transparent no-border" type="text"
                                                name="attr_bio_build"/>
                                     </div>
                                 </div>
-                                <div class="sheet-col width-third lightgrey">
+                                <div class="sheet-col width-third inventory-box-lower">
                                     <div class="flex-center">
                                         <input class="center-text transparent no-border" type="text"
                                                name="attr_bio_hair"/>
                                     </div>
                                 </div>
-                                <div class="sheet-col width-third lightgrey">
+                                <div class="sheet-col width-third inventory-box-lower">
                                     <div class="flex-center">
                                         <input class="center-text transparent no-border" type="text"
                                                name="attr_bio_eyes"/>
@@ -1930,9 +2089,9 @@
                             </div>
                             <div class="description">
                                 <span>-1 x [Stack]
-                                    <img class="toughness-img size-25-box">
+                                    <img class="toughness-img size-20-box">
                                     &
-                                    <img class="resistance-img size-25-box">.
+                                    <img class="resistance-img size-20-box">.
                                 </span>
                             </div>
                         </div>
@@ -1973,7 +2132,7 @@
                             <div class="description-foe">
                                 <span style="display: inline-block;">
                                     On Foe: Heroes have +4
-                                    <img class="dodge-img size-25-box">
+                                    <img class="dodge-img size-20-box">
                                     against Actions used by Foe.
                                 </span>
                             </div>
@@ -1993,7 +2152,7 @@
                         <div class="description-hero">
                             <span class="width-third">
                                 On Hero: -2
-                                <img class="dodge-img size-25-box">
+                                <img class="dodge-img size-20-box">
                             </span>
                         </div>
                         <div class="description-foe">
@@ -2301,9 +2460,9 @@
                                     SPECIAL ACTIONS TYPES & THEIR RESOURCES:
                                 </div>
 
-                                <div class="guide-special light-red">
+                                <div class="guide-special" style="background-color: #fbd4c9">
                                     <div>
-                                        <div class="sheet-row padding-top5">
+                                        <div class="sheet-row black-text padding-top5">
                                             <p>
                                                 <span class="bold">Trigger Actions:</span> Can be used out of Turn
                                                 Order if the Trigger Condition is met. You must have enough unused
@@ -2312,14 +2471,14 @@
                                             </p>
                                         </div>
                                         <div class="red" style="height: 1px"></div>
-                                        <div class="sheet-row red-text padding-top5">
+                                        <div class="sheet-row red-only-text padding-top5">
                                             <p>
                                                 <span class="italic bold">Trigger Limit:</span> The total amount of
                                                 Trigger Actions you can use per Round.
                                             </p>
                                         </div>
                                         <div class="red" style="height: 1px"></div>
-                                        <div class="sheet-row padding-top5">
+                                        <div class="sheet-row black-text padding-top5">
                                             <p>
                                                 <span class="bold">Sustain Actions:</span> Actions may have a Sustain
                                                 Effect. If they do, they can have their Sustain Effect applied at the
@@ -2335,7 +2494,7 @@
                                     </div>
                                     <div>
                                         <div class="red" style="height: 1px"></div>
-                                        <div class="sheet-row red-text padding-top5">
+                                        <div class="sheet-row red-only-text padding-top5">
                                             <p>
                                                 <span class="italic bold">Sustain Limit:</span> The total amount of
                                                 Sustain Effects that you can have active each Round. Multiple copies of
@@ -2343,7 +2502,7 @@
                                             </p>
                                         </div>
                                         <div class="red" style="height: 1px"></div>
-                                        <div class="sheet-row padding-top5">
+                                        <div class="sheet-row black-text padding-top5">
                                             <p>
                                                 <span class="bold">Amplify Actions:</span> The power of an Action can be
                                                 increased with an Amplify Effect. Amplify Effects may
@@ -2353,14 +2512,14 @@
                                             </p>
                                         </div>
                                         <div class="red" style="height: 1px"></div>
-                                        <div class="sheet-row red-text padding-top5">
+                                        <div class="sheet-row red-only-text padding-top5">
                                             <p>
                                                 <span class="italic bold">Amplify Limit:</span> The total amount of
                                                 Amplify Effects and Amplify Actions you can use per Round.
                                             </p>
                                         </div>
                                         <div class="red" style="height: 1px"></div>
-                                        <div class="sheet-row padding-top5">
+                                        <div class="sheet-row black-text padding-top5">
                                             <p>
                                                 <span class="bold">Tide-Turner Actions:</span> Your most powerful
                                                 Actions. They are activated by expending a Tide-Turner Charge in
@@ -2390,9 +2549,9 @@
                     <div class="sheet-row padding-bottom5">
                         <div class="sheet-col border-red" style="padding: 2px 2px 2px 0">
                             <span class="info-hp-text">HP:</span>
-                            <input type="number" name="attr_hp" value="10" style="width: 50px"/>
+                            <input class="transparent" type="number" name="attr_hp" value="10" style="width: 50px"/>
                             <span> / </span>
-                            <input type="number" name="attr_hp_max" value="10" style="width: 50px"/>
+                            <input class="transparent" type="number" name="attr_hp_max" value="10" style="width: 50px"/>
                         </div>
                         <div class="sheet-col red padding-3 bold">
                             <img class="toughness-img size-25-box">
@@ -6130,6 +6289,14 @@
                 setAttrs({repeating_npcLearned_npc_learn_damage_description: description});
             });
         });
+
+
+
+
+
+
+
+
 
 
 

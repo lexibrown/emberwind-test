@@ -3,13 +3,11 @@
 @font-face {
     font-family: Fungfont;
     src: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Emberwind/fonts/Kungfont-Regular.otf") format("opentype");
-    /*src: url(https://github.com/Roll20/roll20-character-sheets/blob/master/Emberwind/fonts/Kungfont-Regular.otf) format("truetype");*/
 }
 
 @font-face {
     font-family: ProximaNova;
     src: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Emberwind/fonts/ProximaNova-Regular.ttf");
-    /*src: url(https://github.com/lexibrown/roll20-character-sheets/raw/master/Emberwind/fonts/ProximaNova-Regular.ttf) format("truetype");*/
 }
 
 .charsheet .kungfont {
@@ -36,32 +34,64 @@ body.sheet-darkmode .top-logo {
 /*----------------- Container ------------------*/
 
 .charsheet {
-    background-color: white;
+    background-color: transparent;
     color: black;
 }
 
+.sheet-darkmode .sheetform {
+    background-color: transparent;
+}
+
 .container {
+    background-color: transparent;
     width: 1100px;
     height: 900px;
 }
 
-body.sheet-darkmode button,
+.charsheet label {
+    margin: 0;
+    font-weight: normal;
+    font-size: 1.0em;
+}
+
+/*----------------- Common Dark Mode ------------------*/
+
 body.sheet-darkmode input,
+body.sheet-darkmode textarea {
+    color: #eee;
+    background-color: #878787;
+}
+
+body.sheet-darkmode button,
 body.sheet-darkmode optgroup,
 body.sheet-darkmode select,
-body.sheet-darkmode textarea,
+body.sheet-darkmode .charsheet label,
 body.sheet-darkmode .charsheet {
-    color: #eee
+    color: #eee;
+    background-color: transparent;
+}
+
+body.sheet-darkmode select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSd3aGl0ZScgaGVpZ2h0PScyNCcgdmlld0JveD0nMCAwIDI0IDI0JyB3aWR0aD0nMjQnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHBhdGggZD0nTTcgMTBsNSA1IDUtNXonLz48cGF0aCBkPSdNMCAwaDI0djI0SDB6JyBmaWxsPSdub25lJy8+PC9zdmc+) no-repeat;
+    background-position-x: 100%;
+    border-radius: 2px;
+    padding-right: 2rem;
+}
+
+body.sheet-darkmode select > option {
+    background: dimgrey;
 }
 
 body.sheet-darkmode .btn,
 body.sheet-darkmode .btn.btn-default {
     color: #c8c3bc;
-    text-shadow: rgba(24, 26, 27, .75) 0px 1px 1px;
+    text-shadow: rgba(24, 26, 27, .75) 0 1px 1px;
     background-color: #1e2021;
-    background-image: linear-gradient(#181a1b, #26292b);
+    /*background-image: linear-gradient(#181a1b, #26292b);*/
     border-color: #3e4446 #3e4446 #43494c;
-    box-shadow: rgba(24, 26, 27, .2) 0px 1px 0px inset, rgba(0, 0, 0, .05) 0px 1px 2px
+    box-shadow: rgba(24, 26, 27, .2) 0 1px 0 inset, rgba(0, 0, 0, .05) 0 1px 2px
 }
 
 /*----------------- Images ------------------*/
@@ -178,6 +208,11 @@ button.tab {
     font-size: 16px;
 }
 
+body.sheet-darkmode button.tab {
+    background: #414042;
+    color: white;
+}
+
 button.tab:hover {
     background: dimgrey;
     color: white;
@@ -185,11 +220,20 @@ button.tab:hover {
     /*border-style: solid;*/
 }
 
+body.sheet-darkmode button.tab:hover {
+    background: dimgrey;
+}
+
 button.tab:focus, button.tab:visited {
     background: dimgrey;
     /*color: white;*/
     font-weight: bold;
     /*border-style: solid;*/
+}
+
+body.sheet-darkmode button.tab:focus,
+body.sheet-darkmode button.tab:visited {
+    background: #bababa;
 }
 
 input.tab {
@@ -248,6 +292,10 @@ div.tab-content {
     height: 3px;
 }
 
+body.sheet-darkmode .separator {
+    background-color: #414042;
+}
+
 /*----------------- Advantage Tabs ------------------*/
 
 .advantage-box {
@@ -272,6 +320,12 @@ div.tab-content {
     color: white;
 }
 
+body.sheet-darkmode .toggle-advantage,
+body.sheet-darkmode .toggle-normal,
+body.sheet-darkmode .toggle-disadvantage {
+    border: 2px solid darkgray;
+}
+
 .toggle-advantage:hover,
 .toggle-normal:hover,
 .toggle-disadvantage:hover {
@@ -287,20 +341,40 @@ input.page-control[value="on"] ~ .block-container.mod-block {
     border: 5px solid #bababa;
 }
 
+body.sheet-darkmode .mod-box {
+    border: 5px solid #878787;
+}
+
 .mod-box-red {
     border: 5px solid #FEB8AE;
+}
+
+body.sheet-darkmode .mod-box-red {
+    border: 5px solid #f58e8d;
 }
 
 .mod-box-blue {
     border: 5px solid #B8DCF9;
 }
 
+body.sheet-darkmode .mod-box-blue {
+    border: 5px solid #72c8eb;
+}
+
 .mod-box-green {
     border: 5px solid #BAE0CB;
 }
 
+body.sheet-darkmode .mod-box-green {
+    border: 5px solid #80cfac;
+}
+
 .mod-box-yellow {
     border: 5px solid #FDD5B0;
+}
+
+body.sheet-darkmode .mod-box-yellow {
+    border: 5px solid #f9b174;
 }
 
 /*----------------- GRIDS ------------------*/
@@ -437,14 +511,21 @@ input.page-control[value="on"] ~ .block-container.mod-block {
     width: 100%;
 }
 
+body.sheet-darkmode .guide-middle-grid {
+    border: 5px solid #414042;
+}
+
 .chevron-arrow-right {
     display: inline-block;
     background-color: #bababa;
     width: 33px;
-    height: 113%;
+    height: 111%;
     margin-top: -10px;
-    -webkit-clip-path: polygon(52% 0, 100% 53%, 52% 100%, 36% 100%, 81% 52%, 35% 0);
     clip-path: polygon(52% 0, 100% 53%, 52% 100%, 36% 100%, 81% 52%, 35% 0);
+}
+
+body.sheet-darkmode .chevron-arrow-right {
+    background-color: #414042;
 }
 
 .guide-bottom {
@@ -496,7 +577,13 @@ input.page-control[value="on"] ~ .block-container.mod-block {
 
 .guide-p {
     /*background: -webkit-linear-gradient(130deg, #f1413a 60%, #B8DCF9 50%);*/
-    background: -webkit-linear-gradient(130deg, #f1413a 60%, #14a4de 50%);
+    background: -webkit-linear-gradient(130deg, #f1413a 65%, #14a4de 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+body.sheet-darkmode .guide-p {
+    background: -webkit-linear-gradient(130deg, #FEB8AE 65%, #B8DCF9 50%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -528,7 +615,7 @@ input.page-control[value="on"] ~ .block-container.mod-block {
 
 body.sheet-darkmode .condition-grid > div,
 body.sheet-darkmode .condition-with-foe-grid > div {
-    background-color: dimgrey;
+    background-color: inherit;
     border-bottom: 1px solid white;
 }
 
@@ -588,7 +675,7 @@ body.sheet-darkmode .condition-with-foe-grid > div:nth-child(3) {
     /*justify-content: flex-start;*/
 }
 
-.flex-center {
+.charsheet .flex-center {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -666,6 +753,10 @@ body.sheet-darkmode .condition-with-foe-grid > div:nth-child(3) {
     border-bottom: 2px solid lightgrey;
 }
 
+body.sheet-darkmode .tier {
+    border-bottom: 2px solid #414042;
+}
+
 .tier span {
     font-weight: bold;
     padding: 3px;
@@ -695,14 +786,25 @@ body.sheet-darkmode .condition-with-foe-grid > div:nth-child(3) {
     font-weight: bold;
 }
 
+body.sheet-darkmode .info-hp-text {
+    border: 3px solid #414042;
+    background-color: #414042;
+    color: white;
+}
+
 .info-hp-box {
     width: 35%;
     background-color: #e6e7e8;
     padding-top: 5px;
-    padding-bottom: 5px;
+    padding-bottom: 7px;
     padding-left: 10px;
     margin-left: -5px;
     border: 3px solid lightgrey;
+}
+
+body.sheet-darkmode .info-hp-box {
+    background-color: dimgrey;
+    border: 3px solid #414042;
 }
 
 .info-hp-box input {
@@ -767,6 +869,10 @@ div.header {
     padding-bottom: 2px;
 }
 
+body.sheet-darkmode div.header {
+    background-color: #414042;
+}
+
 .header1 {
     grid-area: header1;
 }
@@ -796,6 +902,14 @@ div.header {
     padding-bottom: 2px;
 }
 
+body.sheet-darkmode .header1,
+body.sheet-darkmode .header2,
+body.sheet-darkmode .header3,
+body.sheet-darkmode .header4,
+body.sheet-darkmode .header5 {
+    background-color: #414042;
+}
+
 /*----------------- Attribute section ------------------*/
 
 .attribute1 {
@@ -816,6 +930,7 @@ div.header {
     padding-top: 6px;
     padding-bottom: 8px;
     padding-right: 2px;
+    color: black;
 }
 
 .character-version-control[value="aspect"] ~ .aspects,
@@ -835,11 +950,11 @@ div.header {
 }
 
 .stats-col {
-    display: inline-flex;
     width: 70%;
     font-weight: bold;
     text-align: center;
     padding: 3px 0 4px 2px;
+    color: black;
 }
 
 .stat-value {
@@ -869,6 +984,10 @@ div.header {
     border: 1px solid dimgrey;
 }
 
+body.sheet-darkmode .skill-left {
+    border: 1px solid #414042;
+}
+
 .skill-label {
     grid-area: skill-label;
     background-color: dimgrey;
@@ -881,9 +1000,17 @@ div.header {
     margin-bottom: 0;
 }
 
+body.sheet-darkmode .skill-label {
+    background-color: #414042;
+}
+
 .skill-right {
     grid-area: skill-right;
     border: 1px solid dimgrey;
+}
+
+body.sheet-darkmode .skill-right {
+    border: 1px solid #414042;
 }
 
 .skill {
@@ -898,6 +1025,11 @@ div.header {
     border: 1px solid dimgrey;
     background: #e6e7e8;
     /*margin-bottom: -5px;*/
+}
+
+body.sheet-darkmode .skill {
+    border: 1px solid #414042;
+    background: dimgrey;
 }
 
 .skill input {
@@ -917,12 +1049,20 @@ div.header {
     padding: 2px;
 }
 
+body.sheet-darkmode .skill button[type=roll] {
+    color: white;
+}
+
 .skill button[type=roll]:before {
     /*content: " ";*/
 }
 
 .skill button[type=roll]:hover {
     background-color: lightgrey;
+}
+
+body.sheet-darkmode .skill button[type=roll]:hover {
+    background-color: #414042;
 }
 
 .common3 {
@@ -963,7 +1103,6 @@ div.header {
 .ranged-damage-resistance {
     margin-left: -20px;
 }
-
 
 .tide-action-damage-resistance,
 .tide-action-damage-toughness,
@@ -1034,6 +1173,14 @@ div.header {
     grid-area: action-type;
 }
 
+.action-type-border-bottom-1 {
+    border-bottom: 1px solid black;
+}
+
+body.sheet-darkmode .action-type-border-bottom-1 {
+    border-bottom: 1px solid white;
+}
+
 .action-target {
     grid-area: action-target;
 }
@@ -1072,6 +1219,13 @@ div.header {
     padding: 3px;
 }
 
+body.sheet-darkmode .action-centered,
+body.sheet-darkmode .action-leftCentered,
+body.sheet-darkmode .action-text {
+    background-color: dimgrey;
+    color: white;
+}
+
 .action-tide-centered {
     background-color: #FEE9D4;
     text-align: center;
@@ -1092,6 +1246,13 @@ div.header {
     background-color: #FEE9D4;
     text-align: center;
     padding: 3px;
+}
+
+body.sheet-darkmode .action-tide-centered,
+body.sheet-darkmode .action-tide-leftCentered,
+body.sheet-darkmode .action-tide-text {
+    background-color: #F9B276;
+    color: black;
 }
 
 .action-header {
@@ -1116,6 +1277,11 @@ div.header {
     padding-top: 3px;
     padding-left: 5px;
     margin-right: -5px;
+}
+
+body.sheet-darkmode .action-header,
+body.sheet-darkmode .action-header-left {
+    background-color: #414042;
 }
 
 .action-info-title {
@@ -1201,7 +1367,13 @@ input.action-description-indicator[value="2"] ~ .action-auto-hit-description {
 
 /*----------------- Colours ------------------*/
 
-.white-text {
+.charsheet .black-text,
+body.sheet-darkmode .black-text {
+    color: black;
+}
+
+.charsheet .white-text,
+body.sheet-darkmode .white-text {
     color: white;
 }
 
@@ -1210,12 +1382,24 @@ input.action-description-indicator[value="2"] ~ .action-auto-hit-description {
     /*background-color: #fbd4c9;*/
 }
 
+body.sheet-darkmode .light-red {
+    background-color: #f58e8d;
+}
+
 .light-red-text {
     color: #FEB8AE;
 }
 
 .red {
     background-color: #FEB8AE;
+}
+
+body.sheet-darkmode .red {
+    background-color: #f15d5c;
+}
+
+.red-only-text {
+    color: #f1413a;
 }
 
 .red-text {
@@ -1239,6 +1423,10 @@ body.sheet-darkmode .red-text {
     background-color: #B8DCF9;
 }
 
+body.sheet-darkmode .blue {
+    background-color: #14a4de;
+}
+
 .blue-text {
     color: #14a4de;
 }
@@ -1251,8 +1439,16 @@ body.sheet-darkmode .blue-text {
     background-color: #cbe0f5;
 }
 
+body.sheet-darkmode .light-blue {
+    background-color: #72c8eb;
+}
+
 .green {
     background-color: #BAE0CB;
+}
+
+body.sheet-darkmode .green {
+    background-color: #4abb88;
 }
 
 .green-text {
@@ -1267,8 +1463,16 @@ body.sheet-darkmode .green-text {
     background-color: #d3ebdc;
 }
 
+body.sheet-darkmode .light-green {
+    background-color: #80cfac;
+}
+
 .yellow {
     background-color: #FDD5B0;
+}
+
+body.sheet-darkmode .yellow {
+    background-color: #f89e51;
 }
 
 .yellow-text {
@@ -1281,6 +1485,10 @@ body.sheet-darkmode .yellow-text {
 
 .light-yellow {
     background-color: #fee3cb;
+}
+
+body.sheet-darkmode .light-yellow {
+    background-color: #f9b174;
 }
 
 .red .blue .green .yellow {
@@ -1358,13 +1566,25 @@ input.right {
     border: 5px solid #FEB8AE;
 }
 
+body.sheet-darkmode .critical {
+    border: 5px solid #f58e8d;
+}
+
 .accuracy {
     border: 5px solid #BAE0CB;
 }
 
+body.sheet-darkmode .accuracy {
+    border: 5px solid #80cfac;
+}
+
 .penetration {
     border: 5px solid;
-    border-image: linear-gradient(to bottom, #B8DCF9 50%, #FEB8AE 50%, #FEB8AE 50%) 5;
+    border-image: linear-gradient(to bottom, #72c8eb 50%, #FEB8AE 50%, #FEB8AE 50%) 5;
+}
+
+body.sheet-darkmode .penetration {
+    border-image: linear-gradient(to bottom, #72c8eb 50%, #f58e8d 50%, #f58e8d 50%) 5;
 }
 
 .cap-main-col {
@@ -1389,7 +1609,7 @@ input.right {
     font-size: 0.75em;
 }
 
-.bold {
+.charsheet .bold {
     font-weight: bold;
 }
 
@@ -1454,6 +1674,14 @@ input.right {
 
 .padding-right2 {
     padding-right: 2px;
+}
+
+.charsheet .padding-right5 {
+    padding-right: 5px;
+}
+
+.charsheet .padding-right10 {
+    padding-right: 10px;
 }
 
 .padding-right20 {
@@ -1532,12 +1760,20 @@ input.right {
     background-color: transparent;
 }
 
+body.sheet-darkmode .transparent {
+    background-color: transparent;
+}
+
 .border-bottom-1 {
     border-bottom: 1px solid black;
 }
 
 .border-bottom-2 {
     border-bottom: 2px solid black;
+}
+
+body.sheet-darkmode .border-bottom-2 {
+    border-bottom: 2px solid #414042;
 }
 
 .border-bottom-grey-1 {
@@ -1583,21 +1819,30 @@ input[type=number].move-number-input {
     content: "";
 }
 
-.charsheet button[type=roll].custom-roll-button {
+.charsheet button[type=roll].custom-roll-button,
+body.sheet-darkmode .custom-roll-button {
     width: 20px;
     height: 20px;
     background-repeat: no-repeat;
-    background-size: 110% 110%;
+    background-size: 100% 100%;
     background-position: center;
     background-color: transparent;
 }
 
+.toughness-image {
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/toughness-b.png");
+}
+
+.resistance-image {
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/resistance-b.png");
+}
+
 .dodge-image {
-    background-image: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/dodge_transparent.png");
+    background-image: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/dodge-b.png");
 }
 
 .willpower-image {
-    background-image: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/willpower_transparent.png");
+    background-image: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/willpower-b.png");
 }
 
 /*----------------- Inventory / Bio ------------------*/
@@ -1620,8 +1865,16 @@ input[type=number].move-number-input {
     padding-bottom: 2px;
 }
 
+body.sheet-darkmode .inventory-title {
+    background-color: #414042;
+}
+
 .inventory-box {
     border: 2px solid dimgrey;
+}
+
+body.sheet-darkmode .inventory-box {
+    border: 2px solid #414042;
 }
 
 .inventory-box-upper {
@@ -1629,6 +1882,20 @@ input[type=number].move-number-input {
     color: white;
     border-bottom: 2px solid lightgrey;
     padding: 2px;
+}
+
+body.sheet-darkmode .inventory-box-upper {
+    background-color: #414042;
+    border-bottom: 2px solid dimgrey;
+}
+
+.inventory-box-lower {
+    background-color: #e6e7e8;
+}
+
+body.sheet-darkmode .inventory-box-lower {
+    background-color: dimgrey;
+    border-bottom: 2px solid #414042;
 }
 
 .inventory-selector {
@@ -1744,6 +2011,11 @@ input[type=checkbox].tab-hide:checked ~ .show-hide {
     margin-left: 9%
 }
 
+body.sheet-darkmode .displaySettings {
+    background-color: dimgrey;
+    border: 2px dotted #414042;
+}
+
 .melee_display_settings_flag[value="hide"] ~ .displaySettings,
 .ranged_display_settings_flag[value="hide"] ~ .displaySettings,
 .maneuver_display_settings_flag[value="hide"] ~ .displaySettings,
@@ -1753,6 +2025,26 @@ input[type=checkbox].tab-hide:checked ~ .show-hide {
 
 .charsheet summary {
     cursor: pointer;
+}
+
+.action-type-bar {
+    background-color: dimgrey;
+}
+
+.action-type-bar > div > label {
+    color: white;
+}
+
+body.sheet-darkmode .action-type-bar {
+    background-color: #414042;
+}
+
+.action-attack-bar {
+    background-color: lightgrey;
+}
+
+body.sheet-darkmode .action-attack-bar {
+    background-color: #545355;
 }
 
 /*----------------- NPC Sheet ------------------*/
@@ -1848,159 +2140,159 @@ input[type=checkbox].tab-hide:checked ~ .show-hide {
 
 /* Boring Pre-defined width & height options */
 
-.width-auto {
+.charsheet .width-auto {
     width: auto;
 }
 
-.width-half {
+.charsheet .width-half {
     width: 49%;
 }
 
-.width-third {
+.charsheet .width-third {
     width: 32%;
 }
 
-.width5 {
+.charsheet .width5 {
     width: 5%;
 }
 
-.width6 {
+.charsheet .width6 {
     width: 6%;
 }
 
-.width10 {
+.charsheet .width10 {
     width: 10%;
 }
 
-.width15 {
+.charsheet .width15 {
     width: 15%;
 }
 
-.width20 {
+.charsheet .width20 {
     width: 20%;
 }
 
-.width25 {
+.charsheet .width25 {
     width: 25%;
 }
 
-.width30 {
+.charsheet .width30 {
     width: 30%;
 }
 
-.width35 {
+.charsheet .width35 {
     width: 35%;
 }
 
-.width39 {
+.charsheet .width39 {
     width: 39%;
 }
 
-.width40 {
+.charsheet .width40 {
     width: 40%;
 }
 
-.width45 {
+.charsheet .width45 {
     width: 45%;
 }
 
-.width50 {
+.charsheet .width50 {
     width: 50%;
 }
 
-.width55 {
+.charsheet .width55 {
     width: 55%;
 }
 
-.width60 {
+.charsheet .width60 {
     width: 60%;
 }
 
-.width65 {
+.charsheet .width65 {
     width: 65%;
 }
 
-.width70 {
+.charsheet .width70 {
     width: 70%;
 }
 
-.width75 {
+.charsheet .width75 {
     width: 75%;
 }
 
-.width80 {
+.charsheet .width80 {
     width: 80%;
 }
 
-.width85 {
+.charsheet .width85 {
     width: 85%;
 }
 
-.width90 {
+.charsheet .width90 {
     width: 90%;
 }
 
-.width95 {
+.charsheet .width95 {
     width: 95%;
 }
 
-.width100 {
+.charsheet .width100 {
     width: 100%;
 }
 
-.height5 {
+.charsheet .height5 {
     height: 5px;
 }
 
-.height10 {
+.charsheet .height10 {
     height: 10px;
 }
 
-.height15 {
+.charsheet .height15 {
     height: 15px;
 }
 
-.height17 {
+.charsheet .height17 {
     height: 17px;
 }
 
-.height20 {
+.charsheet .height20 {
     height: 20px;
 }
 
-.height25 {
+.charsheet .height25 {
     height: 25px;
 }
 
-.height30 {
+.charsheet .height30 {
     height: 30px;
 }
 
-.height35 {
+.charsheet .height35 {
     height: 35px;
 }
 
-.height40 {
+.charsheet .height40 {
     height: 40px;
 }
 
-.height50 {
+.charsheet .height50 {
     height: 50px;
 }
 
-.height75 {
+.charsheet .height75 {
     height: 75px;
 }
 
-.height80 {
+.charsheet .height80 {
     height: 80px;
 }
 
-.height100 {
+.charsheet .height100 {
     height: 100px;
 }
 
-.height150 {
+.charsheet .height150 {
     height: 150px;
 }
 
@@ -2156,14 +2448,14 @@ input[type=checkbox].hex-button {
     width: 100%;
     height: 100%;
     background: inherit;
-    z-index: -2;
+    z-index: 1;
     overflow: hidden;
     backface-visibility: hidden;
 }
 
 .hex .corner-1,
 .small-hex .corner-1 {
-    z-index: -1;
+    z-index: 0;
     transform: rotate(60deg);
 }
 
@@ -2204,6 +2496,12 @@ input[type=checkbox].hex-button {
 .hex .inner,
 .small-hex .inner {
     color: #eee;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
 }
 
 /*------------- Small hexes ---------------*/
