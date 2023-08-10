@@ -74,7 +74,7 @@ body.sheet-darkmode .charsheet {
 body.sheet-darkmode select {
     -webkit-appearance: none;
     -moz-appearance: none;
-    background: transparent url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSd3aGl0ZScgaGVpZ2h0PScyNCcgdmlld0JveD0nMCAwIDI0IDI0JyB3aWR0aD0nMjQnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHBhdGggZD0nTTcgMTBsNSA1IDUtNXonLz48cGF0aCBkPSdNMCAwaDI0djI0SDB6JyBmaWxsPSdub25lJy8+PC9zdmc+) no-repeat;
+    /*background: transparent url(data:image/svg+xml;base64,PHN2ZyBmaWxsPSd3aGl0ZScgaGVpZ2h0PScyNCcgdmlld0JveD0nMCAwIDI0IDI0JyB3aWR0aD0nMjQnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+PHBhdGggZD0nTTcgMTBsNSA1IDUtNXonLz48cGF0aCBkPSdNMCAwaDI0djI0SDB6JyBmaWxsPSdub25lJy8+PC9zdmc+) no-repeat;*/
     background-position-x: 100%;
     border-radius: 2px;
     padding-right: 2rem;
@@ -224,7 +224,8 @@ body.sheet-darkmode button.tab:hover {
     background: dimgrey;
 }
 
-button.tab:focus, button.tab:visited {
+button.tab:focus,
+button.tab:visited {
     background: dimgrey;
     /*color: white;*/
     font-weight: bold;
@@ -233,7 +234,7 @@ button.tab:focus, button.tab:visited {
 
 body.sheet-darkmode button.tab:focus,
 body.sheet-darkmode button.tab:visited {
-    background: #bababa;
+    background: dimgrey;
 }
 
 input.tab {
@@ -2404,8 +2405,8 @@ input[type=checkbox].small-hex-button:checked + span::before {
     color: green;
 }
 
-input[type=checkbox].hex-button:hover + span + div,
-input[type=checkbox].small-hex-button:hover + span + div {
+.charsheet input[type=checkbox].hex-button:hover + span + div,
+.charsheet input[type=checkbox].small-hex-button:hover + span + div {
     background-color: indianred;
 }
 
@@ -2528,20 +2529,59 @@ input[type=checkbox].small-hex-button {
 
 /*----------------- Roll templates ------------------*/
 
+.sheet-rolltemplate-action .sheet-kungfont,
+.sheet-rolltemplate-basic-action .sheet-kungfont {
+    font-family: Fungfont, serif;
+    font-size: 16px;
+}
 
 .sheet-rolltemplate-skill .sheet-container,
 .sheet-rolltemplate-basic-action .sheet-container,
 .sheet-rolltemplate-action .sheet-container {
     background-color: #ffffff;
-    border: 1px solid;
+    border: 1px solid white;
     padding: 2px;
-    width: 189px;
 }
 
 .sheet-rolltemplate-darkmode.sheet-rolltemplate-skill .sheet-container,
 .sheet-rolltemplate-darkmode.sheet-rolltemplate-basic-action .sheet-container,
 .sheet-rolltemplate-darkmode.sheet-rolltemplate-action .sheet-container {
-    background-color: gray;
+    background-color: dimgrey;
+    color: white;
+    border: 1px solid dimgrey;
+}
+
+.sheet-rolltemplate-skill .sheet-header-bar,
+.sheet-rolltemplate-basic-action .sheet-header-bar,
+.sheet-rolltemplate-action .sheet-header-bar {
+    background-color: dimgrey;
+}
+
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-skill .sheet-header-bar,
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-basic-action .sheet-header-bar,
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-action .sheet-header-bar {
+    background-color: #414042;
+}
+
+.sheet-rolltemplate-action .sheet-header-tide-bar {
+    background-color: #F9B276;
+}
+
+.sheet-rolltemplate-action .sheet-header-tide-bar > div,
+.sheet-rolltemplate-action .sheet-header-tide-bar > div > h1,
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-action .sheet-header-tide-bar > div > h1 {
+    color: black;
+}
+
+.sheet-rolltemplate-skill .sheet-header-bar > div,
+.sheet-rolltemplate-skill .sheet-header-bar > div > h1,
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-skill .sheet-header-bar > div > h1,
+.sheet-rolltemplate-action .sheet-header-bar > div,
+.sheet-rolltemplate-action .sheet-header-bar > div > h1,
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-action .sheet-header-bar > div > h1,
+.sheet-rolltemplate-basic-action .sheet-header-bar > div,
+.sheet-rolltemplate-basic-action .sheet-header-bar > div > h1,
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-basic-action .sheet-header-bar > div > h1 {
     color: white;
 }
 
@@ -2571,7 +2611,6 @@ input[type=checkbox].small-hex-button {
 .sheet-rolltemplate-skill .sheet-tcat-header,
 .sheet-rolltemplate-basic-action .sheet-tcat-header,
 .sheet-rolltemplate-action .sheet-tcat-header {
-    color: white;
     font-weight: bold;
     font-size: 1em;
     font-variant: small-caps;
@@ -2581,7 +2620,6 @@ input[type=checkbox].small-hex-button {
 .sheet-rolltemplate-skill .sheet-tcat-subheader,
 .sheet-rolltemplate-basic-action .sheet-tcat-subheader,
 .sheet-rolltemplate-action .sheet-tcat-subheader {
-    color: white;
     font-size: 0.8em;
     font-style: italic;
 }
@@ -2591,7 +2629,7 @@ input[type=checkbox].small-hex-button {
 .sheet-rolltemplate-action .sheet-separator {
     background-color: #d3d3d3;
     width: auto;
-    height: 1px;
+    padding: 1px;
 }
 
 .sheet-rolltemplate-skill .inlinerollresult,
@@ -2605,7 +2643,7 @@ input[type=checkbox].small-hex-button {
 .sheet-rolltemplate-darkmode.sheet-rolltemplate-basic-action .inlinerollresult,
 .sheet-rolltemplate-darkmode.sheet-rolltemplate-action .inlinerollresult {
     background-color: gray;
-    color: white;
+    border: 3px solid #414042;
 }
 
 .sheet-rolltemplate-skill .inlinerollresult.fullcrit,
@@ -2618,6 +2656,64 @@ input[type=checkbox].small-hex-button {
 .sheet-rolltemplate-basic-action .inlinerollresult.fullfail,
 .sheet-rolltemplate-action .inlinerollresult.fullfail {
     border: 3px solid #B31515;
+    /*border: 3px solid #EE5F57;*/
+}
+
+.sheet-rolltemplate-action .sheet-critical,
+.sheet-rolltemplate-basic-action .sheet-critical {
+    height: 51px;
+    width: 154px;
+    margin-top: -10px;
+    padding: 0 5px 0 5px;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    color: white;
+    font-family: Fungfont, serif;
+    font-variant: small-caps;
+    font-size: 20px;
+    background-position-y: 2px;
+    background-position-x: 0;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/step-header.PNG");
+}
+
+.sheet-rolltemplate-action .sheet-toughness-img,
+.sheet-rolltemplate-basic-action .sheet-toughness-img {
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/toughness-b.png");
+}
+
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-action .sheet-toughness-img,
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-basic-action .sheet-toughness-img {
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/toughness-w.png");
+}
+
+.sheet-rolltemplate-action .sheet-resistance-img,
+.sheet-rolltemplate-basic-action .sheet-resistance-img {
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/resistance-b.png");
+}
+
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-action .sheet-resistance-img,
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-basic-action .sheet-resistance-img {
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/resistance-w.png");
+}
+
+.sheet-rolltemplate-skill .sheet-flex-center,
+.sheet-rolltemplate-action .sheet-flex-center,
+.sheet-rolltemplate-basic-action .sheet-flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sheet-rolltemplate-action .sheet-indicator,
+.sheet-rolltemplate-basic-action .sheet-indicator {
+    padding: 1px;
+    font-variant: small-caps;
+    font-size: 1em;
+    font-weight: bold;
+    font-style: italic;
 }
 
 /*-------------------------*/
