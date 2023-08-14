@@ -44,7 +44,7 @@ body.sheet-darkmode .top-logo {
 
 .container {
     background-color: transparent;
-    width: 1100px;
+    max-width: 1100px;
     height: 900px;
 }
 
@@ -223,7 +223,12 @@ input.nav:checked ~ .block-container.block-settings {
     display: none;
 }
 
-input.page-control[value="pc"] ~ .block-container.block-pc,
+input.page-control[value="pc"] ~ .block-container.block-pc {
+    padding-top: 10px;
+    display: block;
+    width: 1100px;
+}
+
 input.page-control[value="npc"] ~ .block-container.block-npc {
     padding-top: 10px;
     display: block;
@@ -525,6 +530,27 @@ body.sheet-darkmode .mod-box-yellow {
     grid-template-columns: 1fr 1.5fr 1fr 1fr 50%;
     grid-auto-rows: fit-content(100%);
     grid-template-areas: "action-button action-name action-name action-name action-effect";
+}
+
+.npc-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 25px;
+    grid-row-gap: 10px;
+    min-height: 0;
+    min-width: 0;
+}
+
+@media screen and (max-width: 1100px) {
+    .npc-grid {
+        grid-template-columns: auto;
+    }
+}
+
+
+.npc-grid-item {
+    overflow: hidden;
+    min-width: 0;
 }
 
 /*----------------- Quick Guide ------------------*/
@@ -837,6 +863,13 @@ body.sheet-darkmode .info-hp-text {
     border: 3px solid #414042;
     background-color: #414042;
     color: white;
+}
+
+.npc-info-hp-text {
+    background-color: #EE5F57;
+    padding: 4px 5px 3px 5px;
+    color: white;
+    font-weight: bold;
 }
 
 .info-hp-box {
@@ -1673,6 +1706,10 @@ body.sheet-darkmode .penetration {
     text-align: center;
 }
 
+.right-text {
+    text-align: right;
+}
+
 .size-25-box {
     width: 25px;
     height: 25px;
@@ -2344,6 +2381,7 @@ body.sheet-darkmode .action-attack-bar {
 }
 
 div.enemy-hex {
+    border: 1px solid chartreuse;
     display: none;
 }
 
@@ -2462,8 +2500,8 @@ input[type=checkbox].hex-button {
 }
 
 .hex {
-    width: 100px;
-    height: 57px;
+    width: 75px;
+    height: 43px;
     background-color: #ccc;
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -2550,8 +2588,8 @@ input[type=checkbox].small-hex-button {
 }
 
 .small-hex {
-    width: 75px;
-    height: 43px;
+    width: 50px;
+    height: 30px;
     background-color: #ccc;
     background-repeat: no-repeat;
     background-position: 50% 50%;
