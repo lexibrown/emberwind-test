@@ -356,7 +356,9 @@ body.sheet-darkmode .separator {
     /*background-color: #EE5F57;*/
 }
 
-.small-hex.advantage-hex {
+.small-hex.advantage-hex,
+.hex.advantage-hex,
+.large-hex.advantage-hex {
     background: #EE5F57;
 }
 
@@ -517,7 +519,7 @@ body.sheet-darkmode .mod-box-yellow {
     height: fit-content;
     padding-bottom: 3px;
     grid-column-gap: 3px;
-    grid-template-columns: 1fr 1.5fr 1fr 1fr 50%;
+    grid-template-columns: 0.5fr 1.5fr 1fr 1fr 50%;
     grid-template-areas: "action-button action-name action-type action-range action-effect";
 }
 
@@ -527,14 +529,14 @@ body.sheet-darkmode .mod-box-yellow {
     height: fit-content;
     padding-bottom: 3px;
     grid-column-gap: 3px;
-    grid-template-columns: 1fr 1.5fr 1fr 1fr 50%;
+    grid-template-columns: 0.5fr 1.5fr 1fr 1fr 50%;
     grid-auto-rows: fit-content(100%);
     grid-template-areas: "action-button action-name action-name action-name action-effect";
 }
 
 .npc-grid {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
     grid-column-gap: 25px;
     grid-row-gap: 10px;
     min-height: 0;
@@ -1158,6 +1160,17 @@ body.sheet-darkmode .skill button[type=roll]:hover {
 }
 
 /*----------------- Actions ------------------*/
+
+.action-damage-vs {
+    display: none;
+}
+
+.tide-action-damage-indicator[value="1"] ~ .action-damage-vs,
+.tide-action-damage-indicator[value="2"] ~ .action-damage-vs,
+.action-damage-indicator[value="1"] ~ .action-damage-vs,
+.action-damage-indicator[value="2"] ~ .action-damage-vs {
+    display: inline-flex;
+}
 
 .tide-action-damage-indicator[value="1"] ~ .tide-action-damage-toughness,
 .tide-action-damage-indicator[value="2"] ~ .tide-action-damage-resistance,
@@ -1794,6 +1807,16 @@ body.sheet-darkmode .penetration {
 
 .padding-bottom25 {
     padding-bottom: 25px;
+}
+
+.padding-v-2 {
+    padding-bottom: 2px;
+    padding-top: 2px;
+}
+
+.padding-v-3 {
+    padding-bottom: 3px;
+    padding-top: 3px;
 }
 
 .padding-v-5 {
@@ -2516,7 +2539,9 @@ input[type=checkbox].hex-button {
 .hex .corner-1,
 .hex .corner-2,
 .small-hex .corner-1,
-.small-hex .corner-2 {
+.small-hex .corner-2,
+.large-hex .corner-1,
+.large-hex .corner-2 {
     position: absolute;
     top: 0;
     left: 0;
@@ -2529,20 +2554,24 @@ input[type=checkbox].hex-button {
 }
 
 .hex .corner-1,
-.small-hex .corner-1 {
+.small-hex .corner-1,
+.large-hex .corner-1 {
     z-index: 0;
     transform: rotate(60deg);
 }
 
 .hex .corner-2,
-.small-hex .corner-2 {
+.small-hex .corner-2,
+.large-hex .corner-2 {
     transform: rotate(-60deg);
 }
 
 .hex .corner-1::before,
 .hex .corner-2::before,
 .small-hex .corner-1::before,
-.small-hex .corner-2::before {
+.small-hex .corner-2::before,
+.large-hex .corner-1::before,
+.large-hex .corner-2::before {
     width: 173px;
     height: 173px;
     content: "";
@@ -2556,20 +2585,23 @@ input[type=checkbox].hex-button {
 }
 
 .hex .corner-1::before,
-.small-hex .corner-1::before {
+.small-hex .corner-1::before,
+.large-hex .corner-1::before {
     transform: rotate(-60deg) translate(-87px, 0px);
     transform-origin: 0 0;
 }
 
 .hex .corner-2::before,
-.small-hex .corner-2::before {
+.small-hex .corner-2::before,
+.large-hex .corner-2::before {
     transform: rotate(60deg) translate(-48px, -11px);
     bottom: 0;
 }
 
 /* Custom styles*/
 .hex .inner,
-.small-hex .inner {
+.small-hex .inner,
+.large-hex .inner {
     color: #eee;
     position: absolute;
     top: 0;
@@ -2579,7 +2611,7 @@ input[type=checkbox].hex-button {
     height: 100%;
 }
 
-/*------------- Small hexes ---------------*/
+/*------------- Small/Large hexes ---------------*/
 
 input[type=checkbox].small-hex-button {
     opacity: 0;
@@ -2597,6 +2629,20 @@ input[type=checkbox].small-hex-button {
     position: relative;
     float: left;
     margin: 13px 2px;
+    text-align: center;
+    zoom: 1;
+}
+
+.large-hex {
+    width: 100px;
+    height: 57px;
+    background-color: #ccc;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: auto 173px;
+    position: relative;
+    float: left;
+    margin: 16px 2px;
     text-align: center;
     zoom: 1;
 }
