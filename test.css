@@ -544,7 +544,7 @@ body.sheet-darkmode .mod-box-yellow {
 
 .npc-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto auto;
     grid-column-gap: 25px;
     grid-row-gap: 10px;
     min-height: 0;
@@ -556,7 +556,6 @@ body.sheet-darkmode .mod-box-yellow {
         grid-template-columns: auto;
     }
 }
-
 
 .npc-grid-item {
     overflow: hidden;
@@ -2416,16 +2415,23 @@ body.sheet-darkmode .action-attack-bar {
 
 /*----------------- Hexagons ------------------*/
 
-.enemy-dice {
-    font-size: 50px;
+.enemy-dice,
+.small-enemy-dice {
     font-family: dicefontd6, fantasy;
     position: absolute;
     z-index: 3;
     color: #9E76B3;
 }
 
+.enemy-dice {
+    font-size: 50px;
+}
+
+.small-enemy-dice {
+    font-size: 35px;
+}
+
 div.enemy-hex {
-    border: 1px solid chartreuse;
     display: none;
 }
 
@@ -2446,15 +2452,15 @@ div.enemy-hex {
 
 .elite {
     padding-left: 40px;
-    height: 580px;
-    width: 690px;
+    height: 400px;
+    width: 410px;
     margin-top: -25px;
 }
 
 .boss {
     padding-left: 40px;
-    height: 680px;
-    width: 790px;
+    height: 500px;
+    width: 520px;
     margin-top: -25px;
 }
 
@@ -2535,6 +2541,8 @@ input[type=checkbox].small-hex-button:checked + span::before {
     font-family: pictos, fantasy;
     color: red;
     margin-left: -10px;
+    z-index: 4;
+    position: relative;
 }
 
 input[type=checkbox].hex-button {
@@ -2665,8 +2673,9 @@ input[type=checkbox].hex-button {
 
 input[type=checkbox].small-hex-button {
     opacity: 0;
-    z-index: 3;
-    margin-left: -45px;
+    margin-left: -32px;
+    z-index: 5;
+    position: relative;
 }
 
 .small-hex {
@@ -2678,7 +2687,7 @@ input[type=checkbox].small-hex-button {
     background-size: auto 173px;
     position: relative;
     float: left;
-    margin: 10px 2px;
+    margin: 8px 2px;
     text-align: center;
     zoom: 1;
 }
