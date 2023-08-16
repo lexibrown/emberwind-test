@@ -551,6 +551,19 @@ body.sheet-darkmode .mod-box-yellow {
     min-width: 0;
 }
 
+.item1 {
+    grid-row: 1 / 1;
+}
+.item2 {
+    grid-row: 2 / 10;
+}
+.item3 {
+    grid-row: 11 / 11;
+}
+.item4 {
+    grid-row: 12 / 12;
+}
+
 @media screen and (max-width: 1100px) {
     .npc-grid {
         grid-template-columns: auto;
@@ -2125,7 +2138,7 @@ input[type=checkbox].tab-hide:checked ~ .show-hide {
     background-color: #ededed;
     border: 2px dotted dimgrey;
     margin-bottom: 10px;
-    margin-left: 9%
+    margin-left: 9%;
 }
 
 body.sheet-darkmode .displaySettings {
@@ -2437,7 +2450,7 @@ div.enemy-hex {
 
 .grunt {
     padding-top: 50px;
-    width: 390px;
+    min-width: 390px;
     height: 330px;
     margin-top: -30px;
 }
@@ -2446,21 +2459,21 @@ div.enemy-hex {
     padding-top: 75px;
     padding-left: 40px;
     height: 375px;
-    width: 440px;
+    min-width: 440px;
     margin-top: -5px;
 }
 
 .elite {
     padding-left: 40px;
     height: 400px;
-    width: 410px;
+    min-width: 410px;
     margin-top: -25px;
 }
 
 .boss {
     padding-left: 40px;
     height: 500px;
-    width: 520px;
+    min-width: 520px;
     margin-top: -25px;
 }
 
@@ -2474,39 +2487,39 @@ div.enemy-hex {
 /*------------- Hex colours ------------------*/
 
 .hex.hex-4, .small-hex.hex-4, .large-hex.hex-4 {
-    background: #F8F6FA;
+    background: #ece3f0;
 }
 
 .hex.hex-3, .small-hex.hex-3, .large-hex.hex-3 {
-    background: #ECE5F1;
+    background: #d6c6e1;
 }
 
 .hex.hex-2, .small-hex.hex-2, .large-hex.hex-2 {
-    background: #D5C6E1;
+    background: #b796c6;
 }
 
 .hex.hex-1, .small-hex.hex-1, .large-hex.hex-1 {
-    background: #B698C7;
+    background: #a074b2;
 }
 
 .hex.hex-0, .small-hex.hex-0, .large-hex.hex-0 {
-    background: #9E76B3;
+    background: #a074b2;
 }
 
 .hex.veteran-hex-4, .small-hex.veteran-hex-4 {
-    background: #FABEAF;
+    background: #fdbeaf;
 }
 
 .hex.veteran-hex-3, .small-hex.veteran-hex-3 {
-    background: #FABEAF;
+    background: #fdbeaf;
 }
 
 .hex.veteran-hex-2, .small-hex.veteran-hex-2 {
-    background: #F9B09F;
+    background: #fab1a0;
 }
 
 .hex.veteran-hex-1, .small-hex.veteran-hex-1 {
-    background: #F69E8C;
+    background: #f8a18c;
 }
 
 /*------------- Hexes ------------------*/
@@ -2543,6 +2556,10 @@ input[type=checkbox].small-hex-button:checked + span::before {
     margin-left: -10px;
     z-index: 4;
     position: relative;
+}
+
+.small-hex-button + span::before {
+    top: -5px;
 }
 
 input[type=checkbox].hex-button {
@@ -2674,6 +2691,7 @@ input[type=checkbox].hex-button {
 input[type=checkbox].small-hex-button {
     opacity: 0;
     margin-left: -32px;
+    margin-top: -10px;
     z-index: 5;
     position: relative;
 }
