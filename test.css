@@ -62,6 +62,11 @@ body.sheet-darkmode textarea {
     background-color: #878787;
 }
 
+body.sheet-darkmode summary {
+    color: #eee;
+    background-color: dimgrey;
+}
+
 body.sheet-darkmode button,
 body.sheet-darkmode optgroup,
 body.sheet-darkmode select,
@@ -209,10 +214,13 @@ input.nav:checked ~ .block-container.block-settings {
 
 .block-settings {
     border: 2px dashed dimgrey;
-    width: fit-content;
+    width: auto;
 }
 
-.settings-row,
+.settings-row {
+    padding: 5px;
+}
+
 .settings-col {
     padding: 5px;
 }
@@ -1615,6 +1623,10 @@ body.sheet-darkmode .light-yellow {
     background-color: #E5DCED;
 }
 
+body.sheet-darkmode .purple {
+    background-color: #845a91;
+}
+
 .npc-red-text {
     color: indianred;
 }
@@ -1637,7 +1649,8 @@ input.x-small {
     margin: 4px;
 }
 
-input.small {
+input.small,
+.charsheet input.small {
     width: 20%;
 }
 
@@ -1755,6 +1768,14 @@ body.sheet-darkmode .penetration {
 
 .padding-0525 {
     padding: 0 5px 2px 5px;
+}
+
+.padding-top-2 {
+    padding-top: 2px;
+}
+
+.padding-top-3 {
+    padding-top: 3px;
 }
 
 .padding-top4 {
@@ -2418,8 +2439,8 @@ div.enemy-hex {
 .awakened {
     padding-top: 75px;
     padding-left: 40px;
-    height: 480px;
-    width: 690px;
+    height: 375px;
+    width: 440px;
     margin-top: -5px;
 }
 
@@ -2446,23 +2467,23 @@ div.enemy-hex {
 
 /*------------- Hex colours ------------------*/
 
-.hex.hex-4, .small-hex.hex-4 {
+.hex.hex-4, .small-hex.hex-4, .large-hex.hex-4 {
     background: #F8F6FA;
 }
 
-.hex.hex-3, .small-hex.hex-3 {
+.hex.hex-3, .small-hex.hex-3, .large-hex.hex-3 {
     background: #ECE5F1;
 }
 
-.hex.hex-2, .small-hex.hex-2 {
+.hex.hex-2, .small-hex.hex-2, .large-hex.hex-2 {
     background: #D5C6E1;
 }
 
-.hex.hex-1, .small-hex.hex-1 {
+.hex.hex-1, .small-hex.hex-1, .large-hex.hex-1 {
     background: #B698C7;
 }
 
-.hex.hex-0, .small-hex.hex-0 {
+.hex.hex-0, .small-hex.hex-0, .large-hex.hex-0 {
     background: #9E76B3;
 }
 
@@ -2518,8 +2539,9 @@ input[type=checkbox].small-hex-button:checked + span::before {
 
 input[type=checkbox].hex-button {
     opacity: 0;
-    z-index: 3;
-    margin-left: -55px;
+    z-index: 5;
+    margin-left: -45px;
+    position: relative;
 }
 
 .hex {
@@ -2531,7 +2553,7 @@ input[type=checkbox].hex-button {
     background-size: auto 173px;
     position: relative;
     float: left;
-    margin: 16px 2px;
+    margin: 13px 2px;
     text-align: center;
     zoom: 1;
 }
@@ -2611,6 +2633,34 @@ input[type=checkbox].hex-button {
     height: 100%;
 }
 
+.inner > textarea,
+.sheet-darkmode .inner > textarea {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    color: black;
+    text-align: center;
+    display:inline-block;
+    vertical-align:middle;
+    overflow: hidden;
+    resize: none
+}
+
+.small-hex .inner > textarea {
+    line-height: 1.25em;
+    font-size: 0.75em;
+}
+
+.hex .inner > textarea {
+    line-height: 1em;
+    font-size: 1em;
+}
+
+.large-hex .inner > textarea {
+    line-height: 1.5em;
+    font-size: 1.25em;
+}
+
 /*------------- Small/Large hexes ---------------*/
 
 input[type=checkbox].small-hex-button {
@@ -2628,7 +2678,7 @@ input[type=checkbox].small-hex-button {
     background-size: auto 173px;
     position: relative;
     float: left;
-    margin: 13px 2px;
+    margin: 10px 2px;
     text-align: center;
     zoom: 1;
 }
