@@ -2790,6 +2790,22 @@ input[type=checkbox].small-hex-button {
     background-color: #F9B276;
 }
 
+.sheet-rolltemplate-action .sheet-header-npc-special-bar {
+    background-color: #a074b2;
+}
+
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-action .sheet-header-npc-special-bar {
+    background-color: #845a91;
+}
+
+.sheet-rolltemplate-action .sheet-header-npc-learned-bar {
+    background-color: #f8a18c;
+}
+
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-action .sheet-header-npc-learned-bar {
+    background-color: #f15d5c;
+}
+
 .sheet-rolltemplate-action .sheet-header-tide-bar > div,
 .sheet-rolltemplate-action .sheet-header-tide-bar > div > h1,
 .sheet-rolltemplate-darkmode.sheet-rolltemplate-action .sheet-header-tide-bar > div > h1 {
@@ -2804,7 +2820,10 @@ input[type=checkbox].small-hex-button {
 .sheet-rolltemplate-darkmode.sheet-rolltemplate-action .sheet-header-bar > div > h1,
 .sheet-rolltemplate-basic-action .sheet-header-bar > div,
 .sheet-rolltemplate-basic-action .sheet-header-bar > div > h1,
-.sheet-rolltemplate-darkmode.sheet-rolltemplate-basic-action .sheet-header-bar > div > h1 {
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-basic-action .sheet-header-bar > div > h1,
+.sheet-rolltemplate-action .sheet-header-npc-special-bar > div,
+.sheet-rolltemplate-action .sheet-header-npc-special-bar > div > h1,
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-action .sheet-header-npc-special-bar > div > h1 {
     color: white;
 }
 
