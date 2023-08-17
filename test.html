@@ -2614,6 +2614,8 @@
             <div>
                 <div class="sheet-row">
                     <div class="name padding-bottom10">
+                        <input type="hidden" class="npc-rank-indicator" name="attr_npc_rank" value=""/>
+                        <img class="npc-rank-img height40 padding-right10" alt="" src="">
                         <div class="name-header">
                             <span>Name:</span>
                         </div>
@@ -2622,7 +2624,7 @@
 
                     <div class="npc-grid">
 
-                            <div class="item1 padding-bottom5 ">
+                            <div class="npc-grid-item padding-bottom5 ">
                                 <div class="sheet-col npc-info-hp-text border-red">
                                     <span class="">HP:</span>
                                 </div>
@@ -2670,6 +2672,8 @@
                                             <option value="beast">Beast</option>
                                             <option value="carrion">Carrion</option>
                                             <option value="construct">Construct</option>
+                                            <option value="dragon">Dragon</option>
+                                            <option value="ebonspawn">Ebonspawn</option>
                                             <option value="human">Human</option>
                                             <option value="ka">Ka</option>
                                             <option value="plant">Plant</option>
@@ -2697,7 +2701,7 @@
 
                             </div>
 
-                            <div class="item2 npc-grid-item flex-center">
+                            <div class="npc-grid-item flex-center">
 
                                 <input type="hidden" class="npc-ring-indicator" name="attr_enemy" value="1"/>
 
@@ -4194,7 +4198,7 @@
                                 </div>
                             </div>
 
-                            <div class="item3 npc-grid-item">
+                            <div class="npc-grid-item">
                                 <div class="sheet-row padding-2">
                                     <span class="action-info-title">DEFAULT CHARACTERISTICS</span>
                                     <fieldset class="repeating_npcCharacteristics">
@@ -4221,7 +4225,7 @@
                                 </div>
                             </div>
 
-                            <div class="item4 npc-grid-item">
+                            <div class="npc-grid-item">
                                 <div class="sheet-row padding-2">
                                     <span class="action-info-title">OPTIONAL MODIFIERS</span>
                                     <fieldset class="repeating_npcModifiers">
@@ -4248,7 +4252,7 @@
                                 </div>
                             </div>
 
-                            <div class="item5 npc-grid-item">
+                            <div class="npc-grid-item">
                                 <div class="npc-actions-grid">
                                     <span class="action-name action-header">Name</span>
                                     <span class="action-type action-header">Type</span>
@@ -4432,7 +4436,7 @@
 
                             </div>
 
-                            <div class="item6 npc-grid-item">
+                            <div class="npc-grid-item">
                                 <div class="actions-info-grid">
                                     <span class="action-name action-info-title purple-text">SPECIAL ABILITIES</span>
                                 </div>
@@ -4672,7 +4676,7 @@
 
                             </div>
 
-                            <div class="item7 npc-grid-item">
+                            <div class="npc-grid-item">
                                 <div class="actions-info-grid">
                                     <span class="action-name action-info-title npc-red-text">LEARNABLE SPECIAL ABILITIES</span>
                                 </div>
@@ -4910,7 +4914,6 @@
                                 </fieldset>
 
                             </div>
-
 
                     </div>
 

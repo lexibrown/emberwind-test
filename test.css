@@ -179,6 +179,38 @@ body.sheet-darkmode .willpower-image:hover {
     background-image: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/willpower-w.png");
 }
 
+.npc-rank-indicator[value="Grunt"] ~ .npc-rank-img {
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/grunt-b.png");
+}
+
+body.sheet-darkmode .npc-rank-indicator[value="Grunt"] ~ .npc-rank-img {
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/grunt-w.png");
+}
+
+.npc-rank-indicator[value="Awakened"] ~ .npc-rank-img {
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/awakened-b.png");
+}
+
+body.sheet-darkmode .npc-rank-indicator[value="Awakened"] ~ .npc-rank-img {
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/awakened-w.png");
+}
+
+.npc-rank-indicator[value="Elite"] ~ .npc-rank-img {
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/elite-b.png");
+}
+
+body.sheet-darkmode .npc-rank-indicator[value="Elite"] ~ .npc-rank-img {
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/elite-w.png");
+}
+
+.npc-rank-indicator[value="Boss"] ~ .npc-rank-img {
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/boss-b.png");
+}
+
+body.sheet-darkmode .npc-rank-indicator[value="Boss"] ~ .npc-rank-img {
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/boss-w.png");
+}
+
 /*----------------- Sheet Settings ------------------*/
 .tab-button + span,
 .tab-button + span + span {
@@ -543,36 +575,30 @@ body.sheet-darkmode .mod-box-yellow {
 }
 
 .npc-grid {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-column-gap: 25px;
-    grid-row-gap: 10px;
-    min-height: 0;
-    min-width: 0;
-}
-
-.item1 {
-    grid-row: 1 / 1;
-}
-.item2 {
-    grid-row: 2 / 10;
-}
-.item3 {
-    grid-row: 11 / 11;
-}
-.item4 {
-    grid-row: 12 / 12;
+    margin: 0 auto;
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+    -moz-column-gap: 25px;
+    -webkit-column-gap: 25px;
+    column-gap: 25px;
 }
 
 @media screen and (max-width: 1100px) {
     .npc-grid {
-        grid-template-columns: auto;
+        -moz-column-count: 1;
+        -webkit-column-count: 1;
+        column-count: 1;
     }
 }
 
 .npc-grid-item {
     overflow: hidden;
     min-width: 0;
+    width: 100%;
+    /*margin: 5px 0;*/
+    display: inline-block;
+    box-sizing: border-box;
 }
 
 /*----------------- Quick Guide ------------------*/
