@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: Fungfont;
-    src: url("https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Emberwind/fonts/Kungfont-Regular.otf") format("opentype");
+    src: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/fonts/Kungfont-Regular.ttf");
 }
 
 @font-face {
