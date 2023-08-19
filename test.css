@@ -869,7 +869,7 @@ body.sheet-darkmode .init-btn {
     content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/classes/ardent-b.png");
 }
 .class-control[value="atlanta"] ~ .class-img {
-    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/classes/alanta-w.png");
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/classes/atlanta-w.png");
     display: inline-flex;
 }
 .init-btn:hover > .class-control[value="atlanta"] ~ .class-img {
@@ -2598,14 +2598,14 @@ div.enemy-hex {
     padding-left: 40px;
     height: 400px;
     min-width: 410px;
-    margin-top: -25px;
+    margin-top: -5px;
 }
 
 .boss {
     padding-left: 40px;
     height: 500px;
     min-width: 520px;
-    margin-top: -25px;
+    margin-top: -5px;
 }
 
 .npc-ring-indicator[value="1"] ~ div.grunt,
