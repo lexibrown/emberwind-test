@@ -120,95 +120,100 @@ body.sheet-darkmode .btn-danger:hover {
 /*----------------- Images ------------------*/
 
 img.toughness-img {
-    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/toughness-b.png");
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/values/toughness-b.png");
 }
 
 body.sheet-darkmode img.toughness-img {
-    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/toughness-w.png");
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/values/toughness-w.png");
 }
 
 img.resistance-img {
-    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/resistance-b.png");
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/values/resistance-b.png");
 }
 
 body.sheet-darkmode img.resistance-img {
-    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/resistance-w.png");
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/values/resistance-w.png");
 }
 
 img.dodge-img {
-    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/dodge-b.png");
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/values/dodge-b.png");
 }
 
 body.sheet-darkmode img.dodge-img {
-    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/dodge-w.png");
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/values/dodge-w.png");
 }
 
 img.willpower-img {
-    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/willpower-b.png");
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/values/willpower-b.png");
 }
 
 body.sheet-darkmode img.willpower-img {
-    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/willpower-w.png");
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/values/willpower-w.png");
 }
 
 .toughness-image {
-    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/toughness-b.png");
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/values/toughness-b.png");
 }
 
 .resistance-image {
-    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/resistance-b.png");
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/values/resistance-b.png");
 }
 
 .dodge-image,
 body.sheet-darkmode .dodge-image {
-    background-image: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/dodge-b.png");
+    background-image: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/values/dodge-b.png");
 }
 
 .dodge-image:hover,
 body.sheet-darkmode .dodge-image:hover {
-    background-image: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/dodge-w.png");
+    background-image: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/values/dodge-w.png");
 }
 
 .willpower-image,
 body.sheet-darkmode .willpower-image {
-    background-image: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/willpower-b.png");
+    background-image: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/values/willpower-b.png");
 }
 
 .willpower-image:hover,
 body.sheet-darkmode .willpower-image:hover {
-    background-image: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/willpower-w.png");
+    background-image: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/values/willpower-w.png");
 }
 
-.npc-rank-indicator[value="Grunt"] ~ .npc-rank-img {
-    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/grunt-b.png");
+.npc-rank-img {
+    height: 25px;
+    width: 25px;
 }
 
-body.sheet-darkmode .npc-rank-indicator[value="Grunt"] ~ .npc-rank-img {
-    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/grunt-w.png");
+.npc-rank-img {
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/foes/grunt-w.png");
+}
+
+.init-btn:hover > .npc-rank-img {
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/foes/grunt-b.png");
 }
 
 .npc-rank-indicator[value="Awakened"] ~ .npc-rank-img {
-    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/awakened-b.png");
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/foes/awakened-w.png");
 }
 
-body.sheet-darkmode .npc-rank-indicator[value="Awakened"] ~ .npc-rank-img {
-    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/awakened-w.png");
+.init-btn:hover > .npc-rank-indicator[value="Awakened"] ~ .npc-rank-img {
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/foes/awakened-b.png");
 }
 
 .npc-rank-indicator[value="Elite"] ~ .npc-rank-img {
-    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/elite-b.png");
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/foes/elite-w.png");
 }
 
-body.sheet-darkmode .npc-rank-indicator[value="Elite"] ~ .npc-rank-img {
-    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/elite-w.png");
+.init-btn:hover > .npc-rank-indicator[value="Elite"] ~ .npc-rank-img {
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/foes/elite-b.png");
 }
 
 .npc-rank-indicator[value="Boss"] ~ .npc-rank-img {
-    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/boss-b.png");
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/foes/boss-w.png");
 }
 
-body.sheet-darkmode .npc-rank-indicator[value="Boss"] ~ .npc-rank-img {
-    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/boss-w.png");
+.init-btn:hover > .npc-rank-indicator[value="Boss"] ~ .npc-rank-img {
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/foes/boss-b.png");
 }
 
 /*----------------- Sheet Settings ------------------*/
@@ -802,7 +807,7 @@ body.sheet-darkmode .condition-with-foe-grid > div:nth-child(3) {
     justify-content: center;
 }
 
-.flex-center-left {
+.charsheet .flex-center-left {
     display: flex;
     justify-content: center;
 }
@@ -810,7 +815,107 @@ body.sheet-darkmode .condition-with-foe-grid > div:nth-child(3) {
 /*----------------- Image section ------------------*/
 .image {
     grid-area: image;
-    width: 325px;
+    height: 55px;
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.image:active {
+    box-shadow: 0 0 5px -1px rgba(0,0,0,0.6);
+}
+
+.init-btn {
+    height: 100%;
+    width: 100%;
+    background-color: #EE5F57;
+    border: none;
+    padding: 3px 5px;
+}
+
+body.sheet-darkmode .init-btn {
+    background-color: #EE5F57;
+}
+
+.init-btn span {
+    font-size: 1.25em;
+    font-weight: bold;
+    color: white;
+}
+
+.init-btn:hover span {
+    color: black;
+}
+
+.class-img {
+    height: 50px;
+    width: 50px;
+    content: "";
+    display: none;
+}
+
+.class-control[value="archer"] ~ .class-img {
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/classes/archer-w.png");
+    display: inline-flex;
+}
+.init-btn:hover > .class-control[value="archer"] ~ .class-img {
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/classes/archer-b.png");
+}
+.class-control[value="ardent"] ~ .class-img {
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/classes/ardent-w.png");
+    display: inline-flex;
+}
+.init-btn:hover > .class-control[value="ardent"] ~ .class-img {
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/classes/ardent-b.png");
+}
+.class-control[value="atlanta"] ~ .class-img {
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/classes/alanta-w.png");
+    display: inline-flex;
+}
+.init-btn:hover > .class-control[value="atlanta"] ~ .class-img {
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/classes/atlanta-b.png");
+}
+.class-control[value="druid"] ~ .class-img {
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/classes/druid-w.png");
+    display: inline-flex;
+}
+.init-btn:hover > .class-control[value="druid"] ~ .class-img {
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/classes/druid-b.png");
+}
+.class-control[value="invoker"] ~ .class-img {
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/classes/invoker-w.png");
+    display: inline-flex;
+}
+.init-btn:hover > .class-control[value="invoker"] ~ .class-img {
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/classes/invoker-b.png");
+}
+.class-control[value="rogue"] ~ .class-img {
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/classes/rouge-w.png");
+    display: inline-flex;
+}
+.init-btn:hover > .class-control[value="rogue"] ~ .class-img {
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/classes/rouge-b.png");
+}
+.class-control[value="spiritualist"] ~ .class-img {
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/classes/spiritualist-w.png");
+    display: inline-flex;
+}
+.init-btn:hover > .class-control[value="spiritualist"] ~ .class-img {
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/classes/spiritualist-b.png");
+}
+.class-control[value="tactician"] ~ .class-img {
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/classes/tactician-w.png");
+    display: inline-flex;
+}
+.init-btn:hover > .class-control[value="tactician"] ~ .class-img {
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/classes/tactician-b.png");
+}
+.class-control[value="warrior"] ~ .class-img {
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/classes/warrior-w.png");
+    display: inline-flex;
+}
+.init-btn:hover > .class-control[value="warrior"] ~ .class-img {
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/classes/warrior-b.png");
 }
 
 /*----------------- Button section ------------------*/
@@ -848,7 +953,7 @@ body.sheet-darkmode .condition-with-foe-grid > div:nth-child(3) {
     transform: scaleX(-1);
 }
 
-.name span {
+.name-header span {
     float: left;
     width: fit-content;
     font-weight: bold;
@@ -2752,12 +2857,15 @@ input[type=checkbox].small-hex-button {
 
 /*----------------- Roll templates ------------------*/
 
+.sheet-rolltemplate-turn .sheet-kungfont,
+.sheet-rolltemplate-skill .sheet-kungfont,
 .sheet-rolltemplate-action .sheet-kungfont,
 .sheet-rolltemplate-basic-action .sheet-kungfont {
     font-family: Fungfont, ProximaNova, serif;
     font-size: 16px;
 }
 
+.sheet-rolltemplate-turn .sheet-container,
 .sheet-rolltemplate-skill .sheet-container,
 .sheet-rolltemplate-basic-action .sheet-container,
 .sheet-rolltemplate-action .sheet-container {
@@ -2766,6 +2874,7 @@ input[type=checkbox].small-hex-button {
     padding: 2px;
 }
 
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-turn .sheet-container,
 .sheet-rolltemplate-darkmode.sheet-rolltemplate-skill .sheet-container,
 .sheet-rolltemplate-darkmode.sheet-rolltemplate-basic-action .sheet-container,
 .sheet-rolltemplate-darkmode.sheet-rolltemplate-action .sheet-container {
@@ -2774,12 +2883,14 @@ input[type=checkbox].small-hex-button {
     border: 1px solid dimgrey;
 }
 
+.sheet-rolltemplate-turn .sheet-header-bar,
 .sheet-rolltemplate-skill .sheet-header-bar,
 .sheet-rolltemplate-basic-action .sheet-header-bar,
 .sheet-rolltemplate-action .sheet-header-bar {
     background-color: dimgrey;
 }
 
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-turn .sheet-header-bar,
 .sheet-rolltemplate-darkmode.sheet-rolltemplate-skill .sheet-header-bar,
 .sheet-rolltemplate-darkmode.sheet-rolltemplate-basic-action .sheet-header-bar,
 .sheet-rolltemplate-darkmode.sheet-rolltemplate-action .sheet-header-bar {
@@ -2790,10 +2901,12 @@ input[type=checkbox].small-hex-button {
     background-color: #F9B276;
 }
 
+.sheet-rolltemplate-turn .sheet-header-npc-special-bar,
 .sheet-rolltemplate-action .sheet-header-npc-special-bar {
     background-color: #a074b2;
 }
 
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-turn .sheet-header-npc-special-bar,
 .sheet-rolltemplate-darkmode.sheet-rolltemplate-action .sheet-header-npc-special-bar {
     background-color: #845a91;
 }
@@ -2812,6 +2925,12 @@ input[type=checkbox].small-hex-button {
     color: black;
 }
 
+.sheet-rolltemplate-turn .sheet-header-bar > div,
+.sheet-rolltemplate-turn .sheet-header-bar > div > h1,
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-turn .sheet-header-bar > div > h1,
+.sheet-rolltemplate-turn .sheet-header-npc-special-bar > div,
+.sheet-rolltemplate-turn .sheet-header-npc-special-bar > div > h1,
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-turn .sheet-header-npc-special-bar > div > h1,
 .sheet-rolltemplate-skill .sheet-header-bar > div,
 .sheet-rolltemplate-skill .sheet-header-bar > div > h1,
 .sheet-rolltemplate-darkmode.sheet-rolltemplate-skill .sheet-header-bar > div > h1,
@@ -2827,12 +2946,14 @@ input[type=checkbox].small-hex-button {
     color: white;
 }
 
+.sheet-rolltemplate-turn div,
 .sheet-rolltemplate-skill div,
 .sheet-rolltemplate-basic-action div,
 .sheet-rolltemplate-action div {
     padding: 2px;
 }
 
+.sheet-rolltemplate-turn .sheet-tcat,
 .sheet-rolltemplate-skill .sheet-tcat,
 .sheet-rolltemplate-basic-action .sheet-tcat,
 .sheet-rolltemplate-action .sheet-tcat {
@@ -2844,12 +2965,14 @@ input[type=checkbox].small-hex-button {
     text-align: left;
 }
 
+.sheet-rolltemplate-turn .sheet-tcat-text,
 .sheet-rolltemplate-skill .sheet-tcat-text,
 .sheet-rolltemplate-basic-action .sheet-tcat-text,
 .sheet-rolltemplate-action .sheet-tcat-text {
     font-size: 0.85em;
 }
 
+.sheet-rolltemplate-turn .sheet-tcat-header,
 .sheet-rolltemplate-skill .sheet-tcat-header,
 .sheet-rolltemplate-basic-action .sheet-tcat-header,
 .sheet-rolltemplate-action .sheet-tcat-header {
@@ -2859,6 +2982,7 @@ input[type=checkbox].small-hex-button {
     line-height: 20px;
 }
 
+.sheet-rolltemplate-turn .sheet-tcat-subheader,
 .sheet-rolltemplate-skill .sheet-tcat-subheader,
 .sheet-rolltemplate-basic-action .sheet-tcat-subheader,
 .sheet-rolltemplate-action .sheet-tcat-subheader {
@@ -2866,6 +2990,7 @@ input[type=checkbox].small-hex-button {
     font-style: italic;
 }
 
+.sheet-rolltemplate-turn .sheet-separator,
 .sheet-rolltemplate-skill .sheet-separator,
 .sheet-rolltemplate-basic-action .sheet-separator,
 .sheet-rolltemplate-action .sheet-separator {
@@ -2874,6 +2999,7 @@ input[type=checkbox].small-hex-button {
     padding: 1px;
 }
 
+.sheet-rolltemplate-turn .inlinerollresult,
 .sheet-rolltemplate-skill .inlinerollresult,
 .sheet-rolltemplate-basic-action .inlinerollresult,
 .sheet-rolltemplate-action .inlinerollresult {
@@ -2881,6 +3007,7 @@ input[type=checkbox].small-hex-button {
     border: 3px solid #000000;
 }
 
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-turn .inlinerollresult,
 .sheet-rolltemplate-darkmode.sheet-rolltemplate-skill .inlinerollresult,
 .sheet-rolltemplate-darkmode.sheet-rolltemplate-basic-action .inlinerollresult,
 .sheet-rolltemplate-darkmode.sheet-rolltemplate-action .inlinerollresult {
@@ -2923,24 +3050,25 @@ input[type=checkbox].small-hex-button {
 
 .sheet-rolltemplate-action .sheet-toughness-img,
 .sheet-rolltemplate-basic-action .sheet-toughness-img {
-    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/toughness-b.png");
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/values/toughness-b.png");
 }
 
 .sheet-rolltemplate-darkmode.sheet-rolltemplate-action .sheet-toughness-img,
 .sheet-rolltemplate-darkmode.sheet-rolltemplate-basic-action .sheet-toughness-img {
-    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/toughness-w.png");
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/values/-w.png");
 }
 
 .sheet-rolltemplate-action .sheet-resistance-img,
 .sheet-rolltemplate-basic-action .sheet-resistance-img {
-    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/resistance-b.png");
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/values/resistance-b.png");
 }
 
 .sheet-rolltemplate-darkmode.sheet-rolltemplate-action .sheet-resistance-img,
 .sheet-rolltemplate-darkmode.sheet-rolltemplate-basic-action .sheet-resistance-img {
-    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/resistance-w.png");
+    content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/values/resistance-w.png");
 }
 
+.sheet-rolltemplate-turn .sheet-flex-center,
 .sheet-rolltemplate-skill .sheet-flex-center,
 .sheet-rolltemplate-action .sheet-flex-center,
 .sheet-rolltemplate-basic-action .sheet-flex-center {
