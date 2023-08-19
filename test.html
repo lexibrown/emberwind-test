@@ -4192,7 +4192,7 @@
                                 <span class="action-info-title">DEFAULT CHARACTERISTICS</span>
                                 <fieldset class="repeating_npcCharacteristics">
                                     <details class="sheet-row padding-v-2">
-                                        <summary class="padding-2525 lightgrey">
+                                        <summary class="padding-2525 lightgrey" style="min-height: 1em;">
                                             <span class="bold" name="attr_npc_characteristic_title"></span>
                                             <span name="attr_npc_characteristic"></span>
                                         </summary>
@@ -4219,7 +4219,7 @@
                                 <span class="action-info-title">OPTIONAL MODIFIERS</span>
                                 <fieldset class="repeating_npcModifiers">
                                     <details class="sheet-row padding-v-2">
-                                        <summary class="padding-2525 lightgrey">
+                                        <summary class="padding-2525 lightgrey" style="min-height: 1em;">
                                             <span class="bold" name="attr_npc_modifier_title"></span>
                                             <span name="attr_npc_modifier"></span>
                                         </summary>
@@ -4252,8 +4252,10 @@
                             <div class="npc-actions-info-grid">
                                 <span class="action-name action-info-title">BASIC ACTIONS</span>
                                 <div class="action-effect">
-                                    <span style="font-size: 0.75em">[Storyteller only] Actions per Turn:</span>
-                                    <input class="x-small" type="number" name="attr_npc_actions" value="0"/>
+                                    <label style="font-size: 0.75em">
+                                        [Storyteller only] Actions per Turn:
+                                        <input class="x-small" type="number" name="attr_npc_actions" value="0"/>
+                                    </label>
                                 </div>
                             </div>
                             <fieldset class="repeating_npcActions">
