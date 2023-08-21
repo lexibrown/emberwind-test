@@ -2638,19 +2638,19 @@ div.enemy-hex {
 }
 
 .hex.veteran-hex-4, .small-hex.veteran-hex-4 {
-    background: #fdbeaf;
+    background: #fabeaf;
 }
 
 .hex.veteran-hex-3, .small-hex.veteran-hex-3 {
-    background: #fdbeaf;
+    background: #f9b09f;
 }
 
 .hex.veteran-hex-2, .small-hex.veteran-hex-2 {
-    background: #fab1a0;
+    background: #f69e8c;
 }
 
 .hex.veteran-hex-1, .small-hex.veteran-hex-1 {
-    background: #f8a18c;
+    background: #fdbeaf;
 }
 
 /*------------- Hexes ------------------*/
@@ -2670,7 +2670,12 @@ input[type=checkbox].hex-button:checked + span::before,
 input[type=checkbox].small-hex-button:checked + span::before {
     content: "&";
     font-family: pictos, fantasy;
-    color: green;
+    color: black;
+}
+
+body.sheet-darkmode input[type=checkbox].hex-button:checked + span::before,
+body.sheet-darkmode input[type=checkbox].small-hex-button:checked + span::before {
+    color: white;
 }
 
 .charsheet input[type=checkbox].hex-button:hover + span + div,
@@ -2681,16 +2686,34 @@ input[type=checkbox].small-hex-button:checked + span::before {
 .hex-button + span::before,
 .small-hex-button + span::before {
     cursor: pointer;
-    content: "*";
+    content: "3";
     font-family: pictos, fantasy;
-    color: red;
-    margin-left: -10px;
+    color: black;
+    background-color: white;
+    border-radius: 20px;
     z-index: 4;
     position: relative;
+    top: 60px;
+}
+
+.hex-button + span::before {
+    margin-left: -14px;
+    padding: 4px;
 }
 
 .small-hex-button + span::before {
-    top: -5px;
+    margin-left: -12px;
+    padding: 2px;
+}
+
+body.sheet-darkmode .hex-button + span::before,
+body.sheet-darkmode .small-hex-button + span::before {
+    color: white;
+    background-color: #1f1f1f;
+}
+
+.small-hex-button + span::before {
+    top: 36px;
 }
 
 input[type=checkbox].hex-button {
@@ -2698,6 +2721,7 @@ input[type=checkbox].hex-button {
     z-index: 5;
     margin-left: -45px;
     position: relative;
+    top: 60px;
 }
 
 .hex {
@@ -2825,6 +2849,7 @@ input[type=checkbox].small-hex-button {
     margin-top: -10px;
     z-index: 5;
     position: relative;
+    top: 36px;
 }
 
 .small-hex {

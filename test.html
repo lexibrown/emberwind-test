@@ -5000,6 +5000,7 @@
         settings['class'] = "";
         settings['subclass'] = "";
         settings['tier'] = "tier-1";
+        settings['exp'] = "";
 
         // Aspects
         settings['offensive'] = "";
@@ -5263,7 +5264,7 @@
                 settings["repeating_actions_" + newId2 + "_action_dice_bonus"] = "";
                 settings["repeating_actions_" + newId2 + "_action_against"] = "1";
                 settings["repeating_actions_" + newId2 + "_action_healing_dice"] = "";
-                settings["repeating_actions_" + newId2 + "_action_description"] = "Make a Move Action as a Free Action. If a Foe is within Basic Melee Attack Range at the end of your Move Action, make a Basic Melee Attack against that Foe as a Free Action. That Basic Melee Attack has +2 A and +2 P.";
+                settings["repeating_actions_" + newId2 + "_action_description"] = "Make 1 Move Action as a Free Action. If a Foe is within Basic Melee Attack Range after you Move, make 1 Basic Melee Attack with +2 A and +2 P against it as a Free Action.";
 
                 const newId3 = generateRowID();
                 settings["repeating_actions_" + newId3 + "_action_name"] = "Guided Weapon";
@@ -5279,7 +5280,7 @@
                 settings["repeating_actions_" + newId3 + "_action_against"] = "1";
                 settings["repeating_actions_" + newId3 + "_action_healing_dice"] = "";
                 settings["repeating_actions_" + newId3 + "_action_sust_effect"] = "Repeat Effect.";
-                settings["repeating_actions_" + newId3 + "_action_description"] = "+2 A if Target is 1 Other Hero or +4 A if Target is Self.";
+                settings["repeating_actions_" + newId3 + "_action_description"] = "+2 A if your Target is 1 Other Hero or +4 A if your Target is Self.";
 
                 const newId4 = generateRowID();
                 settings["repeating_actions_" + newId4 + "_action_name"] = "Warsong: Exhilarating Anthem";
@@ -5294,7 +5295,7 @@
                 settings["repeating_actions_" + newId4 + "_action_dice_bonus"] = "0";
                 settings["repeating_actions_" + newId4 + "_action_against"] = "1";
                 settings["repeating_actions_" + newId4 + "_action_healing_dice"] = "";
-                settings["repeating_actions_" + newId4 + "_action_description"] = "Target Other Heroes may alter their next Roll result by +/-2";
+                settings["repeating_actions_" + newId4 + "_action_description"] = "Your Target(s) may alter their next Roll result by +/-2";
 
                 const newId5 = generateRowID();
                 settings["repeating_actions_" + newId5 + "_action_name"] = "Word of Comfort";
@@ -5345,7 +5346,7 @@
                 settings["repeating_tideTurners_" + newIdt1 + "_tide_action_against"] = "1";
                 settings["repeating_tideTurners_" + newIdt1 + "_tide_action_healing_dice"] = "";
                 settings["repeating_tideTurners_" + newIdt1 + "_tide_action_sust_effect"] = "Repeat Effect.";
-                settings["repeating_tideTurners_" + newIdt1 + "_tide_action_description"] = "All your Damage-dealing Actions deal Resistance Damage and cause Hit Foe(s) to suffer 1 Stack of BURNING.";
+                settings["repeating_tideTurners_" + newIdt1 + "_tide_action_description"] = "Your Damage-dealing Actions cause Hit Foe(s) to suffer 1 Stack of BURNING. Any Damage dealt by your Actions may be dealt VS RESISTANCE.";
 
                 const newIdt2 = generateRowID();
                 settings["repeating_tideTurners_" + newIdt2 + "_tide_action_name"] = "Pegasus Charger";
@@ -5361,7 +5362,7 @@
                 settings["repeating_tideTurners_" + newIdt2 + "_tide_action_against"] = "1";
                 settings["repeating_tideTurners_" + newIdt2 + "_tide_action_healing_dice"] = "";
                 settings["repeating_tideTurners_" + newIdt2 + "_tide_action_sust_effect"] = "Repeat Effect.";
-                settings["repeating_tideTurners_" + newIdt2 + "_tide_action_description"] = "Your first Move Action and first Basic Melee Attack Action each Round is a Free Action.";
+                settings["repeating_tideTurners_" + newIdt2 + "_tide_action_description"] = "Your 1st Move Action and Basic Melee Attack Action each Round is a Free Action.";
 
                 // Inventory
                 settings['melee_weapon'] = "Spear";
@@ -5382,7 +5383,7 @@
                 settings["repeating_anchors_" + newIda1 + "_anchor"] = "Gelspar";
                 settings["repeating_anchors_" + newIda1 + "_anchor_2"] = "Airship - Weapons";
                 const newIda2 = generateRowID();
-                settings["repeating_anchors_" + newIda2 + "_anchor"] = "Chasers";
+                settings["repeating_anchors_" + newIda2 + "_anchor"] = "The Chasers";
 
                 // Deadweights
 
@@ -5442,7 +5443,7 @@
                 settings['melee_name'] = "Axe";
                 settings['melee_dice'] = "3d8";
                 settings['melee_dice_bonus'] = "0";
-                settings['melee_range'] = "2";
+                settings['melee_range'] = "1";
                 settings['melee_target'] = "1 Foe";
                 settings['melee_against'] = "1"; // toughness
                 settings['melee_description'] = "";
@@ -5475,7 +5476,7 @@
                 settings["repeating_actions_" + newId1 + "_action_dice_bonus"] = "0";
                 settings["repeating_actions_" + newId1 + "_action_against"] = "1";
                 settings["repeating_actions_" + newId1 + "_action_healing_dice"] = "";
-                settings["repeating_actions_" + newId1 + "_action_description"] = "If Hit Foe is OFF-GUARD, they are knocked PRONE.";
+                settings["repeating_actions_" + newId1 + "_action_description"] = "If Hit an OFF-GUARD Foe, they are knocked PRONE.";
 
                 const newId2 = generateRowID();
                 settings["repeating_actions_" + newId2 + "_action_name"] = "Pinpoint Strike";
@@ -5490,7 +5491,7 @@
                 settings["repeating_actions_" + newId2 + "_action_dice_bonus"] = "";
                 settings["repeating_actions_" + newId2 + "_action_against"] = "1";
                 settings["repeating_actions_" + newId2 + "_action_healing_dice"] = "";
-                settings["repeating_actions_" + newId2 + "_action_description"] = "+2 C to CAP Check. If Amplified with Dual Attack, deal 2x Damage instead.";
+                settings["repeating_actions_" + newId2 + "_action_description"] = "+2 C to CAP Check. If Pinpoint Strike is Amplified with Dual Attack, deal 2x Damage instead.";
 
                 const newId3 = generateRowID();
                 settings["repeating_actions_" + newId3 + "_action_name"] = "Dual Attack";
@@ -5505,7 +5506,7 @@
                 settings["repeating_actions_" + newId3 + "_action_dice_bonus"] = "";
                 settings["repeating_actions_" + newId3 + "_action_against"] = "1";
                 settings["repeating_actions_" + newId3 + "_action_healing_dice"] = "";
-                settings["repeating_actions_" + newId3 + "_action_amp_effect"] = "When you Hit a Foe with a Damage-dealing Action, deal 1.5x Damage. 1 per Action.";
+                settings["repeating_actions_" + newId3 + "_action_amp_effect"] = "When you Hit 1 or more Foe(s) with a Damage-dealing Action, deal 1.5x Damage to 1 of those Foe(s). 1 per Action.";
                 settings["repeating_actions_" + newId3 + "_action_description"] = "";
 
                 const newId4 = generateRowID();
@@ -5521,7 +5522,7 @@
                 settings["repeating_actions_" + newId4 + "_action_dice_bonus"] = "0";
                 settings["repeating_actions_" + newId4 + "_action_against"] = "1";
                 settings["repeating_actions_" + newId4 + "_action_healing_dice"] = "";
-                settings["repeating_actions_" + newId4 + "_action_amp_effect"] = "When you Hit a Foe, they suffer 2 Stacks of POISON.";
+                settings["repeating_actions_" + newId4 + "_action_amp_effect"] = "When you Hit 1 or more Foe(s) with an Action, 1 of those Foe(s) suffer 2 Stacks of POISON.";
                 settings["repeating_actions_" + newId4 + "_action_description"] = "";
 
                 const newId5 = generateRowID();
@@ -5537,7 +5538,7 @@
                 settings["repeating_actions_" + newId5 + "_action_dice_bonus"] = "0";
                 settings["repeating_actions_" + newId5 + "_action_against"] = "1";
                 settings["repeating_actions_" + newId5 + "_action_healing_dice"] = "";
-                settings["repeating_actions_" + newId5 + "_action_trig_condition"] = "If a POISONED Foe uses a Basic Attack or Special Ability,";
+                settings["repeating_actions_" + newId5 + "_action_trig_condition"] = "If a POISONED Foe uses a non-Movement Action,";
                 settings["repeating_actions_" + newId5 + "_action_trig_effect"] = "Cancel that Action and deal 3 PIERCING Damage per Stack of POISON.";
                 settings["repeating_actions_" + newId5 + "_action_description"] = "";
 
@@ -5545,7 +5546,7 @@
                 settings["repeating_actions_" + newId6 + "_action_name"] = "Shadowsteel Step";
                 settings["repeating_actions_" + newId6 + "_action_subtype1"] = "General";
                 settings["repeating_actions_" + newId6 + "_action_subtype2"] = "Exploit";
-                settings["repeating_actions_" + newId6 + "_action_target"] = "1 Square";
+                settings["repeating_actions_" + newId6 + "_action_target"] = "1 Unocc. Square";
                 settings["repeating_actions_" + newId6 + "_action_speed"] = "Fast";
                 settings["repeating_actions_" + newId6 + "_action_type"] = "Ranged";
                 settings["repeating_actions_" + newId6 + "_action_range"] = "3";
@@ -5554,7 +5555,7 @@
                 settings["repeating_actions_" + newId6 + "_action_dice_bonus"] = "0";
                 settings["repeating_actions_" + newId6 + "_action_against"] = "1";
                 settings["repeating_actions_" + newId6 + "_action_healing_dice"] = "";
-                settings["repeating_actions_" + newId6 + "_action_description"] = "Teleport to Target Square. If you occupy a Square adjacent to an Enemy, Teleport 1 other Hero from anywhere on the Battlefield to a Flanking Square. 1 per Round.";
+                settings["repeating_actions_" + newId6 + "_action_description"] = "Teleport to Target Square. If you now occupy a Square adjacent to a Foe, you may Teleport 1 other Hero to an Unoccupied Square Flanking that Foe.";
 
                 // Tide turners
                 settings['max_tide_turners'] = "2";
@@ -5575,7 +5576,7 @@
                 settings["repeating_tideTurners_" + newIdt1 + "_tide_action_against"] = "1";
                 settings["repeating_tideTurners_" + newIdt1 + "_tide_action_healing_dice"] = "";
                 settings["repeating_tideTurners_" + newIdt1 + "_tide_action_sust_effect"] = "Repeat Effect.";
-                settings["repeating_tideTurners_" + newIdt1 + "_tide_action_description"] = "All Damage you deal gains the PIERCING property.";
+                settings["repeating_tideTurners_" + newIdt1 + "_tide_action_description"] = "All Damage-dealing Actions you use deal PIERCING Damage.";
 
                 const newIdt2 = generateRowID();
                 settings["repeating_tideTurners_" + newIdt2 + "_tide_action_name"] = "Fool’s Luck";
@@ -5583,7 +5584,7 @@
                 settings["repeating_tideTurners_" + newIdt2 + "_tide_action_subtype2"] = "Exploit";
                 settings["repeating_tideTurners_" + newIdt2 + "_tide_action_target"] = "1 Action";
                 settings["repeating_tideTurners_" + newIdt2 + "_tide_action_speed"] = "Free";
-                settings["repeating_tideTurners_" + newIdt2 + "_tide_action_type"] = "";
+                settings["repeating_tideTurners_" + newIdt2 + "_tide_action_type"] = "Ranged";
                 settings["repeating_tideTurners_" + newIdt2 + "_tide_action_range"] = "";
                 settings["repeating_tideTurners_" + newIdt2 + "_tide_action_field_flag"] = "on"; // Field
                 settings["repeating_tideTurners_" + newIdt2 + "_tide_action_roll_type"] = "-1"; // none
@@ -5591,8 +5592,8 @@
                 settings["repeating_tideTurners_" + newIdt2 + "_tide_action_dice_bonus"] = "";
                 settings["repeating_tideTurners_" + newIdt2 + "_tide_action_against"] = "1";
                 settings["repeating_tideTurners_" + newIdt2 + "_tide_action_healing_dice"] = "";
-                settings["repeating_tideTurners_" + newIdt2 + "_tide_action_trig_condition"] = "If you are the Target of an Action,";
-                settings["repeating_tideTurners_" + newIdt2 + "_tide_action_trig_effect"] = "Target Foe becomes the Target of that Action instead (if possible). If there are no valid Targets, the Action Misses you.";
+                settings["repeating_tideTurners_" + newIdt2 + "_tide_action_trig_condition"] = "If you are the Target of a Foe's Action,";
+                settings["repeating_tideTurners_" + newIdt2 + "_tide_action_trig_effect"] = "Target Foe becomes the Target of that Action instead of you. If there are no valid Targets, the Action Misses you instead.";
                 settings["repeating_tideTurners_" + newIdt2 + "_tide_action_description"] = "";
 
                 // Inventory
@@ -5604,7 +5605,7 @@
                 // Keepsakes
 
                 settings['keepsake1_name'] = "Clockwork Heart";
-                settings['keepsake1_effect'] = "+1 Fast Action this Turn.";
+                settings['keepsake1_effect'] = "+1 Action Point this Turn.";
                 settings['keepsake1_speed'] = "Free";
                 settings['keepsake1_usage'] = "combat";
                 settings['keepsake1_used'] = "off";
@@ -5755,7 +5756,7 @@
                 settings["repeating_actions_" + newId4 + "_action_against"] = "1";
                 settings["repeating_actions_" + newId4 + "_action_healing_dice"] = "";
                 settings["repeating_actions_" + newId4 + "_action_sust_effect"] = "Repeat Effect.";
-                settings["repeating_actions_" + newId4 + "_action_description"] = "Remove up to 2 Stacks of 1 Condition from Target Hero.";
+                settings["repeating_actions_" + newId4 + "_action_description"] = "Remove up to 2 Stacks of 1 Condition from your Target.";
 
                 const newId5 = generateRowID();
                 settings["repeating_actions_" + newId5 + "_action_name"] = "Primal Fury";
@@ -5771,7 +5772,7 @@
                 settings["repeating_actions_" + newId5 + "_action_against"] = "1";
                 settings["repeating_actions_" + newId5 + "_action_healing_dice"] = "";
                 settings["repeating_actions_" + newId5 + "_action_sust_effect"] = "Repeat Effect.";
-                settings["repeating_actions_" + newId5 + "_action_description"] = "+2 P and Target Hero may make 1 Basic Melee Attack as a Free Action.";
+                settings["repeating_actions_" + newId5 + "_action_description"] = "+2 P to your Target and they may make 1 Basic Melee during their Turn as a Free Action.";
 
                 const newId6 = generateRowID();
                 settings["repeating_actions_" + newId6 + "_action_name"] = "Rusting Entanglement";
@@ -5808,24 +5809,23 @@
                 settings["repeating_tideTurners_" + newIdt1 + "_tide_action_dice_bonus"] = "0";
                 settings["repeating_tideTurners_" + newIdt1 + "_tide_action_against"] = "1";
                 settings["repeating_tideTurners_" + newIdt1 + "_tide_action_healing_dice"] = "10";
-                settings["repeating_tideTurners_" + newIdt1 + "_tide_action_description"] = "Target Heroes recover from FALLEN (if possible).";
+                settings["repeating_tideTurners_" + newIdt1 + "_tide_action_description"] = "Your Target(s) recover from FALLEN (if possible).";
 
                 const newIdt2 = generateRowID();
                 settings["repeating_tideTurners_" + newIdt2 + "_tide_action_name"] = "Stoneskin";
                 settings["repeating_tideTurners_" + newIdt2 + "_tide_action_subtype1"] = "Trigger";
                 settings["repeating_tideTurners_" + newIdt2 + "_tide_action_subtype2"] = "Spell";
                 settings["repeating_tideTurners_" + newIdt2 + "_tide_action_target"] = "Self";
-                settings["repeating_tideTurners_" + newIdt2 + "_tide_action_speed"] = "Fast";
+                settings["repeating_tideTurners_" + newIdt2 + "_tide_action_speed"] = "Free";
                 settings["repeating_tideTurners_" + newIdt2 + "_tide_action_type"] = "";
                 settings["repeating_tideTurners_" + newIdt2 + "_tide_action_range"] = "";
-                settings["repeating_tideTurners_" + newIdt2 + "_tide_action_field_flag"] = "on"; // Field
                 settings["repeating_tideTurners_" + newIdt2 + "_tide_action_roll_type"] = "-1"; // none
                 settings["repeating_tideTurners_" + newIdt2 + "_tide_action_dice"] = "";
                 settings["repeating_tideTurners_" + newIdt2 + "_tide_action_dice_bonus"] = "";
                 settings["repeating_tideTurners_" + newIdt2 + "_tide_action_against"] = "1";
                 settings["repeating_tideTurners_" + newIdt2 + "_tide_action_healing_dice"] = "";
                 settings["repeating_tideTurners_" + newIdt2 + "_tide_action_trig_condition"] = "If you would take Damage from a Foe’s Action,";
-                settings["repeating_tideTurners_" + newIdt2 + "_tide_action_trig_effect"] = "Negate that and all other Damage you take until the  start of your next Turn.";
+                settings["repeating_tideTurners_" + newIdt2 + "_tide_action_trig_effect"] = "Negate that and all other Damage you take until the start of your next Turn.";
                 settings["repeating_tideTurners_" + newIdt2 + "_tide_action_description"] = "";
 
                 // Inventory
@@ -5981,10 +5981,10 @@
                 settings["repeating_actions_" + newId4 + "_action_roll_type"] = "0"; // default
                 settings["repeating_actions_" + newId4 + "_action_dice"] = "1d6";
                 settings["repeating_actions_" + newId4 + "_action_dice_bonus"] = "0";
-                settings["repeating_actions_" + newId4 + "_action_against"] = "1";
+                settings["repeating_actions_" + newId4 + "_action_against"] = "3";
                 settings["repeating_actions_" + newId4 + "_action_healing_dice"] = "";
                 settings["repeating_actions_" + newId4 + "_action_sust_effect"] = "Repeat Effect.";
-                settings["repeating_actions_" + newId4 + "_action_description"] = "If any Foe suffering Chains of Calamity is the Target of a Spell, deal 1d6 PIERCING Damage to all Foes suffering Chains of Calamity.";
+                settings["repeating_actions_" + newId4 + "_action_description"] = "Until the start of your next Turn, if 1 or more Foe(s) suffering Chains of Calamity is the Target of a Spell Action, deal 1d6 PIERCING Damage to all Foes suffering Chains of Calamity.";
 
                 const newId5 = generateRowID();
                 settings["repeating_actions_" + newId5 + "_action_name"] = "False Camaraderie";
@@ -6014,11 +6014,11 @@
                 settings["repeating_actions_" + newId6 + "_action_dice_bonus"] = "0";
                 settings["repeating_actions_" + newId6 + "_action_against"] = "1";
                 settings["repeating_actions_" + newId6 + "_action_healing_dice"] = "";
-                settings["repeating_actions_" + newId6 + "_action_amp_effect"] = "When you use a Spell that you could cast again this Encounter, you may cast that Spell again directly after as a Free Action. You cannot use that Spell for the remainder of the Encounter.";
+                settings["repeating_actions_" + newId6 + "_action_amp_effect"] = "When you use a Spell Action, you may immediately use that Action again as a Free Action, then that Action cannot be used for the remainder of the Encounter.";
                 settings["repeating_actions_" + newId6 + "_action_description"] = "";
 
                 // Tide turners
-                settings['max_tide_turners'] = "3";
+                settings['max_tide_turners'] = "2";
                 settings['tide_turners_used'] = "0";
 
                 // Tide turner actions
@@ -6036,7 +6036,7 @@
                 settings["repeating_tideTurners_" + newIdt1 + "_tide_action_against"] = "2";
                 settings["repeating_tideTurners_" + newIdt1 + "_tide_action_healing_dice"] = "";
                 settings["repeating_tideTurners_" + newIdt1 + "_tide_action_sust_effect"] = "Repeat Effect.";
-                settings["repeating_tideTurners_" + newIdt1 + "_tide_action_description"] = "Until the start of your next Turn, if Foe is the Target of a Spell, deal 2d12 Resistance Damage.";
+                settings["repeating_tideTurners_" + newIdt1 + "_tide_action_description"] = "Until the start of your next Turn, If the Foe suffering Recurring Nightmare is the Target of a Spell Action, deal 2d12 Damage vs RESISTANCE.";
 
                 const newIdt2 = generateRowID();
                 settings["repeating_tideTurners_" + newIdt2 + "_tide_action_name"] = "Composite Magic";
@@ -6062,7 +6062,7 @@
                 // Keepsakes
 
                 settings['keepsake1_name'] = "Pheonix Pinion";
-                settings['keepsake1_effect'] = "Adjacent Hero recovers from Fallen. That Hero heals 10 HP.";
+                settings['keepsake1_effect'] = "1 Adjacent Hero recovers from Fallen.";
                 settings['keepsake1_speed'] = "Fast";
                 settings['keepsake1_usage'] = "campaign";
                 settings['keepsake1_used'] = "off";
