@@ -17,7 +17,7 @@
 }
 
 .charsheet * {
-    font-family: ProximaNova, "Proxima Nova","ProximaNova-Regular", serif;
+    font-family: ProximaNova, "Proxima Nova", "ProximaNova-Regular", serif;
 }
 
 .top-logo {
@@ -822,7 +822,7 @@ body.sheet-darkmode .condition-with-foe-grid > div:nth-child(3) {
 }
 
 .image:active {
-    box-shadow: 0 0 5px -1px rgba(0,0,0,0.6);
+    box-shadow: 0 0 5px -1px rgba(0, 0, 0, 0.6);
 }
 
 .init-btn {
@@ -858,62 +858,79 @@ body.sheet-darkmode .init-btn {
     content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/classes/archer-w.png");
     display: inline-flex;
 }
+
 .init-btn:hover > .class-control[value="archer"] ~ .class-img {
     content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/classes/archer-b.png");
 }
+
 .class-control[value="ardent"] ~ .class-img {
     content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/classes/ardent-w.png");
     display: inline-flex;
 }
+
 .init-btn:hover > .class-control[value="ardent"] ~ .class-img {
     content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/classes/ardent-b.png");
 }
+
 .class-control[value="atlanta"] ~ .class-img {
     content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/classes/atlanta-w.png");
     display: inline-flex;
 }
+
 .init-btn:hover > .class-control[value="atlanta"] ~ .class-img {
     content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/classes/atlanta-b.png");
 }
+
 .class-control[value="druid"] ~ .class-img {
     content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/classes/druid-w.png");
     display: inline-flex;
 }
+
 .init-btn:hover > .class-control[value="druid"] ~ .class-img {
     content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/classes/druid-b.png");
 }
+
 .class-control[value="invoker"] ~ .class-img {
     content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/classes/invoker-w.png");
     display: inline-flex;
 }
+
 .init-btn:hover > .class-control[value="invoker"] ~ .class-img {
     content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/classes/invoker-b.png");
 }
+
 .class-control[value="rogue"] ~ .class-img {
     content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/classes/rouge-w.png");
     display: inline-flex;
 }
+
 .init-btn:hover > .class-control[value="rogue"] ~ .class-img {
     content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/classes/rouge-b.png");
 }
+
 .class-control[value="spiritualist"] ~ .class-img {
     content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/classes/spiritualist-w.png");
     display: inline-flex;
 }
+
 .init-btn:hover > .class-control[value="spiritualist"] ~ .class-img {
     content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/classes/spiritualist-b.png");
 }
+
 .class-control[value="tactician"] ~ .class-img {
     content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/classes/tactician-w.png");
     display: inline-flex;
 }
+
 .init-btn:hover > .class-control[value="tactician"] ~ .class-img {
     content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/classes/tactician-b.png");
 }
+
 .class-control[value="warrior"] ~ .class-img {
     content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/classes/warrior-w.png");
     display: inline-flex;
 }
+
 .init-btn:hover > .class-control[value="warrior"] ~ .class-img {
     content: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/feature/legacy-upgrade/images/classes/warrior-b.png");
 }
@@ -2679,37 +2696,27 @@ body.sheet-darkmode input[type=checkbox].small-hex-button:checked + span::before
 }
 
 .charsheet input[type=checkbox].hex-button:hover + span + div,
-.charsheet input[type=checkbox].small-hex-button:hover + span + div {
+.charsheet input[type=checkbox].hex-button:hover ~ .hex.veteran-hex-1,
+.charsheet input[type=checkbox].hex-button:hover ~ .hex.veteran-hex-2,
+.charsheet input[type=checkbox].hex-button:hover ~ .hex.veteran-hex-3,
+.charsheet input[type=checkbox].hex-button:hover ~ .hex.veteran-hex-4,
+.charsheet input[type=checkbox].hex-button:hover + span + div,
+.charsheet input[type=checkbox].small-hex-button:hover + span + div,
+input[type=checkbox].small-hex-button:hover ~ .small-hex.veteran-hex-1,
+input[type=checkbox].small-hex-button:hover ~ .small-hex.veteran-hex-2,
+input[type=checkbox].small-hex-button:hover ~ .small-hex.veteran-hex-3,
+input[type=checkbox].small-hex-button:hover ~ .small-hex.veteran-hex-4 {
     background-color: indianred;
-}
-
-.hex-button + span::before,
-.small-hex-button + span::before {
-    cursor: pointer;
-    content: "3";
-    font-family: pictos, fantasy;
-    color: black;
-    background-color: white;
-    border-radius: 20px;
-    z-index: 4;
-    position: relative;
-    top: 60px;
-}
-
-.hex-button + span::before {
-    margin-left: -18px;
-    padding: 4px;
-}
-
-.small-hex-button + span::before {
-    margin-left: -16px;
-    padding: 2px;
-    top: 36px;
 }
 
 body.sheet-darkmode .hex-button + span::before,
 body.sheet-darkmode .small-hex-button + span::before {
-    color: white;
+    color: whitesmoke;
+}
+
+body.sheet-darkmode .hex-button + span,
+body.sheet-darkmode .small-hex-button + span {
+    border-color: #1f1f1f;
     background-color: #1f1f1f;
 }
 
@@ -2721,6 +2728,77 @@ input[type=checkbox].hex-button {
     top: 55px;
     width: 20px;
     height: 20px
+}
+
+.hex-button + span,
+.small-hex-button + span {
+    background-color: white;
+    border-color: white;
+    position: relative;
+    display: inline-block;
+    z-index: 4;
+}
+
+.hex-button + span {
+    width: 24px;
+    height: 12px;
+    top: 62px;
+    margin-left: -21px;
+}
+
+.small-hex-button + span {
+    width: 15px;
+    height: 8px;
+    top: 37px;
+    margin-left: -16px;
+}
+
+.hex-button + span:before,
+.small-hex-button + span::before {
+    cursor: pointer;
+    content: "3";
+    font-family: pictos, fantasy;
+    color: black;
+    display: flex;
+    justify-content: center;
+    width: 0;
+    height: 0;
+    border-bottom: 8px solid;
+    border-color: inherit;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    position: absolute;
+    top: -8px;
+    font-size: 1.35em;
+}
+
+.small-hex-button + span::before {
+    border-bottom: 5px solid;
+    border-color: inherit;
+    border-left: 8px solid transparent;
+    border-right: 7px solid transparent;
+    top: -5px;
+    font-size: 0.9em;
+}
+
+.hex-button + span:after,
+.small-hex-button + span:after {
+    content: "";
+    width: 0;
+    position: absolute;
+    bottom: -8px;
+    border-top: 8px solid;
+    border-color: inherit;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+}
+
+.small-hex-button + span::after {
+    border-top: 4px solid;
+    border-color: inherit;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    bottom: -4px;
 }
 
 .hex {
@@ -2819,8 +2897,8 @@ input[type=checkbox].hex-button {
     background: transparent;
     color: black;
     text-align: center;
-    display:inline-block;
-    vertical-align:middle;
+    display: inline-block;
+    vertical-align: middle;
     overflow: hidden;
     resize: none
 }
@@ -2844,7 +2922,7 @@ input[type=checkbox].hex-button {
 
 input[type=checkbox].small-hex-button {
     opacity: 0;
-    margin-left: -32px;
+    margin-left: -34px;
     margin-top: -10px;
     z-index: 5;
     position: relative;
@@ -2894,7 +2972,7 @@ input[type=checkbox].small-hex-button {
 .sheet-rolltemplate-skill .sheet-kungfont,
 .sheet-rolltemplate-action .sheet-kungfont,
 .sheet-rolltemplate-basic-action .sheet-kungfont {
-    font-family:  "Kungfont-Regular", Kungfont, "Proxima Nova", "ProximaNova-Regular", ProximaNova, serif;
+    font-family: "Kungfont-Regular", Kungfont, "Proxima Nova", "ProximaNova-Regular", ProximaNova, serif;
     font-size: 16px;
 }
 
