@@ -2697,13 +2697,14 @@ body.sheet-darkmode input[type=checkbox].small-hex-button:checked + span::before
 }
 
 .hex-button + span::before {
-    margin-left: -14px;
+    margin-left: -18px;
     padding: 4px;
 }
 
 .small-hex-button + span::before {
-    margin-left: -12px;
+    margin-left: -16px;
     padding: 2px;
+    top: 36px;
 }
 
 body.sheet-darkmode .hex-button + span::before,
@@ -2712,16 +2713,14 @@ body.sheet-darkmode .small-hex-button + span::before {
     background-color: #1f1f1f;
 }
 
-.small-hex-button + span::before {
-    top: 36px;
-}
-
 input[type=checkbox].hex-button {
     opacity: 0;
     z-index: 5;
-    margin-left: -45px;
+    margin-left: -50px;
     position: relative;
-    top: 60px;
+    top: 55px;
+    width: 20px;
+    height: 20px
 }
 
 .hex {
@@ -2849,7 +2848,9 @@ input[type=checkbox].small-hex-button {
     margin-top: -10px;
     z-index: 5;
     position: relative;
-    top: 36px;
+    top: 40px;
+    width: 15px;
+    height: 15px;
 }
 
 .small-hex {
