@@ -1,8 +1,8 @@
 <br />
-<div align="center">
+<div style="text-align: center">
   <img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Emberwind/images/emberwind-logo-color.png" alt="Logo" width="350">
-  <h3 align="center">Roll20 Character Sheet for Emberwind</h3>
-  <p align="center">
+  <h3 >Roll20 Character Sheet for Emberwind</h3>
+  <p>
     Emberwind is made by Nomnivore Games
     <br />
     <a href="https://www.emberwindgame.com/"><strong>Emberwind »</strong></a>
