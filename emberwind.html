@@ -6701,7 +6701,7 @@
             {{#cap}}
             {{#^rollTotal() cap 0}}
             <div class="flex-center sheet-row" style="padding-top: 10px; padding-bottom: 5px">
-                <div class="tcat">CAP:</div>
+                <div class="kungfont">CAP:</div>
                 <div>{{cap}}</div>
                 {{#^rollGreater() cap penetration}}
                 <div style="font-variant: small-caps; font-style: italic; font-weight: bold; font-size: 0.9em;">
@@ -6738,7 +6738,7 @@
                 <div class="sheet-col">
                     <div class="flex-center sheet-row">
                         <div class="critical flex-center">
-                            <span>Critical!</span>
+                            <span class="kungfont">Critical!</span>
                         </div>
                     </div>
                     <div class="flex-center sheet-row">
@@ -6850,7 +6850,7 @@
             {{#cap}}
             {{#^rollTotal() cap 0}}
             <div class="flex-center sheet-row" style="padding-top: 10px; padding-bottom: 5px">
-                <div class="tcat">CAP:</div>
+                <div class="kungfont">CAP:</div>
                 <div>{{cap}}</div>
                 {{#^rollTotal() against 3}}
                 {{#^rollGreater() cap penetration}}
@@ -6892,7 +6892,7 @@
                 <div class="sheet-col">
                     <div class="flex-center sheet-row">
                         <div class="critical flex-center">
-                            <span>Critical!</span>
+                            <span class="kungfont">Critical!</span>
                         </div>
                     </div>
                     <div class="flex-center sheet-row">
@@ -6925,7 +6925,7 @@
             {{#cap}}
             {{#^rollTotal() cap 0}}
             <div class="flex-center sheet-row" style="padding-top: 10px; padding-bottom: 5px">
-                <div class="tcat">CAP:</div>
+                <div class="kungfont">CAP:</div>
                 <div>{{cap}}</div>
                 {{#^rollGreater() cap penetration}}
                 <div style="font-variant: small-caps; font-style: italic; font-weight: bold; font-size: 0.9em;">
@@ -7002,7 +7002,7 @@
             {{#^rollTotal() no-roll 0}}
             {{#roll}}
             <div class="flex-center sheet-row" style="padding-top: 10px; padding-bottom: 5px">
-                <div class="tcat">CAP:</div>
+                <div class="kungfont">CAP:</div>
                 <div>{{roll}}</div>
             </div>
             {{/roll}}
@@ -7014,14 +7014,14 @@
             {{#name}}
             {{#rollTotal() pc 0}}
             <div class="header-bar">
-                <div><h1 class="kungfont tcat-header black-text">{{name}}</h1></div>
+                <div><h1 class="tcat-header black-text">{{name}}</h1></div>
                 <div><span class="tcat-subheader black-text">{{subtag1}} {{subtag2}}</span></div>
             </div>
             {{/rollTotal() pc 0}}
 
             {{#rollTotal() pc 1}}
             <div class="header-npc-special-bar">
-                <div><h1 class="kungfont tcat-header white-text">{{name}}</h1></div>
+                <div><h1 class="tcat-header white-text">{{name}}</h1></div>
                 <div><span class="tcat-subheader white-text">{{subtag1}} {{subtag2}}</span></div>
             </div>
             {{/rollTotal() pc 1}}
