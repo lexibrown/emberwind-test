@@ -118,6 +118,9 @@
                         </div>
                     </div>
                     <div class="settings-row block-container block-npc">
+                        <div class="sheet-row bold">
+                            NPC ACTIONS:
+                        </div>
                         <div class="sheet-row">
                             <div class="sheet-col">
                                 <label>
@@ -383,35 +386,41 @@
                             </div>
 
                             <div class="sheet-col info-class-box">
-                                <span>Class:</span>
-                                <select name="attr_class" class="selector-fit no-border border-bottom-grey-1">
-                                    <option value="null">Select</option>
-                                    <option value="archer">Archer</option>
-                                    <option value="ardent">Ardent</option>
-                                    <option value="atlanta">Atlanta</option>
-                                    <option value="druid">Druid</option>
-                                    <option value="invoker">Invoker</option>
-                                    <option value="rogue">Rogue</option>
-                                    <option value="spiritualist">Spiritualist</option>
-                                    <option value="tactician">Tactician</option>
-                                    <option value="warrior">Warrior</option>
-                                    <option value="custom">Custom</option>
-                                </select>
+                                <label>
+                                    Class:
+                                    <select name="attr_class" class="selector-fit no-border border-bottom-grey-1">
+                                        <option value="null">Select</option>
+                                        <option value="archer">Archer</option>
+                                        <option value="ardent">Ardent</option>
+                                        <option value="atlanta">Atlanta</option>
+                                        <option value="druid">Druid</option>
+                                        <option value="invoker">Invoker</option>
+                                        <option value="rogue">Rogue</option>
+                                        <option value="spiritualist">Spiritualist</option>
+                                        <option value="tactician">Tactician</option>
+                                        <option value="warrior">Warrior</option>
+                                        <option value="custom">Custom</option>
+                                    </select>
+                                </label>
                             </div>
                         </div>
                         <div class="sheet-row">
                             <input class="class-control" type="hidden" name="attr_class" value="">
                             <div class="info-custom-class">
-                                <span>Custom Class:</span>
-                                <input type="text" name="attr_custom_class"
-                                       class="transparent no-border border-bottom-grey-1 width70"/>
+                                <label>
+                                    Custom Class:
+                                    <input type="text" name="attr_custom_class"
+                                           class="transparent no-border border-bottom-grey-1 width70"/>
+                                </label>
                             </div>
                         </div>
                         <div class="sheet-row">
                             <div class="info-subclass-box">
-                                <span>Subclass:</span>
-                                <input type="text" name="attr_subclass"
-                                       class="transparent no-border border-bottom-grey-1 width80"/>
+                                <label>
+                                    Subclass:
+                                    <input type="text" name="attr_subclass"
+                                           class="transparent no-border border-bottom-grey-1 width80"/>
+                                </label>
                             </div>
                         </div>
                     </div>
@@ -2505,7 +2514,7 @@
                                 </div>
                             </div>
                             <div>
-                                <div class="guide-header-big guide-header">
+                                <div class="guide-header-big guide-header-long guide-header">
                                     SPECIAL ACTIONS TYPES & THEIR RESOURCES:
                                 </div>
 
@@ -4231,7 +4240,7 @@
                                     <summary class="npc-actions-grid transparent">
                                         <div class="action-button">
                                             <button type="roll" name="roll_action"
-                                                    value="@{whisper_state}&{template:action} {{npc-type=[[0]]}} {{name=@{npc_action_name}}} {{subtag1=@{character_name}}} {{rollType=[[2]]}} {{damage=[[0@{npc_action_dice} + @{npc_action_dice_bonus}]]}} {{against=[[@{npc_action_against}]]}} {{type=@{npc_action_type}}} {{range=@{npc_action_range}@{npc_action_field_description}}} {{description=@{npc_action_description}}}">
+                                                    value="@{whisper_state}&{template:action} {{npc-type=[[0]]}} {{name=@{npc_action_name}}} {{subtag1=@{character_name}}} {{rollType=[[2]]}} {{test=[[@{npc_action_check}]]}} {{damage=[[0@{npc_action_dice} + @{npc_action_dice_bonus}]]}} {{against=[[@{npc_action_against}]]}} {{type=@{npc_action_type}}} {{range=@{npc_action_range}@{npc_action_field_description}}} {{description=@{npc_action_description}}}">
                                             </button>
                                         </div>
 
@@ -4404,7 +4413,7 @@
                                     <summary class="npc-actions-grid transparent">
                                         <div class="action-button">
                                             <button type="roll" name="roll_action"
-                                                    value="@{whisper_state}&{template:action} {{npc-type=[[1]]}} {{name=@{npc_special_name}}} {{subtag1=@{character_name}}} {{rollType=[[@{npc_special_roll_type}]]}} {{damage=[[0@{npc_special_dice} + @{npc_special_dice_bonus}]]}} {{against=[[@{npc_special_against}]]}} {{range=@{npc_special_range}@{npc_special_field_description}}} {{description=@{npc_special_description}}} {{trigCondition=@{npc_special_trig_condition}}} {{trigEffect=@{npc_special_trig_effect}}}">
+                                                    value="@{whisper_state}&{template:action} {{npc-type=[[1]]}} {{name=@{npc_special_name}}} {{subtag1=@{character_name}}} {{rollType=[[@{npc_special_roll_type}]]}} {{test=[[@{npc_special_check}]]}} {{skill=@{npc_special_skill}}} {{damage=[[0@{npc_special_dice} + @{npc_special_dice_bonus}]]}} {{against=[[@{npc_special_against}]]}} {{range=@{npc_special_range}@{npc_special_field_description}}} {{description=@{npc_special_description}}} {{trigCondition=@{npc_special_trig_condition}}} {{trigEffect=@{npc_special_trig_effect}}}">
                                             </button>
                                         </div>
 
@@ -4644,7 +4653,7 @@
                                     <summary class="npc-actions-grid transparent">
                                         <div class="action-button">
                                             <button type="roll" name="roll_action"
-                                                    value="@{whisper_state}&{template:action} {{npc-type=[[2]]}} {{name=@{npc_learn_name}}} {{subtag1=@{character_name}}} {{rollType=[[@{npc_learn_roll_type}]]}} {{damage=[[0@{npc_learn_dice} + @{npc_learn_dice_bonus}]]}} {{against=[[@{npc_learn_against}]]}} {{range=@{npc_learn_range}@{npc_learn_field_description}}} {{description=@{npc_learn_description}}} {{trigCondition=@{npc_learn_trig_condition}}} {{trigEffect=@{npc_learn_trig_effect}}}">
+                                                    value="@{whisper_state}&{template:action} {{npc-type=[[2]]}} {{name=@{npc_learn_name}}} {{subtag1=@{character_name}}} {{rollType=[[@{npc_learn_roll_type}]]}} {{test=[[@{npc_learn_check}]]}} {{skill=@{npc_learn_skill}}} {{damage=[[0@{npc_learn_dice} + @{npc_learn_dice_bonus}]]}} {{against=[[@{npc_learn_against}]]}} {{range=@{npc_learn_range}@{npc_learn_field_description}}} {{description=@{npc_learn_description}}} {{trigCondition=@{npc_learn_trig_condition}}} {{trigEffect=@{npc_learn_trig_effect}}}">
                                             </button>
                                         </div>
 
@@ -6772,21 +6781,63 @@
 
             {{#rollTotal() npc-type 0}}
             <div class="header-bar">
-                <div><h1 class="tcat-header black-text">{{name}}</h1></div>
+                <div>
+                    <h1 class="tcat-header black-text">
+                        {{name}}
+                        {{#rollTotal() test 1}}
+                        vs <img class="dodge-img" style="width: 20px; height: 20px" alt="" src="">
+                        {{/rollTotal() test 1}}
+                        {{#rollTotal() test 2}}
+                        vs <img class="willpower-img" style="width: 20px; height: 20px" alt="" src="">
+                        {{/rollTotal() test 2}}
+                    </h1>
+                </div>
                 <div><span class="tcat-subheader black-text">{{subtag1}} {{subtag2}}</span></div>
             </div>
             {{/rollTotal() npc-type 0}}
 
             {{#rollTotal() npc-type 1}}
             <div class="header-npc-special-bar">
-                <div><h1 class="tcat-header white-text">{{name}}</h1></div>
+                <div>
+                    <h1 class="tcat-header white-text">
+                        {{name}}
+                        {{#rollTotal() test 1}}
+                        vs <img class="dodge-img" style="width: 20px; height: 20px" alt="" src="">
+                        {{/rollTotal() test 1}}
+                        {{#rollTotal() test 2}}
+                        vs <img class="willpower-img" style="width: 20px; height: 20px" alt="" src="">
+                        {{/rollTotal() test 2}}
+                        {{#rollTotal() test 3}}
+                        <span class="indicator">AUTO-HIT</span>
+                        {{/rollTotal() test 3}}
+                        {{#rollTotal() test 4}}
+                        vs {{skill}}
+                        {{/rollTotal() test 4}}
+                    </h1>
+                </div>
                 <div><span class="tcat-subheader white-text">{{subtag1}} {{subtag2}}</span></div>
             </div>
             {{/rollTotal() npc-type 1}}
 
             {{#rollTotal() npc-type 2}}
             <div class="header-npc-learned-bar">
-                <div><h1 class="tcat-header black-text">{{name}}</h1></div>
+                <div>
+                    <h1 class="tcat-header black-text">
+                        {{name}}
+                        {{#rollTotal() test 1}}
+                        vs <img class="dodge-img" style="width: 20px; height: 20px" alt="" src="">
+                        {{/rollTotal() test 1}}
+                        {{#rollTotal() test 2}}
+                        vs <img class="willpower-img" style="width: 20px; height: 20px" alt="" src="">
+                        {{/rollTotal() test 2}}
+                        {{#rollTotal() test 3}}
+                        <span class="indicator">AUTO-HIT</span>
+                        {{/rollTotal() test 3}}
+                        {{#rollTotal() test 4}}
+                        vs {{skill}}
+                        {{/rollTotal() test 4}}
+                    </h1>
+                </div>
                 <div><span class="tcat-subheader black-text">{{subtag1}} {{subtag2}}</span></div>
             </div>
             {{/rollTotal() npc-type 2}}
@@ -6931,7 +6982,7 @@
             <!--            Auto-hit-->
             {{#rollTotal() rollType 2}}
             {{#damage}}
-            <div class="sheet-col">
+            <div class="sheet-col" style="padding-top: 10px; padding-bottom: 5px">
                 <div class="flex-center sheet-row">
                     <div class="sheet-col kungfont">
                         {{damage}}
