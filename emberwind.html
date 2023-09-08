@@ -336,7 +336,8 @@
 
                     <!--        Image -->
                     <div class="image flex-center">
-                        <button type="roll" class="init-btn tokenaction" name="roll_hero-slot" value="@{whisper_state}&{template:turn} {{pc=[[0]]}} {{name=@{character_name}}} {{order=[[?{Hero Slot?|1,10|2,20|3,30|4,40} &{tracker}]]}}">
+                        <button type="roll" class="init-btn tokenaction" name="roll_hero-slot"
+                                value="@{whisper_state}&{template:turn} {{pc=[[0]]}} {{name=@{character_name}}} {{order=[[?{Hero Slot?|1,10|2,20|3,30|4,40} &{tracker}]]}}">
                             <input class="class-control" type="hidden" name="attr_class" value="">
                             <img class="class-img padding-right5" src="" alt=""/>
                             <span>Initiative</span>
@@ -765,7 +766,7 @@
 
                     <!--        Action Header-->
                     <div class="actions-grid">
-<!--                        <span class="action-button action-header">Roll</span>-->
+                        <!--                        <span class="action-button action-header">Roll</span>-->
                         <span class="action-name action-header">Name</span>
                         <span class="action-type action-header">Type</span>
                         <span class="action-target action-header">Target</span>
@@ -980,8 +981,9 @@
                         <summary class="actions-grid transparent">
                             <div class="action-button">
                                 <div>
-                                    <button type="action" name="act_action-range" style="padding: 2px 3px; font-size: 1.3em;" class="btn">
-                                        <span style="font-family: dicefontd20;">t</span>
+                                    <button type="action" name="act_action-range"
+                                            style="padding: 2px 3px; font-size: 1.3em;" class="btn">
+                                        <span class="d20font">t</span>
                                     </button>
                                 </div>
                             </div>
@@ -2059,7 +2061,15 @@
 
             <div class="tab-content tab3 tab-conditions">
                 <div>
-                    <div class="inventory-header">Conditions</div>
+                    <div>
+                        <div class="inventory-header sheet-col">Conditions</div>
+                        <div class="sheet-col padding-top-3">
+                            <button type="action" name="act_condition-info" style="padding: 2px 3px; font-size: 1.3em;"
+                                    class="btn">
+                                <span class="d20font">t</span>
+                            </button>
+                        </div>
+                    </div>
                     <div class="padding-bottom5">
                         • Check the box next to the Condition for each Stack you are suffering, If a (max &#8734;) is
                         specified, write number of Stacks instead.
@@ -2609,6 +2619,207 @@
                         </label>
                     </div>
 
+                    <details class="width100 grey" style="margin-bottom: 5px">
+                        <summary class="flex-center" style="border-bottom: 2px solid whitesmoke;">
+                            <div class="bold sheet-col" style="font-size: 1.25em">Conditions</div>
+                            <div class="sheet-col padding-top-3 padding-bottom3 padding-left10">
+                                <button type="action" name="act_condition-info"
+                                        style="padding: 2px 3px; font-size: 1.3em;"
+                                        class="btn">
+                                    <span class="d20font">t</span>
+                                </button>
+                            </div>
+                        </summary>
+                        <div class="npc-conditions-grid">
+                            <div class="npc-condition-item-grid">
+                                <p class="bold">Poison:</p>
+                                <div>
+                                    <input type="checkbox" name="attr_condition_poison_1"/>
+                                    <input type="checkbox" name="attr_condition_poison_2"/>
+                                    <input type="checkbox" name="attr_condition_poison_3"/>
+                                    <input type="checkbox" name="attr_condition_poison_4"/>
+                                    <input type="checkbox" name="attr_condition_poison_5"/>
+                                </div>
+                            </div>
+                            <div class="npc-condition-item-grid">
+                                <p class="bold">Burning:</p>
+                                <div>
+                                    <input type="checkbox" name="attr_condition_burning_1"/>
+                                    <input type="checkbox" name="attr_condition_burning_2"/>
+                                </div>
+                            </div>
+                            <div class="npc-condition-item-grid">
+                                <p class="bold">Fragility:</p>
+                                <div>
+                                    <input type="checkbox" name="attr_condition_fragility"/>
+                                </div>
+                            </div>
+                            <div class="npc-condition-item-grid">
+                                <p class="bold">Vulnerability:</p>
+                                <div>
+                                    <input class="small-number-input" type="number" min="0"
+                                           name="attr_condition_vulnerability"/>
+                                </div>
+                            </div>
+                            <div class="npc-condition-item-grid">
+                                <p class="bold">Weakness:</p>
+                                <div>
+                                    <input class="small-number-input" type="number" min="0"
+                                           name="attr_condition_weakness"/>
+                                </div>
+                            </div>
+                            <div class="npc-condition-item-grid">
+                                <p class="bold">Daze:</p>
+                                <div>
+                                    <input type="checkbox" name="attr_condition_daze"/>
+                                </div>
+                            </div>
+                            <div class="npc-condition-item-grid">
+                                <p class="bold">Off-guard:</p>
+                                <div>
+                                    <input type="checkbox" name="attr_condition_off_guard"/>
+                                </div>
+                            </div>
+                            <div class="npc-condition-item-grid">
+                                <p class="bold">Prone:</p>
+                                <div>
+                                    <input type="checkbox" name="attr_condition_prone"/>
+                                </div>
+                            </div>
+                            <div class="npc-condition-item-grid">
+                                <p class="bold">Sleep:</p>
+                                <div>
+                                    <input type="checkbox" name="attr_condition_sleep"/>
+                                </div>
+                            </div>
+                            <div class="npc-condition-item-grid">
+                                <p class="bold">Silence:</p>
+                                <div>
+                                    <input type="checkbox" name="attr_condition_silence"/>
+                                </div>
+                            </div>
+                            <div class="npc-condition-item-grid">
+                                <p class="bold">Chill:</p>
+                                <div>
+                                    <input type="checkbox" name="attr_condition_chill"/>
+                                </div>
+                            </div>
+                            <div class="npc-condition-item-grid">
+                                <p class="bold">Paralysis:</p>
+                                <div>
+                                    <input type="checkbox" name="attr_condition_paralysis"/>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+
+
+                    <details class="width100 grey" style="margin-bottom: 5px">
+                        <summary class="flex-center padding-2525" style="border-bottom: 2px solid whitesmoke;">
+                            <div class="bold sheet-col" style="font-size: 1.25em">Conditions</div>
+                        </summary>
+                        <fieldset class="repeating_npcConditions">
+                            <div class="sheet-row">
+                                <div class="sheet-col padding-left10 padding-top5">
+                                    <label class="bold" style="padding-right: 0">
+                                        Conditions for Foe:
+                                        <input type="text" name="attr_npc_condition_name">
+                                    </label>
+                                </div>
+                                <div class="sheet-col padding-top5 padding-bottom3">
+                                    <button type="action" name="act_condition-info"
+                                            style="padding: 2px 3px; font-size: 1.3em;"
+                                            class="btn">
+                                        <span class="d20font">t</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="npc-conditions-grid">
+                                <div class="npc-condition-item-grid">
+                                    <p class="bold">Poison:</p>
+                                    <div>
+                                        <input type="checkbox" name="attr_condition_poison_1"/>
+                                        <input type="checkbox" name="attr_condition_poison_2"/>
+                                        <input type="checkbox" name="attr_condition_poison_3"/>
+                                        <input type="checkbox" name="attr_condition_poison_4"/>
+                                        <input type="checkbox" name="attr_condition_poison_5"/>
+                                    </div>
+                                </div>
+                                <div class="npc-condition-item-grid">
+                                    <p class="bold">Burning:</p>
+                                    <div>
+                                        <input type="checkbox" name="attr_condition_burning_1"/>
+                                        <input type="checkbox" name="attr_condition_burning_2"/>
+                                    </div>
+                                </div>
+                                <div class="npc-condition-item-grid">
+                                    <p class="bold">Fragility:</p>
+                                    <div>
+                                        <input type="checkbox" name="attr_condition_fragility"/>
+                                    </div>
+                                </div>
+                                <div class="npc-condition-item-grid">
+                                    <p class="bold">Vulnerability:</p>
+                                    <div>
+                                        <input class="small-number-input" type="number" min="0"
+                                               name="attr_condition_vulnerability"/>
+                                    </div>
+                                </div>
+                                <div class="npc-condition-item-grid">
+                                    <p class="bold">Weakness:</p>
+                                    <div>
+                                        <input class="small-number-input" type="number" min="0"
+                                               name="attr_condition_weakness"/>
+                                    </div>
+                                </div>
+                                <div class="npc-condition-item-grid">
+                                    <p class="bold">Daze:</p>
+                                    <div>
+                                        <input type="checkbox" name="attr_condition_daze"/>
+                                    </div>
+                                </div>
+                                <div class="npc-condition-item-grid">
+                                    <p class="bold">Off-guard:</p>
+                                    <div>
+                                        <input type="checkbox" name="attr_condition_off_guard"/>
+                                    </div>
+                                </div>
+                                <div class="npc-condition-item-grid">
+                                    <p class="bold">Prone:</p>
+                                    <div>
+                                        <input type="checkbox" name="attr_condition_prone"/>
+                                    </div>
+                                </div>
+                                <div class="npc-condition-item-grid">
+                                    <p class="bold">Sleep:</p>
+                                    <div>
+                                        <input type="checkbox" name="attr_condition_sleep"/>
+                                    </div>
+                                </div>
+                                <div class="npc-condition-item-grid">
+                                    <p class="bold">Silence:</p>
+                                    <div>
+                                        <input type="checkbox" name="attr_condition_silence"/>
+                                    </div>
+                                </div>
+                                <div class="npc-condition-item-grid">
+                                    <p class="bold">Chill:</p>
+                                    <div>
+                                        <input type="checkbox" name="attr_condition_chill"/>
+                                    </div>
+                                </div>
+                                <div class="npc-condition-item-grid">
+                                    <p class="bold">Paralysis:</p>
+                                    <div>
+                                        <input type="checkbox" name="attr_condition_paralysis"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                    </details>
+
+
                     <div class="npc-grid">
 
                         <div class="npc-grid-item padding-bottom5 ">
@@ -2694,7 +2905,8 @@
                             </button>
                         </div>
                         <div class="npc-grid-item width100">
-                            <button class="init-btn" type="action" name="act_npc-action" style="background-color: #a074b2">
+                            <button class="init-btn" type="action" name="act_npc-action"
+                                    style="background-color: #a074b2">
                                 <input type="hidden" class="npc-rank-indicator" name="attr_npc_rank" value=""/>
                                 <img class="npc-rank-img" alt="" src="">
                                 <span>Roll</span>
@@ -4944,6 +5156,71 @@
         });
     });
 
+    on('clicked:condition-info', (info) => {
+        getAttrs(['condition_poison_1', 'condition_poison_2', 'condition_poison_3', 'condition_poison_4', 'condition_poison_5',
+            'condition_burning_1', 'condition_burning_2', 'condition_fragility', 'condition_vulnerability', 'condition_weakness',
+             'condition_daze', 'condition_off_guard', 'condition_prone', 'condition_sleep', 'condition_silence', 'condition_chill',
+              'condition_paralysis'], function(values) {
+            var extra = '';
+            let poison = values.condition_poison_1 != 0 ? 1 : 0;
+            poison += values.condition_poison_2 != 0 ? 1 : 0;
+            poison += values.condition_poison_3 != 0 ? 1 : 0;
+            poison += values.condition_poison_4 != 0 ? 1 : 0;
+            poison += values.condition_poison_5 != 0 ? 1 : 0;
+            if (poison != 0) {
+                extra += '{{poison=' + poison + ' Stack(s) of Poison!}}';
+            }
+            let burning = values.condition_burning_1 != 0 ? 1 : 0;
+            burning += values.condition_burning_2 != 0 ? 1 : 0;
+            if (burning != 0) {
+                extra += '{{burning=' + burning + ' Stack(s) of Burning!}}';
+            }
+            if (values.condition_fragility != 0) {
+                extra += '{{fragility=Fragile!}}';
+            }
+            if (values.condition_vulnerability != 0) {
+                extra += '{{vulnerability=' + values.condition_vulnerability + ' Stack(s) of Vulnerability!}}';
+            }
+            if (values.condition_weakness != 0) {
+                extra += '{{weakness=' + values.condition_weakness + ' Stack(s) of Weakness!}}';
+            }
+            if (values.condition_daze != 0) {
+                extra += '{{daze=Dazed!}}';
+            }
+            if (values.condition_off_guard != 0) {
+                extra += '{{off_guard=Off Guard!}}';
+            }
+            if (values.condition_prone != 0) {
+                extra += '{{prone=Prone!}}';
+            }
+            if (values.condition_sleep != 0) {
+                extra += '{{sleep=Asleep!}}';
+            }
+            if (values.condition_silence != 0) {
+                extra += '{{silence=Silenced!}}';
+            }
+            if (values.condition_chill != 0) {
+                extra += '{{chill=Chilled!}}';
+            }
+            if (values.condition_paralysis != 0) {
+                extra += '{{paralysis=Paralyzed!}}';
+            }
+
+            if (extra == '') {
+                extra += '{{text=Nothing!}}';
+            }
+
+            startRoll("@{whisper_state}&{template:condition-info} {{name=@{character_name}}} " + extra,
+             (results) => {
+                finishRoll(
+                    results.rollId,
+                    {
+                    }
+                );
+            });
+        });
+    });
+
     const tabs = ["character", "inventory", "conditions", "guide"];
     tabs.forEach(tab => {
         on(`clicked:${tab}`, function() {
@@ -6664,6 +6941,8 @@
 
 
 
+
+
 </script>
 
 <div class="rolltemplates" hidden="hidden">
@@ -7051,6 +7330,17 @@
             </div>
             {{/roll}}
             {{/^rollTotal() no-roll 0}}
+        </div>
+    </rolltemplate>
+    <rolltemplate class="sheet-rolltemplate-condition-info">
+        <div class="container">
+            <div class="header-bar">
+                <div><h1 class="tcat-header">{{name}}'s Active Conditions</h1></div>
+                <div><span class="tcat-subheader">Suffering from</span></div>
+            </div>
+            {{#allprops() name}}
+            <p class="flex-center kungfont" style="padding: 3px 0; margin: 0">{{value}}</p>
+            {{/allprops() name}}
         </div>
     </rolltemplate>
     <rolltemplate class="sheet-rolltemplate-turn">
