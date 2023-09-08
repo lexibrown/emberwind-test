@@ -48,6 +48,12 @@ body.sheet-darkmode .top-logo {
     height: 900px;
 }
 
+@media only screen and (max-width: 480px) {
+    .container {
+        display: none
+    }
+}
+
 .charsheet label {
     margin: 0;
     font-weight: normal;
@@ -284,7 +290,9 @@ input.page-control[value="npc"] ~ .block-container.block-npc {
 .charsheet .tabs-toggle[value="character"] ~ div.tab-character,
 .charsheet .tabs-toggle[value="inventory"] ~ div.tab-inventory,
 .charsheet .tabs-toggle[value="conditions"] ~ div.tab-conditions,
-.charsheet .tabs-toggle[value="guide"] ~ div.tab-guide {
+.charsheet .tabs-toggle[value="guide"] ~ div.tab-guide,
+.charsheet .tabs-toggle[value="bio"] ~ div.tab-inventory,
+.charsheet .tabs-toggle[value="actions"] ~ div.tab-character {
     display: flex;
 }
 
@@ -3249,3 +3257,50 @@ input[type=checkbox].small-hex-button {
 }
 
 /*-------------------------*/
+
+.mobile-container {
+    display: none;
+}
+
+/*----------------- MOBILE  ------------------*/
+
+@media only screen and (max-width: 480px) {
+    .mobile-container {
+        display: grid;
+        background-color: pink;
+        max-width: 480px
+    }
+
+    .mobile-tabs {
+        max-width: 480px;
+        display: grid;
+        grid-gap: 2px;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    button.mobile-tab {
+        width: 50px;
+        height: 50px;
+        border: none;
+        text-align: center;
+        background: #414042;
+        color: white;
+        font-size: 8px;
+    }
+
+    .charsheet .tabs-toggle[value="character"] ~ div.tab-character,
+    .charsheet .tabs-toggle[value="inventory"] ~ div.tab-inventory,
+    .charsheet .tabs-toggle[value="conditions"] ~ div.tab-conditions,
+    .charsheet .tabs-toggle[value="bio"] ~ div.tab-bio,
+    .charsheet .tabs-toggle[value="guide"] ~ div.tab-character,
+    .charsheet .tabs-toggle[value="actions"] ~ div.tab-actions {
+        display: block;
+    }
+
+    .charsheet .tabs-toggle[value="actions"] ~ div.tab-character,
+    .charsheet .tabs-toggle[value="bio"] ~ div.tab-inventory {
+        display: none;
+    }
+
+}

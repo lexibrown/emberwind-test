@@ -336,7 +336,9 @@
 
                     <!--        Image -->
                     <div class="image flex-center">
-                        <button type="roll" class="init-btn tokenaction" name="roll_hero-slot" value="@{whisper_state}&{template:turn} {{pc=[[0]]}} {{name=@{character_name}}} {{order=[[?{Hero Slot?|1,10|2,20|3,30|4,40} &{tracker}]]}}">
+                        <img name="attr_character_avatar" style="height: 55px">
+                        <button type="roll" class="init-btn tokenaction" name="roll_hero-slot"
+                                value="@{whisper_state}&{template:turn} {{pc=[[0]]}} {{name=@{character_name}}} {{order=[[?{Hero Slot?|1,10|2,20|3,30|4,40} &{tracker}]]}}">
                             <input class="class-control" type="hidden" name="attr_class" value="">
                             <img class="class-img padding-right5" src="" alt=""/>
                             <span>Initiative</span>
@@ -765,7 +767,7 @@
 
                     <!--        Action Header-->
                     <div class="actions-grid">
-<!--                        <span class="action-button action-header">Roll</span>-->
+                        <!--                        <span class="action-button action-header">Roll</span>-->
                         <span class="action-name action-header">Name</span>
                         <span class="action-type action-header">Type</span>
                         <span class="action-target action-header">Target</span>
@@ -980,7 +982,8 @@
                         <summary class="actions-grid transparent">
                             <div class="action-button">
                                 <div>
-                                    <button type="action" name="act_action-range" style="padding: 2px 3px; font-size: 1.3em;" class="btn">
+                                    <button type="action" name="act_action-range"
+                                            style="padding: 2px 3px; font-size: 1.3em;" class="btn">
                                         <span style="font-family: dicefontd20;">t</span>
                                     </button>
                                 </div>
@@ -2694,7 +2697,8 @@
                             </button>
                         </div>
                         <div class="npc-grid-item width100">
-                            <button class="init-btn" type="action" name="act_npc-action" style="background-color: #a074b2">
+                            <button class="init-btn" type="action" name="act_npc-action"
+                                    style="background-color: #a074b2">
                                 <input type="hidden" class="npc-rank-indicator" name="attr_npc_rank" value=""/>
                                 <img class="npc-rank-img" alt="" src="">
                                 <span>Roll</span>
@@ -4893,6 +4897,446 @@
     </div>
 </div>
 
+<div class="mobile-container">
+
+    <input type="hidden" class="tabs-toggle" name="attr_sheetTab" value="character"/>
+    <div class="mobile-tabs">
+        <button type="action" class="mobile-tab" name="act_character">Character</button>
+        <button type="action" class="mobile-tab" name="act_actions">Actions</button>
+        <button type="action" class="mobile-tab" name="act_inventory">Inventory</button>
+        <button type="action" class="mobile-tab" name="act_bio">Bio</button>
+        <button type="action" class="mobile-tab" name="act_conditions">Conditions</button>
+    </div>
+
+    <div class="separator"></div>
+
+    <div class="tab-content tab-character">
+        <span>Character</span>
+
+        <div class="sheet-row">
+            <div style="margin-top:-20px">
+                <div class="small-hex hex-4">
+                    <div class="inner">
+                    <span class="no-border" name="attr_toughness"
+                          style="width: 90%; height: 100%;"></span>
+                    </div>
+                    <div class="corner-1"></div>
+                    <div class="corner-2"></div>
+                </div>
+            </div>
+            <div style="margin-top:-20px">
+                <div class="small-hex hex-4">
+                    <div class="inner">
+                    <span class="no-border" name="attr_resistance"
+                          style="width: 90%; height: 100%;"></span>
+                    </div>
+                    <div class="corner-1"></div>
+                    <div class="corner-2"></div>
+                </div>
+            </div>
+            <div style="margin-top:-20px">
+                <div class="small-hex hex-4">
+                    <div class="inner">
+                    <span class="no-border" name="attr_dodge"
+                          style="width: 90%; height: 100%;"></span>
+                    </div>
+                    <div class="corner-1"></div>
+                    <div class="corner-2"></div>
+                </div>
+            </div>
+            <div style="margin-top:-20px">
+                <div class="small-hex hex-4">
+                    <div class="inner">
+                    <span class="no-border" name="attr_willpower"
+                          style="width: 90%; height: 100%;"></span>
+                    </div>
+                    <div class="corner-1"></div>
+                    <div class="corner-2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tab-content tab-actions">
+        <span>Actions</span>
+    </div>
+
+    <div class="tab-content tab-inventory">
+        <div class="sheet-row">
+            <div class="inventory-header">Inventory</div>
+            <div class="sheet-row">
+                <div class="sheet-col inventory-title width-half">Melee</div>
+                <div class="sheet-col inventory-title width-half">Ranged</div>
+            </div>
+            <div class="sheet-row padding-bottom3">
+                <div class="sheet-col width-half inventory-box-lower">
+                    <div class="flex-center">
+                        <select class="selector no-border transparent" name="attr_melee_weapon">
+                            <option value="">Select</option>
+                            <option value="sword_1h">Sword [1H]</option>
+                            <option value="sword_2h">Sword [2H]</option>
+                            <option value="mace_1h">Mace [1H]</option>
+                            <option value="mace_2h">Mace [2H]</option>
+                            <option value="axe_1h">Axe [1H]</option>
+                            <option value="axe_2h">Axe [2H]</option>
+                            <option value="polearm_1h">Pole-arm [1H]</option>
+                            <option value="polearm_2h">Pole-arm [2H]</option>
+                            <option value="sceptre_1h">Sceptre [1H]</option>
+                            <option value="staff_2h">Staff [2H]</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="sheet-col width-half inventory-box-lower">
+                    <div class="flex-center">
+                        <select class="selector no-border transparent" name="attr_ranged_weapon">
+                            <option value="">Select</option>
+                            <option value="bow">Bow</option>
+                            <option value="crossbow">Crossbow</option>
+                            <option value="wand">Wand</option>
+                            <option value="throwing_knives">Throwing Knives</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="sheet-row">
+                <div class="sheet-col inventory-title width-half">Off-hand</div>
+                <div class="sheet-col inventory-title width-half">Armour</div>
+            </div>
+            <div class="sheet-row padding-bottom3">
+                <div class="sheet-col width-half inventory-box-lower">
+                    <div class="flex-center">
+                        <label>
+                            <select class="selector no-border transparent" name="attr_offhand">
+                                <option value="">Select</option>
+                                <option value="light_shield">Light Shield</option>
+                                <option value="medium_shield">Medium Shield</option>
+                                <option value="heavy_shield">Heavy Shield</option>
+                                <option value="offhand_weapon">Off-hand Weapon</option>
+                                <option value="offhand_crossbow">Off-hand Crossbow</option>
+                                <option value="prayer_beads">Prayer Beads</option>
+                                <option value="focus_item">Focus Item</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+                <div class="sheet-col width-half inventory-box-lower">
+                    <div class="flex-center">
+                        <label>
+                            <select class="selector no-border transparent" name="attr_armour">
+                                <option value="">Select</option>
+                                <option value="robes">Robes</option>
+                                <option value="light_armour">Light Armour</option>
+                                <option value="heavy_armour">Heavy Armour</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="sheet-row">
+                <div class="sheet-col inventory-title width100">Gold Zeniths</div>
+            </div>
+            <div class="sheet-row padding-bottom3">
+                <div class="sheet-col width100 inventory-box-lower">
+                    <div class="flex-center">
+                        <label>
+                            <input class="medium center-text transparent no-border" type="text"
+                                   name="attr_gold" value="0"/>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sheet-row">
+            <div class="inventory-header">Keepsakes</div>
+            <div class="sheet-row" style="margin-bottom: 3px">
+                <div class="inventory-box">
+                    <div class="inventory-box-upper">
+                        <label>
+                            <span class="bold white-text">Keepsake:</span>
+                            <input class="no-border transparent white-text" type="text"
+                                   name="attr_keepsake1_name"/>
+                        </label>
+                        <label class="bold white-text">
+                            Used:
+                            <input type="checkbox" name="attr_keepsake1_used"/>
+                        </label>
+                    </div>
+                    <div class="padding-2 inventory-box-lower">
+                        <div class="flex-center-left">
+                            <div class="sheet-col padding-top4 padding-right2">
+                                <span class="bold">Effect:</span>
+                            </div>
+                            <label>
+                                <textarea class="height40 no-border transparent"
+                                          name="attr_keepsake1_effect"></textarea>
+                            </label>
+                        </div>
+                        <div class="padding-bottom3">
+                            <span class="bold">Usable In:</span>
+                            <label>
+                                <input type="radio" name="attr_keepsake1_usable" value="0" checked/>
+                                <span>Combat Only</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="attr_keepsake1_usable" value="1"/>
+                                <span>Any Encounter</span>
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                <span class="bold">Action:</span>
+                                <select class="selector-fit inventory-selector transparent"
+                                        name="attr_keepsake1_speed">
+                                    <option value="">Select</option>
+                                    <option value="Free">Free</option>
+                                    <option value="Fast">Fast</option>
+                                    <option value="Slow">Slow</option>
+                                </select>
+                            </label>
+                            <label>
+                                <span class="bold">Use:</span>
+                                <select class="selector-fit inventory-selector transparent"
+                                        name="attr_keepsake1_usage">
+                                    <option value="">Select</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="encounter">1 Per Encounter</option>
+                                    <option value="campaign">1 Per Campaign</option>
+                                    <option value="combat">1 Per Combat</option>
+                                    <option value="milestone">1 Per Milestone</option>
+                                </select>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sheet-row" style="margin-bottom: 3px">
+                <div class="inventory-box">
+                    <div class="inventory-box-upper">
+                        <label>
+                            <span class="bold white-text">Keepsake:</span>
+                            <input class="no-border transparent white-text" type="text"
+                                   name="attr_keepsake2_name"/>
+                        </label>
+                        <label class="bold white-text">
+                            Used:
+                            <input type="checkbox" name="attr_keepsake2_used"/>
+                        </label>
+                    </div>
+                    <div class="padding-2 inventory-box-lower">
+                        <div class="flex-center-left">
+                            <div class="sheet-col padding-top4 padding-right2">
+                                <span class="bold">Effect:</span>
+                            </div>
+                            <textarea class="height40 no-border transparent"
+                                      name="attr_keepsake2_effect"></textarea>
+                        </div>
+                        <div class="padding-bottom3">
+                            <span class="bold">Usable In:</span>
+                            <input type="radio" name="attr_keepsake2_usable" value="0" checked/>
+                            <span>Combat Only</span>
+                            <input type="radio" name="attr_keepsake2_usable" value="1"/>
+                            <span>Any Encounter</span>
+                        </div>
+                        <div>
+                            <span class="bold">Action:</span>
+                            <select class="selector-fit inventory-selector transparent"
+                                    name="attr_keepsake2_speed">
+                                <option value="">Select</option>
+                                <option value="Free">Free</option>
+                                <option value="Fast">Fast</option>
+                                <option value="Slow">Slow</option>
+                            </select>
+                            <span class="bold">Use:</span>
+                            <select class="selector-fit inventory-selector transparent"
+                                    name="attr_keepsake2_usage">
+                                <option value="">Select</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="encounter">1 Per Encounter</option>
+                                <option value="campaign">1 Per Campaign</option>
+                                <option value="combat">1 Per Combat</option>
+                                <option value="milestone">1 Per Milestone</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sheet-row">
+            <div class="inventory-header">Items</div>
+            <fieldset class="repeating_inventory">
+                <div class="sheet-row" style="margin-bottom: 3px">
+                    <div class="inventory-box">
+                        <div class="inventory-box-upper">
+                            <label>
+                                <span class="bold white-text">Item:</span>
+                                <input class="no-border transparent white-text" type="text"
+                                       name="attr_item_name"/>
+                            </label>
+                            <label class="bold white-text">
+                                Used:
+                                <input type="checkbox" name="attr_item_used"/>
+                            </label>
+                        </div>
+                        <div class="padding-2 inventory-box-lower">
+                            <div class="flex-center-left">
+                                <div class="sheet-col padding-top4 padding-right2">
+                                    <span class="bold">Effect:</span>
+                                </div>
+                                <textarea class="height40 no-border transparent"
+                                          name="attr_item_effect"></textarea>
+                            </div>
+                            <div class="padding-bottom3">
+                                <span class="bold">Usable In:</span>
+                                <input type="radio" name="attr_item_usable" value="0" checked/>
+                                <span>Combat Only</span>
+                                <input type="radio" name="attr_item_usable" value="1"/>
+                                <span>Any Encounter</span>
+                            </div>
+                            <div>
+                                <span class="bold">Action:</span>
+                                <select class="selector-fit inventory-selector transparent"
+                                        name="attr_item_speed">
+                                    <option value="">Select</option>
+                                    <option value="Free">Free</option>
+                                    <option value="Fast">Fast</option>
+                                    <option value="Slow">Slow</option>
+                                </select>
+                                <span class="bold">Use:</span>
+                                <select class="selector-fit inventory-selector transparent"
+                                        name="attr_item_usage">
+                                    <option value="">Select</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="encounter">1 Per Encounter</option>
+                                    <option value="campaign">1 Per Campaign</option>
+                                    <option value="combat">1 Per Combat</option>
+                                    <option value="milestone">1 Per Milestone</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+
+    <div class="tab-content tab-bio">
+        <div class="sheet-row">
+            <div class="sheet-col width-half padding-bottom5">
+                <div class="inventory-header">Anchors</div>
+                <fieldset class="repeating_anchors">
+                    <div class="sheet-row">
+                        <label>
+                            <input name="attr_anchor" class="no-border border-bottom-2 transparent"
+                                   type="text"/>
+                        </label>
+                        <label>
+                            <input name="attr_anchor_2" class="no-border border-bottom-2 transparent"
+                                   type="text"/>
+                        </label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <div class="sheet-col width-half padding-bottom5">
+                <div class="inventory-header">Deadweights</div>
+                <fieldset class="repeating_deadweight">
+                    <div class="sheet-row">
+                        <label>
+                            <input name="attr_deadweight" class="no-border border-bottom-2 transparent"
+                                   type="text"/>
+                        </label>
+                        <label>
+                            <input name="attr_deadweight_2" class="no-border border-bottom-2 transparent"
+                                   type="text"/>
+                        </label>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+        <div class="separator" style="margin-bottom: 5px"></div>
+        <div class="sheet-row">
+
+            <div class="inventory-header">Appearance</div>
+            <div class="sheet-row">
+                <div class="sheet-col inventory-title width-third">Gender</div>
+                <div class="sheet-col inventory-title width-third">Age</div>
+                <div class="sheet-col inventory-title width-third">Height</div>
+                <div class="sheet-col width-third inventory-box-lower">
+                    <div class="flex-center">
+                        <input class="center-text transparent no-border" type="text"
+                               name="attr_bio_gender"/>
+                    </div>
+                </div>
+                <div class="sheet-col width-third inventory-box-lower">
+                    <div class="flex-center">
+                        <input class="center-text transparent no-border" type="text"
+                               name="attr_bio_age"/>
+                    </div>
+                </div>
+                <div class="sheet-col width-third inventory-box-lower">
+                    <div class="flex-center">
+                        <input class="center-text transparent no-border" type="text"
+                               name="attr_bio_height"/>
+                    </div>
+                </div>
+                <div class="sheet-col inventory-title width-third">Build</div>
+                <div class="sheet-col inventory-title width-third">Hair</div>
+                <div class="sheet-col inventory-title width-third">Eyes</div>
+                <div class="sheet-col width-third inventory-box-lower">
+                    <div class="flex-center">
+                        <input class="center-text transparent no-border" type="text"
+                               name="attr_bio_build"/>
+                    </div>
+                </div>
+                <div class="sheet-col width-third inventory-box-lower">
+                    <div class="flex-center">
+                        <input class="center-text transparent no-border" type="text"
+                               name="attr_bio_hair"/>
+                    </div>
+                </div>
+                <div class="sheet-col width-third inventory-box-lower">
+                    <div class="flex-center">
+                        <input class="center-text transparent no-border" type="text"
+                               name="attr_bio_eyes"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sheet-row">
+            <label>
+                <span class="inventory-header">Description</span>
+
+                <textarea name="attr_bio_description"></textarea>
+            </label>
+        </div>
+
+        <div class="sheet-row">
+            <div class="inventory-header">History</div>
+            <label>
+                <textarea name="attr_bio_history"></textarea>
+            </label>
+        </div>
+
+
+    </div>
+
+    <div class="tab-content tab-conditions">
+        <span>Conditions</span>
+
+    </div>
+
+
+</div>
+
 <script type="text/worker">
 
     on('clicked:npc-action', (info) => {
@@ -4944,7 +5388,7 @@
         });
     });
 
-    const tabs = ["character", "inventory", "conditions", "guide"];
+    const tabs = ["character", "inventory", "conditions", "guide", "bio", "actions"];
     tabs.forEach(tab => {
         on(`clicked:${tab}`, function() {
             setAttrs({
@@ -6661,6 +7105,7 @@
             setAttrs({repeating_npcLearned_npc_learn_damage_description: description});
         });
     });
+
 
 
 
