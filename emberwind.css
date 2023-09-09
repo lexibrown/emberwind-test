@@ -617,12 +617,20 @@ body.sheet-darkmode .mod-box-yellow {
     column-count: 3;
     padding-left: 10px;
     padding-top: 5px;
-    border-bottom: 2px solid whitesmoke;
 }
 
 body.sheet-darkmode .npc-conditions-grid {
     background-color: dimgrey;
-    border-top: 2px solid black;
+}
+
+.npc-condition {
+    background-color: lightgrey;
+    border-bottom: 2px solid whitesmoke;
+}
+
+body.sheet-darkmode .npc-condition {
+    background-color: dimgrey;
+    border-bottom: 2px solid black;
 }
 
 .npc-condition-item-grid {
