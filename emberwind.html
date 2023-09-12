@@ -2621,7 +2621,6 @@
                     </div>
 
 
-
                     <div class="npc-grid">
 
                         <div class="npc-grid-item padding-bottom5 ">
@@ -2738,7 +2737,12 @@
                                         </div>
                                         <div class="npc-conditions-grid">
                                             <div class="npc-condition-item-grid">
-                                                <p class="bold">Poison:</p>
+                                                <div>
+                                                    <span class="bold">Poison</span>
+                                                    <span class="text-pictos hover-tip">i</span>
+                                                    <span class="hover-tip-text">Foe takes 1d6 x [Stack] PIERCING Damage at the start of each of their Turns.</span>
+                                                    <span class="bold">:</span>
+                                                </div>
                                                 <div>
                                                     <input type="checkbox" name="attr_condition_poison_1"/>
                                                     <input type="checkbox" name="attr_condition_poison_2"/>
@@ -2748,70 +2752,125 @@
                                                 </div>
                                             </div>
                                             <div class="npc-condition-item-grid">
-                                                <p class="bold">Burning:</p>
+                                                <div>
+                                                    <span class="bold">Burning</span>
+                                                    <span class="text-pictos hover-tip">i</span>
+                                                    <span class="hover-tip-text">Foe takes 1d20 x [Stack] PIERCING Damage at the start of each of their Turns.</span>
+                                                    <span class="bold">:</span>
+                                                </div>
                                                 <div>
                                                     <input type="checkbox" name="attr_condition_burning_1"/>
                                                     <input type="checkbox" name="attr_condition_burning_2"/>
                                                 </div>
                                             </div>
                                             <div class="npc-condition-item-grid">
-                                                <p class="bold">Fragility:</p>
+                                                <div>
+                                                    <span class="bold">Fragility</span>
+                                                    <span class="text-pictos hover-tip">i</span>
+                                                    <span class="hover-tip-text">All Damage Foe takes has the PIERCING property. FRAGILITY is removed next Round at the start of Foe's Turn.</span>
+                                                    <span class="bold">:</span>
+                                                </div>
                                                 <div>
                                                     <input type="checkbox" name="attr_condition_fragility"/>
                                                 </div>
                                             </div>
                                             <div class="npc-condition-item-grid">
-                                                <p class="bold">Vulnerability:</p>
+                                                <div>
+                                                    <span class="bold">Vulnerability</span>
+                                                    <span class="text-pictos hover-tip">i</span>
+                                                    <span class="hover-tip-text">-1 x [Stack] TOUGHNESS & RESISTANCE.</span>
+                                                    <span class="bold">:</span>
+                                                </div>
                                                 <div>
                                                     <input class="small-number-input" type="number" min="0"
                                                            name="attr_condition_vulnerability"/>
                                                 </div>
                                             </div>
                                             <div class="npc-condition-item-grid">
-                                                <p class="bold">Weakness:</p>
+                                                <div>
+                                                    <span class="bold">Weakness</span>
+                                                    <span class="text-pictos hover-tip">i</span>
+                                                    <span class="hover-tip-text">-1 x [Stack] Damage to all of Foe's Actions.</span>
+                                                    <span class="bold">:</span>
+                                                </div>
                                                 <div>
                                                     <input class="small-number-input" type="number" min="0"
                                                            name="attr_condition_weakness"/>
                                                 </div>
                                             </div>
                                             <div class="npc-condition-item-grid">
-                                                <p class="bold">Daze:</p>
+                                                <div>
+                                                    <span class="bold">Daze</span>
+                                                    <span class="text-pictos hover-tip">i</span>
+                                                    <span class="hover-tip-text">Heroes have +4 DODGE against Actions used by Foe.</span>
+                                                    <span class="bold">:</span>
+                                                </div>
                                                 <div>
                                                     <input type="checkbox" name="attr_condition_daze"/>
                                                 </div>
                                             </div>
                                             <div class="npc-condition-item-grid">
-                                                <p class="bold">Off-guard:</p>
+                                                <div>
+                                                    <span class="bold">Off-guard</span>
+                                                    <span class="text-pictos hover-tip">i</span>
+                                                    <span class="hover-tip-text">+2 A to CAP Checks to Actions that Target only this Foe.</span>
+                                                    <span class="bold">:</span>
+                                                </div>
                                                 <div>
                                                     <input type="checkbox" name="attr_condition_off_guard"/>
                                                 </div>
                                             </div>
                                             <div class="npc-condition-item-grid">
-                                                <p class="bold">Prone:</p>
+                                                <div>
+                                                    <span class="bold">Prone</span>
+                                                    <span class="text-pictos hover-tip">i</span>
+                                                    <span class="hover-tip-text">OFF-GUARD and skips first Action of Action Chain.</span>
+                                                    <span class="bold">:</span>
+                                                </div>
                                                 <div>
                                                     <input type="checkbox" name="attr_condition_prone"/>
                                                 </div>
                                             </div>
                                             <div class="npc-condition-item-grid">
-                                                <p class="bold">Sleep:</p>
+                                                <div>
+                                                    <span class="bold">Sleep</span>
+                                                    <span class="text-pictos hover-tip">i</span>
+                                                    <span class="hover-tip-text">Foe cannot take Actions during their next Turn. SLEEP is removed at the end of that Turn or if the Foe takes Damage. Actions that Target only that Foe gains the AUTO-CRIT property.</span>
+                                                    <span class="bold">:</span>
+                                                </div>
                                                 <div>
                                                     <input type="checkbox" name="attr_condition_sleep"/>
                                                 </div>
                                             </div>
                                             <div class="npc-condition-item-grid">
-                                                <p class="bold">Silence:</p>
+                                                <div>
+                                                    <span class="bold">Silence</span>
+                                                    <span class="text-pictos hover-tip">i</span>
+                                                    <span class="hover-tip-text">Skips Special Ability Hexes. SILENCE is removed next Round at the start of Foe's Turn.</span>
+                                                    <span class="bold">:</span>
+                                                </div>
                                                 <div>
                                                     <input type="checkbox" name="attr_condition_silence"/>
                                                 </div>
                                             </div>
                                             <div class="npc-condition-item-grid">
-                                                <p class="bold">Chill:</p>
+                                                <div>
+                                                    <span class="bold">Chill</span>
+                                                    <span class="text-pictos hover-tip">i</span>
+                                                    <span class="hover-tip-text">Skip last Action in Action Chain.</span>
+                                                    <span class="bold">:</span>
+                                                </div>
                                                 <div>
                                                     <input type="checkbox" name="attr_condition_chill"/>
                                                 </div>
                                             </div>
                                             <div class="npc-condition-item-grid">
-                                                <p class="bold">Paralysis:</p>
+                                                <div>
+                                                    <span class="bold">Paralysis</span>
+                                                    <span class="text-pictos hover-tip">i</span>
+                                                    <span class="hover-tip-text">Foe may only take 1 Action during their next Turn. PARALYSIS is removed at the end of that Turn.</span>
+                                                    <span class="bold">:</span>
+                                                </div>
                                                 <div>
                                                     <input type="checkbox" name="attr_condition_paralysis"/>
                                                 </div>
@@ -5091,7 +5150,7 @@
                 extra += '{{burning=' + burning + ' Stack(s) of Burning!}}';
             }
             if (values.repeating_npcConditions_condition_fragility != 0) {
-                extra += '{{fragility=Fragile!}}';
+                extra += '{{fragility=Fragility!}}';
             }
             if (values.repeating_npcConditions_condition_vulnerability != 0) {
                 extra += '{{vulnerability=' + values.repeating_npcConditions_condition_vulnerability + ' Stack(s) of Vulnerability!}}';
@@ -5100,7 +5159,7 @@
                 extra += '{{weakness=' + values.repeating_npcConditions_condition_weakness + ' Stack(s) of Weakness!}}';
             }
             if (values.repeating_npcConditions_condition_daze != 0) {
-                extra += '{{daze=Dazed!}}';
+                extra += '{{daze=Daze!}}';
             }
             if (values.repeating_npcConditions_condition_off_guard != 0) {
                 extra += '{{off_guard=Off Guard!}}';
@@ -5109,16 +5168,16 @@
                 extra += '{{prone=Prone!}}';
             }
             if (values.repeating_npcConditions_condition_sleep != 0) {
-                extra += '{{sleep=Asleep!}}';
+                extra += '{{sleep=Sleep!}}';
             }
             if (values.repeating_npcConditions_condition_silence != 0) {
-                extra += '{{silence=Silenced!}}';
+                extra += '{{silence=Silence!}}';
             }
             if (values.repeating_npcConditions_condition_chill != 0) {
-                extra += '{{chill=Chilled!}}';
+                extra += '{{chill=Chill!}}';
             }
             if (values.repeating_npcConditions_condition_paralysis != 0) {
-                extra += '{{paralysis=Paralyzed!}}';
+                extra += '{{paralysis=Paralysis!}}';
             }
 
             if (extra == '') {
@@ -5162,7 +5221,7 @@
                 extra += '{{burning=' + burning + ' Stack(s) of Burning!}}';
             }
             if (values.condition_fragility != 0) {
-                extra += '{{fragility=Fragile!}}';
+                extra += '{{fragility=Fragility!}}';
             }
             if (values.condition_vulnerability != 0) {
                 extra += '{{vulnerability=' + values.condition_vulnerability + ' Stack(s) of Vulnerability!}}';
@@ -5171,7 +5230,7 @@
                 extra += '{{weakness=' + values.condition_weakness + ' Stack(s) of Weakness!}}';
             }
             if (values.condition_daze != 0) {
-                extra += '{{daze=Dazed!}}';
+                extra += '{{daze=Daze!}}';
             }
             if (values.condition_off_guard != 0) {
                 extra += '{{off_guard=Off Guard!}}';
@@ -5180,16 +5239,16 @@
                 extra += '{{prone=Prone!}}';
             }
             if (values.condition_sleep != 0) {
-                extra += '{{sleep=Asleep!}}';
+                extra += '{{sleep=Sleep!}}';
             }
             if (values.condition_silence != 0) {
-                extra += '{{silence=Silenced!}}';
+                extra += '{{silence=Silence!}}';
             }
             if (values.condition_chill != 0) {
-                extra += '{{chill=Chilled!}}';
+                extra += '{{chill=Chill!}}';
             }
             if (values.condition_paralysis != 0) {
-                extra += '{{paralysis=Paralyzed!}}';
+                extra += '{{paralysis=Paralysis!}}';
             }
 
             if (extra == '') {
