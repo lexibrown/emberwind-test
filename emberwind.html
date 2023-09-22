@@ -5111,17 +5111,47 @@
     });
 
     on('clicked:action-range', (info) => {
-        startRoll("@{whisper_state}&{template:basic-action} {{name=@{ranged_name}}} {{cap=[[[[@{advantage_roll}+1]]d20@{advantage_dice}cs<[[@{critical}+@{critical_mod}]]cf>[[@{accuracy}+@{accuracy_mod}+1]]]]}} {{damage=[[0@{ranged_dice} + @{ranged_dice_bonus}@{damage_mod_text}]]}} {{penetration=[[@{penetration}+@{penetration_mod}]]}} {{dmgcrit=[[@{ranged_dice}]]}} {{dmgcrit_mod=[[@{ranged_dice_bonus}@{damage_mod_text}]]}} {{speed=Slow}} {{type=Ranged}} {{range=@{ranged_range}}} {{target=@{ranged_target}}} {{description=@{ranged_description}}} {{against=[[@{ranged_against}]]}}",
-         (results) => {
-            const die = results.results.dmgcrit.rolls[0].dice
-            const sides = results.results.dmgcrit.rolls[0].sides
-            const computed = die * sides + results.results.dmgcrit_mod.result;
-            finishRoll(
-                results.rollId,
-                {
-                    dmgcrit: computed
+        getAttrs(['ranged_dice', 'damage_bonus_mod', 'damage_dice_mod'], function(values) {
+
+            let crit = values.ranged_dice;
+            const dice = values.ranged_dice.toLowerCase().split("d");
+            if (dice.length == 2) {
+                crit = dice[0].trim() + "*" + dice[1].trim();
+            }
+
+            let bonus = "";
+            if (values.damage_bonus_mod && values.damage_bonus_mod !== "0") {
+                bonus = " + " + values.damage_bonus_mod;
+            }
+            if (values.damage_dice_mod && values.damage_dice_mod !== "") {
+                const bonusArray = values.damage_dice_mod.toLowerCase().split("+");
+                for (let b = 0; b < bonusArray.length; b++) {
+                    if (bonusArray[b].trim().length == 0) {
+                        continue;
+                    }
+                    const mod = bonusArray[b].trim().split("d");
+                    if (mod.length > 1) {
+                        bonus += " + " + mod[0] + "*" + mod[1];
+                    } else {
+                        bonus += " + " + bonusArray[b];
+                    }
                 }
-            );
+            }
+
+            crit += bonus;
+
+            startRoll("@{whisper_state}&{template:basic-action} {{name=@{ranged_name}}} {{cap=[[[[@{advantage_roll}+1]]d20@{advantage_dice}cs<[[@{critical}+@{critical_mod}]]cf>[[@{accuracy}+@{accuracy_mod}+1]]]]}} {{damage=[[0@{ranged_dice} + @{ranged_dice_bonus}@{damage_mod_text}]]}} {{penetration=[[@{penetration}+@{penetration_mod}]]}} {{dmgcrit=[[" + crit + "]]}} {{dmgcrit_mod=[[@{ranged_dice_bonus}@{damage_mod_text}]]}} {{speed=Slow}} {{type=Ranged}} {{range=@{ranged_range}}} {{target=@{ranged_target}}} {{description=@{ranged_description}}} {{against=[[@{ranged_against}]]}}",
+                (results) => {
+                const die = results.results.dmgcrit.rolls[0].dice
+                const sides = results.results.dmgcrit.rolls[0].sides
+                const computed = die * sides + results.results.dmgcrit_mod.result;
+                finishRoll(
+                    results.rollId,
+                    {
+                        //dmgcrit: computed
+                    }
+                );
+            });
         });
     });
 
