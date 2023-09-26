@@ -3475,7 +3475,7 @@ input[type=checkbox].small-hex-button {
     background-position-x: 0;
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    background-image: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/bugfix/improvements/images/step3.png");
+    background-image: url("https://raw.githubusercontent.com/lexibrown/emberwind-test/master/images/step3.png");
 }
 
 .sheet-rolltemplate-action .sheet-toughness-img,
