@@ -3015,7 +3015,7 @@ input[type=checkbox].hex-button {
     border-left: 12px solid transparent;
     border-right: 12px solid transparent;
     position: absolute;
-    top: -8px;
+    top: -7px;
     font-size: 1.35em;
 }
 
@@ -3024,7 +3024,7 @@ input[type=checkbox].hex-button {
     border-color: inherit;
     border-left: 8px solid transparent;
     border-right: 7px solid transparent;
-    top: -5px;
+    top: -4.5px;
     font-size: 0.9em;
 }
 
@@ -3033,7 +3033,7 @@ input[type=checkbox].hex-button {
     content: "";
     width: 0;
     position: absolute;
-    bottom: -8px;
+    bottom: -7.5px;
     border-top: 8px solid;
     border-color: inherit;
     border-left: 12px solid transparent;
@@ -3045,7 +3045,7 @@ input[type=checkbox].hex-button {
     border-color: inherit;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
-    bottom: -4px;
+    bottom: -3px;
 }
 
 .hex {
@@ -3578,6 +3578,16 @@ input[type=checkbox].small-hex-button {
 .sheet-rolltemplate-darkmode.sheet-rolltemplate-action .sheet-damage .inlinerollresult,
 .sheet-rolltemplate-darkmode.sheet-rolltemplate-basic-action .sheet-damage .inlinerollresult {
     border: none;
+    background-color: grey;
+}
+
+.sheet-rolltemplate-turn .sheet-damage .inlinerollresult {
+    border: none;
+    background-color: lightgrey;
+    padding: 0 7px;
+}
+
+.sheet-rolltemplate-darkmode.sheet-rolltemplate-turn .sheet-damage .inlinerollresult {
     background-color: grey;
 }
 

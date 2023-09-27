@@ -4689,7 +4689,7 @@
                                     <summary class="npc-actions-grid transparent">
                                         <div class="action-button">
                                             <button type="roll" name="roll_action"
-                                                    value="@{whisper_state}&{template:action} {{npc-type=[[0]]}} {{name=@{npc_action_name}}} {{subtag1=@{character_name}}} {{rollType=[[2]]}} {{test=[[@{npc_action_check}]]}} {{damage=[[0@{npc_action_dice} + @{npc_action_dice_bonus}]]}} {{against=[[@{npc_action_against}]]}} {{type=@{npc_action_type}}} {{range=@{npc_action_range}@{npc_action_field_description}}} {{description=@{npc_action_description}}}">
+                                                    value="@{whisper_state}&{template:action} {{npc-type=[[0]]}} {{name=@{npc_action_name}}} {{subtag1=@{character_name}}} {{rollType=[[2]]}} {{test=[[@{npc_action_check}]]}} {{damage=[[0@{npc_action_dice} + @{npc_action_dice_bonus}]]}} {{against=[[@{npc_action_against}]]}} {{type=@{npc_action_type}}} {{range=@{npc_action_range}@{npc_action_field_description}}} {{description=@{npc_action_description}}} {{autohit=[[0]]}} {{autocrit=[[0]]}} {{autopierce=[[0]]}}">
                                             </button>
                                         </div>
 
@@ -4862,7 +4862,7 @@
                                     <summary class="npc-actions-grid transparent">
                                         <div class="action-button">
                                             <button type="roll" name="roll_action"
-                                                    value="@{whisper_state}&{template:action} {{npc-type=[[1]]}} {{name=@{npc_special_name}}} {{subtag1=@{character_name}}} {{rollType=[[@{npc_special_roll_type}]]}} {{test=[[@{npc_special_check}]]}} {{skill=@{npc_special_skill}}} {{damage=[[0@{npc_special_dice} + @{npc_special_dice_bonus}]]}} {{against=[[@{npc_special_against}]]}} {{range=@{npc_special_range}@{npc_special_field_description}}} {{description=@{npc_special_description}}} {{trigCondition=@{npc_special_trig_condition}}} {{trigEffect=@{npc_special_trig_effect}}}">
+                                                    value="@{whisper_state}&{template:action} {{npc-type=[[1]]}} {{name=@{npc_special_name}}} {{subtag1=@{character_name}}} {{rollType=[[@{npc_special_roll_type}]]}} {{test=[[@{npc_special_check}]]}} {{skill=@{npc_special_skill}}} {{damage=[[0@{npc_special_dice} + @{npc_special_dice_bonus}]]}} {{against=[[@{npc_special_against}]]}} {{range=@{npc_special_range}@{npc_special_field_description}}} {{description=@{npc_special_description}}} {{trigCondition=@{npc_special_trig_condition}}} {{trigEffect=@{npc_special_trig_effect}}} {{autohit=[[0]]}} {{autocrit=[[0]]}} {{autopierce=[[0]]}}">
                                             </button>
                                         </div>
 
@@ -5102,7 +5102,7 @@
                                     <summary class="npc-actions-grid transparent">
                                         <div class="action-button">
                                             <button type="roll" name="roll_action"
-                                                    value="@{whisper_state}&{template:action} {{npc-type=[[2]]}} {{name=@{npc_learn_name}}} {{subtag1=@{character_name}}} {{rollType=[[@{npc_learn_roll_type}]]}} {{test=[[@{npc_learn_check}]]}} {{skill=@{npc_learn_skill}}} {{damage=[[0@{npc_learn_dice} + @{npc_learn_dice_bonus}]]}} {{against=[[@{npc_learn_against}]]}} {{range=@{npc_learn_range}@{npc_learn_field_description}}} {{description=@{npc_learn_description}}} {{trigCondition=@{npc_learn_trig_condition}}} {{trigEffect=@{npc_learn_trig_effect}}}">
+                                                    value="@{whisper_state}&{template:action} {{npc-type=[[2]]}} {{name=@{npc_learn_name}}} {{subtag1=@{character_name}}} {{rollType=[[@{npc_learn_roll_type}]]}} {{test=[[@{npc_learn_check}]]}} {{skill=@{npc_learn_skill}}} {{damage=[[0@{npc_learn_dice} + @{npc_learn_dice_bonus}]]}} {{against=[[@{npc_learn_against}]]}} {{range=@{npc_learn_range}@{npc_learn_field_description}}} {{description=@{npc_learn_description}}} {{trigCondition=@{npc_learn_trig_condition}}} {{trigEffect=@{npc_learn_trig_effect}}} {{autohit=[[0]]}} {{autocrit=[[0]]}} {{autopierce=[[0]]}}">
                                             </button>
                                         </div>
 
@@ -8132,7 +8132,7 @@
 
             {{#roll}}
             <div class="flex-center sheet-row" style="padding-top: 10px; padding-bottom: 5px">
-                <div>{{roll}}</div>
+                <div class="damage">{{roll}}</div>
             </div>
             {{/roll}}
 
